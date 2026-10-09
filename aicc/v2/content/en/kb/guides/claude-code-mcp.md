@@ -12,7 +12,7 @@ source_url: https://code.claude.com/docs/ru/mcp
 source_hash: 0f9e75b7f06c
 ---
 
-After this guide you will be able to connect an approved outside system (a tracker, a database, documentation) to Claude Code with minimal rights, understand where the setting is stored and who will see it, and keep access keys out of the repository.
+After reading this guide, you will be able to connect an approved outside system (a tracker, a database, documentation) to Claude Code with minimal rights, understand where the setting is stored and who will see it, and keep access keys out of the repository.
 
 MCP (Model Context Protocol) is an open standard for connecting Claude to outside systems: a task tracker, a database, monitoring, design tools, email. Instead of copying data into the conversation, Claude goes to the system itself through a connected MCP server.
 
@@ -70,9 +70,9 @@ In a normal session, servers from `.mcp.json` need your confirmation before firs
 
 - Connect only servers that you need and that your organization has approved: a server gets access to your environment.
 - A server that reads outside content can bring in a [[prompt-injection|prompt injection]].
-- Give minimal rights: read-only for a database, a single project for a tracker.
+- Give minimal rights: read-only for a database, access to just the one project you need in a tracker.
 - Turn off connections you don't use: it is safer, and the context stays cleaner.
 
-If a tool is available as a command line (`gh`, `aws`, `gcloud`), it is often simpler to give Claude that: it uses less context than MCP.
+If a tool is available as a command-line program (`gh`, `aws`, `gcloud`), it is often simpler to let Claude use that: it uses less context than MCP.
 
 **Try this:** in your repository, run `claude mcp list` to see what is already connected, including from `.mcp.json`. In a session, open `/mcp` and turn off whatever the current task doesn't need.

@@ -1,4 +1,4 @@
-<!--page {"id": "catalog/risk-control/risk-cycles", "title": "Risk Cycles", "styles": ["tokens.css", "components.css", "theme.css", "layouts/service.css", "layouts/concern.css", "layouts/flow-set.css"], "summary": "The recurring risk and control cycles — RCSA, stress testing, limits and breach governance, risk reporting, and model validation.", "source_hash": "5e58e0775410"} -->
+<!--page {"id": "catalog/risk-control/risk-cycles", "title": "Risk cycles", "styles": ["tokens.css", "components.css", "theme.css", "layouts/service.css", "layouts/concern.css", "layouts/flow-set.css"], "summary": "The recurring risk and control cycles — RCSA, stress testing, limits and breach governance, risk reporting, and model validation.", "source_hash": "5e58e0775410"} -->
 <div class="discovery-content">
 
 <div class="page">
@@ -13,14 +13,14 @@
   </span>
   <span class="breadcrumb__item">
     <span class="breadcrumb__sep" aria-hidden="true">/</span>
-    <span class="breadcrumb__current" aria-current="page">Risk Cycles</span>
+    <span class="breadcrumb__current" aria-current="page">Risk cycles</span>
   </span>
 </nav>
 </div>
 <header class="page-header">
   <div class="page-header__title-row">
     <div>
-      <h1 class="page-header__title">Risk Cycles</h1>
+      <h1 class="page-header__title">Risk cycles</h1>
     </div>
   </div>
   <p class="page-header__intent">The recurring risk and control cycles — RCSA, stress testing, limits and breach governance, risk reporting, and model validation.</p>
@@ -37,9 +37,9 @@
     <p class="flow-detail__intent">Annual RCSA with quarterly refresh — identification and scoring of inherent risks, assessment of control effectiveness, residual risk rating, and issue capture. Aligned to the Basel operational risk standards and, where models are in scope, to model-risk guidance.</p>
   </summary>
   <div class="flow-detail__body">
-    <p class="flow-detail__intent-full">The risk and control self-assessment (RCSA) cycle is the Bank's primary mechanism for identifying, assessing, and documenting material risks and the controls that mitigate them across the institution. In line with the Basel III operational risk standards and the three-lines-of-defense model, business lines and functions own the RCSA for their risk domains; the second-line Risk function oversees methodology, challenges ratings, and produces the aggregated risk register. Under model-risk guidance, model risk is a specific RCSA risk type with its own validation and governance requirements. The cycle runs annually for a full RCSA refresh, with quarterly updates to reflect new risks identified through operational incidents, regulatory changes, and business strategy updates. Supervisors expect evidence of an active RCSA framework as part of operational risk supervisory review; the RCSA register and issue log are primary examination documents. GenAI can assist the RCSA narrative — drafting risk descriptions, control assessments, and issue summaries from structured inputs — and flag RCSA ratings that are inconsistent with loss event history or with ratings for equivalent risks in other business lines.</p>
-    <section class="flow-detail__problems" aria-label="Flow lens problems">
-      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>The RCSA risk register and issue log are point-in-time documents updated at cycle boundaries. The CRO lacks a continuous view of residual risk trends — which risks are migrating upward between formal refresh cycles, which action plans are slipping — without manual extraction from the GRC system.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>RCSA rating calibration across business lines and the second-line challenge process are constrained by the time available for manual review. Risks with above-tolerance residual ratings and overdue action plans receive less review time than their materiality warrants when the review burden across the full register is high.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>RCSA risk description drafting, control effectiveness narrative production, issue summary writing, and quarterly refresh commentary are structured narrative tasks performed on a consistent framework for each risk item each cycle. GenAI can draft from structured inputs — risk type, loss event history, control design details — with risk officer review.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>RCSA ratings across business lines and the incident event database accumulate across annual cycles but are rarely mined for patterns that would improve the next cycle's risk identification step. Recurring themes — the same operational risk type appearing in three business lines, or a control failing repeatedly in the same way — are identified informally rather than through systematic cross-cycle analysis.</p></article></div>
+    <p class="flow-detail__intent-full">The risk and control self-assessment (RCSA) cycle is the Bank's primary mechanism for identifying, assessing, and documenting material risks and the controls that mitigate them across the institution. In line with the Basel III operational risk standards and the three-lines-of-defense model, business lines and functions own the RCSA for their risk domains; the second-line Risk function oversees methodology, challenges ratings, and produces the aggregated risk register. Under model-risk guidance, model risk is a specific RCSA risk type with its own validation and governance requirements. The cycle runs annually for a full RCSA refresh, with quarterly updates to reflect new risks identified through operational incidents, regulatory changes, and business strategy updates. Supervisors expect evidence of an active RCSA framework as part of operational risk supervisory review; the RCSA register and issue log are primary examination documents. Generative AI can assist the RCSA narrative — drafting risk descriptions, control assessments, and issue summaries from structured inputs — and flag RCSA ratings that are inconsistent with loss event history or with ratings for equivalent risks in other business lines.</p>
+    <section class="flow-detail__problems" aria-label="Problems by lens">
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>The RCSA risk register and issue log are point-in-time documents updated at cycle boundaries. The CRO lacks a continuous view of residual risk trends — which risks are migrating upward between formal refresh cycles, which action plans are slipping — without manual extraction from the GRC system.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>RCSA rating calibration across business lines and the second-line challenge process are constrained by the time available for manual review. Risks with above-tolerance residual ratings and overdue action plans receive less review time than their materiality warrants when the review burden across the full register is high.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>RCSA risk description drafting, control effectiveness narrative production, issue summary writing, and quarterly refresh commentary are structured narrative tasks performed on a consistent framework for each risk item each cycle. Generative AI can draft from structured inputs — risk type, loss event history, control design details — with risk officer review.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>RCSA ratings across business lines and the incident event database accumulate across annual cycles but are rarely mined for patterns that would improve the next cycle's risk identification step. Recurring themes — the same operational risk type appearing in three business lines, or a control failing repeatedly in the same way — are identified informally rather than through systematic cross-cycle analysis.</p></article></div>
     </section>
 <nav class="flow-stages" aria-label="Flow stages">
   <button class="flow-stages__stage" type="button" data-stage="identify" data-flow-id="urn:financial-services:flow:risk-control/rcsa-cycle" id="stage-rcsa-cycle--identify">
@@ -91,7 +91,7 @@
       <p>The AI agent reads the loss event database, audit findings register, and regulatory change log and maps each item to the relevant RCSA risk taxonomy category and business line scope. Workshop coordinators receive a pre-populated identification pack as the starting point for each workshop, reducing facilitation time and improving coverage of emerging risk themes.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">RCSA risk identification workshop coordinators use AI-generated pre-populated identification packs — mapping loss events, audit findings, and regulatory change signals to business line scope — as the starting point for each session.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -132,7 +132,7 @@
       <p>The AI agent reads structured risk attributes and loss event history for each RCSA item and produces a draft risk description, control effectiveness narrative, and issue summary per the Bank's RCSA methodology. Risk officers review, edit, and submit to the GRC system, compressing documentation effort from days to hours.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">Risk officers review and submit AI-drafted RCSA risk descriptions, control effectiveness narratives, and issue summaries to the GRC system rather than producing documentation through manual data entry.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -173,7 +173,7 @@
       <p>The AI agent reads the structured RCSA register and issue log each quarter, computes rating trajectory per risk item against prior cycles, and produces a trend signal report flagging deteriorating residual ratings and overdue action plan status. The CRO receives a concise watchlist and confirms the items for the quarterly refresh governance agenda.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The CRO manages a quarterly RCSA watchlist of deteriorating residual risk ratings and overdue action plans, generated by the AI agent's analysis of RCSA register trajectory across prior cycles.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -214,7 +214,7 @@
       <p>The AI agent reads each RCSA rating against the business line's three-year loss event history and cross-business-line comparables for the same risk taxonomy category, scoring calibration deviation. The second-line challenge team receives a prioritized challenge list focused on outlier ratings and high-residual items, allocating review effort by materiality.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The second-line challenge team allocates review effort to outlier RCSA ratings and high-residual items identified by the AI agent's comparison of inherent risk and control effectiveness ratings against loss event history and cross-business-line benchmarks.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -235,7 +235,7 @@
 </details>
 <details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/rcsa-cycle/rcsa-pattern-mining-next-cycle-brief" id="scenario-rcsa-pattern-mining-next-cycle-brief" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
-    <span class="scenario-lens scenario-lens--new-opps">New opps</span>
+    <span class="scenario-lens scenario-lens--new-opps">New opportunities</span>
     <div class="scenario-card__title-col">
       <span class="scenario-card__chevron" aria-hidden="true">▸</span>
       <h3 class="scenario-card__title">RCSA Pattern Mining — Pre-Cycle Brief</h3>
@@ -255,7 +255,7 @@
       <p>The AI agent runs a structured cross-cycle analysis of the RCSA register and issue log, clustering risk items by taxonomy, business line, and control type to surface systemic patterns and recurrent themes. The Risk Strategy team receives a pre-cycle brief that prioritizes risk categories for deeper identification attention and calibration review in the upcoming annual cycle.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The Risk Strategy team enters the annual RCSA cycle with an AI-produced pre-cycle brief that identifies systemic patterns — recurring control failures, risk types appearing across business lines, and action plan completion rates — from accumulated cross-cycle RCSA data.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -285,8 +285,8 @@
     <p class="flow-detail__intent">Annual integrated stress testing program — ICAAP capital stress, ILAAP liquidity stress, and climate scenario analysis — covering base and adverse scenarios across credit, market, liquidity, and climate risk. Aligned to supervisory expectations for ICAAP/ILAAP and to NGFS physical and transition scenarios, in line with the TCFD recommendations.</p>
   </summary>
   <div class="flow-detail__body">
-    <p class="flow-detail__intent-full">The stress testing cycle produces the Bank's integrated assessment of resilience under adverse conditions across capital (ICAAP), liquidity (ILAAP), and climate risk (NGFS scenarios). Supervisory frameworks commonly require banks to conduct annual stress tests and submit ICAAP/ILAAP documents demonstrating that the institution holds sufficient capital and liquidity buffers under defined stress conditions, in line with Basel III Pillar 2 and the BCBS supervisory review process. The climate stress testing element draws on the scenarios of the Network for Greening the Financial System (NGFS) for transition risk and physical risk analysis, in line with the TCFD recommendations. ISSB disclosure standards (IFRS S1/S2) are increasingly referenced by supervisors for climate risk governance; the stress testing cycle feeds the Bank's climate risk disclosures. The cycle runs annually with a mid-year ICAAP refresh. Its primary bottleneck is cross-domain scenario aggregation — translating macro stress scenarios into risk-type-specific shocks, running each risk model independently, and aggregating the outputs into a coherent group capital adequacy or survival horizon statement. GenAI can compress the aggregation narrative and assist with scenario design documentation.</p>
-    <section class="flow-detail__problems" aria-label="Flow lens problems">
+    <p class="flow-detail__intent-full">The stress testing cycle produces the Bank's integrated assessment of resilience under adverse conditions across capital (ICAAP), liquidity (ILAAP), and climate risk (NGFS scenarios). Supervisory frameworks commonly require banks to conduct annual stress tests and submit ICAAP/ILAAP documents demonstrating that the institution holds sufficient capital and liquidity buffers under defined stress conditions, in line with Basel III Pillar 2 and the BCBS supervisory review process. The climate stress testing element draws on the scenarios of the Network for Greening the Financial System (NGFS) for transition risk and physical risk analysis, in line with the TCFD recommendations. ISSB disclosure standards (IFRS S1/S2) are increasingly referenced by supervisors for climate risk governance; the stress testing cycle feeds the Bank's climate risk disclosures. The cycle runs annually with a mid-year ICAAP refresh. Its primary bottleneck is cross-domain scenario aggregation — translating macro stress scenarios into risk-type-specific shocks, running each risk model independently, and aggregating the outputs into a coherent group capital adequacy or survival horizon statement. Generative AI can compress the aggregation narrative and assist with scenario design documentation.</p>
+    <section class="flow-detail__problems" aria-label="Problems by lens">
       <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Stress test results are produced and reviewed at the annual submission cycle. Continuous monitoring of the Bank's resilience position — how the ICAAP trough CET1 or ILAAP survival horizon is shifting with the balance sheet between annual submissions — is absent from the standard management information set.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Stress scenario design and cross-domain consistency checking are constrained by the serial production process. Exploring a wider scenario set — additional macro pathways, idiosyncratic bank-specific scenarios, climate scenario variants — requires proportional additional production effort that the current cycle calendar cannot accommodate.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>ICAAP/ILAAP narrative sections — stress scenario descriptions, risk-type-specific adequacy narratives, management action plan documentation, and supervisory query response packs — are structured writing tasks with substantial content reuse across cycles. Climate scenario description following NGFS pathway conventions follows a reproducible structure amenable to AI-assisted drafting.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Prior supervisory dialogue — questions raised by the regulator in prior supervisory review cycles, findings on methodology, management action plan credibility — represents an institutional knowledge base that rarely feeds systematically into the next cycle's scenario design or narrative framing. Each submission cycle re-learns the same supervisory preferences through fresh dialogue.</p></article></div>
     </section>
 <nav class="flow-stages" aria-label="Flow stages">
@@ -339,7 +339,7 @@
       <p>The AI agent reads the macro scenario parameter set and cross-references shock magnitudes against historical precedent, NGFS pathway benchmarks for climate scenarios, and internal model input ranges across domains. It flags cross-domain inconsistencies and produces a structured scenario documentation template populated with calibrated assumptions, leaving the Risk Strategy team to apply final professional judgment on scenario severity and narrative framing.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The Risk Strategy team applies final judgment on scenario severity and narrative framing to an AI-produced scenario documentation template — with macro assumptions calibrated, NGFS pathway alignment confirmed, and cross-domain shock inconsistencies flagged — structured to supervisory submission standards.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -380,7 +380,7 @@
       <p>The AI agent reads approved stress scenario parameters, model outputs by risk type, and management action plan commitments and produces draft ICAAP/ILAAP narrative sections per the supervisory submission framework. Each section covers scenario rationale, stress impact by risk type, trough capital or liquidity position, and the management action plan response. The CRO reviews and applies judgment on the adequacy assessment conclusion before board submission.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The CRO reviews and applies judgment to AI-drafted ICAAP/ILAAP narrative sections — covering scenario rationale, stress impact, trough position, and management action plan — structured to the supervisory submission framework.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -421,7 +421,7 @@
       <p>The AI agent applies the prior year's approved adverse scenario shocks to the current month-end balance sheet and risk position, computing an indicative trough CET1 and survival horizon on a monthly basis. The Capital team confirms each run against the approved stress parameters, and the CRO and Capital Committee receive a monthly resilience indicator that flags material deterioration in the inferred stress position warranting an off-cycle review.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The CRO and Capital Committee monitor a monthly resilience indicator — reflecting the current balance sheet's inferred ICAAP trough CET1 and ILAAP survival horizon — between annual submissions.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -462,7 +462,7 @@
       <p>The AI agent applies the approved scenario calibration methodology to additional scenario seeds — alternative macro trajectories, sector-specific shocks, NGFS pathway variants — producing parameterized scenario specifications ready for model execution. The Risk Strategy team reviews scenario plausibility, selects the extended set for parallel model runs, and integrates selected results into the ICAAP/ILAAP narrative to demonstrate scenario coverage breadth to supervisors.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The Risk Strategy team runs a wider stress scenario set — including TCFD transition and physical risk combinations and idiosyncratic scenarios — within the existing production cycle calendar, using AI-generated parameterized specifications ready for model execution.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -483,7 +483,7 @@
 </details>
 <details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/stress-testing-cycle/supervisory-dialogue-knowledge-base" id="scenario-supervisory-dialogue-knowledge-base" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
-    <span class="scenario-lens scenario-lens--new-opps">New opps</span>
+    <span class="scenario-lens scenario-lens--new-opps">New opportunities</span>
     <div class="scenario-card__title-col">
       <span class="scenario-card__chevron" aria-hidden="true">▸</span>
       <h3 class="scenario-card__title">Supervisory Dialogue Knowledge Base</h3>
@@ -493,7 +493,7 @@
     </div>
     <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
   </summary>
-  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#capital-liquidity">Capital and liquidity reforms</a></p>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory requirements:</span> <a href="../../regulatory-horizon/index.html#capital-liquidity">Capital and liquidity reforms</a></p>
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>Prior supervisory dialogue represents institutional knowledge that rarely feeds systematically into the next cycle. Each submission re-learns supervisory preferences through fresh dialogue rather than building on experience from prior supervisory review cycles.</p>
@@ -503,7 +503,7 @@
       <p>The AI agent reads prior supervisory review correspondence, information request logs, and supervisory meeting records and structures them into a thematic findings database classified by submission section, risk domain, and finding type. The Risk Strategy team queries the database at scenario design and narrative drafting stages to anticipate supervisory focus areas, and the Capital team uses it to preempt information requests in the submission pack.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The Risk Strategy and Capital teams query an AI-structured thematic findings database — classified by submission section, risk domain, and finding type from prior supervisory review cycles — at scenario design and narrative drafting stages to anticipate supervisory focus areas.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -535,11 +535,11 @@
     <div class="flow-detail__title-col">
       <h3 class="flow-detail__title">Limits &amp; breach governance cycle</h3>
     </div>
-    <p class="flow-detail__intent">Continuous risk limit monitoring with a structured breach governance cycle — breach detection, root-cause investigation, escalation, and resolution — across financial and non-financial risk types. The cycle anchor is the time from breach detection to documented resolution or approved limit action.</p>
+    <p class="flow-detail__intent">Continuous risk limit monitoring with a structured breach governance cycle — breach detection, root-cause investigation, escalation, and resolution — across financial and non-financial risk types. The key measure of the cycle is the time from breach detection to documented resolution or approved limit action.</p>
   </summary>
   <div class="flow-detail__body">
-    <p class="flow-detail__intent-full">The limits and breach governance cycle operates across all material risk types — credit concentration limits, market risk VaR and sensitivity limits, IRRBB NII-at-risk and EVE limits, liquidity LCR and NSFR floors, operational risk event thresholds, and model performance limits. Under Basel III Pillar 2 and supervisory requirements, a bank is expected to maintain an approved risk appetite with quantified limits, demonstrate continuous monitoring, and evidence a structured escalation process for limit approaches and breaches. The cycle runs continuously for limit monitoring and on a structured cadence — weekly for market and liquidity limits, monthly for credit and operational limits — for formal breach review. Breach governance is not solely a compliance function; the resolution outcome (limit reset, risk reduction, or management action) directly affects the Bank's capital deployment and earnings capacity. GenAI can support the cycle by flagging limit approach patterns before formal breach, drafting breach investigation narratives, and producing the committee-ready breach resolution summary.</p>
-    <section class="flow-detail__problems" aria-label="Flow lens problems">
+    <p class="flow-detail__intent-full">The limits and breach governance cycle operates across all material risk types — credit concentration limits, market risk VaR and sensitivity limits, IRRBB NII-at-risk and EVE limits, liquidity LCR and NSFR floors, operational risk event thresholds, and model performance limits. Under Basel III Pillar 2 and supervisory requirements, a bank is expected to maintain an approved risk appetite with quantified limits, demonstrate continuous monitoring, and evidence a structured escalation process for limit approaches and breaches. The cycle runs continuously for limit monitoring and on a structured cadence — weekly for market and liquidity limits, monthly for credit and operational limits — for formal breach review. Breach governance is not solely a compliance function; the resolution outcome (limit reset, risk reduction, or management action) directly affects the Bank's capital deployment and earnings capacity. Generative AI can support the cycle by flagging limit approach patterns before formal breach, drafting breach investigation narratives, and producing the committee-ready breach resolution summary.</p>
+    <section class="flow-detail__problems" aria-label="Problems by lens">
       <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Limit utilization across risk types is monitored within each domain but not in a consolidated cross-domain view. The CRO cannot see the full limit utilization picture — which risk types are at high utilization simultaneously, where concentration of near-limit positions creates systemic risk — without manual assembly from multiple risk reporting systems.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Soft-breach threshold calibration and the timing of escalation relative to hard breach events are set by static rules rather than by dynamic position trajectory analysis. The escalation design does not distinguish between slow drift toward a limit and rapid directional moves, both of which have different intervention needs.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Breach investigation narrative drafting, limit utilization report commentary, and breach resolution documentation are structured writing tasks that repeat for each breach on a consistent framework. The factual content — position history, driver attribution, approver chain — is drawn from risk reporting systems and approval records that an AI agent can traverse systematically.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Breach histories across risk types — root causes, resolution outcomes, time-to-resolution — are held in individual breach files rather than in a structured repository. Pattern analysis across breach histories that could improve limit calibration and early-warning design is not routinely applied between formal limit review cycles.</p></article></div>
     </section>
 <nav class="flow-stages" aria-label="Flow stages">
@@ -592,7 +592,7 @@
       <p>The AI agent reads the approved risk appetite framework and current limit register, identifies risk types where the limit structure lacks graduated escalation, and produces a draft calibration proposal with three-tier structures anchored to the Bank's capital and liquidity constraints. The Risk Strategy team reviews proposals and submits the revised limit schedule for board approval.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The Risk Strategy team submits a revised multi-tier limit schedule for board approval, based on AI-modeled three-tier escalation structures calibrated to the Bank's capital and liquidity constraints across all material risk types.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -633,7 +633,7 @@
       <p>The AI agent reads position time series, risk attribution outputs, and approval records for a confirmed breach and produces a structured investigation narrative covering root-cause classification (market move, business action, model recalibration, or limit inadequacy), approver chain, and recommended resolution. The risk officer reviews the draft, applies professional judgment on resolution recommendation, and submits to the breach resolution committee.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The risk team submits breach investigation narratives drafted from AI-assembled position history, root-cause attribution, and governance documentation within the breach governance framework's required window.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -674,7 +674,7 @@
       <p>The AI agent reads utilization outputs from each domain's monitoring system and assembles a cross-domain limit utilization summary ranked by distance-to-limit, flagging domains approaching 80% of hard limits and any cross-domain correlations where simultaneous high utilization across credit and market risk warrants a consolidated escalation. The view refreshes at each domain's monitoring cadence, and the CRO reviews the consolidated position at each weekly risk management information run.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The CRO has a consolidated cross-domain limit utilization view — ranked by distance-to-limit across credit, market, liquidity, IRRBB, and operational KRI thresholds — updated at each domain's monitoring cadence.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -715,7 +715,7 @@
       <p>The AI agent monitors rolling position velocity for each limit-monitored risk type and recalibrates warning trigger points, within bounds approved by the Risk Strategy team, based on observed directional rate-of-change. Positions with high velocity receive an earlier warning signal relative to distance-to-limit than slow-moving positions; a risk officer reviews each alert, so the escalation chain has time to intervene before a hard breach.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The risk management escalation chain receives earlier warning signals for fast-moving positions through AI-calibrated dynamic soft-breach thresholds that distinguish rapid directional moves from slow drift.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -736,7 +736,7 @@
 </details>
 <details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/limits-breach-governance-cycle/breach-pattern-limit-recalibration-brief" id="scenario-breach-pattern-limit-recalibration-brief" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
-    <span class="scenario-lens scenario-lens--new-opps">New opps</span>
+    <span class="scenario-lens scenario-lens--new-opps">New opportunities</span>
     <div class="scenario-card__title-col">
       <span class="scenario-card__chevron" aria-hidden="true">▸</span>
       <h3 class="scenario-card__title">Breach Pattern — Limit Recalibration Brief</h3>
@@ -756,7 +756,7 @@
       <p>The AI agent structures the breach history database by risk type, root cause, resolution outcome, and time-to-resolution, clustering recurring breach patterns that indicate limits set too tightly relative to normal business operations versus genuine risk appetite exceedance. The annual risk appetite review team receives a prioritized recalibration brief with proposed limit and threshold adjustments supported by breach frequency and resolution data, and risk discipline owners decide which candidates warrant review.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The annual risk appetite review team receives an AI-produced limit recalibration brief that identifies structurally misaligned limits and recurring breach patterns across all risk types.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -783,12 +783,12 @@
     <div class="flow-detail__title-col">
       <h3 class="flow-detail__title">Risk reporting cycle (ERMC &amp; board)</h3>
     </div>
-    <p class="flow-detail__intent">Monthly and quarterly risk reporting to the executive risk management committee and board — integrated risk picture, limit utilization, emerging risks, and regulatory developments. The cycle anchor is the time from risk position data to a committee-ready risk pack.</p>
+    <p class="flow-detail__intent">Monthly and quarterly risk reporting to the executive risk management committee and board — integrated risk picture, limit utilization, emerging risks, and regulatory developments. The key measure of the cycle is the time from risk position data to a committee-ready risk pack.</p>
   </summary>
   <div class="flow-detail__body">
-    <p class="flow-detail__intent-full">The risk reporting cycle produces the Bank's periodic risk management reports for the executive risk management committee (ERMC), the board risk committee (BRC), and the full board — the primary governance forums by which the institution's leadership monitors risk posture and holds the CRO accountable. Supervisors expect a bank to demonstrate that board-level risk oversight is substantive and informed; the quality of risk reporting packs is assessed directly in supervisory governance examinations. The cycle runs monthly for the ERMC and quarterly for the board risk committee, with an annual integrated risk report to the full board. Each reporting event requires the Risk function to synthesize positions, limit utilization, emerging risks, regulatory developments, and forward-looking risk indicators across all material risk domains into a single coherent management document. GenAI can accelerate the aggregation and narrative drafting stages — assembling the cross-domain risk picture from standard inputs and producing committee-ready commentary — freeing the CRO and risk officers for the analytical and governance work that boards are convened to perform.</p>
-    <section class="flow-detail__problems" aria-label="Flow lens problems">
-      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>The committee risk pack is produced at monthly and quarterly intervals. The CRO lacks a continuous view of the institution's aggregate risk posture between formal reporting cycles — which domains are in motion, which are stable — without triggering an ad hoc report assembly.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Cross-domain risk coherence checking and the calibration of the pack's executive summary to committee members' analytical priorities are performed by the Risk Reporting team manually each cycle without a systematic framework for allocating editorial attention to the most material and actionable risk developments.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Risk pack narrative drafting — executive summary, domain commentaries, emerging risk sections, regulatory developments summary — follows a consistent structure each cycle with only the current-period risk content varying. GenAI can draft from structured risk data inputs with CRO editorial review, compressing the production window from days to hours.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Risk committee discussions and management commitments accumulate in meeting minutes but are not systematically structured to feed forward into the next cycle's pack framing or the annual risk appetite review. The longitudinal record of risk committee governance — what was discussed, what actions were taken, whether management responses were effective — is thin and inaccessible.</p></article></div>
+    <p class="flow-detail__intent-full">The risk reporting cycle produces the Bank's periodic risk management reports for the executive risk management committee (ERMC), the board risk committee (BRC), and the full board — the primary governance forums by which the institution's leadership monitors risk posture and holds the CRO accountable. Supervisors expect a bank to demonstrate that board-level risk oversight is substantive and informed; the quality of risk reporting packs is assessed directly in supervisory governance examinations. The cycle runs monthly for the ERMC and quarterly for the board risk committee, with an annual integrated risk report to the full board. Each reporting event requires the Risk function to synthesize positions, limit utilization, emerging risks, regulatory developments, and forward-looking risk indicators across all material risk domains into a single coherent management document. Generative AI can accelerate the aggregation and narrative drafting stages — assembling the cross-domain risk picture from standard inputs and producing committee-ready commentary — freeing the CRO and risk officers for the analytical and governance work that boards are convened to perform.</p>
+    <section class="flow-detail__problems" aria-label="Problems by lens">
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>The committee risk pack is produced at monthly and quarterly intervals. The CRO lacks a continuous view of the institution's aggregate risk posture between formal reporting cycles — which domains are in motion, which are stable — without triggering an ad hoc report assembly.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Cross-domain risk coherence checking and the calibration of the pack's executive summary to committee members' analytical priorities are performed by the Risk Reporting team manually each cycle without a systematic framework for allocating editorial attention to the most material and actionable risk developments.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Risk pack narrative drafting — executive summary, domain commentaries, emerging risk sections, regulatory developments summary — follows a consistent structure each cycle with only the current-period risk content varying. Generative AI can draft from structured risk data inputs with CRO editorial review, compressing the production window from days to hours.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Risk committee discussions and management commitments accumulate in meeting minutes but are not systematically structured to feed forward into the next cycle's pack framing or the annual risk appetite review. The longitudinal record of risk committee governance — what was discussed, what actions were taken, whether management responses were effective — is thin and inaccessible.</p></article></div>
     </section>
 <nav class="flow-stages" aria-label="Flow stages">
   <button class="flow-stages__stage" type="button" data-stage="aggregate" data-flow-id="urn:financial-services:flow:risk-control/risk-reporting-cycle" id="stage-risk-reporting-cycle--aggregate">
@@ -840,7 +840,7 @@
       <p>The AI agent reads the draft risk pack data inputs and produces the committee pre-read in a standard format: executive summary with three to five key risk movements, limit governance status by domain, and a proposed discussion agenda ranked by materiality and actionability. The CRO reviews the pre-read, adds forward-looking framing, and distributes to the committee two days before the meeting.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The CRO adds forward-looking framing to an AI-produced committee pre-read — with executive summary, key risk movements, limit governance status, and proposed discussion agenda — calibrated to committee time allocation and prior governance priorities.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -881,7 +881,7 @@
       <p>The AI agent reads the consolidated risk data set — domain risk positions, limit utilization, KRI movements, incident log, and regulatory change inputs — and produces a full draft risk pack narrative per the ERMC/board pack template. The CRO and senior risk officers review the draft, apply risk judgment and forward-looking commentary, and clear for committee distribution. Pack production time compresses from days to hours.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The CRO and senior risk officers apply risk judgment and forward-looking commentary to an AI-drafted full risk pack narrative — covering executive summary, domain commentaries, emerging risk sections, and regulatory developments — rather than authoring from consolidated data inputs.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -922,7 +922,7 @@
       <p>The AI agent reads domain risk position outputs on the schedule each domain produces them — daily for market and liquidity, weekly for credit and KRIs, event-driven for operational and compliance — and maintains a rolling cross-domain risk posture summary. The CRO receives a daily digest of material movements above a configurable materiality threshold, with the full posture summary available on demand between formal pack cycles.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The CRO has a continuous view of aggregate risk posture — with material cross-domain movements flagged above a configurable threshold — available daily between formal ERMC and board reporting cycles.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -953,7 +953,7 @@
     </div>
     <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
   </summary>
-  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#risk-data-reporting">Risk data and supervisory reporting</a></p>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory requirements:</span> <a href="../../regulatory-horizon/index.html#risk-data-reporting">Risk data and supervisory reporting</a></p>
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>Cross-domain risk metric consistency — ensuring credit concentration figures reconcile to large-exposure figures in the regulatory reporting section — is checked manually by the Risk Reporting team. Inconsistencies that survive to draft are caught in CRO review, requiring last-minute corrections that compress the delivery window.</p>
@@ -963,7 +963,7 @@
       <p>The AI agent reads the consolidated risk data set and applies a structured coherence rule set — cross-domain metric reconciliation points, prior-period comparison bounds, and regulatory metric alignment checks in line with the BCBS 239 principles — producing a pre-draft quality report that identifies inconsistencies and assigns materiality scores. The Risk Reporting team resolves flagged items before narrative drafting begins, reducing CRO review corrections and compressing the overall production cycle.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The Risk Reporting team resolves cross-domain data inconsistencies before narrative drafting begins, using an AI-generated pre-draft quality report ranked by materiality score.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -984,7 +984,7 @@
 </details>
 <details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/risk-reporting-cycle/risk-committee-governance-longitudinal-record" id="scenario-risk-committee-governance-longitudinal-record" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
-    <span class="scenario-lens scenario-lens--new-opps">New opps</span>
+    <span class="scenario-lens scenario-lens--new-opps">New opportunities</span>
     <div class="scenario-card__title-col">
       <span class="scenario-card__chevron" aria-hidden="true">▸</span>
       <h3 class="scenario-card__title">Risk Committee Governance Longitudinal Record</h3>
@@ -1004,7 +1004,7 @@
       <p>The AI agent reads meeting minutes, action logs, and completion records across prior ERMC and board risk committee cycles and structures them into a governance database keyed by risk domain, action type, owner, and completion status. The CRO queries the database to prepare for annual risk appetite reviews and supervisory examinations, and the Risk Reporting team uses the longitudinal record to frame current-period developments in the context of prior governance decisions.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The CRO and Risk Reporting team query a structured longitudinal governance database — keyed by risk domain, action type, owner, and completion status — to prepare for annual risk appetite reviews and supervisory examinations.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -1034,8 +1034,8 @@
     <p class="flow-detail__intent">Annual model validation program — inventory review, independent validation of material models, approval for continued use, performance monitoring, and planned retirement — aligned to supervisory model-risk guidance such as SR 11-7.</p>
   </summary>
   <div class="flow-detail__body">
-    <p class="flow-detail__intent-full">The model validation cycle governs the Bank's independent validation of material models across all risk and business domains — credit scoring and ECL models, market risk VaR models, ALM NII and EVE models, AML detection models, pricing models, and decision-support models. Supervisory model-risk guidance, such as SR 11-7, serves as an international benchmark for model risk governance; supervisors increasingly reference its principles in their own model governance expectations and often treat model risk within their operational risk frameworks. Under such guidance, model validation is an independent function that tests model conceptual soundness, data integrity, and performance outcomes — and produces validation findings, approved use conditions, and restrictions. The model inventory, validation schedule, and remediation backlog are primary supervisory examination documents. GenAI can support the cycle by assisting with validation report drafting, model performance monitoring commentary, and the structured synthesis of validation findings across the model inventory — maintaining consistency and coverage across a large model portfolio.</p>
-    <section class="flow-detail__problems" aria-label="Flow lens problems">
+    <p class="flow-detail__intent-full">The model validation cycle governs the Bank's independent validation of material models across all risk and business domains — credit scoring and ECL models, market risk VaR models, ALM NII and EVE models, AML detection models, pricing models, and decision-support models. Supervisory model-risk guidance, such as SR 11-7, serves as an international benchmark for model risk governance; supervisors increasingly reference its principles in their own model governance expectations and often treat model risk within their operational risk frameworks. Under such guidance, model validation is an independent function that tests model conceptual soundness, data integrity, and performance outcomes — and produces validation findings, approved use conditions, and restrictions. The model inventory, validation schedule, and remediation backlog are primary supervisory examination documents. Generative AI can support the cycle by assisting with validation report drafting, model performance monitoring commentary, and the structured synthesis of validation findings across the model inventory — maintaining consistency and coverage across a large model portfolio.</p>
+    <section class="flow-detail__problems" aria-label="Problems by lens">
       <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Model performance across the production model inventory is monitored by individual domain teams on separate schedules and reported through separate channels. The CRO and Model Risk Committee lack a consolidated view of model performance health — which models are approaching performance thresholds, which have unresolved validation findings — without manual assembly from multiple model monitoring systems.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Validation resource allocation to the prioritized model schedule is a manual planning exercise. When unexpected validation findings from a high-priority model consume more validation capacity than planned, the schedule for lower-priority models slips without a structured re-prioritization that considers the relative risk of delaying each pending validation.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Validation report drafting — conceptual soundness summary, data integrity test results, backtesting analysis, and findings documentation — follows the validation framework structure for each model type. Model performance monitoring commentary and the Model Risk Committee pack are structured, recurring production tasks that repeat for each model each cycle.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Validation findings across the model inventory — recurring finding types, common model limitations by domain, and patterns in model performance deterioration — accumulate in individual validation reports rather than in a consolidated findings database. The Model Risk Committee does not have access to a thematic synthesis of validation findings that could prioritize systemic model risk issues above individual model-level management.</p></article></div>
     </section>
 <nav class="flow-stages" aria-label="Flow stages">
@@ -1078,7 +1078,7 @@
     </div>
     <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
   </summary>
-  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#model-risk">Model risk management</a></p>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory requirements:</span> <a href="../../regulatory-horizon/index.html#model-risk">Model risk management</a></p>
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>New models and material model changes do not always trigger a model inventory update before entering production use. The inventory is discovered to be incomplete during annual review rather than maintained as a continuous registry, and inventory completeness is a common model risk governance finding in supervisory examinations.</p>
@@ -1088,7 +1088,7 @@
       <p>The AI agent monitors model deployment logs and system change records for production model activity and cross-references against the current model inventory, flagging instances where a model in production has no corresponding inventory entry or where a material change event has occurred without a version update. Model Risk Management receives a weekly inventory gap report for resolution, maintaining continuous inventory completeness between annual reviews.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">Model Risk Management maintains continuous model inventory completeness by receiving a weekly AI-generated gap report of production models without a corresponding inventory entry or unversioned material changes.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -1119,7 +1119,7 @@
     </div>
     <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
   </summary>
-  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#model-risk">Model risk management</a></p>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory requirements:</span> <a href="../../regulatory-horizon/index.html#model-risk">Model risk management</a></p>
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>Validation report drafting is a structured production exercise that consumes Model Validation team capacity on a repeating framework for each model. Validation resource is the binding constraint on the cycle, and drafting effort consumed on report production reduces capacity for independent technical work on the validation backlog.</p>
@@ -1129,7 +1129,7 @@
       <p>The AI agent reads validation test outputs, model documentation, and the prior validation report for each in-scope model and produces a structured draft validation report in the validation framework format — conceptual soundness, data integrity, outcome analysis, sensitivity testing, and findings sections. The Model Validation team reviews, applies independent technical judgment on findings classification and severity, and finalizes the report for Model Risk Committee submission.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">Model Validation team members apply independent technical judgment on findings classification and severity to AI-drafted validation reports — structured in the validation framework format across all prescribed sections — reducing report production effort on the validation cycle's binding constraint.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -1160,7 +1160,7 @@
     </div>
     <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
   </summary>
-  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#model-risk">Model risk management</a></p>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory requirements:</span> <a href="../../regulatory-horizon/index.html#model-risk">Model risk management</a></p>
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>Model performance across the production model inventory is monitored by individual domain teams on separate schedules and reported through separate channels. The Model Risk Committee lacks a consolidated view of model performance health — which models are approaching performance thresholds and which have unresolved validation findings — without manual assembly from multiple monitoring systems.</p>
@@ -1170,7 +1170,7 @@
       <p>The AI agent reads performance monitoring outputs from each domain team and maps them to the model inventory, computing a health score per model across four dimensions: discriminatory power trend, calibration status, stability index, and open validation finding count. Domain team model owners confirm the scores, and the Model Risk Committee receives a consolidated portfolio health dashboard at each quarterly meeting, with models approaching performance thresholds flagged for accelerated validation scheduling.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The Model Risk Committee reviews a consolidated model portfolio health dashboard — covering discriminatory power, calibration drift, stability, and validation finding status across the full inventory — at each quarterly meeting.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -1201,7 +1201,7 @@
     </div>
     <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
   </summary>
-  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#model-risk">Model risk management</a></p>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory requirements:</span> <a href="../../regulatory-horizon/index.html#model-risk">Model risk management</a></p>
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>Validation resource allocation to the model schedule is a manual planning exercise. When high-priority model findings consume more capacity than planned, lower-priority model validations slip without structured re-prioritization that considers the relative model risk of delaying each pending validation.</p>
@@ -1211,7 +1211,7 @@
       <p>The AI agent reads the current validation schedule, capacity consumption to date, and performance monitoring signals for each pending model and computes a revised risk-weighted prioritization score — combining model materiality, elapsed time since last validation, and current performance trend. Model Risk Management receives a recommended revised schedule when actual capacity consumption deviates from plan by more than a defined threshold and decides whether to adopt it, maintaining compliance with model-risk guidance under capacity pressure.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">Model Risk Management maintains compliance with model-risk guidance under capacity pressure by applying AI-computed risk-weighted prioritization scores to dynamically re-sequence pending validations when actual capacity consumption deviates from plan.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -1232,7 +1232,7 @@
 </details>
 <details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/model-validation-cycle/validation-findings-thematic-synthesis" id="scenario-validation-findings-thematic-synthesis" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
-    <span class="scenario-lens scenario-lens--new-opps">New opps</span>
+    <span class="scenario-lens scenario-lens--new-opps">New opportunities</span>
     <div class="scenario-card__title-col">
       <span class="scenario-card__chevron" aria-hidden="true">▸</span>
       <h3 class="scenario-card__title">Validation Findings Thematic Synthesis</h3>
@@ -1242,7 +1242,7 @@
     </div>
     <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
   </summary>
-  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#model-risk">Model risk management</a></p>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory requirements:</span> <a href="../../regulatory-horizon/index.html#model-risk">Model risk management</a></p>
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>Validation findings accumulate in individual validation reports rather than a consolidated findings database. The Model Risk Committee lacks a thematic synthesis of findings that could prioritize systemic model risk issues above individual model-level management, limiting the Bank's ability to address root causes of recurring model weaknesses across PD/LGD/EAD, AML, and pricing model classes.</p>
@@ -1252,7 +1252,7 @@
       <p>The AI agent reads the structured findings sections from all completed validation reports and clusters findings by type, model domain, root cause, and severity — surfacing themes such as recurring data quality gaps, conceptual soundness issues prevalent in a model class, or calibration methodology weaknesses appearing across multiple PD/LGD/EAD models. The Model Risk Committee receives a thematic synthesis alongside individual model approval decisions, enabling systemic remediation to be prioritized alongside model-specific actions.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The Model Risk Committee reviews an AI-produced thematic synthesis of validation findings — clustering by type, model domain, root cause, and severity across the full inventory — alongside individual model approval decisions, enabling systemic remediation to be prioritized.</p>
       <div class="okr-grid">
         <div class="okr-kr">

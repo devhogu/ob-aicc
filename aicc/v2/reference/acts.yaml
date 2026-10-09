@@ -35,9 +35,9 @@
   kind: Постановление Кабинета Министров № 770 от 2 декабря 2025 года
   kind_en: "Cabinet of Ministers Resolution No. 770 of 2 December 2025"
   what: "Принято во исполнение Цифрового кодекса: методика оценки опасности систем AI, управление рисками систем высокой степени опасности, их открытость, понятность, контролируемость, точность, надёжность, качество данных и техническая документация."
-  what_en: "Adopted to implement the Digital Code: a method for assessing the hazard of AI systems, and risk management for high-hazard systems, with their transparency, understandability, controllability, accuracy, reliability, data quality, and technical documentation."
+  what_en: "Adopted to implement the Digital Code: a method for assessing the hazard of AI systems; risk management for high-hazard systems; and their transparency, understandability, controllability, accuracy, reliability, data quality, and technical documentation."
   for_us: Распространяется на владельцев систем AI независимо от формы собственности. Наши категории риска и проверки нужно сверять с этой методикой.
-  for_us_en: "It applies to owners of AI systems whatever their form of ownership. Our risk tiers and checks need to be reconciled with this method."
+  for_us_en: "It applies to owners of AI systems, whatever their form of ownership. Our risk tiers and checks need to be compared with this method."
 - id: kg-aml-body
   group: Кыргызская Республика
   group_en: "Kyrgyz Republic"
@@ -57,11 +57,11 @@
   title: Цифровое развитие
   title_en: "Digital development"
   kind: Министерство, акты и программы
-  kind_en: "Ministry, acts and programs"
+  kind_en: "Ministry, acts, and programs"
   what: Направление цифровизации страны, правила для государственных информационных систем и электронных услуг; проект положения об этике AI вынесен на общественное обсуждение в сентябре 2026 года.
-  what_en: "The direction of the country’s digitalization and the rules for government information systems and electronic services; a draft regulation on AI ethics was put out for public consultation in September 2026."
+  what_en: "The country’s digitalization agenda and the rules for government information systems and electronic services; a draft regulation on AI ethics was put out for public consultation in September 2026."
   for_us: Задаёт рамки внедрения AI в стране и порядок взаимодействия с государством, в том числе в идентификации.
-  for_us_en: "It sets the framework for adopting AI in the country and the way to work with the state, including in identification."
+  for_us_en: "It sets the framework for AI adoption in the country and for working with the state, including on identification."
 - id: kz-law-on-ai
   group: Казахстан
   group_en: "Kazakhstan"
@@ -74,7 +74,7 @@
   what: Первый в регионе специальный закон об AI с классификацией систем по риску.
   what_en: "The first dedicated AI law in the region, with a classification of systems by risk."
   for_us: Пример соседней страны, с которым полезно сверять наш подход к категориям риска; касается партнёров, работающих в Казахстане.
-  for_us_en: "An example from a neighboring country that is worth comparing our approach to risk tiers against; it concerns partners operating in Kazakhstan."
+  for_us_en: "A neighboring country’s example, useful for checking our approach to risk tiers; it concerns partners operating in Kazakhstan."
 - id: kz-personal-data-law
   group: Казахстан
   group_en: "Kazakhstan"
@@ -118,7 +118,7 @@
   group_en: "Russian Federation"
   weight: partners
   title: Федеральный закон «О персональных данных» (152-ФЗ)
-  title_en: "Federal Law “On Personal Data” (No. 152-FZ)"
+  title_en: "Federal Law No. 152-FZ “On Personal Data”"
   title_ru_original: "Федеральный закон «О персональных данных» (152-ФЗ)"
   kind: Федеральный закон
   kind_en: "Federal law"
@@ -135,9 +135,9 @@
   kind: Указ Президента и федеральные законы
   kind_en: "Presidential decree and federal laws"
   what: Цели до 2030 года и режимы, в которых AI испытывают с временными исключениями из правил.
-  what_en: "Goals up to 2030, and regimes in which AI is tested with temporary exemptions from the rules."
+  what_en: "Goals to 2030, and regimes in which AI is tested under temporary exemptions from the rules."
   for_us: Влияет на регион и поставщиков; пример того, как устроить регулируемый эксперимент.
-  for_us_en: "It affects the region and suppliers; an example of how to set up a regulated experiment."
+  for_us_en: "It affects the region and suppliers, and shows how to set up a regulated experiment."
 - id: bank-of-russia-on-ai
   group: Российская Федерация
   group_en: "Russian Federation"
@@ -186,7 +186,7 @@
   what: Эталонный режим защиты персональных данных и образец для законов многих стран, в том числе региона.
   what_en: "The reference regime for personal data protection and the model for the laws of many countries, including those of the region."
   for_us: Законы региона опираются на те же понятия, а поставщики — на соответствие ему.
-  for_us_en: "The region’s laws rest on the same concepts, and suppliers rely on complying with it."
+  for_us_en: "The region’s laws rest on the same concepts, and suppliers point to their compliance with it."
 - id: eu-dora
   group: Европейский союз
   group_en: "European Union"
@@ -208,9 +208,9 @@
   kind: Надзорные рекомендации
   kind_en: "Supervisory guidance"
   what: Эталонная практика управления модельным риском; кредитное решение объясняют конкретно, какой бы ни была модель.
-  what_en: "The reference practice of model risk management; a credit decision is explained in specific terms, whatever the model."
+  what_en: "Best practice in model risk management; a credit decision must be explained in specific terms, whatever the model."
   for_us: Независимая проверка моделей и объяснимость кредитных решений — требования, которые встречаются у любого надзора.
-  for_us_en: "Independent model review and explainable credit decisions are requirements you meet under any supervisor."
+  for_us_en: "Independent model review and explainable credit decisions are requirements you will find under any supervisor."
 - id: us-federal-and-state-ai-policy
   group: США
   group_en: "United States"
@@ -218,11 +218,11 @@
   title: Политика США в области AI
   title_en: "US AI policy"
   kind: Указы, правила закупок, законы штатов
-  kind_en: "Executive orders, procurement rules, state laws"
+  kind_en: "Executive orders, procurement rules, and state laws"
   what: Федеральная политика меняется с администрацией; штаты принимают законы об AI для потребителей.
   what_en: "Federal policy changes with each administration; states pass AI laws to protect consumers."
   for_us: Направление крупнейшего рынка моделей и сервисов, которые мы используем.
-  for_us_en: "The direction of the largest market for the models and services we use."
+  for_us_en: "Where the largest market for the models and services we use is heading."
 - id: oecd-ai-principles
   group: Международные принципы
   group_en: "International principles"
@@ -234,7 +234,7 @@
   what: Первый межправительственный стандарт AI, заслуживающего доверия.
   what_en: "The first intergovernmental standard for trustworthy AI."
   for_us: Самое краткое изложение того, чего от применения AI будут ждать регулятор и инвестор.
-  for_us_en: "The shortest statement of what regulators and investors will expect from the use of AI."
+  for_us_en: "The most concise statement of what regulators and investors will expect from the use of AI."
 - id: unesco-recommendation-ethics-ai
   group: Международные принципы
   group_en: "International principles"
@@ -282,7 +282,7 @@
   what: "Позиция органов, чьи стандарты внедряют национальные регуляторы: выгоды и риски AI для организаций и системы."
   what_en: "The position of the bodies whose standards national regulators adopt: the benefits and risks of AI for institutions and for the system."
   for_us: По этим темам будут развиваться требования регуляторов региона; подготовиться заранее дешевле.
-  for_us_en: "The region’s regulators will develop their requirements along these topics; preparing early costs less."
+  for_us_en: "The region’s regulators will build their requirements around these topics; preparing early costs less."
 - id: nist-ai-rmf
   group: Стандарты и методологии
   group_en: "Standards and frameworks"
@@ -306,7 +306,7 @@
   what: "Система менеджмента AI: политика, роли, оценка рисков, контроль и улучшение."
   what_en: "An AI management system: policy, roles, risk assessment, control, and improvement."
   for_us: По ним партнёр или регулятор, скорее всего, оценит, насколько полно устроено управление AI.
-  for_us_en: "A partner or regulator will most likely use them to judge how completely AI governance is set up."
+  for_us_en: "A partner or regulator will most likely use them to judge how complete our AI governance is."
 - id: owasp-top-10-llm
   group: Стандарты и методологии
   group_en: "Standards and frameworks"

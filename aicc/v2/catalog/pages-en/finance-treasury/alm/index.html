@@ -23,7 +23,7 @@
       <h1 class="page-header__title">ALM</h1>
     </div>
   </div>
-  <p class="page-header__intent">Asset-liability management is the discipline that manages a bank's exposure to interest-rate risk in the banking book (IRRBB) — the risk that changes in market rates compress net interest margin or erode economic value. The ALM function measures NII and EVE sensitivity across rate shock and curve scenarios, manages the IR derivative hedge portfolio, sets the FTP curve that transfers rate risk from business lines to Treasury, and presents the integrated rate-scenario picture to ALCO each month. In line with the BCBS 368 standard and the regulator's IRRBB guidance, IRRBB measurement and limit compliance are supervisory requirements. <strong>The GenAI opportunity is compressing the multi-scenario synthesis and ALCO briefing cycle from weeks to hours, and enabling on-demand rate-scenario reasoning for ALCO.</strong></p>
+  <p class="page-header__intent">Asset-liability management is the discipline that manages a bank's exposure to interest-rate risk in the banking book (IRRBB) — the risk that changes in market rates compress net interest margin or erode economic value. The ALM function measures NII and EVE sensitivity across rate shock and curve scenarios, manages the IR derivative hedge portfolio, sets the FTP curve that transfers rate risk from business lines to Treasury, and presents the integrated rate-scenario picture to ALCO each month. In line with the BCBS 368 standard and the regulator's IRRBB guidance, IRRBB measurement and limit compliance are supervisory requirements. <strong>The generative AI opportunity is compressing the multi-scenario synthesis and ALCO briefing cycle from weeks to hours, and enabling on-demand rate-scenario reasoning for ALCO.</strong></p>
 </header>
 <style>
   #problems-tab-irrbb-balance-sheet-hedging:checked ~ .problems-tab-bar label[for="problems-tab-irrbb-balance-sheet-hedging"] {
@@ -46,7 +46,7 @@
     <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Insights &amp; analytics</h3><p>NII and EVE sensitivity across multiple rate scenarios — parallel shifts, twists, and non-parallel moves — is measured monthly by the ALM model and reported to ALCO as a 15–25 page pack. The key assumptions driving sensitivity — deposit beta, decay rate, prepayment speed — are buried in technical appendices rather than surfaced as the primary explanatory variables for ALCO discussion.</p></article><article class="discovery-context-card"><h3>Enablement</h3><p>When a central bank rate decision or a market rate move occurs between ALCO cycles, the ALM team cannot run a current-rate sensitivity on demand. Updating the model requires re-running the full scenario set, cross-checking limit compliance, and recompiling the ALCO briefing — a process that typically takes one to two weeks even for experienced teams.</p></article><article class="discovery-context-card"><h3>Automation</h3><p>The monthly ALCO rate-scenario pack — multi-scenario NII and EVE summary, limit utilization, hedge cost-benefit, and prior-month comparison — is compiled manually from model outputs and prior-period documents. The document's structure is stable each month; the assembly consumes 15–25 ALM team-hours per cycle.</p></article><article class="discovery-context-card"><h3>New business opportunities</h3><p>Banks with continuous IRRBB visibility can optimize hedge sizing and timing within daily market windows rather than waiting for the next ALCO meeting to receive management approval. The difference between hedging at the point of limit-approach and hedging at the point of limit-breach is measurable in hedge cost — and the former requires a current sensitivity view.</p></article></div>
   </div>
 </section>
-<div id="main-content" class="l3-sections" aria-label="Sub-concerns">
+<div id="main-content" class="l3-sections" aria-label="Subsections">
 <section class="l3-section" id="nii-eve-sensitivity">
   <header class="l3-section__head">
     <h2 class="l3-section__title">NII &amp; EVE sensitivity</h2>
@@ -81,7 +81,7 @@
       <p>The AI agent reads the current NII/EVE model's deposit repricing assumption set and the actual deposit rate data for each product category over the prior four quarters. It computes the prediction error for each product's beta and lag assumption against observed repricing, identifies products with systematic overestimation or underestimation of pass-through, and produces a recommended assumption revision set for the ALM team's review. The team validates the recommendations against current market conditions before updating the model.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The ALM team receives, for each quarterly assumption review, a backtest of deposit beta and lag assumptions against observed repricing over the prior four quarters and a recommended assumption revision set by product category.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -102,7 +102,7 @@
 </details>
 <details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/alm/nii-eve-sensitivity/ftp-product-pricing-signals" id="scenario-ftp-product-pricing-signals" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
-    <span class="scenario-lens scenario-lens--new-opps">New opps</span>
+    <span class="scenario-lens scenario-lens--new-opps">New opportunities</span>
     <div class="scenario-card__title-col">
       <span class="scenario-card__chevron" aria-hidden="true">▸</span>
       <h3 class="scenario-card__title">FTP-Driven Product Pricing Signals</h3>
@@ -122,7 +122,7 @@
       <p>The AI agent reads the approved FTP curve, product-level NIM attribution, competitor rate data where available, and origination volume by product. It identifies products where the FTP spread is contracting, expanding, or inverted relative to the approved hurdle, and generates a ranked product pricing signal for review by Treasury and commercial BU heads. ALCO reviews the signal in the context of the FTP curve decision; commercial BU heads adjust pricing within delegated authority.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">Loan and deposit products where FTP-implied pricing diverges materially from market, or where the FTP spread is contracting or inverting against the approved hurdle, are identified and surfaced to Treasury and commercial BU heads each month.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -163,7 +163,7 @@
       <p>The AI agent reads the current and prior-period NII and EVE sensitivity model inputs and outputs. It attributes the period-on-period sensitivity movement to four driver buckets — volume and mix changes, rate environment shifts, hedge portfolio changes, and repricing assumption revisions — and presents the decomposition as a delta waterfall alongside the standard ALCO sensitivity table. The ALM team validates the attribution before the ALCO pack is distributed.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">ALCO receives, alongside the standard sensitivity table, a delta waterfall attributing each period's change in NII and EVE sensitivity to volume and mix changes, rate environment shifts, hedge portfolio changes, and repricing assumption revisions.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -218,7 +218,7 @@
       <p>The AI agent reads the current approved FTP curve, the central bank rate decision or market rate movement, and the prior deposit repricing evidence. It computes the implied FTP curve revision at each tenor bucket and the NIM attribution impact per BU for the inter-review period if no ad hoc update is made. Treasury reviews the analysis and determines whether the materiality threshold for an ad hoc review is met. The output is presented to ALCO as support for the ad hoc review decision.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">Treasury and ALCO receive, after each central bank rate decision or material market rate movement, the implied FTP curve revision per tenor bucket and the NIM attribution impact per BU of waiting for the next scheduled quarterly review.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -259,7 +259,7 @@
       <p>The AI agent reads the current market yield curves, prior approved FTP curve, deposit repricing data, and available peer FTP benchmarks. It generates the review memo with rationale for each proposed tenor adjustment and flags tenors where the current curve is materially out of alignment with market. Treasury reviews the generated memo and submits it to ALCO.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The quarterly FTP curve review memo — with rationale for each proposed adjustment, market yield curve cross-reference, deposit repricing evidence, and peer benchmarks — is available for Treasury review before the ALCO submission deadline.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -300,7 +300,7 @@
       <p>The AI agent reads the approved FTP curve rates by tenor bucket for each prior quarter, actual deposit repricing data for the corresponding products, and realized wholesale funding costs at each tenor. It computes the error between the FTP rate and the realized funding cost for each tenor bucket over the four-quarter backtest window, identifies tenor buckets with persistent systematic bias, and presents the findings for the ALCO quarterly FTP review as a backtesting annex. ALCO uses the annex to calibrate curve adjustments on an evidenced basis.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">ALCO receives a backtesting annex for each quarterly FTP review — the error between the approved FTP rate and the realized funding cost per tenor bucket over the preceding four quarters, with persistent calibration biases identified.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -355,7 +355,7 @@
       <p>The AI agent reads the current NII and EVE scenario outputs and the board-approved limit schedule. It computes headroom against each NII and EVE limit across all approved scenarios, appends a six-month utilization trend for each scenario, and attributes the period-on-period utilization change to its top three drivers — volume changes, rate environment, and hedge portfolio movement. After the ALM team's check, the report is available for ALCO review on the day the scenario model run completes and is refreshed if rates move materially before the meeting.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">ALCO receives the monthly IRRBB limit utilization report — NII and EVE limit headroom across all approved scenarios, the six-month utilization trend, and the top three drivers of change — on the day the scenario model run completes.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -396,7 +396,7 @@
       <p>The AI agent monitors daily origination feeds, deposit repricing notices, hedge position changes, and accumulated OCI movements. Using a parametric sensitivity model calibrated to the Bank's last formal IRRBB model run, it estimates the cumulative NII and EVE sensitivity delta from intra-month events and maintains a running estimated utilization figure for each limit. When the estimated utilization in any scenario moves within a defined proximity band of the limit, an alert is issued to the ALM team with the estimated impact attributable to each recent event. The ALM team uses the alert to decide whether to trigger an intra-month hedge action or origination constraint ahead of the formal run.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The ALM team holds a running estimate of NII and EVE limit utilization between formal monthly model runs and receives an alert, with the estimated impact attributed to each recent event, when any scenario moves within the defined proximity band of a limit.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -427,7 +427,7 @@
     </div>
     <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
   </summary>
-  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#capital-liquidity">Capital and liquidity reforms</a></p>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory requirements:</span> <a href="../../regulatory-horizon/index.html#capital-liquidity">Capital and liquidity reforms</a></p>
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>IRRBB supervisory assessments require the ALM team to compile scenario results, limit utilization history, model documentation, and governance narrative into a regulator-prescribed package. The compilation draws on data from the IRRBB model system, the limit register, board minutes for limit approvals, and the ICAAP for stress context. Assembly takes one to two weeks and is managed as a standalone exercise each assessment cycle.</p>
@@ -437,7 +437,7 @@
       <p>The AI agent reads the current and prior-period IRRBB scenario outputs, the limit utilization history register, the model methodology documentation, and the governance calendar for limit approvals. It assembles the supervisory assessment documentation package in the prescribed structure — scenario results table, twelve-month utilization history, methodology summary, limit governance timeline, and management attestation sections — with prior-period consistency checks applied automatically. The ALM team reviews the assembled package and adds judgment-intensive commentary before submission.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The ALM team receives the IRRBB supervisory assessment package — scenario results table, twelve-month utilization history, methodology summary, limit governance timeline, and management attestation sections — assembled in the prescribed structure with prior-period consistency checks applied.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -492,7 +492,7 @@
       <p>The AI agent reads the current hedge register, the mark-to-market of each instrument, and the current unhedged NII and EVE sensitivities. It computes the marginal NII and EVE reduction attributable to each hedge tranche under the standard BCBS 368 scenarios, identifies tranches where effectiveness has declined below the target threshold, and flags instruments maturing within 90 days that require a roll decision. The hedge effectiveness summary is appended to the ALCO rate-scenario pack and reviewed by Treasury and the ALM team before each ALCO session.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">Treasury and the ALM team receive, before each ALCO session, a hedge effectiveness summary — marginal NII and EVE reduction per hedge tranche, tranches below the target threshold, and instruments maturing within 90 days that require a roll decision.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -533,7 +533,7 @@
       <p>The AI agent reads multi-scenario NII and EVE output files, maps each sensitivity driver — deposit beta, decay rate, prepayment, repricing gap — and generates the full ALCO pack with scenario comparison tables, driver decomposition, limit utilization against board-set thresholds, and hedge-program cost-benefit narrative. The ALM team reviews and approves the pack before distribution; ALCO enters each session focused on rate decisions rather than data walkthrough.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">A complete ALCO rate-scenario pack — with multi-scenario NII and EVE comparison, driver decomposition, limit utilization, hedge cost-benefit, and narrative — is available before each ALCO meeting, produced from ALM model outputs without manual drafting.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -574,7 +574,7 @@
       <p>The AI agent reads the NII and EVE scenario model outputs at the component level — asset repricing by product, liability repricing by product, net hedge cost per scenario, and basis effects. It allocates the total NII sensitivity per scenario to each driver, ranks scenarios by net NII and EVE impact, and presents the decomposition as an addendum table to the standard ALCO pack once the ALM team has accepted the allocation. ALCO uses the decomposition to direct hedging or repricing actions to the material driver rather than the aggregate metric.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">ALCO receives, as an addendum to the standard pack, a driver-attributed sensitivity table that allocates each rate scenario's NII impact to asset repricing, liability repricing, hedge cost, and basis effects and ranks the scenarios by net NII and EVE impact.</p>
       <div class="okr-grid">
         <div class="okr-kr">

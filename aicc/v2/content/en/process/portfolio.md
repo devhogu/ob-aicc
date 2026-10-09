@@ -49,7 +49,7 @@ flowchart TB
 | [[invest-decision|Investment decision]] | after shaping and at every checkpoint | the same roles | the [[appetite|appetite]] |
 | [[persevere-pivot-stop|Persevere, pivot, or stop]] | after the hypothesis test and at checkpoints | business owner | the [[exit-criterion|exit criterion]] and the [[stop-threshold|stop threshold]] |
 
-If the conditions are met, the decision is made on the spot and written in the [[decision-log|decision log]] on the card. The forum takes up only what a rule can't settle.
+If the conditions are met, the decision is made on the spot and recorded in the [[decision-log|decision log]] on the card. The forum takes up only what a rule can't settle.
 
 ## Portfolio rules {#rules}
 
@@ -61,7 +61,7 @@ If the conditions are met, the decision is made on the spot and written in the [
 
 | Class | What it is | How it runs |
 | --- | --- | --- |
-| [[run-rate|Run-rate work]] | a small recurring request that follows a clear template | a row on a standing card; taken on when there is a place; no start decision needed |
+| [[run-rate|Run-rate work]] | a small recurring request that follows a clear template | a line on a standing card; taken on when there is a place; no start decision needed |
 | [[initiative|Initiative]] | a new result that needs a separate choice | goes through the whole Kanban, with start and investment decisions |
 | [[urgent|Urgent work]] | can't be put off | jumps the queue; we note right away what got pushed back, and the forum looks at whether it could have been foreseen |
 

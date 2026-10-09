@@ -12,13 +12,13 @@ source_url: https://code.claude.com/docs/ru/how-claude-code-works
 source_hash: 31270d63bca1
 ---
 
-After this guide you will be able to explain what Claude Code does between your prompt and its answer, which tools it uses, what it sees, how sessions work, and how permission modes decide what it may do without your consent.
+After reading this guide, you will be able to explain what Claude Code does between your prompt and its answer, which tools it uses, what it sees, how sessions work, and how permission modes decide what it may do without your consent.
 
 Claude Code is not a chat that gives coding tips but an assistant that acts on its own: it reads files, edits them and runs commands. Although it was built for development, you can hand it almost anything done from the command line: documentation, builds, searching through files.
 
 ## The agentic loop {#loop}
 
-The work goes round a loop of three steps, called the agentic loop:
+The work runs in a loop of three steps, called the agentic loop:
 
 <ol class="rai-flow">
 <li><b>Gather context</b><span>find and read the files it needs, understand the task</span></li>
@@ -58,11 +58,11 @@ Everything Claude has seen during a session (your messages, the files it read, c
 ## Safety {#safety}
 
 <div class="rai-cards rai-cards--2">
-<article><h3>Undo</h3><p>Before every edit Claude saves a snapshot of the file. Press <code>Esc</code> twice to go back. What was done by shell commands, and outside actions such as databases, APIs and deployment, can't be undone this way: for those you have only git and your own care.</p></article>
+<article><h3>Undo</h3><p>Before every edit Claude saves a snapshot of the file. Press <code>Esc</code> twice to go back. Changes made by shell commands, and outside actions such as database changes, API calls and deployments, can't be undone this way: for those you have only git and your own caution.</p></article>
 <article><h3>Permission modes</h3><p>Switch them with Shift+Tab: <b>Auto</b>: a checking model blocks anything risky (in newer versions a session starts in it); <b>Manual</b>: asks before edits and commands; <b>Accept edits</b>: edits files without asking; <b>Plan</b>: only explores and proposes a plan. For sensitive code, use <b>Manual</b>.</p></article>
 </div>
 
-There are also modes for runs with no person present; they are described in [Claude Code in action](page:kb/guides/claude-code-in-action#modes).
+There are also modes for unattended runs; see [Claude Code in action](page:kb/guides/claude-code-in-action#modes).
 
 Not sure how to do something? Ask Claude Code itself: “how do I set up hooks?” It answers from its own documentation. `/init` creates `CLAUDE.md`, and `/doctor` checks the installation.
 

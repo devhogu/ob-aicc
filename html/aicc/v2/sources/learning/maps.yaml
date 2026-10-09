@@ -26,13 +26,13 @@ maps:
     goal_en: "Understand what AI can and cannot do, work with it thoughtfully and safely, and take responsibility for the result."
     levels:
       - checkpoint: Вы провели несколько полезных разговоров, знаете, что можно передавать AI, и проверяете его ответы.
-        checkpoint_en: "You have had several useful chats, you know what you can share with AI, and you check its answers."
+        checkpoint_en: "You have had several useful conversations, you know what you can share with AI, and you check its answers."
         steps:
           - guide: getting-started
             outcome: Начать работу с ассистентом на простой задаче, которую легко проверить.
             outcome_en: "Start working with the assistant on a simple task that is easy to check."
             practice: Сократите длинное письмо без персональных данных до пяти пунктов и сверьте с оригиналом.
-            practice_en: "Cut a long email with no personal data down to five points and compare it with the original."
+            practice_en: "Take a long email with no personal data, cut it down to five points, and compare the result with the original."
           - guide: what-to-share
             outcome: Отличать данные, которые можно передавать, от тех, что нельзя.
             outcome_en: "Tell data you can share from data you can't."
@@ -40,7 +40,7 @@ maps:
             practice_en: "Take one of your work documents and mark what has to be removed before you send it to AI."
           - guide: checking-results
             outcome: Проверять ответ AI по списку — факты, цифры, полнота, тон.
-            outcome_en: "Check an AI answer against a list: facts, figures, completeness, tone."
+            outcome_en: "Check an AI answer against a list: facts, figures, completeness, and tone."
             practice: Найдите в одном ответе Claude утверждение, которое нужно сверить с источником.
             practice_en: "Find a statement in one of Claude's answers that needs to be checked against a source."
       - checkpoint: Вы понимаете, как устроена языковая модель, и пользуетесь рамкой 4D в своей работе.
@@ -53,15 +53,15 @@ maps:
             practice_en: "Ask about one of your internal procedures, first without the document and then with it, and compare the answers."
           - guide: ai-fluency-4d
             outcome: Разбирать задачу по четырём навыкам — делегировать, описывать, оценивать, отвечать за результат.
-            outcome_en: "Break a task down by the four skills: delegate, describe, evaluate, and take responsibility for the result."
+            outcome_en: "Break a task down by the four skills: Delegation, Description, Discernment, and Diligence."
             practice: Пройдите одну рабочую задачу по 4D и запишите, что отдали AI, а что оставили себе.
-            practice_en: "Take one work task through the 4D and write down what you gave to AI and what you kept for yourself."
+            practice_en: "Run one work task through the 4Ds and write down what you handed to AI and what you kept for yourself."
       - checkpoint: Вы осознанно выбираете способ работы с AI и ведёте цикл «описать — оценить».
-        checkpoint_en: "You choose how to work with AI deliberately, and you run the “describe, then evaluate” loop."
+        checkpoint_en: "You choose how to work with AI deliberately, and you run the description–discernment loop."
         steps:
           - guide: ai-fluency-complete-guide
             outcome: Выбирать между автоматизацией, совместной работой и самостоятельной работой AI.
-            outcome_en: "Choose between automation, working together with AI, and letting AI work on its own."
+            outcome_en: "Choose between automation, augmentation, and agency."
             practice: Выпишите три задачи на неделю и выберите для каждой способ работы с AI; затем сделайте упражнение «Плохой запрос».
             practice_en: "Write down three tasks for the week and choose a way of working with AI for each; then do the “Bad prompt” exercise."
           - guide: anthropic-academy
@@ -73,7 +73,7 @@ maps:
             lang: en
             minutes: 60
             outcome: Закрепить картину возможностей и ограничений моделей — с сертификатом.
-            outcome_en: "Firm up your picture of what models can and cannot do, with a certificate."
+            outcome_en: "Consolidate your picture of what models can and cannot do, and earn a certificate."
       - checkpoint: У вас есть личные правила работы с AI, и вы помогаете коллегам работать ответственно.
         checkpoint_en: "You have your own rules for working with AI, and you help colleagues work responsibly."
         steps:
@@ -96,7 +96,7 @@ maps:
             lang: en
             minutes: 240
             outcome: Пройти полный курс Anthropic и получить сертификат.
-            outcome_en: "Complete the full Anthropic course and get a certificate."
+            outcome_en: "Complete the full Anthropic course and earn a certificate."
 
   - id: prompting
     title: Запросы к Claude
@@ -104,10 +104,10 @@ maps:
     for: для всех
     for_en: "for everyone"
     goal: Ставить Claude задачу так, чтобы с первого раза получать нужный результат, — от простой просьбы до сложного многошагового сценария.
-    goal_en: "Give Claude tasks so that you get the result you need the first time, from a simple request to a complex multi-step scenario."
+    goal_en: "Ask Claude for what you need and get it right the first time, from a simple request to a complex multi-step scenario."
     levels:
       - checkpoint: Ваши запросы ясные — с ролью, задачей, материалами и форматом — и вы показываете примеры.
-        checkpoint_en: "Your prompts are clear, with a role, a task, materials and a format, and you show examples."
+        checkpoint_en: "Your prompts are clear, with a role, a task, materials, and a format, and you include examples."
         steps:
           - guide: writing-a-task
             outcome: Собирать запрос из пяти частей — кто и для кого, что сделать, из чего, в каком виде, как проверить.
@@ -116,14 +116,14 @@ maps:
             practice_en: "Rewrite your last prompt using the five parts and compare the answers."
           - guide: prompt-clear-and-direct
             outcome: Применять тест на коллегу и объяснять, зачем нужен результат.
-            outcome_en: "Apply the colleague test and explain why the result is needed."
+            outcome_en: "Apply the colleague test and explain what the result is for."
             practice: Допишите в слабый запрос одну строку — для кого результат и зачем он нужен — и сравните ответы.
-            practice_en: "Add one line to a weak prompt, saying who the result is for and why it is needed, and compare the answers."
+            practice_en: "Add one line to a weak prompt saying who the result is for and why it is needed, then compare the answers."
           - guide: prompt-examples
             outcome: Задавать тон и формат примерами.
             outcome_en: "Set the tone and format with examples."
             practice: Дайте Claude три своих удачных письма без персональных данных как образец для нового.
-            practice_en: "Give Claude three of your good emails, with no personal data, as a model for a new one."
+            practice_en: "Give Claude three of your emails that worked well, with no personal data, as models for a new one."
       - checkpoint: Вы управляете структурой, форматом и работаете с длинными документами.
         checkpoint_en: "You control structure and format, and you work with long documents."
         steps:
@@ -131,41 +131,41 @@ maps:
             outcome: Разделять инструкции и данные метками, задавать роль.
             outcome_en: "Separate instructions from data with tags, and set a role."
             practice: Перескажите новый регламент для коллег, разделив роль, документ и инструкцию метками.
-            practice_en: "Summarize a new regulation for colleagues, separating the role, the document and the instruction with tags."
+            practice_en: "Summarize a new regulation for colleagues, separating the role, the document, and the instruction with tags."
           - guide: prompt-output-format
             outcome: Получать ответ нужной формы и длины.
             outcome_en: "Get an answer of the form and length you need."
             practice: Получите таблицу по выгрузке с заданными столбцами и тремя выводами.
-            practice_en: "Get a table from a data export with the columns you set and three conclusions."
+            practice_en: "Turn a data export into a table with the columns you specify, plus three conclusions."
           - guide: prompt-long-documents
             outcome: Работать с большими документами — порядок, метки, цитаты.
-            outcome_en: "Work with large documents: order, tags, quotes."
+            outcome_en: "Work with long documents: order, tags, and quotes."
             practice: Сравните два договора, попросив сначала выписать цитаты.
             practice_en: "Compare two contracts, asking Claude to pull out quotes first."
       - checkpoint: Вы снижаете выдумки и решаете сложные задачи цепочками.
-        checkpoint_en: "You reduce made-up answers and solve complex tasks with chains."
+        checkpoint_en: "You cut down on made-up answers and handle complex tasks with chains of prompts."
         steps:
           - guide: prompt-thinking
             outcome: Выбирать уровень усилия и просить подумать там, где это нужно.
-            outcome_en: "Choose the effort level and ask Claude to think where it is needed."
+            outcome_en: "Choose the effort level and ask Claude to think things through where it matters."
             practice: Проверьте служебную записку по чек-листу на двух уровнях усилия и сравните.
-            practice_en: "Check an internal memo against a checklist at two effort levels and compare."
+            practice_en: "Check an internal memo against a checklist at two effort levels and compare the results."
           - guide: prompt-fewer-hallucinations
             outcome: Применять семь приёмов против выдумок.
-            outcome_en: "Use the seven techniques against made-up answers."
+            outcome_en: "Use the seven techniques for reducing made-up answers."
             practice: Задайте вопрос по документу с разрешением сказать «не знаю» и проверкой по цитатам.
-            practice_en: "Ask a question about a document, allowing Claude to say “I don't know” and checking against quotes."
+            practice_en: "Ask a question about a document, let Claude say “I don’t know,” and check the answer against quotes."
           - guide: prompt-chains
             outcome: Разбивать большую задачу на цепочку «черновик — проверка — доработка».
             outcome_en: "Break a large task into a “draft, check, revise” chain."
             practice: Подготовьте ответ на жалобу клиента в три запроса — черновик, проверка, доработка; без персональных данных.
-            practice_en: "Prepare a reply to a customer complaint in three prompts: draft, check, revise; with no personal data."
+            practice_en: "Prepare a reply to a customer complaint in three prompts (draft, check, revise), with no personal data."
       - checkpoint: Вы пишете шаблоны для повторяющихся задач и улучшаете их по результатам проверки.
         checkpoint_en: "You write templates for recurring tasks and improve them based on test results."
         steps:
           - guide: prompting-complete-guide
             outcome: Строить сложный запрос по каркасу и улучшать его на 5–10 примерах.
-            outcome_en: "Build a complex prompt from a framework and improve it on 5–10 examples."
+            outcome_en: "Build a complex prompt on a framework and refine it against 5–10 examples."
             practice: Сделайте шаблон для своей еженедельной задачи и проверьте на прошлых примерах.
             practice_en: "Make a template for one of your weekly tasks and test it on past examples."
           - url: https://platform.claude.com/docs/ru/build-with-claude/prompt-engineering/claude-prompting-best-practices
@@ -175,10 +175,10 @@ maps:
             lang: ru
             minutes: 60
             outcome: Знать первоисточник и особенности конкретных моделей.
-            outcome_en: "Know the original source and the specifics of individual models."
+            outcome_en: "Work from the primary source and know the specifics of each model."
           - url: https://github.com/anthropics/prompt-eng-interactive-tutorial
             title: Интерактивный учебник Anthropic по запросам
-            title_en: "Anthropic's interactive prompting tutorial"
+            title_en: "Anthropic’s interactive prompt engineering tutorial"
             lang: en
             minutes: 240
             outcome: Пройти девять глав с упражнениями.
@@ -190,29 +190,29 @@ maps:
     for: для всех
     for_en: "for everyone"
     goal: Уверенно работать в Claude каждый день — проекты, документы, Office, подключения и Cowork — безопасно для данных организации.
-    goal_en: "Work confidently in Claude every day (projects, documents, Office, connectors and Cowork) while keeping your organization's data safe."
+    goal_en: "Work confidently in Claude every day — projects, documents, Office, connectors, and Cowork — while keeping your organization’s data safe."
     levels:
       - checkpoint: Вы знаете возможности Claude и ведёте свой первый проект.
-        checkpoint_en: "You know what Claude can do, and you run your first project."
+        checkpoint_en: "You know what Claude can do, and you have your first project up and running."
         steps:
           - guide: claude-overview
             outcome: Выбирать между разговором, проектом, артефактом и навыком.
-            outcome_en: "Choose between a chat, a project, an artifact and a skill."
+            outcome_en: "Choose between a conversation, a project, an artifact, and a skill."
             practice: Выпишите три задачи своей недели и для каждой выберите разговор, проект, файл или навык.
-            practice_en: "Write down three tasks from your week and choose a chat, a project, a file or a skill for each."
+            practice_en: "Write down three tasks from your week and choose a conversation, a project, a file, or a skill for each."
           - guide: claude-work-complete-guide
             anchor: start
             title: Интерфейс, настройки и память
-            title_en: "Interface, settings and memory"
+            title_en: "Interface, settings, and memory"
             outcome: Найти основные кнопки и задать постоянные инструкции для всех разговоров.
-            outcome_en: "Find the main buttons and set standing instructions for all your chats."
+            outcome_en: "Find the main buttons and set standing instructions for all your conversations."
           - guide: claude-projects
             outcome: Собирать проект с документами и инструкциями.
-            outcome_en: "Put together a project with documents and instructions."
+            outcome_en: "Set up a project with documents and instructions."
             practice: Создайте проект для одной своей повторяющейся задачи.
             practice_en: "Create a project for one of your recurring tasks."
       - checkpoint: Вы работаете с файлами, получаете готовые Word, Excel и PowerPoint и пользуетесь Claude прямо в Office.
-        checkpoint_en: "You work with files, get finished Word, Excel and PowerPoint files, and use Claude right inside Office."
+        checkpoint_en: "You work with files, get finished Word, Excel, and PowerPoint files, and use Claude right inside Office."
         steps:
           - guide: claude-work-complete-guide
             anchor: projects
@@ -225,25 +225,25 @@ maps:
           - guide: claude-work-complete-guide
             anchor: files
             title: Файлы и документы в разговоре
-            title_en: "Files and documents in a chat"
+            title_en: "Files and documents in a conversation"
             outcome: Знать, какие файлы и какого объёма Claude читает и как на них ссылаться.
-            outcome_en: "Know which files Claude can read, how large they can be, and how to refer to them."
+            outcome_en: "Tell which files Claude can read, how large they can be, and how to refer to them."
           - guide: claude-work-complete-guide
             anchor: create-files
             title: Создание Word, Excel, PowerPoint и PDF
-            title_en: "Creating Word, Excel, PowerPoint and PDF files"
+            title_en: "Creating Word, Excel, PowerPoint, and PDF files"
             outcome: Получать готовые файлы и артефакты.
             outcome_en: "Get finished files and artifacts."
             practice: Попросите сделать таблицу Excel с формулами по вашей выгрузке.
-            practice_en: "Ask for an Excel spreadsheet with formulas built from your data export."
+            practice_en: "Ask Claude for an Excel spreadsheet with formulas, built from your data export."
           - guide: claude-work-complete-guide
             anchor: office
             title: Claude в Excel, Word, PowerPoint и Outlook
-            title_en: "Claude in Excel, Word, PowerPoint and Outlook"
+            title_en: "Claude in Excel, Word, PowerPoint, and Outlook"
             outcome: Работать с открытым файлом прямо в Office.
             outcome_en: "Work with an open file right inside Office."
             practice: Попросите Claude в Excel объяснить итог вашего отчёта со ссылками на ячейки.
-            practice_en: "Ask Claude in Excel to explain the bottom line of your report, with references to the cells."
+            practice_en: "Ask Claude in Excel to explain the bottom line of your report, with cell references."
       - checkpoint: Вы поручаете Claude многошаговую работу в Cowork и используете подключения.
         checkpoint_en: "You hand Claude multi-step work in Cowork and use connectors."
         steps:
@@ -252,35 +252,35 @@ maps:
             title: Подключения и исследование
             title_en: "Connectors and research"
             outcome: Работать с почтой, файлами и календарём через подключения.
-            outcome_en: "Work with email, files and your calendar through connectors."
+            outcome_en: "Work with email, files, and your calendar through connectors."
             practice: Спросите Claude, к каким встречам недели нужно подготовить материалы, и сверьте с календарём.
             practice_en: "Ask Claude which of this week's meetings need materials prepared, and check against your calendar."
           - guide: claude-cowork
             outcome: Понимать, когда нужен Cowork, и безопасно начать.
-            outcome_en: "Understand when you need Cowork, and get started safely."
+            outcome_en: "Understand when you need Cowork, and start safely."
           - guide: claude-work-complete-guide
             anchor: cowork
             title: Cowork — поручить Claude работу
-            title_en: "Cowork: handing work to Claude"
+            title_en: "Cowork: hand work to Claude"
             outcome: Вести цикл задачи, задавать постоянный контекст и задачи по расписанию.
-            outcome_en: "Run the task loop, and set standing context and scheduled tasks."
+            outcome_en: "Run the task loop and set up standing context and scheduled tasks."
             practice: Поручите Cowork собрать справку из папки с копиями документов.
             practice_en: "Ask Cowork to put together a briefing note from a folder of document copies."
       - checkpoint: Вы применяете Claude в сценариях своей роли и знаете правила безопасности данных.
-        checkpoint_en: "You use Claude in the scenarios of your role, and you know the data safety rules."
+        checkpoint_en: "You use Claude in scenarios for your role, and you know the data safety rules."
         steps:
           - guide: claude-work-complete-guide
             anchor: safety
             title: Безопасность и данные
             title_en: "Safety and data"
             outcome: Знать, где у работы с Claude нет следа аудита и когда Cowork и надстройки не подходят.
-            outcome_en: "Know where work with Claude leaves no audit trail, and when Cowork and the add-ins are not suitable."
+            outcome_en: "Recognize where work with Claude leaves no audit trail, and when Cowork and the add-ins are not suitable."
           - guide: claude-work-complete-guide
             anchor: roles
             title: Сценарии по ролям
             title_en: "Scenarios by role"
             outcome: Внедрить один сценарий в своём подразделении.
-            outcome_en: "Bring one scenario into use in your department."
+            outcome_en: "Put one scenario to work in your department."
             practice: Проведите сценарий своей роли сами три раза и покажите коллегам.
             practice_en: "Run a scenario for your role yourself three times and show it to colleagues."
           - url: https://academy.claude.com/courses/claude-101
@@ -311,14 +311,14 @@ maps:
         steps:
           - guide: claude-skills
             outcome: Отличать навык от проекта и подключения.
-            outcome_en: "Tell a skill from a project and a connector."
+            outcome_en: "Tell a skill apart from a project or a connector."
             practice: Найдите инструкцию, которую вставляли в разговоры трижды, и решите — проект, навык или подключение.
-            practice_en: "Find an instruction you have pasted into chats three times, and decide: a project, a skill or a connector."
+            practice_en: "Find an instruction you have pasted into conversations three times and decide whether it belongs in a project, a skill, or a connector."
           - guide: automate-a-routine-task
             outcome: Пройти пять шагов от ручной задачи к автоматизации.
-            outcome_en: "Go through the five steps from a manual task to automation."
+            outcome_en: "Follow the five steps from a manual task to automation."
             practice: Опишите свою рутинную задачу в трёх строках — вход, выход, кто читает.
-            practice_en: "Describe one of your routine tasks in three lines: input, output, who reads it."
+            practice_en: "Describe one of your routine tasks in three lines: input, output, and who reads it."
       - checkpoint: Вы написали и включили свой первый навык.
         checkpoint_en: "You have written and turned on your first skill."
         steps:
@@ -335,7 +335,7 @@ maps:
             title: Навыки в приложении Claude
             title_en: "Skills in the Claude app"
             outcome: Включать, загружать и создавать навык в разговоре.
-            outcome_en: "Turn on, upload and create a skill in a chat."
+            outcome_en: "Turn on, upload, and create a skill in a conversation."
             practice: Сделайте навык «служебная записка» по образцу из руководства.
             practice_en: "Make an “internal memo” skill following the example in the guide."
       - checkpoint: Ваши навыки срабатывают надёжно, а повторяющаяся работа идёт по расписанию.
@@ -346,13 +346,13 @@ maps:
             title: Как написать хороший навык
             title_en: "How to write a good skill"
             outcome: Улучшать навык по девяти правилам — прежде всего описание и образец результата.
-            outcome_en: "Improve a skill using the nine rules, above all the description and the example of the result."
+            outcome_en: "Improve a skill with the nine rules, starting with the description and the example of the result."
           - guide: skills-complete-guide
             anchor: test
             title: Проверка и улучшение навыка
             title_en: "Testing and improving a skill"
             outcome: Проверять навык на трёх задачах с ним и без него.
-            outcome_en: "Test a skill on three tasks, with it and without it."
+            outcome_en: "Test a skill on three tasks, with and without it."
             practice: Проверьте навык «служебная записка» на трёх прошлых записках — с навыком и без.
             practice_en: "Test the “internal memo” skill on three past memos, with the skill and without it."
           - guide: claude-work-complete-guide
@@ -362,17 +362,17 @@ maps:
             outcome: Настроить еженедельную задачу, которая готовит черновик.
             outcome_en: "Set up a weekly task that prepares a draft."
       - checkpoint: Вы делитесь проверенными навыками с коллегами и строите работу людей и агентов вместе.
-        checkpoint_en: "You share tested skills with colleagues, and you organize work for people and agents together."
+        checkpoint_en: "You share tested skills with colleagues, and you set up teams where people and agents work together."
         steps:
           - guide: skills-complete-guide
             anchor: safety
             title: Безопасность и распространение навыков
-            title_en: "Safety and sharing of skills"
+            title_en: "Skill safety and sharing"
             outcome: Проверять навыки перед включением и делиться ими через проверку в организации.
             outcome_en: "Check skills before turning them on, and share them through your organization's review."
           - guide: human-agent-teams
             outcome: Понимать, как агент становится участником команды и как доверие к нему растёт постепенно.
-            outcome_en: "Understand how an agent becomes a member of the team and how trust in it grows step by step."
+            outcome_en: "Understand how an agent becomes a team member and how trust in it grows step by step."
             practice: Выпишите три вопроса, которые команда задаёт каждую неделю.
             practice_en: "Write down three questions your team asks every week."
           - url: https://academy.claude.com/courses/introduction-to-agent-skills
@@ -398,15 +398,15 @@ maps:
             outcome: Запустить Claude Code, создать CLAUDE.md, дать первую задачу.
             outcome_en: "Start Claude Code, create a CLAUDE.md, and give it its first task."
             practice: В своей ветке выполните /init, впишите в CLAUDE.md команду тестов, дайте задачу с тестом и проверьте git diff.
-            practice_en: "In your own branch, run /init, add the test command to CLAUDE.md, give a task with a test, and check the git diff."
+            practice_en: "In your own branch, run /init, add the test command to CLAUDE.md, ask for a change that comes with a test, and check the git diff."
           - guide: claude-code-how-it-works
             outcome: Понимать агентный цикл, инструменты, сеансы и режимы разрешений.
-            outcome_en: "Understand the agentic loop, tools, sessions and permission modes."
+            outcome_en: "Understand the agentic loop, tools, sessions, and permission modes."
             practice: Переключите режимы клавишами Shift+Tab и посмотрите /context после первого вопроса.
             practice_en: "Switch modes with Shift+Tab and look at /context after your first question."
           - guide: claude-code-workflows
             outcome: Применять рецепты — разобраться в коде, исправить ошибку, написать тесты.
-            outcome_en: "Use the recipes: understand the code, fix a bug, write tests."
+            outcome_en: "Use the recipes: understand the code, fix a bug, and write tests."
             practice: Попросите Claude написать недостающие тесты к одному модулю.
             practice_en: "Ask Claude to write the missing tests for one module."
       - checkpoint: Ваши сессии эффективны, проект настроен, расходы под контролем.
@@ -416,19 +416,19 @@ maps:
             outcome: Давать способ проверки, работать по плану, держать контекст чистым.
             outcome_en: "Give Claude a way to check its work, work from a plan, and keep the context clean."
             practice: Проведите одну задачу через режим плана и запуск тестов с выводом.
-            practice_en: "Take one task through plan mode and a test run with its output."
+            practice_en: "Take one task through plan mode, then run the tests and read their output."
           - guide: claude-code-setup
             outcome: Настроить CLAUDE.md и разрешения allow/deny и выбирать между навыком, помощником, хуком и подключением.
-            outcome_en: "Set up CLAUDE.md and allow/deny permissions, and choose between a skill, a subagent, a hook and an MCP server."
+            outcome_en: "Set up CLAUDE.md and allow/deny permissions, and choose between a skill, a subagent, a hook, and an MCP server."
             practice: Запретите чтение .env правилом deny и проверьте отказ.
-            practice_en: "Block reading .env with a deny rule and check that it is refused."
+            practice_en: "Block reading .env with a deny rule and check that the read is refused."
           - guide: claude-code-costs
             outcome: Применять десять привычек экономии контекста и бюджета.
             outcome_en: "Use the ten habits that save context and budget."
             practice: Сравните /context и /usage в начале и в конце задачи.
-            practice_en: "Compare /context and /usage at the start and at the end of a task."
+            practice_en: "Compare /context and /usage at the start and end of a task."
       - checkpoint: Вы расширяете Claude Code помощниками, хуками и подключениями.
-        checkpoint_en: "You extend Claude Code with subagents, hooks and MCP servers."
+        checkpoint_en: "You extend Claude Code with subagents, hooks, and MCP servers."
         steps:
           - guide: claude-code-subagents
             outcome: Проектировать помощников и понимать, когда они нужны.
@@ -439,26 +439,26 @@ maps:
             outcome: Делать обязательные действия хуками.
             outcome_en: "Turn required actions into hooks."
             practice: Сделайте хук PreToolUse, запрещающий правку .env, и проверьте блокировку.
-            practice_en: "Make a PreToolUse hook that blocks edits to .env, and check that it blocks them."
+            practice_en: "Write a PreToolUse hook that blocks edits to .env, and check that the block works."
           - guide: claude-code-mcp
             outcome: Подключать одобренные системы с минимальными правами и без ключей в репозитории.
             outcome_en: "Connect approved systems with minimal permissions and without keys in the repository."
             practice: Проверьте claude mcp list и отключите лишнее в /mcp.
-            practice_en: "Check claude mcp list and turn off what you don't need in /mcp."
+            practice_en: "Run claude mcp list and turn off anything you don’t need in /mcp."
       - checkpoint: Вы запускаете долгую работу без присмотра и уверенно проверяете её результат.
-        checkpoint_en: "You run long unattended work and check its result with confidence."
+        checkpoint_en: "You run long unattended work and check the result with confidence."
         steps:
           - guide: claude-code-in-action
             outcome: Ставить проверяемую цель, выбирать режим и автоматизацию и проверять работу без присмотра по diff.
-            outcome_en: "Set a goal that can be checked, choose the mode and automation, and check unattended work by its diff."
+            outcome_en: "Set a goal that can be verified, choose the mode and automation, and review unattended work by its diff."
             practice: Поставьте /goal на прохождение тестов и проверьте результат по diff, а не по резюме.
-            practice_en: "Set a /goal for the tests to pass and check the result by the diff, not by the summary."
+            practice_en: "Set a /goal of passing tests and check the result by the diff, not the summary."
           - guide: claude-code-in-action
             anchor: safety
             title: Безопасность в регулируемой организации
             title_en: "Safety in a regulated organization"
             outcome: Знать настройки Claude Code, которые важны для чувствительных репозиториев.
-            outcome_en: "Know the Claude Code settings that matter for sensitive repositories."
+            outcome_en: "Apply the Claude Code settings that matter for sensitive repositories."
           - url: https://code.claude.com/docs/ru/overview
             url_en: https://code.claude.com/docs/en/overview
             title: Документация Claude Code на русском
@@ -466,7 +466,7 @@ maps:
             lang: ru
             minutes: 120
             outcome: Знать первоисточник по всем возможностям.
-            outcome_en: "Know the original source for every feature."
+            outcome_en: "Look up any feature in the primary source."
           - url: https://academy.claude.com/courses/claude-code-in-action
             title: "Курс: Claude Code in Action"
             title_en: "Course: Claude Code in Action"
@@ -484,11 +484,11 @@ maps:
     goal_en: "Make decisions about adopting Claude in your organization and organize the work of people and agents in teams, with regulation in mind."
     levels:
       - checkpoint: Вы понимаете возможности и риски AI на уровне, достаточном для решений.
-        checkpoint_en: "You understand what AI can do and its risks well enough to make decisions."
+        checkpoint_en: "You understand AI’s capabilities and risks well enough to make decisions."
         steps:
           - guide: ai-fluency-4d
             outcome: Говорить с командой на общем языке 4D.
-            outcome_en: "Talk with your team in the shared 4D language."
+            outcome_en: "Use the shared 4D language with your team."
           - page: responsible-ai
             title: Ответственный AI — курс в шести частях
             title_en: "Responsible AI: a course in six parts"
@@ -504,15 +504,15 @@ maps:
             practice_en: "Go through the five readiness questions with your team."
           - guide: claude-tag
             outcome: Понимать, как агент работает в общих каналах и что решить до пилота — если вы пользуетесь Slack.
-            outcome_en: "Understand how an agent works in shared channels and what to decide before a pilot, if you use Slack."
+            outcome_en: "If you use Slack, understand how an agent works in shared channels and what to decide before a pilot."
       - checkpoint: Вы можете провести пять решений о внедрении для своей организации.
         checkpoint_en: "You can work through the five adoption decisions for your organization."
         steps:
           - guide: deploying-claude-enterprise
             outcome: Пройти пять решений о внедрении и определить позицию для регулируемого подразделения.
-            outcome_en: "Work through the five adoption decisions and set the position for a regulated department."
+            outcome_en: "Work through the five adoption decisions and settle the position for a regulated department."
             practice: Запишите, какие возможности, подключения и лимит нужны вашему пилоту и кто владелец каждого решения.
-            practice_en: "Write down which features, connectors and limit your pilot needs, and who owns each decision."
+            practice_en: "Write down which features and connectors your pilot needs, what limit it needs, and who owns each decision."
       - checkpoint: Вы ведёте внедрение и измеряете его по сигналам, а не по нормам.
         checkpoint_en: "You lead adoption and measure it by signals, not by quotas."
         steps:
@@ -530,7 +530,7 @@ maps:
             lang: en
             minutes: 150
             outcome: Пройти курс Anthropic с рабочим планом внедрения.
-            outcome_en: "Complete the Anthropic course with a working adoption plan."
+            outcome_en: "Complete the Anthropic course and come away with a working adoption plan."
           - url: https://academy.claude.com/courses/building-effective-human-agent-teams
             title: "Курс: Building Effective Human-Agent Teams"
             title_en: "Course: Building Effective Human-Agent Teams"

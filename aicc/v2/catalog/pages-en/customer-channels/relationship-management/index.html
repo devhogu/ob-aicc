@@ -23,7 +23,7 @@
       <h1 class="page-header__title">Relationship management</h1>
     </div>
   </div>
-  <p class="page-header__intent">Relationship management is the primary revenue-generating channel for corporate, SME, and high-value retail segments, and for private banking where the Bank offers it — the relationship manager (RM) is the Bank's commercial face to its most profitable customers. RM productivity is constrained by administrative overhead: meeting preparation, CRM documentation, report assembly, and cross-sell list management consume time that should be directed at client interaction. Under the regulator's conduct requirements, RMs handling investment products, complex lending, and wealth management carry individual obligations — client suitability, conflict of interest management, and product disclosure — that add documentation burden. <strong>The opportunity for GenAI is to restore RM capacity to client-facing time</strong> — generating pre-meeting briefs in minutes, monitoring book health continuously, identifying cross-sell opportunities from transaction signals, and alerting RMs to lifecycle events before they become urgent.</p>
+  <p class="page-header__intent">Relationship management is the primary revenue-generating channel for corporate, SME, and high-value retail segments, and for private banking where the Bank offers it — the relationship manager (RM) is the Bank's commercial face to its most profitable customers. RM productivity is constrained by administrative overhead: meeting preparation, CRM documentation, report assembly, and cross-sell list management consume time that should be directed at client interaction. Under the regulator's conduct requirements, RMs handling investment products, complex lending, and wealth management carry individual obligations — client suitability, conflict of interest management, and product disclosure — that add documentation burden. <strong>The opportunity for generative AI is to restore RM capacity to client-facing time</strong> — generating pre-meeting briefs in minutes, monitoring book health continuously, identifying cross-sell opportunities from transaction signals, and alerting RMs to lifecycle events before they become urgent.</p>
 </header>
 <style>
   #problems-tab-rm-productivity:checked ~ .problems-tab-bar label[for="problems-tab-rm-productivity"] {
@@ -46,7 +46,7 @@
     <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Insights &amp; analytics</h3><p>RM book health — revenue concentration, product penetration depth, client engagement frequency, and at-risk relationship signals — is visible at team level in quarterly performance reviews. Individual RMs do not have a continuous, portfolio-level view of which clients are drifting, which books are over-concentrated, or where cross-sell capacity is accumulating unused.</p></article><article class="discovery-context-card"><h3>Enablement</h3><p>Meeting preparation for client calls and reviews is performed manually by RMs: reviewing CRM notes, pulling account data, reading company news, and assembling a cross-sell prompt from the product team's campaign list. Thorough preparation for a corporate client meeting takes 30–60 minutes; RM book size means most meetings receive significantly less preparation time.</p></article><article class="discovery-context-card"><h3>Automation</h3><p>RM performance reporting, book composition summaries, and cross-sell pipeline tracking are assembled manually by team heads from CRM exports and finance data at period end. The recurring, structured nature of each report makes it a candidate for AI-driven assembly.</p></article><article class="discovery-context-card"><h3>New business opportunities</h3><p>An RM operating with a continuously monitored book — receiving alerts on at-risk relationships, cross-sell opportunities surfaced from transaction signals, and pre-generated meeting briefs — serves a larger effective book size without adding headcount. The commercial leverage is higher revenue per RM, not more RMs. In competitive corporate and private banking markets, the RM who arrives best-prepared consistently captures wallet share from the RM who arrives with generic talking points.</p></article></div>
   </div>
 </section>
-<div id="main-content" class="l3-sections" aria-label="Sub-concerns">
+<div id="main-content" class="l3-sections" aria-label="Subsections">
 <section class="l3-section" id="rm-book-management">
   <header class="l3-section__head">
     <h2 class="l3-section__title">RM book management</h2>
@@ -81,7 +81,7 @@
       <p>The AI agent reads CRM interaction logs, product system event feeds, and KYC schedule data for each client in the RM's book, compiling a structured activity record covering interactions, product milestones, and compliance events at each update cycle. The weekly summary is presented to the RM for review and confirmation; the RM adds qualitative interaction notes where the automated record does not capture the full interaction context. CRM activity record completeness rate — the proportion of client relationships with a compliant documented contact record — and RM manual CRM entry time are tracked against the pre-deployment baseline.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">An automated activity log for each client in the RM's book — interactions, product events, and compliance-relevant milestones compiled from CRM events, product system alerts, and KYC schedule data — is available to each RM with a weekly summary for review and confirmation, keeping the documented contact record complete.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -122,7 +122,7 @@
       <p>The AI agent reads CRM interaction records, product holding data, transaction revenue attribution, and engagement frequency for each client in the RM's book, computing book health metrics at weekly cadence. The book health brief ranks clients by attrition risk and cross-sell opportunity, and flags clients overdue for outreach against the documented contact frequency standard. The RM reviews the brief at the start of the weekly call planning cycle; the RM team head has access to the team-level book health summary, and book health trends across the team are reviewed monthly alongside individual RM performance data. Revenue per book, attrition rate, and contact frequency compliance rate are the primary outcome metrics.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">A weekly book health brief — ranking clients by attrition risk and cross-sell opportunity and flagging clients overdue for outreach against the contact frequency standard — is available to each RM at the start of the weekly call planning cycle, with a team-level summary for the RM team head.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -163,7 +163,7 @@
       <p>The AI agent reads revenue attribution, product holding data, segment assignments, and KYC review schedules for each client across the RM team's book, computing book-level concentration, workload, and capacity metrics at quarterly cadence. The rebalancing brief identifies the highest-priority rebalancing cases — over-concentrated books, upcoming KYC workload peaks, and under-resourced books with capacity for additional client assignments. The RM team head reviews the brief and uses it as the primary evidence basis for book allocation decisions; book balance variance across the team and KYC deadline adherence rate are tracked as outcome metrics.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">A quarterly rebalancing brief — identifying over-concentrated books, upcoming KYC review workload peaks, and under-resourced books with capacity for additional client assignments — is available to the RM team head as the evidence basis for book allocation decisions.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -218,7 +218,7 @@
       <p>The AI agent monitors CRM, product system maturities, KYC review schedules, and public corporate event feeds for each client in the RM's book. It generates an alert at 30, 14, and 7 days before each event with the recommended action and a pre-populated brief drawn from relationship history and event context. The RM acts on the alert and records the outcome in CRM; KYC deadline adherence and product retention rates are the primary outcome metrics.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">Structured alerts with recommended action and pre-populated brief are available to each RM at 30, 14, and 7 days before client lifecycle events — maturities, KYC deadlines, credit renewals, and corporate changes — maintained from continuous monitoring of CRM, product systems, and public event feeds.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -259,7 +259,7 @@
       <p>The AI agent reads CRM interaction history, product holdings, open commitments, KYC review status, and upcoming lifecycle events for each client subject to a relationship transition, and generates a structured continuity brief for the incoming RM. The brief is generated at transition confirmation rather than on the departure date, giving the incoming RM adequate time to review it before first contact with the client. Client retention rate — measured as product holding and contact frequency change in the 90 days following the transition — and time from transition to first documented incoming RM contact are the primary outcome metrics.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">A relationship continuity brief for each client subject to an RM transition — interaction history, product holdings, open commitments, KYC review status, and upcoming lifecycle events — is available to the incoming RM before first contact with the client.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -300,7 +300,7 @@
       <p>The AI agent reads the KYC review schedule for each client relationship and initiates the document request workflow at the defined lead time — typically 60 days before the review deadline — generating the client-facing request and the internal tracking record. It monitors document receipt and flags overdue responses to the RM and compliance team at defined escalation points. On receipt of all required documents, the AI agent assembles the completed review file for compliance sign-off; the full workflow timeline is maintained in the audit trail. KYC deadline adherence rate — the proportion of reviews completed before the regulatory deadline — and workflow completion cycle time are the primary outcome metrics.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">Every KYC refresh in the RM client book runs through a tracked workflow — client information request issued at the defined lead time, document receipt monitored, overdue responses escalated, and the completed review file assembled — so that the compliance team receives a complete file for sign-off before the review deadline.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -355,7 +355,7 @@
       <p>The AI agent reads CRM meeting records — preparation time logged, meeting type, cross-sell topics raised, conversion outcome, and follow-up completion rate — and correlates preparation quality indicators with commercial outcomes across the RM population. The weekly brief identifies the preparation and engagement practices with the strongest outcome correlation and flags RMs where outcome metrics suggest a coaching conversation is warranted. RM team heads review the brief and direct coaching sessions toward the evidence-ranked improvement opportunities; RM-level cross-sell conversion rate and follow-up completion rate are the primary outcome metrics.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">A weekly meeting outcome brief — identifying the preparation and engagement practices with the strongest correlation to cross-sell conversion and follow-up completion, and flagging RMs where a coaching conversation is warranted — is available to RM team heads for the coaching cycle.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -396,7 +396,7 @@
       <p>The AI agent reads the RM's post-meeting summary input — voice note transcription or written notes — and generates a structured CRM record with standard fields populated: meeting date, participants, topics, commitments made by each party, and cross-sell outcomes. The RM reviews and confirms before the record is committed to CRM; any field requiring regulatory completeness for advisory interaction records is highlighted if absent. CRM documentation completion rate — the proportion of meetings with a compliant interaction record within 24 hours — and after-meeting administration time per RM are tracked against the pre-deployment manual documentation baseline.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">A structured CRM interaction record — meeting date, participants, topics discussed, commitments, and cross-sell outcomes — generated from the RM's post-meeting voice note or written summary is available for RM review and confirmation after every client meeting.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -437,7 +437,7 @@
       <p>The AI agent reads CRM interaction history, recent account activity, public corporate filings or wealth profile data where applicable, and current product holdings. It generates a brief covering relationship summary, likely agenda topics, and recommended cross-sell prompts aligned to the client's lifecycle stage and product holding gaps. The RM reviews and acts; post-meeting notes are recorded in CRM to maintain a complete interaction history for compliance and continuity purposes.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">A pre-meeting brief — covering relationship summary, likely agenda topics, and recommended cross-sell prompts calibrated to the client's lifecycle stage and product holding gaps — is available to each RM before every scheduled client or prospect interaction, drawn from CRM history, account activity, and public corporate or wealth profile data.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -492,7 +492,7 @@
       <p>The AI agent reads CRM records of cross-sell opportunities identified, conversations initiated, and conversion outcomes, and computes weekly conversion rates by product category and segment across the RM population. It identifies the product categories with the widest opportunity-to-conversion gap and the client characteristics associated with high-conversion outcomes. The RM team head reviews the brief and directs coaching effort toward the highest-gap categories; cross-sell conversion rate improvement by category is the primary outcome metric.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">A weekly cross-sell conversion brief — conversion rates by product category and segment, the categories with the widest opportunity-to-conversion gap, and the client characteristics associated with high-conversion outcomes — is available to the RM team head to direct coaching and product knowledge investment.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -533,7 +533,7 @@
       <p>The AI agent reads each high-priority cross-sell opportunity from the RM's ranked list and generates a structured conversation brief covering the recommended product, the supporting rationale drawn from transaction signals and lifecycle context, and a suggested conversation approach tailored to the client's relationship history. The RM reviews and adapts the brief before the client interaction; the brief is accessible from within the RM's call preparation workflow. Cross-sell conversion rate for opportunities with a generated brief compared to the unassisted baseline is the primary outcome metric; opportunity aging — days from identification to first client conversation — is a secondary indicator.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">A structured conversation brief for each high-priority cross-sell opportunity in the RM's ranked list — the recommended product, the supporting rationale, the client's relevant context, and a suggested conversation approach — is available to the RM before the client interaction.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -554,7 +554,7 @@
 </details>
 <details class="scenario-card" data-urn="urn:financial-services:scenario:customer-channels/relationship-management/relationship-deepening-cross-sell/cross-sell-opportunity-identification" id="scenario-cross-sell-opportunity-identification" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
-    <span class="scenario-lens scenario-lens--new-opps">New opps</span>
+    <span class="scenario-lens scenario-lens--new-opps">New opportunities</span>
     <div class="scenario-card__title-col">
       <span class="scenario-card__chevron" aria-hidden="true">▸</span>
       <h3 class="scenario-card__title">Cross-Sell Opportunity Identification</h3>
@@ -574,7 +574,7 @@
       <p>The AI agent reads each client's product holdings, recent transaction patterns, lifecycle events — maturity dates, corporate actions, salary credits — and CRM interaction history. It generates a ranked cross-sell list per RM with the recommended product, supporting rationale, and a suggested conversation hook for each opportunity. RMs integrate the list into their call plan for the week, and the RM team head reviews the top-ranked opportunities monthly; cross-sell conversion rate and revenue per RM book are the primary outcome metrics.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">A weekly ranked cross-sell list per RM — specifying recommended product, supporting rationale, and suggested conversation hook drawn from product holding gaps, transaction signals, and lifecycle events — is available for integration into the RM's call plan.</p>
       <div class="okr-grid">
         <div class="okr-kr">

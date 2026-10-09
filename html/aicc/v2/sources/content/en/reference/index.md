@@ -14,4 +14,4 @@ source_hash: 04c2adeaacbb
 <a class="ref-door" href="page:reference/resources"><small>Sources</small><h3>Learning and research resources</h3><p>Where to learn, where to follow the industry, and where to find information about attacks and incidents.</p></a>
 </div>
 
-How regulation turns into requirements for specific solutions is shown on the [Regulatory requirements](page:catalog/regulatory-horizon) page in the Discovery Catalog. How to work with AI in practice is covered in the [Knowledge Base](page:kb).
+How regulation turns into requirements for specific solutions is shown on the [Regulatory Horizon](page:catalog/regulatory-horizon) page in the Discovery Catalog. How to work with AI in practice is covered in the [Knowledge Base](page:kb).

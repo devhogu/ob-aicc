@@ -12,7 +12,7 @@ source_url: https://platform.claude.com/docs/ru/build-with-claude/prompt-enginee
 source_hash: 38ad4c88c7be
 ---
 
-A model always tries to answer, even when it doesn't know the answer. That's how a [[hallucination|hallucination]] happens: a smooth, confident, but made-up fact, figure, or reference. You can't rule it out completely, but you can greatly reduce it. After this guide you'll be able to add techniques to your prompt that make the answer verifiable and honest where the data runs short.
+A model always tries to answer, even when it doesn't know the answer. That's how a [[hallucination|hallucination]] happens: a smooth, confident, but made-up fact, figure, or reference. You can't rule it out completely, but you can greatly reduce it. By the end, you will be able to add techniques to your prompts that make the answer checkable, and honest where the data runs short.
 
 ## Seven techniques {#tips}
 
@@ -30,7 +30,7 @@ You don't need all seven at once. Start with the first three: they're easy to ad
 
 ## Try it now {#try}
 
-Take a document that may be shared with your work account — for example, a new internal policy or regulation. Paste it in and ask a question whose answer you know:
+Take a document that may be shared with your work account — for example, a new internal policy or procedure. Paste it in and ask a question whose answer you know:
 
 ```
 <document>

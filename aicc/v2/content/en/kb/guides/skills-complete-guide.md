@@ -14,9 +14,9 @@ source_url: https://platform.claude.com/docs/ru/agents-and-tools/agent-skills/ov
 source_hash: 7b4ece5f3dcf
 ---
 
-A guide for everyone who is tired of pasting the same instruction into every conversation. By the end you will be able to write your own skill, turn it on in Claude, test it on real tasks, and share it safely with colleagues.
+This guide is for anyone who is tired of pasting the same instruction into every conversation. By the end, you will be able to write your own skill, turn it on in Claude, test it on real tasks, and share it safely with colleagues.
 
-A **skill** is a way to explain to Claude once *how* to do a particular piece of work, and never repeat it in every conversation again. It's the simplest path from “I paste the same instruction every time” to automating your own work.
+A **skill** is a way to explain to Claude once *how* to do a particular piece of work, and never have to repeat it in every conversation again. It's the simplest path from “I paste the same instruction every time” to automating your own work.
 
 The guide has nine parts, each opening in its own tab. Parts 1–4 are for everyone who works in Claude; part 5 is for those who use Cowork or Claude Code; parts 6–9 are for those who write skills themselves.
 
@@ -192,7 +192,7 @@ This part gives nine rules from Anthropic's guide to writing skills. Apply them 
 
 ### Reference files kept separate {#references}
 
-Long materials go in separate files, with a short reference to them in <code>SKILL.md</code>: “if you need to fill in a form, read forms.md”. For example, a contract's list of requirements is best kept in a separate <code>checklist.md</code>. Keep references one level deep, or Claude may not read the file in full. A file longer than a hundred lines needs a table of contents at the top.
+Long materials go in separate files, with a short reference to them in <code>SKILL.md</code>: “if you need to fill in a form, read forms.md”. For example, a list of contract requirements is best kept in a separate <code>checklist.md</code>. Keep references one level deep, or Claude may not read the file in full. A file longer than a hundred lines needs a table of contents at the top.
 
 **Try it now.** Open your skill, for example the “internal memo”, and go through the nine rules. Most often, what needs improving is the description (rule 2) and the sample result (rule 6).
 
@@ -209,10 +209,10 @@ This part covers how to make sure a skill actually helps: test it on three real 
 
 For example, for the “internal memo” skill, take three memos you wrote over the past month, remove from them anything that may not be shared, and ask Claude to prepare them again: first with the skill turned off (“Customize → Skills”), then with it on. For each task, write down what you had to correct. If there are no fewer corrections with the skill, the skill isn't helping yet.
 
-- **Fresh eyes.** One conversation writes the skill; another, new one with no history tests it on real tasks.
+- **Fresh eyes.** One conversation writes the skill; another, fresh one with no history, tests it on real tasks.
 - **Doesn't fire?** Add the words people actually use when asking to the description; check that the skill is turned on.
 - **Fires too often?** Narrow the description, or make the skill callable only by hand.
-- **A rule is sometimes broken?** A skill is a request, not a guarantee. A mandatory rule is taken out of the skill: in Claude Code, into a hook (a command that runs automatically every time) or a check script; in other cases, a person checks that it's followed.
+- **A rule is sometimes broken?** A skill is a request, not a guarantee. Move a mandatory rule out of the skill: in Claude Code, into a hook (a command that runs automatically every time) or a check script; elsewhere, have a person check that it's followed.
 - Skills can't explicitly refer to each other, but Claude combines several suitable ones on its own.
 
 ## Safety and governance {#safety}
@@ -234,7 +234,7 @@ The main risks are [[prompt-injection|injected instructions]] (text in a skill f
 - The organization owner in Claude can make a skill available to everyone in the Organization settings. In Enterprise, skills can be limited to groups.
 - With a separate switch, the owner can prevent employees from creating their own skills.
 - Publishing a skill to the whole organization goes through a mandatory review: the reviewer sees the version, the scan results, all the files, and the changes; you can't approve your own request.
-- Enterprise has automatic security scanning of skills, but “passed” is no guarantee: review by people stays.
+- Enterprise has automatic security scanning of skills, but “passed” is no guarantee: human review is still needed.
 - Keep a register of skills: purpose, owner, version, review status. Keep the skills' sources in version control (git).
 
 **How to share your skill.**
@@ -275,6 +275,6 @@ A procedure skill: a <code>SKILL.md</code> file with the steps “read the contr
 
 ### Anthropic's official samples {#official}
 
-In Anthropic's open skills repository, it's worth looking at: **internal-comms**, internal messages following samples of different types; **brand-guidelines**, a purely reference skill with colors and fonts; **pdf**, how to spread details across separate files; **skill-creator**, a skill that helps you create skills.
+In Anthropic's open skills repository, take a look at: **internal-comms**, internal messages following samples of different types; **brand-guidelines**, a purely reference skill with colors and fonts; **pdf**, how to spread details across separate files; **skill-creator**, a skill that helps you create skills.
 
-A short version of this topic is [Skills: teach Claude your procedure](page:kb/guides/claude-skills); skills in development are covered in [Set up Claude Code for your project](page:kb/guides/claude-code-setup).
+For a short version of this topic, see [Skills: teach Claude your procedure](page:kb/guides/claude-skills); for skills in software development, see [Set up Claude Code for your project](page:kb/guides/claude-code-setup).

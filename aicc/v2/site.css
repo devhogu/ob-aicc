@@ -1192,3 +1192,6 @@ button.here-key{font-size:11px;padding:2px 8px 2px 5px;gap:4px;white-space:nowra
 .o-header .lang-switch{display:inline-flex;align-items:center;justify-content:center;min-width:40px;height:40px;padding:0 10px;border:1px solid var(--shell-control-border);border-radius:8px;background:var(--shell-control-bg);color:var(--shell-header-text);font:600 13px/1 var(--font-body);letter-spacing:.04em;text-decoration:none}
 .o-header .lang-switch:hover{background:var(--shell-input-bg)}
 .o-header .lang-switch:focus-visible{outline:3px solid var(--shell-focus);outline-offset:2px}
+/* the phone header: the brand, the Draft chip and the tools share the first row (the brand takes two lines only when the row is too narrow), the search the second */
+@media(max-width:650px){.o-header{display:grid;grid-template-columns:minmax(0,max-content) auto 1fr;align-items:center}.o-header .o-identity{grid-column:1;min-width:0;white-space:normal;line-height:1.25}.o-header .status-chip{grid-column:2}.o-header .o-tools{grid-column:3;justify-self:end;margin-left:0}.o-header .o-search{grid-column:1/-1;grid-row:2;margin-left:0}}
+@media(max-width:430px){.o-header .status-chip{margin-left:0}}

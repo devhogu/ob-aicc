@@ -49,13 +49,14 @@ def table(language=None):
 
 # START_CONTRACT: T
 #   PURPOSE: An interface string in the edition language. The Russian string is its own key; values are put in with str.format.
-#   INPUTS: { text: str - the Russian string; values: named values for {placeholders} }
+#   INPUTS: { text: str - the Russian string; context: str - optional, picks the table entry 'text|context' when there is one; values: named values for {placeholders} }
 #   OUTPUTS: { str - the edition's string; the Russian one when the edition is Russian or has no translation (recorded as missing) }
 #   SIDE_EFFECTS: Records a missing translation.
 # END_CONTRACT: T
-def T(text, **values):
+def T(text, context=None, **values):
     if lang() != SOURCE:
-        found = table().get(text)
+        found = table().get(f'{text}|{context}') if context else None  # a word that reads differently in one place: 'Готово к старту|point'
+        found = found if found is not None else table().get(text)
         if found is None:
             _missing.add(text)
         else:

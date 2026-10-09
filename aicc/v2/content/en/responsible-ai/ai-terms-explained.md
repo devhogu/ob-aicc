@@ -12,13 +12,13 @@ This page explains, in plain words, the technology terms that come up in the Res
 
 | Term | What it means |
 | --- | --- |
-| Artificial intelligence, AI | A machine system that, from its input data, produces a prediction, content, a recommendation, or a decision to achieve given goals. This is the definition the OECD and the EU use |
+| Artificial intelligence, AI | A machine system that uses its input data to produce a prediction, content, a recommendation, or a decision in order to achieve given goals. This is the definition used by the OECD and the EU |
 | Model | A pattern found during training: a function that turns input data into a result. A scorecard and a language model are both models |
 | [[machine-learning|Machine learning]] | A way to build a model from examples instead of writing its rules by hand |
 | [[llm|Large language model (LLM)]] | A model trained on very large amounts of text to predict the next fragment; the basis of generative AI for working with language |
 | [[generative-ai|Generative AI]] | AI that creates content, such as text, images, or code, rather than only a prediction or a class |
 | Assistant | An application that helps the user with answers, suggestions, or drafts but doesn't take actions in systems itself |
-| [[ai-agent|AI agent]] | A system in which the model works out the steps toward a goal itself and acts through tools: it gets data, calls services, fills in forms |
+| [[ai-agent|AI agent]] | A system in which the model works out the steps toward a goal itself and acts through tools: it retrieves data, calls services, fills in forms |
 
 ## Building and using {#building}
 
@@ -26,9 +26,9 @@ This page explains, in plain words, the technology terms that come up in the Res
 | --- | --- |
 | [[fine-tuning|Fine-tuning]] | Additional training of an existing model on data for a specific task |
 | [[prompt|Prompt]] | The instructions and context the model receives at the moment of use; a system prompt is a standing instruction from the developer |
-| [[context-window|Context window]] | The amount of text the model takes into account at once; it doesn't see whatever doesn't fit |
+| [[context-window|Context window]] | The amount of text the model takes into account at once; it can't see anything that doesn't fit |
 | [[token|Token]] | A unit of text for a language model: a word or part of one; costs and limits are counted in tokens |
-| [[rag|Retrieval-augmented generation (RAG)]] | At the moment of the question, the model receives relevant fragments of verified documents and answers from them, with references |
+| [[rag|Retrieval-augmented generation (RAG)]] | When a question is asked, the model receives relevant passages from verified documents and answers from them, with references |
 | [[grounding|Grounding]] | Tying the model's answers to verified sources so that they can be double-checked |
 | [[evaluation-set|Evaluation set]] | Real cases with expected results; the solution is checked against them before launch and after every noticeable change |
 | [[guardrails|Guardrails]] | Rules, filters, and restrictions around the model: what it may respond to and which actions it is allowed to take |
@@ -42,7 +42,7 @@ This page explains, in plain words, the technology terms that come up in the Res
 | --- | --- |
 | [[hallucination|Hallucination]] | A smooth, confident, and wrong result: a fact, figure, or source reference that doesn't exist |
 | [[bias|Bias]] | Systematic unfairness in results, learned from the data or built in during design |
-| [[model-drift|Drift]] | A model's quality declining as reality drifts further from the data it was trained on |
+| [[model-drift|Drift]] | A decline in a model's quality as reality moves further away from the data it was trained on |
 | [[prompt-injection|Prompt injection]] | Text in the input that the model carries out as an instruction: typed directly by a user or hidden in a document or web page |
 | [[jailbreak|Jailbreak]] | A specially crafted prompt that makes the model forget its guardrails |
 | [[data-leakage|Data leakage]] | Data ends up where it shouldn't be: with the vendor, in an answer to another user, in a log |
@@ -55,17 +55,17 @@ This page explains, in plain words, the technology terms that come up in the Res
 | Term | What it means |
 | --- | --- |
 | [[responsible-ai|Responsible AI]] | Principles and practices that let whoever uses AI answer for its results; more on the [Responsible AI](page:responsible-ai#principles) page |
-| [[risk-tier|Risk tier]] | An assessment of how serious the consequences of a mistake by an AI solution would be; it is set by the data, the influence on decisions, whether results reach customers, and autonomy |
+| [[risk-tier|Risk tier]] | An assessment of how serious the consequences of a mistake by an AI solution would be; it depends on the data, how much the solution influences decisions, whether its results reach customers, and how autonomous it is |
 | [[risk-based-approach|Risk-based approach]] | Controls are proportionate to the risk; this is the basis of the EU Artificial Intelligence Act (AI Act), the NIST AI Risk Management Framework, and the risk tiers in our projects |
-| [[high-risk-ai|High-risk AI]] | In the AI Act, the uses listed in it, including credit scoring of individuals, that must meet the full set of requirements |
+| [[high-risk-ai|High-risk AI]] | Under the AI Act, the uses it lists, including credit scoring of individuals, which must meet the full set of requirements |
 | [[model-risk-management|Model risk management]] | The long-standing practice of validating, documenting, and monitoring models with an assigned owner; working with AI extends it to new systems |
 | [[independent-review|Independent review]] | Review of a solution by a person who didn't take part in building it; in the medium and high tiers, together with risk, security, and legal specialists |
-| [[explainability|Explainability]] | The ability to explain why a system produced a given result, in a way that the explanation can be relied on |
+| [[explainability|Explainability]] | The ability to explain why a system produced a given result, well enough that the explanation can be relied on |
 | [[impact-assessment|Impact assessment]] | An assessment of how a higher-risk use will affect people and their rights; it is done before launch |
 | [[model-card|Model card]] | A short description of a model or system: what it is, what it's for, how it was tested, where it shouldn't be used |
 | [[ai-literacy|AI literacy]] | Understanding what AI can and can't do; everyone who uses it needs it |
 | [[ai-incident|AI incident]] | An event in which a use of AI causes or could cause harm, including harm that was prevented |
-| [[shadow-ai|Shadow AI]] | AI tools used at work in place of the tools meant for that kind of data |
+| [[shadow-ai|Shadow AI]] | AI tools used at work instead of the tools meant for that kind of data |
 
 ## Financial services {#fintech}
 
@@ -74,4 +74,4 @@ This page explains, in plain words, the technology terms that come up in the Res
 | [[kyc|Know your customer (KYC)]] | Establishing a customer's identity and assessing the risk linked to them, at onboarding and throughout the relationship |
 | [[liveness-check|Liveness check]] | Checking that the document is presented by a person who is actually there, not by a photo or recording of them |
 | [[alternative-data|Alternative data]] | Data other than credit history used to assess a customer: transaction, mobile, behavioral; it raises questions of fairness and consent |
-| [[real-time-scoring|Real-time scoring]] | A score the model gives right during a transaction, for example in fraud detection |
+| [[real-time-scoring|Real-time scoring]] | A score the model produces while the transaction is still in progress, for example in fraud detection |

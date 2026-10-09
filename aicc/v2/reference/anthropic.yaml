@@ -27,7 +27,7 @@
   title: "Claude Code: лучшие практики"
   title_en: "Claude Code: best practices"
   what: Проверка работы, план перед кодом, управление контекстом, типичные ошибки.
-  what_en: "Checking the work, a plan before code, managing context, common mistakes."
+  what_en: "Verifying the work, planning before coding, managing context, and common mistakes."
   lang: ru
   url: https://code.claude.com/docs/ru/best-practices
   url_en: "https://code.claude.com/docs/en/best-practices"
@@ -37,7 +37,7 @@
   title: "Claude Code: распространённые рабочие процессы"
   title_en: "Claude Code: common workflows"
   what: Пошаговые сценарии — изучить код, исправить ошибку, переработать, написать тесты.
-  what_en: "Step-by-step scenarios: explore code, fix a bug, refactor, write tests."
+  what_en: "Step-by-step scenarios: exploring code, fixing a bug, refactoring, and writing tests."
   lang: ru
   url: https://code.claude.com/docs/ru/common-workflows
   url_en: "https://code.claude.com/docs/en/common-workflows"
@@ -65,7 +65,7 @@
   title: Лучшие практики составления подсказок
   title_en: "Prompting best practices"
   what: Постоянно обновляемый справочник Anthropic по запросам к Claude — главный первоисточник.
-  what_en: "Anthropic’s continuously updated reference on prompting Claude, and the main original source."
+  what_en: "Anthropic’s continuously updated reference on prompting Claude: the primary source."
   lang: ru
   url: https://platform.claude.com/docs/ru/build-with-claude/prompt-engineering/claude-prompting-best-practices
   url_en: "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices"
@@ -245,7 +245,7 @@
   title: Claude Code in Action
   title_en: "Claude Code in Action"
   what: Долгие сессии, которым можно доверять, — направлять, настраивать, автоматизировать, проверять.
-  what_en: "Long sessions you can trust: steer, configure, automate, verify."
+  what_en: "Long sessions you can trust: directing, configuring, automating, and verifying."
   lang: en
   url: https://academy.claude.com/courses/claude-code-in-action
   ours: [claude-code-in-action]
@@ -254,7 +254,7 @@
   title: Introduction to Agent Skills
   title_en: "Introduction to Agent Skills"
   what: Создавать и настраивать навыки в Claude Code и делиться ими.
-  what_en: "Create and configure skills in Claude Code and share them."
+  what_en: "Creating and configuring skills in Claude Code, and sharing them."
   lang: en
   url: https://academy.claude.com/courses/introduction-to-agent-skills
   ours: [skills-complete-guide]
@@ -263,7 +263,7 @@
   title: Introduction to Subagents
   title_en: "Introduction to Subagents"
   what: Делить сложную задачу между параллельными помощниками и управлять ими.
-  what_en: "Split a complex task among parallel subagents and manage them."
+  what_en: "Splitting a complex task among parallel subagents and managing them."
   lang: en
   url: https://academy.claude.com/courses/introduction-to-subagents
   ours: [claude-code-subagents]
@@ -312,7 +312,7 @@
   title: Курсы Anthropic на GitHub
   title_en: "Anthropic courses on GitHub"
   what: Набор учебных курсов в виде тетрадок — запросы, оценка качества, работа с инструментами.
-  what_en: "A set of courses as notebooks: prompting, evaluating quality, working with tools."
+  what_en: "A set of courses in notebook form: prompting, evaluating quality, and working with tools."
   lang: en
   url: https://github.com/anthropics/courses
 - group: Практика и примеры

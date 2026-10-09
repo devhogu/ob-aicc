@@ -1,5 +1,5 @@
 ---
-title: "Working in Claude: projects, documents, Office, and Cowork — complete guide"
+title: "Working in Claude: projects, documents, Office, and Cowork — the complete guide"
 summary: How to work with Claude every day. Projects from creation to upkeep, files and creating Word, Excel, PowerPoint, and PDF documents, Claude inside Office, connectors, Cowork with your folders and scheduled tasks, data safety, and ready-made scenarios by role.
 category: Claude
 level: deep
@@ -22,7 +22,7 @@ This guide is for employees who want to work with Claude every day, from the fir
 <article><h3>Office: right in the document</h3><p>Claude in Excel, Word, PowerPoint, and Outlook: it edits the open file in place and keeps its formatting.</p></article>
 </div>
 
-What's available depends on your plan and on what your organization's admin has turned on. Work only in an approved work account; if something is missing, [write to us](page:services/how-to-engage). What you can and cannot share with Claude is covered in the [data checklist](page:kb/guides/what-to-share).
+What's available depends on your plan and on what your organization's admin has turned on. Work only in an approved work account; if something is missing, [write to us](page:services/how-to-engage). For what you can and cannot share with Claude, see the [data checklist](page:kb/guides/what-to-share).
 
 ## Where to start {#start}
 
@@ -40,18 +40,18 @@ In this guide, button and menu names are given in quotes exactly as they appear 
 - **“+” in the message box:** attach files, turn on “Research” and “Connectors”, turn off memory for this conversation.
 - **Standing instructions:** “Settings → Instructions for Claude”: your instructions for all conversations, such as who you are and how to format answers. For example: “I'm a credit operations specialist. Write in Russian, in a formal business style, conclusion first, then the details.”
 
-### Memory and private conversations {#memory}
+### Memory and incognito chats {#memory}
 
 Memory is what Claude remembers about you and your work between conversations.
 
 - On team plans, memory is off by default: the organization owner turns it on, and then each employee turns it on for themselves in “Settings → Memory”. That is also where you can see and correct what Claude has remembered.
-- The ghost icon starts a **private conversation**: it isn't saved to history or memory. On team plans, such conversations are still subject to the organization's retention and export rules.
+- The ghost icon starts an **incognito chat**: it isn't saved to history or memory. On team plans, such conversations are still subject to the organization's retention and export rules.
 
 ## Projects {#projects}
 
-This tab is for those who have already built a first project or are about to. By the end you will be able to write good project instructions, keep the project's documents in order, and share the project with colleagues.
+This tab is for those who have already built a first project or are about to. By the end, you will be able to write good project instructions, keep the project's documents in order, and share the project with colleagues.
 
-A project is a workspace with its own conversation history, its own documents, and its own instructions. Claude takes everything in the project into account in every conversation inside it. A short introduction is in the guide [Projects in Claude](page:kb/guides/claude-projects).
+A project is a workspace with its own conversation history, its own documents, and its own instructions. Claude takes everything in the project into account in every conversation inside it. For a short introduction, see the guide [Projects in Claude](page:kb/guides/claude-projects).
 
 <ol class="rai-flow rai-flow--4">
 <li><b>Create</b><span>one topic, one project</span></li>
@@ -74,8 +74,8 @@ Project knowledge is the documents Claude relies on in every conversation in the
 
 - Up to **30 MB per file**; the number of files isn't limited, but the total must fit in the model's [[context-window|context window]].
 - On paid plans, when there is a lot of knowledge, Claude turns on search across the project documents by itself; this increases capacity about tenfold without loss of quality.
-- **Give files clear names:** “Lending_procedure_2026.pdf”, not “document1.pdf”. Claude finds its way by the names.
-- Add complete, current versions; drafts and outdated material aren't needed.
+- **Give files clear names:** “Lending_procedure_2026.pdf”, not “document1.pdf”. Claude uses the names to find its way.
+- Add complete, current versions; leave out drafts and outdated material.
 - Name the specific document in your questions: “according to the lending procedure, section 4”.
 - Google Docs can be added as a link if Google Drive is connected.
 
@@ -115,7 +115,7 @@ A shared project gives the whole group the same documents and rules: for example
 
 1. “Share project”, to the right of the name.
 2. Add colleagues by name or email; you can paste a whole list of addresses at once.
-3. Permissions: “Can view” sees the knowledge and instructions and can work in the project, but can't change them; “Can edit” can change the instructions, the knowledge, and the members.
+3. Permissions: people with “Can view” see the knowledge and instructions and can work in the project, but can't change them; people with “Can edit” can change the instructions, the knowledge, and the members.
 
 Your conversations inside a shared project stay **yours**: colleagues don't see them unless you share them yourself. Give edit rights to those responsible for the project's documents; viewing is enough for everyone else.
 
@@ -142,7 +142,7 @@ This tab covers which files you can attach to a conversation and how Claude read
 | PDF up to 100 pages | Claude sees both the text and the images with charts |
 | PDF of 101–1000 pages | text only |
 
-- For large files, go by **30 MB**: different Help Center articles give different limits, and 30 MB is a safe boundary.
+- For large files, assume a limit of **30 MB**: different Help Center articles give different limits, and 30 MB is a safe boundary.
 - From Word and other non-PDF files, Claude takes only the text; images inside aren't read.
 - When you refer to a PDF page, give the number your viewer shows, not the one printed on the page.
 - A large document is better split into parts.
@@ -151,7 +151,7 @@ Before you attach a file, recall [what you can and cannot share with AI](page:kb
 
 ## Creating Word, Excel, PowerPoint, and PDF files {#create-files}
 
-This tab is for everyone who prepares reports, summaries, and presentations. By the end you will be able to ask Claude to make a finished file (an Excel spreadsheet with formulas, a Word document, a presentation, or a PDF) and download it.
+This tab is for everyone who prepares reports, summaries, and presentations. By the end, you will be able to ask Claude to make a finished file (an Excel spreadsheet with formulas, a Word document, a presentation, or a PDF) and download it.
 
 Claude can not only read but also **create real files**: Excel spreadsheets with formulas and charts, Word documents, PowerPoint presentations, PDFs.
 
@@ -174,7 +174,7 @@ Be specific: describe the structure, the content, and the formatting.
 You can also chain them: export → financial model → internal memo → presentation. Finished files download with a button and stay available as long as the conversation is open; you can also save them to Google Drive.
 
 - In Excel, Claude puts in **formulas, not hard-coded numbers**; check how the formulas link up.
-- Creating files uses up your plan's limit faster than a plain conversation.
+- Creating files uses up your plan's usage limit faster than a plain conversation.
 - Files and websites from outside may contain [[prompt-injection|hidden commands]] for Claude: watch what it does, and stop the work if you see an unexpected call to outside resources.
 
 **Try it now.** Take an export you work with every week and remove names, account numbers, and other customer data from it. Attach it and write: “Make an Excel spreadsheet: data on the first sheet, totals by category using formulas on the second, a chart on the third. List the formulas you used.” Download the file and check two or three formulas by hand.
@@ -192,7 +192,7 @@ An artifact is something Claude creates for you that you can share: a document, 
 
 ## Claude in Excel, Word, PowerPoint, and Outlook {#office}
 
-This tab is for those who work in Office all day. By the end you will be able to ask Claude to explain, fix, or add to a file you already have open, without copying it into a separate conversation.
+This tab is for those who work in Office all day. By the end, you will be able to ask Claude to explain, fix, or add to a file you already have open, without copying it into a separate conversation.
 
 The Claude for Microsoft 365 add-in is a Claude panel inside the Office apps. Claude works with the **open file** and edits it in place, keeping its formatting. Plans: Pro, Max, Team, Enterprise. Excel, Word, and PowerPoint are generally available; Outlook is in beta. If your Office doesn't have the add-in, see “How to install” below. Before you start, read “Important for data” at the end of the tab: the add-ins don't leave the usual audit trail.
 
@@ -232,7 +232,7 @@ The add-ins have their own retention rules: conversation history is stored **loc
 
 ## Connectors and research {#connectors}
 
-This tab is for those who have to gather information from email, the calendar, and shared folders. By the end you will be able to ask Claude to find what you need in your work systems and to choose between web search, thinking, and research.
+This tab is for those who have to gather information from email, the calendar, and shared folders. By the end, you will be able to ask Claude to find what you need in your work systems and to choose between web search, thinking, and research.
 
 ### Connectors {#connect}
 
@@ -249,7 +249,7 @@ Sample prompts when a connector is on:
 - “Find emails from the last two weeks about the new reporting procedure and put them in a list: who is asking for what, and by when.”
 - “Find the latest version of the refunds procedure in the department's shared folder and tell me what changed in it.”
 
-**Try it now.** If you have a connector to your email or calendar turned on, ask the first question from the list above and check the answer against your calendar. If you have no connectors, ask IT whether they are approved in your organization; there's no need to turn them on by a workaround.
+**Try it now.** If you have a connector to your email or calendar turned on, ask the first question from the list above and check the answer against your calendar. If you have no connectors, ask IT whether they are approved in your organization; don't try to turn them on through a workaround.
 
 ### Search, thinking, or research {#research}
 
@@ -263,7 +263,7 @@ Check links from web search and research the same way as any answer: open the so
 
 ## Cowork: hand work to Claude {#cowork}
 
-This tab is for those who already understand [when you need Cowork](page:kb/guides/claude-cowork) and want to hand it a real task. By the end you will be able to set up Cowork, run a task from handover to review, set standing context, and schedule a task.
+This tab is for those who already understand [when you need Cowork](page:kb/guides/claude-cowork) and want to hand it a real task. By the end, you will be able to set up Cowork, run a task from brief to review, set standing context, and schedule a task.
 
 “Chat is for thinking together with Claude. Cowork is for handing it work.” In Cowork, Claude gets access to the folder you choose, the connected apps, and the browser; it makes a plan, carries it out step by step, and delivers a finished result. It's the same approach as in Claude Code, Claude's tool for programmers, but without the command line.
 
@@ -300,9 +300,9 @@ Deleting files **always** needs your explicit permission. Run your first tasks i
 <li><b>Check the result</b><span>check it against the sources; made-up dates, names, and quotes are a red flag</span></li>
 </ol>
 
-An example handover: “From the ‘Department reports’ folder, put together the budget execution summary for September: a table of actuals vs. plan by department, variances over 5% with explanations from the comments, one page in Word. Keep in mind that three new branches opened in the third quarter.”
+An example task: “From the ‘Department reports’ folder, put together the budget execution summary for September: a table of actuals vs. plan by department, variances over 5% with explanations from the comments, one page in Word. Keep in mind that three new branches opened in the third quarter.”
 
-**Try it now.** Create a new folder and put copies of three to five documents that may be shared into it: for example, department reports for a month or meeting minutes. Choose this folder in Cowork, Manual mode, and hand it over: “From the documents in this folder, put together a one-page summary in Word: the main points of each document, general conclusions, open questions. Say which file each point comes from.” Look at the plan, answer Claude's questions, and check the summary against the documents.
+**Try it now.** Create a new folder and put copies of three to five documents that may be shared into it: for example, department reports for a month or meeting minutes. Choose this folder in Cowork, select Manual mode, and give it the task: “From the documents in this folder, put together a one-page summary in Word: the main points of each document, general conclusions, open questions. Say which file each point comes from.” Look at the plan, answer Claude's questions, and check the summary against the documents.
 
 ### Standing context {#cowork-context}
 
@@ -323,9 +323,9 @@ The Claude extension for Chrome and the desktop app's built-in browser are for s
 
 ### Scheduled tasks {#cowork-schedule}
 
-A scheduled task is a handover that Cowork carries out by itself at a set time: every morning, every Friday, on weekdays. It suits regular work that you have already done in Cowork by hand more than once and whose result you know how to check.
+A scheduled task is an assignment that Cowork carries out by itself at a set time: every morning, every Friday, on weekdays. It suits regular work that you have already done in Cowork by hand more than once and whose result you know how to check.
 
-Type <code>/schedule</code> in a task or choose “Scheduled → New task”. You can set it up together with Claude (it will ask questions) or by hand: name, handover, permission mode, frequency (hourly, daily, weekly, on weekdays), folder. If the task works with files on your computer or with the browser, the Claude app must be open at that time.
+Type <code>/schedule</code> in a task or choose “Scheduled → New task”. You can set it up together with Claude (it will ask questions) or by hand: name, instructions, permission mode, frequency (hourly, daily, weekly, on weekdays), folder. If the task works with files on your computer or with the browser, the Claude app must be open at that time.
 
 Good scheduled tasks: a morning summary of email and calendar, a weekly report, regular monitoring of regulator news, sorting incoming files. **At first, let the result be a draft**, not a sent email.
 
@@ -333,7 +333,7 @@ An example weekly task: “Every Friday at 15:00, use the ‘Weekly report’ fo
 
 ## Safety and data {#safety}
 
-Everyone should read this tab before working in Cowork, with the Office add-ins, or with connectors. By the end you will know where work with Claude leaves no audit trail and which tasks Cowork and the add-ins aren't suited for.
+Everyone should read this tab before working in Cowork, with the Office add-ins, or with connectors. By the end, you will know where work with Claude leaves no audit trail and which tasks Cowork and the add-ins aren't suited for.
 
 An audit trail is a record of who did what and when, which the organization keeps and can check. In regulated processes it may be mandatory. The general rules on data are in the checklist [What you can and cannot share with AI](page:kb/guides/what-to-share).
 
@@ -365,7 +365,7 @@ If you're not sure whether a task is suitable, don't start; ask your manager or 
 <li><b>Be careful with computer use</b><span>It's in beta, and Claude acts on your screen.</span></li>
 <li><b>Trusted sites only</b><span>Limit the browser to verified sources.</span></li>
 <li><b>Take special care with unfamiliar connectors and plugins</b><span>Approved ones only.</span></li>
-<li><b>Pay attention to data moving between apps</b><span>What from one system may end up in another.</span></li>
+<li><b>Pay attention to data moving between apps</b><span>What leaves one system may end up in another.</span></li>
 <li><b>Cloud sessions can reach your computer</b><span>Understand what they have access to.</span></li>
 <li><b>Report anything suspicious right away</b><span>Stop the task and write to IT.</span></li>
 </ol>
@@ -395,7 +395,7 @@ This tab is for those who want Claude to be useful not only to them but to the w
 
 1. Pick one scenario that saves time for you specifically, and run it yourself three or four times on real data that may be shared.
 2. Write down what worked: the prompt, the project instructions, how you check the result.
-3. Show your colleagues and share the project or the prompt. Agree on who checks the result before it goes further.
+3. Show your colleagues and share the project or the prompt. Agree on who checks the result before it is passed on.
 4. After two or three weeks, take stock: how much time you saved and which mistakes the check caught.
 
 Want to introduce a scenario like this in your department? [Tell us about it](page:services/how-to-engage): that way the task comes to us as [[run-rate|run-rate work]].

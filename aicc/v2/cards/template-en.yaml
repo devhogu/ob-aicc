@@ -1,14 +1,15 @@
 # Project card template (English edition). Copy the file, name it after the card ID (INI-020.yaml) and fill it in.
 # Required: id, title, summary, profile, stage, people, outcome, live. Put any text that contains a colon in double quotes.
-# The site is written in Russian first: Russian fields hold the source text, and each English text sits beside it with _en.
+# The site is written in Russian first: Russian fields hold the source text, and each English text sits beside its Russian field with _en. This template shows the English fields; take the Russian ones from the Russian template.
 # Fixed values (class_of_service, stage, state, status) are written in Russian exactly as listed; their English names are shown in the comments.
 id: INI-000
 title: Project name in Russian
 title_en: Project name
+summary: One or two sentences in Russian.
 summary_en: One or two sentences on what we are doing.
 profile: initiative            # initiative | run-rate | recurring-check | enablement
-class_of_service: инициатива   # инициатива = initiative | текущая работа = run-rate | срочная работа = urgent
-stage: Воронка                 # Воронка = Funnel | Проработка = Shaping | Готово к старту = Ready | В работе = Doing | Завершено = Done | Отложено = On hold | Закрыто = Closed
+class_of_service: инициатива   # инициатива = initiative | текущая работа = run-rate work | срочная работа = urgent work
+stage: Воронка                 # Воронка = Funnel | Проработка = Shaping | Готово к старту = Ready | В работе = Doing | Завершено = Done | Отложено = Deferred | Закрыто = Closed
 function_en: ""                # the function that needs the result
 area_en: ""                    # the service, for example "Knowledge services"
 people:
@@ -23,11 +24,11 @@ outcome:
   target_en: How we want it to be.
 constraints:
   appetite_en: How much effort we are ready to put in.
-  review_point_en: When we look at whether to continue.
+  review_point_en: When we check whether to continue.
   exit_criterion_en: When we consider the step done.
   stop_threshold_en: When we stop.
 checklist:
-  - {item_en: "Practice note: item", state: "не начато"}   # не начато = not started
+  - {item_en: "Practice checklist: item", state: "не начато"}   # не начато = not started | сделано = done | не нужно = not needed
 live:
   status: не задан             # зелёный = green | жёлтый = yellow | красный = red | не задан = not set
   next_step_en: ""

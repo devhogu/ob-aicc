@@ -23,7 +23,7 @@
       <h1 class="page-header__title">Operational risk</h1>
     </div>
   </div>
-  <p class="page-header__intent">Operational risk is the risk of loss from inadequate or failed internal processes, people, systems, or external events — the broadest category in the Basel III taxonomy, covering process failure, fraud, legal risk, and conduct-related losses. Operational risk capital is held under the standardized approach or, for a bank that uses it, the Advanced Measurement Approach (AMA); operational-resilience requirements such as DORA add a resilience layer for ICT risk. The Risk and Control Self-Assessment (RCSA) and Key Risk Indicator (KRI) frameworks operationalize the risk appetite. <strong>The GenAI opportunity is to surface cross-system patterns</strong> — loss events, near-misses, KRI signals, and third-party performance — that manual monitoring misses between quarterly committee cycles.</p>
+  <p class="page-header__intent">Operational risk is the risk of loss from inadequate or failed internal processes, people, systems, or external events — the broadest category in the Basel III taxonomy, covering process failure, fraud, legal risk, and conduct-related losses. Operational risk capital is held under the standardized approach or, for a bank that uses it, the Advanced Measurement Approach (AMA); operational-resilience requirements such as DORA add a resilience layer for ICT risk. The Risk and Control Self-Assessment (RCSA) and Key Risk Indicator (KRI) frameworks put the risk appetite into day-to-day practice. <strong>Generative AI can surface cross-system patterns</strong> — in loss events, near-misses, KRI signals, and third-party performance — that manual monitoring misses between quarterly committee meetings.</p>
 </header>
 <style>
   #problems-tab-loss-events-kris:checked ~ .problems-tab-bar label[for="problems-tab-loss-events-kris"] {
@@ -43,10 +43,10 @@
   </div>
   <hr class="problems-divider">
   <div class="problems-panel" id="problems-panel-loss-events-kris" data-tab="loss-events-kris" role="tabpanel" aria-labelledby="problems-tab-loss-events-kris">
-    <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Insights &amp; analytics</h3><p>Operational risk events are logged across IT incident tracking, operational risk registers, service-desk tickets, and vendor notifications — each in a different system with a different taxonomy. The Head of Operational Risk synthesizes patterns from these sources manually each quarter; emerging cross-system clusters — a deployment-related defect cluster, a geographic ATM-fraud concentration — are typically identified three to six months after they emerged in the data.</p></article><article class="discovery-context-card"><h3>Enablement</h3><p>RCSA facilitation — scoring inherent risk and control effectiveness across all business processes — is bottlenecked on specialist operational risk officers who guide each business unit through the assessment. With 30–50 business units each requiring an annual RCSA, the function is often under-resourced relative to the assessment schedule.</p></article><article class="discovery-context-card"><h3>Automation</h3><p>The quarterly Operational Risk Committee pack — loss event summary, KRI dashboard, RCSA status, and emerging risk register — is assembled from multiple system exports and manually narrated each cycle. The inputs are structured and recurring; the narrative format is consistent.</p></article><article class="discovery-context-card"><h3>New business opportunities</h3><p>An operational risk function with continuous event pattern detection shifts the Bank's posture from reactive loss reporting to forward-looking risk signal. Early identification of a failure pattern — before it generates a material loss event — enables control intervention at a fraction of the cost of post-event remediation.</p></article></div>
+    <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Insights &amp; analytics</h3><p>Operational risk events are logged across IT incident tracking, operational risk registers, service-desk tickets, and vendor notifications — each in a different system with a different taxonomy. The Head of Operational Risk synthesizes patterns from these sources manually each quarter; emerging cross-system clusters — a deployment-related defect cluster, a geographic ATM-fraud concentration — are typically identified three to six months after they emerged in the data.</p></article><article class="discovery-context-card"><h3>Enablement</h3><p>RCSA facilitation — scoring inherent risk and control effectiveness across all business processes — is limited by the small number of specialist operational risk officers who guide each business unit through the assessment. With 30–50 business units each requiring an annual RCSA, the function is often under-resourced relative to the assessment schedule.</p></article><article class="discovery-context-card"><h3>Automation</h3><p>The quarterly Operational Risk Committee pack — loss event summary, KRI dashboard, RCSA status, and emerging risk register — is assembled from multiple system exports and manually narrated each cycle. The inputs are structured and recurring; the narrative format is consistent.</p></article><article class="discovery-context-card"><h3>New business opportunities</h3><p>An operational risk function with continuous event pattern detection moves the Bank from reporting losses after the fact to forward-looking risk signals. Early identification of a failure pattern — before it generates a material loss event — enables control intervention at a fraction of the cost of post-event remediation.</p></article></div>
   </div>
 </section>
-<div id="main-content" class="l3-sections" aria-label="Sub-concerns">
+<div id="main-content" class="l3-sections" aria-label="Subsections">
 <section class="l3-section" id="loss-events-near-misses">
   <header class="l3-section__head">
     <h2 class="l3-section__title">Loss events &amp; near-misses</h2>
@@ -81,7 +81,7 @@
       <p>The AI agent reads newly submitted loss event records and applies the Basel II data quality schema — all required fields populated, business line mapped to the regulatory taxonomy, event type classification consistent with the description, and gross loss and recovery separately recorded. It returns a quality flag with specific field-level issues to the operational risk officer for correction before acceptance.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The operational risk officer accepts loss events into the loss database only after the AI agent's quality check — required fields, business line mapping, event type classification, and separate gross loss and recovery recording — so issues are corrected at the point of entry rather than in the quarterly data quality review.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -122,7 +122,7 @@
       <p>The AI agent reads the loss event and near-miss register, clusters entries by root cause, business line, and Basel II event category, and applies pattern detection across time and entity dimensions. The Operational Risk Committee receives a monthly pattern digest with systemic-risk flags, supplementing the per-event log.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The Operational Risk Committee receives a monthly pattern digest — clustering loss events and near-misses by root cause, business line, and Basel II event category — enabling systemic risk flags to be actioned between quarterly formal reviews.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -156,15 +156,15 @@
   <div class="scenario-card__body">
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>Near-miss reporting rates vary significantly across business units and risk categories. Business units with high loss event frequency but low near-miss reporting indicate an under-reporting culture; the operational risk function cannot distinguish genuine low near-miss environments from reporting reluctance without systematic cross-referencing.</p>
+      <p>Near-miss reporting rates vary significantly across business units and risk categories. Business units with high loss event frequency but low near-miss reporting indicate an under-reporting culture; the operational risk function cannot tell a genuinely low near-miss rate from reluctance to report without systematic cross-referencing.</p>
     </div>
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>The AI agent reads the near-miss register and loss event database, computes near-miss-to-loss ratios by business unit and Basel II event category, and identifies units with near-miss rates inconsistent with their loss event population. The operational risk function receives the analysis for targeted near-miss reporting culture improvement.</p>
+      <p>The AI agent reads the near-miss register and loss event database, computes near-miss-to-loss ratios by business unit and Basel II event category, and identifies units with near-miss rates inconsistent with their loss event population. The operational risk function uses the analysis to target improvements in its near-miss reporting culture.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
-      <p class="okr-objective">The operational risk function targets near-miss reporting culture improvement from the AI agent's analysis of near-miss-to-loss ratios by business unit and Basel II event category, identifying units whose near-miss rates are inconsistent with their loss event history.</p>
+      <div class="scenario-section__label">Acceptance criteria</div>
+      <p class="okr-objective">The operational risk function targets improvements in near-miss reporting culture using the AI agent's analysis of near-miss-to-loss ratios by business unit and Basel II event category, identifying units whose near-miss rates are inconsistent with their loss event history.</p>
       <div class="okr-grid">
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
@@ -208,17 +208,17 @@
     </div>
     <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
   </summary>
-  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#operational-resilience">Operational and cyber resilience</a></p>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory requirements:</span> <a href="../../regulatory-horizon/index.html#operational-resilience">Operational and cyber resilience</a></p>
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>Operational-resilience requirements call for documented exit plans for critical ICT providers. Exit plans are prepared at contract execution and may not reflect changes in operational dependencies — new integrations, expanded scope, changed alternative provider market — that affect the feasibility of the documented exit approach.</p>
+      <p>Operational-resilience requirements call for documented exit plans for critical ICT providers. Exit plans are prepared at contract execution and may not reflect changes in operational dependencies — new integrations, expanded scope, changes in the market for alternative providers — that affect the feasibility of the documented exit approach.</p>
     </div>
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
       <p>The AI agent reads the exit plan documents for critical ICT vendors, compares the documented exit steps against current contract terms, service scope, and integration inventory, and flags exit plans where the documented approach is inconsistent with the current operating model. The TPRM lead receives a review report with specific plan sections requiring update.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The TPRM lead receives a review report identifying the exit plan sections for critical ICT vendors that no longer match current contract terms, service scope, and integration inventory, so exit plans are updated before they are needed.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -249,17 +249,17 @@
     </div>
     <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
   </summary>
-  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#operational-resilience">Operational and cyber resilience</a></p>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory requirements:</span> <a href="../../regulatory-horizon/index.html#operational-resilience">Operational and cyber resilience</a></p>
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>Operational-resilience requirements call for a register entry per ICT provider covering service scope, data types, sub-outsourcing chain, processing locations, exit clauses, and SLAs. Each entry requires reading a 20–100 page contract; with 50–300 providers, manual extraction across the register refresh cycle is a material TPRM overhead.</p>
+      <p>Operational-resilience requirements call for a register entry per ICT provider covering service scope, data types, sub-outsourcing chain, processing locations, exit clauses, and SLAs. Each entry requires reading a 20–100 page contract; with 50–300 providers, manual extraction across the register refresh cycle is a heavy workload for the TPRM team.</p>
     </div>
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
       <p>The AI agent reads ICT contracts and extracts the required register fields using schema-driven document extraction, providing citations for each extracted field. The TPRM team reviews AI-extracted entries and resolves ambiguous fields, reducing per-vendor effort from several hours to a focused review.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The TPRM team maintains the ICT third-party register with AI-extracted structured fields cited to source contracts, replacing per-vendor manual document reading.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -290,17 +290,17 @@
     </div>
     <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
   </summary>
-  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#operational-resilience">Operational and cyber resilience</a></p>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory requirements:</span> <a href="../../regulatory-horizon/index.html#operational-resilience">Operational and cyber resilience</a></p>
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>Critical ICT vendor performance is monitored through SLA reports submitted by vendors themselves and reviewed by vendor relationship managers. Cross-vendor signals — a vendor with declining SLA performance and deteriorating financial health simultaneously — are not visible in the per-vendor review cycle; the risk is identified reactively when a vendor event triggers a review.</p>
+      <p>Critical ICT vendor performance is monitored through SLA reports submitted by vendors themselves and reviewed by vendor relationship managers. Combined signals — a vendor whose SLA performance and financial health are deteriorating at the same time — are not visible in the per-vendor review cycle; the risk is identified reactively when a vendor event triggers a review.</p>
     </div>
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
       <p>The AI agent reads SLA performance data, incident records, and vendor financial health indicators — credit ratings, payment behavior, public financial disclosures — for all critical ICT vendors. It computes a risk score per vendor combining performance and financial health dimensions, identifies vendors with deteriorating combined profiles, and delivers the monthly dashboard to the TPRM lead and CRO.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The TPRM lead and CRO receive a monthly vendor risk dashboard — a combined performance and financial health score for every critical ICT vendor — identifying vendors with deteriorating profiles before a vendor event forces a review.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -355,7 +355,7 @@
       <p>The AI agent reads the monthly KRI reporting data, compares each indicator to its amber and red thresholds, and generates the breach alert pack for each breached indicator. The operational risk officer and business unit head receive the pack with the triggering value, six-month trend, linked RCSA entry, and response protocol reference at the time of breach.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The operational risk officer and the relevant business unit head receive a breach alert pack — triggering KRI value, six-month trend, linked RCSA risk entry, and response protocol reference — for every amber or red KRI breach, so the response starts without manual pack assembly.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -396,7 +396,7 @@
       <p>The AI agent reads prior RCSA records, recent loss events, audit findings, and KRI trends for each business unit and generates a pre-populated RCSA working document. The operational risk officer uses it as the starting point for the facilitated session, reducing preparation time and increasing session coverage per cycle.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">Operational risk officers run more RCSA sessions per cycle using AI-generated pre-populated working materials — incorporating prior RCSA records, control inventory, and KRI trends — for each business unit.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -437,7 +437,7 @@
       <p>The AI agent reads the current RCSA risk register and KRI register, applies linkage matching by risk category and description, and identifies RCSA risks with no covering KRI and KRIs with no corresponding RCSA risk. The Operational Risk Committee receives the coverage gap analysis in the quarterly review pack.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The Operational Risk Committee receives a quarterly coverage gap analysis identifying RCSA risks with no monitoring KRI and KRIs with no RCSA linkage, so misalignment is corrected between annual RCSA cycles.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -461,7 +461,7 @@
 <section class="l3-section" id="business-continuity-dr">
   <header class="l3-section__head">
     <h2 class="l3-section__title">Business continuity &amp; DR</h2>
-    <p class="l3-section__intent">Business continuity management (BCM) and disaster recovery (DR) define the Bank's capacity to maintain critical business functions and restore IT systems following a disruption event. Under operational-resilience requirements, banks maintain tested BCM and DR plans, define Recovery Time Objectives (RTOs) and Recovery Point Objectives (RPOs) for critical systems, and test these against defined scenarios, typically at least annually. Post-incident review documentation — capturing root cause, recovery timeline, and lessons learned — is a regulatory expectation after any major disruption. BCP and DR plans require annual refresh to reflect changes in the operating environment.</p>
+    <p class="l3-section__intent">Business continuity management (BCM) and disaster recovery (DR) define the Bank's capacity to maintain critical business functions and restore IT systems following a disruption event. Under operational-resilience requirements, banks maintain tested BCM and DR plans, define Recovery Time Objectives (RTOs) and Recovery Point Objectives (RPOs) for critical systems, and test these against defined scenarios, typically at least annually. Post-incident review documentation — capturing root cause, recovery timeline, and lessons learned — is a regulatory expectation after any major disruption. Business continuity plans (BCPs) and DR plans require an annual refresh to reflect changes in the operating environment.</p>
   </header>
   <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
     <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
@@ -482,17 +482,17 @@
     </div>
     <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
   </summary>
-  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#operational-resilience">Operational and cyber resilience</a></p>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory requirements:</span> <a href="../../regulatory-horizon/index.html#operational-resilience">Operational and cyber resilience</a></p>
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>Post-incident review documentation — root cause, recovery timeline, lessons learned — must be produced following every major operational disruption. Assembling from system logs, incident communications, and recovery records is a substantial effort at a point when the team is simultaneously managing remediation.</p>
+      <p>Post-incident review documentation — root cause, recovery timeline, lessons learned — must be produced following every major operational disruption. Assembling it from system logs, incident communications, and recovery records is a substantial effort at a point when the team is simultaneously managing remediation.</p>
     </div>
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
       <p>The AI agent reads the incident timeline from monitoring systems, recovery logs, and communications records. It generates the post-incident review document in regulatory format — root cause narrative, recovery timeline mapped to RTO/RPO, and lessons learned — and flags BCP sections affected by the root cause. The BCM team reviews and signs off before submission.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The BCM team submits post-incident review documentation in regulatory format — with root cause, recovery timeline mapped to RTO/RPO, lessons learned, and BCP update flags — assembled by the AI agent from recovery logs and communications records.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -523,7 +523,7 @@
     </div>
     <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
   </summary>
-  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#operational-resilience">Operational and cyber resilience</a></p>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory requirements:</span> <a href="../../regulatory-horizon/index.html#operational-resilience">Operational and cyber resilience</a></p>
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>Annual BCP refresh requires the BCM team to review each plan section for continued accuracy. With 10–30 BCP documents covering critical business functions, identifying sections affected by changes in systems, organization, or third-party dependencies consumes the BCM team's cycle capacity before substantive review begins.</p>
@@ -533,7 +533,7 @@
       <p>The AI agent reads the current BCP documents, compares recovery procedures and contact lists against the current system inventory, organization chart, and vendor register, and flags sections where changes in the operating environment require plan update. The BCM team focuses the review on flagged sections rather than performing a full line-by-line review of unchanged content.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The BCM team focuses the annual BCP review on AI-flagged sections — where system, organizational, or vendor changes require a plan update — rather than performing a full line-by-line review of unchanged content.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -564,17 +564,17 @@
     </div>
     <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
   </summary>
-  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#operational-resilience">Operational and cyber resilience</a></p>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory requirements:</span> <a href="../../regulatory-horizon/index.html#operational-resilience">Operational and cyber resilience</a></p>
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>RTO and RPO test results are documented per test exercise and reviewed in the post-exercise report. Trend in recovery performance across multiple test cycles — a system meeting its RTO consistently but with increasing recovery time trend — is not visible in the per-exercise review.</p>
+      <p>RTO and RPO test results are documented per test exercise and reviewed in the post-exercise report. Trends in recovery performance across multiple test cycles — a system that consistently meets its RTO but takes longer to recover with each test — are not visible in the per-exercise review.</p>
     </div>
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
       <p>The AI agent reads 24 months of RTO and RPO test results by system, computes recovery time trend and achievement rate per system, and identifies systems where performance is deteriorating or where the test-to-target gap is widening. The BCM lead and CISO receive the analysis for inclusion in the DR program remediation roadmap.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The BCM lead and CISO prioritize DR remediation from the AI agent's analysis of 24 months of RTO and RPO test results — recovery time trend and achievement rate per critical system — identifying systems with deteriorating recovery performance.</p>
       <div class="okr-grid">
         <div class="okr-kr">

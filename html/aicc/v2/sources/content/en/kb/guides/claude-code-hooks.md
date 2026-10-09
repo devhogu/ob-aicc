@@ -12,7 +12,7 @@ source_url: https://code.claude.com/docs/ru/hooks-guide
 source_hash: 017e463c3650
 ---
 
-After this guide you will be able to turn a mandatory rule (“don't touch `.env`”, “format after every edit”, “tell me when you need my answer”) into a hook that always fires, and check that it works.
+After reading this guide, you will be able to turn a mandatory rule (“don't touch `.env`”, “format after every edit”, “tell me when you need my answer”) into a hook that always fires, and check that it works.
 
 An instruction in `CLAUDE.md` is a request: Claude usually follows it but may miss it. A hook is a guarantee: your own command (usually a small script) that Claude Code itself runs at a set moment of its work, without exception.
 
@@ -49,7 +49,7 @@ A hook receives a description of the event as JSON and answers with an exit code
 - `2`: block the action; the hook writes the reason to the error stream, and for many events it goes to Claude so it can correct itself;
 - any other code: an error in the hook itself, which **does not block**: the action goes ahead.
 
-The weak spots of hooks during long work are in [Claude Code in action](page:kb/guides/claude-code-in-action#hook-gaps).
+For the weak spots of hooks during long work, see [Claude Code in action](page:kb/guides/claude-code-in-action#hook-gaps).
 
 ## Precautions {#safety}
 

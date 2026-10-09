@@ -13,9 +13,9 @@ source_url: https://academy.claude.com/courses/ai-fluency-framework-foundations
 source_hash: d22258676510
 ---
 
-This guide is for those who already work with an assistant and have read the short version, [Four skills for working with AI (4D)](page:kb/guides/ai-fluency-4d). After it, you will be able to choose one of three ways of working with AI for your task, run the description–discernment loop, and write down your personal rules for working with AI.
+This guide is for people who already work with an assistant and have read the short version, [Four skills for working with AI (4D)](page:kb/guides/ai-fluency-4d). By the end, you will be able to choose one of three ways of working with AI for your task, run the description–discernment loop, and write down your personal rules for working with AI.
 
-This is a retelling of the AI Fluency course, which Anthropic also uses to train its own staff; the framework was developed by Rick Dakan and Joseph Feller. The course isn't about “the ten best prompts” (advice like that goes out of date quickly) but about skills that last: working with AI **effectively, efficiently, ethically and safely**. It asks you to stop treating AI as “next-level spell check” and to learn to **think together with it**.
+This is a retelling of the AI Fluency course, which Anthropic also uses to train its own staff; the framework was developed by Rick Dakan and Joseph Feller. The course isn't about “the ten best prompts” (advice like that goes out of date quickly) but about skills that last: working with AI **effectively, efficiently, ethically, and safely**. It asks you to stop treating AI as “next-level spell check” and to learn to **think together with it**.
 
 Each tab below is a separate topic, and almost every one has an exercise; you can read them in order or pick and choose. About 30 minutes for everything.
 
@@ -42,9 +42,9 @@ No one way is better than the others, and you can combine them in a single proje
 | **Delegation** | What do I do, and what does AI do? | understanding the task · understanding the tool · dividing the work |
 | **Description** | How do I explain it clearly? | what to get · how to approach it · how to behave |
 | **Discernment** | Is the result any good? | the result · the process · the AI's behavior |
-| **Diligence** | Am I working responsibly? | in creation · in transparency · in using the result |
+| **Diligence** | Am I working responsibly? | creation · transparency · using the result |
 
-In the short guide these skills are also given as verbs: delegating, describing, evaluating, taking responsibility for the result. They are the same four skills.
+In the short guide these skills are also glossed in everyday words: what to hand over, how to explain it, judging the result, owning the result. They are the same four skills.
 
 Most work with AI consists of short “describe → evaluate” loops. Delegation sets where these loops are needed, and diligence sets the bounds they run within.
 
@@ -64,7 +64,7 @@ Most work with AI consists of short “describe → evaluate” loops. Delegatio
 <article><h3>Limitations</h3><p>Doesn't know about events after its training; is confidently wrong ([[hallucination|hallucinations]]); loses earlier material when the context overflows; answers don't repeat exactly; complex multi-step reasoning; no access to your internal data until you give it.</p></article>
 </div>
 
-People bring critical thinking, judgment, creativity and ethical oversight. More in [What AI can and cannot do](page:kb/guides/ai-capabilities-limitations).
+People bring critical thinking, judgment, creativity and ethical oversight. For more, see [What AI can and cannot do](page:kb/guides/ai-capabilities-limitations).
 
 ## Delegation {#delegation}
 
@@ -103,13 +103,13 @@ Description is more than a [[prompt|prompt]]: it also means being able to get a 
 
 **The secret weapon** is to ask AI to improve your prompt. If it isn't working: add specifics, give an example, break it into steps, ask for three options, change the format, ask “how sure are you?”, start a new conversation.
 
-Common mistakes: expecting AI to read your mind; mixing unrelated tasks in one prompt; describing success vaguely; not giving feedback. Everything about prompts is in [How to write prompts for Claude](page:kb/guides/prompting-complete-guide).
+Common mistakes: expecting AI to read your mind; mixing unrelated tasks in one prompt; describing success vaguely; not giving feedback. For everything about prompts, see [How to write prompts for Claude](page:kb/guides/prompting-complete-guide).
 
-**Exercise “Bad prompt”.** Write to Claude: “Give me five bad prompts for my work tasks: an internal memo, a reply to a customer complaint, a meeting summary. I'll fix them, and you rate my fixes.” After five minutes, swap roles: you write bad prompts and Claude fixes them. Look at what it adds: those are the missing parts of a good description.
+**Exercise: bad prompts.** Write to Claude: “Give me five bad prompts for my work tasks: an internal memo, a reply to a customer complaint, a meeting summary. I'll fix them, and you rate my fixes.” After five minutes, swap roles: you write bad prompts and Claude fixes them. Look at what it adds: those are the missing parts of a good description.
 
 ## Discernment {#discernment}
 
-Discernment is the other side of description and your quality control system. It requires knowledge of the subject and an understanding of AI's typical weaknesses.
+Discernment is the flip side of description, and your quality control system. It requires knowledge of the subject and an understanding of AI's typical weaknesses.
 
 <div class="rai-cards rai-cards--3">
 <article><h3>The result</h3><p>Is it accurate? Suitable for the audience? Coherent? Does it meet the requirements? Does it add value?</p></article>
@@ -130,19 +130,19 @@ What's wrong → why → a concrete suggestion → adjust the instructions. Some
 <li><b>Integrate</b><span>add your own expertise, make the decision and take responsibility for the result</span></li>
 </ol>
 
-**Exercise “Expert evaluation”.** Ask for three explanations of a topic in which you are an expert, for example how your department's process works; evaluate them on the three kinds of discernment, sort out what is strong and what is weak, and improve them together with Claude.
+**Exercise: expert evaluation.** Ask for three explanations of a topic in which you are an expert, for example how your department's process works; evaluate them against the three kinds of discernment, separate the strong points from the weak ones, and improve them together with Claude.
 
 ## Diligence {#diligence}
 
 The first three skills are mostly about effectiveness; diligence is about ethics and safety. It's like driving: what matters is not only getting there, but also following the rules and thinking of others.
 
 <div class="rai-cards rai-cards--3">
-<article><h3>In creation</h3><p>How the system was trained, who owns the data, who will get access to it, whether your organization's policy allows it. Example: before sharing confidential data, check the service's policy and your organization's permissions.</p></article>
-<article><h3>In transparency</h3><p>Who should know about AI's role, when, and in how much detail to say so. Example: in a team proposal, mark which parts were done with AI.</p></article>
-<article><h3>In using the result</h3><p>You are responsible for what is published, not AI: facts, bias, rights of use. Example: a report prepared with AI is checked against the same standards as one prepared without it.</p></article>
+<article><h3>Creation</h3><p>How the system was trained, who owns the data, who will get access to it, whether your organization's policy allows it. Example: before sharing confidential data, check the service's policy and your organization's permissions.</p></article>
+<article><h3>Transparency</h3><p>Who should know about AI's role, when, and in how much detail to say so. Example: in a team proposal, mark which parts were done with AI.</p></article>
+<article><h3>Using the result</h3><p>You are responsible for what is published, not AI: facts, bias, rights of use. Example: a report prepared with AI is checked against the same standards as one prepared without it.</p></article>
 </div>
 
-**Exercise “AI contribution statement”.** For a piece of your work, for example an internal memo, write a short statement: which parts were done with AI, how they were checked, who is responsible for the result. For each of the three kinds of diligence, ask yourself some test questions.
+**Exercise: an AI contribution statement.** For a piece of your work, for example an internal memo, write a short statement: which parts were done with AI, how they were checked, who is responsible for the result. For each of the three kinds of diligence, ask yourself a few check questions.
 
 What you may share with AI here: [What you can and cannot share with AI](page:kb/guides/what-to-share); how to check: [How to check AI output](page:kb/guides/checking-results).
 
@@ -174,6 +174,6 @@ A sample draft you can rewrite for yourself:
 
 - Rate yourself on each skill and each way of working: beginner, developing, confident.
 - Build a personal library of 5–10 prompt templates that worked well.
-- Practice description and discernment through games: riddles, “20 questions”, a story told together. Skills grow faster in the form of a game.
+- Practice description and discernment through games: riddles, “20 questions”, a story told together. Skills grow faster through play.
 
 Fluency in working with AI grows with practice; it doesn't appear all at once. And AI is not a magic wand.

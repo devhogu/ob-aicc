@@ -16,7 +16,7 @@ outcome:
   problem: "У каждой функции есть знания, которые сотрудники ежедневно ищут или уточняют у коллег. Они лежат в документах, которые не ведутся как контролируемые источники. Ответы на одни и те же вопросы различаются, а знания уходят вместе с сотрудниками."
   problem_en: "Every function has knowledge that employees look up or ask colleagues about every day. It sits in documents that are not maintained as controlled sources. Answers to the same questions differ, and knowledge leaves with the people who hold it."
   intended_outcome: "Общий подход ко всем базам знаний, ранжированный перечень баз по функциям, первая база знаний для правовой функции в работе, начата вторая."
-  intended_outcome_en: "A common approach for all knowledge bases, a ranked list of bases by function, the first knowledge base, for the legal function, in use, and a second one started."
+  intended_outcome_en: "A common approach for all knowledge bases; a ranked list of bases by function; the first knowledge base, for the legal function, in use; and a second one started."
   measure: "Число источников с тем, кто их ведёт, и датой пересмотра; число ответов со ссылкой на источник; число сотрудников, которые пользуются базой."
   measure_en: "Number of sources with someone who maintains them and a review date; number of answers that cite a source; number of employees who use the base."
   baseline: "Не измерено."
@@ -27,11 +27,11 @@ constraints:
   appetite: "Без отдельного бюджета: рабочее время того, кто ведёт проект."
   appetite_en: "No separate budget: the working time of whoever runs the project."
   review_point: "К концу 2026 года: смотрим, что получилось, и решаем, продолжать ли."
-  review_point_en: "By the end of 2026: we look at what has come of it and decide whether to continue."
+  review_point_en: "By the end of 2026: we review the results and decide whether to continue."
   exit_criterion: "Первая база знаний, для правовой функции, используется; у её источников есть тот, кто их ведёт, и дата пересмотра."
   exit_criterion_en: "The first knowledge base, for the legal function, is in use; its sources have someone who maintains them and a review date."
   stop_threshold: "Источники остаются без того, кто их ведёт: такие знания в базу не берём."
-  stop_threshold_en: "Sources are left without anyone to maintain them: we do not take such knowledge into the base."
+  stop_threshold_en: "Sources are left without anyone to maintain them: we do not add such knowledge to the base."
 checklist:
   - {item: "Договориться об общем подходе: источники, ведущий и дата пересмотра у каждого источника, доступ по классу данных, ответы со ссылкой на источник", item_en: "Agree on a common approach: sources, a maintainer and a review date for each source, access by data class, answers that cite a source", state: "не начато"}
   - {item: "Вместе с каждой функцией составить перечень знаний, которые нужны её сотрудникам каждый день", item_en: "Together with each function, list the knowledge its employees need every day", state: "не начато"}

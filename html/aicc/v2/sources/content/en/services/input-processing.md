@@ -14,7 +14,7 @@ Every day a department receives a stream of documents and data: emails and reque
 - **Breaking down into fields.** The information needed is extracted from the document: parties, amounts, dates, bank details, numbers, the substance of a request.
 - **Classification.** The document is assigned a type, a topic, an urgency, and a recipient.
 - **Checks.** The information is checked for completeness and consistency: whether all fields are there, whether amounts and dates add up, and whether the details match the reference lists and what is already in the systems.
-- **Bringing to one format.** Different formats are turned into a uniform record or table, as the next step needs it.
+- **Standardizing.** Different formats are turned into a uniform record or table, in the form the next step needs.
 - **Passing on.** The record goes to the right queue, system, or working file, and the original document stays next to it, so any figure can be checked against the source.
 - **Exceptions.** Anything that failed a check, or that AI isn't sure about, goes to an employee with a note on exactly what is wrong.
 

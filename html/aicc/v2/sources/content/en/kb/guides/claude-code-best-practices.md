@@ -11,7 +11,7 @@ source_url: https://code.claude.com/docs/en/best-practices
 source_hash: d703a660b882
 ---
 
-After this guide you will be able to give Claude a way to check its own work, run a complex task through a plan and keep the session clean: three habits that the quality of almost any work in Claude Code depends on.
+After reading this guide, you will be able to give Claude a way to check its own work, run a complex task through a plan and keep the session clean: three habits that the quality of almost any work in Claude Code depends on.
 
 Almost all the advice on Claude Code follows from one limit: the [[context-window|context window]] fills up fast, with every message, every file read and every command output. The fuller it gets, the more often the model forgets early instructions and makes mistakes. Context is the main resource you have to manage.
 
@@ -45,14 +45,14 @@ Name the file, the scenario and how to check; point to similar code as a model; 
 
 <div class="rai-cards rai-cards--3">
 <article><h3>The “everything” session</h3><p>Different tasks in one conversation clutter the context. The cure is <code>/clear</code>.</p></article>
-<article><h3>Going round in corrections</h3><p>After two failed corrections, start with a clean slate and a better prompt.</p></article>
+<article><h3>Going in circles with corrections</h3><p>After two failed corrections, start with a clean slate and a better prompt.</p></article>
 <article><h3>A bloated CLAUDE.md</h3><p>When the file is too long, important rules get lost. Cut it down.</p></article>
-<article><h3>Trusted, not checked</h3><p>Plausible code with no check of the edge cases. No check, no release.</p></article>
+<article><h3>Trusted but not checked</h3><p>Plausible code with no check of the edge cases. No check, no release.</p></article>
 <article><h3>Endless exploration</h3><p>“Explore everything” with no limits eats the context. Narrow the task or give it to a subagent.</p></article>
 </div>
 
 ## Try it now {#try}
 
-Take the next task from your tracker. Start in Plan mode, read the plan and correct it. Then ask Claude to implement it and run the tests, showing the output. If after two corrections the result is still wrong, `/clear` and write a new, more precise prompt.
+Take the next task from your tracker. Start in Plan mode, read the plan and correct it. Then ask Claude to implement it and run the tests, showing the output. If after two corrections the result is still wrong, run `/clear` and write a new, more precise prompt.
 
-Project setup (`CLAUDE.md`, permissions, skills, hooks) is in the guide [Set up Claude Code for your project](page:kb/guides/claude-code-setup).
+For project setup (`CLAUDE.md`, permissions, skills, hooks), see the guide [Set up Claude Code for your project](page:kb/guides/claude-code-setup).

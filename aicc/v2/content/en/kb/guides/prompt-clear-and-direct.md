@@ -12,7 +12,7 @@ source_url: https://platform.claude.com/docs/ru/build-with-claude/prompt-enginee
 source_hash: 30e5f75ad8cd
 ---
 
-This guide is about two habits that improve almost any [[prompt|prompt]]: checking it with the “colleague test” and explaining what the result is for. Afterwards you'll be able to find what's missing from your prompt in a minute and add it.
+This guide is about two habits that improve almost any [[prompt|prompt]]: checking it with the “colleague test” and explaining what the result is for. By the end, you will be able to find what's missing from your prompt in a minute and add it.
 
 Think of Claude as a very capable but new employee: it can do a lot, but it doesn't know your rules, your habits, or what “goes without saying.”
 
@@ -28,7 +28,7 @@ Before you send a prompt, imagine handing the same text to a colleague from anot
 
 | Weaker | Stronger |
 | --- | --- |
-| “Make a sales summary” | “Make a summary of September sales for my manager: three key findings, a table by product, one page. Add what's worth double-checking in the data.” |
+| “Make a sales summary” | “Write a summary of September sales for my manager: three key findings, a table by product, one page. Note anything in the data worth double-checking.” |
 | “Summarize the minutes” | “Here are the notes from our department meeting. Write up the minutes: decisions, tasks with owners and deadlines, open questions. If a task has no deadline, write ‘no deadline given’.” |
 
 ## Explain why {#why}

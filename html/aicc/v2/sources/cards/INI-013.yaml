@@ -20,7 +20,7 @@ outcome:
   intended_outcome: "Меньше повторных обращений по одному нерешённому вопросу и меньше трудозатрат на восстановление истории. Сотрудники используют подтверждённое представление и записывают результат."
   intended_outcome_en: "Fewer repeat contacts about the same unresolved issue and less effort spent piecing together the history. Employees use the verified view and record the result."
   measure: "Повторное обращение по подходящим кейсам в выбранный период; трудозатраты на разбор кейса; доля кейсов первых пользователей, где использовано представление и записан результат; по выбранному маршруту: время до подтверждённого урегулирования (платежи), лишние запросы статуса (споры) или повторные запросы информации (оформление)."
-  measure_en: "Repeat contacts on eligible cases over the chosen period; effort spent working through a case; share of first users' cases where the view was used and the result recorded; for the chosen route: time to confirmed resolution (payments), unnecessary status inquiries (disputes) or repeat requests for information (onboarding)."
+  measure_en: "Repeat contacts on eligible cases over the chosen period; effort spent working through a case; share of first users' cases where the view was used and the result recorded; for the chosen route: time to confirmed resolution (payments), unnecessary status inquiries (disputes), or repeat requests for information (onboarding)."
   baseline: "Не измерено."
   baseline_en: "Not measured."
   target: "Не задано."
@@ -35,16 +35,16 @@ constraints:
   stop_threshold: "Не хватает подходящих кейсов, нет доступа к источникам или группа не может выделить время на проверку."
   stop_threshold_en: "There are not enough eligible cases, there is no access to the sources, or the team cannot set aside time for testing."
 checklist:
-  - {item: "Выбрать маршрут и очередь: платежи, карточные споры или оформление и проверка клиента; задать критерии подходящего, повторного и нерешённого кейса", item_en: "Choose the route and the queue: payments, card disputes, or customer onboarding and verification; set the criteria for an eligible, repeat and unresolved case", state: "не начато"}
+  - {item: "Выбрать маршрут и очередь: платежи, карточные споры или оформление и проверка клиента; задать критерии подходящего, повторного и нерешённого кейса", item_en: "Choose the route and the queue: payments, card disputes, or customer onboarding and verification; set the criteria for an eligible, repeat, and unresolved case", state: "не начато"}
   - {item: "Получить исторические выгрузки только для чтения, оценить персональные данные и разметить кейсы вместе с экспертами", item_en: "Get read-only historical exports, assess the personal data, and label the cases together with experts", state: "не начато"}
-  - {item: "Зафиксировать оценочный набор, статусы и действия, которые разрешены ассистенту", item_en: "Fix the evaluation set, the statuses and the actions the assistant is allowed to take", state: "не начато"}
-  - {item: "Создать сервис контекста, ассистента и рабочее место; сравнить работу с AI и без него на кейсах, которые раньше не использовались", item_en: "Build the context service, the assistant and the workspace; compare work with and without AI on cases not used before", state: "не начато"}
-  - {item: "Проверить сервис, провести приёмку и обучить одну группу до запуска", item_en: "Test the service, run acceptance and train one team before launch", state: "не начато"}
+  - {item: "Зафиксировать оценочный набор, статусы и действия, которые разрешены ассистенту", item_en: "Settle the evaluation set, the statuses, and the actions the assistant is allowed to take", state: "не начато"}
+  - {item: "Создать сервис контекста, ассистента и рабочее место; сравнить работу с AI и без него на кейсах, которые раньше не использовались", item_en: "Build the context service, the assistant, and the workspace; compare work with and without AI on cases not used before", state: "не начато"}
+  - {item: "Проверить сервис, провести приёмку и обучить одну группу до запуска", item_en: "Test the service, run acceptance testing, and train one team before launch", state: "не начато"}
   - {item: "Сопоставить результаты с существующим процессом", item_en: "Compare the results with the existing process", state: "не начато"}
 live:
   status: не задан
   next_step: "Выбрать вместе с представителем клиентского обслуживания маршрут и очередь для пилота."
-  next_step_en: "Choose the route and the queue for the pilot together with the customer service representative."
+  next_step_en: "Choose the route and queue for the pilot together with the customer service representative."
   risks:
     - "Персональные данные клиентов используются для подсказок сотруднику; у ассистента нет инструментов записи, каждую запись делает сотрудник."
     - "Может не оказаться интерфейсов чтения, общего ключа клиента или временных отметок; русский, кыргызский и смешанный текст может плохо читаться; подходящих кейсов может быть мало; группа или тестировщик могут быть недоступны."
@@ -52,9 +52,9 @@ live:
     - "Автоматические сообщения клиентам, движение средств, решения по кредитам, ценам, мошенничеству и возмещению, общий профиль клиента, чат-бот и корпоративная база знаний в работу не входят."
   risks_en:
     - "Customers' personal data is used for suggestions to the employee; the assistant has no write tools, and every record is made by the employee."
-    - "There may be no read interfaces, no common customer key or no timestamps; Russian, Kyrgyz and mixed text may be read poorly; there may be few eligible cases; the team or the tester may be unavailable."
+    - "There may be no read interfaces, no common customer key, or no timestamps; text in Russian, Kyrgyz, or a mix of languages may be processed poorly; there may be few eligible cases; the team or the tester may be unavailable."
     - "Fallbacks: narrow the scope, use approved exports, or keep manual handling."
-    - "Automatic messages to customers, moving funds, decisions on credit, pricing, fraud and refunds, a single customer profile, a chatbot and a corporate knowledge base are out of scope."
+    - "Automatic messages to customers, moving funds, decisions on credit, pricing, fraud, and refunds, a single customer profile, a chatbot, and a corporate knowledge base are out of scope."
   dependencies:
     - "Источники и доступ, общие с INI-006 (обращения и трудности клиентов)."
     - "Представитель клиентского обслуживания и эксперты процесса."

@@ -38,7 +38,7 @@ flowchart TB
   R1 ~~~ R2
 ```
 
-A small recurring request takes the short path: it is recorded as a line on the standing card of its direction and done within one [[iteration|iteration]] as [[run-rate|run-rate work]], with no start decision. You get an answer on your idea no later than the next [[product-management-forum|product management forum]]. For details, see the [Process](page:process/portfolio) section.
+A small recurring request takes the short path: it is recorded as a line on the standing card for its area and done within one [[iteration|iteration]] as [[run-rate|run-rate work]], with no start decision. You get an answer about your idea no later than the next [[product-management-forum|product management forum]]. For details, see the [Process](page:process/portfolio) section.
 
 ## Forms of support {#support}
 

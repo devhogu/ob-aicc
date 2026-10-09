@@ -1,6 +1,6 @@
 ---
 title: "How to write prompts for Claude: the complete guide"
-summary: Everything about giving Claude a task — clarity, context, examples, structure, long documents, format, thinking modes, accuracy, templates, and checking — based on Anthropic's current recommendations, with examples from our work.
+summary: Everything about briefing Claude — clarity, context, examples, structure, long documents, format, thinking modes, accuracy, templates, and checking — based on Anthropic's current recommendations, with examples from our work.
 category: Prompting Claude
 level: deep
 minutes: 35
@@ -16,11 +16,11 @@ source_hash: 8e2178de698a
 
 A good [[prompt|prompt]] isn't a magic formula but a well-defined task: the way you would explain it to a smart new employee. This guide brings together everything Anthropic currently recommends for its models and puts it in terms of our work — emails, reports, spreadsheets, contracts, and summaries.
 
-**Who it's for and what it gives you.** For those who have already mastered individual techniques and want to write prompts for recurring and complex tasks. Afterwards you'll be able to build a complex prompt from a skeleton, save it as a template, and improve it by testing it on 5–10 of your own past examples.
+**Who it's for and what it gives you.** For those who have already mastered individual techniques and want to write prompts for recurring and complex tasks. By the end, you will be able to build a complex prompt from a skeleton, save it as a template, and improve it by testing it on 5–10 of your own past examples.
 
-The nine tabs go from simple to complex. Tabs 1–7 are a reference to the techniques from the series' short guides, starting with [How to give the assistant a task](page:kb/guides/writing-a-task). What's new is in tab 8, “Templates, chains, and improving a prompt”, and tab 9, “The skeleton of a complex prompt”: start with them if you have already been through the short guides.
+The nine tabs go from simple to complex. Tabs 1–7 sum up the techniques from the short guides in this series, starting with [How to brief the assistant](page:kb/guides/writing-a-task). What's new is in tab 8, “Templates, chains, and improving a prompt”, and tab 9, “The skeleton of a complex prompt”: start with them if you have already been through the short guides.
 
-Anthropic's documentation gives its examples in English; here they are adapted and supplemented with our own. You can also write prompts in Russian: Claude replies in the language you write to it in.
+Anthropic's documentation gives its examples in English; here they are adapted and supplemented with our own. You can also write prompts in Russian: Claude replies in the language you write in.
 
 ## The basics: clear, specific, and why {#clear}
 
@@ -110,7 +110,7 @@ One sentence at the start focuses the tone and knowledge: “You are a credit ri
 
 ### Labeled boxes for data {#tags}
 
-Wrap each part of the prompt in a clear tag — XML tags, that is, words in angle brackets. It's like labeling boxes when you move house.
+Wrap each part of the prompt in a clear tag — XML tags, that is, words in angle brackets. It's like labeling boxes when you move.
 
 ```
 <instructions>
@@ -142,7 +142,7 @@ If a document came from outside — an email, a web page, a customer's file — 
 
 ## Long documents {#long}
 
-Claude reads very long texts: an annual report, a set of contracts, a dozen regulations. Three techniques from Anthropic's documentation make the answer more accurate.
+Claude reads very long texts: an annual report, a set of contracts, a dozen internal procedures. Three techniques from Anthropic's documentation make the answer more accurate.
 
 <ol class="rai-flow">
 <li><b>Documents at the top</b><span>all the materials first, with the question and instructions at the very end</span></li>
@@ -150,7 +150,7 @@ Claude reads very long texts: an annual report, a set of contracts, a dozen regu
 <li><b>Quotes first</b><span>then an answer based only on them</span></li>
 </ol>
 
-- **The question at the end:** in Anthropic's tests this improves answer quality by up to **30 percent**, especially when there are several documents.
+- **The question at the end:** in Anthropic's tests this improves answer quality by up to **30%**, especially when there are several documents.
 - **Quotes first:** “First, copy out word for word the passages that relate to the question. Then answer based only on them.” Claude focuses on what matters, and you check the answer against the quotes — this is what [[grounding|grounding]] means.
 - **Give files meaningful names:** Claude will understand “Report_Q3_2026.pdf” better than “document1.pdf”.
 
@@ -170,7 +170,7 @@ If the prompt is all bullets and highlighting, the answer will most likely be th
 
 ### Length {#length}
 
-Current Claude models answer fairly briefly and may skip a closing summary. If you need a detailed analysis, ask for it. If you need something very short, set a limit: “up to 100 words.” A good rule from the documentation: **the result first**, then the details; and **clarity matters more than brevity** — shorten by choosing what to include, not by writing in telegram style.
+Current Claude models answer fairly briefly and may skip a closing summary. If you need a detailed analysis, ask for it. If you need something very short, set a limit: “up to 100 words.” A good rule from the documentation: **the result first**, then the details; and **clarity matters more than brevity** — shorten by choosing what to include, not by writing like a telegram.
 
 ### Action or advice: the verb decides {#verb}
 
@@ -194,11 +194,11 @@ Current Claude models **decide for themselves when and how much to think**. On t
 
 | Level | When |
 | --- | --- |
-| Low, Medium | routine work: translating, rephrasing, short answers; saves your limit |
+| Low, Medium | routine work: translating, rephrasing, short answers; saves your usage limit |
 | High | the best balance for most tasks |
 | Xhigh, Max | complex calculations, in-depth document analysis, multi-step planning |
 
-The effort level controls how deeply the model thinks before answering. You choose the model and the level next to the send button; which of them you have depends on your plan and your organization's settings. Raise the level for calculations, detailed document analysis, and complex planning — this is more reliable than coaxing the model to “think harder” in the text of the prompt.
+The effort level controls how deeply the model thinks before answering. You choose the model and the level next to the send button; which ones are available to you depends on your plan and your organization's settings. Raise the level for calculations, detailed document analysis, and complex planning — this is more reliable than coaxing the model to “think harder” in the text of the prompt.
 
 ### How to ask it to think {#how-think}
 
@@ -230,7 +230,7 @@ A model always tries to answer, even when it doesn't know the answer. That's how
 <li><b>Two runs</b><span>Ask the same prompt twice in new conversations. Where the answers differ, something is probably made up.</span></li>
 </ol>
 
-These techniques reduce errors but don't replace checking: check figures, dates, names, and references that will go to a customer, a manager, or a regulator yourself. For details, see [How to check AI output](page:kb/guides/checking-results).
+These techniques reduce errors but don't replace checking: check for yourself any figures, dates, names, and references that will go to a customer, a manager, or a regulator. For details, see [How to check AI output](page:kb/guides/checking-results).
 
 ### Careful quoting {#quoting}
 
@@ -323,6 +323,6 @@ Before you finish, check that every figure has a section reference.
 
 ### Where to learn more {#learn}
 
-- Anthropic's interactive prompting tutorial: nine chapters with exercises, from the structure of a prompt to complex tasks; it includes an exercise for financial services. The tutorial was written for earlier models: where it differs from this guide, this guide is right.
+- Anthropic's interactive prompting tutorial: nine chapters with exercises, from the structure of a prompt to complex tasks; it includes an exercise for financial services. The tutorial was written for earlier models: where the two differ, follow this guide.
 - The Claude 101 and AI Fluency courses: the lessons “Getting better results” and “Effective prompting techniques”.
 - All the links are in the Reference section: [Anthropic learning](page:reference/anthropic).

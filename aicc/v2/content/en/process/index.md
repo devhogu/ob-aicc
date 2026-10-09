@@ -6,7 +6,7 @@ related: hub/how-we-work, services/how-to-engage, projects
 source_hash: a9af7d5fae54
 ---
 
-All AI work follows one path, from idea to result. The Hub shows three levels of this path: the [[funnel|funnel]], the [[portfolio|portfolio]] and the [[program|program]]. The fourth, the [[team-level|team level]], is run in Jira. A single [[project-card|project card]] passes through every level, and decisions are made at checkpoints, either on the spot or at the forum of that level.
+All AI work follows one path, from idea to result. The Hub shows three levels of this path: the [[funnel|funnel]], the [[portfolio|portfolio]], and the [[program|program]]. The fourth, the [[team-level|team level]], is run in Jira. A single [[project-card|project card]] passes through every level, and decisions are made at checkpoints, either on the spot or at that level's forum.
 
 ## Four levels {#levels}
 
@@ -32,7 +32,7 @@ The card is created in the funnel and stays with the work until it is done: it h
 
 - **Decisions close to the work.** When the rule is known in advance, the assigned person decides on the spot; the forum is there to see the whole picture and sort out the exceptions.
 - **Work is pulled.** New work starts when a place frees up under the [[wip-limit|WIP limit]].
-- **Conditions are known before the start.** The [[exit-criterion|exit criterion]], the [[appetite|appetite]] and the [[stop-threshold|stop threshold]] are written on the card in advance.
+- **Conditions are known before the start.** The [[exit-criterion|exit criterion]], the [[appetite|appetite]], and the [[stop-threshold|stop threshold]] are written on the card in advance.
 - **Depth by risk.** The [[risk-tier|risk tier]], not the type of work, sets how deep the checks go.
 - **Only what's needed.** We keep only the steps and records that someone actually uses.
 

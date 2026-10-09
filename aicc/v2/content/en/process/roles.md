@@ -47,6 +47,6 @@ The measures are calculated from the cards and help us see where work gets stuck
 | --- | --- | --- |
 | [[lead-time|Lead time]] | from the entry in the funnel to completion | rising: look for where work sits idle |
 | [[cycle-time|Cycle time]] | how long the work is in active development | rising: the tasks are too big or something is in the way |
-| [[throughput|Throughput]] | how much gets done in a period | compare with ourselves |
+| [[throughput|Throughput]] | how much gets done in a period | compare with our own past |
 | Work in progress | how many work items are under way at once | no higher than the [[wip-limit|WIP limit]] |
-| Work item age | how long the work has been in its current state | look at the ones that have stayed longer than usual |
+| Work item age | how long the work has been in its current state | look at items that have sat there longer than usual |

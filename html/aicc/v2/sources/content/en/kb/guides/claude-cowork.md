@@ -11,7 +11,7 @@ source_url: https://academy.claude.com/courses/introduction-to-claude-cowork
 source_hash: 6635e37906c8
 ---
 
-This guide is for those who already work with Claude in conversations and projects and want to hand it a whole piece of work. By the end you will know when you need Cowork and when a plain conversation is enough, and you will be able to run your first task safely.
+This guide is for people who already work with Claude in conversations and projects and want to hand it a whole piece of work. By the end, you will know when you need Cowork and when a plain conversation is enough, and you will be able to run your first task safely.
 
 In a plain conversation, Claude answers with text and you do the rest. In Cowork, Claude works with your files, folders, and apps itself: it reads, edits, and creates real documents. You describe the task, Claude makes a plan and carries it out step by step, and you watch and steer.
 
@@ -28,7 +28,7 @@ An example task for Cowork: “From the folder of department reports, put togeth
 ## What you can hand over {#what}
 
 <div class="rai-cards rai-cards--3">
-<article><h3>Documents</h3><p>Build a report from several files, bring a folder of documents to one template, make a presentation from source materials.</p></article>
+<article><h3>Documents</h3><p>Build a report from several files, bring a folder of documents into line with one template, make a presentation from source materials.</p></article>
 <article><h3>Spreadsheets and data</h3><p>Combine data exports, find discrepancies, prepare a table for your manager.</p></article>
 <article><h3>Browser and Office</h3><p>Work in the browser and in Office apps, if your organization allows those connections.</p></article>
 </div>
@@ -53,8 +53,8 @@ To avoid explaining the same thing in every task, set general instructions (who 
 - Don't give access to folders with data that may not be shared with this service.
 - Check skills and connectors before sharing them with colleagues.
 - Steer multi-step work: if Claude heads the wrong way, stop it and clarify the task.
-- Remember: the history of local Cowork sessions is stored on your computer, and the organization's usual retention periods don't apply to it. Which tasks Cowork isn't suited for is covered in [Safety and data](page:kb/guides/claude-work-complete-guide#safety).
+- Remember: the history of local Cowork sessions is stored on your computer, and the organization's usual retention periods don't apply to it. For the tasks Cowork isn't suited for, see [Safety and data](page:kb/guides/claude-work-complete-guide#safety).
 
 Whether Cowork is available depends on your plan and your organization's settings. If you'd like to try it on a task from your department, [write to us](page:services/how-to-engage).
 
-How to set up Cowork, run a task, and schedule tasks is covered in detail in the guide [Working in Claude: projects, documents, Office, and Cowork](page:kb/guides/claude-work-complete-guide#cowork).
+For details on setting up Cowork, running a task, and scheduling tasks, see the guide [Working in Claude: projects, documents, Office, and Cowork](page:kb/guides/claude-work-complete-guide#cowork).

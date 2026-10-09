@@ -1,5 +1,5 @@
 ---
-title: "Claude Code in action: long sessions, automation and review — the complete guide"
+title: "Claude Code in action: long sessions, automation, and review — the complete guide"
 summary: How to move from single prompts to long Claude Code work with minimal supervision — directing a session, goals, CLAUDE.md, a verification skill, permission modes, hooks, scheduled and CI runs, reviewing the result, and safety for a regulated organization.
 category: Claude Code
 level: deep
@@ -14,13 +14,13 @@ source_url: https://academy.claude.com/courses/claude-code-in-action
 source_hash: 5f49b1d0444a
 ---
 
-This guide is for those who already use Claude Code for single tasks and want to move to **long work with less supervision**: set a goal, walk away, and come back to a result you can check. It retells the Claude Code in Action course and has been checked against the official documentation in Russian; where the course and the documentation disagree, the documentation is right.
+This guide is for people who already use Claude Code for single tasks and want to move to **long work with less supervision**: set a goal, walk away, and come back to a result you can check. It retells the Claude Code in Action course and has been checked against the official documentation in Russian; where the course and the documentation disagree, the documentation is right.
 
-After it you will be able to give Claude Code a checkable goal and leave it to work, choose the permission mode and the kind of automation to fit the task, review the result from the diff rather than the summary, and know which settings matter for a regulated organization.
+After reading this guide, you will be able to give Claude Code a checkable goal and leave it to work, choose the permission mode and the kind of automation to fit the task, review the result from the diff rather than the summary, and know which settings matter for a regulated organization.
 
 The course's main idea: **the less you watched, the more you check.** Autonomy without checking is not a saving but a deferred risk.
 
-The basics it builds on are in [How Claude Code works](page:kb/guides/claude-code-how-it-works) and [Practices that work](page:kb/guides/claude-code-best-practices).
+For the basics it builds on, see [How Claude Code works](page:kb/guides/claude-code-how-it-works) and [Practices that work](page:kb/guides/claude-code-best-practices).
 
 ## Directing a long session {#steer}
 
@@ -37,9 +37,9 @@ Pressing <code>Esc</code> twice on an empty line opens the restore points; each 
 | Option | When |
 | --- | --- |
 | Restore code and conversation | Claude went the wrong way; start again from that point |
-| Restore conversation only / code only | to split the two |
+| Restore conversation only / code only | to restore just one of the two |
 | Summarize from here | drop a side branch of the conversation and keep the beginning |
-| Summarize up to here | fold up long preparation and keep the implementation whole |
+| Summarize up to here | condense a long preparation and keep the implementation whole |
 
 Rewind does not undo what was done by shell commands (installed packages, for example) or edits made by background subagents: **for that there is only git**.
 
@@ -85,7 +85,7 @@ CLAUDE.md is **guidance, not enforcement**: lines compete for attention, and the
 | “Don't use default export” | “Use named exports, not a default export” |
 
 - Specific and checkable; say **what to do instead**.
-- An “IMPORTANT” highlight is a budget for 2–3 truly important rules, no more.
+- Save the “IMPORTANT” highlight for 2–3 truly important rules, no more.
 - Every mistake Claude makes is a bug report on CLAUDE.md: “add this to CLAUDE.md”. And the other way round: **delete any line you can't justify.**
 - The course's advice: start without CLAUDE.md, see where you have to correct Claude, and only then run <code>/init</code>.
 
@@ -150,7 +150,7 @@ There are about thirty events; the key ones for long work:
 - A Stop hook is lifted after eight blocks in a row with no action; check the <code>stop_hook_active</code> field.
 - If the organization allows only managed hooks, <code>/goal</code> stops working.
 
-A useful trick is **“mask, don't block”**: PreToolUse finds a secret key in a command and swaps it for a placeholder instead of stopping the work. The basics are in the guide [Hooks in Claude Code](page:kb/guides/claude-code-hooks).
+A useful trick is **“mask, don't block”**: PreToolUse finds a secret key in a command and swaps it for a placeholder instead of stopping the work. For the basics, see the guide [Hooks in Claude Code](page:kb/guides/claude-code-hooks).
 
 ## Scheduled and non-interactive runs {#automation}
 
@@ -222,7 +222,7 @@ Fix the first finding. Then run the tests and show the output.
 
 ### Background sessions (Agent view) {#agent-view}
 
-<code>claude agents</code> is one screen with all background sessions and their status (working, waiting for an answer, finished, error). <code>claude --bg --name "flaky-test-fix" "…"</code> starts one in the background. Note: a background session works in a separate copy of the repository and **can commit, push and open a draft PR on its own** (except pushing to main, force-pushing and merging). If git must stay under manual control, write that in CLAUDE.md. Each background session uses up the limit separately.
+<code>claude agents</code> is one screen with all background sessions and their status (working, waiting for an answer, finished, error). <code>claude --bg --name "flaky-test-fix" "…"</code> starts one in the background. Note: a background session works in a separate copy of the repository and **can commit, push and open a draft PR on its own** (except pushing to main, force-pushing and merging). If git must stay under manual control, write that in CLAUDE.md. Each background session draws on your usage limit separately.
 
 ### Dynamic workflows {#workflows}
 
@@ -230,7 +230,7 @@ For tasks of tens or hundreds of steps, Claude writes a workflow plan that runs 
 
 ### Subagents in parallel {#fan-out}
 
-“Explore the authorization, database and API modules in parallel, with separate subagents”; <code>/batch instruction</code> splits a change across 5–30 subagents, each in its own copy. Try it on 2–3 files first, then on everything. More on subagents in [Subagents in Claude Code](page:kb/guides/claude-code-subagents).
+“Explore the authorization, database and API modules in parallel, with separate subagents”; <code>/batch instruction</code> splits a change across 5–30 subagents, each in its own copy. Try it on 2–3 files first, then on everything. For more on subagents, see [Subagents in Claude Code](page:kb/guides/claude-code-subagents).
 
 ### Plugins {#plugins}
 
@@ -245,10 +245,10 @@ A plugin bundles skills, subagents, hooks and connections: <code>/plugin install
 <li><b>Know the weak spots of hooks</b><span>Code 1 doesn't block, a timeout lets the action through, Stop is lifted after eight blocks.</span></li>
 <li><b>Routines run in Anthropic's cloud</b><span>Decide whether that is acceptable for your repositories; turn off unneeded connections; protect the main branch.</span></li>
 <li><b>Background sessions work with git on their own</b><span>If you need manual control, forbid it in CLAUDE.md.</span></li>
-<li><b>GitHub Actions with minimal permissions</b><span>Secrets through Secrets, limits on turns and time, merge only after a person.</span></li>
+<li><b>GitHub Actions with minimal permissions</b><span>Secrets through Secrets, limits on turns and time, merge only after a person has reviewed.</span></li>
 <li><b>Plugins only from allowed marketplaces</b><span>Set the list of allowed marketplaces and the limits on hooks in the organization's settings.</span></li>
 <li><b>Undo means git</b><span>Rewind in Claude Code doesn't undo shell commands or edits by background subagents.</span></li>
-<li><b>Count the usage</b><span>Background sessions and workflows use up the limit several times over; organizations can set limits on workflows.</span></li>
+<li><b>Watch the usage</b><span>Background sessions and workflows use up the limit several times over; organizations can set limits on workflows.</span></li>
 </ol>
 
-All organization-level settings are in the Claude Code documentation: the Permission modes, Hooks, Routines, GitHub Actions and Code Review pages. The links are in the Reference: [Anthropic learning](page:reference/anthropic).
+All organization-level settings are in the Claude Code documentation: the Permission modes, Hooks, Routines, GitHub Actions and Code Review pages. The links are in the Reference section: [Anthropic learning](page:reference/anthropic).

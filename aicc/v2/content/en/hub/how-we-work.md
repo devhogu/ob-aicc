@@ -37,7 +37,7 @@ flowchart TB
   R2 ~~~ R3
 ```
 
-At a checkpoint, you compare against what was written on the card before the start: the [[exit-criterion|exit criterion]], the [[appetite|appetite]], and the [[stop-threshold|stop threshold]]. That's why the question “should we keep going?” is settled by checking against what was agreed, not by argument. An initiative can be deferred or closed in any state: the reason is written on the card so that nobody comes back to the idea blindly. For details, see the page [States and decisions](page:process/portfolio#decisions); a good place to start is the page [How to engage](page:services/how-to-engage).
+At a checkpoint, the work is checked against what was written on the card before the start: the [[exit-criterion|exit criterion]], the [[appetite|appetite]], and the [[stop-threshold|stop threshold]]. That's why the question “should we keep going?” is settled by checking against what was agreed, not by argument. An initiative can be deferred or closed in any state: the reason is written on the card so that nobody comes back to the idea blindly. For details, see the page [States and decisions](page:process/portfolio#decisions); to get started, see the page [How to engage](page:services/how-to-engage).
 
 ## Two kinds of work in one portfolio {#two-kinds}
 
@@ -45,7 +45,7 @@ At a checkpoint, you compare against what was written on the card before the sta
 
 **[[initiative|Initiatives]]** cover everything bigger: a new outcome, a problem with no obvious answer, several teams. An initiative goes through the whole path, with a [[business-case|business case]], a start decision, and investment decisions.
 
-**[[urgent|Urgent work]]** is taken on out of turn, but you note right away what it pushed back, and later the forum looks at whether it could have been foreseen.
+**[[urgent|Urgent work]]** jumps the queue, but what it pushed back is noted right away, and later the forum looks at whether it could have been foreseen.
 
 The kind of work determines how deep the shaping goes and how many decisions are made along the way, but not the quality requirements. For details, see the page [Classes of service](page:process/portfolio#classes).
 
@@ -53,7 +53,7 @@ The kind of work determines how deep the shaping goes and how many decisions are
 
 Work runs in iterations of about a month; several iterations make up a [[program-increment|program increment]] of about a quarter. At the start of an iteration, the team chooses what it will do; at the end, it shows the result at the review and demo, and the product manager accepts each finished [[feature|Feature]]. The order of work and the dependencies between projects are agreed at the [[program-decision-forum|program decision forum]].
 
-The depth of checks is set by the [[risk-tier|risk tier]]: the more serious the consequences of an error, the deeper the check and the longer a [[human-in-the-loop|human in the loop]] confirms AI's output. A check is not yet acceptance: the business owner accepts the working solution. For details, see the page [Working cycle](page:process/program#cadence).
+The depth of checks is set by the [[risk-tier|risk tier]]: the more serious the consequences of an error, the deeper the check and the longer a [[human-in-the-loop|human in the loop]] keeps confirming AI's output. A check is not acceptance: the business owner accepts the working solution. For details, see the page [Working cycle](page:process/program#cadence).
 
 ## After rollout {#after}
 

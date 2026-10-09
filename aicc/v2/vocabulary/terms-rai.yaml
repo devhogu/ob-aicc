@@ -199,7 +199,7 @@
   en: risk-based approach
   term_en: "risk-based approach"
   definition: "Принцип, при котором объём проверок и мер контроля соразмерен риску применения."
-  definition_en: "The principle that the amount of checks and controls is proportionate to the risk of the use."
+  definition_en: "The principle that the extent of checks and controls is proportionate to the risk of the use."
 
 - id: high-risk-ai
   ru: AI высокого риска
@@ -248,7 +248,7 @@
   en: AI literacy
   term_en: "AI literacy"
   definition: "Понимание того, что AI умеет и чего не умеет. Оно нужно каждому, кто им пользуется."
-  definition_en: "Understanding what AI can and can’t do. Everyone who uses it needs this."
+  definition_en: "Understanding what AI can and can’t do. Everyone who uses AI needs it."
 
 - id: ai-incident
   ru: инцидент AI
@@ -262,7 +262,7 @@
   en: shadow AI
   term_en: "shadow AI"
   definition: "Инструменты AI, которыми сотрудники пользуются в работе в обход тех, что организация предоставляет для таких данных."
-  definition_en: "AI tools that employees use at work instead of the ones the organization provides for such data."
+  definition_en: "AI tools that employees use at work in place of the ones the organization provides for that kind of data."
 
 - id: open-banking
   ru: открытый банкинг
@@ -304,7 +304,7 @@
   en: real-time scoring
   term_en: "real-time scoring"
   definition: "Оценка, которую модель выдаёт за время самой транзакции или обращения, например при выявлении мошенничества."
-  definition_en: "A score that a model produces within the time of the transaction or request itself, for example in fraud detection."
+  definition_en: "A score that a model produces while the transaction or request itself is still in progress, for example in fraud detection."
 
 - id: rag
   ru: ответы с опорой на поиск по документам

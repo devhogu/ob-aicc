@@ -23,7 +23,7 @@
       <h1 class="page-header__title">Customer data</h1>
     </div>
   </div>
-  <p class="page-header__intent">Customer data is the Bank's most valuable and most regulated data domain — the integrated record of who the customer is, what they hold, how they behave, and what permissions they have granted. It spans identity and KYC records, the customer 360 profile assembled from CRM and product systems, behavioral and segmentation data derived from transactions and interactions, consent and privacy records governed under applicable law on personal data, and the relationship and interaction history maintained by relationship managers and service teams. Under AML/CFT and customer due diligence requirements, and with reference to FIBO's customer entity model, each layer of customer data carries specific governance obligations. <strong>The GenAI opportunity is to assemble the customer 360 view at the point of engagement without manual data retrieval, monitor consent coverage continuously, and surface behavioral signals for credit and product analytics</strong> — giving every customer-facing function access to the same complete, current customer picture.</p>
+  <p class="page-header__intent">Customer data is the Bank's most valuable and most regulated data domain — the integrated record of who the customer is, what they hold, how they behave, and what permissions they have granted. It spans identity and know your customer (KYC) records, the customer 360 profile assembled from CRM and product systems, behavioral and segmentation data derived from transactions and interactions, consent and privacy records governed under applicable law on personal data, and the relationship and interaction history maintained by relationship managers and service teams. Under anti-money laundering and countering the financing of terrorism (AML/CFT) and customer due diligence requirements, and with reference to FIBO's customer entity model, each layer of customer data carries specific governance obligations. <strong>The generative AI opportunity is to assemble the customer 360 view at the point of engagement without manual data retrieval, monitor consent coverage continuously, and surface behavioral signals for credit and product analytics</strong> — giving every customer-facing function access to the same complete, current customer picture.</p>
 </header>
 <style>
   #problems-tab-customer-360-identity:checked ~ .problems-tab-bar label[for="problems-tab-customer-360-identity"] {
@@ -43,10 +43,10 @@
   </div>
   <hr class="problems-divider">
   <div class="problems-panel" id="problems-panel-customer-360-identity" data-tab="customer-360-identity" role="tabpanel" aria-labelledby="problems-tab-customer-360-identity">
-    <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Insights &amp; analytics</h3><p>Customer identity, product holdings, transaction behavior, and interaction history are each maintained in separate systems with their own reporting cadence. Relationship managers, credit analysts, and product teams assemble their own working view of the customer from manual extracts; the Bank lacks an authoritative, continuously assembled customer 360 profile that any function can access at the point of need.</p></article><article class="discovery-context-card"><h3>Enablement</h3><p>KYC re-verification exercises require the compliance team to retrieve identity documents, current beneficial ownership structures, and prior screening results from separate KYC, CRM, and sanctions-screening systems before the re-verification analysis can begin. For a corporate client with complex ownership, assembling the pre-verification dossier can consume a full analyst day before substantive compliance work starts.</p></article><article class="discovery-context-card"><h3>Automation</h3><p>Customer segmentation model refresh, behavioral cohort updates, and KYC status tracking follow defined rules applied to structured customer data on monthly or quarterly cycles. Each process is repeatable and data-intensive — candidates for continuous AI-driven execution.</p></article><article class="discovery-context-card"><h3>New business opportunities</h3><p>A continuously assembled customer 360 profile — updated with each new transaction, interaction, and product event — gives product and RM teams an analytics substrate for next-best-action recommendations, early attrition signals, and personalized engagement that monthly batch refreshes cannot support.</p></article></div>
+    <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Insights &amp; analytics</h3><p>Customer identity, product holdings, transaction behavior, and interaction history are each maintained in separate systems with their own reporting cadence. Relationship managers, credit analysts, and product teams assemble their own working view of the customer from manual extracts; the Bank lacks an authoritative, continuously assembled customer 360 profile that any function can access at the point of need.</p></article><article class="discovery-context-card"><h3>Enablement</h3><p>KYC re-verification exercises require the compliance team to retrieve identity documents, current beneficial ownership structures, and prior screening results from separate KYC, CRM, and sanctions-screening systems before the re-verification analysis can begin. For a corporate client with complex ownership, assembling the pre-verification dossier can consume a full analyst day before substantive compliance work starts.</p></article><article class="discovery-context-card"><h3>Automation</h3><p>Customer segmentation model refresh, behavioral cohort updates, and KYC status tracking follow defined rules applied to structured customer data on monthly or quarterly cycles. Each process is repeatable and data-intensive, which makes it a candidate for continuous AI-driven execution.</p></article><article class="discovery-context-card"><h3>New business opportunities</h3><p>A continuously assembled customer 360 profile — updated with each new transaction, interaction, and product event — gives product teams and relationship manager (RM) teams an analytics foundation for next-best-action recommendations, early attrition signals, and personalized engagement that monthly batch refreshes cannot support.</p></article></div>
   </div>
 </section>
-<div id="main-content" class="l3-sections" aria-label="Sub-concerns">
+<div id="main-content" class="l3-sections" aria-label="Subsections">
 <section class="l3-section" id="customer-identity-kyc-data">
   <header class="l3-section__head">
     <h2 class="l3-section__title">Customer identity &amp; KYC data</h2>
@@ -78,10 +78,10 @@
     </div>
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>The AI agent reads the upcoming KYC review calendar and assembles the current identity record, AML screening history, PEP and sanctions results, and relationship activity summary for each customer in the review queue. It produces a structured dossier with a pre-populated risk indicator summary and flags fields where current documentation is missing or expired. The compliance analyst reviews the dossier, applies professional judgment, and signs off on the KYC record.</p>
+      <p>The AI agent reads the upcoming KYC review calendar and assembles the current identity record, AML screening history, politically exposed person (PEP) and sanctions results, and relationship activity summary for each customer in the review queue. It produces a structured dossier with a pre-populated risk indicator summary and flags fields where current documentation is missing or expired. The compliance analyst reviews the dossier, applies professional judgment, and signs off on the KYC record.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">Compliance analysts conduct KYC periodic reviews from AI-assembled dossiers — current identity records, screening results, and relationship activity — with pre-populated risk indicators and documentation gap flags, directing analyst capacity toward judgment rather than data assembly.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -112,7 +112,7 @@
     </div>
     <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
   </summary>
-  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#aml-cft">AML/CFT standards</a></p>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory requirements:</span> <a href="../../regulatory-horizon/index.html#aml-cft">AML/CFT standards</a></p>
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>KYC risk classifications are reviewed on a fixed cycle — annually for high-risk customers, less frequently for standard-risk. Material changes in a customer's risk profile — a new adverse media hit, a PEP designation, a suspicious transaction flag, or a change in beneficial ownership — may not be identified until the next scheduled review cycle. AML/CFT and customer due diligence requirements expect enhanced due diligence to be applied promptly when a customer's risk profile changes materially; the fixed review cycle creates a lag between the triggering event and the compliance response.</p>
@@ -122,7 +122,7 @@
       <p>The AI agent monitors AML screening outputs, adverse media feeds, transaction monitoring alerts, and beneficial ownership change records on a continuous basis for each customer. When a new signal exceeds a defined materiality threshold — a sanctions hit, a PEP designation, a material adverse media finding, or a significant transaction anomaly — the AI agent generates a reclassification trigger pack: the triggering signal, the current KYC risk classification and last-review date, and a pre-populated reclassification assessment template. The compliance team reviews the pack and decides on the appropriate KYC response within the regulatory response window.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">Material changes in customer risk profile trigger an out-of-cycle KYC review by the compliance team within the regulatory response window, closing the lag between triggering event and compliance action.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -153,7 +153,7 @@
     </div>
     <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
   </summary>
-  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#aml-cft">AML/CFT standards</a></p>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory requirements:</span> <a href="../../regulatory-horizon/index.html#aml-cft">AML/CFT standards</a></p>
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>UBO identification for legal entity customers with complex ownership structures — multi-layer holding companies, nominee shareholders, cross-border ownership chains — requires compliance analysts to trace ownership records through multiple registry extracts, company filings, and KYC documents. The analysis is time-consuming and inconsistent across analysts; complex structures that exceed analyst capacity within the onboarding window are escalated with incomplete UBO mapping. PEP connections and high-risk jurisdiction links that exist at indirect ownership levels are not reliably identified.</p>
@@ -163,7 +163,7 @@
       <p>The AI agent reads the entity's ownership and control documentation from the KYC system, company registry filings, and available third-party entity data, and maps the full ownership chain to the UBO level using graph analysis of the entity relationship structure. It identifies PEP connections, sanctions-list links, and high-risk jurisdiction presence at each ownership layer. The output is a structured UBO analysis: the ownership chain visualization, UBO identities and their risk attributes, and a risk tier recommendation. Structures where UBO identification is incomplete due to data gaps are flagged with the specific missing information required. The compliance analyst reviews and confirms the analysis during KYC onboarding or periodic review.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">Compliance analysts complete UBO identification for legal entity customers with a complete, graph-based ownership chain analysis, reducing the risk of undetected PEP and high-risk jurisdiction exposure.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -208,7 +208,7 @@
     </div>
     <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
   </summary>
-  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#personal-data">Personal data and consent</a></p>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory requirements:</span> <a href="../../regulatory-horizon/index.html#personal-data">Personal data and consent</a></p>
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>Customer consents expire or are withdrawn at different rates across the customer base; gaps are identified when a marketing campaign or data-sharing request is blocked rather than before the exposure arises. Consent status is tracked in the CRM, but no automated process flags populations where coverage has fallen below regulatory thresholds between review cycles. Regulatory exposure under applicable data protection laws accumulates in the interim.</p>
@@ -218,8 +218,8 @@
       <p>The AI agent reads consent records from the CRM and data management platform, tracks expiry dates and withdrawal events, and produces a weekly consent-gap report by product line and customer segment. It flags consents expiring within 30 days and identifies customer populations where consent coverage has fallen below regulatory thresholds. The compliance team uses the report to direct consent renewal campaigns before the exposure materializes.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
-      <p class="okr-objective">The compliance team holds a weekly consent-gap view across marketing, data sharing, and product permissions, with expiring and missing consents flagged before regulatory exposure materializes under applicable law on personal data.</p>
+      <div class="scenario-section__label">Acceptance criteria</div>
+      <p class="okr-objective">The compliance team has a weekly view of consent gaps across marketing, data sharing, and product permissions, with expiring and missing consents flagged before regulatory exposure materializes under applicable law on personal data.</p>
       <div class="okr-grid">
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
@@ -249,7 +249,7 @@
     </div>
     <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
   </summary>
-  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#personal-data">Personal data and consent</a></p>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory requirements:</span> <a href="../../regulatory-horizon/index.html#personal-data">Personal data and consent</a></p>
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>Consent withdrawals affect the addressable population for data-driven engagement and analytics across multiple downstream use cases — marketing campaigns, behavioral scoring, product analytics. The impact of a withdrawal wave on each downstream use case is assessed manually and inconsistently; teams discover that a campaign or model was using data from a withdrawn-consent population only when the compliance review raises a flag. The lag between withdrawal event and downstream impact remediation creates regulatory exposure under applicable law on personal data.</p>
@@ -259,7 +259,7 @@
       <p>The AI agent reads consent withdrawal events from the data management platform, maps each withdrawn consent to the downstream use cases that rely on the corresponding processing permission, and produces an impact assessment: affected use case, population reduction by segment, and the action required before the next campaign or model run. Marketing campaigns and scoring models scheduled to execute within 14 days of the withdrawal batch are flagged for priority remediation. The data privacy and marketing teams use the assessment to update suppression lists and model inputs before execution.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">Consent withdrawal impacts on downstream analytics and campaigns are identified for the data privacy and marketing teams and remediated before execution, eliminating regulatory exposure from processing withdrawn-consent data.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -286,22 +286,22 @@
       <h3 class="scenario-card__title">Consent Coverage Segmentation Report</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">The AI agent produces a monthly consent coverage report by product line, customer segment, and processing purpose, showing the proportion of the active customer base with valid consent for each data-use category. The report supports the CDO and data privacy officer in assessing coverage trends, prioritizing renewal campaigns, and documenting the legal basis position for each processing purpose as required under applicable law on personal data.</p>
+      <p class="scenario-card__intent">The AI agent produces a monthly consent coverage report by product line, customer segment, and processing purpose, showing the proportion of the active customer base with valid consent for each data-use category. The report supports the chief data officer (CDO) and data privacy officer in assessing coverage trends, prioritizing renewal campaigns, and documenting the legal basis position for each processing purpose as required under applicable law on personal data.</p>
     </div>
     <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
   </summary>
-  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#personal-data">Personal data and consent</a></p>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory requirements:</span> <a href="../../regulatory-horizon/index.html#personal-data">Personal data and consent</a></p>
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>Consent coverage across the customer base is tracked at the individual record level in the CRM and data management platform but aggregated views by product line, segment, and processing purpose are assembled manually for governance reporting. The data privacy officer relies on periodic ad hoc extracts to assess coverage trends; the aggregation methodology and denominator definitions vary between extracts, making trend comparisons unreliable. Board and regulator reporting on consent posture requires a consistent, reproducible coverage baseline.</p>
+      <p>Consent coverage across the customer base is tracked at the individual record level in the CRM and data management platform but aggregated views by product line, segment, and processing purpose are assembled manually for governance reporting. The data privacy officer relies on periodic ad hoc extracts to assess coverage trends; the aggregation methodology and denominator definitions vary between extracts, making trend comparisons unreliable. Board and regulator reporting on consent status requires a consistent, reproducible coverage baseline.</p>
     </div>
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
       <p>The AI agent reads consent records from the CRM and data management platform, applies consistent denominator definitions by product line and customer segment, and calculates consent coverage ratios by processing purpose. It produces a monthly coverage report with trend lines against prior periods, segment breakdowns for each processing purpose, and a flag for purposes where coverage has fallen below the threshold defined in the data privacy governance framework. The data privacy officer uses the report for governance submissions and renewal campaign prioritization.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
-      <p class="okr-objective">The CDO and data privacy officer hold a consistent, reproducible monthly view of consent coverage by product line, segment, and processing purpose, supporting governance reporting and renewal campaign targeting.</p>
+      <div class="scenario-section__label">Acceptance criteria</div>
+      <p class="okr-objective">The CDO and data privacy officer have a consistent, reproducible monthly view of consent coverage by product line, segment, and processing purpose, supporting governance reporting and renewal campaign targeting.</p>
       <div class="okr-grid">
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
@@ -355,8 +355,8 @@
       <p>The AI agent scans the customer population weekly, attempting a 360 assembly for each active customer and recording which source components were available, current, and complete. It produces a completeness scorecard by source system and customer segment, highlighting the proportion of customers with each component complete. Customers where high engagement value — as measured by product holdings and interaction frequency — coincides with a missing or stale source component are ranked by completeness impact for priority remediation. The CDO receives the weekly scorecard as the primary dashboard for source-system data quality investment; the data quality team confirms the priority gaps and directs remediation.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
-      <p class="okr-objective">The CDO holds a weekly, segment-level view of customer 360 completeness gaps across all source components, directing data quality remediation to where engagement impact is highest.</p>
+      <div class="scenario-section__label">Acceptance criteria</div>
+      <p class="okr-objective">The CDO has a weekly, segment-level view of customer 360 completeness gaps across all source components, directing data quality remediation to where engagement impact is highest.</p>
       <div class="okr-grid">
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
@@ -396,7 +396,7 @@
       <p>The AI agent reads the current customer 360 profile — product holdings, balance levels, transaction categories, interaction recency, and life-stage indicators — and applies product-affinity rules derived from the Bank's existing customer base to identify gaps where the customer's profile matches the typical profile of a holder of a product they do not currently hold. It produces a cross-sell signal card per identified gap: the product opportunity, the supporting profile evidence, and a suggested first-contact approach based on the customer's channel preference. The RM or channel team reviews the signal and decides on engagement.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">RMs and channel teams receive structured, evidence-based cross-sell signals derived from the customer 360 profile, enabling proactive product conversations between campaign cycles.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -437,7 +437,7 @@
       <p>The AI agent accepts a customer identifier and a declared use case — RM meeting preparation, credit underwriting, compliance review, or service resolution — and retrieves the current state from CRM, core banking, the KYC system, and the transaction data layer. It assembles a structured customer 360 view with the sections relevant to the declared use case foregrounded. The response includes a data-currency indicator for each source, flagging components where the underlying data has not been refreshed within the expected cadence. Assembly completes within the response window agreed with each requesting function.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">Every customer-facing function accesses a complete, current customer 360 view at the point of engagement without manual retrieval across source systems.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -492,7 +492,7 @@
       <p>The AI agent reads CRM interaction logs, prior meeting notes, product discussion records, complaint and service history, and open action items for the specified client. It produces a structured relationship brief: recent interaction timeline, open product discussions and their status, outstanding commitments, prior RM notes and handover context, and a recommended discussion agenda. The RM reviews the brief and adds current market context before the meeting.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">Relationship managers prepare for client meetings using a structured AI-assembled brief drawn from CRM interaction logs, product discussion records, and prior handover notes, with a recommended agenda and open action items included.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -533,8 +533,8 @@
       <p>The AI agent reads the last-contact date from CRM for each relationship-managed client and compares it against the expected coverage cadence defined for the client's segment and revenue tier. Clients where the gap exceeds the cadence threshold are ranked by revenue contribution and relationship tenure in a weekly coverage gap report. The RM team leader receives the report with the client list, last-contact date, expected cadence, and the RM responsible. High-revenue clients with the longest coverage gaps are flagged for priority action.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
-      <p class="okr-objective">RM team leaders hold a weekly, ranked view of coverage gaps across the portfolio, enabling proactive re-engagement before client relationships deteriorate.</p>
+      <div class="scenario-section__label">Acceptance criteria</div>
+      <p class="okr-objective">RM team leaders have a weekly, ranked view of coverage gaps across the portfolio, enabling proactive re-engagement before client relationships deteriorate.</p>
       <div class="okr-grid">
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
@@ -546,7 +546,7 @@
         </div>
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
-          <p>Coverage gap identification cycle shifted from reactive discovery at relationship events to a weekly proactive scan; priority client re-engagement initiated ≥ 30 days before typical attrition signal window.</p>
+          <p>Coverage gap identification cycle shifted from reactive discovery at relationship events to a weekly proactive scan; priority client re-engagement initiated ≥ 30 days before the typical attrition signal window.</p>
         </div>
       </div>
     </div>
@@ -567,14 +567,14 @@
   <div class="scenario-card__body">
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>RM transitions require the outgoing RM to prepare a handover note covering relationship history, open opportunities, outstanding commitments, and client preferences. The quality and completeness of handover notes varies with the time available and the outgoing RM's documentation discipline; clients with long relationship histories or multiple concurrent product discussions receive thin handovers. The incoming RM re-establishes the relationship from an incomplete picture, extending the re-establishment period and creating a risk of missed commitments or duplicated conversations.</p>
+      <p>RM transitions require the outgoing RM to prepare a handover note covering relationship history, open opportunities, outstanding commitments, and client preferences. The quality and completeness of handover notes vary with the time available and the outgoing RM's documentation discipline; clients with long relationship histories or multiple concurrent product discussions receive thin handovers. The incoming RM re-establishes the relationship from an incomplete picture, extending the re-establishment period and creating a risk of missed commitments or duplicated conversations.</p>
     </div>
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
       <p>The AI agent reads the full CRM record for the client — interaction logs across the relationship tenure, product discussions and their status, outstanding commitments from meeting notes, complaint and service history, and prior RM handover entries — and assembles a structured handover pack: a relationship timeline, open and closed product discussions, outstanding commitments with due dates, client preferences and contact preferences, and a summary of the three most recent interactions. The outgoing RM reviews the pack, adds any undocumented context, and approves for transfer to the incoming RM.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">Incoming RMs receive a complete, CRM-grounded handover pack for each transferred client, reducing relationship re-establishment time and the risk of missed commitments.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -629,7 +629,7 @@
       <p>The AI agent reads the current transaction and interaction stream for each customer and compares behavioral indicators — transaction frequency, product usage intensity, channel mix, and balance trajectory — against the segment profile assigned at the last calibration. Customers where the behavioral gap exceeds a defined threshold are identified and ranked by magnitude of deviation in a weekly drift report by segment. The analytics team uses the report to direct selective re-segmentation outside the standard model cycle.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The analytics team maintains segment assignment accuracy between model calibration cycles through a weekly report of customers whose behavioral indicators have materially diverged from their assigned segment profile.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -670,7 +670,7 @@
       <p>The AI agent reads the transaction stream, product usage data, channel interaction history, and balance trajectory for each customer over a trailing window, and scores churn propensity using a feature set calibrated against confirmed prior-period attrition events. The weekly output is a ranked list by propensity score and customer value tier, with the top contributing behavioral signals highlighted per customer. The RM team and retail banking team receive the high-risk population with a suggested retention conversation approach based on the dominant attrition signal, and decide which customers to contact.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The RM and retail banking teams direct retention conversations to high-value customers with early attrition indicators identified at least 30 days before typical churn events, reducing preventable attrition.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -711,7 +711,7 @@
       <p>The AI agent tracks the behavioral feature values — transaction frequency, average balance, payment regularity, product usage intensity — for each customer against the values recorded at the last model score run. When feature movement for a customer exceeds the materiality threshold defined for a given model, the AI agent generates a selective refresh trigger for that customer and model combination. The credit and analytics model execution teams process the selective refresh queue on a weekly basis. The CDO and model risk teams review trigger volumes to calibrate materiality thresholds.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">Credit and product-targeting scores remain current for the highest-movement customers between full model cycles through a structured selective refresh triggered by material feature movement.</p>
       <div class="okr-grid">
         <div class="okr-kr">

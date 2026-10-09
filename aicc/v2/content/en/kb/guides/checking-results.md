@@ -9,7 +9,7 @@ tags: checking, hallucination, quality, verification
 source_hash: 6367d6be5754
 ---
 
-This guide is for everyone who passes on the results of working with AI: to colleagues, a manager or a customer. After it, you will be able to check an assistant's answer against a short list and find what in it needs checking against the source.
+This guide is for anyone who passes on work done with AI: to colleagues, a manager, or a customer. By the end, you will be able to check an assistant's answer against a short list and spot what needs checking against the source.
 
 An assistant writes smoothly and confidently, even when it is wrong. So check everything that leaves your hands. How thoroughly depends on what happens if a mistake slips through.
 
@@ -19,7 +19,7 @@ An assistant writes smoothly and confidently, even when it is wrong. So check ev
 - **Completeness.** The answer covers the whole task, and nothing important was lost in shortening: deadlines, amounts, exceptions.
 - **Meaning.** The retelling has not changed the meaning of the original text; the conclusions follow from the data.
 - **Tone and audience.** The text suits whoever will read it: a customer, a manager, a regulator.
-- **Anything extra.** The text has no data that shouldn't be there: personal, internal or someone else's.
+- **Stray data.** The text has no data that shouldn't be there: personal, internal or someone else's.
 
 ## Example: a summary of a new regulation {#example}
 
@@ -27,7 +27,7 @@ The assistant has written a half-page summary of a new regulation from the regul
 
 1. Check every date against the original (for example, when the regulation takes effect) and every clause number.
 2. Make sure the summary hasn't lost any exceptions or transition periods.
-3. Find phrases like “banks must” and make sure that requirement is really in the text and wasn't invented.
+3. Find phrases like “banks must” and make sure that requirement really is in the text and wasn't made up.
 
 ## When to check more thoroughly {#depth}
 

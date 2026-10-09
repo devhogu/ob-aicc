@@ -11,7 +11,7 @@ function_en: "Front office, retail business, commercial sales"
 area: "Аналитика и поддержка решений"
 area_en: "Analytics and decision support"
 people:
-  business_owner: {position: "представитель фронт-офиса, розничного бизнеса и коммерческих продаж, которым нужен результат", position_en: "a representative of the front office, retail business and commercial sales, which need the result", holder: ""}
+  business_owner: {position: "представитель фронт-офиса, розничного бизнеса и коммерческих продаж, которым нужен результат", position_en: "a representative of the front office, retail business, and commercial sales, which need the result", holder: ""}
   product_manager: {position: "менеджер продукта Хаба по этой теме", position_en: "the Hub's product manager for this topic", holder: ""}
   project_manager: {position: "кто ведёт проект", position_en: "whoever runs the project", holder: ""}
 outcome:
@@ -29,14 +29,14 @@ constraints:
   appetite: "Без отдельного бюджета: рабочее время того, кто ведёт проект."
   appetite_en: "No separate budget: the working time of whoever runs the project."
   review_point: "К концу 2026 года: смотрим, что получилось, и решаем, продолжать ли."
-  review_point_en: "By the end of 2026: we look at what has come of it and decide whether to continue."
+  review_point_en: "By the end of 2026: we review the results and decide whether to continue."
   exit_criterion: "Есть карта источников и подход, проверенный на одной небольшой выборке, если это допускают класс данных и меры контроля."
   exit_criterion_en: "There is a map of sources and an approach tested on one small sample, if the data class and controls allow it."
   stop_threshold: "Класс данных или меры контроля не допускают работу с данными клиентов даже на небольшой выборке."
   stop_threshold_en: "The data class or the controls do not allow work with customer data, even on a small sample."
 checklist:
   - {item: "Вместе с подразделениями составить перечень мест, где возникают сведения о клиентском опыте", item_en: "Together with the departments, list the places where customer experience information arises", state: "не начато"}
-  - {item: "По каждому источнику выяснить владельца, формат, объём, класс данных и способ сведения данных воедино", item_en: "For each source, find out its owner, format, volume, data class and how its data can be brought together", state: "не начато"}
+  - {item: "По каждому источнику выяснить владельца, формат, объём, класс данных и способ сведения данных воедино", item_en: "For each source, find out its owner, format, volume, data class, and how its data can be brought together", state: "не начато"}
   - {item: "Изучить, как AI может сводить и анализировать эти сведения: темы, повторяющиеся проблемы, причины, тенденции", item_en: "Explore how AI can combine and analyze this information: themes, recurring problems, causes, trends", state: "не начато"}
   - {item: "Опробовать подход на небольшой выборке, если это допускают класс данных и меры контроля", item_en: "Try the approach on a small sample, if the data class and controls allow it", state: "не начато"}
   - {item: "Описать неэффективность работы фронт-офиса, на которую указывает анализ", item_en: "Describe the front-office inefficiencies the analysis points to", state: "не начато"}
@@ -50,7 +50,7 @@ live:
     - "Создание платформы, изменение каналов и порядка общения с клиентами в работу не входят."
   risks_en:
     - "Customer data is used: a data protection and information security assessment is needed before the first run."
-    - "Building a platform and changing channels and the way we communicate with customers are out of scope."
+    - "Building a platform and changing customer channels or how we communicate with customers are out of scope."
   dependencies:
     - "Карта источников из INI-002."
     - "Доступ к обращениям в поддержку, зарегистрированным проблемам и трудностям клиентов, класс данных."
@@ -58,7 +58,7 @@ live:
     - "Проверка представителями контрольных функций."
   dependencies_en:
     - "The map of sources from INI-002."
-    - "Access to support requests, logged problems and customer difficulties, and their data class."
+    - "Access to support requests, logged problems, and customer difficulties, and the data class of that information."
     - "Representatives of the functions who know their own sources."
     - "Review by representatives of the control functions."
 decisions: []

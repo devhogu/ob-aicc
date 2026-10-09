@@ -10,7 +10,7 @@
   en: portfolio
   term_en: "portfolio"
   definition: "Уровень, на котором выбранные предложения становятся инициативами и получают место в очереди на работу."
-  definition_en: "The level at which the selected proposals become initiatives and get a place in the queue for work."
+  definition_en: "The level at which selected proposals become initiatives and get their place in the work queue."
 
 - id: program
   ru: программа
@@ -31,7 +31,7 @@
   en: initiative
   term_en: "initiative"
   definition: "Работа, которая приносит новый результат и требует отдельного решения о старте. Всё, что крупнее небольшой повторяющейся задачи."
-  definition_en: "Work that brings a new result and needs its own start decision. Anything bigger than a small recurring task."
+  definition_en: "Work that delivers a new result and needs its own start decision. Anything bigger than a small recurring task."
 
 - id: capability
   ru: Capability
@@ -52,7 +52,7 @@
   en: project card
   term_en: "project card"
   definition: "Живая запись о проекте: что делаем, зачем, кто отвечает, на каком этапе. Её ведёт руководитель проекта, сайт показывает её как есть."
-  definition_en: "A living record of a project: what we are doing, why, who is responsible, and at what stage. The project manager keeps it, and the site shows it as it is."
+  definition_en: "A living record of a project: what we are doing, why, who is responsible, and what stage it is at. The project manager maintains it, and the site shows it as is."
 
 - id: project-profile
   ru: профиль проекта
@@ -66,14 +66,14 @@
   en: run-rate work
   term_en: "run-rate work"
   definition: "Небольшая повторяющаяся работа, которая выполняется в рамках одной итерации по понятному шаблону."
-  definition_en: "Small recurring work that is done within one iteration to a clear template."
+  definition_en: "Small recurring work done within one iteration, following a clear template."
 
 - id: urgent
   ru: срочная работа
   en: urgent work
   term_en: "urgent work"
   definition: "Работа, которую нельзя отложить: её берут вне очереди и сразу сообщают, что из-за неё сдвинулось."
-  definition_en: "Work that can’t be put off: it is taken out of turn, and what it pushed back is reported right away."
+  definition_en: "Work that can’t be put off: it jumps the queue, and whatever it pushes back is reported right away."
 
 - id: class-of-service
   ru: класс обслуживания
@@ -87,14 +87,14 @@
   en: business owner
   term_en: "business owner"
   definition: "Человек из подразделения, которому нужен результат. Отвечает за то, зачем делаем, и принимает решение, стоит ли продолжать."
-  definition_en: "The person in a department who needs the result. Responsible for why we are doing it, and decides whether it is worth continuing."
+  definition_en: "The person in a department who needs the result. Answers for why we are doing the work and decides whether it is worth continuing."
 
 - id: product-manager
   ru: менеджер продукта
   en: product manager
   term_en: "product manager"
   definition: "Отвечает за то, что именно делаем и в каком порядке: формулирует ценность и следит, чтобы результат был полезен."
-  definition_en: "Responsible for what exactly we do and in what order: sets out the value and makes sure the result is useful."
+  definition_en: "Answers for what exactly we do and in what order: defines the value and makes sure the result is useful."
 
 - id: project-manager
   ru: руководитель проекта
@@ -108,7 +108,7 @@
   en: product management forum
   term_en: "product management forum"
   definition: "Регулярная встреча, где смотрят на воронку и портфель: что ждёт, что застряло, что пора начать или остановить."
-  definition_en: "A regular meeting that looks at the funnel and the portfolio: what is waiting, what is stuck, what it is time to start or stop."
+  definition_en: "A regular meeting that looks at the funnel and the portfolio: what is waiting, what is stuck, and what it is time to start or stop."
 
 - id: program-decision-forum
   ru: форум решений по программе
@@ -150,14 +150,14 @@
   en: start decision
   term_en: "start decision"
   definition: "Решение взять инициативу в работу. Принимает бизнес-владелец вместе с менеджером продукта по заранее известному правилу."
-  definition_en: "The decision to take an initiative into work. The business owner makes it together with the product manager, by a rule known in advance."
+  definition_en: "The decision to take an initiative into work. The business owner makes it together with the product manager, following a rule known in advance."
 
 - id: invest-decision
   ru: решение о вложении
   en: invest decision
   term_en: "investment decision"
   definition: "Решение выделить инициативе объём усилий на следующий шаг. Принимается после проработки и повторяется на контрольных точках."
-  definition_en: "The decision to give an initiative an amount of effort for its next step. It is made after shaping and repeated at review points."
+  definition_en: "The decision to commit a set amount of effort to an initiative’s next step. It is made after shaping and revisited at each review point."
 
 - id: persevere-pivot-stop
   ru: продолжить, изменить курс или остановить
@@ -185,7 +185,7 @@
   en: stop threshold
   term_en: "stop threshold"
   definition: "Заранее записанный признак, при котором работу прекращают или пересматривают."
-  definition_en: "A sign, written down in advance, at which the work is stopped or reconsidered."
+  definition_en: "A signal, written down in advance, that the work should be stopped or reconsidered."
 
 - id: wip-limit
   ru: WIP-лимит
@@ -199,21 +199,21 @@
   en: pull
   term_en: "pull"
   definition: "Принцип: работу берут, когда есть свободные силы, а не назначают сверху, пока места нет."
-  definition_en: "The principle that work is taken on when there is free capacity, not assigned from above while there is no room."
+  definition_en: "The principle that work is taken on when there is free capacity, not pushed down from above when there is no room."
 
 - id: wsjf
   ru: очерёдность по ценности и срокам
   en: WSJF
   term_en: "WSJF"
   definition: "Способ расставить равные по важности работы: сначала то, что даёт больше ценности за меньшее время. Используется, только чтобы выбрать между равными."
-  definition_en: "Weighted shortest job first: a way of ordering work items of equal importance, starting with whatever gives more value in less time. It is used only to choose between equals."
+  definition_en: "Weighted shortest job first: a way of ordering work items of equal importance, starting with whatever gives the most value in the least time. It is used only to choose between equals."
 
 - id: mvp
   ru: минимально жизнеспособный продукт
   en: MVP
   term_en: "MVP"
   definition: "Самая маленькая версия решения, которую можно дать пользователям и по ней понять, нужно ли продолжать."
-  definition_en: "Minimum viable product: the smallest version of a solution that can be given to users and that shows whether to continue."
+  definition_en: "Minimum viable product: the smallest version of a solution that you can put in front of users to learn whether to continue."
 
 - id: business-case
   ru: бизнес-кейс
@@ -241,7 +241,7 @@
   en: iteration
   term_en: "iteration"
   definition: "Короткий период работы фиксированной длины, в конце которого есть что показать."
-  definition_en: "A short period of work of fixed length, at the end of which there is something to show."
+  definition_en: "A short, fixed-length period of work, at the end of which there is something to show."
 
 - id: program-increment
   ru: программный инкремент
@@ -283,14 +283,14 @@
   en: practice checklist
   term_en: "practice checklist"
   definition: "Короткий список того, что в работе такого вида обычно проверяют, с кем и по каким материалам. Это подсказка, а не требование Хаба."
-  definition_en: "A short list of what is usually checked in this kind of work, with whom, and against which materials. It is a hint, not a requirement of the Hub."
+  definition_en: "A short list of what is usually checked in this kind of work, with whom, and against which materials. It is a reminder, not a Hub requirement."
 
 - id: risk-tier
   ru: категория риска
   en: risk tier
   term_en: "risk tier"
   definition: "Оценка того, насколько серьёзны последствия ошибки решения с AI. От неё зависит, насколько глубокими будут проверки."
-  definition_en: "An assessment of how serious the consequences of a mistake by an AI solution would be. It sets how deep the checks go."
+  definition_en: "An assessment of how serious the consequences of an AI solution’s mistake would be. It determines how deep the checks go."
 
 - id: human-in-the-loop
   ru: человек в контуре

@@ -435,6 +435,7 @@
     function qIndex(name) { var m = /^(\d{4})-PIQ(\d)$/.exec(name); return +m[1] * 4 + +m[2] - 1; }
     function span(a, b, long) {
       var x = parts(a), y = parts(b), n = long ? LONG : SHORT;
+      if (I && x.m === y.m && x.y === y.y) return x.d + '–' + y.d + ' ' + T(n[y.m - 1]) + ' ' + y.y;  // English: "5–11 Oct 2026", as cadence.py
       return x.d + ' ' + T(n[x.m - 1]) + (x.y !== y.y ? ' ' + x.y : '') + ' – ' + y.d + ' ' + T(n[y.m - 1]) + ' ' + y.y;
     }
     function today() { var n = new Date(); return at(n.getFullYear(), n.getMonth() + 1, n.getDate()); }

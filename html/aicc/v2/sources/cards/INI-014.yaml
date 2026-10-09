@@ -1,8 +1,8 @@
 id: INI-014
 title: "HR — подготовка типовых отчётов и форм помощником на рабочем месте"
-title_en: "HR: standard reports and forms prepared by a workspace assistant"
+title_en: "HR: standard reports and forms prepared by a workplace assistant"
 summary: "Берём на себя рутину в функции HR: помощник на рабочем месте сотрудника готовит черновики типовых отчётов и заполняет типовые формы."
-summary_en: "We take routine work off the HR function: an assistant on the employee's computer drafts standard reports and fills in standard forms."
+summary_en: "We take routine work off the HR function: an assistant on each employee's computer drafts standard reports and fills in standard forms."
 profile: run-rate
 class_of_service: текущая работа
 stage: Воронка
@@ -35,7 +35,7 @@ constraints:
   stop_threshold: Проверка результата занимает столько же времени, сколько подготовка вручную.
   stop_threshold_en: "Checking the result takes as long as preparing it by hand."
 checklist:
-  - {item: "Проверка рабочего места: что помощник видит и меняет на компьютере сотрудника", item_en: "Workspace review: what the assistant sees and changes on the employee's computer", state: "не начато", note: "Проверяется вместе с теми, кто отвечает за информационную безопасность; решение за функцией HR.", note_en: "Reviewed together with the people responsible for information security; the decision rests with the HR function."}
+  - {item: "Проверка рабочего места: что помощник видит и меняет на компьютере сотрудника", item_en: "Workstation review: what the assistant sees and changes on the employee's computer", state: "не начато", note: "Проверяется вместе с теми, кто отвечает за информационную безопасность; решение за функцией HR.", note_en: "Reviewed together with the people responsible for information security; the decision rests with the HR function."}
   - {item: "Где хранятся результаты и кто к ним имеет доступ", item_en: "Where the results are stored and who has access to them", state: "не начато"}
   - {item: "Как сотрудник проверяет результат до использования", item_en: "How the employee checks the result before using it", state: "не начато"}
   - {item: "Что делаем, если помощник ошибся", item_en: "What we do if the assistant makes a mistake", state: "не начато"}
@@ -46,13 +46,13 @@ live:
   risks:
     - "Помощник на рабочем месте может получить доступ к персональным данным сотрудников: проверка рабочего места нужна до начала."
   risks_en:
-    - "The workspace assistant may get access to employees' personal data: a workspace review is needed before starting."
+    - "The workplace assistant may get access to employees' personal data: a workstation review is needed before starting."
   dependencies:
     - "Решение по информационной безопасности о том, где и как запускается помощник."
   dependencies_en:
     - "An information security decision on where and how the assistant runs."
 work:
-  - {id: CAP-001, type: capability, title: "Помощник на рабочем месте для функции HR", title_en: "Workspace assistant for the HR function", state: Бэклог, class_of_service: текущая работа}
+  - {id: CAP-001, type: capability, title: "Помощник на рабочем месте для функции HR", title_en: "Workplace assistant for the HR function", state: Бэклог, class_of_service: текущая работа}
   - {id: FEAT-001, type: feature, parent: CAP-001, title: "Типовой отчёт: черновик по шаблону", title_en: "Standard report: a draft from a template", state: Бэклог, class_of_service: текущая работа}
   - {id: FEAT-002, type: feature, parent: CAP-001, title: "Типовая форма: заполнение по шаблону", title_en: "Standard form: filled in from a template", state: Бэклог, class_of_service: текущая работа}
 decisions: []

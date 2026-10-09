@@ -23,7 +23,7 @@
       <h1 class="page-header__title">Contact center</h1>
     </div>
   </div>
-  <p class="page-header__intent">The contact center is the highest-volume assisted channel in a bank and carries the most complex regulatory obligations — consumer-protection requirements call for documented complaint handling, regulated disclosure at the point of service, and defined SLA obligations per transaction category. The contact center is also the point where digital channel failures surface: customers who cannot complete a task in a digital channel call a contact-center agent. <strong>The opportunity for GenAI is to instrument every inbound interaction</strong> — routing calls more accurately, assisting contact-center agents in real time, automating quality assurance across 100% of calls, and optimizing workforce schedules from demand forecasts — compressing average handle time, improving first-call resolution, and reducing the compliance exposure of manual QA sampling.</p>
+  <p class="page-header__intent">The contact center is the highest-volume assisted channel in a bank and carries the most complex regulatory obligations — consumer-protection requirements call for documented complaint handling, regulated disclosure at the point of service, and defined SLA obligations per transaction category. The contact center is also the point where digital channel failures surface: customers who cannot complete a task in a digital channel call a contact-center agent. <strong>The opportunity for generative AI is to instrument every inbound interaction</strong> — routing calls more accurately, assisting contact-center agents in real time, automating quality assurance across 100% of calls, and optimizing workforce schedules from demand forecasts — compressing average handle time, improving first-call resolution, and reducing the compliance exposure of manual QA sampling.</p>
 </header>
 <style>
   #problems-tab-inbound-servicing:checked ~ .problems-tab-bar label[for="problems-tab-inbound-servicing"] {
@@ -43,10 +43,10 @@
   </div>
   <hr class="problems-divider">
   <div class="problems-panel" id="problems-panel-inbound-servicing" data-tab="inbound-servicing" role="tabpanel" aria-labelledby="problems-tab-inbound-servicing">
-    <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Insights &amp; analytics</h3><p>IVR containment rate, first-call resolution, and average handle time are tracked in aggregate across the contact center. The contact-center operations team lacks a step-level view of where the IVR loses customers to transfer to a contact-center agent and which knowledge gaps are driving handle time above standard. Root-cause analysis is episodic and based on sampled call listening rather than systematic coverage.</p></article><article class="discovery-context-card"><h3>Enablement</h3><p>Contact-center agents handle a broad range of queries from product knowledge refreshed infrequently and a knowledge base that requires manual search during live calls. The time they spend searching reference materials while customers wait on hold is a direct driver of handle time and a constraint on first-call resolution.</p></article><article class="discovery-context-card"><h3>Automation</h3><p>Complaint triage and classification, QA scoring, and workforce scheduling are each performed manually on a sample or periodic basis. The structured, data-driven nature of each task — complaints arrive with classifiable attributes; calls generate scoreable transcripts; scheduling uses known demand forecasts — makes all three candidates for AI-driven automation.</p></article><article class="discovery-context-card"><h3>New business opportunities</h3><p>A contact center operating with GenAI-backed agent assist, real-time routing, and 100% call QA coverage creates a compounding performance loop: higher first-call resolution reduces repeat contacts, lower handle time increases capacity within the same headcount, and continuous QA coverage surfaces coaching priorities that improve contact-center agent performance faster than sampled review allows.</p></article></div>
+    <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Insights &amp; analytics</h3><p>IVR containment rate, first-call resolution, and average handle time are tracked in aggregate across the contact center. The contact-center operations team lacks a step-level view of where the IVR loses customers to transfer to a contact-center agent and which knowledge gaps are driving handle time above standard. Root-cause analysis is episodic and based on sampled call listening rather than systematic coverage.</p></article><article class="discovery-context-card"><h3>Enablement</h3><p>Contact-center agents handle a broad range of queries from product knowledge refreshed infrequently and a knowledge base that requires manual search during live calls. The time they spend searching reference materials while customers wait on hold is a direct driver of handle time and a constraint on first-call resolution.</p></article><article class="discovery-context-card"><h3>Automation</h3><p>Complaint triage and classification, QA scoring, and workforce scheduling are each performed manually on a sample or periodic basis. The structured, data-driven nature of each task — complaints arrive with classifiable attributes; calls generate scoreable transcripts; scheduling uses known demand forecasts — makes all three candidates for AI-driven automation.</p></article><article class="discovery-context-card"><h3>New business opportunities</h3><p>A contact center operating with generative AI-backed agent assist, real-time routing, and 100% call QA coverage creates a compounding performance loop: higher first-call resolution reduces repeat contacts, lower handle time increases capacity within the same headcount, and continuous QA coverage surfaces coaching priorities that improve contact-center agent performance faster than sampled review allows.</p></article></div>
   </div>
 </section>
-<div id="main-content" class="l3-sections" aria-label="Sub-concerns">
+<div id="main-content" class="l3-sections" aria-label="Subsections">
 <section class="l3-section" id="inbound-call-routing-ivr">
   <header class="l3-section__head">
     <h2 class="l3-section__title">Inbound call routing &amp; IVR</h2>
@@ -81,7 +81,7 @@
       <p>The AI agent reads the approved routing change or self-service task specification and generates menu prompt language, routing logic documentation, and task confirmation messages consistent with the Bank's IVR style guide and regulatory language requirements. The IVR operations team reviews the draft, tests in the staging environment, and confirms before release; the compliance team spot-checks regulatory disclosure language before deployment. Script preparation time and the gap between change approval and deployment are tracked against the pre-deployment manual baseline.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">A draft IVR script update for each approved routing change or new self-service task — menu prompt language, routing logic documentation, and task confirmation message, consistent with the IVR style guide and consumer-protection wording standards — is available to the IVR operations team for review, testing, and deployment.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -122,7 +122,7 @@
       <p>The AI agent reads IVR session logs, mapping each session path from entry to exit — containment or transfer to a contact-center agent — and clusters failure points by menu node, call reason, and customer segment. It estimates the containment recovery value of each routing adjustment or self-service task addition, producing a ranked improvement backlog. The Head of Contact Center reviews the monthly output and directs the IVR configuration backlog from an evidence-based priority list.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">A monthly ranked improvement backlog — with containment recovery value estimated per routing change or self-service task addition, and failure points clustered by menu node, call reason, and segment — is available to the Head of Contact Center for IVR configuration prioritization.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -163,7 +163,7 @@
       <p>The AI agent analyzes IVR session data for behavioral friction signals — menu hesitation duration, key-correction frequency, repeat option selection, and session abandonment before task completion — and correlates these with post-call survey sentiment where available. The quarterly caller experience brief ranks menu nodes by friction intensity and identifies the prompt language or option structure most associated with navigation errors. The IVR design team reviews the brief alongside the containment analytics output, using both evidence sets in configuration decisions; friction score improvement after redesign is tracked as the primary qualitative outcome metric.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">A quarterly caller experience brief — ranking IVR menu nodes by friction intensity and identifying the prompt language or option structure most associated with navigation errors — is available to the IVR design team alongside the containment analytics for configuration decisions.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -218,7 +218,7 @@
       <p>The AI agent reads the contact-center agent's QA score record for the period — call samples, rubric dimension scores, and trend against prior periods — and generates a coaching brief with the three to five interactions recommended for review, the rubric dimensions driving underperformance, and structured improvement prompts. The QA manager reviews the brief, makes any adjustments, and conducts the session; post-coaching QA score trajectory is tracked per agent. Coaching session preparation time and the proportion of coached contact-center agents showing QA score improvement within two cycles are the primary outcome metrics.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">A structured coaching brief for each contact-center agent scheduled for QA review — the three to five interactions recommended for discussion, the rubric dimensions driving underperformance, and drafted improvement prompts — is available to the QA manager before the coaching session.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -259,7 +259,7 @@
       <p>The AI agent processes call recordings against the Bank's QA rubric, scoring each interaction on compliance disclosure adherence, resolution accuracy, tone, and escalation procedure adherence. The weekly brief presents scores by contact-center agent and team, ranked by coaching priority, with the specific rubric dimensions driving underperformance highlighted for each low-scoring agent. The QA manager reviews the brief and directs coaching sessions to the highest-priority agents; QA coverage rate and disclosure adherence rate across 100% of calls are tracked as primary compliance outcomes.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">A weekly QA performance brief — built from scoring 100% of inbound calls against the Bank's QA rubric and ranking contact-center agents, teams, and call categories by coaching priority, with the rubric dimensions driving underperformance — is available to the contact-center QA manager to direct the coaching cycle.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -290,7 +290,7 @@
     </div>
     <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
   </summary>
-  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#consumer-conduct">Consumer protection and conduct</a></p>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory requirements:</span> <a href="../../regulatory-horizon/index.html#consumer-conduct">Consumer protection and conduct</a></p>
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>QA coaching addresses individual agent performance; the underlying scripts and call guides that contact-center agents follow are reviewed on a scheduled basis rather than from a current-state miss rate signal. When a regulatory disclosure is consistently missed across multiple agents, the root cause is often a script gap or ambiguous call guide instruction rather than individual agent error; individual coaching does not resolve a systemic script deficiency. Under consumer-protection requirements, disclosure miss rates across the population represent a systemic control weakness; script-level remediation is the appropriate response, not individual coaching alone.</p>
@@ -300,7 +300,7 @@
       <p>The AI agent reads QA-scored call transcripts and aggregates miss rates by disclosure category across the contact-center agent population, computing the frequency of each miss type and identifying the call guide instruction or script element associated with each category. The quarterly brief ranks disclosure gap categories by miss rate and identifies the specific script or call guide element requiring revision for each high-miss category. The compliance and contact-center operations teams review the brief and revise scripts before the next QA cycle; population-level miss rate reduction after script revision is the primary outcome metric.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">A quarterly script improvement brief — ranking disclosure gap categories by miss rate across the contact-center agent population and identifying the script or call guide element requiring revision for each — is available to the contact-center operations and compliance teams before the next QA cycle.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -355,7 +355,7 @@
       <p>The AI agent reads assist log records — recommendation surfaced, the contact-center agent's action (accept / override / dismiss), and post-call QA outcome where available — and computes acceptance rates by query category, flagging categories with declining acceptance as potential accuracy drift signals. It identifies knowledge-base miss events — queries where no recommendation was surfaced — and ranks them by volume for remediation prioritization. The weekly brief is reviewed by the contact-center operations manager; knowledge management remediates the ranked backlog before the next quality review cycle.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">A weekly assist accuracy and coverage brief — acceptance rates by query category, categories with declining acceptance, and knowledge-base miss events ranked by volume — is available to the contact-center operations manager to direct knowledge-base remediation.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -396,7 +396,7 @@
       <p>The AI agent reads the call transcript and generates a structured summary covering call reason, outcome, regulatory disclosures confirmed, and follow-up actions, pre-populated in the Bank's CRM format. The handling agent reviews and confirms before the record is committed; any additions or corrections are captured in the audit trail. After-call work time per interaction and disclosure documentation completeness rate are tracked against pre-deployment baselines as primary outcome metrics.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">A structured call summary and pre-populated CRM update — call reason, resolution status, regulatory disclosures delivered, and follow-up actions — is available to the handling agent for review and confirmation immediately after each interaction.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -437,7 +437,7 @@
       <p>The AI agent processes the live call transcript and surfaces the most relevant knowledge-base article, product term, or regulatory disclosure checklist in the agent desktop without requiring manual search. The handling agent reads the guidance and resolves the query without a hold transfer, reducing AHT and ensuring mandatory disclosures are presented in full. Quality assurance reviews assist logs periodically to detect accuracy drift and flag knowledge-base gaps for remediation.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">Accurate policy, product-term, and regulatory-disclosure guidance is available to the handling agent in the agent desktop on every inbound call — eliminating hold transfers for knowledge queries and reducing compliance disclosure misses.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -492,7 +492,7 @@
       <p>The AI agent reads historical call volume at 30-minute interval resolution by skill group, calendar inputs, and known event triggers, and generates a 14-day interval-level demand forecast with a confidence range per interval. It compares the forecast against current schedules and identifies intervals where scheduled capacity is below the service-level requirement, quantifying the staffing adjustment needed. The workforce management team reviews the brief and adjusts schedules before the planning cycle locks; service-level adherence rate and the proportion of intervals within staff target are the primary outcome metrics.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">A 14-day inbound call volume forecast at 30-minute interval resolution by skill group — identifying the intervals where current schedules will miss the service-level target and the staffing adjustment required to close the gap — is available to the workforce management team before schedules are locked.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -533,7 +533,7 @@
       <p>The AI agent monitors actual call arrival at 15-minute intervals against the interval forecast, detects material deviations above a defined threshold, and generates a reforecast for the remaining shift with a recommended staffing adjustment and the available response options. The contact-center supervisor reviews and confirms the adjustment within a defined response window; the outcome is recorded for schedule accuracy diagnostics. Service-level adherence on deviation days and the time from deviation detection to supervisor confirmation are tracked against the pre-deployment manual baseline.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">A reforecast for the remaining intervals with a recommended staffing adjustment — voluntary overtime, shift extension, or controlled diversion — is available to the contact-center supervisor for review and release whenever intraday call arrival deviates materially from forecast.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -574,7 +574,7 @@
       <p>The AI agent reads the interval demand forecast, the contact-center agents' availability and contracted shift patterns, and skill-group assignments, and generates an optimized weekly schedule minimizing idle paid hours subject to the service-level constraint at each interval. The optimized schedule is presented to the workforce management team; any assignment can be overridden before publication. Schedule efficiency ratio and service-level adherence are tracked weekly against the prior manual-schedule baseline; efficiency gains are quantified in paid-hours terms for management reporting.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">An optimized weekly schedule across skill groups — minimizing idle paid hours while holding the service level at each interval, within contracted shift patterns and availability preferences — is available to the workforce management team for review and release.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -629,7 +629,7 @@
       <p>The AI agent reads the investigation record — case classification, root cause finding, resolution outcome, and applicable regulatory disclosure requirements — and generates a formal response draft in the Bank's approved template. The complaint handler reviews, edits, and releases; edits are logged and used to identify template improvement opportunities on a quarterly review cycle. Average response drafting time and first-attempt acceptance rate — the proportion of drafts confirmed without substantive revision — are tracked against the pre-deployment baseline.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">A formal complaint response draft in the Bank's approved template — covering the finding, the regulatory obligations met, and the resolution outcome — is available to the complaint handler for review, editing, and release on completion of each investigation.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -670,7 +670,7 @@
       <p>The AI agent reads complaint content from each intake channel — transcribed calls, email text, digital submissions, and branch-logged complaints — and classifies by product, theme, and regulatory reporting obligation. It assigns severity and SLA band, drafts a root-cause assessment from the complaint narrative, and flags cases with regulatory escalation triggers for senior review. The complaint handler confirms the triage before the case progresses. Regulatory reporting extracts are generated from the classified complaint database at period end, with an unbroken audit trail from intake to resolution.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">Every inbound complaint from all intake channels is classified by product, theme, regulatory obligation, severity, and SLA band — with a draft root-cause assessment attached — at intake for the complaint handler's confirmation, maintaining SLA compliance and audit trail completeness under consumer-protection requirements.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -711,7 +711,7 @@
       <p>The AI agent reads the classified complaint database and computes theme volumes on a rolling 7-day window, comparing each theme's current rate against the prior four-week baseline to identify accelerating patterns. For themes showing material acceleration, it retrieves the case records and identifies the most common product and process root causes from the classification fields. The Head of Complaints reviews the weekly brief with product owners and determines which patterns warrant systemic investigation; time from pattern emergence to investigation initiation is the primary outcome metric.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">A weekly complaint pattern brief — ranking complaint themes by volume trend, flagging themes accelerating against the prior four-week baseline, and identifying the product and process root causes most associated with each — is available to the Head of Complaints and product owners before the patterns appear in monthly regulatory reports.</p>
       <div class="okr-grid">
         <div class="okr-kr">

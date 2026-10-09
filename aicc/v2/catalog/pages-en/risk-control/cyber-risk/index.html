@@ -23,7 +23,7 @@
       <h1 class="page-header__title">Cyber risk</h1>
     </div>
   </div>
-  <p class="page-header__intent">Cyber risk is the risk of financial loss, operational disruption, or reputational damage arising from the compromise of a bank's technology assets or data. Operational-resilience and cybersecurity requirements, such as the Digital Operational Resilience Act (DORA), expect banks to maintain documented threat intelligence capabilities, vulnerability management programs, incident response plans, and digital operational resilience frameworks. The SWIFT Customer Security Program (CSP) adds a baseline of mandatory controls for correspondent banking participants. <strong>The GenAI opportunity is to instrument cyber risk posture continuously</strong> — processing threat intelligence volumes, vulnerability data, and incident signals that exceed manual review capacity — enabling the CISO to maintain awareness of the current threat landscape and respond at speed.</p>
+  <p class="page-header__intent">Cyber risk is the risk of financial loss, operational disruption, or reputational damage arising from the compromise of a bank's technology assets or data. Operational-resilience and cybersecurity requirements, such as the Digital Operational Resilience Act (DORA), expect banks to maintain documented threat intelligence capabilities, vulnerability management programs, incident response plans, and digital operational resilience frameworks. The SWIFT Customer Security Program (CSP) adds a baseline of mandatory controls for correspondent banking participants. <strong>The generative AI opportunity is to instrument cyber risk posture continuously</strong> — processing threat intelligence volumes, vulnerability data, and incident signals that exceed manual review capacity — enabling the CISO to maintain awareness of the current threat landscape and respond at speed.</p>
 </header>
 <style>
   #problems-tab-threat-exposure-detection:checked ~ .problems-tab-bar label[for="problems-tab-threat-exposure-detection"] {
@@ -46,7 +46,7 @@
     <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Insights &amp; analytics</h3><p>The CISO and threat intelligence team consume threat feeds from multiple vendor sources, CERT advisories, FS-ISAC bulletins, SWIFT CSP updates, and regulatory cyber notifications — hundreds of daily items. Relevance filtering against the Bank's specific technology stack and product mix is done manually; internal-exposure correlation — connecting an external CVE exploitation report to the Bank's own vulnerability scanner output — requires analyst judgment that is not systematic.</p></article><article class="discovery-context-card"><h3>Enablement</h3><p>Vulnerability prioritization requires the security operations team to apply CVSS scores to thousands of weekly scanner findings, without systematic cross-referencing of asset criticality, current threat actor exploitation activity, or banking-sector-specific exposure patterns. High-CVSS findings on non-critical assets consume remediation capacity ahead of medium-CVSS findings on core banking infrastructure.</p></article><article class="discovery-context-card"><h3>Automation</h3><p>Cyber risk reporting for the board and Risk Committee — threat landscape summary, vulnerability remediation status, security control effectiveness metrics — is assembled manually from multiple source systems on a quarterly cycle. The narrative format is consistent; the inputs are structured.</p></article><article class="discovery-context-card"><h3>New business opportunities</h3><p>A continuously instrumented cyber risk posture — daily threat briefings relevant to the Bank's specific exposure, risk-adjusted vulnerability queues updated as threat actor activity evolves — enables the CISO to allocate remediation resources based on current risk rather than the periodic vulnerability scan schedule. That posture quality is directly observable to the regulator in operational-resilience supervisory reviews.</p></article></div>
   </div>
 </section>
-<div id="main-content" class="l3-sections" aria-label="Sub-concerns">
+<div id="main-content" class="l3-sections" aria-label="Subsections">
 <section class="l3-section" id="threat-intelligence-exposure">
   <header class="l3-section__head">
     <h2 class="l3-section__title">Threat intelligence &amp; exposure</h2>
@@ -81,7 +81,7 @@
       <p>The AI agent ingests all threat intelligence sources, clusters threats by type, cross-references each cluster with the Bank's technology stack and known vulnerabilities, ranks by relevance, and produces a daily prioritized briefing for the CISO. The threat intelligence team confirms the top-ranked threats and responds to prioritized signals rather than raw feed volume.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The CISO and threat intelligence team respond to a daily prioritized briefing — with threats ranked by relevance to the Bank's technology stack and product mix — rather than manually filtering and correlating raw feed volume.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -122,7 +122,7 @@
       <p>The AI agent reads threat intelligence on active banking-sector actors, extracts their known TTPs using the MITRE ATT&amp;CK framework, and maps each TTP to the Bank's technology asset inventory. It identifies the systems most frequently targeted by each actor's techniques and delivers a quarterly threat-actor exposure map to the CISO; the security architecture team reviews the mappings.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The CISO receives a quarterly threat-actor exposure map — the known TTPs of active banking-sector threat actors mapped to the Bank's technology asset inventory — identifying the systems most frequently targeted by each actor's techniques.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -163,7 +163,7 @@
       <p>The AI agent reads current threat intelligence TTPs, maps each technique to the NIST CSF or CIS control framework, and cross-references against the Bank's documented control inventory. It identifies TTP-to-control gaps and delivers the analysis to the CISO for prioritization in the security program roadmap.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The CISO prioritizes the security program roadmap from the AI agent's gap analysis identifying current threat actor TTPs that the Bank's documented control inventory does not address, without waiting for the next annual assessment cycle.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -208,7 +208,7 @@
     </div>
     <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
   </summary>
-  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#operational-resilience">Operational and cyber resilience</a></p>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory requirements:</span> <a href="../../regulatory-horizon/index.html#operational-resilience">Operational and cyber resilience</a></p>
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>When a cyber incident is escalated, the response team assembles asset context, prior alert history, regulatory notification thresholds, and stakeholder contacts from multiple systems while simultaneously managing containment. The triage context assembly step delays initial response actions in a time-critical window.</p>
@@ -218,7 +218,7 @@
       <p>The AI agent reads the alert from the SIEM, retrieves asset inventory context, surfaces the prior 90-day alert history for that asset, applies the regulatory notification threshold check, and populates the incident triage template. The incident commander receives a pre-populated dossier and focuses on containment decisions from the first minute.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The incident commander begins containment decisions from the first minute with an AI-assembled triage dossier — covering asset context, alert history, regulatory notification checklist, and stakeholder contacts — available at the point of escalation.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -249,7 +249,7 @@
     </div>
     <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
   </summary>
-  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#operational-resilience">Operational and cyber resilience</a></p>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory requirements:</span> <a href="../../regulatory-horizon/index.html#operational-resilience">Operational and cyber resilience</a></p>
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>Incident-reporting requirements, such as DORA, commonly require a major ICT incident to be notified to the regulator within four hours of classification. Drafting the notification under time pressure, with incomplete information and simultaneous incident management activity, produces notifications that may omit required fields or misstate the incident classification.</p>
@@ -259,7 +259,7 @@
       <p>The AI agent reads the incident triage record, applies the major incident classification criteria, and generates the initial notification draft in the prescribed format — incident type, classification rationale, affected systems, estimated business impact, and containment actions taken. The incident commander reviews and submits within the four-hour window.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The incident commander reviews and submits the initial major ICT incident notification — incident type, classification rationale, affected systems, estimated business impact, and containment actions — from an AI-generated draft within the four-hour notification window.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -290,7 +290,7 @@
     </div>
     <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
   </summary>
-  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#operational-resilience">Operational and cyber resilience</a></p>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory requirements:</span> <a href="../../regulatory-horizon/index.html#operational-resilience">Operational and cyber resilience</a></p>
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>Post-incident reviews are conducted after containment but the pack assembly — incident timeline reconstruction, control failure identification, detection gap analysis — consumes security team hours at a point when the team is managing residual remediation activity.</p>
@@ -300,7 +300,7 @@
       <p>The AI agent reads SIEM event logs, containment action records, recovery timeline, and communications records. It reconstructs the incident timeline, identifies the initial access vector and detection point, maps the gap between compromise and detection, and flags control and detection improvements. The CISO reviews the pack and assigns remediation ownership in the lessons-learned session.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The CISO runs the lessons-learned session from an AI-assembled post-incident review pack — reconstructed timeline, initial access vector, detection point, compromise-to-detection gap, and flagged control and detection improvements — and assigns remediation ownership.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -345,7 +345,7 @@
     </div>
     <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
   </summary>
-  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#operational-resilience">Operational and cyber resilience</a></p>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory requirements:</span> <a href="../../regulatory-horizon/index.html#operational-resilience">Operational and cyber resilience</a></p>
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>Supervisory requirements set remediation timeframes for critical and high-severity vulnerabilities. Patch compliance status is tracked across infrastructure, application, and endpoint tiers in separate tools; producing a consolidated compliance view for the CISO requires manual aggregation from multiple sources.</p>
@@ -355,7 +355,7 @@
       <p>The AI agent reads patch deployment status from infrastructure, application, and endpoint management tools, applies the severity-tiered remediation timeframe schedule, computes compliance rates by asset tier and severity level, and produces the weekly compliance report flagging assets overdue by tier. The CISO uses the report to direct remediation focus.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The CISO directs remediation focus from a weekly patch compliance report — compliance rates against the severity-tiered remediation timeframes by asset tier, with overdue assets flagged — consolidated by the AI agent across infrastructure, application, and endpoint tools.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -396,7 +396,7 @@
       <p>The AI agent reads the active exception register, monitors expiry dates, flags exceptions approaching expiry without a renewal submission, and generates the CISO's weekly exception review queue. Lapsed exceptions are escalated automatically to the vulnerability management lead.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The CISO reviews a weekly AI-generated exception queue — active vulnerability exceptions approaching expiry without a renewal submission — and lapsed exceptions are escalated automatically to the vulnerability management lead, so no exception expires unmanaged.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -437,7 +437,7 @@
       <p>The AI agent reads scanner output, cross-references each finding with the asset criticality register and current threat intelligence on active exploitation, and produces a risk-adjusted prioritization ranking by critical-asset score, exploitability, and current threat actor relevance. The security operations team works the ranked queue; the team lead reviews the rankings weekly.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The security operations team works a risk-adjusted vulnerability remediation queue — combining CVSS scores, asset criticality, and current threat actor exploitation activity — generated by the AI agent from scanner output and threat intelligence.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -482,7 +482,7 @@
     </div>
     <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
   </summary>
-  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#operational-resilience">Operational and cyber resilience</a></p>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory requirements:</span> <a href="../../regulatory-horizon/index.html#operational-resilience">Operational and cyber resilience</a></p>
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>Tabletop exercise scenarios are typically drawn from generic playbooks not calibrated to the Bank's specific threat actor profile, technology stack, or prior incident history. Exercises test the team against scenarios that may not reflect the Bank's actual threat landscape or regulatory notification decision points.</p>
@@ -492,7 +492,7 @@
       <p>The AI agent reads current threat intelligence on active threat actors targeting the banking sector, the Bank's technology stack profile, and prior incident and near-miss records. It generates tabletop scenarios specific to the Bank's profile — including realistic attack chains, regulatory notification decision points, and lessons-learned integration. The CISO reviews and schedules the exercise.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The CISO schedules tabletop exercises built on AI-generated scenarios calibrated to the Bank's specific threat actor profile, technology stack, and prior incident history, incorporating current threat intelligence and regulatory notification decision points.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -523,7 +523,7 @@
     </div>
     <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
   </summary>
-  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#operational-resilience">Operational and cyber resilience</a></p>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory requirements:</span> <a href="../../regulatory-horizon/index.html#operational-resilience">Operational and cyber resilience</a></p>
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>TLPT requires the Bank to provide the testing provider with a structured threat profile, scope documentation, and prior test history before testing commences. Assembling this package from threat intelligence, asset inventory, and prior test records is a manual preparation step that delays the start of the testing engagement.</p>
@@ -533,7 +533,7 @@
       <p>The AI agent reads current threat intelligence for the banking sector, the Bank's technology asset inventory, and prior TLPT and penetration test findings. It assembles the TLPT preparation package in the prescribed format — threat actor profile, in-scope system inventory, prior finding history, and testing constraint summary. The CISO reviews the package and transmits it to the testing provider.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The CISO reviews and transmits to the appointed testing provider an AI-assembled TLPT preparation package — threat actor profile, in-scope system inventory, prior finding history, and testing constraint summary — in the prescribed format.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -564,7 +564,7 @@
     </div>
     <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
   </summary>
-  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#operational-resilience">Operational and cyber resilience</a></p>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory requirements:</span> <a href="../../regulatory-horizon/index.html#operational-resilience">Operational and cyber resilience</a></p>
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>Resilience metrics — RTO and RPO achievement rates in testing, BCP exercise pass rates, regulatory notification timeliness — are captured in separate test reports and incident records. The Board Risk Committee receives a narrative resilience summary without the underlying metric trends; deteriorating resilience performance is identified in individual test reports rather than as a portfolio signal.</p>
@@ -574,7 +574,7 @@
       <p>The AI agent reads RTO/RPO test results, BCP exercise reports, and incident response timelines. It computes recovery metric trends by system criticality tier, flags systems where RTO/RPO targets were not met in the most recent test cycle, and assembles the quarterly resilience metrics dashboard for the CISO and Board Risk Committee.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The CISO and Board Risk Committee receive a quarterly resilience metrics dashboard — RTO/RPO achievement trends by system criticality tier, BCP exercise outcomes, and incident recovery timelines — with systems that missed targets in the latest test cycle flagged.</p>
       <div class="okr-grid">
         <div class="okr-kr">

@@ -17,27 +17,27 @@
 "ориентир": "reference point"
 
 # regulation page
-"Кто и что регулирует AI и данные — у нас, в регионе и в мире. Коротко: что это за документ и что он значит для нас. Это ориентир для разговора, а не юридическое заключение; за точным текстом обращайтесь к первоисточнику и юристам.": "Who regulates AI and data, and how: here, in the region, and worldwide. In short: what each document is and what it means for us. This is a starting point for discussion, not legal advice; for the exact text, go to the original source and to the lawyers."
+"Кто и что регулирует AI и данные — у нас, в регионе и в мире. Коротко: что это за документ и что он значит для нас. Это ориентир для разговора, а не юридическое заключение; за точным текстом обращайтесь к первоисточнику и юристам.": "Who regulates what in AI and data: here, in the region, and worldwide. In short: what each document is and what it means for us. This is a starting point for discussion, not legal advice; for the exact text, go to the original source and to the lawyers."
 "требования, которые применяются напрямую": "requirements that apply to us directly"
-"важно при выборе поставщиков и партнёров": "matters when choosing vendors and partners"
+"важно при выборе поставщиков и партнёров": "matters when choosing suppliers and partners"
 "куда движутся регулирование и практика": "where regulation and practice are heading"
 "Найти: закон, регулятор, тема": "Search: law, regulator, topic"
 "Регуляторы и нормативные акты": "Regulators and legal acts"
 "Кто регулирует AI и данные у нас, в регионе и в мире, и что это значит для нас.": "Who regulates AI and data here, in the region, and worldwide, and what it means for us."
 
 # resources page
-"Открытые источники, которые стоит знать: где учиться, где следить за отраслью, что читают регуляторы финансового сектора и где искать сведения об атаках и инцидентах. Внешние сервисы — только для чтения: рабочие данные туда не отправляем.": "Open sources worth knowing: where to learn, where to follow the industry, what financial regulators read, and where to find information on attacks and incidents. External services are for reading only: we never send work data to them."
+"Открытые источники, которые стоит знать: где учиться, где следить за отраслью, что читают регуляторы финансового сектора и где искать сведения об атаках и инцидентах. Внешние сервисы — только для чтения: рабочие данные туда не отправляем.": "Open resources worth knowing: where to learn, where to follow the industry, what financial regulators read, and where to find information on attacks and incidents. External services are for reading only: we never send work data to them."
 "Найти: курс, доклад, тема": "Search: course, report, topic"
 "Ресурсы для обучения и исследований": "Learning and research resources"
 "Где учиться, где следить за отраслью и где искать сведения об атаках и инцидентах.": "Where to learn, where to follow the industry, and where to find information on attacks and incidents."
 
 # Anthropic learning page
-"Всё обучение от Anthropic, создателя Claude, в одном месте: сначала официальные материалы на русском, затем учебный портал Claude Academy с бесплатными курсами и практические материалы на английском. Ссылки ведут на первоисточник.": "All the learning from Anthropic, the maker of Claude, in one place: first the official materials in Russian, then the Claude Academy learning portal with free courses, and hands-on material in English. Links go to the original source."
+"Всё обучение от Anthropic, создателя Claude, в одном месте: сначала официальные материалы на русском, затем учебный портал Claude Academy с бесплатными курсами и практические материалы на английском. Ссылки ведут на первоисточник.": "All the learning from Anthropic, the maker of Claude, in one place: first the official documentation, then the Claude Academy learning portal with its free courses, and then hands-on material. Links go to the original source."
 "Короткие пересказы самого полезного — на русском и с нашими примерами — в {link}.": "Short summaries of the most useful material, with our own examples, are in the {link}."
 "Базе знаний": "Knowledge Base"
 "Найти: курс, тема, продукт": "Search: course, topic, product"
 "Обучение Anthropic": "Anthropic learning"
-"Claude Academy и все её курсы, официальная документация на русском и практические материалы Anthropic.": "Claude Academy and all its courses, the official documentation in Russian, and hands-on material from Anthropic."
+"Claude Academy и все её курсы, официальная документация на русском и практические материалы Anthropic.": "Claude Academy and all its courses, the official documentation, and hands-on material from Anthropic."
 
 # Knowledge Base categories (the order of CATEGORY_ORDER) and guide levels
 "Начало работы": "Getting started"
@@ -133,9 +133,9 @@
 "Начало маршрута": "Start of the route"
 "{n} остановки для всех, затем специализация по роли": "{n} stops for everyone, then a specialization by role"
 "Начать: остановка 1 — {title} →": "Start: stop 1 — {title} →"
-"Отмечайте пройденные шаги на картах — прогресс сохраняется в вашем браузере и виден здесь.": "Mark the steps you have done on the maps: your progress is saved in your browser and shows here."
+"Отмечайте пройденные шаги на картах — прогресс сохраняется в вашем браузере и виден здесь.": "Mark the steps you have done on the maps: your progress is saved in your browser and appears here."
 "Сбросить прогресс": "Reset progress"
-"Начните со старта и двигайтесь по станциям. После четвёртой — выберите специализацию. Кольцо вокруг станции заполняется по мере прохождения карты.": "Begin at the start and move from station to station. After the fourth, choose a specialization. The ring around a station fills as you work through its map."
+"Начните со старта и двигайтесь по станциям. После четвёртой — выберите специализацию. Кольцо вокруг станции заполняется по мере прохождения карты.": "Begin at the start and go from stop to stop. After the fourth stop, choose a specialization. The ring around each stop fills up as you work through its map."
 "Остановки по порядку": "Stops in order"
 "Специализации — по вашей роли": "Specializations by role"
 "Отдельные руководства и поиск по ним — в {link}.": "Individual guides, with search, are in the {link}."

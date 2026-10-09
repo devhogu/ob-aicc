@@ -13,7 +13,7 @@ source_hash: 0999a4f4e5ae
 
 Claude is an AI assistant made by Anthropic. In six minutes you will learn what Claude is made of, and for any task of yours you will be able to choose the right way to work: a plain conversation, a project, an artifact, or a skill.
 
-You talk to Claude in plain language, give it documents, and hand it work: read, compare, write, calculate. The rules of the “Basics of working with AI” map apply here too: share only [what may be shared](page:kb/guides/what-to-share), and check the answer before it goes any further than you.
+You talk to Claude in plain language, give it documents, and hand it work: read, compare, write, calculate. The rules of the “Basics of working with AI” map apply here too: share only [what may be shared](page:kb/guides/what-to-share), and check the answer before you pass it on.
 
 ## What Claude has {#parts}
 
@@ -42,9 +42,9 @@ You talk to Claude in plain language, give it documents, and hand it work: read,
 | You need a finished document or spreadsheet to download | an artifact or a file | a one-page internal memo, an Excel table from a data export |
 | The same procedure across different tasks | a skill | checking any document against your checklist |
 
-If in doubt, start with a plain conversation. When you notice you are attaching the same procedure and explaining the same thing for the third time, it's time to make a project.
+If in doubt, start with a plain conversation. When you notice you are attaching the same procedure and explaining the same thing for the third time, it's time to create a project.
 
-**Try it now.** Write down three tasks from your working week and pick a table row for each. Take the task that landed in the “project” row to the guide [Projects in Claude](page:kb/guides/claude-projects).
+**Try it now.** Write down three tasks from your working week and pick a table row for each. Take the task that landed in the “project” row and work through it with the guide [Projects in Claude](page:kb/guides/claude-projects).
 
 Which features are available to you depends on your plan and your organization's settings. Work only in an approved work account; if a feature you need is missing, [write to us](page:services/how-to-engage).
 

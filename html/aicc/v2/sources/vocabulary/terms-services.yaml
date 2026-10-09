@@ -10,7 +10,7 @@
   en: proof of concept
   term_en: "proof of concept"
   definition: "Короткая проверка на деле, что идея работает: решение пробуют в небольшом объёме и по результату решают, продолжать ли."
-  definition_en: "A short hands-on check that an idea works: the solution is tried on a small scale, and the result decides whether to continue."
+  definition_en: "A short hands-on check that an idea works: the solution is tried on a small scale, and the result shows whether to continue."
 
 - id: timebox
   ru: тайм-бокс

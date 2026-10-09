@@ -23,7 +23,7 @@
       <h1 class="page-header__title">Market risk</h1>
     </div>
   </div>
-  <p class="page-header__intent">Market risk is the risk of loss from adverse movements in interest rates, foreign exchange rates, equity prices, and commodity prices — arising in the trading book and, for banks with structural positions, in the banking book as interest rate risk (IRRBB). Market risk capital is held under the Basel III standardized approach or, where a bank uses internal models, the Internal Models Approach (IMA); for a bank with a trading book, daily VaR and stressed VaR reporting are core regulatory obligations. <strong>The GenAI opportunity is to eliminate the manual assembly burden</strong> — daily VaR narratives, P&amp;L attribution, backtesting documentation, and limit utilization reports — so the market risk team's time is directed at interpretation and response rather than production.</p>
+  <p class="page-header__intent">Market risk is the risk of loss from adverse movements in interest rates, foreign exchange rates, equity prices, and commodity prices — arising in the trading book and, for banks with structural positions, in the banking book as interest rate risk (IRRBB). Market risk capital is held under the Basel III standardized approach or, where a bank uses internal models, the Internal Models Approach (IMA); for a bank with a trading book, daily VaR and stressed VaR reporting are core regulatory obligations. <strong>The generative AI opportunity is to eliminate the manual assembly burden</strong> — daily VaR narratives, P&amp;L attribution, backtesting documentation, and limit utilization reports — so the market risk team's time is directed at interpretation and response rather than production.</p>
 </header>
 <style>
   #problems-tab-var-sensitivity:checked ~ .problems-tab-bar label[for="problems-tab-var-sensitivity"] {
@@ -46,7 +46,7 @@
     <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Insights &amp; analytics</h3><p>Daily VaR and sensitivity metrics are produced from the risk system, but anomaly detection — identifying an overnight VaR spike or a factor move that is statistically significant relative to trailing distributions — depends on the analyst on duty noticing the movement. Near-limit breaches and emerging concentration in a risk factor go unreported between the daily report and the next committee cycle.</p></article><article class="discovery-context-card"><h3>Enablement</h3><p>Stress test re-runs — which require ad-hoc sensitivity analysis under specific market scenarios — are bottlenecked on the market risk team's modeling capacity. The CRO and ALCO cannot ask 'what if the local currency depreciates 15%' and receive an immediate answer; each scenario request requires a modeling sprint.</p></article><article class="discovery-context-card"><h3>Automation</h3><p>The daily VaR narrative and weekly Market Risk Committee pack are assembled manually from risk system outputs — factor decomposition, limit utilization, backtesting exception counts — each cycle. The narrative format is consistent; the source data is structured.</p></article><article class="discovery-context-card"><h3>New business opportunities</h3><p>Continuous limit utilization monitoring across all risk factor and desk limits gives the Head of Treasury a near-real-time view of available risk budget. Desks operating well within limits can be signaled to increase exposure; desks approaching limits receive an early warning before a breach occurs. The signal is currently available only in the weekly committee pack.</p></article></div>
   </div>
 </section>
-<div id="main-content" class="l3-sections" aria-label="Sub-concerns">
+<div id="main-content" class="l3-sections" aria-label="Subsections">
 <section class="l3-section" id="var-expected-shortfall">
   <header class="l3-section__head">
     <h2 class="l3-section__title">VaR &amp; expected shortfall</h2>
@@ -81,7 +81,7 @@
       <p>The AI agent reads the risk engine decomposition, maps VaR and ES movements to desk contributions and factor sensitivities, and drafts the narrative commentary in the committee's standard format. The market risk analyst reviews, adds judgment on unusual patterns, and releases the pack.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The market risk analyst reviews and releases the daily VaR and expected shortfall commentary — decomposing movements by desk, risk factor, and portfolio in the committee's standard format — drafted by the AI agent from the risk engine decomposition.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -112,7 +112,7 @@
     </div>
     <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
   </summary>
-  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#capital-liquidity">Capital and liquidity reforms</a></p>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory requirements:</span> <a href="../../regulatory-horizon/index.html#capital-liquidity">Capital and liquidity reforms</a></p>
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>The Basel III backtesting framework rests on a rolling 250-day comparison of actual P&amp;L with VaR, maintained in a format that identifies the traffic-light zone and supports immediate supervisory notification. The monthly backtesting report is assembled manually from the daily comparison records; supervisory notification drafts are prepared from scratch when exception counts breach the threshold.</p>
@@ -122,7 +122,7 @@
       <p>The AI agent maintains the rolling daily P&amp;L vs VaR comparison, computes the exception count in the 250-day window, applies the traffic-light classification, generates the monthly report, and drafts the supervisory notification where the amber or red threshold is crossed. The Market Risk Officer reviews and submits.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The Market Risk Officer reviews and submits the monthly backtesting report — rolling 250-day exception count and Basel III traffic-light classification — and any required supervisory notification from AI-generated drafts rather than manual assembly from daily comparison records.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -163,7 +163,7 @@
       <p>The AI agent reads the current portfolio risk-factor profile, historical stress period performance data, and prior stressed VaR narratives. It evaluates the stress period's relevance to the current portfolio and drafts the selection rationale and comparative narrative in the committee's standard format. The market risk team reviews and approves before submission.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The market risk team reviews and approves an AI-drafted stressed VaR narrative — stress period selection rationale, stressed versus current VaR by risk factor, and capital implications — for the Market Risk Committee quarterly pack, rather than drafting it manually each quarter.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -218,7 +218,7 @@
       <p>The AI agent detects exceptions from the daily P&amp;L vs VaR comparison, updates the rolling 250-day exception counter, classifies the root cause from the P&amp;L attribution data, and generates the exception documentation pack, including a supervisor notification draft if the traffic-light threshold is crossed. The Market Risk Officer reviews and files it.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The Market Risk Officer reviews and files an AI-generated documentation pack for every VaR backtesting exception — updated 250-day exception count, root-cause classification, and traffic-light status — rather than assembling it manually after the exception is identified.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -259,7 +259,7 @@
       <p>The AI agent reads the risk system factor sensitivities and daily market data moves, computes risk-factor P&amp;L attributions by desk, maps to the official finance P&amp;L, and flags reconciliation breaks above threshold. The market risk analyst reviews breaks and releases the narrative for the committee pack.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The market risk analyst reviews reconciliation breaks and releases the daily P&amp;L attribution narrative — desk P&amp;L decomposed into rate, FX, spread, and volatility drivers and reconciled to the official finance P&amp;L — from an AI-generated draft rather than manual decomposition.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -300,7 +300,7 @@
       <p>The AI agent reads 90 days of P&amp;L attribution records, computes residual attribution error by risk factor and desk, identifies factors with systematic directional bias, and delivers a quarterly signal report to the market risk model validation team for investigation.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The market risk model validation team receives a quarterly signal report identifying risk factors that are systematically over- or under-attributed by desk, so model misspecification triggers a validation review instead of going unnoticed in daily attribution.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -355,7 +355,7 @@
       <p>The AI agent reads the overnight Greeks output from the risk system, applies the limit framework per desk and risk factor, computes utilization percentages, and generates the daily sensitivity report with near-limit flags. The market risk analyst reviews the output before the morning pack is distributed.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The market risk analyst reviews an AI-compiled daily Greeks and sensitivity report — delta, gamma, vega, theta, and rho by desk and risk factor, with limit utilization and near-limit flags — before the Market Risk Committee morning pack is distributed.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -396,7 +396,7 @@
       <p>The AI agent detects the breach from the daily position report, retrieves the desk position detail, breach count in the rolling period, and prior breach documentation, and generates the escalation pack including the desk head notification draft. The Market Risk Officer reviews and sends within the policy window.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The Market Risk Officer starts every sensitivity limit breach escalation with an AI-generated pack — position detail, limit comparison, breach history, and a pre-drafted notification — and sends it within the window required by the limits policy.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -437,7 +437,7 @@
       <p>The AI agent reads all desk sensitivity positions, aggregates by risk factor, computes directional correlation across desks, and identifies risk factors where aggregate exposure across multiple desks warrants the CRO's attention beyond individual desk limit status. The CRO receives a weekly risk-factor concentration view alongside the standard desk-level report.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The CRO receives a weekly risk-factor concentration view — aggregate sensitivity positions across all desks, with correlated directional exposures identified — alongside the standard desk-level report.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -492,7 +492,7 @@
       <p>The AI agent reads daily limit utilization feeds across all limit types and desks, computes weekly utilization summaries, flags near-limit positions above the committee threshold, and generates breach documentation where applicable. The Market Risk Committee secretary checks the assembled pack, and the committee receives it the day before the meeting.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The Market Risk Committee receives the weekly limits utilization report — spanning VaR, sensitivity, stop-loss, and concentration limits across all desks — assembled by the AI agent with near-breach flags and breach documentation current as of the day before the meeting.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -533,7 +533,7 @@
       <p>The AI agent reads 12 months of limit utilization and breach records, computes breach frequency and near-breach distribution by desk and limit type, cross-references against market conditions at the time of each breach, and identifies structural patterns. The Market Risk Committee receives the quarterly breach pattern analysis alongside the standard utilization report.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The Market Risk Committee receives a quarterly breach pattern analysis — breach frequency and near-breach distribution by desk and limit type, cross-referenced to market conditions — identifying structural limit calibration issues for limit review.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -574,7 +574,7 @@
       <p>The AI agent reads the full year's limit utilization distributions by desk and limit type, the current capital allocation by desk, and the annual business plan. It identifies limits with very low median utilization relative to risk appetite capacity and limits where frequent near-breaches suggest under-calibration, and assembles the analysis document. The annual limits review decides which flagged limits warrant adjustment.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The annual limits review starts from an AI-assembled calibration analysis — utilization distributions by desk and limit type compared against capital allocation and the business plan — identifying limits that appear too restrictive or too permissive for the Bank's risk appetite.</p>
       <div class="okr-grid">
         <div class="okr-kr">

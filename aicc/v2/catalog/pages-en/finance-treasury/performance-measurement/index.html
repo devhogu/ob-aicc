@@ -23,7 +23,7 @@
       <h1 class="page-header__title">Performance measurement</h1>
     </div>
   </div>
-  <p class="page-header__intent">Performance measurement translates the Bank's financial results into a management view — segment, product, and customer-level P&amp;L with cost and capital allocations — and into risk-adjusted return metrics that link commercial performance to the risk budget consumed. RAROC, EVA, and return on risk-weighted assets are the measures by which the CFO assesses whether each BU creates or destroys value net of the cost of capital. Under Pillar 2 of the Basel framework and supervisory ICAAP guidance, risk-adjusted performance measures are expected to inform capital allocation and strategic planning. <strong>The GenAI opportunity is continuous management reporting — moving from quarterly segment P&amp;L reviews to monthly driver-attributed packs and continuous RAROC monitoring against board-set hurdles.</strong></p>
+  <p class="page-header__intent">Performance measurement translates the Bank's financial results into a management view — segment, product, and customer-level P&amp;L with cost and capital allocations — and into risk-adjusted return metrics that link commercial performance to the risk budget consumed. RAROC, EVA, and return on risk-weighted assets are the measures by which the CFO assesses whether each BU creates or destroys value net of the cost of capital. Under Pillar 2 of the Basel framework and supervisory ICAAP guidance, risk-adjusted performance measures are expected to inform capital allocation and strategic planning. <strong>The generative AI opportunity is continuous management reporting — moving from quarterly segment P&amp;L reviews to monthly driver-attributed packs and continuous RAROC monitoring against board-set hurdles.</strong></p>
 </header>
 <style>
   #problems-tab-profit-attribution:checked ~ .problems-tab-bar label[for="problems-tab-profit-attribution"] {
@@ -46,7 +46,7 @@
     <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Insights &amp; analytics</h3><p>Segment-level P&amp;L — with cost and capital allocations — is assembled quarterly across BUs by combining finance and risk data from separate systems. The quarterly review meeting is consumed by data walkthrough, leaving limited time for the strategic discussion the segment heads and CFO need to have. Cross-segment dynamics — one BU's deposit pricing pulling from another's funding cost — are not visible in the individual-segment view.</p></article><article class="discovery-context-card"><h3>Enablement</h3><p>Allocation methodology disputes recur each quarter as segment heads challenge cost and capital allocation assumptions they cannot verify independently. Finance teams spend significant review-meeting bandwidth defending allocation methodology rather than discussing performance trends and management actions.</p></article><article class="discovery-context-card"><h3>Automation</h3><p>Monthly management accounts commentary, quarterly segment performance bridges, and CFO board preparation materials are assembled manually from P&amp;L reports, allocation schedules, and prior-period narratives. Each document has a stable structure and known inputs; assembly is the constraint.</p></article><article class="discovery-context-card"><h3>New business opportunities</h3><p>Segment finance teams with a continuously attributed P&amp;L view can identify margin erosion in time for commercial action — repricing, origination mix adjustment, or cost reduction — before the quarter closes. Teams receiving quarterly snapshots respond to the outcome; teams with monthly or weekly driver attribution manage the trajectory.</p></article></div>
   </div>
 </section>
-<div id="main-content" class="l3-sections" aria-label="Sub-concerns">
+<div id="main-content" class="l3-sections" aria-label="Subsections">
 <section class="l3-section" id="segment-pl">
   <header class="l3-section__head">
     <h2 class="l3-section__title">Segment P&amp;L &amp; management accounts</h2>
@@ -81,7 +81,7 @@
       <p>The AI agent reads the segment's asset and liability volume and rate data, the FTP credit and charge schedule, and the prior-period actuals. It decomposes the segment NIM into asset yield, liability cost, and net FTP contribution, and applies a rate-volume-mix attribution to the period-on-period NIM change. The decomposition is appended to the monthly segment P&amp;L pack as an additional page. The CFO and segment heads use the decomposition to direct pricing, mix, or FTP curve review actions to the material driver.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The CFO and segment heads receive, with the monthly segment P&amp;L pack, a decomposition of each segment's NIM into asset yield, liability cost, and net FTP contribution, with the period-on-period change attributed to rate, volume, and mix.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -122,7 +122,7 @@
       <p>The AI agent reads the current-period cost allocation outputs and the prior three-period history for each allocation pool and segment. It computes the period-on-period movement for each cost allocation and flags any allocation where the movement exceeds the defined materiality threshold — either as an absolute amount or as a percentage deviation from the trailing average. Flagged allocations are presented to the Finance shared services team for review before the segment P&amp;L is released. The team confirms or corrects each flagged item; the AI agent does not change any allocation.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The Finance shared services team receives a list of cost allocations whose period-on-period movement exceeds the materiality threshold — by allocation pool and segment — before the segment P&amp;L is released.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -163,7 +163,7 @@
       <p>The AI agent reads the consolidated P&amp;L, BU-level submissions, approved budget, and prior-month narrative. It generates the management accounts commentary in the house format — headline performance, segment bridges, one-time item flagging, and outlook section — with BU commentary normalized to a consistent register. The CFO reviews and adds forward judgment before distribution.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The monthly management accounts commentary — covering headline performance, segment bridges, one-time item flagging, and the outlook section — is drafted from the consolidated P&amp;L and BU submissions in a consistent register and available for CFO review before the executive committee meeting.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -218,7 +218,7 @@
       <p>The AI agent reads the quarterly RAROC attribution outputs for each BU and maintains a trailing-four-quarter RAROC series. It fits a trend to each BU's RAROC trajectory and projects the forward trajectory over the next two quarters. When the projection shows any BU's RAROC reaching the hurdle within the projection horizon, a forward-looking flag is issued to the CFO and relevant BU finance head with the trend attribution — identifying whether the drift reflects margin compression, RWA inflation, or provision build. Capital Management uses the flag to initiate a targeted RAROC improvement plan before the formal breach.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The CFO and the relevant BU finance head receive a forward-looking flag, with trend attribution, when a BU's trailing-four-quarter RAROC is projected to reach the board-approved hurdle rate within the next two quarters.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -259,7 +259,7 @@
       <p>The AI agent reads the current-period P&amp;L, RWA by BU, expected loss allocations, and the approved cost-of-capital schedule. It computes RAROC and EVA per BU, compares each result against the board-set hurdle and prior-quarter trend, and generates the attribution narrative with driver decomposition for the CFO and segment heads. Finance and Risk review the output; capital allocation decisions remain with ALCO, and the AI agent provides the analysis.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">Quarterly RAROC and EVA by business unit — computed from risk-weighted assets, expected loss allocations, and P&amp;L feeds, with comparison against board-set hurdles and prior-quarter trend — are available to the CFO and segment heads with driver decomposition.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -300,7 +300,7 @@
       <p>The AI agent reads the BU P&amp;L at the product level, the allocated RWA by product, and the expected loss by product from the IFRS 9 model. It computes RAROC at the product level within each BU, identifies products above and below the hurdle, and presents the decomposition as an annex to the quarterly BU RAROC report. The CFO and BU heads use the decomposition to assess whether capital reallocation, product pricing adjustment, or origination constraint is warranted for below-hurdle products. Capital Management confirms the RWA allocation methodology before distribution.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The CFO and BU heads receive, as an annex to the quarterly BU RAROC report, product-level RAROC within each BU showing which loan, deposit, and fee income products sit above and below the hurdle rate.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -355,7 +355,7 @@
       <p>The AI agent reads the minutes of each monthly performance review and the budget variance attribution output. It extracts committed actions, assigns owner and target period from the discussion, and appends them to the structured action tracker. Each month it cross-references the tracker against the current attribution output to determine whether the expected P&amp;L recovery is visible in the actuals. The CFO reviews the tracker update — showing open actions, actions closed with evidence of impact, and actions closed without measurable impact — at each monthly performance session.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The CFO receives, at each monthly performance session, a tracker of management actions committed in response to material budget variances — owner, target period, expected P&amp;L impact, and status — showing which closed actions delivered a measurable recovery.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -396,7 +396,7 @@
       <p>The AI agent reads the current-period attributed variance, the segment's pipeline and origination data, deposit repricing notices, and cost accrual estimates. It applies the prior-period attribution methodology to the forward drivers and produces a mid-month run-rate estimate per segment — showing the estimated full-period outturn relative to budget and the assumptions driving the estimate. FP&amp;A reviews the output and confirms or adjusts the run-rate assumptions before distribution to segment heads. The signal is produced around day 15 of each month.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">Segment heads and the CFO receive, around day 15 of each month, a forward run-rate estimate per segment — the estimated full-period outturn relative to budget and the assumptions driving it — reviewed by FP&amp;A before distribution.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -437,7 +437,7 @@
       <p>The AI agent reads the closed management accounts and approved budget for each segment. It applies a standardized decomposition — separating volume-driven, rate-driven, mix, fee income, cost, and provision variances for each segment — and produces a consolidated pack with variances ranked by absolute P&amp;L impact. The pack is available to the CFO and segment heads on day one of reporting. Each segment head reviews the attributed output and adds qualitative context; the CFO uses the ranked view to direct the management response.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The CFO and segment heads receive, on the first day of reporting, a consolidated performance pack that decomposes each segment's monthly budget-to-actual variance into volume, rate, mix, fee income, cost, and provision components ranked by absolute P&amp;L impact.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -492,7 +492,7 @@
       <p>The AI agent reads the loan tape, origination attributes, and IFRS 9 model parameters. It computes cumulative default rates by vintage cohort, decomposes performance variance across channel, scorecard, geography, and product, and produces provision sensitivity estimates under base, stress, and severe scenarios with macro overlay assumptions made explicit. Credit Modeling checks the attribution output before the CFO and Risk Committee review it; provision methodology decisions remain with Credit Modeling.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">Cumulative default rates by vintage cohort, performance variance decomposed across channel, scorecard, geography, and product, and IFRS 9 provision sensitivities under base, stress, and severe scenarios are available for Finance, Risk, and Credit Modeling review each quarter-end.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -523,7 +523,7 @@
     </div>
     <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
   </summary>
-  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#expected-credit-loss">Expected credit loss</a></p>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory requirements:</span> <a href="../../regulatory-horizon/index.html#expected-credit-loss">Expected credit loss</a></p>
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>Under IFRS 9, the ECL provision incorporates forward-looking economic scenarios weighted by probability. The scenario overlay is applied manually to the base ECL model output, and the range of provision outcomes under the approved scenario set is not systematically available to the CFO before the close cycle. The external auditor's substantive testing targets the scenario weighting methodology, and late changes to the overlay create audit timeline risk.</p>
@@ -533,7 +533,7 @@
       <p>The AI agent reads the base ECL model output, the approved economic scenario inputs and probability weights, and the portfolio segmentation. It applies each economic scenario overlay to the ECL model inputs and computes the provision outcome per scenario and per portfolio segment. The scenario-weighted consolidated provision estimate and the full sensitivity range — from base to severe — are presented to the CFO and audit committee for review before the close cycle begins. External auditors receive the scenario methodology documentation in the same package.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The CFO and audit committee receive, before each quarter-end close cycle begins, the scenario-weighted ECL provision estimate and the sensitivity range from base to severe by portfolio segment, with the scenario methodology documentation packaged for the external auditors.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -564,7 +564,7 @@
     </div>
     <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
   </summary>
-  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#expected-credit-loss">Expected credit loss</a></p>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory requirements:</span> <a href="../../regulatory-horizon/index.html#expected-credit-loss">Expected credit loss</a></p>
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>IFRS 9 staging decisions rely on the ECL model's forward-looking default probability estimates. When the actual default trajectory of a recently originated cohort diverges materially from the model's expectation, the divergence is identified in the model's annual backtesting cycle rather than in the close period when the cohort exits its expected performance window. Early identification would allow model recalibration or management overlay before the provision impact is booked.</p>
@@ -574,7 +574,7 @@
       <p>The AI agent reads the monthly loan performance data and maps each disbursement to its vintage cohort, product, and channel. It tracks the cumulative default and Stage 2 migration rate for each cohort against the IFRS 9 model's expected trajectory for that cohort type, and flags cohorts where actual performance deviates from expectation by more than the defined tolerance. The flagged cohorts are presented to Credit Modeling and the CFO with the estimated provision impact of a model recalibration. Credit Modeling determines whether a management overlay or model update is warranted.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">Credit Modeling and the CFO receive a monthly list of vintage cohorts whose cumulative default or Stage 2 migration rate deviates from the IFRS 9 model's expected trajectory by more than the defined tolerance, with the estimated provision impact of a model recalibration.</p>
       <div class="okr-grid">
         <div class="okr-kr">

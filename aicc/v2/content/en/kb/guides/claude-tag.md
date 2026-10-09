@@ -13,9 +13,9 @@ source_url: https://academy.claude.com/courses/introduction-to-claude-tag
 source_hash: 9b01e40961de
 ---
 
-This guide is for a leader who is deciding whether the team needs an agent in a shared channel, and for the members of such channels. After it, you will understand how the agent works in shared channels, whose permissions it uses, what happens to the data and what to decide before a pilot.
+This guide is for a leader who is deciding whether the team needs an agent in a shared channel, and for the members of such channels. By the end, you will understand how the agent works in shared channels, whose permissions it uses, what happens to the data, and what to decide before a pilot.
 
-<p class="pf-tip"><b>Is it available to you?</b> Claude Tag works only in Slack and only on the Team and Enterprise plans, and is currently in public beta. It isn't available to organizations with <span class="en">Zero Data Retention</span> (ZDR), customer-managed encryption keys (CMEK) or a HIPAA configuration. If your organization doesn't use Slack or Claude Tag isn't turned on, this guide is for background reading for now: its habits will be useful for any team agent.</p>
+<p class="pf-tip"><b>Is it available to you?</b> Claude Tag works only in Slack and only on the Team and Enterprise plans, and is currently in public beta. It isn't available to organizations with <span class="en">Zero Data Retention</span> (ZDR), customer-managed encryption keys (CMEK) or a HIPAA configuration. If your organization doesn't use Slack or Claude Tag isn't turned on, read this guide as background for now: its habits will be useful for any team agent.</p>
 
 Claude Tag is Claude in your team's Slack workspace. You write <code>@Claude</code> and the task, and the answer arrives in a thread. Claude first reads the channel, including messages from before it was added, works with the connected tools and keeps working after you've closed your laptop. To add it to a channel: <code>/invite @Claude</code>.
 
@@ -65,7 +65,7 @@ For complex tasks, ask for a plan first. Claude shows its progress in a single c
 
 One channel, one kind of work: that way Claude becomes a specialist in it. Turn on “Respond automatically” and describe in one line what to answer and what to stay out of: a support channel, help on internal rules, a project channel. To turn it off for a thread: <code>!mute</code>.
 
-A **standing duty** is something Claude keeps running for days and weeks: it coordinates, takes responsibility for the result, provides continuity when people change. Decisions on deadlines, scope and trade-offs it brings to people, for example in a batch twice a week.
+A **standing duty** is something Claude keeps running for days and weeks: it coordinates, takes responsibility for the result, provides continuity when people change. It brings decisions on deadlines, scope and trade-offs to people, for example in a batch twice a week.
 
 ## Scheduled tasks {#routines}
 
@@ -98,4 +98,4 @@ In one message, describe what to read, what to look for, what to post, when, and
 8. Every request comes with a goal, sources and a check.
 9. One standing duty, with clear decisions that come back to people.
 
-How people and agents work together on a team: [People and agents on one team](page:kb/guides/human-agent-teams).
+For how people and agents work together on a team, see [People and agents on one team](page:kb/guides/human-agent-teams).

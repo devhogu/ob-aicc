@@ -3,8 +3,8 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark">
 <title>Market data · AI Competence Hub</title>
 <script>try{var t=localStorage.getItem('hub-theme');document.documentElement.dataset.theme=t==='dark'?'dark':'light';}catch(e){}</script>
-<link rel="stylesheet" href="../../assets/styles/tokens.css"><link rel="stylesheet" href="../../assets/styles/components.css"><link rel="stylesheet" href="../../assets/styles/theme.css"><link rel="stylesheet" href="../../assets/styles/layouts/concern.css"><link rel="stylesheet" href="../../assets/styles/layouts/concern-l2.css"><link rel="stylesheet" href="../../../../assets/discovery.css"><script defer src="../../../../assets/discovery.js"></script><link rel="stylesheet" href="../../../../assets/ui/fonts.css?v=31af9632de"><link rel="stylesheet" href="../../../../assets/ui/tokens.css?v=7a14df66bd"><link rel="stylesheet" href="../../../../assets/ui/primitives.css?v=ea6572a6e0"><link rel="stylesheet" href="../../../../assets/ui/workspace.css?v=416781b646"><link rel="stylesheet" href="../../../../assets/site.css?v=5480d3be4e">
-<script src="../../../../assets/search-en.js"></script><script src="../../../../assets/i18n-en.js"></script><script src="../../../../assets/site.js?v=cfae61d4bb" defer data-root="../../../.." data-t-none="Nothing matches your search." data-t-light="Light mode" data-t-dark="Dark mode" data-t-mail-body="Page: {title}
+<link rel="stylesheet" href="../../assets/styles/tokens.css"><link rel="stylesheet" href="../../assets/styles/components.css"><link rel="stylesheet" href="../../assets/styles/theme.css"><link rel="stylesheet" href="../../assets/styles/layouts/concern.css"><link rel="stylesheet" href="../../assets/styles/layouts/concern-l2.css"><link rel="stylesheet" href="../../../../assets/discovery.css"><script defer src="../../../../assets/discovery.js"></script><link rel="stylesheet" href="../../../../assets/ui/fonts.css?v=31af9632de"><link rel="stylesheet" href="../../../../assets/ui/tokens.css?v=7a14df66bd"><link rel="stylesheet" href="../../../../assets/ui/primitives.css?v=ea6572a6e0"><link rel="stylesheet" href="../../../../assets/ui/workspace.css?v=416781b646"><link rel="stylesheet" href="../../../../assets/site.css?v=ca3f012564">
+<script src="../../../../assets/search-en.js"></script><script src="../../../../assets/i18n-en.js"></script><script src="../../../../assets/site.js?v=f0c9aa38f9" defer data-root="../../../.." data-t-none="Nothing matches your search." data-t-light="Light mode" data-t-dark="Dark mode" data-t-mail-body="Page: {title}
 ID: {ref}
 Address: {url}
 
@@ -195,7 +195,7 @@ Question or comment:
       <h1 class="page-header__title">Market data</h1>
     </div>
   </div>
-  <p class="page-header__intent">Market data is the external data stream that drives the Bank's valuation, risk measurement, and pricing functions — covering securities prices, interest rate and FX spot and forward rates, credit spreads, commodity prices, volatility surfaces, and the macro-economic indices that underpin stress testing and economic scenario modeling. Sourced from vendors (Bloomberg, Refinitiv), the domestic exchange and official rate publications, and inter-dealer brokers, market data must be received, quality-checked, normalized, and loaded into downstream systems within strict timeliness windows. A stale price or an outlier rate that propagates into the valuation or VaR engine before detection creates downstream errors in MTM P&amp;L, margin calls, and regulatory capital. <strong>The GenAI opportunity is to automate market data quality monitoring before downstream systems consume the feed, generate yield curve construction commentary without manual drafting, and synthesize cross-vendor rate discrepancies into actionable alerts</strong> — compressing the gap between data-quality event and remediation from hours to minutes.</p>
+  <p class="page-header__intent">Market data is the external data stream that drives the Bank's valuation, risk measurement, and pricing functions — covering securities prices, interest rate and FX spot and forward rates, credit spreads, commodity prices, volatility surfaces, and the macro-economic indices that underpin stress testing and economic scenario modeling. Sourced from vendors (Bloomberg, Refinitiv), the domestic exchange and official rate publications, and inter-dealer brokers, market data must be received, quality-checked, normalized, and loaded into downstream systems within strict timeliness windows. A stale price or an outlier rate that propagates into the valuation or value-at-risk (VaR) engine before detection creates downstream errors in mark-to-market (MTM) P&amp;L, margin calls, and regulatory capital. <strong>The generative AI opportunity is to automate market data quality monitoring before downstream systems consume the feed, generate yield curve construction commentary without manual drafting, and synthesize cross-vendor rate discrepancies into actionable alerts</strong> — compressing the gap between data-quality event and remediation from hours to minutes.</p>
 </header>
 <style>
   #problems-tab-pricing-rates:checked ~ .problems-tab-bar label[for="problems-tab-pricing-rates"] {
@@ -215,10 +215,10 @@ Question or comment:
   </div>
   <hr class="problems-divider">
   <div class="problems-panel" id="problems-panel-pricing-rates" data-tab="pricing-rates" role="tabpanel" aria-labelledby="problems-tab-pricing-rates">
-    <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Insights &amp; analytics</h3><p>Market data quality — stale prices, outlier rates, missing fields, and cross-vendor discrepancies — is assessed through end-of-day reconciliation between vendor feeds and the valuation engine output. Quality anomalies that enter the valuation engine before end-of-day reconciliation cause MTM errors, incorrect margin calls, and VaR distortions that are identified only after the downstream system has consumed and acted on the incorrect data.</p></article><article class="discovery-context-card"><h3>Enablement</h3><p>Yield curve construction — selecting input instruments, applying bootstrapping methodology, interpolating missing tenors, and documenting the construction rationale for front-office and risk review — is a daily quant task that precedes the distribution of curves to pricing and risk systems. The documentation and commentary step consumes a material portion of the quant team's morning preparation time.</p></article><article class="discovery-context-card"><h3>Automation</h3><p>Daily market data quality checks, curve construction documentation, and vendor-feed completeness reports follow defined rule sets applied to structured market data on each delivery cycle. Each process is repeatable and data-driven — candidates for continuous AI-driven execution before downstream systems consume the feed.</p></article><article class="discovery-context-card"><h3>New business opportunities</h3><p>Pre-consumption market data quality monitoring — catching stale prices and outlier rates before they reach the valuation engine — eliminates the downstream rework cost of MTM restatements, incorrect margin calls, and VaR corrections. Banks with real-time quality gates upstream of the valuation engine process fewer end-of-day breaks than peers relying on post-consumption reconciliation.</p></article></div>
+    <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Insights &amp; analytics</h3><p>Market data quality — stale prices, outlier rates, missing fields, and cross-vendor discrepancies — is assessed through end-of-day reconciliation between vendor feeds and the valuation engine output. Quality anomalies that enter the valuation engine before end-of-day reconciliation cause MTM errors, incorrect margin calls, and VaR distortions that are identified only after the downstream system has consumed and acted on the incorrect data.</p></article><article class="discovery-context-card"><h3>Enablement</h3><p>Yield curve construction — selecting input instruments, applying bootstrapping methodology, interpolating missing tenors, and documenting the construction rationale for front-office and risk review — is a daily quant task that precedes the distribution of curves to pricing and risk systems. The documentation and commentary step consumes a material portion of the quant team's morning preparation time.</p></article><article class="discovery-context-card"><h3>Automation</h3><p>Daily market data quality checks, curve construction documentation, and vendor-feed completeness reports follow defined rule sets applied to structured market data on each delivery cycle. Each process is repeatable and data-driven, which makes it a candidate for continuous AI-driven execution before downstream systems consume the feed.</p></article><article class="discovery-context-card"><h3>New business opportunities</h3><p>Pre-consumption market data quality monitoring — catching stale prices and outlier rates before they reach the valuation engine — eliminates the downstream rework cost of MTM restatements, incorrect margin calls, and VaR corrections. Banks with real-time quality gates upstream of the valuation engine process fewer end-of-day discrepancies than peers relying on post-consumption reconciliation.</p></article></div>
   </div>
 </section>
-<div id="main-content" class="l3-sections" aria-label="Sub-concerns">
+<div id="main-content" class="l3-sections" aria-label="Subsections">
 <section class="l3-section" id="pricing-rates-feeds">
   <header class="l3-section__head">
     <h2 class="l3-section__title">Pricing &amp; rates feeds</h2>
@@ -246,14 +246,14 @@ Question or comment:
   <div class="scenario-card__body">
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>End-of-day price validation is performed manually by the market data team, comparing vendor-supplied prices against prior-day levels and flagging obvious outliers before the valuation run. The manual check scope is limited by time available within the EOD processing window; the instrument universe for complex structured products and illiquid bonds is only partially reviewed. Outlier prices that pass the manual check propagate into the MTM valuation, generating unexplained P&amp;L movements that require investigation the following morning.</p>
+      <p>End-of-day price validation is performed manually by the market data team, comparing vendor-supplied prices against prior-day levels and flagging obvious outliers before the valuation run. The manual check scope is limited by time available within the end-of-day (EOD) processing window; the instrument universe for complex structured products and illiquid bonds is only partially reviewed. Outlier prices that pass the manual check propagate into the MTM valuation, generating unexplained P&amp;L movements that require investigation the following morning.</p>
     </div>
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
       <p>The AI agent reads the EOD price set from each vendor source and applies a multi-layer validation: prior-day comparison with a tolerance band calibrated per instrument type and market, cross-vendor benchmark check where multiple sources are available, and bid-offer spread plausibility check. Instruments failing any validation layer are quarantined with the failure description and a suggested substitute price from the next-ranked source. The market data team reviews the exception list, approves substitutions, and clears the price set for the valuation engine. The applied price set and validation record are archived per day.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The valuation engine runs each day on a validated, cleared price set, with outlier prices identified and resolved before the MTM valuation and P&amp;L attribution cycle.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -266,7 +266,7 @@ Question or comment:
         </div>
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
-          <p>EOD price validation completed within 20 minutes of feed receipt, ahead of the valuation engine start; manual price check scope extended from partial to full instrument universe.</p>
+          <p>EOD price validation completed within 20 minutes of feed receipt, ahead of the valuation engine start; validation scope extended from part of the instrument universe to all of it.</p>
         </div>
       </div>
     </div>
@@ -294,7 +294,7 @@ Question or comment:
       <p>The AI agent monitors the timestamp lag between market events and price updates in the risk engine for each feed and instrument group on a continuous intraday basis. When latency for a feed exceeds the threshold defined for the downstream processes that consume it — intraday VaR, collateral margin call trigger, or real-time limit monitoring — an alert is generated with the current latency, the affected feed, and the downstream risk processes whose data currency is compromised. The market data and risk teams use the alert to decide whether to halt stale-price-dependent processes pending feed restoration.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">Feed latency events are detected and communicated to the market data and risk teams before stale-price-dependent risk calculations affect intraday margin calls or limit decisions.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -335,8 +335,8 @@ Question or comment:
       <p>The AI agent reads the current trading book and collateral inventory, compiles the instrument universe requiring a priced feed, and cross-references it against the active vendor feed coverage set. Instruments with no active vendor price source are identified and ranked by position size and estimated valuation impact. The market data team receives a weekly missing-coverage report with the gap list, an indication of whether an alternative source is available but not subscribed, and the positions affected by the gap. Newly lapsed coverage events — instruments present in last week's feed set but absent this week — are flagged separately for immediate investigation.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
-      <p class="okr-objective">The market data team holds a current, ranked view of pricing feed coverage gaps against the trading book and collateral universe, enabling proactive sourcing before valuation exceptions occur.</p>
+      <div class="scenario-section__label">Acceptance criteria</div>
+      <p class="okr-objective">The market data team has a current, ranked view of pricing feed coverage gaps against the trading book and collateral universe, enabling proactive sourcing before valuation exceptions occur.</p>
       <div class="okr-grid">
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
@@ -359,7 +359,7 @@ Question or comment:
 <section class="l3-section" id="external-index-macro-data">
   <header class="l3-section__head">
     <h2 class="l3-section__title">External index &amp; macro data</h2>
-    <p class="l3-section__intent">Macro-economic and sector indices — GDP, CPI, PMI, unemployment, commodity prices, and sector benchmarks — sourced from the national statistics office, central banks, and international providers (IMF, World Bank, Bloomberg Economics). These inputs underpin stress testing, economic capital models, and IFRS 9 forward-looking macro adjustments. Publication schedules vary by indicator and country; revision cycles mean that macro data consumed in a model run may be superseded before the next cycle.</p>
+    <p class="l3-section__intent">Macro-economic and sector indices — GDP, consumer price index (CPI), purchasing managers' index (PMI), unemployment, commodity prices, and sector benchmarks — sourced from the national statistics office, central banks, and international providers (IMF, World Bank, Bloomberg Economics). These inputs underpin stress testing, economic capital models, and IFRS 9 forward-looking macro adjustments. Publication schedules vary by indicator and country; revision cycles mean that macro data consumed in a model run may be superseded before the next cycle.</p>
   </header>
   <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
     <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
@@ -390,7 +390,7 @@ Question or comment:
       <p>The AI agent maintains a publication schedule register for each macro indicator — provider, expected publication date, revision cycle, and the model runs that consume the indicator. It monitors each indicator's source feed daily, detects late publications and revised estimates, and generates an alert when a publication event is late beyond the expected window or when a revised estimate supersedes a value consumed in an active model run. The alert specifies the affected model and the magnitude of the revision, so that the market risk or IFRS 9 team can decide whether a re-run is required before the next reporting cycle.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The market risk and IFRS 9 teams are alerted to late macro publications and mid-cycle revisions before they affect the next model run or reporting cycle, enabling timely re-run decisions.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -431,7 +431,7 @@ Question or comment:
       <p>The AI agent reads macro indicator values from each subscribed provider for the same indicator and period and calculates the cross-provider divergence. Divergences exceeding a defined tolerance band — calibrated per indicator and market based on historical provider variance — are flagged in a weekly consistency report with the divergence magnitude, the providers involved, and the indicator currently selected for model consumption. The market risk and IFRS 9 teams review flagged divergences and document the basis for the selected input value.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">Cross-provider macro indicator divergences are identified and reviewed before model consumption, with the basis for input selection documented for audit and model validation.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -458,11 +458,11 @@ Question or comment:
       <h3 class="scenario-card__title">IFRS 9 Macro Input Version Control</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">The AI agent maintains a versioned record of every macro indicator value consumed in each IFRS 9 ECL model run — provider, vintage, publication date, and revision status — enabling the credit risk and finance teams to reproduce any historical ECL calculation and to assess the provision impact when a revised macro estimate supersedes a value used in a prior run. The version control record supports audit evidence under IFRS 9 and data lineage for macro overlay inputs in line with the BCBS 239 principles.</p>
+      <p class="scenario-card__intent">The AI agent maintains a versioned record of every macro indicator value consumed in each IFRS 9 expected credit loss (ECL) model run — provider, vintage, publication date, and revision status — enabling the credit risk and finance teams to reproduce any historical ECL calculation and to assess the provision impact when a revised macro estimate supersedes a value used in a prior run. The version control record supports audit evidence under IFRS 9 and data lineage for macro overlay inputs in line with the BCBS 239 principles.</p>
     </div>
     <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
   </summary>
-  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#expected-credit-loss">Expected credit loss</a></p>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory requirements:</span> <a href="../../regulatory-horizon/index.html#expected-credit-loss">Expected credit loss</a></p>
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>IFRS 9 ECL calculations consume macro indicators whose values change with each new publication or revision cycle. The specific vintage of each macro input consumed in each model run is not systematically recorded; when an auditor or regulator asks which GDP or CPI estimate was used in a given quarterly provision calculation, the credit risk team reconstructs the answer from email archives and model logs. Revision cycles mean that the reconstructed input value may differ from the actual value consumed if provider data has been back-revised.</p>
@@ -472,7 +472,7 @@ Question or comment:
       <p>The AI agent captures the macro indicator values at the point of consumption for each IFRS 9 model run — provider, indicator, period, value, publication date, and revision status — and stores the versioned record in the model data lineage register. When a revised estimate supersedes a value consumed in a prior run, the AI agent flags the estimated provision impact of the revision for the credit risk and finance teams, who decide whether a re-run or restatement is required. The version control record is available for audit and regulatory inquiry as a complete IFRS 9 macro input lineage trail.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">Every IFRS 9 model run carries a complete versioned record of macro indicator inputs, enabling full reproducibility and audit evidence for ECL calculations.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -527,7 +527,7 @@ Question or comment:
       <p>The AI agent reads the published official exchange rates, the overnight domestic benchmark rate, and interbank reference rates, and compares each rate against the prior close and expected range. It produces the morning FX rate context brief: rate levels by currency pair, overnight move summary, spread between official and interbank rates, and anomaly flags for rates outside expected ranges. The treasury desk reviews the brief before authorizing the revaluation cycle.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The treasury desk and valuation team receive a morning FX rate context brief before the revaluation cycle opens, covering official exchange rates, overnight moves, and anomaly flags, without manual assembly by a treasury analyst.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -568,7 +568,7 @@ Question or comment:
       <p>The AI agent reads each rate feed on receipt and applies a three-layer validation: publication-time check against the defined schedule window for each administrator, magnitude check using a rolling historical range and prior-day comparison, and cross-rate consistency check for FX pairs and the basis between benchmark rates across currencies. Rates failing any layer are quarantined and a structured alert — rate identifier, failure type, expected versus received value — is routed immediately to the market data team. The downstream rate engine receives a cleared rate set; quarantined rates are flagged for manual resolution or fallback substitution.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">Rate anomalies are detected and quarantined before downstream valuation and FX processing systems consume the feed, eliminating anomaly-driven MTM errors.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -609,8 +609,8 @@ Question or comment:
       <p>The AI agent reads the daily rate engine feed log and classifies each rate record as received-from-primary, received-from-fallback, or absent. It produces a daily coverage completeness report by currency pair, benchmark rate, and provider, with a trend summary showing the rolling 30-day completeness rate per feed. Feeds where the fallback substitution frequency or absence rate exceeds a defined threshold are flagged for vendor review. The treasury and market data teams use the report to monitor feed reliability; the monthly aggregate is formatted for inclusion in vendor SLA review documentation.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
-      <p class="okr-objective">The market data and treasury teams hold a continuous, evidence-based view of FX rate coverage completeness by feed and currency pair, supporting vendor SLA management and contract review.</p>
+      <div class="scenario-section__label">Acceptance criteria</div>
+      <p class="okr-objective">The market data and treasury teams have a continuous, evidence-based view of FX rate coverage completeness by feed and currency pair, supporting vendor SLA management and contract review.</p>
       <div class="okr-grid">
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
@@ -664,7 +664,7 @@ Question or comment:
       <p>The AI agent monitors feeds from each vendor on an intraday cadence, flagging completeness gaps, timeliness breaches, and outlier values before downstream systems consume the data. At month-end it computes completeness, timeliness, and accuracy metrics against the SLA thresholds in each vendor contract and generates the monthly SLA compliance report per vendor — including breach counts, severity distribution, and three-month trend. The market data team uses intraday alerts for same-day remediation and the monthly report for vendor performance review.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The market data team receives intraday anomaly alerts before downstream valuation and risk systems consume feed data, and a monthly vendor SLA compliance report per vendor for contract management.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -705,8 +705,8 @@ Question or comment:
       <p>The AI agent reads the current entitlement register, cross-references it against active user access logs from the rate engine and analytics platforms, and compares the active feed list against the licensed subscription set. It produces a reconciliation report: entitlements held by users with no active access in the trailing period (candidates for removal), feed subscriptions with zero active consumption (candidates for cancellation), and active feed consumption without a matching entitlement record (compliance exposure). The market data team and procurement team use the report for the quarterly entitlement review and annual contract renegotiation.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
-      <p class="okr-objective">The market data entitlement register is maintained at current accuracy through quarterly automated reconciliation, with licensing compliance maintained and unused subscriptions identified for cost rationalization.</p>
+      <div class="scenario-section__label">Acceptance criteria</div>
+      <p class="okr-objective">The market data entitlement register is kept accurate through quarterly automated reconciliation, so licensing terms are complied with and unused subscriptions are identified for cost savings.</p>
       <div class="okr-grid">
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
@@ -746,8 +746,8 @@ Question or comment:
       <p>The AI agent reads daily feed quality metrics — completeness by instrument, latency against the contracted delivery window, and accuracy against reference benchmarks — for each vendor, and maps each metric failure to the corresponding SLA threshold. It produces a monthly performance dashboard: SLA performance by vendor and feed type, breach count and cumulative credit entitlement, and a multi-period trend comparing the current contract year to the prior year. The procurement team uses the dashboard at contract review meetings; the market data team uses it to support credit claims.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
-      <p class="okr-objective">The market data team and procurement hold a structured monthly SLA performance record for each vendor, with credit entitlements quantified and evidence assembled for contract review.</p>
+      <div class="scenario-section__label">Acceptance criteria</div>
+      <p class="okr-objective">The market data team and procurement have a structured monthly SLA performance record for each vendor, with credit entitlements quantified and evidence assembled for contract review.</p>
       <div class="okr-grid">
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
@@ -801,7 +801,7 @@ Question or comment:
       <p>The AI agent reads the daily instrument price inputs assembled for each curve construction run and applies quality rules: tenor coverage completeness against the required construction set, outlier detection using prior-day levels and inter-dealer consensus bands, and staleness check against the expected intraday feed schedule. Inputs failing any rule are flagged with the failure type and a suggested substitution source. The market data team reviews the report, applies substitutions or manual overrides, and confirms the input set is cleared for construction. The day's constructed curve carries a reference to the input quality record.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">Yield curve construction runs on a complete, quality-validated input set each day, with problematic inputs identified and resolved before the bootstrapping process runs.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -842,7 +842,7 @@ Question or comment:
       <p>The AI agent reads the day's input instrument set, interpolation parameters, and prior-day curve and generates the construction commentary: input selection rationale with liquidity and term coverage assessment, interpolation method choice, curve movement attribution relative to prior day, and notable features such as inversion, kink, or bid-offer spread widening. The quant reviews and adds forward-looking context before distribution to front-office and treasury.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The quant team distributes a daily yield curve construction commentary — covering input selection, interpolation rationale, and movement attribution for local-currency and major-currency curves — drafted by the AI agent and reviewed by the quant before distribution.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -883,7 +883,7 @@ Question or comment:
       <p>The AI agent reads the constructed yield curve outputs and the interpolation methodology parameters applied by the curve engine, identifies tenors where interpolated rates are the sole basis for the curve point, and compares interpolated rates to historical ranges and neighboring tenor levels. It produces a daily methodology review brief: the set of interpolated tenors, the method applied, and a commentary on whether the interpolated levels are within reasonable bounds. Tenors where the interpolation gap is material — the interpolated rate deviates significantly from historical range or neighboring tenors — are flagged for review by the market risk quant team. The brief is attached to the curve record as daily documentation.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">Each daily constructed yield curve carries a methodology review brief documenting interpolated tenors, applied method, and a reasonableness assessment, satisfying audit and model review documentation requirements.</p>
       <div class="okr-grid">
         <div class="okr-kr">

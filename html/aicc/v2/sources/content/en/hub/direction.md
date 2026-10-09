@@ -10,7 +10,7 @@ Our strategy for using AI grows out of what has already been proven in practice.
 
 ## Business strategy {#strategy}
 
-The business's mission is to improve people's lives with digital products and services. The strategy rests on four directions, and AI serves each of them through the strategic themes described below.
+The business's mission is to improve people's lives with digital products and services. The strategy rests on four strategic directions, and AI serves each of them through the strategic themes described below.
 
 | Strategic direction | How AI helps | Through which themes |
 | --- | --- | --- |

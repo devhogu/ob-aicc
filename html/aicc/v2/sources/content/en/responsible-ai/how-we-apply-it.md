@@ -34,7 +34,7 @@ Generative AI works probabilistically, so it almost always needs a person next t
 - [[human-in-the-loop|Human in the loop]]: an employee reviews every result before it is used. This is how work runs in the low and medium tiers.
 - [[human-on-the-loop|Human on the loop]]: a person doesn't confirm every action but watches the system and can stop it. This is possible only in the high tier, and only after full review.
 
-For AI agents, good practice is this: only the functions, permissions, and autonomy they need; every action is logged; the agent can be stopped through a channel it can't influence; actions are reversible wherever possible. Whoever uses the AI's result in their work or signs it is responsible for it.
+For AI agents, good practice looks like this: they get only the functions, permissions, and autonomy they need; every action is logged; the agent can be stopped through a channel it can't influence; actions are reversible wherever possible. Whoever uses the AI's result in their work or signs it is responsible for it.
 
 ## Checks along the path {#path}
 
@@ -45,7 +45,7 @@ Checks accompany the [path of a task](page:hub/how-we-work#path) and get deeper 
 flowchart TB
   subgraph R1["Before the start"]
     direction LR
-    A["Funnel<br/>first risk-tier estimate"] --> B["Shaping<br/>data, vendor, human role, check plan"]
+    A["Funnel<br/>first risk-tier estimate"] --> B["Shaping<br/>data, vendor, role of the person, check plan"]
     B --> G1["Checkpoint: start decision<br/>risk tier and check plan visible"]
   end
   subgraph R2["After the start"]
@@ -75,7 +75,7 @@ A short [[practice-checklist|practice checklist]]:
 
 ## What to keep on the card {#evidence}
 
-Evidence is kept on the [[project-card|project card]], so that anyone can see what has been done:
+Evidence is kept on the [[project-card|project card]] so that anyone can see what has been done:
 
 - a description of the solution: what it's for, where it shouldn't be used, how it was tested;
 - the risk tier and a short rationale;
@@ -86,11 +86,11 @@ Evidence is kept on the [[project-card|project card]], so that anyone can see wh
 
 ## In operation and in an incident {#incident}
 
-Monitoring tracks quality, [[model-drift|drift]], how often people correct or reject the result, incidents, and costs. When a measure reaches its alert threshold, the business owner decides with the team what to do; the easiest place for this is the review at the end of the [[iteration|iteration]]. A noticeable change to the model, the vendor, the data class, or the autonomy is a reason to go through the checks it affects again.
+Monitoring tracks quality, [[model-drift|drift]], how often people correct or reject the result, incidents, and costs. When a measure reaches its alert threshold, the business owner decides with the team what to do; the easiest place to do this is the review at the end of the [[iteration|iteration]]. A noticeable change to the model, the vendor, the data class, or the level of autonomy is a reason to go through the checks it affects again.
 
 An [[ai-incident|AI incident]] is an event in which AI causes or could cause harm: harm to a customer or an employee, a data leak, an attack, an action by an AI agent beyond its limits, a serious failure. Harm that was prevented is an incident too.
 
-<ol class="flow"><li><strong>Report it</strong> through the usual incident channel and note that it involves AI.</li><li><strong>Stop the harm:</strong> pause the solution or the part of it involved.</li><li><strong>Analyze:</strong> what happened, why, and what will change.</li><li><strong>Learn the lessons:</strong> in the solution, in the evaluation set, in training; reassess the risk tier.</li></ol>
+<ol class="flow"><li><strong>Report it</strong> through the usual incident channel and note that it involves AI.</li><li><strong>Stop the harm:</strong> pause the solution or the part of it involved.</li><li><strong>Analyze:</strong> what happened, why, and what will change.</li><li><strong>Apply the lessons:</strong> in the solution, in the evaluation set, in training; reassess the risk tier.</li></ol>
 
 ## Everyday habits {#everyday}
 
@@ -99,4 +99,4 @@ An [[ai-incident|AI incident]] is an event in which AI causes or could cause har
 - Give AI only the data the task needs.
 - Don't use AI to get around a check or a restriction.
 
-Bring questions about your project to us: [how to engage with us](page:services/how-to-engage), and if your department needs the full set of checks, see [Governance](page:services/governance).
+If you have questions about your project, come to us (see [How to engage](page:services/how-to-engage)); if your department needs the full set of checks, see [Governance](page:services/governance).

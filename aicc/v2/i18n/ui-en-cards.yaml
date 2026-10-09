@@ -91,18 +91,18 @@ WIP-лимит {n} · {point} — бизнес-владелец: WIP limit {n} �
 В работе {n} из {lim} — {verdict}: '{n} of {lim} in progress: {verdict}'
 есть место для старта.: there is room to start one more.
 лимит занят, следующий старт ждёт места.: the limit is reached; the next start waits for room.
-Ближайшее решение у {n} {noun} — «{point}», решает {who}.: 'Next decision for {n} {noun}: “{point}”, made by the {who}.'
-'{n} Capabilities и Features: {counts}.': '{n} Capabilities and Features: {counts}.'
+Ближайшее решение у {n} {noun} — «{point}», решает {who}.: 'Next decision for {n} {noun}: “{point}”, to be made by the {who}.'
+'{n} Capabilities и Features: {counts}.': 'Capabilities and Features: {n} in total, {counts}.'
 Features в работе {doing} из {lim}, готовы к работе {ready} из {ready_lim}.: 'Features in progress: {doing} of {lim}; ready: {ready} of {ready_lim}.'
 'Срочная работа: {n}.': 'Urgent work: {n}.'
 Срочной работы нет.: No urgent work.
 'Capabilities и Features пока нет: они появляются после решения о старте.': 'No Capabilities or Features yet: they appear after the start decision.'
-Не начато {n} {noun} и {m} Capabilities и Features.: 'Not started: {n} {noun} and {m} Capabilities and Features.'
+Не начато {n} {noun} и {m} Capabilities и Features.: 'Not started: {n} {noun}; Capabilities and Features: {m}.'
 Первым в очереди — {id} «{title}».: 'First in line: {id} “{title}”.'
-'Решения ждут {n} {noun}, все решает {who}: {points}.': 'Decisions are pending for {n} {noun}, all made by the {who}: {points}.'
+'Решения ждут {n} {noun}, все решает {who}: {points}.': 'Decisions are pending for {n} {noun}, all to be made by the {who}: {points}.'
 'Решения ждут {n} {noun}: {points}.': 'Decisions are pending for {n} {noun}: {points}.'
 «{point}» — {n}: “{point}” — {n}
-«{point}» — {n}, решает {who}: “{point}” — {n}, made by the {who}
+«{point}» — {n}, решает {who}: “{point}” — {n}, to be made by the {who}
 'Принято решений: {n}.': 'Decisions made: {n}.'
 Принятых решений пока нет.: No decisions made yet.
 
@@ -110,7 +110,7 @@ Features в работе {doing} из {lim}, готовы к работе {ready
 Где мы сейчас: Where we are now
 'Портфель · проектов: {n}': 'Portfolio · projects: {n}'
 'Программа · Capabilities и Features: {n}': 'Program · Capabilities and Features: {n}'
-Карточки — по состоянию на {date}; дата, PI и итерация считаются от сегодняшнего дня.: Cards as of {date}; the date, PI and iteration are counted from today.
+Карточки — по состоянию на {date}; дата, PI и итерация считаются от сегодняшнего дня.: Cards as of {date}; the date, PI, and iteration are based on today's date.
 
 # Filter bar, board and detail view
 Найти: Search
@@ -156,8 +156,8 @@ Capabilities и Features, ещё не принятые: Capabilities and Feature
 Заведите карточку, и ваш проект появится во всех видах раздела.: Create a card, and your project will appear in every view of this section.
 Скопируйте шаблон ниже в файл <code>cards/ИДЕНТИФИКАТОР.yaml</code>.: Copy the template below into a file named <code>cards/IDENTIFIER.yaml</code>.
 ? 'Заполните обязательные поля: идентификатор, название, суть, профиль, состояние, позиции людей, задачу и ожидаемый результат, текущее состояние.'
-: 'Fill in the required fields: identifier, title, summary, profile, state, people’s positions, problem and intended outcome, and the live status.'
-Для идеи поставьте состояние «Воронка». Остальное можно добавить позже.: 'For an idea, set the stage to <span lang="ru">Воронка</span> (Funnel). You can add the rest later.'
+: 'Fill in the required fields: identifier, title, summary, profile, state, people’s positions, problem and intended outcome, and current status.'
+Для идеи поставьте состояние «Воронка». Остальное можно добавить позже.: 'For an idea, set the state to <span lang="ru">Воронка</span> (Funnel). You can add the rest later.'
 'Обновляйте карточку по мере работы: при следующей сборке все виды покажут изменения.': 'Update the card as the work goes on: the next build shows the changes in every view.'
 'Карточка проверяется схемой: сборка остановится и подскажет, что поправить. Схема — <code>cards/schema.json</code>.': 'A schema checks the card: the build stops and tells you what to fix. The schema is <code>cards/schema.json</code>.'
 Шаблон: Template
@@ -165,7 +165,7 @@ Capabilities и Features, ещё не принятые: Capabilities and Feature
 # Card page
 ← К проектам: ← Back to projects
 Точка контроля: Checkpoint
-На что опирается.: Based on.
+На что опирается.: Decision basis.
 'Критерий выхода на карточке: {criterion}': 'Exit criterion on the card: {criterion}'
 'Как устроена работа такого вида: <a href="{href}">профиль «{profile}»</a>.': 'How this kind of work runs: <a href="{href}">the “{profile}” profile</a>.'
 Класс обслуживания: Class of service
@@ -196,3 +196,5 @@ Capabilities и Features, ещё не принятые: Capabilities and Feature
 Результат.: Result.
 Чему научились.: What we learned.
 Ссылки: Links
+"{n} — {title}": "{title}: {n}"
+"Готово к старту|point": "Ready to start"

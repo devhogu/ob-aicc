@@ -12,7 +12,7 @@ source_url: https://code.claude.com/docs/ru/sub-agents
 source_hash: a4019e8cddf9
 ---
 
-After this guide you will be able to decide whether a task needs a subagent and make your own, for example a reviewer that only reads code and reports in a set format.
+After reading this guide, you will be able to decide whether a task needs a subagent and make your own, for example a reviewer that only reads code and reports in a set format.
 
 A subagent is a separate worker inside a session, with its own context, its own instructions and its own set of allowed tools. The main Claude hands it part of the work and gets back only the conclusions.
 
@@ -44,10 +44,10 @@ show the current code and suggest an improved version. Do not change the code yo
 
 `.claude/agents/` holds the project's subagents (keep them in git so the whole team has them), and `~/.claude/agents/` your personal ones for all projects. Only `name` and `description` are required; if you leave out `tools`, the subagent gets all the tools of the main session, so it is better to set the list explicitly.
 
-## How to call one {#use}
+## How to invoke one {#use}
 
 - In words: “Use the code-improver subagent to check this module.”
-- For certain, with a mention: type `@` and pick the subagent from the list.
+- To be sure, mention it: type `@` and pick the subagent from the list.
 - An independent review of finished work: “Have a subagent check the changes against the plan and list the gaps.” A fresh look doesn't depend on the reasoning of whoever wrote the code.
 
 ## How to design a good subagent {#design}
@@ -56,8 +56,8 @@ From the Introduction to Subagents course:
 
 - **The description decides what the main Claude will hand over.** The main agent sees the name and description of every subagent, and writes the assignment from the description. Put in it what the subagent needs to receive: “name exactly which files to check”, “return sources that can be cited”.
 - **The output format is the biggest improvement.** It gives the subagent a point at which to stop. For a review: summary · critical · important · minor · recommendations · verdict.
-- **An “Obstacles” section.** Have the subagent report setup problems, workarounds and fickle dependencies; otherwise the main Claude will discover them all over again.
-- **Minimal tools.** A researcher gets search and reading; a reviewer gets those plus commands for `git diff`; only the one who edits gets edits.
+- **An “Obstacles” section.** Have the subagent report setup problems, workarounds and flaky dependencies; otherwise the main Claude will discover them all over again.
+- **Minimal tools.** A researcher gets search and reading; a reviewer gets those plus commands for `git diff`; only a subagent that edits gets edit tools.
 
 ### Do you need a subagent {#need}
 

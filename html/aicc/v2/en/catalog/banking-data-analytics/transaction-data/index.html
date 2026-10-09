@@ -3,8 +3,8 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark">
 <title>Transaction data · AI Competence Hub</title>
 <script>try{var t=localStorage.getItem('hub-theme');document.documentElement.dataset.theme=t==='dark'?'dark':'light';}catch(e){}</script>
-<link rel="stylesheet" href="../../assets/styles/tokens.css"><link rel="stylesheet" href="../../assets/styles/components.css"><link rel="stylesheet" href="../../assets/styles/theme.css"><link rel="stylesheet" href="../../assets/styles/layouts/concern.css"><link rel="stylesheet" href="../../assets/styles/layouts/concern-l2.css"><link rel="stylesheet" href="../../../../assets/discovery.css"><script defer src="../../../../assets/discovery.js"></script><link rel="stylesheet" href="../../../../assets/ui/fonts.css?v=31af9632de"><link rel="stylesheet" href="../../../../assets/ui/tokens.css?v=7a14df66bd"><link rel="stylesheet" href="../../../../assets/ui/primitives.css?v=ea6572a6e0"><link rel="stylesheet" href="../../../../assets/ui/workspace.css?v=416781b646"><link rel="stylesheet" href="../../../../assets/site.css?v=5480d3be4e">
-<script src="../../../../assets/search-en.js"></script><script src="../../../../assets/i18n-en.js"></script><script src="../../../../assets/site.js?v=cfae61d4bb" defer data-root="../../../.." data-t-none="Nothing matches your search." data-t-light="Light mode" data-t-dark="Dark mode" data-t-mail-body="Page: {title}
+<link rel="stylesheet" href="../../assets/styles/tokens.css"><link rel="stylesheet" href="../../assets/styles/components.css"><link rel="stylesheet" href="../../assets/styles/theme.css"><link rel="stylesheet" href="../../assets/styles/layouts/concern.css"><link rel="stylesheet" href="../../assets/styles/layouts/concern-l2.css"><link rel="stylesheet" href="../../../../assets/discovery.css"><script defer src="../../../../assets/discovery.js"></script><link rel="stylesheet" href="../../../../assets/ui/fonts.css?v=31af9632de"><link rel="stylesheet" href="../../../../assets/ui/tokens.css?v=7a14df66bd"><link rel="stylesheet" href="../../../../assets/ui/primitives.css?v=ea6572a6e0"><link rel="stylesheet" href="../../../../assets/ui/workspace.css?v=416781b646"><link rel="stylesheet" href="../../../../assets/site.css?v=ca3f012564">
+<script src="../../../../assets/search-en.js"></script><script src="../../../../assets/i18n-en.js"></script><script src="../../../../assets/site.js?v=f0c9aa38f9" defer data-root="../../../.." data-t-none="Nothing matches your search." data-t-light="Light mode" data-t-dark="Dark mode" data-t-mail-body="Page: {title}
 ID: {ref}
 Address: {url}
 
@@ -195,7 +195,7 @@ Question or comment:
       <h1 class="page-header__title">Transaction data</h1>
     </div>
   </div>
-  <p class="page-header__intent">Transaction data is the Bank's highest-volume, highest-velocity data domain — the continuous record of every payment, transfer, card purchase, trade, and account movement across the institution. Raw transaction records carry minimal semantic content; their analytical value is unlocked through enrichment — merchant category, counterparty identity, economic purpose, and customer-journey context — and through lineage tracking that enables reconciliation, audit, and AML pattern detection. AML/CFT transaction monitoring requirements, SWIFT message archiving standards, and the BCBS 239 data aggregation principles expect transaction data to be complete, timely, and traceable from source to downstream system. <strong>The GenAI opportunity is to automate transaction enrichment and categorization at scale, compress reconciliation break investigation cycles, and surface behavioral patterns across the transaction stream</strong> — transforming raw payment records into an analytics-ready layer within hours of settlement.</p>
+  <p class="page-header__intent">Transaction data is the Bank's highest-volume, highest-velocity data domain — the continuous record of every payment, transfer, card purchase, trade, and account movement across the institution. Raw transaction records carry minimal semantic content; their analytical value is unlocked through enrichment — merchant category, counterparty identity, economic purpose, and customer-journey context — and through lineage tracking that enables reconciliation, audit, and AML pattern detection. AML/CFT transaction monitoring requirements, SWIFT message archiving standards, and the BCBS 239 data aggregation principles expect transaction data to be complete, timely, and traceable from source to downstream system. <strong>The generative AI opportunity is to automate transaction enrichment and categorization at scale, compress reconciliation break investigation cycles, and surface behavioral patterns across the transaction stream</strong> — transforming raw payment records into an analytics-ready layer within hours of settlement.</p>
 </header>
 <style>
   #problems-tab-payments-movement-data:checked ~ .problems-tab-bar label[for="problems-tab-payments-movement-data"] {
@@ -218,7 +218,7 @@ Question or comment:
     <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Insights &amp; analytics</h3><p>Transaction volumes, payment-rail utilization, and settlement failure rates are each monitored within separate operations dashboards. Cross-rail patterns — a payment-rail capacity constraint correlating with a settlement-failure spike, or a transaction-value distribution shift indicating emerging merchant or counterparty behavior — are identified only through bespoke analytical work commissioned after an event.</p></article><article class="discovery-context-card"><h3>Enablement</h3><p>AML transaction monitoring alert investigation requires analysts to retrieve the full transaction history of a flagged customer across all payment rails, enrich each transaction with merchant category and counterparty identity, and reconstruct the transaction network before assessing the alert. The data-retrieval and enrichment step precedes the substantive compliance judgment.</p></article><article class="discovery-context-card"><h3>Automation</h3><p>Transaction enrichment rule application, reconciliation break classification, and settlement exception reporting follow defined logic applied to structured transaction data on each settlement cycle. Each process is repeatable, rule-driven, and high-volume — candidates for continuous AI-driven execution with operations team review at the exception level.</p></article><article class="discovery-context-card"><h3>New business opportunities</h3><p>An enriched transaction stream — with merchant category, counterparty identity, and economic purpose attached to each record within hours of settlement — provides the substrate for customer-facing spending insights, AML pattern detection, credit underwriting behavioral signals, and merchant analytics. Peers operating with batch-enriched transaction data delivered at T+1 or later cannot offer the same depth of near-real-time analytics.</p></article></div>
   </div>
 </section>
-<div id="main-content" class="l3-sections" aria-label="Sub-concerns">
+<div id="main-content" class="l3-sections" aria-label="Subsections">
 <section class="l3-section" id="payment-transfer-records">
   <header class="l3-section__head">
     <h2 class="l3-section__title">Payment &amp; transfer records</h2>
@@ -253,7 +253,7 @@ Question or comment:
       <p>The AI agent accepts a natural-language query specifying a date range, payment rail, or correspondent bank and returns a completeness and accuracy assessment for the specified payment population — field coverage rates, missing mandatory fields, and records flagged for anomalous values. The compliance analyst uses the output to direct remediation or investigation without a data team handoff. Access is controlled through read-only permissions defined and maintained by the CDO.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">Compliance and AML analysts query payment record completeness and accuracy for specified correspondents, date ranges, and payment rails within a single working session under CDO-governed read-only access, without a data team request.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -284,7 +284,7 @@ Question or comment:
     </div>
     <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
   </summary>
-  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#aml-cft">AML/CFT standards</a><a href="../../regulatory-horizon/index.html#payments-modernization">Payments modernization</a></p>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory requirements:</span> <a href="../../regulatory-horizon/index.html#aml-cft">AML/CFT standards</a><a href="../../regulatory-horizon/index.html#payments-modernization">Payments modernization</a></p>
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>AML transaction monitoring and sanctions screening rules rely on the completeness of originator and beneficiary fields in payment records — SWIFT field 50 (ordering customer), field 59 (beneficiary customer), and correspondent bank chain fields. Payments with missing or incomplete fields are processed by monitoring systems using partial data, degrading the accuracy of screening results and creating regulatory exposure under AML/CFT requirements. Completeness failures are identified in compliance system exception reports after processing rather than before consumption.</p>
@@ -294,7 +294,7 @@ Question or comment:
       <p>The AI agent reads each incoming payment instruction before it is consumed by the AML monitoring and sanctions screening systems, validates the required fields against the completeness rules for each payment type (SWIFT, domestic interbank payment systems, card network), and flags incomplete records as same-session exceptions. The payments operations team receives the exception list with the missing field, the payment identifier, and the counterparty information available for manual completion. Payments that cannot be completed within the defined window are escalated to the compliance team for disposition.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">AML monitoring and sanctions screening systems receive complete, field-validated payment records, reducing screening accuracy failures from missing originator and beneficiary data.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -325,7 +325,7 @@ Question or comment:
     </div>
     <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
   </summary>
-  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#aml-cft">AML/CFT standards</a></p>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory requirements:</span> <a href="../../regulatory-horizon/index.html#aml-cft">AML/CFT standards</a></p>
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>Annual correspondent banking due diligence requires the compliance team to assemble transaction flow analytics — volume and value by currency, payment type, and originator jurisdiction — for each correspondent relationship over the review period. The data assembly requires extracting transaction records from the payments system and the SWIFT archive, aggregating by the required dimensions, and cross-referencing against the correspondent's risk profile. The assembly step consumes compliance analyst time and is inconsistent across relationships, creating variability in due diligence depth.</p>
@@ -335,7 +335,7 @@ Question or comment:
       <p>The AI agent reads the payments system and SWIFT message archive for each correspondent relationship, aggregates transaction flow data by currency, payment type, originator jurisdiction, and beneficiary jurisdiction over the review period, and identifies unusual flow patterns — jurisdiction concentrations inconsistent with the correspondent's stated business profile, payment type distributions that deviate from prior-year patterns. It produces a structured due diligence data package: flow summary table, unusual pattern flags, jurisdiction risk heat map, and a comparison to the prior review period. The compliance team reviews the package, applies risk assessment judgment, and updates the correspondent risk classification.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The compliance team conducts correspondent banking due diligence reviews from a structured, data-grounded package for each relationship, with analyst capacity directed to risk assessment rather than data assembly.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -390,7 +390,7 @@ Question or comment:
       <p>The AI agent reads the reconciliation system output at end of day, classifies breaks by type and resolution status, and generates the operations management narrative: break count by type, resolved versus outstanding, escalated items with root cause, and carry-forward summary. Operations management reviews the AI-generated narrative and signs off on the daily reconciliation close. Escalated items are flagged for next-day follow-up with root-cause context attached.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">Operations management reviews an AI-generated end-of-day reconciliation narrative — break count by type, resolution status, and unresolved break narrative — before daily close sign-off, with consistent quality regardless of individual analyst effort.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -431,7 +431,7 @@ Question or comment:
       <p>The AI agent reads the EOD break list from the reconciliation system and the processing log for each unmatched item, and classifies each break by applying lineage-based rules: timing difference (counterparty confirmation status), missing confirmation (no confirmation received from counterparty within the expected window), interface error (processing log shows a system-side failure), or genuine unmatched (no lineage trace supports a match). The classified break list ranks items by resolution approach — auto-clearable on next-day confirmation receipt, IT escalation required, or manual investigation required. Settlement operations direct investigation resources to the genuine unmatched and IT escalation tiers.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">Settlement operations resolve reconciliation breaks more efficiently through a classified, prioritized break list, with auto-clearable breaks separated from items requiring manual investigation.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -472,7 +472,7 @@ Question or comment:
       <p>The AI agent accepts a transaction identifier or a set of transaction identifiers and queries the processing log archive, the enrichment pipeline output, the AML monitoring system records, and the ledger posting records to reconstruct the end-to-end processing path. The output is a structured lineage trail: each processing step with its timestamp, the system that handled it, any screening or enrichment flags set, and the final ledger posting. For SWIFT transactions, the correspondent chain is reconstructed from the message archive. The investigator uses the trail as the evidence base for the STR narrative and regulatory response, without performing the manual archive reconstruction.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">AML investigators receive a complete transaction lineage trail within hours of request, directing analyst capacity to case analysis and STR preparation rather than archive reconstruction.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -527,7 +527,7 @@ Question or comment:
       <p>The AI agent reads the weekly enrichment pipeline output, tracks the unclassified transaction rate by merchant category and payment rail, and monitors the distribution of manual classification corrections applied by the training data team. Coverage drift — an unclassified rate rising above trend — and accuracy drift — a correction distribution shifting toward new merchant types or reference patterns — are identified and quantified. The drift report specifies the merchant category and payment rail affected, the magnitude of drift, and a suggested retraining trigger. The analytics team uses the report to schedule rule maintenance sprints and NLP model retraining cycles.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">Enrichment pipeline quality is maintained through weekly drift detection and structured maintenance cycles run by the analytics team, preventing silent coverage and accuracy degradation between manual reviews.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -568,7 +568,7 @@ Question or comment:
       <p>The AI agent reads the enriched transaction layer for the most recent month, aggregates transaction volume and value by spending category, payment rail, and customer segment, and produces a monthly spending category insight summary with time-series comparisons against the prior 12 months. It highlights the three largest category shifts per segment and flags categories where spending is diverging materially from the prior-year seasonal pattern. The retail and SME banking teams receive the summary as a shared baseline for product, marketing, and credit discussions.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">Product, marketing, and credit teams share a common monthly spending category view derived from the enriched transaction layer, enabling consistent cross-team analysis of customer spending behavior.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -609,7 +609,7 @@ Question or comment:
       <p>The AI agent reads each settlement transaction record, applies NLP classification to the merchant name and transaction reference string to infer merchant category and economic purpose, resolves the counterparty identity against the entity registry and existing customer golden records, and assigns a customer-journey context label where the transaction is part of a recognized product interaction sequence. Transactions classified with confidence below the defined threshold are queued for a secondary rule-based pass; transactions that fall below both thresholds are flagged for manual classification as training data. The enriched record is written to the analytics transaction layer within the defined latency window after settlement.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The analytics transaction layer carries enriched merchant category, counterparty identity, and economic purpose labels for ≥ 90% of settled transactions, providing a reliable substrate for AML, credit, and customer analytics.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -664,7 +664,7 @@ Question or comment:
       <p>The AI agent reads the enriched transaction stream and aggregates by product type, customer segment, and time dimension — deposit usage frequency and balance bands, loan utilization patterns and repayment behavior, card spending by MCC category, and digital channel transaction share. It produces a monthly product analytics dashboard with time-series views for each product and segment. The product management team uses the dashboard as a self-service analytics resource for product performance review and feature development prioritization, without requiring analytics team data requests for standard product usage questions.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">Product management holds a continuous, transaction-grounded view of product usage patterns by segment, enabling evidence-based product decisions without analytics team data requests for standard usage questions.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -705,7 +705,7 @@ Question or comment:
       <p>The AI agent reads the enriched transaction stream for the specified customer or segment, aggregates by spending category, payment rail, counterparty type, and time dimension, and produces a structured behavior profile. Credit and AML use cases receive purpose-specific profile sections with relevant indicators highlighted. The analyst receives the profile as structured output ready for downstream credit, compliance, or product decision use.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">Credit underwriting, AML, and product analytics functions receive structured transaction behavior profiles — spending patterns, payment-rail preferences, and behavioral anomalies — assembled by the AI agent from the enriched transaction stream for specified customers or segments.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -746,7 +746,7 @@ Question or comment:
       <p>The AI agent constructs the payment flow network from the enriched transaction record, treating each payment as a directed edge between the originator and beneficiary entities. It applies network analysis algorithms to detect structuring patterns (multiple entities making just-below-threshold transactions to a common recipient), layering chains (funds cycling through multiple accounts within a defined time window), and rapid pass-through patterns (accounts receiving and disbursing the majority of received funds within 24 hours). Detected network clusters are ranked by the strength of the anomaly signal and the total value flowing through the cluster. The AML investigations team receives the weekly network report with the supporting transaction evidence.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The AML investigations team holds a weekly view of network-level anomaly patterns in the payment flow graph, enabling proactive investigation of typologies not detectable at the individual transaction level.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -801,7 +801,7 @@ Question or comment:
       <p>The AI agent reads chargeback event records, classifies each event by reason code, merchant category code, card scheme (Visa, Mastercard, the national card scheme), and channel, and calculates chargeback rates by each dimension against the transaction base. Merchant categories with chargeback rates above defined thresholds and those trending toward scheme penalty levels are flagged. Non-fraud reason codes with elevated rates in specific merchant categories are highlighted as potential operational error sources. The card operations and merchant acquiring teams receive the weekly root cause report with priority ranking by cost exposure.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">Card operations and merchant acquiring teams hold a weekly, root-cause-structured view of chargeback drivers, enabling operational corrections and merchant-level interventions before scheme penalty thresholds are breached.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -842,7 +842,7 @@ Question or comment:
       <p>The AI agent reads the acquiring merchant portfolio and cross-references each merchant's assigned MCC against the merchant's transaction description patterns, business name classification, and available website category data. Merchants where the MCC is inconsistent with the transaction description pattern — by statistical comparison to the distribution of transactions under the same MCC — are flagged as potential mis-classifications, ranked by transaction volume and AML rule impact. The card acquiring team reviews the flagged merchants and initiates the scheme MCC re-registration process for confirmed mis-classifications.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">MCC assignments in the acquiring portfolio reflect current merchant business activity, improving customer spending categorization accuracy, AML monitoring rule precision, and interchange fee billing integrity.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -883,7 +883,7 @@ Question or comment:
       <p>The AI agent reads card authorization and settlement records across Visa, Mastercard, and national card scheme data, applies pattern detection across merchant category sequences, geographic velocity, and authorization-to-settlement timing, and produces a daily fraud signal report. The report identifies emerging typologies — patterns present in a growing proportion of disputed transactions — and ranks them by portfolio-level loss exposure. Card-present and card-not-present patterns are reported separately. The fraud operations team uses the report to update the real-time scoring model's feature set and to direct case investigation resources to the highest-risk merchant categories.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The fraud operations team receives a daily portfolio-level fraud pattern signal covering all card scheme data, enabling emerging typology detection before the pattern reaches material loss levels.</p>
       <div class="okr-grid">
         <div class="okr-kr">

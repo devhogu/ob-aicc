@@ -108,7 +108,8 @@ def add_pages(pages, site, terms, api):
     def next_point(card):
         if card['profile'] == 'run-rate' and card['stage'] in RUN_RATE_NEXT:
             return tuple(T(x) for x in RUN_RATE_NEXT[card['stage']])
-        return tuple(T(x) for x in NEXT_POINT[card['stage']])
+        point, who, check = NEXT_POINT[card['stage']]
+        return T(point, context='point'), T(who), T(check)  # a control point may be named apart from the column it shares a word with
 
     def V(value):
         """A value of a fixed vocabulary (state, class of service, status) in the edition language."""
@@ -220,7 +221,7 @@ def add_pages(pages, site, terms, api):
                  + ' ' + (T('Срочная работа: {n}.', n=urgent) if urgent else T('Срочной работы нет.'))
                  if work else T('Capabilities и Features пока нет: они появляются после решения о старте.'))
     reg_status = T('{n} {noun}: {counts}.', n=len(cards), noun=P(len(cards), ('карточка', 'карточки', 'карточек')),
-                   counts=', '.join(f'{n} — {title.lower()}' for title, n in sorted({T(PROFILE_TITLE[c["profile"]]): sum(1 for x in cards if x["profile"] == c["profile"]) for c in cards}.items(), key=lambda x: -x[1])))
+                   counts=', '.join(T('{n} — {title}', n=n, title=title.lower()) for title, n in sorted({T(PROFILE_TITLE[c["profile"]]): sum(1 for x in cards if x["profile"] == c["profile"]) for c in cards}.items(), key=lambda x: -x[1])))
 
     # where each project is
     cols = ''.join(column(T(s), pf_en[s], len(by_stage[s]), pf_gate[s],

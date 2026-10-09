@@ -12,7 +12,7 @@ source_url: https://platform.claude.com/docs/ru/build-with-claude/prompt-enginee
 source_hash: 7e8b133e9b24
 ---
 
-A style is hard to describe in words and easy to show. This guide is about setting the tone and format of an answer with ready samples: afterwards you'll be able to give Claude your best emails or summaries and get a new text in the same style.
+A style is hard to describe in words and easy to show. This guide is about setting the tone and format of an answer with ready-made samples. By the end, you will be able to give Claude your best emails or summaries and get new text in the same style.
 
 ## What examples should be like {#good}
 
@@ -26,7 +26,7 @@ A style is hard to describe in words and easy to show. This guide is about setti
 
 ## What it looks like {#how}
 
-Below, each example is wrapped in an `<example>` … `</example>` tag. A tag is just a word in angle brackets: it shows Claude where an example starts and ends. More about tags in the guide [Role and structure](page:kb/guides/prompt-structure). The answers in the example are illustrative.
+Below, each example is wrapped in an `<example>` … `</example>` tag. A tag is just a word in angle brackets: it shows Claude where an example starts and ends. For more on tags, see the guide [Role and structure](page:kb/guides/prompt-structure). The answers in the example are illustrative.
 
 ```
 Reply to the customer in the same style as in the examples.
@@ -37,7 +37,7 @@ Answer: Yes. Open the card → “Settings” → “Close card”. We'll transf
 </example>
 <example>
 Question: Why didn't my payment go through?
-Answer: Most often it's because of the card limit. Check the limit under “Card” → “Limits”. If you haven't reached it, write to us and we'll sort it out.
+Answer: Usually it's the card limit. Check the limit under “Card” → “Limits”. If you haven't reached it, write to us and we'll sort it out.
 </example>
 
 Customer question: {question}

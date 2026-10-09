@@ -23,7 +23,7 @@
       <h1 class="page-header__title">Capital management</h1>
     </div>
   </div>
-  <p class="page-header__intent">Capital management is the Bank's discipline for maintaining its regulatory capital ratios — CET1, Tier 1, and Total Capital — within the bounds set by the regulator's minima, plus the Bank's own management buffers, while deploying capital efficiently across business lines. It encompasses capital position monitoring, forward capital projection, stress capital assessment (ICAAP), and all supervisory dialog on capital adequacy. <strong>The GenAI opportunity is continuous capital instrumentation and ICAAP drafting acceleration</strong> — translating a monthly reporting cycle into a weekly forward-looking signal and compressing ICAAP production from months to weeks.</p>
+  <p class="page-header__intent">Capital management is the Bank's discipline for maintaining its regulatory capital ratios — CET1, Tier 1, and Total Capital — within the bounds set by the regulator's minima, plus the Bank's own management buffers, while deploying capital efficiently across business lines. It encompasses capital position monitoring, forward capital projection, stress capital assessment (ICAAP), and all supervisory dialog on capital adequacy. <strong>The generative AI opportunity is continuous capital instrumentation and ICAAP drafting acceleration</strong> — translating a monthly reporting cycle into a weekly forward-looking signal and compressing ICAAP production from months to weeks.</p>
 </header>
 <style>
   #problems-tab-capital-position-projection:checked ~ .problems-tab-bar label[for="problems-tab-capital-position-projection"] {
@@ -46,7 +46,7 @@
     <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Insights &amp; analytics</h3><p>CET1 and Tier 1 ratios are reported to ALCO monthly from data assembled across Finance, Risk, and Treasury. Between cycles, the CFO and CRO lack a current forward view of the capital trajectory — emerging headroom pressure from loan growth, provisioning, or regulatory change is identified reactively after positions have moved materially.</p></article><article class="discovery-context-card"><h3>Enablement</h3><p>Capital scenario analysis — required for ICAAP, for supervisory dialog, and for capital action decisions — is bottlenecked on small capital modeling teams. When a rating agency or the regulator requests a sensitivity analysis on an alternative macroeconomic scenario, the response requires several weeks of model time and senior analyst capacity.</p></article><article class="discovery-context-card"><h3>Automation</h3><p>ICAAP narrative sections, capital ratio walk reports for ALCO, and capital plan summaries for the board are assembled manually from model outputs and prior documents in every reporting cycle. Each document has a prescribed structure — for the ICAAP, the regulator publishes format requirements — and known inputs.</p></article><article class="discovery-context-card"><h3>New business opportunities</h3><p>A continuously instrumented capital position enables the CFO to identify RWA optimization opportunities — segments or products where capital consumption is high relative to RAROC — in time to redirect origination before the quarter closes. Banks monitoring capital efficiency weekly rather than monthly act on the signal before the drag compounds.</p></article></div>
   </div>
 </section>
-<div id="main-content" class="l3-sections" aria-label="Sub-concerns">
+<div id="main-content" class="l3-sections" aria-label="Subsections">
 <section class="l3-section" id="cet1-tier1-position">
   <header class="l3-section__head">
     <h2 class="l3-section__title">CET1 &amp; Tier 1 position</h2>
@@ -81,7 +81,7 @@
       <p>The AI agent reads daily capital feeds — current RWA components, CET1 deductions, accumulated OCI, and retained earnings — and computes the live distance to each buffer threshold: regulatory minimum, management buffer, and ICAAP stress capital. When any ratio moves within a defined proximity band — configurable by the CFO's office — the AI agent issues an attributed alert summarizing the current position, the remaining headroom, and the top three intra-period drivers of the movement. Treasury reviews the alert and determines the management response.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">Treasury and the CFO receive an attributed alert — current position, remaining headroom, and the top three intra-period drivers — whenever a capital ratio moves within the defined proximity band of a regulatory minimum, management buffer, or ICAAP stress capital threshold.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -122,7 +122,7 @@
       <p>The AI agent reads current capital feeds — RWA components, CET1 deductions, accumulated OCI — and applies approved planning model assumptions to project the ratio trajectory. It identifies which drivers are tightening headroom fastest, computes distance to each regulatory minimum and management buffer, and produces a weekly ALCO capital narrative in a consistent format. The Treasury and Finance teams review the narrative before it goes to ALCO.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">CET1, Tier 1, and Total Capital ratio trajectories over a rolling 12-month horizon are available to ALCO and the Treasurer each week, with headroom against regulatory minima and management buffers quantified and driver-attributed in a consistent format.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -163,7 +163,7 @@
       <p>The AI agent reads the prior and current-period RWA data extracts across credit, market, and operational risk categories. It applies the Bank's standard RWA attribution methodology — new business, parameter changes, model changes (where the Bank uses internal models), definition changes, and FX — and produces a waterfall chart with materiality-ranked drivers. The attribution is available to the CFO and Treasury on the first day of reporting. Capital Management reviews and signs off the methodology application before the output is shared with ALCO.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The CFO and Treasury receive a waterfall attribution of each period's RWA movement — new business, parameter changes, model changes, definition changes, and FX — with materiality-ranked drivers on the first day of reporting.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -218,7 +218,7 @@
       <p>The AI agent reads each incoming supervisory letter and the current observation register. It extracts new observations, adds them to the structured register with categorization by risk type and regulatory framework, and cross-references the letter's content against open items to identify where the regulator is revisiting a prior concern. The cross-reference output is presented to the CFO and CRO with the draft response for context. Capital Management owns the register and confirms classification.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">Capital Management holds a structured register of all open supervisory observations — categorized by topic, due date, and closure status — and the CFO and CRO see, with each draft response, where a new supervisory letter revisits an open item.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -259,7 +259,7 @@
       <p>The AI agent reads the current capital and liquidity position from live feeds, the open observation register, the regulator's most recent published consultation papers and inspection focus areas, and the Bank's prior meeting notes. It assembles a pre-meeting briefing covering current ratios and headroom, open observation status, recent regulator guidance relevant to the Bank's position, and a Q&amp;A preparation section for topics likely to arise. The CFO and CRO review and edit the briefing; the AI agent refreshes ratio data on the morning of the meeting.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The CFO and CRO receive a briefing before each scheduled supervisory meeting — current ratios and headroom, open observation status, relevant recent regulator guidance, and Q&amp;A preparation — with ratio data refreshed on the morning of the meeting.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -300,7 +300,7 @@
       <p>The AI agent reads the incoming supervisory letter, the prior ICAAP and Pillar 2 submissions, and any open supervisory observations. It drafts a response that addresses each supervisory point directly, references the relevant prior submission passage, and maintains consistency with the Bank's established capital adequacy positions. Finance and the CRO review the draft and apply judgment on tone and regulatory relationship management before dispatch.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">Written supervisory responses — ICAAP cover letters, Pillar 2 guidance acknowledgments, remediation plan responses, and replies to ad hoc data requests from the regulator — are drafted from current capital data and prior submission records with explicit consistency to prior submissions and direct responses to each supervisory point.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -355,7 +355,7 @@
       <p>The AI agent reads the current draft and prior-year approved ICAAP document. It produces a structured delta summary covering changes in Pillar 1 and Pillar 2 methodology, scenario design and parameter changes, capital ratio trajectory, stress results, and governance narrative. Changes are ranked by materiality and flagged for CFO and CRO sign-off before filing. The delta summary is retained as evidence of proactive disclosure review.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The CFO and CRO receive a materiality-ranked delta summary of all changes between the draft ICAAP and the prior-year approved submission — methodology, scenario design, capital ratio trajectory, stress results, and governance narrative — for sign-off before filing.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -396,7 +396,7 @@
       <p>The AI agent reads the stress scenario outputs from the capital model across all ICAAP scenarios and risk types. It ranks scenarios by total stressed capital consumption, decomposes each scenario's charge into credit, market, operational, and Pillar 2 components, and maps the largest credit stress charges to BU portfolios by product type and geography. The ranked output is presented alongside the narrative assessment to the Risk Committee and CFO. Capital Management validates methodology alignment before distribution.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The Risk Committee and CFO receive the ICAAP stress scenarios ranked by total stressed capital consumption, with each scenario's charge decomposed by risk type and the largest credit stress charges mapped to BU portfolios.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -437,7 +437,7 @@
       <p>The AI agent reads capital model outputs, stress test results, business plan data, the prior ICAAP submission, and regulator feedback letters. It generates ICAAP sections in the prescribed structure — capital adequacy assessment, stress testing, Pillar 2 add-ons, and management overlays — and flags prior-year supervisory observations for explicit response in the current draft. Finance and Risk review and edit; the AI agent handles the drafting cycle.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The ICAAP submission draft — structured per regulator prescription and explicitly addressing prior-year supervisory observations — is available for Finance and Risk review within 3 weeks of the data package being finalized, substantially reducing CFO and CRO drafting time across the annual production window.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -472,7 +472,7 @@
   <div class="l3-section__scenarios">
 <details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/capital-management/capital-actions/at1-tier2-market-window-assessment" id="scenario-at1-tier2-market-window-assessment" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
-    <span class="scenario-lens scenario-lens--new-opps">New opps</span>
+    <span class="scenario-lens scenario-lens--new-opps">New opportunities</span>
     <div class="scenario-card__title-col">
       <span class="scenario-card__chevron" aria-hidden="true">▸</span>
       <h3 class="scenario-card__title">AT1 &amp; Tier 2 Market Window Assessment</h3>
@@ -492,7 +492,7 @@
       <p>The AI agent reads current AT1 and Tier 2 secondary spread data, recent peer issuance pricing and deal sizes, and the Bank's forward capital plan including projected buffer headroom. It assesses whether current all-in issuance cost falls within the Bank's approved pricing mandate and presents a market window assessment covering spread level, peer pricing context, and indicative issuance economics at the Bank's target size. The Treasurer and CFO use the assessment as primary briefing material before instructing syndicate banks. The AI agent does not execute any market transaction.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The CFO and Treasurer receive a market window assessment — AT1 and Tier 2 spread levels, peer pricing context, and indicative issuance economics at the Bank's target size — showing whether the all-in cost falls within the approved pricing mandate.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -523,7 +523,7 @@
     </div>
     <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
   </summary>
-  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#capital-liquidity">Capital and liquidity reforms</a></p>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory requirements:</span> <a href="../../regulatory-horizon/index.html#capital-liquidity">Capital and liquidity reforms</a></p>
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>Capital distribution proposals — dividend declarations, share buybacks, and, where the Bank has such instruments, AT1 or Tier 2 calls — are assessed manually by the Capital Management team against current and projected ratios. The stress-tested headroom analysis required for ALCO and board approval is produced independently for each action, without a standardized framework that cross-references the stress capital requirement from the current ICAAP.</p>
@@ -533,7 +533,7 @@
       <p>The AI agent reads the current capital position, the approved ICAAP stress scenario results, and the proposed capital action parameters. It computes the pro forma CET1, Tier 1, and Total Capital ratios post-action, applies the ICAAP stress scenarios to the post-action position, and quantifies remaining headroom against regulatory minima, management buffers, and Pillar 2 guidance. The output is structured for ALCO presentation and board pack inclusion. Capital Management reviews and confirms the methodology before distribution to governance.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">ALCO and the board receive, before approving a proposed dividend, buyback, or AT1/Tier 2 call or issuance, a headroom analysis of pro forma CET1, Tier 1, and Total Capital ratios stress-tested under the ICAAP scenarios.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -574,7 +574,7 @@
       <p>The AI agent reads the current capital position, the approved three-year capital plan, the ICAAP stress scenario outputs, and the current year's distributable earnings estimate. It runs the three standard dividend payout scenarios — progressive policy, flat payout, and payout cut — computing the CET1 trajectory under each scenario across three years and the distance to regulatory minima and management buffers in each. The scenario pack is formatted for board presentation, with the ICAAP stress overlay applied to each payout scenario. Capital Management reviews the output and adds qualitative context for the board before distribution.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The CFO and board receive, for the annual dividend policy review, a scenario pack showing the three-year CET1 trajectory and distance to regulatory minima and management buffers under progressive, flat, and cut payout scenarios with the ICAAP stress overlay.</p>
       <div class="okr-grid">
         <div class="okr-kr">

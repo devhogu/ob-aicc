@@ -12,7 +12,7 @@ source_url: https://platform.claude.com/docs/ru/build-with-claude/prompt-enginee
 source_hash: 044fb81a6a0d
 ---
 
-One huge prompt — “read, analyze, write a report, and check it” — often gives a mediocre result: the model spreads itself too thin. It's better to split the work into steps, where each step is a separate prompt with one goal. Such a sequence is called a prompt chain. After this guide you'll be able to split your big task into a chain and check the result at each step.
+One huge prompt — “read, analyze, write a report, and check it” — often gives a mediocre result: the model spreads itself too thin. It's better to split the work into steps, where each step is a separate prompt with one goal. Such a sequence is called a prompt chain. By the end, you will be able to split your big task into a chain and check the result at each step.
 
 ## The main chain: draft — review — revise {#draft}
 
@@ -34,7 +34,7 @@ When you first need to make sense of the materials, add steps at the start:
 <li><b>Extract</b><span>copy the facts and figures you need out of the documents</span></li>
 <li><b>Analyze</b><span>compare, find deviations, draw conclusions</span></li>
 <li><b>Write</b><span>a summary or an email based on the conclusions</span></li>
-<li><b>Check</b><span>check the text against the facts from step 1</span></li>
+<li><b>Check</b><span>compare the text with the facts from step 1</span></li>
 </ol>
 
 ## Why it works {#why}

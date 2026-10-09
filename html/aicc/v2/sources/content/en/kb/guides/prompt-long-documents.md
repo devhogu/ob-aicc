@@ -12,7 +12,7 @@ source_url: https://platform.claude.com/docs/ru/build-with-claude/prompt-enginee
 source_hash: 8355f0692905
 ---
 
-Claude can read a very long text: an annual report, a contract, a dozen regulations at once. But details get lost easily in a long text — for people and for the model alike. This guide is about three techniques that will let you ask questions about large documents and check the answer against quotes.
+Claude can read a very long text: an annual report, a contract, a dozen internal procedures at once. But details get lost easily in a long text — for people and for the model alike. This guide is about three techniques that will let you ask questions about large documents and check the answer against quotes.
 
 <ol class="rai-flow">
 <li><b>Documents at the top</b><span>all the text first, with the question and instructions at the end</span></li>
@@ -33,7 +33,7 @@ You already know tags from the guide [Role and structure](page:kb/guides/prompt-
 ```
 <documents>
   <document index="1">
-    <source>Lending regulation, 2026 edition</source>
+    <source>Lending procedure, 2026 edition</source>
     <document_content>…</document_content>
   </document>
   <document index="2">
@@ -42,10 +42,10 @@ You already know tags from the guide [Role and structure](page:kb/guides/prompt-
   </document>
 </documents>
 
-Which terms in the minutes are inconsistent with the regulation?
+Which terms in the minutes are inconsistent with the procedure?
 ```
 
-If you attach files rather than paste text, give them clear names: Claude will understand “Lending_regulation_2026.pdf” better than “document1.pdf”.
+If you attach files rather than paste text, give them clear names: Claude will understand “Lending_procedure_2026.pdf” better than “document1.pdf”.
 
 ## Quotes first {#quotes}
 

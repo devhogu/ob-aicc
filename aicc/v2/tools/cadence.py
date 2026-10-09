@@ -18,7 +18,7 @@ from datetime import date, timedelta
 import json
 from pathlib import Path
 
-from i18n import T, P, loc, lang
+from i18n import SOURCE, T, P, loc, lang
 
 DATA = json.loads((Path(__file__).resolve().parents[1] / 'calendar.json').read_text(encoding='utf-8'))
 MONTHS = ['январь', 'февраль', 'март', 'апрель', 'май', 'июнь', 'июль', 'август', 'сентябрь', 'октябрь', 'ноябрь', 'декабрь']
@@ -116,6 +116,8 @@ def esc(text):
 
 def span(a, b, long=False):
     names = LONG if long else SHORT
+    if lang() != SOURCE and (a.month, a.year) == (b.month, b.year):  # English writes a range within one month as "5–11 Oct 2026"
+        return f'{a.day}–{b.day} {T(names[b.month - 1])} {b.year}'
     left = f'{a.day} {T(names[a.month - 1])}' + (f' {a.year}' if a.year != b.year else '')
     return f'{left} – {b.day} {T(names[b.month - 1])} {b.year}'
 

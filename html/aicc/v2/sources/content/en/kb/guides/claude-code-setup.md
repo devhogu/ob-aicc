@@ -1,6 +1,6 @@
 ---
 title: "Set up Claude Code for your project: CLAUDE.md, permissions, skills, hooks"
-summary: What to put in CLAUDE.md and what to leave out, how to allow the safe and block reading secrets, and when you need a skill, a subagent, a hook or a connection.
+summary: What to put in CLAUDE.md and what to leave out, how to allow what's safe and block reading secrets, and when you need a skill, a subagent, a hook or a connection.
 category: Claude Code
 level: advanced
 minutes: 8
@@ -11,7 +11,7 @@ source_url: https://code.claude.com/docs/en/best-practices
 source_hash: 0867f23886ad
 ---
 
-After this guide you will be able to turn `CLAUDE.md` into a short working note, set up permissions (what is fine without asking and what is never allowed), and choose how to cover repeated work: with a skill, a subagent, a hook or a connection.
+After reading this guide, you will be able to turn `CLAUDE.md` into a short working note, set up permissions (what is fine without asking and what is never allowed), and choose how to cover repeated work: with a skill, a subagent, a hook or a connection.
 
 A few minutes of setup make every following session noticeably better.
 
@@ -34,9 +34,9 @@ An example fragment for a project in a regulated environment (replace the comman
 - Tests for one module: ./gradlew :payments:test
 
 # Rules
-- Work only in the current branch; the developer makes the commit and push
+- Work only in the current branch; the developer commits and pushes
 - Do not read or edit .env or the secrets/ directory
-- Test data must be made up only, with no real customer data
+- Test data must be made up, with no real customer data
 - Do not change database migrations without separate approval
 ```
 
@@ -77,10 +77,10 @@ Permission rules refine the mode for particular commands and files: `allow` cove
 <article><h3>Connections (MCP)</h3><p>Access to the task tracker, a database or documentation with the <code>claude mcp add</code> command, if the connection is approved. For details, see <a href="page:kb/guides/claude-code-mcp">MCP connections</a>.</p></article>
 </div>
 
-The rule of choice: `CLAUDE.md` is for what is always needed, a skill for what is needed now and then, a hook for what must happen without fail.
+The rule of thumb: `CLAUDE.md` is for what is always needed, a skill for what is needed now and then, a hook for what must happen without fail.
 
 ## Safety {#safety}
 
 `CLAUDE.md`, skills and project settings live in git and are read in every session, so they must contain no passwords, keys or tokens. Connect only approved tools and look at the changes (`git diff`) before you commit.
 
-**Try this:** add a `deny` rule for files with secrets to the project's `.claude/settings.json`, open a new session and ask Claude to read `.env`: it should be refused. Check the rules with the `/permissions` command.
+**Try this:** add a `deny` rule for files with secrets to the project's `.claude/settings.json`, open a new session and ask Claude to read `.env`: the request should be refused. Check the rules with the `/permissions` command.

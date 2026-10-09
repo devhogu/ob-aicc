@@ -5,7 +5,7 @@
   title: DeepLearning.AI
   title_en: "DeepLearning.AI"
   what: Бесплатные короткие курсы на час-два по запросам к моделям, работе с источниками, оценке и агентам; еженедельная рассылка The Batch.
-  what_en: "Free short courses of an hour or two on prompting models, working with sources, evaluation, and agents; the weekly newsletter The Batch."
+  what_en: "Free short courses, an hour or two each, on prompting, working with sources, evaluation, and agents, plus The Batch, a weekly newsletter."
   for_us: Быстрый способ освоить те методы, которыми мы строим решения.
   for_us_en: "A quick way to learn the methods we use to build solutions."
 - id: hugging-face
@@ -25,7 +25,7 @@
   what: Препринты исследований AI и ежедневная подборка статей со ссылками на код; она заменила закрытый в 2025 году Papers with Code.
   what_en: "Preprints of AI research and a daily selection of papers with links to code; it replaced Papers with Code, which closed in 2025."
   for_us: "Проверить заявление поставщика: что сказано в статье и подтверждается ли результат."
-  for_us_en: "To check a vendor’s claim: what the paper says and whether the result holds up."
+  for_us_en: "For checking a vendor’s claim: what the paper actually says and whether the result holds up."
 - id: stanford-hai-ai-index
   group: Следить за отраслью
   group_en: "Follow the industry"
@@ -70,7 +70,7 @@
   what: Доклады об управлении AI и будущем финансовых услуг, рассчитанные на советы директоров.
   what_en: "Reports on AI governance and the future of financial services, written for boards of directors."
   for_us: Общий язык руководителей в разговоре об AI.
-  for_us_en: "A common language for leaders when they talk about AI."
+  for_us_en: "The shared language leaders use when they talk about AI."
 - id: mitre-atlas-and-ai-incident-database
   group: Безопасность и инциденты
   group_en: "Security and incidents"
@@ -79,4 +79,4 @@
   what: Матрица атак на системы AI и открытая база реальных инцидентов с AI.
   what_en: "A matrix of attacks on AI systems and an open database of real AI incidents."
   for_us: Термины для модели угроз и примеры того, что уже случалось у других.
-  for_us_en: "Terms for a threat model, and examples of what has already happened elsewhere."
+  for_us_en: "Terms for threat modeling, and examples of what has already happened to others."

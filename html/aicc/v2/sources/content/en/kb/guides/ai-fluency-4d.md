@@ -1,6 +1,6 @@
 ---
 title: Four skills for working with AI (4D)
-summary: Delegation, Description, Discernment and Diligence, a simple framework for working through any work task with AI deliberately rather than by guesswork.
+summary: Delegation, Description, Discernment, and Diligence: a simple framework for approaching any work task with AI deliberately rather than by guesswork.
 category: Getting started
 level: start
 minutes: 6
@@ -11,15 +11,15 @@ source_url: https://academy.claude.com/courses/ai-fluency-framework-foundations
 source_hash: 57a7a21a3042
 ---
 
-This guide is for everyone who has already tried working with an assistant. After it, you will be able to work through any work task with four questions: what to hand to AI, how to describe it, how to check the result, and what you remain responsible for yourself.
+This guide is for anyone who has already tried working with an assistant. By the end, you will be able to approach any work task with four questions: what to hand to AI, how to describe it, how to check the result, and what you remain responsible for yourself.
 
-Being good at working with AI isn't about knowing which buttons to press. The AI Fluency course, which Anthropic also uses to train its own staff, boils this ability down to four skills. They are remembered by the first letter of their names: **4D**.
+Being good at working with AI isn't about knowing which buttons to press. The AI Fluency course, which Anthropic also uses to train its own staff, boils this ability down to four skills. All four names start with D, hence **4D**.
 
 <ol class="rai-principles">
-<li><b>Delegation <span class="en">(delegating)</span></b><span>Decide whether to take on a task with AI at all, which part to hand to it and which to keep for yourself.</span></li>
-<li><b>Description <span class="en">(describing)</span></b><span>Explain the goal, the context and the result you need so that AI understands the task. That is what a good prompt is.</span></li>
-<li><b>Discernment <span class="en">(evaluating)</span></b><span>Check soberly how useful and correct the result is, and notice where AI got it wrong.</span></li>
-<li><b>Diligence <span class="en">(taking responsibility)</span></b><span>Take responsibility for what you do with AI: what data you share, what you pass on, and whom you tell that you worked with AI.</span></li>
+<li><b>Delegation <span class="en">(what to hand over)</span></b><span>Decide whether to take on a task with AI at all, which part to hand to it and which to keep for yourself.</span></li>
+<li><b>Description <span class="en">(how to explain it)</span></b><span>Explain the goal, the context and the result you need so that AI understands the task. That is what a good prompt is.</span></li>
+<li><b>Discernment <span class="en">(judging the result)</span></b><span>Judge critically how useful and correct the result is, and notice where AI got it wrong.</span></li>
+<li><b>Diligence <span class="en">(owning the result)</span></b><span>Take responsibility for what you do with AI: what data you share, what you pass on, and whom you tell that you worked with AI.</span></li>
 </ol>
 
 ## Example: a memo on a new regulation {#example}
@@ -49,6 +49,6 @@ The more independence AI has, the more the fourth skill matters: decide in advan
 
 ## Try it today {#try}
 
-Take one work task for this week (a report, an email, a meeting summary) and write it down by the 4D in four lines: what you hand to AI, how you will describe the task, how you will check the result, and what you will tell colleagues about how it was produced. Separately, note what you kept for yourself.
+Take one work task for this week (a report, an email, a meeting summary) and write it up in four lines, one for each D: what you hand to AI, how you will describe the task, how you will check the result, and what you will tell colleagues about how it was produced. Separately, note what you kept for yourself.
 
-Each skill in detail, with exercises, is in the guide [AI Fluency: the complete guide](page:kb/guides/ai-fluency-complete-guide).
+For each skill in detail, with exercises, see the guide [AI Fluency: the complete guide](page:kb/guides/ai-fluency-complete-guide).

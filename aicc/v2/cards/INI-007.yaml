@@ -1,8 +1,8 @@
 id: INI-007
 title: "Розничное кредитование: кредитные линии, кредиты и ипотека"
-title_en: "Retail lending: credit lines, loans and mortgages"
+title_en: "Retail lending: credit lines, loans, and mortgages"
 summary: "Вместе с функцией розничного кредитования разбираем, что может дать AI в работе с кредитными линиями, кредитами и ипотекой, начиная с анализа причин отказов по ипотеке."
-summary_en: "Together with the retail lending function, we work out what AI can bring to work with credit lines, loans and mortgages, starting with an analysis of the reasons for mortgage rejections."
+summary_en: "Together with the retail lending function, we work out what AI can do for the work with credit lines, loans, and mortgages, starting with an analysis of the reasons for mortgage rejections."
 profile: initiative
 class_of_service: инициатива
 stage: Воронка
@@ -16,7 +16,7 @@ people:
   project_manager: {position: "кто ведёт проект", position_en: "whoever runs the project", holder: ""}
 outcome:
   problem: "У функции есть знания и рутинная работа по кредитным линиям, кредитам и ипотеке, и она хочет понять, чем обоснованы отказы по ипотеке. Эти вопросы пока не прорабатывались."
-  problem_en: "The function has knowledge and routine work on credit lines, loans and mortgages, and it wants to understand what lies behind mortgage rejections. These questions have not been worked on yet."
+  problem_en: "The function has knowledge and routine work on credit lines, loans, and mortgages, and it wants to understand what lies behind mortgage rejections. These questions have not been looked into yet."
   intended_outcome: "Разбор работы функции записан, есть ранжированный перечень возможностей AI, подход к анализу отказов по ипотеке (данные, метод, меры контроля) и первый анализ, если это допускают данные и меры контроля."
   intended_outcome_en: "The review of the function's work is written up; there is a ranked list of AI opportunities, an approach to analyzing mortgage rejections (data, method, controls), and a first analysis, if the data and controls allow it."
   measure: "Число проведённых и записанных рабочих встреч; число ранжированных возможностей; подход к анализу отказов принят функцией; первый анализ передан, если допускают меры контроля."
@@ -29,7 +29,7 @@ constraints:
   appetite: "Без отдельного бюджета: рабочее время того, кто ведёт проект."
   appetite_en: "No separate budget: the working time of whoever runs the project."
   review_point: "К концу 2026 года: смотрим, что получилось, и решаем, продолжать ли."
-  review_point_en: "By the end of 2026: we look at what has come of it and decide whether to continue."
+  review_point_en: "By the end of 2026: we review the results and decide whether to continue."
   exit_criterion: "Подход к анализу отказов по ипотеке понятен функции, и первый анализ проведён, если данные и меры контроля это допускают."
   exit_criterion_en: "The function understands the approach to analyzing mortgage rejections, and a first analysis has been done, if the data and controls allow it."
   stop_threshold: "Данные об отказах недоступны или меры контроля не допускают анализ."
@@ -38,7 +38,7 @@ checklist:
   - {item: "Провести с функцией рабочие встречи: процесс, рутинная работа, знания, проблемные места", item_en: "Hold working sessions with the function: process, routine work, knowledge, pain points", state: "не начато"}
   - {item: "Выявить и ранжировать, что и как может делать AI, включая повседневную рутину и базу знаний (INI-008)", item_en: "Identify and rank what AI can do and how, including everyday routine work and a knowledge base (INI-008)", state: "не начато"}
   - {item: "Изучить анализ отказов по ипотеке: какие данные об отказах и причинах есть, где они лежат, на какие вопросы нужен ответ", item_en: "Look into the analysis of mortgage rejections: what data on rejections and their reasons exists, where it is kept, which questions need answers", state: "не начато"}
-  - {item: "Определить вместе с представителями контрольных функций подход, данные, результат и меры контроля", item_en: "Define the approach, data, result and controls together with representatives of the control functions", state: "не начато"}
+  - {item: "Определить вместе с представителями контрольных функций подход, данные, результат и меры контроля", item_en: "Define the approach, data, result, and controls together with representatives of the control functions", state: "не начато"}
   - {item: "Провести первый анализ, если данные доступны, а меры контроля это допускают", item_en: "Do a first analysis, if the data is available and the controls allow it", state: "не начато"}
   - {item: "Договориться с функцией о следующих шагах", item_en: "Agree on the next steps with the function", state: "не начато"}
 live:
@@ -51,7 +51,7 @@ live:
     - "Изменения кредитной политики и скоринг на основе моделей в работу не входят."
   risks_en:
     - "Customer and credit data are used: a data protection and model risk management assessment is needed before real data is analyzed."
-    - "The analysis gives no result on an individual application: the decision to grant a mortgage is always made by an employee, and AI only combines and analyzes information; AI's contribution and the employee's decision are recorded."
+    - "The analysis produces no output on individual applications: the decision to grant a mortgage is always made by an employee, and AI only combines and analyzes information; AI's contribution and the employee's decision are recorded."
     - "Changes to credit policy and model-based scoring are out of scope."
   dependencies:
     - "Общий подход к базам знаний из INI-008."
@@ -60,7 +60,7 @@ live:
     - "Проверка представителями контрольных функций."
   dependencies_en:
     - "The common approach to knowledge bases from INI-008."
-    - "Access to mortgage rejection data, its data class and controls."
+    - "Access to mortgage rejection data, with its data class and controls."
     - "Representatives of the function who know the process."
     - "Review by representatives of the control functions."
 decisions: []

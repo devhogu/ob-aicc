@@ -11,7 +11,7 @@ source_url: https://academy.claude.com/
 source_hash: 9f64211872e3
 ---
 
-This guide is for those who want to take Anthropic's original courses, not just our summaries. Here you will find which courses to start with depending on your work, and how to learn so that it pays off as early as this week.
+This guide is for people who want to take Anthropic's original courses, not just our summaries. Here you will find which courses to start with depending on your work, and how to learn so that it pays off as early as this week.
 
 Anthropic, the company behind Claude, has a free learning platform: Claude Academy (formerly Anthropic Academy). The courses are short and in English, and each ends with a test and a certificate. You don't need a Claude work account for the courses.
 

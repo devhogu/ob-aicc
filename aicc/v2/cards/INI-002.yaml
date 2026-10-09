@@ -14,7 +14,7 @@ people:
   project_manager: {position: "кто ведёт проект", position_en: "whoever runs the project", holder: ""}
 outcome:
   problem: "Знания об услугах Банка распределены по подразделениям. Нет единого представления, которое связывало бы коммерческий портфель с процессами, приложениями и инфраструктурой, поэтому внедрение AI начинается там, откуда первым пришёл запрос."
-  problem_en: "Knowledge about the Bank's services is spread across departments. There is no single view that links the commercial portfolio with processes, applications and infrastructure, so AI adoption starts wherever the first request came from."
+  problem_en: "Knowledge about the Bank's services is spread across departments. There is no single view that links the commercial portfolio with processes, applications, and infrastructure, so AI adoption starts wherever the first request came from."
   intended_outcome: "Портал ландшафта услуг, где каждая часть карты проверена её владельцем; перечень случаев, где AI уже применяется; ранжированный перечень кандидатов на внедрение AI."
   intended_outcome_en: "A service landscape portal where every part of the map has been checked by its owner; a list of cases where AI is already used; a ranked list of candidates for AI adoption."
   measure: "Число подразделений и услуг на карте и доля, проверенная их владельцами; число выявленных случаев применения AI; число ранжированных кандидатов."
@@ -27,17 +27,17 @@ constraints:
   appetite: "Без отдельного бюджета: рабочее время того, кто ведёт проект."
   appetite_en: "No separate budget: the working time of whoever runs the project."
   review_point: "К концу 2026 года: смотрим, что получилось, и решаем, продолжать ли."
-  review_point_en: "By the end of 2026: we look at what has come of it and decide whether to continue."
+  review_point_en: "By the end of 2026: we review the results and decide whether to continue."
   exit_criterion: "Первые подразделения и услуги показаны на карте и проверены их владельцами; портал открывается и показывает их."
   exit_criterion_en: "The first departments and services are shown on the map and checked by their owners; the portal opens and shows them."
   stop_threshold: "Владельцы услуг не находят времени проверить карту, и она остаётся неполной."
   stop_threshold_en: "Service owners cannot find the time to check the map, and it stays incomplete."
 checklist:
   - {item: "Договориться об общем способе описания услуги: коммерческий портфель, услуги, процессы, организационная структура, приложения и данные, инфраструктура", item_en: "Agree on a common way to describe a service: commercial portfolio, services, processes, organizational structure, applications and data, infrastructure", state: "не начато"}
-  - {item: "Собрать уже имеющиеся у подразделений документы, схемы и перечни, не создавая новых", item_en: "Collect the documents, diagrams and lists departments already have, without creating new ones", state: "не начато"}
+  - {item: "Собрать уже имеющиеся у подразделений документы, схемы и перечни, не создавая новых", item_en: "Collect the documents, diagrams, and lists that departments already have, without creating new ones", state: "не начато"}
   - {item: "Свести собранное в репозиторий корпоративной архитектуры и открыть портал ландшафта", item_en: "Bring what was collected into the enterprise architecture repository and open the landscape portal", state: "не начато"}
   - {item: "Проверить каждую часть карты вместе с её владельцем", item_en: "Check each part of the map together with its owner", state: "не начато"}
-  - {item: "Отметить на карте, где AI уже применяется и где рутинная, ручная или документоёмкая работа", item_en: "Mark on the map where AI is already used and where the work is routine, manual or document-heavy", state: "не начато"}
+  - {item: "Отметить на карте, где AI уже применяется и где рутинная, ручная или документоёмкая работа", item_en: "Mark on the map where AI is already used and where the work is routine, manual, or document-heavy", state: "не начато"}
   - {item: "Превратить отмеченные места в ранжированный перечень кандидатов для бэклога", item_en: "Turn the marked places into a ranked list of candidates for the backlog", state: "не начато"}
   - {item: "Решить, кому и как открыт доступ к порталу: он показывает внутреннюю информацию Банка", item_en: "Decide who gets access to the portal and how: it shows the Bank's internal information", state: "не начато"}
 live:
@@ -49,7 +49,7 @@ live:
     - "Карта описывает только текущее состояние; изменения услуг, процессов, систем и архитектуры в работу не входят."
   risks_en:
     - "The portal shows the Bank's internal information: access rules need to be worked out with information security."
-    - "The map describes the current state only; changes to services, processes, systems and architecture are out of scope."
+    - "The map describes the current state only; changes to services, processes, systems, and architecture are out of scope."
   dependencies:
     - "Время и знания руководителей подразделений и владельцев услуг."
     - "Доступ к репозиторию корпоративной архитектуры и порталу, класс данных их содержимого."

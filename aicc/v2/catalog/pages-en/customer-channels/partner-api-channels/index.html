@@ -23,7 +23,7 @@
       <h1 class="page-header__title">Partner &amp; API channels</h1>
     </div>
   </div>
-  <p class="page-header__intent">Where the Bank opens its services to partners through APIs, partner and API channels extend its distribution through third-party platforms, fintechs, and embedded finance integrations — reaching customers at the point of need rather than waiting for them to initiate contact through the Bank's own channels. Open banking frameworks are still developing in many markets; consent and access frameworks such as PSD2 serve as the international reference. The partner channel carries distinct regulatory obligations — third-party provider authorization, consent management, data-access audit trail — alongside commercial management of partner economics and SLA performance. <strong>The opportunity for GenAI is to automate compliance monitoring across the API ecosystem and instrument partner economics in real time</strong> — replacing periodic compliance sampling and manual performance packs with continuous oversight and commercially informed partner management decisions.</p>
+  <p class="page-header__intent">Where the Bank opens its services to partners through APIs, partner and API channels extend its distribution through third-party platforms, fintechs, and embedded finance integrations — reaching customers at the point of need rather than waiting for them to initiate contact through the Bank's own channels. Open banking frameworks are still developing in many markets; consent and access frameworks such as PSD2 serve as the international reference. The partner channel carries distinct regulatory obligations — third-party provider authorization, consent management, data-access audit trail — alongside commercial management of partner economics and SLA performance. <strong>The opportunity for generative AI is to automate compliance monitoring across the API ecosystem and instrument partner economics in real time</strong> — replacing periodic compliance sampling and manual performance packs with continuous oversight and commercially informed partner management decisions.</p>
 </header>
 <style>
   #problems-tab-open-banking-api-governance:checked ~ .problems-tab-bar label[for="problems-tab-open-banking-api-governance"] {
@@ -46,7 +46,7 @@
     <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Insights &amp; analytics</h3><p>API consumption patterns — call volumes, error rates, latency distribution, and consent scope utilization — are monitored in API gateway dashboards by the engineering team. The compliance team reviewing third-party provider adherence to open banking consent frameworks and the commercial team tracking partner revenue yield work from different data cuts without a unified view of the API ecosystem's health, compliance status, and commercial performance.</p></article><article class="discovery-context-card"><h3>Enablement</h3><p>Partner onboarding — commercial terms, technical integration, consent framework compliance, and regulatory authorization check — requires coordination across legal, compliance, technology, and commercial teams. The onboarding timeline is the primary barrier to partner acquisition; banks that onboard partners faster reach the revenue contribution point earlier and attract partners that weaker competitors cannot retain.</p></article><article class="discovery-context-card"><h3>Automation</h3><p>Open banking compliance reporting — consent lifecycle audit, third-party provider authentication records, API access logs — is compiled manually from gateway exports on a periodic basis. The structured, log-based nature of the compliance data makes it a candidate for AI-driven monitoring and reporting that covers 100% of API sessions without analyst assembly time.</p></article><article class="discovery-context-card"><h3>New business opportunities</h3><p>API product pricing is set at launch and reviewed infrequently. Banks that model actual revenue yield per API product across partner consumption patterns — identifying underpriced products and high-margin partner combinations — price the API catalog to maximize commercial contribution from a fixed infrastructure investment. Partners with high-value consumption patterns not reflected in current pricing represent margin leakage that real-time yield analytics can recover.</p></article></div>
   </div>
 </section>
-<div id="main-content" class="l3-sections" aria-label="Sub-concerns">
+<div id="main-content" class="l3-sections" aria-label="Subsections">
 <section class="l3-section" id="open-banking-api-governance">
   <header class="l3-section__head">
     <h2 class="l3-section__title">Open banking &amp; API governance</h2>
@@ -71,7 +71,7 @@
     </div>
     <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
   </summary>
-  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#open-banking">Open banking and partner APIs</a></p>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory requirements:</span> <a href="../../regulatory-horizon/index.html#open-banking">Open banking and partner APIs</a></p>
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>Third-party provider onboarding involves multiple compliance and technical steps: regulatory status verification, consent framework configuration, API scope assignment, and audit trail setup. Each step requires coordination across the governance, compliance, and technical teams. Under open banking requirements, each onboarded third-party provider requires a documented authorization record; manual onboarding coordination produces records of variable completeness and creates delays in access activation. Onboarding cycle time — from regulatory application receipt to access activation — is a competitive factor in attracting fintech partners to the Bank's API platform; manual coordination bottlenecks extend the cycle beyond market norms.</p>
@@ -81,7 +81,7 @@
       <p>The AI agent orchestrates the third-party provider onboarding workflow — initiating regulatory status verification checks, configuring consent framework parameters, assigning API access scope, and initializing the audit trail — and generates a structured onboarding record covering all mandatory governance fields. The API governance team reviews and approves the completed record before access is activated; any step that fails automated validation is flagged with the specific deficiency for manual resolution. Onboarding completion time from application receipt to access activation and governance record completeness rate are tracked against the pre-deployment manual coordination baseline.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">A structured onboarding record for each new third-party provider — regulatory status verification, consent framework configuration, API access scope assignment, and audit trail initialization, with any step that fails validation flagged — is available to the API governance team for review and approval before API access is activated.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -112,7 +112,7 @@
     </div>
     <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
   </summary>
-  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#open-banking">Open banking and partner APIs</a></p>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory requirements:</span> <a href="../../regulatory-horizon/index.html#open-banking">Open banking and partner APIs</a></p>
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>Open banking API compliance — consent lifecycle management, third-party provider authentication, rate-limit enforcement, and data-access audit trail completeness — is reviewed manually from API gateway logs on a sample basis. Manual review does not detect systematic gaps in consent scope adherence or audit trail completeness between supervisory inspections. Under open banking requirements, documented compliance coverage is a supervisory obligation; sample-based review creates residual regulatory exposure.</p>
@@ -122,7 +122,7 @@
       <p>The AI agent reads API gateway logs, consent management records, and third-party provider authentication events, mapping each API session against the consent scope and checking rate-limit compliance and audit trail completeness. The compliance report is generated weekly with exceptions ranked by regulatory materiality for investigation. The API governance team remediates exceptions before the supervisory reporting cycle, maintaining a continuous compliance posture between formal inspections.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">A weekly API compliance status report — covering consent lifecycle adherence, third-party provider authentication, rate-limit enforcement, and audit trail completeness — with exceptions ranked by regulatory materiality is available for the API governance team's remediation before each supervisory reporting cycle.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -153,7 +153,7 @@
     </div>
     <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
   </summary>
-  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#open-banking">Open banking and partner APIs</a></p>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory requirements:</span> <a href="../../regulatory-horizon/index.html#open-banking">Open banking and partner APIs</a></p>
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>Weekly compliance monitoring produces exception reports addressed by the API governance team on a case-by-case basis; systemic risk patterns — categories of exception that recur across multiple partners or consent types — are not visible from individual exception resolution alone. Supervisory inspections assess the Bank's systemic governance quality rather than individual exception resolution; a pattern of recurring exceptions in the same category indicates a control design gap that individual remediation cannot address. The API governance committee does not have a current-state systemic risk view between supervisory inspection cycles; risk intelligence is only synthesized when preparing for an inspection.</p>
@@ -163,7 +163,7 @@
       <p>The AI agent reads rolling compliance exception records and clusters exceptions by type, partner, consent category, and time pattern, identifying systemic risk themes — categories where exceptions recur across multiple partners or consent types at above-baseline frequency. It maps each systemic risk theme to the relevant regulatory framework requirement and estimates the supervisory materiality of each identified gap. The quarterly brief is presented to the API governance committee; control design remediations selected from the brief are tracked to implementation and exception rate reduction.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">A quarterly risk intelligence brief — systemic governance risk themes clustered from compliance exceptions, mapped to the relevant regulatory framework requirement, and ranked by regulatory materiality — is available to the API governance committee to direct the remediation program before the next supervisory inspection cycle.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -208,7 +208,7 @@
     </div>
     <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
   </summary>
-  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#open-banking">Open banking and partner APIs</a></p>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory requirements:</span> <a href="../../regulatory-horizon/index.html#open-banking">Open banking and partner APIs</a></p>
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>SLA breach detection depends on the API gateway monitoring system; the partner management team is notified of breaches through gateway alerts but must manually construct the formal breach notification from the alert data, contract terms, and consequence schedule. Manual notification drafting takes several hours; under the Bank's open banking regulatory obligations, availability and performance failures affecting third-party provider access trigger reporting timelines that begin from the point the Bank is aware of the breach. The formal breach log — required for the periodic partner performance review and for regulatory reporting — is maintained manually and may be incomplete when notification drafting is compressed under volume.</p>
@@ -218,7 +218,7 @@
       <p>The AI agent reads API gateway SLA metrics per partner at defined monitoring intervals and detects breaches against contracted thresholds, generating a formal breach notification with breach type, duration, affected product, and contractual consequence reference, pre-populated for partner management review. The partner management team reviews and releases; all breach events are automatically logged in the contract management system with the notification timestamp for the audit trail. Notification response time from detection to partner management confirmation and audit trail completeness rate are tracked as primary outcome metrics.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">A formal breach notification — breach type, duration, affected API product, and contractual consequence reference — is available to the partner management team for review and release for every SLA breach detected against contracted thresholds, with each breach logged in the contract management system.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -259,7 +259,7 @@
       <p>The AI agent reads the partner's API consumption records, revenue ledger entries, SLA performance history, and open incident records, and generates a structured pre-meeting briefing with performance trend analysis and a recommended agenda for the review session. The briefing flags any performance trends warranting contract discussion — declining consumption against minimums, recurring SLA near-miss events, or revenue shortfall — and provides supporting data for each flag. The partner management team reviews the briefing before the meeting; its preparation time per review and the proportion of review sessions identifying a commercially actionable item are tracked as outcome metrics.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">A pre-meeting briefing for each scheduled partner performance review — consumption trend, revenue contribution, SLA track record, open incidents, and a recommended agenda flagging points for contract amendment or escalation — is available to the partner management team before the meeting.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -300,7 +300,7 @@
       <p>The AI agent reads API consumption metrics per partner, revenue attribution from the ledger, SLA performance against contracted terms, and open incident records. It generates the monthly partner performance pack with partner-level narratives, trend charts, and SLA breach flags, alongside a portfolio economics summary covering revenue by segment, concentration flags, and infrastructure cost recovery rate. The Head of Partner Channels reviews the generated pack and adds forward-looking commercial commentary.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">A monthly partner performance pack — covering partner-level narratives, SLA breach flags, and a portfolio economics summary with revenue by segment, concentration flags, and infrastructure cost recovery rate — is available to the Head of Partner Channels without manual assembly effort.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -355,7 +355,7 @@
       <p>The AI agent reads API gateway consumption records per partner, maps consumption to contracted tiers and rate schedules, and generates the monthly billing statement with itemized usage and applicable rates. It flags discrepancies between gateway consumption and the contracted billing basis, identifies partners approaching or exceeding tier thresholds, and highlights any rate schedule updates applied in the billing period. The finance team reviews and approves before dispatch; billing reconciliation time and invoice dispatch cycle from period close are tracked against the pre-deployment manual baseline.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">A monthly billing statement per partner — itemized usage reconciled against contracted tiers and rate schedules, with discrepancies and partners in overage or approaching tier thresholds flagged — is available to the finance team for review and approval before invoice dispatch.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -396,7 +396,7 @@
       <p>The AI agent reads API consumption data by product and partner, revenue attribution from the ledger, and infrastructure cost allocation per product, and computes monthly yield metrics: revenue per call, revenue per active partner, and cost recovery rate. It flags products where yield is below the cost recovery threshold and products where demand growth suggests pricing tier expansion is warranted. The Head of API Products reviews the monthly brief and uses the yield analysis to prioritize pricing review and catalog rationalization; revenue per product and cost recovery rate improvement are the primary outcome metrics.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">A monthly yield brief per API product — revenue per call, revenue per active partner, and infrastructure cost recovery rate, flagging products below the cost recovery threshold and products where demand growth supports price tier expansion — is available to the Head of API Products as the primary input for pricing review and catalog rationalization.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -417,7 +417,7 @@
 </details>
 <details class="scenario-card" data-urn="urn:financial-services:scenario:customer-channels/partner-api-channels/api-product-catalogue-monetisation/api-catalogue-expansion-opportunities" id="scenario-api-catalogue-expansion-opportunities" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
-    <span class="scenario-lens scenario-lens--new-opps">New opps</span>
+    <span class="scenario-lens scenario-lens--new-opps">New opportunities</span>
     <div class="scenario-card__title-col">
       <span class="scenario-card__chevron" aria-hidden="true">▸</span>
       <h3 class="scenario-card__title">API Catalog Expansion Opportunities</h3>
@@ -437,7 +437,7 @@
       <p>The AI agent reads partner consumption anomalies — partners using API capabilities in patterns that suggest unmet adjacent needs — partner-submitted feature requests, and open banking regulatory updates, and identifies API product candidates with multiple demand signals. It estimates commercial return for each candidate from the existing partner base demand profile and assesses regulatory feasibility under current and anticipated open banking frameworks. The quarterly brief is reviewed by the Head of API Products; catalog additions selected from the brief are tracked from development to revenue contribution.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">A quarterly catalog expansion brief — candidate API products ranked by estimated demand and commercial return, each with a regulatory feasibility assessment — is available to the Head of API Products to select candidates for the next product development cycle.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -492,7 +492,7 @@
       <p>The AI agent reads the partner contract register, revenue ledger, and SLA performance records, and generates renewal briefings at 90, 60, and 30 days before each contract expiry, covering partner performance summary, current commercial terms, and a recommended negotiation position based on revenue and SLA track record. The partner management team reviews the briefing before initiating renewal discussions; the AI agent flags any contracts within 30 days of expiry that have not been confirmed as in renewal process. Contract renewal completion rate and the commercial outcome against the recommended negotiation position are tracked as primary outcome metrics.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">A renewal briefing for each partner contract — partner performance summary, current commercial terms, and a recommended negotiation position — is available to the partner management team 90, 60, and 30 days before expiry, so that no contract lapses without a structured renewal review.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -533,7 +533,7 @@
       <p>The AI agent reads the partner revenue ledger, API consumption records, infrastructure cost allocation, and partner segment classifications, and computes quarterly portfolio-level metrics: revenue concentration index, cost recovery by segment, and network diversity measures. It flags concentration risks above the defined threshold and identifies segments where the infrastructure cost recovery rate falls below the commercial target. The Head of Partner Channels reviews the quarterly brief before the strategy review session; partner acquisition and renegotiation priorities are directed from the portfolio intelligence output.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">A quarterly portfolio brief — revenue concentration index, infrastructure cost recovery by segment, and network diversity measures, with concentration risks above threshold and under-recovering segments flagged — is available to the Head of Partner Channels before the partner strategy review session.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -554,7 +554,7 @@
 </details>
 <details class="scenario-card" data-urn="urn:financial-services:scenario:customer-channels/partner-api-channels/partner-network-economics/partner-network-expansion-intelligence" id="scenario-partner-network-expansion-intelligence" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
-    <span class="scenario-lens scenario-lens--new-opps">New opps</span>
+    <span class="scenario-lens scenario-lens--new-opps">New opportunities</span>
     <div class="scenario-card__title-col">
       <span class="scenario-card__chevron" aria-hidden="true">▸</span>
       <h3 class="scenario-card__title">Partner Network Expansion Intelligence</h3>
@@ -574,7 +574,7 @@
       <p>The AI agent analyzes open banking market data, published fintech partnership announcements, and the Bank's own API consumption trend by partner type to identify segments with high growth velocity and limited existing coverage in the Bank's partner network. It models the incremental revenue impact of recruiting representative partners in each high-growth segment, using existing partner yield data as the revenue proxy. The quarterly brief is reviewed by the Head of Partner Channels; acquisition targets selected from the brief are tracked from outreach to contract signature.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">A quarterly acquisition intelligence brief — fintech, retailer, and platform segments ranked by estimated revenue contribution and strategic fit with the API product catalog, with the modeled revenue impact of recruiting two to five partners per segment — is available to the Head of Partner Channels before each partner acquisition cycle.</p>
       <div class="okr-grid">
         <div class="okr-kr">

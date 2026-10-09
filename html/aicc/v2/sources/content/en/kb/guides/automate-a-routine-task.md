@@ -9,7 +9,7 @@ tags: automation, workplace, skills, report, routine
 source_hash: d689cfeaaf7e
 ---
 
-This guide is for an employee with recurring work: a weekly report, a summary of customer requests, checking documents against a list. By the end you will have gone through the five steps from a manual task to automation and will see which step your task is at now.
+This guide is for an employee with recurring work: a weekly report, a summary of customer requests, checking documents against a list. By the end, you will have walked through the five steps from manual work to automation and will know which step your task is at now.
 
 [[workspace-automation|Workspace automation]] is when AI prepares recurring work (collecting data, a report, filling in a form, sorting emails), and a person checks it and decides. Start small: one task that you do every week and know well.
 
@@ -17,7 +17,7 @@ This guide is for an employee with recurring work: a weekly report, a summary of
 <li><b>Describe</b><span>what goes in, what comes out, who reads it</span></li>
 <li><b>Do it with Claude</b><span>several times, on real data that may be shared</span></li>
 <li><b>Make it stick</b><span>a prompt template, a project, a skill, or a scheduled task</span></li>
-<li><b>Check</b><span>a person looks at the result before it goes further</span></li>
+<li><b>Check</b><span>a person looks at the result before it is passed on</span></li>
 <li><b>Measure</b><span>how much time is saved and how many corrections are needed</span></li>
 </ol>
 
@@ -44,11 +44,11 @@ Choose the simplest method that fits:
 - **Skill:** if it's a procedure that needs to be done the same way in different conversations (see [Skills: teach Claude your procedure](page:kb/guides/claude-skills)).
 - **Scheduled task in Cowork:** if the result is needed regularly and Claude can prepare a draft on its own (see [Scheduled tasks](page:kb/guides/claude-work-complete-guide#cowork-schedule)).
 
-If the task touches work systems or the whole department, we help make it stick: that way it comes to us as [[run-rate|run-rate work]].
+If the task touches work systems or the whole department, we help you make it stick: that way it comes to us as [[run-rate|run-rate work]].
 
 ## 4. Keep a human check {#review}
 
-Automation prepares; a person checks and sends. This matters most for anything that goes to a customer, to another department, or affects a decision. You may remove the check only where a mistake costs nothing and that is written down.
+Automation prepares; a person checks and sends. This matters most for anything that goes to a customer, to another department, or affects a decision. You may remove the check only where a mistake costs nothing and that decision is written down.
 
 ## 5. Measure {#measure}
 

@@ -3,8 +3,8 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark">
 <title>Create a card · AI Competence Hub</title>
 <script>try{var t=localStorage.getItem('hub-theme');document.documentElement.dataset.theme=t==='dark'?'dark':'light';}catch(e){}</script>
-<link rel="stylesheet" href="../../../assets/ui/fonts.css?v=31af9632de"><link rel="stylesheet" href="../../../assets/ui/tokens.css?v=7a14df66bd"><link rel="stylesheet" href="../../../assets/ui/primitives.css?v=ea6572a6e0"><link rel="stylesheet" href="../../../assets/ui/workspace.css?v=416781b646"><link rel="stylesheet" href="../../../assets/site.css?v=5480d3be4e">
-<script src="../../../assets/search-en.js"></script><script src="../../../assets/i18n-en.js"></script><script src="../../../assets/site.js?v=cfae61d4bb" defer data-root="../../.." data-t-none="Nothing matches your search." data-t-light="Light mode" data-t-dark="Dark mode" data-t-mail-body="Page: {title}
+<link rel="stylesheet" href="../../../assets/ui/fonts.css?v=31af9632de"><link rel="stylesheet" href="../../../assets/ui/tokens.css?v=7a14df66bd"><link rel="stylesheet" href="../../../assets/ui/primitives.css?v=ea6572a6e0"><link rel="stylesheet" href="../../../assets/ui/workspace.css?v=416781b646"><link rel="stylesheet" href="../../../assets/site.css?v=ca3f012564">
+<script src="../../../assets/search-en.js"></script><script src="../../../assets/i18n-en.js"></script><script src="../../../assets/site.js?v=f0c9aa38f9" defer data-root="../../.." data-t-none="Nothing matches your search." data-t-light="Light mode" data-t-dark="Dark mode" data-t-mail-body="Page: {title}
 ID: {ref}
 Address: {url}
 
@@ -171,17 +171,18 @@ Question or comment:
 </svg><span>Reference</span></a></div></nav></details></aside>
 <main class="o-main hub-main" id="main" tabindex="-1">
 <div class="crumbbar"><div class="crumbline"><nav class="o-eyebrow crumbs" aria-label="Breadcrumb"><a href="../index.html">Projects</a> / <span aria-current="page">Create a card</span></nav></div></div>
-<div class="o-reading o-single"><div class="o-copy"><h1>Create a card</h1><article class="page-body o-doc"><p class="lede">Create a card, and your project will appear in every view of this section.</p><ol><li>Copy the template below into a file named <code>cards/IDENTIFIER.yaml</code>.</li><li>Fill in the required fields: identifier, title, summary, profile, state, people’s positions, problem and intended outcome, and the live status.</li><li>For an idea, set the stage to <span lang="ru">Воронка</span> (Funnel). You can add the rest later.</li><li>Update the card as the work goes on: the next build shows the changes in every view.</li></ol><p>A schema checks the card: the build stops and tells you what to fix. The schema is <code>cards/schema.json</code>.</p><h2>Template</h2><pre><code># Project card template (English edition). Copy the file, name it after the card ID (INI-020.yaml) and fill it in.
+<div class="o-reading o-single"><div class="o-copy"><h1>Create a card</h1><article class="page-body o-doc"><p class="lede">Create a card, and your project will appear in every view of this section.</p><ol><li>Copy the template below into a file named <code>cards/IDENTIFIER.yaml</code>.</li><li>Fill in the required fields: identifier, title, summary, profile, state, people’s positions, problem and intended outcome, and current status.</li><li>For an idea, set the state to <span lang="ru">Воронка</span> (Funnel). You can add the rest later.</li><li>Update the card as the work goes on: the next build shows the changes in every view.</li></ol><p>A schema checks the card: the build stops and tells you what to fix. The schema is <code>cards/schema.json</code>.</p><h2>Template</h2><pre><code># Project card template (English edition). Copy the file, name it after the card ID (INI-020.yaml) and fill it in.
 # Required: id, title, summary, profile, stage, people, outcome, live. Put any text that contains a colon in double quotes.
-# The site is written in Russian first: Russian fields hold the source text, and each English text sits beside it with _en.
+# The site is written in Russian first: Russian fields hold the source text, and each English text sits beside its Russian field with _en. This template shows the English fields; take the Russian ones from the Russian template.
 # Fixed values (class_of_service, stage, state, status) are written in Russian exactly as listed; their English names are shown in the comments.
 id: INI-000
 title: Project name in Russian
 title_en: Project name
+summary: One or two sentences in Russian.
 summary_en: One or two sentences on what we are doing.
 profile: initiative            # initiative | run-rate | recurring-check | enablement
-class_of_service: <span lang="ru">инициатива</span>   # <span lang="ru">инициатива</span> = initiative | <span lang="ru">текущая работа</span> = run-rate | <span lang="ru">срочная работа</span> = urgent
-stage: <span lang="ru">Воронка</span>                 # <span lang="ru">Воронка</span> = Funnel | <span lang="ru">Проработка</span> = Shaping | <span lang="ru">Готово к старту</span> = Ready | <span lang="ru">В работе</span> = Doing | <span lang="ru">Завершено</span> = Done | <span lang="ru">Отложено</span> = On hold | <span lang="ru">Закрыто</span> = Closed
+class_of_service: <span lang="ru">инициатива</span>   # <span lang="ru">инициатива</span> = initiative | <span lang="ru">текущая работа</span> = run-rate work | <span lang="ru">срочная работа</span> = urgent work
+stage: <span lang="ru">Воронка</span>                 # <span lang="ru">Воронка</span> = Funnel | <span lang="ru">Проработка</span> = Shaping | <span lang="ru">Готово к старту</span> = Ready | <span lang="ru">В работе</span> = Doing | <span lang="ru">Завершено</span> = Done | <span lang="ru">Отложено</span> = Deferred | <span lang="ru">Закрыто</span> = Closed
 function_en: &quot;&quot;                # the function that needs the result
 area_en: &quot;&quot;                    # the service, for example &quot;Knowledge services&quot;
 people:
@@ -196,11 +197,11 @@ outcome:
   target_en: How we want it to be.
 constraints:
   appetite_en: How much effort we are ready to put in.
-  review_point_en: When we look at whether to continue.
+  review_point_en: When we check whether to continue.
   exit_criterion_en: When we consider the step done.
   stop_threshold_en: When we stop.
 checklist:
-  - {item_en: &quot;Practice note: item&quot;, state: &quot;<span lang="ru">не начато</span>&quot;}   # <span lang="ru">не начато</span> = not started
+  - {item_en: &quot;Practice checklist: item&quot;, state: &quot;<span lang="ru">не начато</span>&quot;}   # <span lang="ru">не начато</span> = not started | <span lang="ru">сделано</span> = done | <span lang="ru">не нужно</span> = not needed
 live:
   status: <span lang="ru">не задан</span>             # <span lang="ru">зелёный</span> = green | <span lang="ru">жёлтый</span> = yellow | <span lang="ru">красный</span> = red | <span lang="ru">не задан</span> = not set
   next_step_en: &quot;&quot;

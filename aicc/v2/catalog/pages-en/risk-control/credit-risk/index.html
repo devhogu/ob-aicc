@@ -23,7 +23,7 @@
       <h1 class="page-header__title">Credit risk</h1>
     </div>
   </div>
-  <p class="page-header__intent">Credit risk is the largest consumer of a bank's regulatory capital — the risk that a borrower or counterparty fails to meet contractual obligations, generating an unexpected loss that erodes CET1. Under prudential requirements, credit risk is governed through PD/LGD/EAD model suites, IFRS 9 ECL provisioning, concentration limits, and watchlist management. Basel III/IV sets the capital floor; where a bank uses internal models, they calibrate within that constraint. <strong>The GenAI opportunity is to compress the credit-review cycle</strong> — from quarterly portfolio packs assembled manually over weeks to weekly AI-generated analysis that surfaces migration signals, concentration patterns, and watchlist risk in a single integrated view.</p>
+  <p class="page-header__intent">Credit risk is the largest consumer of a bank's regulatory capital — the risk that a borrower or counterparty fails to meet contractual obligations, generating an unexpected loss that erodes CET1. Under prudential requirements, credit risk is governed through PD/LGD/EAD model suites, IFRS 9 ECL provisioning, concentration limits, and watchlist management. Basel III/IV sets the capital floor; where a bank uses internal models, they calibrate within that constraint. <strong>The generative AI opportunity is to compress the credit-review cycle</strong> — from quarterly portfolio packs assembled manually over weeks to weekly AI-generated analysis that surfaces migration signals, concentration patterns, and watchlist risk in a single integrated view.</p>
 </header>
 <style>
   #problems-tab-counterparty-exposure:checked ~ .problems-tab-bar label[for="problems-tab-counterparty-exposure"] {
@@ -46,7 +46,7 @@
     <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Insights &amp; analytics</h3><p>PD migration, watchlist deterioration, and counterparty exposure analytics are each produced within their own reporting cycle from separate risk and credit systems. The CRO and Chief Credit Officer lack a continuous view of how individual counterparty quality is moving relative to the portfolio; emerging watchlist credits surface only at the monthly credit review committee, weeks after early-warning signals appeared in the data.</p></article><article class="discovery-context-card"><h3>Enablement</h3><p>Credit review preparation — assembling the counterparty dossier, reconciling current financials against the credit approval memo, and preparing the committee presentation — absorbs 60–80% of a relationship manager's or credit analyst's pre-meeting time. The analytical work the committee is convened to perform starts only after the assembly is complete.</p></article><article class="discovery-context-card"><h3>Automation</h3><p>Watchlist reports, credit portfolio packs for the Risk Committee, and IFRS 9 ECL provision narratives are assembled from credit system exports, management accounts, and model outputs on a monthly or quarterly cycle. Each has a defined format and known source data; the assembly is repeatable and data-intensive.</p></article><article class="discovery-context-card"><h3>New business opportunities</h3><p>A continuously instrumented credit book — weekly migration signals, real-time concentration headroom, and vintage performance by origination cohort — gives the Chief Credit Officer a forward signal that quarterly review cycles cannot provide. Credit appetite deployment decisions and portfolio rebalancing moves can be timed against current position rather than last month's report.</p></article></div>
   </div>
 </section>
-<div id="main-content" class="l3-sections" aria-label="Sub-concerns">
+<div id="main-content" class="l3-sections" aria-label="Subsections">
 <section class="l3-section" id="counterparty-exposure-analytics">
   <header class="l3-section__head">
     <h2 class="l3-section__title">Counterparty exposure analytics</h2>
@@ -71,7 +71,7 @@
     </div>
     <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
   </summary>
-  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#capital-liquidity">Capital and liquidity reforms</a></p>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory requirements:</span> <a href="../../regulatory-horizon/index.html#capital-liquidity">Capital and liquidity reforms</a></p>
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>A large-exposure breach triggers a mandatory notification to the regulator under large-exposure rules. Assembling the notification pack — total exposure by product, entity relationship map, origination timeline, and management action — draws on multiple systems and consumes analyst hours in the window before the regulatory deadline.</p>
@@ -81,7 +81,7 @@
       <p>The AI agent detects the limit breach from the daily exposure register, retrieves the full product-level breakdown, maps the entity structure, and generates the supervisory notification pack in the prescribed format. The CRO reviews and approves before submission.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The CRO reviews and approves an AI-assembled supervisory notification pack — total exposure by product, entity relationship map, and origination timeline — for every large-exposure breach, rather than waiting on analyst assembly in the window before the regulatory deadline.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -122,7 +122,7 @@
       <p>The AI agent reads exposure data from loan management, derivatives, and trade finance systems, applies the Bank's entity-relationship hierarchy to aggregate to economic group level, and produces the single-name exposure register with limit utilization and large-exposure threshold flags. The credit risk officer reviews entity mapping for any new counterparty structures before releasing the report.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The credit risk officer releases a single-name exposure register — aggregated to economic group level across loans, commitments, derivatives, and trade finance, with limit utilization and large-exposure threshold flags — after reviewing only new counterparty structures rather than mapping entities by hand.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -163,7 +163,7 @@
       <p>The AI agent reads 12 months of daily exposure registers, computes utilization trend and velocity for each counterparty and sector, and flags names where the trajectory points to a limit breach within the next 90 days. The Chief Credit Officer receives a weekly trend digest alongside the standard limit utilization report.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The Chief Credit Officer receives a weekly trend digest identifying counterparties and sectors whose exposure trajectory points to a limit breach within 90 days, alongside the standard limit utilization report.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -218,7 +218,7 @@
       <p>The AI agent reads the full loan portfolio and maps exposures across all five concentration dimensions, including multi-dimensional correlated patterns. It computes distance-to-limit for each dimension and models concentration impact under a sector stress scenario. The Chief Credit Officer receives a weekly concentration watch with escalation flags.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The Chief Credit Officer manages credit concentration risk from a weekly AI-generated analysis across five dimensions — industry, geography, single-name, collateral, and correlated cross-sector clusters — with distance-to-limit computed and escalation flags applied.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -259,7 +259,7 @@
       <p>The AI agent reads current sector exposure, applies the defined stress parameter set — PD uplift, LGD widening, correlation assumption — from the Bank's stress testing library, computes expected loss by sector and total portfolio impact, and produces the scenario output within one business day of trigger. The Credit Committee uses it as the basis for its stress discussion.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The Credit Committee discusses a sector stress event with an AI-produced scenario output — expected loss by sector and total portfolio impact under the defined PD, LGD, and correlation stress parameters — available before the meeting rather than after it.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -300,7 +300,7 @@
       <p>The AI agent reads the current sector limit calibration assumptions and compares them with current sector credit conditions from rating agency reports, regulatory guidance, and macroeconomic data. It flags limits where the calibration basis has materially changed and delivers a review signal to the Chief Credit Officer for out-of-cycle limit adjustment where warranted.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The Chief Credit Officer receives a limit review signal whenever the sector credit conditions underlying a concentration limit have materially changed since calibration, enabling out-of-cycle limit adjustment rather than waiting for the annual risk appetite review.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -355,7 +355,7 @@
       <p>The AI agent reads the monthly model run outputs, macro overlay parameters, and prior-month values. It generates the standard narrative covering PD movement by segment, LGD and EAD drivers, macro overlay effect, and variance flags. The credit risk officer reviews the narrative and releases it to the capital and finance teams.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The credit risk officer releases the monthly PD/LGD/EAD output narrative — parameter movements by segment, macro overlay effect, and variance to prior month — to the capital and finance teams after reviewing an AI-generated draft rather than assembling it manually.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -386,7 +386,7 @@
     </div>
     <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
   </summary>
-  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#model-risk">Model risk management</a></p>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory requirements:</span> <a href="../../regulatory-horizon/index.html#model-risk">Model risk management</a></p>
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>Model performance deterioration is detected in the scheduled validation cycle, which runs annually or biennially in line with model-risk guidance. Calibration drift visible in the monthly output distributions — predicted default rates diverging from realized rates at segment level — is not surfaced until the next scheduled review, narrowing the response window.</p>
@@ -396,7 +396,7 @@
       <p>The AI agent reads monthly PD/LGD/EAD output distributions and realized default and loss data, computes PSI for input stability, Gini and KS for discrimination, and predicted-vs-actual divergence by segment. It flags segments breaching defined performance bands and delivers a monthly performance signal watch to the Chief Model Risk Officer.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The Chief Model Risk Officer receives a monthly performance signal watch on the PD/LGD/EAD models — PSI, Gini, KS, and predicted-versus-actual divergence by segment — so calibration drift is acted on before the next scheduled validation.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -427,7 +427,7 @@
     </div>
     <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
   </summary>
-  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#capital-liquidity">Capital and liquidity reforms</a></p>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory requirements:</span> <a href="../../regulatory-horizon/index.html#capital-liquidity">Capital and liquidity reforms</a></p>
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>Monthly RWA movements must be explained to the Capital Committee and documented in the ICAAP narrative. Attribution across PD, LGD, EAD, and portfolio composition drivers requires combining model outputs with portfolio exposure data; the capital team assembles the decomposition manually before each committee cycle.</p>
@@ -437,7 +437,7 @@
       <p>The AI agent reads monthly IRB outputs, exposure data, and prior-month RWA. It decomposes RWA movement into parameter and mix drivers, produces the Capital Committee attribution table, and drafts the ICAAP capital adequacy narrative section covering credit risk RWA. The capital team reviews the pack and integrates it into the full ICAAP pack.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The capital team reviews an AI-assembled monthly RWA attribution pack — RWA movement decomposed into PD, LGD, EAD, and portfolio mix drivers, with the credit risk RWA section of the ICAAP narrative drafted — rather than building the decomposition manually before each Capital Committee cycle.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -492,7 +492,7 @@
       <p>The AI agent reads monthly migration registers, constructs rolling migration matrices by grade and asset class, computes trend in each transition probability, and flags grade pairs where the downgrade probability is accelerating beyond a defined threshold. The CRO and Credit Committee receive the trend watch alongside the standard migration matrix.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The CRO and Credit Committee receive a rolling 12-month migration trend watch by rating grade and asset class — with accelerating downgrade flows flagged — alongside the standard monthly migration matrix.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -533,7 +533,7 @@
       <p>The AI agent reads loan origination and performance data, constructs cohort time series by vintage, segment, and product, and generates the quarterly report covering default rates, loss rates, and prepayment speeds. The Chief Credit Officer uses the output to identify underwriting vintage deterioration and inform PD recalibration timing.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The Chief Credit Officer compares credit quality across underwriting periods from an AI-generated quarterly vintage cohort report — default rates, loss rates, and prepayment speeds by origination vintage and segment — rather than commissioning the analysis ad hoc.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -564,7 +564,7 @@
     </div>
     <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
   </summary>
-  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#expected-credit-loss">Expected credit loss</a></p>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory requirements:</span> <a href="../../regulatory-horizon/index.html#expected-credit-loss">Expected credit loss</a></p>
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>IFRS 9 Stage 2 classification requires identifying exposures where credit risk has increased significantly since origination. Applying SICR quantitative tests — lifetime PD comparison, backstop DPD trigger, qualitative override criteria — across a large portfolio requires systematic data extraction and rule application that is prone to inconsistency when performed manually.</p>
@@ -574,7 +574,7 @@
       <p>The AI agent reads current PD estimates, origination PD benchmarks, payment behavior data, and qualitative override flags. It applies the SICR criteria, generates the staging migration register with the triggering criterion per exposure, and flags population-level migration patterns for the finance controller's review before ECL provisioning.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The finance controller reviews an AI-generated monthly staging migration register — with the SICR criterion that triggered each exposure and population-level migration patterns flagged — before ECL provisioning, rather than relying on manually applied staging rules.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -629,7 +629,7 @@
       <p>The AI agent reads borrower financial submissions and applies the covenant test calculations per the facility agreement terms. It computes compliance status and headroom for each covenant, flags breaches and waivers required, and generates the covenant status register across the full watchlist population. The credit analyst reviews and escalates confirmed breaches per the credit policy.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The credit analyst reviews an AI-generated covenant status register — compliance status, headroom, breach flags, and waivers required for every watchlist credit — ahead of each review cycle, rather than calculating covenant tests by hand from borrower submissions.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -670,7 +670,7 @@
       <p>The AI agent reads loan management, financial data, covenant tracker, and committee records and auto-assembles each dossier in a standard format. The credit analyst reviews the generated pack, adds forward judgment on borrower trajectory, and clears it for committee.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The credit analyst adds forward judgment on borrower trajectory to an AI-assembled watchlist dossier — combining current financials, covenant status, collateral valuations, and prior committee minutes — for every credit ahead of each review cycle.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -711,7 +711,7 @@
       <p>The AI agent reads news feeds, regulatory filings databases, sector data, and payment-behavior proxies, cross-references against the active credit portfolio, and flags borrowers with emerging signal clusters. The Chief Credit Officer receives a daily alert digest; triggered credits enter watchlist review without waiting for the next scheduled relationship manager review.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The Chief Credit Officer receives a daily alert digest of borrowers with emerging external signal clusters, enabling watchlist review to begin before risk materializes in financial statements.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -752,7 +752,7 @@
       <p>The AI agent reads financial trend data, covenant headroom calculations, collateral coverage ratios, and external signal clusters for each watchlist credit. It computes a migration probability score using the Bank's early-warning indicator framework and delivers a ranked watchlist to the Chief Credit Officer, enabling differentiated review intensity by migration probability band.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The Chief Credit Officer prioritizes watchlist review attention from an AI-ranked watchlist — each credit scored for migration probability from financial trend, covenant headroom, collateral coverage, and external signals — rather than applying a uniform review cadence.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -797,7 +797,7 @@
     </div>
     <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
   </summary>
-  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#expected-credit-loss">Expected credit loss</a></p>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory requirements:</span> <a href="../../regulatory-horizon/index.html#expected-credit-loss">Expected credit loss</a></p>
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>The quarterly IFRS 9 ECL narrative requires the credit risk and finance teams to cross-reference model outputs, macro overlay inputs, and prior disclosures before drafting begins. Stage movement explanations, macro overlay assumptions, and variance analysis must be reconciled across separate systems, with ECL, PD/LGD/EAD, and staging data held in different repositories.</p>
@@ -807,7 +807,7 @@
       <p>The AI agent reads current ECL model outputs, staging flow data, macro overlay assumptions, and prior quarter disclosures. It generates the provision narrative in the prescribed format — stage movement explanation, macro overlay rationale, and variance analysis — ready for the finance controller and CRO to review and sign off.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The finance controller and CRO review an AI-assembled quarterly IFRS 9 ECL provision narrative — with stage movements, macro overlay rationale, and prior-quarter variance analysis — drafted from model outputs in the prescribed format.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -838,7 +838,7 @@
     </div>
     <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
   </summary>
-  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#expected-credit-loss">Expected credit loss</a></p>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory requirements:</span> <a href="../../regulatory-horizon/index.html#expected-credit-loss">Expected credit loss</a></p>
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>IFRS 9 macro overlay calibration requires the credit risk team to assess whether model-generated ECL adequately reflects the macroeconomic outlook, applying management judgment where it does not. The calibration discussion is prepared by the credit risk analyst drawing on multiple macro data sources and prior overlay history; the preparation step consumes capacity before the substantive discussion can begin.</p>
@@ -848,7 +848,7 @@
       <p>The AI agent reads the Bank's approved macroeconomic scenarios, prior overlay decisions and their rationale, and current ECL model outputs. It produces a structured calibration input document — current macro scenario parameters, comparison to prior overlay assumptions, ECL sensitivity to scenario change, and key judgment questions — for the credit risk and finance teams' quarterly overlay review meeting.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The credit risk and finance teams open the quarterly macro overlay review with an AI-produced calibration input document — current scenario parameters, comparison to prior overlay assumptions, ECL sensitivity to scenario change, and key judgment questions — rather than spending analyst capacity on preparation.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -879,7 +879,7 @@
     </div>
     <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
   </summary>
-  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#expected-credit-loss">Expected credit loss</a></p>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory requirements:</span> <a href="../../regulatory-horizon/index.html#expected-credit-loss">Expected credit loss</a></p>
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>Stage distribution movements are reported in the quarterly IFRS 9 narrative but not analyzed for consistency with macro and portfolio signals. A Stage 2 stock declining in a deteriorating macro environment, or a Stage 2 concentration building in a specific segment, may indicate SICR criteria that require recalibration — a signal not visible in the summary narrative alone.</p>
@@ -889,7 +889,7 @@
       <p>The AI agent reads quarterly staging distributions by segment and product, computes movement trends, and cross-references against macro indicators and portfolio credit quality signals. It flags distribution patterns inconsistent with the macro environment and delivers the analysis to the Chief Credit Officer ahead of the quarterly ECL model and overlay review.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The Chief Credit Officer receives a quarterly staging distribution analysis — Stage 1/2/3 movements by segment and product, cross-referenced to macro indicators and portfolio credit quality signals — flagging patterns inconsistent with the macro environment ahead of the ECL review.</p>
       <div class="okr-grid">
         <div class="okr-kr">

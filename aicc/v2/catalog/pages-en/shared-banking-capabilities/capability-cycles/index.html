@@ -1,4 +1,4 @@
-<!--page {"id": "catalog/shared-banking-capabilities/capability-cycles", "title": "Capability Cycles", "styles": ["tokens.css", "components.css", "theme.css", "layouts/service.css", "layouts/concern.css", "layouts/flow-set.css"], "summary": "The recurring cycles that govern shared banking capabilities — KPI/SLA review, continuous improvement, investment, and vendor sourcing.", "source_hash": "1fae19b35bb9"} -->
+<!--page {"id": "catalog/shared-banking-capabilities/capability-cycles", "title": "Capability cycles", "styles": ["tokens.css", "components.css", "theme.css", "layouts/service.css", "layouts/concern.css", "layouts/flow-set.css"], "summary": "The recurring cycles that govern shared banking capabilities — KPI/SLA review, continuous improvement, investment, and vendor sourcing.", "source_hash": "1fae19b35bb9"} -->
 <div class="discovery-content">
 
 <div class="page">
@@ -13,14 +13,14 @@
   </span>
   <span class="breadcrumb__item">
     <span class="breadcrumb__sep" aria-hidden="true">/</span>
-    <span class="breadcrumb__current" aria-current="page">Capability Cycles</span>
+    <span class="breadcrumb__current" aria-current="page">Capability cycles</span>
   </span>
 </nav>
 </div>
 <header class="page-header">
   <div class="page-header__title-row">
     <div>
-      <h1 class="page-header__title">Capability Cycles</h1>
+      <h1 class="page-header__title">Capability cycles</h1>
     </div>
   </div>
   <p class="page-header__intent">The recurring cycles that govern shared banking capabilities — KPI/SLA review, continuous improvement, investment, and vendor sourcing.</p>
@@ -34,11 +34,11 @@
     <div class="flow-detail__title-col">
       <h3 class="flow-detail__title">Capability KPI &amp; SLA review cycle</h3>
     </div>
-    <p class="flow-detail__intent">Monthly and quarterly review of KPI and SLA performance across shared capabilities — scorecard assembly, breach identification, root-cause triage, and remediation planning. The cycle anchor is the time from metric collection to management action.</p>
+    <p class="flow-detail__intent">Monthly and quarterly review of KPI and SLA performance across shared capabilities — scorecard assembly, breach identification, root-cause triage, and remediation planning. The key measure of the cycle is the time from metric collection to management action.</p>
   </summary>
   <div class="flow-detail__body">
-    <p class="flow-detail__intent-full">The capability KPI and SLA review cycle is the recurring governance process by which the Bank measures whether its shared operational capabilities — credit decisioning throughput, transaction processing exception rates, KYC completion cycle times, AML alert triage volumes, collections contact rates — are performing to the standards committed in service-level agreements and internal capability plans. The cycle runs monthly at the operational level and quarterly at senior management review, covering operational metrics that the regulator supervises alongside internally defined SLAs. Each capability has a distinct metric set, but the cycle structure is common: collect actuals, compare to targets, identify and diagnose breaches, produce a management report, and assign remediation. The bottleneck is the assembly step — metrics arrive from separate operational systems on different schedules, and cross-capability comparison is a manual consolidation exercise that delays management visibility by one to two weeks after the measurement period ends. GenAI compresses assembly and diagnosis — automating the collection of actuals across systems, flagging breaches against SLA thresholds, and producing draft root-cause commentary — so the management review can focus on remediation decisions rather than data consolidation.</p>
-    <section class="flow-detail__problems" aria-label="Flow lens problems">
+    <p class="flow-detail__intent-full">The capability KPI and SLA review cycle is the recurring governance process by which the Bank measures whether its shared operational capabilities — credit decisioning throughput, transaction processing exception rates, KYC completion cycle times, AML alert triage volumes, collections contact rates — are performing to the standards committed in service-level agreements and internal capability plans. The cycle runs monthly at the operational level and quarterly at senior management review, covering operational metrics that the regulator supervises alongside internally defined SLAs. Each capability has a distinct metric set, but the cycle structure is common: collect actuals, compare to targets, identify and diagnose breaches, produce a management report, and assign remediation. The bottleneck is the assembly step — metrics arrive from separate operational systems on different schedules, and cross-capability comparison is a manual consolidation exercise that delays management visibility by one to two weeks after the measurement period ends. Generative AI compresses assembly and diagnosis — automating the collection of actuals across systems, flagging breaches against SLA thresholds, and producing draft root-cause commentary — so the management review can focus on remediation decisions rather than data consolidation.</p>
+    <section class="flow-detail__problems" aria-label="Problems by lens">
       <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>KPI and SLA actuals across all shared capabilities are assembled manually once per month or quarter. Continuous visibility into intra-period performance trends — which capabilities are trending toward breach mid-cycle — is absent from the standard management information set.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Cross-capability breach prioritization and remediation-plan coherence are assessed by separate capability owners without a common framework. The cumulative remediation backlog and the interaction between overlapping remediations are not visible to a single owner between formal review cycles.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Actuals collection, SLA threshold comparison, breach identification, and draft root-cause commentary are structured, repeating tasks performed on the same data sources each cycle. The assembly and comparison steps are high-volume and rule-bound — primary candidates for AI-driven execution with analyst review.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Remediation outcomes — whether the action taken resolved the breach — are rarely linked back to the root-cause attribution that framed the remediation. The cycle builds little compounding knowledge about which root causes recur and which remediation types are effective.</p></article></div>
     </section>
 <nav class="flow-stages" aria-label="Flow stages">
@@ -91,7 +91,7 @@
       <p>The AI agent reads the same operational data feeds used for scorecard assembly on a daily cadence, applies the SLA threshold logic against trajectory rather than end-of-period actuals, and issues breach-risk alerts for capabilities where the trend indicates a threshold will be crossed before the measurement date. Capability owners receive the alert with a current-state data summary and decide on remediation within the cycle.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">Capabilities trending toward SLA breach receive a threshold-proximity alert before the formal measurement date, giving capability owners a remediation window within the cycle rather than a confirmed breach record at the end of it.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -132,7 +132,7 @@
       <p>The AI agent retrieves the breach record, the last three cycles of metric history for the same capability, and any linked incident or prior-remediation records. It drafts the root-cause commentary in the management report template with cross-references to prior occurrences and remediation outcomes. The capability owner reviews, amends, and approves before submission.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">Root-cause commentary for each confirmed SLA breach is drafted from the last three cycles of scorecard history and linked incident and remediation records, ready for capability owner review before the management report is finalized.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -153,7 +153,7 @@
 </details>
 <details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/capability-kpi-sla-review-cycle/remediation-outcome-institutional-record" id="scenario-remediation-outcome-institutional-record" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
-    <span class="scenario-lens scenario-lens--new-opps">New opps</span>
+    <span class="scenario-lens scenario-lens--new-opps">New opportunities</span>
     <div class="scenario-card__title-col">
       <span class="scenario-card__chevron" aria-hidden="true">▸</span>
       <h3 class="scenario-card__title">Remediation Outcome Institutional Record</h3>
@@ -173,7 +173,7 @@
       <p>The AI agent reads the post-cycle metric actuals for each capability under active remediation and compares them to the targets committed in the remediation plan. It records the outcome — recovered, partially recovered, failed — against the root-cause attribution and the specific remediation action, building a searchable institutional library that feeds business-case and planning-cycle assumption setting; Finance validates outcome accuracy on periodic review.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">Remediation outcomes — actual metric recovery against plan and root-cause recurrence — are accumulated into a structured institutional record across cycles, enabling FP&amp;A and capability planning to calibrate OPEX and SLA ambition from prior-cycle evidence.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -214,7 +214,7 @@
       <p>The AI agent reads structured actuals from each operational system on the cycle cadence, maps metrics to the shared SLA register, assembles the cross-capability scorecard, and flags metrics with no matching actuals for analyst resolution. The scorecard is available for review within one business day of period close.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">KPI and SLA actuals across credit decisioning, payments, KYC, AML, and collections are collected from operational systems and assembled into a cross-capability scorecard available for management review within one business day of the measurement period close.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -255,7 +255,7 @@
       <p>The AI agent reads confirmed breaches and their associated metric, severity classification, and customer and regulatory impact flags across all capabilities. It applies a consistent impact index, ranks the remediation backlog, and produces a prioritized queue with supporting rationale for each rank position. The COO reviews the recommended sequence; capability owners retain ownership of individual remediation plans.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The active capability remediation backlog is ranked on a consistent cross-capability impact index — weighted by customer, regulatory, and OPEX exposure and SLA severity — and a sequenced remediation queue is available for COO review at the plan stage of each quarterly review.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -282,11 +282,11 @@
     <div class="flow-detail__title-col">
       <h3 class="flow-detail__title">Continuous improvement cycle</h3>
     </div>
-    <p class="flow-detail__intent">Structured identification, prioritization, and implementation of operational improvements across shared capabilities. The cycle anchor is the time from improvement identification to production deployment and measured benefit realization.</p>
+    <p class="flow-detail__intent">Structured identification, prioritization, and implementation of operational improvements across shared capabilities. The key measure of the cycle is the time from improvement identification to production deployment and measured benefit realization.</p>
   </summary>
   <div class="flow-detail__body">
-    <p class="flow-detail__intent-full">The continuous improvement cycle is the process by which the Bank systematically identifies, evaluates, and deploys operational improvements across shared capabilities — reducing unit cost, improving throughput, lowering exception rates, and enhancing customer outcomes in credit decisioning, transaction processing, KYC, financial crime, and servicing. It operates as a rolling quarterly cycle with a structured intake, prioritization against a business-case framework, and post-implementation measurement. The principal bottleneck is the gap between improvement identification — typically surfaced through post-incident reviews, SLA breach remediations, or frontline operational feedback — and the point at which an improvement reaches the prioritization committee with a complete business case. Most improvements stall at the business-case assembly stage for two to four quarters before receiving a prioritization decision. GenAI shortens the business-case assembly step and accelerates post-implementation measurement — producing draft cases from structured operational data and comparing pre/post metrics automatically once a change has been deployed.</p>
-    <section class="flow-detail__problems" aria-label="Flow lens problems">
+    <p class="flow-detail__intent-full">The continuous improvement cycle is the process by which the Bank systematically identifies, evaluates, and deploys operational improvements across shared capabilities — reducing unit cost, improving throughput, lowering exception rates, and enhancing customer outcomes in credit decisioning, transaction processing, KYC, financial crime, and servicing. It operates as a rolling quarterly cycle with a structured intake, prioritization against a business-case framework, and post-implementation measurement. The principal bottleneck is the gap between improvement identification — typically surfaced through post-incident reviews, SLA breach remediations, or frontline operational feedback — and the point at which an improvement reaches the prioritization committee with a complete business case. Most improvements stall at the business-case assembly stage for two to four quarters before receiving a prioritization decision. Generative AI shortens the business-case assembly step and accelerates post-implementation measurement — producing draft cases from structured operational data and comparing pre/post metrics automatically once a change has been deployed.</p>
+    <section class="flow-detail__problems" aria-label="Problems by lens">
       <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>The improvement pipeline — intake queue size, prioritization backlog, implementation progress, and realization status — is not tracked in a consolidated form. The Head of Shared Capabilities cannot see the full improvement lifecycle at any point in the cycle without manual assembly from multiple project and operational sources.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Prioritization scoring is applied within each capability domain independently. Cross-capability prioritization — an improvement in transaction processing that unlocks capacity in AML alert triage — requires cross-domain analysis that capability-specific prioritization committees are not structured to perform.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Business-case modeling, post-implementation metric comparison, and the production of the quarterly prioritization pack are structured analytical tasks that repeat each cycle with the same framework applied to updated operational data.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Completed improvements and their realized benefit outcomes are rarely documented in a form that informs future improvement identification. The Bank does not maintain a searchable library of past interventions, their root causes, and their outcomes that could accelerate business-case assembly for similar future improvements.</p></article></div>
     </section>
 <nav class="flow-stages" aria-label="Flow stages">
@@ -339,7 +339,7 @@
       <p>The AI agent reads the improvement register entry, the relevant operational metric history, and any linked incident or SLA breach records. It drafts the business case in the Bank's standard template — current-state metric baseline, estimated post-improvement target, cost and effort estimate, risk assessment, and dependency flags. The capability owner reviews the draft, confirms assumptions, and submits to the prioritization committee.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The business case for each improvement candidate — covering current-state metric baseline, estimated post-improvement target, cost and effort estimate, risk assessment, and dependency flags — is available for capability owner review within 2–3 weeks of improvement identification, vs. 2–4 quarters in the prior process.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -380,7 +380,7 @@
       <p>The AI agent reads pre-implementation metric baselines from the improvement register and post-implementation actuals from the operational system at defined measurement intervals — 30, 60, and 90 days. It produces a structured realization report for each improvement and flags cases where actual benefit delivery falls below the business-case target threshold, triggering a capability owner investigation task.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">Pre- and post-implementation metric actuals are compared at 30-, 60-, and 90-day intervals for each deployed improvement, with a structured realization report produced against business-case targets and below-trajectory benefits flagged for capability owner investigation.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -401,7 +401,7 @@
 </details>
 <details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/continuous-improvement-cycle/improvement-knowledge-base-accumulation" id="scenario-improvement-knowledge-base-accumulation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
-    <span class="scenario-lens scenario-lens--new-opps">New opps</span>
+    <span class="scenario-lens scenario-lens--new-opps">New opportunities</span>
     <div class="scenario-card__title-col">
       <span class="scenario-card__chevron" aria-hidden="true">▸</span>
       <h3 class="scenario-card__title">Improvement Institutional Knowledge Base</h3>
@@ -421,7 +421,7 @@
       <p>The AI agent reads each completed improvement record — intake evidence, root-cause attribution, approved business case, implementation outcome, and benefit realization result — and writes a structured entry into the institutional improvement knowledge base indexed by capability domain, root-cause category, intervention type, and benefit range. Future intake processing references the knowledge base to identify analogous prior improvements and reuse validated business-case assumptions.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">Completed improvement records — root cause, intervention type, realized benefit, and recurrence status — are accumulated into a searchable institutional library indexed by capability domain, root-cause category, intervention type, and benefit range, available for business-case assembly and root-cause elimination.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -462,7 +462,7 @@
       <p>The AI agent reads all intake channels on a weekly cadence and normalizes each item into the common improvement register schema, merging duplicate signals raised through more than one channel. It applies an initial impact classification based on the affected capability and the metric referenced in the originating evidence. The prioritization committee works from a complete, classified register.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">Improvement signals from all intake channels — SLA breach remediations, post-incident reviews, frontline feedback logs, benchmarking reports, and strategic reviews — are normalized into a single structured improvement register with a common classification, estimated impact range, and originating evidence reference.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -503,7 +503,7 @@
       <p>The AI agent applies the Bank's standard improvement prioritization model to all candidates, scoring each on weighted metric impact, cost and effort, change complexity, and cross-capability dependency. It flags candidates where the primary benefit accrues to a different domain than the implementing capability and presents the full cross-capability ranked queue alongside the domain-specific view to the quarterly prioritization committee.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">Improvement candidates across all capability domains are scored on a common business-case framework and a cross-domain ranked queue — including candidates where the primary benefit accrues to a different domain than the implementing capability — is available for the quarterly prioritization committee.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -535,11 +535,11 @@
     <div class="flow-detail__title-col">
       <h3 class="flow-detail__title">Capability investment cycle</h3>
     </div>
-    <p class="flow-detail__intent">Annual and periodic investment planning for shared capability upgrades, replacements, and new builds — business-case development, approval, delivery, and benefit tracking. The cycle anchor is the time from strategic gap identification to approved investment mandate.</p>
+    <p class="flow-detail__intent">Annual and periodic investment planning for shared capability upgrades, replacements, and new builds — business-case development, approval, delivery, and benefit tracking. The key measure of the cycle is the time from strategic gap identification to approved investment mandate.</p>
   </summary>
   <div class="flow-detail__body">
-    <p class="flow-detail__intent-full">The capability investment cycle governs the Bank's decisions on major investment in shared operational capabilities — platform upgrades, technology replacements, process automation programs, and capability expansions that fall above the operational improvement threshold and require capital allocation through the annual planning or mid-year investment approval process. Supervisory requirements commonly provide that significant technology and outsourcing investments are notified to the regulator or pre-approved; the cycle must accommodate regulatory notification timelines alongside internal governance. The cycle's primary constraint is the quality and speed of business-case production. Investment cases for capability upgrades require cross-function input — IT architecture, operations, finance, risk, compliance, legal — assembled under the annual planning deadline. Cases that miss the annual planning window are deferred to the next cycle, imposing a twelve-month penalty that compounds the operational cost of running on a degraded capability. GenAI can compress the business-case assembly stage — synthesizing cross-function inputs, modeling benefit scenarios, and producing the investment case document — so that cases arrive at the investment committee with full supporting analysis rather than directional estimates.</p>
-    <section class="flow-detail__problems" aria-label="Flow lens problems">
+    <p class="flow-detail__intent-full">The capability investment cycle governs the Bank's decisions on major investment in shared operational capabilities — platform upgrades, technology replacements, process automation programs, and capability expansions that fall above the operational improvement threshold and require capital allocation through the annual planning or mid-year investment approval process. Supervisory requirements commonly provide that significant technology and outsourcing investments are notified to the regulator or pre-approved; the cycle must accommodate regulatory notification timelines alongside internal governance. The cycle's primary constraint is the quality and speed of business-case production. Investment cases for capability upgrades require cross-function input — IT architecture, operations, finance, risk, compliance, legal — assembled under the annual planning deadline. Cases that miss the annual planning window are deferred to the next cycle, imposing a twelve-month penalty that compounds the operational cost of running on a degraded capability. Generative AI can compress the business-case assembly stage — synthesizing cross-function inputs, modeling benefit scenarios, and producing the investment case document — so that cases arrive at the investment committee with full supporting analysis rather than directional estimates.</p>
+    <section class="flow-detail__problems" aria-label="Problems by lens">
       <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>The capability investment portfolio — cases in preparation, cases in approval, programs in delivery, and benefits in realization — is not tracked in a consolidated view. The Head of Shared Capabilities and the CTO cannot see pipeline coverage, approval lag, delivery variance, and benefit realization gap simultaneously.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Investment case benefit modeling is the weakest stage in the cycle. Cases use directional estimates because the data assembly required for rigorous modeling consumes more time than the planning deadline allows. Alternative investment options — build vs buy, phased vs full-scope, vendor A vs vendor B — are rarely explored with equal analytical depth before the approval decision.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Investment case document production, cross-function input synthesis, regulatory notification checklist preparation, and post-deployment benefit tracking reports are structured tasks that repeat for each investment across a consistent framework. The assembly burden is the primary cycle constraint.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Completed investment programs — their actual vs planned cost, delivery timelines, and realized benefits — are rarely documented in a structured form that informs the next investment cycle's assumptions. Each new investment case is built from first principles, repeating the estimation effort that prior program outcomes could have informed.</p></article></div>
     </section>
 <nav class="flow-stages" aria-label="Flow stages">
@@ -592,7 +592,7 @@
       <p>The AI agent reads milestone completion status, budget consumption, and resource allocation data from the program management system on a weekly cadence. It flags milestones at slippage risk based on completion trajectory and identifies dependencies where a slipping milestone affects downstream delivery. The CTO receives a weekly management brief with recommended intervention points.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">Delivery variance against plan at milestone level — covering slippage risk, budget variance, and interdependency impacts across all active capability investment programs — is surfaced to the CTO in a weekly management brief rather than at quarterly gate reviews.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -613,7 +613,7 @@
 </details>
 <details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/capability-investment-cycle/capability-investment-benefit-realisation" id="scenario-capability-investment-benefit-realisation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
-    <span class="scenario-lens scenario-lens--new-opps">New opps</span>
+    <span class="scenario-lens scenario-lens--new-opps">New opportunities</span>
     <div class="scenario-card__title-col">
       <span class="scenario-card__chevron" aria-hidden="true">▸</span>
       <h3 class="scenario-card__title">Capability Investment Benefit Realization Tracking</h3>
@@ -633,7 +633,7 @@
       <p>The AI agent reads the operational KPI actuals for each deployed capability against the business-case baseline at quarterly intervals for the committed realization horizon. It produces a realization report by benefit category — OPEX reduction, throughput improvement, exception-rate reduction — for the investment sponsor to confirm, and accumulates a benefit realization library available to the next investment planning cycle.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">Post-deployment benefit realization for each capability investment is tracked quarterly against committed business-case targets over the defined realization horizon, with an accumulating institutional evidence base available for the next investment planning cycle.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -674,7 +674,7 @@
       <p>The AI agent reads SLA breach history, prior-year benchmark reports, regulatory observation logs, and the three-year strategic plan targets for each capability. It synthesizes a cross-capability gap register ranked by a composite gap score covering OPEX impact, customer outcome risk, and regulatory exposure. The CTO and Head of Shared Capabilities use the register to align on investment priorities before individual business cases are commissioned.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">A cross-capability gap register — ranked by composite OPEX impact, customer outcome risk, and regulatory exposure — is available to the CTO and Head of Shared Capabilities before individual business-case production begins each annual planning cycle.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -715,7 +715,7 @@
       <p>The AI agent receives structured inputs from each contributing function through a common case template and assembles the investment case in the prescribed format. It flags missing inputs, applies the standard cost-benefit model, and produces the regulatory notification checklist under current outsourcing requirements. The sponsor reviews the assembled case before committee submission.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">Investment cases for capability upgrades are assembled with complete cost-benefit analysis, delivery timeline, regulatory notification checklist, and risk assessment ready for committee review, with cross-function input gaps flagged before committee submission.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -756,7 +756,7 @@
       <p>The AI agent applies the Bank's standard investment scenario model to each option, modeling ten-year total cost of ownership under the Bank's cost of capital assumptions, delivery risk discount, and vendor concentration exposure under outsourcing concentration limits. The committee selects the approved option on the basis of the full quantified comparison.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">Investment committees review a quantified 10-year OPEX/CAPEX, delivery risk, vendor concentration, and regulatory notification comparison across build, buy, and partner options for every material capability investment decision.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -783,11 +783,11 @@
     <div class="flow-detail__title-col">
       <h3 class="flow-detail__title">Vendor &amp; sourcing review cycle</h3>
     </div>
-    <p class="flow-detail__intent">Periodic review of vendor performance, contract terms, and sourcing strategy across critical shared-capability suppliers — aligned to the regulator's outsourcing requirements. The cycle anchor is the time from performance signal to contract or sourcing action.</p>
+    <p class="flow-detail__intent">Periodic review of vendor performance, contract terms, and sourcing strategy across critical shared-capability suppliers — aligned to the regulator's outsourcing requirements. The key measure of the cycle is the time from performance signal to contract or sourcing action.</p>
   </summary>
   <div class="flow-detail__body">
-    <p class="flow-detail__intent-full">The vendor and sourcing review cycle governs the Bank's oversight of third-party suppliers providing services to shared capabilities — core banking platform vendors, payment processing providers, KYC and AML software suppliers, credit bureau data providers, and managed service operators. Outsourcing requirements commonly impose formal obligations on vendor due diligence, contract terms, concentration limits, and exit planning. International guidance such as the EBA guidelines on outsourcing arrangements serves as a reference for third-party risk management. The cycle operates on a tiered cadence: critical and material vendors are reviewed quarterly; non-critical vendors annually. Each review covers operational performance against SLAs, financial health of the vendor, regulatory compliance of the outsourced function, concentration risk, and contractual adequacy. The governance framework must evidence continuous oversight to the regulator. GenAI compresses the vendor performance narrative assembly, financial health monitoring, and contract adequacy analysis — enabling the sourcing team to maintain continuous oversight of a large vendor portfolio without proportional analyst headcount.</p>
-    <section class="flow-detail__problems" aria-label="Flow lens problems">
+    <p class="flow-detail__intent-full">The vendor and sourcing review cycle governs the Bank's oversight of third-party suppliers providing services to shared capabilities — core banking platform vendors, payment processing providers, KYC and AML software suppliers, credit bureau data providers, and managed service operators. Outsourcing requirements commonly impose formal obligations on vendor due diligence, contract terms, concentration limits, and exit planning. International guidance such as the EBA guidelines on outsourcing arrangements serves as a reference for third-party risk management. The cycle operates on a tiered cadence: critical and material vendors are reviewed quarterly; non-critical vendors annually. Each review covers operational performance against SLAs, financial health of the vendor, regulatory compliance of the outsourced function, concentration risk, and contractual adequacy. The governance framework must evidence continuous oversight to the regulator. Generative AI compresses the vendor performance narrative assembly, financial health monitoring, and contract adequacy analysis — enabling the sourcing team to maintain continuous oversight of a large vendor portfolio without proportional analyst headcount.</p>
+    <section class="flow-detail__problems" aria-label="Problems by lens">
       <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Vendor performance, financial health, and risk signals are assessed on fixed review cycles rather than continuously. A vendor's SLA degradation trajectory between quarterly reviews, or a financial distress signal appearing in public filings between annual reviews, is not systematically surfaced to the sourcing team.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Sourcing strategy decisions — which capabilities to insource, which to consolidate to a single vendor, which to multi-source — are made at contract renewal with incomplete market intelligence. Concentration risk analysis across the vendor portfolio requires manual aggregation that is rarely current enough to inform active sourcing decisions.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Vendor performance report assembly, contract adequacy review against current outsourcing requirements, financial health summary production, and due diligence pack assembly for new vendor onboarding are structured tasks with defined frameworks that repeat for each vendor each cycle.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Vendor review findings, incident histories, and regulatory observations accumulate in individual contract files rather than in a consolidated vendor knowledge base. The sourcing team does not have access to a searchable record of prior findings across the portfolio that would improve the efficiency and quality of each new review.</p></article></div>
     </section>
 <nav class="flow-stages" aria-label="Flow stages">
@@ -830,7 +830,7 @@
     </div>
     <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
   </summary>
-  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#operational-resilience">Operational and cyber resilience</a></p>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory requirements:</span> <a href="../../regulatory-horizon/index.html#operational-resilience">Operational and cyber resilience</a></p>
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>Vendor onboarding timelines for critical functions are consistently underestimated because the regulatory notification step under outsourcing rules — which typically adds four to twelve weeks — is not built into the standard onboarding plan. Programs are delayed and launch dates slip when the notification obligation is discovered mid-process.</p>
@@ -840,7 +840,7 @@
       <p>The AI agent reads the vendor's proposed service scope and classification under the Bank's outsourcing register and applies the regulatory notification requirements for that function under current outsourcing rules. It generates a complete onboarding timeline with regulatory notification milestones, due diligence checkpoint dates, and contract execution sequencing built in. The program manager receives the timeline at the start of the onboarding engagement.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">A vendor-specific onboarding timeline — with regulatory notification milestones, due diligence checkpoint dates, and contract execution sequencing built in — is generated for the program manager at the start of each new vendor engagement.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -881,7 +881,7 @@
       <p>The AI agent reads structured SLA actuals from the contract management system, extracts financial health signals from public filings and credit rating feeds, checks information security posture from the most recent assessment record, and maps the vendor's outsourced function against current outsourcing compliance requirements. The assembled pack is delivered to the sourcing team one week before the review date; analyst effort concentrates on the rating judgment and sourcing recommendation.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The vendor performance review pack for each critical and material vendor — covering SLA actuals, financial health indicators, information security posture, and outsourcing compliance signals — is delivered to the sourcing team one week before the scheduled review date.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -922,7 +922,7 @@
       <p>The AI agent reads vendor SLA actuals on a daily cadence, monitors public financial news and credit rating change feeds, and checks information security event notifications from the Bank's threat intelligence subscriptions. When a signal crosses a pre-defined threshold, the sourcing team receives an alert with the signal source and current contract and regulatory context within 48 hours.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">Material deterioration in active vendor SLA trajectory, financial health, or information security posture is surfaced to the sourcing team within 48 hours of a threshold signal rather than at the next scheduled quarterly review.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -953,7 +953,7 @@
     </div>
     <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
   </summary>
-  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#operational-resilience">Operational and cyber resilience</a></p>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory requirements:</span> <a href="../../regulatory-horizon/index.html#operational-resilience">Operational and cyber resilience</a></p>
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>Changes to outsourcing regulations or guidelines that require contract amendments are identified only when Compliance reviews the new regulation, not through continuous contract monitoring against a current regulatory baseline. The renegotiation team enters negotiation without a current regulatory gap assessment.</p>
@@ -963,7 +963,7 @@
       <p>The AI agent maintains a current mapping of outsourcing requirements, and of reference guidance such as the EBA outsourcing guidelines, against the Bank's standard outsourcing contract provisions. At the start of each renegotiation, the AI agent reads the active contract and flags clauses that diverge from current regulatory requirements — covering audit rights, exit planning, sub-outsourcing consent, data residency, and concentration risk disclosure. The sourcing and legal teams receive a redline summary before the opening negotiation position is set; Compliance confirms the flagged gaps.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The active contract for each vendor entering renegotiation is reviewed against current outsourcing requirements before negotiation opens, with specific clauses requiring amendment identified and a redline summary delivered to the sourcing and legal teams.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -984,7 +984,7 @@
 </details>
 <details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/vendor-sourcing-review-cycle/sourcing-concentration-risk-renewal-analysis" id="scenario-sourcing-concentration-risk-renewal-analysis" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
-    <span class="scenario-lens scenario-lens--new-opps">New opps</span>
+    <span class="scenario-lens scenario-lens--new-opps">New opportunities</span>
     <div class="scenario-card__title-col">
       <span class="scenario-card__chevron" aria-hidden="true">▸</span>
       <h3 class="scenario-card__title">Sourcing Concentration Risk Analysis at Renewal</h3>
@@ -994,7 +994,7 @@
     </div>
     <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
   </summary>
-  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#operational-resilience">Operational and cyber resilience</a></p>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory requirements:</span> <a href="../../regulatory-horizon/index.html#operational-resilience">Operational and cyber resilience</a></p>
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>Sourcing strategy decisions at renewal are made without a current portfolio-wide concentration risk view. The Bank may renew a relationship that pushes it above a concentration threshold only discoverable in the next supervisory review.</p>
@@ -1004,7 +1004,7 @@
       <p>The AI agent reads the full vendor register, maps each vendor's scope to the relevant capability domain and outsourcing classification, and calculates current concentration exposure by domain, technology platform, and geography. It overlays the applicable concentration limits and flags any renewal that would breach or approach a threshold. The sourcing team receives the concentration analysis alongside the renewal recommendation before the committee decision; Compliance reviews the threshold flags.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">A sourcing concentration risk analysis — quantifying single-vendor concentration by capability domain and cumulative regulatory notification exposure under outsourcing concentration limits — is produced at each vendor renewal decision point before the committee makes its renewal, multi-sourcing, or insourcing decision.</p>
       <div class="okr-grid">
         <div class="okr-kr">

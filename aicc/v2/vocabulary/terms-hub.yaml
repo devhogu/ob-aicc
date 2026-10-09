@@ -10,7 +10,7 @@
   en: maturity level
   term_en: "maturity level"
   definition: "Ступень на пути внедрения AI: от первых контролируемых экспериментов до работы AI-агентов. Ступень считается пройденной, когда её показатели выполнены."
-  definition_en: "A stage on the path of adopting AI, from the first controlled experiments to AI agents at work. A stage counts as complete when its indicators are met."
+  definition_en: "A stage on the path to adopting AI, from the first controlled experiments to AI agents at work. A stage counts as complete when its indicators are met."
 
 - id: governance
   ru: управление и контроль

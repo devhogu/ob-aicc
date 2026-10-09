@@ -6,7 +6,7 @@ related: hub/what-we-do, hub/how-we-work, hub/direction, responsible-ai
 source_hash: fe03972c8bdf
 ---
 
-Our values and principles define what the Hub stands for, how choices are made in it, and how work is seen through to the result. Every project that goes through the Hub and every solution it offers follows them.
+Our values and principles define what the Hub stands for, how it makes choices, and how it sees work through to the result. Every project that goes through the Hub and every solution it offers follows them.
 
 <section class="vp-mission" aria-labelledby="g-mission"><h2 id="g-mission">Mission</h2><p>To make AI a reliable everyday tool at work: to confirm its value together with the departments that work with customers, to pool our experience of using it, and to keep people accountable for every use of AI.</p></section>
 

@@ -11,9 +11,9 @@ source_url: https://academy.claude.com/courses/claude-101
 source_hash: ee5217d94bae
 ---
 
-This guide is for those who already work with Claude in conversations and projects and notice that they keep explaining the same thing to it over and over. By the end you will be able to tell a skill from a project and a connector, and you will find the first procedure in your work that is worth writing down as a skill.
+This guide is for people who already work with Claude in conversations and projects and notice that they keep explaining the same thing to it over and over. By the end, you will be able to tell a skill from a project and a connector, and you will find the first procedure in your work that is worth writing down as a skill.
 
-A **skill** is a written-down procedure: exactly how to do a particular piece of work. For example, “how to format an internal memo using our template” or “how to check a contract against a list of requirements”. Claude applies a skill on its own when it sees that the skill fits the task; you can also call the procedure by hand, by its name.
+A **skill** is a written-down procedure: exactly how to do a particular piece of work. For example, “how to format an internal memo using our template” or “how to check a contract against a list of requirements”. Claude applies a skill on its own when it sees that the skill fits the task; you can also invoke it yourself by name.
 
 ## Skill, project, or connector? {#vs}
 
@@ -31,7 +31,7 @@ They work well together: the “Reporting” project holds the procedures, the �
 
 A skill is a folder whose main file is called `SKILL.md`. It contains three things: a short name, a description of when to apply the skill, and the steps themselves. Next to it you can put a template and a sample of finished work, and for complex cases small programs (scripts); a first skill doesn't need them.
 
-Until a skill is needed, Claude sees only its name and description. It reads the full text when it decides to apply the skill, so skills don't clutter every conversation. You don't have to write the file by hand: Claude can draft a skill from your description. How to do that is shown in the [complete guide](page:kb/guides/skills-complete-guide#create-in-chat).
+Until a skill is needed, Claude sees only its name and description. It reads the full text when it decides to apply the skill, so skills don't clutter every conversation. You don't have to write the file by hand: Claude can draft a skill from your description. The [complete guide](page:kb/guides/skills-complete-guide#create-in-chat) shows how.
 
 ## How to write a good skill {#write}
 

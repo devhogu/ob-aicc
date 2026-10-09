@@ -23,7 +23,7 @@
       <h1 class="page-header__title">Liquidity risk</h1>
     </div>
   </div>
-  <p class="page-header__intent">Liquidity risk is the risk that a bank cannot meet its payment and funding obligations as they fall due without incurring unacceptable cost. Under Basel III, the Liquidity Coverage Ratio (LCR) and Net Stable Funding Ratio (NSFR) set regulatory minima; ILAAP requires a bank to demonstrate adequate liquidity under idiosyncratic, market-wide, and combined stress scenarios. Supervisory requirements commonly provide for daily LCR reporting, monthly NSFR reporting, and quarterly ILAAP updates. <strong>The GenAI opportunity is to instrument liquidity monitoring on a continuous basis</strong> — replacing manual daily narrative assembly with AI-generated buffer analysis and providing a real-time runoff signal between ALCO meetings.</p>
+  <p class="page-header__intent">Liquidity risk is the risk that a bank cannot meet its payment and funding obligations as they fall due without incurring unacceptable cost. Under Basel III, the Liquidity Coverage Ratio (LCR) and Net Stable Funding Ratio (NSFR) set regulatory minima; the internal liquidity adequacy assessment process (ILAAP) requires a bank to demonstrate adequate liquidity under idiosyncratic, market-wide, and combined stress scenarios. Supervisory requirements commonly provide for daily LCR reporting, monthly NSFR reporting, and quarterly ILAAP updates. <strong>Generative AI makes continuous liquidity monitoring possible</strong> — AI-generated buffer analysis replaces the manual daily commentary, and a real-time runoff signal arrives between meetings of the asset and liability committee (ALCO).</p>
 </header>
 <style>
   #problems-tab-funding-adequacy-runoff:checked ~ .problems-tab-bar label[for="problems-tab-funding-adequacy-runoff"] {
@@ -43,10 +43,10 @@
   </div>
   <hr class="problems-divider">
   <div class="problems-panel" id="problems-panel-funding-adequacy-runoff" data-tab="funding-adequacy-runoff" role="tabpanel" aria-labelledby="problems-tab-funding-adequacy-runoff">
-    <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Insights &amp; analytics</h3><p>The LCR is calculated daily and the NSFR monthly from treasury system feeds, but the management narrative — buffer adequacy, HQLA composition, drivers of day-over-day movement — is assembled manually each morning. Funding concentration signals — a large depositor account declining, broker deposit share rising above ILAAP assumptions — are identified reactively when the quarterly review highlights the movement.</p></article><article class="discovery-context-card"><h3>Enablement</h3><p>ILAAP stress scenario modeling — constructing the funding survival horizon under idiosyncratic and combined stress scenarios — requires the treasury risk team to assemble runoff assumptions, HQLA monetization capacity, and Contingency Funding Plan trigger calibration from multiple systems before modeling can begin. The exercise takes three to four weeks of senior analyst time per ILAAP cycle.</p></article><article class="discovery-context-card"><h3>Automation</h3><p>Daily LCR reports, monthly NSFR submissions, and the ILAAP liquidity section each follow defined formats with known data sources. The narrative structure is consistent across cycles; the data-intensive assembly is repeatable.</p></article><article class="discovery-context-card"><h3>New business opportunities</h3><p>Continuous visibility into funding runoff and HQLA buffer adequacy gives the Head of Treasury an intraday signal for wholesale funding decisions. Buffer headroom above the supervisory minimum is a deployment signal for short-duration assets; buffer tightening is an early warning to adjust the funding mix before a threshold is approached.</p></article></div>
+    <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Insights &amp; analytics</h3><p>The LCR is calculated daily and the NSFR monthly from treasury system feeds, but the management narrative — buffer adequacy, composition of high-quality liquid assets (HQLA), drivers of day-over-day movement — is assembled manually each morning. Funding concentration signals — a large depositor account declining, brokered deposit share rising above ILAAP assumptions — are identified reactively when the quarterly review highlights the movement.</p></article><article class="discovery-context-card"><h3>Enablement</h3><p>ILAAP stress scenario modeling — constructing the funding survival horizon under idiosyncratic and combined stress scenarios — requires the treasury risk team to assemble runoff assumptions, HQLA monetization capacity, and Contingency Funding Plan trigger calibration from multiple systems before modeling can begin. The exercise takes three to four weeks of senior analyst time per ILAAP cycle.</p></article><article class="discovery-context-card"><h3>Automation</h3><p>Daily LCR reports, monthly NSFR submissions, and the ILAAP liquidity section each follow defined formats with known data sources. The narrative structure is consistent across cycles; the data-intensive assembly is repeatable.</p></article><article class="discovery-context-card"><h3>New business opportunities</h3><p>Continuous visibility into funding runoff and HQLA buffer adequacy gives the Head of Treasury an intraday signal for wholesale funding decisions. Buffer headroom above the supervisory minimum is a signal to place funds in short-term assets; buffer tightening is an early warning to adjust the funding mix before a threshold is approached.</p></article></div>
   </div>
 </section>
-<div id="main-content" class="l3-sections" aria-label="Sub-concerns">
+<div id="main-content" class="l3-sections" aria-label="Subsections">
 <section class="l3-section" id="lcr-nsfr-reporting">
   <header class="l3-section__head">
     <h2 class="l3-section__title">LCR &amp; NSFR reporting</h2>
@@ -78,10 +78,10 @@
     </div>
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>The AI agent reads the overnight regulatory calculation output, maps ratio movements to component drivers, computes threshold distance, and produces the standard management narrative, with the NSFR commentary added monthly. The treasury risk officer reviews and releases it before the morning stand-up.</p>
+      <p>The AI agent reads the overnight regulatory calculation output, maps ratio movements to component drivers, computes threshold distance, and produces the standard management narrative, with the NSFR commentary added monthly. The treasury risk officer reviews and releases it before the morning meeting.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The treasury risk officer releases the daily LCR management narrative — with ratio level, driver decomposition, and regulatory threshold distance, and the NSFR commentary after each monthly calculation — following a brief review of the AI-generated draft rather than manual morning assembly.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -112,7 +112,7 @@
     </div>
     <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
   </summary>
-  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#capital-liquidity">Capital and liquidity reforms</a></p>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory requirements:</span> <a href="../../regulatory-horizon/index.html#capital-liquidity">Capital and liquidity reforms</a></p>
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>ALCO discusses LCR headroom based on the current ratio without a forward-looking sensitivity view. The headroom available to absorb a specific liquidity stress — a wholesale funding withdrawal, a margin call, a collateral downgrade trigger — requires scenario analysis that is produced for ILAAP but not for routine ALCO reporting.</p>
@@ -122,7 +122,7 @@
       <p>The AI agent reads the current LCR components and applies a defined set of sensitivity scenarios — outflow rate increases, HQLA haircut changes, collateral trigger outflows. It computes the resulting LCR under each scenario, ranks scenarios by impact, and delivers the sensitivity table to the ALCO secretary, who includes it in the meeting pack alongside the standard LCR report.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The ALCO discusses LCR headroom with an AI-produced sensitivity table — the LCR under defined outflow, HQLA haircut, and collateral trigger scenarios, ranked by impact — delivered alongside the standard LCR report ahead of each meeting.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -153,7 +153,7 @@
     </div>
     <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
   </summary>
-  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#capital-liquidity">Capital and liquidity reforms</a></p>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory requirements:</span> <a href="../../regulatory-horizon/index.html#capital-liquidity">Capital and liquidity reforms</a></p>
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>The monthly NSFR report provides the ratio and a driver narrative. Structural trends in funding composition — a gradual shift from stable retail deposits to less stable wholesale funding, or an increase in required stable funding from longer-duration lending — build over multiple months and are not visible in the single-period ratio narrative.</p>
@@ -163,7 +163,7 @@
       <p>The AI agent reads 12 months of NSFR component data, decomposes available stable funding by source and required stable funding by asset class, computes component trend lines, and identifies structural mismatches developing in either the funding or asset mix. The ALCO receives the structural analysis in the quarterly ILAAP review pack and decides on any funding mix action.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The ALCO receives a quarterly structural funding analysis — 12-month trends in available stable funding by source and required stable funding by asset class — identifying mismatches before they affect the regulatory NSFR.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -218,7 +218,7 @@
       <p>The AI agent reads current deposit positions, HQLA composition, wholesale funding maturity profile, and prior ILAAP runoff assumptions. It models survival horizon under each stress scenario, maps CFP trigger points, and drafts the liquidity stress narrative. The treasury risk team reviews assumptions and adds forward judgment before regulatory submission.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The treasury risk team reviews assumptions and adds forward judgment to an AI-constructed ILAAP liquidity stress narrative — covering survival horizon, HQLA monetization capacity, and CFP trigger mapping — modeled from current position data.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -249,7 +249,7 @@
     </div>
     <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
   </summary>
-  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#capital-liquidity">Capital and liquidity reforms</a></p>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory requirements:</span> <a href="../../regulatory-horizon/index.html#capital-liquidity">Capital and liquidity reforms</a></p>
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>CFP trigger indicators are defined in the ILAAP and reviewed in the quarterly ILAAP update. Monitoring the indicators against the trigger levels between ILAAP cycles requires treasury risk staff to check multiple data sources; there is no automated alert when a trigger indicator approaches its threshold.</p>
@@ -259,7 +259,7 @@
       <p>The AI agent reads the CFP trigger indicator schedule, monitors each indicator on a daily basis from the relevant system feeds, and delivers an automated alert to the CRO and Head of Treasury when any indicator is within 20% of its trigger threshold. The Head of Treasury assesses the alert and decides whether to initiate the CFP pre-activation protocol.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The CRO and Head of Treasury are alerted when any Contingency Funding Plan trigger indicator comes within 20% of its threshold, from daily monitoring by the AI agent rather than manual checks of multiple data sources between ILAAP cycles.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -300,8 +300,8 @@
       <p>The AI agent reads current deposit balances by behavioral segment, HQLA composition, and wholesale funding maturity profile. It applies the ILAAP stress scenario runoff and outflow assumptions to the current position and computes the updated survival horizon under idiosyncratic, market-wide, and combined scenarios. The ALCO receives the refreshed estimate at each quarterly meeting alongside the prior ILAAP submission figure.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
-      <p class="okr-objective">The ALCO takes liquidity risk decisions against a survival horizon refreshed each quarter from current deposit, HQLA, and wholesale funding data — under idiosyncratic, market-wide, and combined scenarios — presented alongside the prior ILAAP submission figure.</p>
+      <div class="scenario-section__label">Acceptance criteria</div>
+      <p class="okr-objective">The ALCO makes liquidity risk decisions based on a survival horizon refreshed each quarter from current deposit, HQLA, and wholesale funding data — under idiosyncratic, market-wide, and combined scenarios — presented alongside the prior ILAAP submission figure.</p>
       <div class="okr-grid">
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
@@ -324,7 +324,7 @@
 <section class="l3-section" id="intraday-liquidity-monitoring">
   <header class="l3-section__head">
     <h2 class="l3-section__title">Intraday liquidity monitoring</h2>
-    <p class="l3-section__intent">Intraday liquidity is a bank's capacity to meet payment and settlement obligations throughout the business day — across RTGS, correspondent banking, and securities settlement systems. In line with BCBS 248, banks monitor peak intraday liquidity usage, available intraday liquidity facilities, and the timing of significant payment outflows. Intraday liquidity stress — where a large counterparty fails to deliver expected inflows — can create settlement delays that cascade through the payment system. Monitoring intraday liquidity positions requires real-time feeds from payment and settlement systems.</p>
+    <p class="l3-section__intent">Intraday liquidity is a bank's capacity to meet payment and settlement obligations throughout the business day — across real-time gross settlement (RTGS), correspondent banking, and securities settlement systems. In line with BCBS 248, banks monitor peak intraday liquidity usage, available intraday liquidity facilities, and the timing of significant payment outflows. Intraday liquidity stress — where a large counterparty fails to deliver expected inflows — can create settlement delays that cascade through the payment system. Monitoring intraday liquidity positions requires real-time feeds from payment and settlement systems.</p>
   </header>
   <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
     <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
@@ -345,7 +345,7 @@
     </div>
     <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
   </summary>
-  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#payments-modernization">Payments modernization</a></p>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory requirements:</span> <a href="../../regulatory-horizon/index.html#payments-modernization">Payments modernization</a></p>
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>Settlement stress typically manifests as a counterparty that normally delivers funds by 11:00 failing to deliver, creating a liquidity gap that treasury operations must manage. Monitoring typically requires treasury operations staff to check counterparty inflow status manually during the business day rather than receiving an automated alert when the timing deviation exceeds the threshold.</p>
@@ -355,7 +355,7 @@
       <p>The AI agent reads real-time payment system data, tracks inflow timing per material counterparty against their rolling 20-day median timing, and delivers an alert to treasury operations when a counterparty's expected inflow is delayed beyond the defined threshold. The treasury operations team initiates the contingency protocol before the intraday position deteriorates.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">Treasury operations is alerted when a material settlement counterparty's expected inflow is delayed beyond its historical timing pattern, and initiates the contingency protocol before the intraday position deteriorates.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -386,7 +386,7 @@
     </div>
     <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
   </summary>
-  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#payments-modernization">Payments modernization</a></p>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory requirements:</span> <a href="../../regulatory-horizon/index.html#payments-modernization">Payments modernization</a></p>
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>Intraday liquidity monitoring requires treasury operations staff to track payment flows, correspondent bank positions, and RTGS usage throughout the business day from multiple system screens. Settlement pressure events — large counterparty inflow delays, unexpected outflow spikes — are identified when a team member checks the system rather than by an automated alert.</p>
@@ -396,7 +396,7 @@
       <p>The AI agent reads real-time payment system feeds, correspondent account positions, and RTGS capacity utilization. It monitors peak intraday usage relative to available facilities, flags counterparty inflow delays above threshold, and delivers a structured morning position report with intraday event alerts to the Head of Treasury, who manages the intraday position from them.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The Head of Treasury manages intraday liquidity from a structured morning position report and continuous intraday event alerts generated by the AI agent's monitoring of payment flows, correspondent positions, and RTGS capacity.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -427,7 +427,7 @@
     </div>
     <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
   </summary>
-  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#capital-liquidity">Capital and liquidity reforms</a></p>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory requirements:</span> <a href="../../regulatory-horizon/index.html#capital-liquidity">Capital and liquidity reforms</a></p>
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>Under BCBS 248, banks monitor and report intraday peak usage trends. Trend analysis across the 90-day reporting window requires aggregating daily peak usage records, computing percentile distributions, and identifying shifts in usage patterns — a manual analysis exercise not routinely performed outside the quarterly BCBS 248 reporting cycle.</p>
@@ -437,7 +437,7 @@
       <p>The AI agent reads 90 days of intraday usage records, computes peak usage trends and percentile distributions, identifies seasonal patterns and counterparty-specific inflow timing shifts, and produces the BCBS 248 intraday liquidity report. The Head of Treasury reviews and submits it.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The Head of Treasury reviews and submits the BCBS 248 intraday liquidity report from an AI-produced analysis of rolling 90-day usage — peak usage trends, percentile distributions, seasonal patterns, and counterparty inflow timing shifts — which also informs the ALCO liquidity review.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -485,14 +485,14 @@
   <div class="scenario-card__body">
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>Wholesale funding maturity concentrations are visible in the LCR maturity ladder but are not monitored on a rolling forward-looking basis outside the daily LCR calculation. A material maturity cliff forming within a 30-day window may be visible in the data weeks before it occurs but goes unalerted until the daily LCR report surfaces it.</p>
+      <p>Wholesale funding maturity concentrations are visible in the LCR maturity ladder but are not monitored on a rolling forward-looking basis outside the daily LCR calculation. A material maturity cliff forming within a 30-day window may be visible in the data weeks before it occurs but raises no alert until the daily LCR report surfaces it.</p>
     </div>
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
       <p>The AI agent reads the wholesale funding maturity ladder, computes net maturity flow by day and week over the rolling 90-day horizon, and flags concentration points where gross maturities exceed the defined threshold relative to available refinancing capacity. The Head of Treasury receives the alert at least three weeks before the concentration date, with time to arrange refinancing.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The Head of Treasury receives an early-warning alert for every wholesale funding maturity concentration forming within the rolling 90-day horizon, with time to arrange refinancing before it enters the 30-day LCR stress window.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -533,7 +533,7 @@
       <p>The AI agent monitors daily deposit flows by counterparty, channel, and product type against ILAAP behavioral assumptions. It surfaces concentration signals and runoff deviations, delivering a weekly funding-risk digest to the ALCO secretary and CRO.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The ALCO and CRO receive a weekly funding-risk digest with AI-identified deposit runoff deviations and funding concentration signals referenced to ILAAP behavioral assumptions.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -546,7 +546,7 @@
         </div>
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
-          <p>Weekly funding-risk digest delivered within 1 business day of each monitoring cycle close, versus a quarterly identification cadence under the prior ILAAP review approach.</p>
+          <p>Weekly funding-risk digest delivered within 1 business day of each monitoring cycle close, versus identification only at the quarterly ILAAP review under the prior approach.</p>
         </div>
       </div>
     </div>
@@ -571,10 +571,10 @@
     </div>
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>The AI agent reads monthly deposit flow data by segment and product, computes actual runoff rates, and compares each segment against the current ILAAP assumption. It flags segments where the deviation exceeds the materiality threshold and delivers a monthly behavioral drift report to the treasury risk officer for ILAAP recalibration consideration.</p>
+      <p>The AI agent reads monthly deposit flow data by segment and product, computes actual runoff rates, and compares each segment against the current ILAAP assumption. It flags segments where the deviation exceeds the materiality threshold and delivers a monthly behavioral drift report to the treasury risk officer to consider whether the ILAAP needs recalibration.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The treasury risk officer receives a monthly behavioral drift report comparing actual deposit runoff by customer segment and product with the ILAAP assumption, so recalibration is considered when behavior diverges rather than at the next annual review.</p>
       <div class="okr-grid">
         <div class="okr-kr">

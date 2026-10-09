@@ -12,7 +12,7 @@ source_url: https://academy.claude.com/courses/building-effective-human-agent-te
 source_hash: efb90d5e6d0b
 ---
 
-A guide for leaders and members of teams where Claude is already used individually. It retells Anthropic's course on how people and agents work together. After it, you will be able to assess your team's readiness with five questions, plan the first two weeks of a pilot, and bring an agent into the work so that trust in it grows step by step.
+This guide is for leaders and members of teams where people already use Claude individually. It retells Anthropic's course on how people and agents work together. By the end, you will be able to assess your team's readiness with five questions, plan the first two weeks of a pilot, and bring an agent into the work so that trust in it grows step by step.
 
 An [[ai-agent|AI agent]] is an AI that doesn't just answer in a conversation but carries out multi-step work on its own with the help of tools: it reads files, searches systems, prepares documents. Cowork, for example, works this way. A personal assistant speeds up one person, but the knowledge stays in that person's conversations. The next step is **an agent as a member of the team**.
 
@@ -20,7 +20,7 @@ An [[ai-agent|AI agent]] is an AI that doesn't just answer in a conversation but
 
 When everyone has their own assistant, four people ask similar questions and get slightly different answers: that is **parallel work, not teamwork**. In a shared space (a shared channel or a shared project) a question is asked once, everyone reads and builds on the answer, and what is written becomes team knowledge that a newcomer can read on their very first day.
 
-The faster a team grows, the harder scattered context hits the quality of the agents' work.
+The faster a team grows, the more scattered context hurts the quality of the agents' work.
 
 **Exercise.** Write down three questions your team asks every week, for example “what's the procedure for this operation”, “where's the current form”, “what changed in the rules”. Who else asks them? What breaks when the answers differ? What would one shared agent change?
 
@@ -34,7 +34,7 @@ An ordinary assistant works on your behalf and knows what you know. A team agent
 <article><h3>Shared context</h3><p>It sees the team's spaces: decisions, changes, agreements.</p></article>
 </div>
 
-An example from the course of why its own account matters: an agent working under a manager's login opens the billing folder. “It can open everything the manager can. Nobody decided that.” For a financial organization this is a ready illustration of the principle of **least privilege**: the agent has exactly the access its work needs.
+An example from the course of why its own account matters: an agent working under a manager's login opens the billing folder. “It can open everything the manager can. Nobody decided that.” For a financial organization this is a ready-made illustration of the principle of **least privilege**: the agent has exactly the access its work needs.
 
 **Check.** Does your tool work under its own name? Does it remember goals between conversations? Does it see the team's shared spaces?
 
@@ -61,7 +61,7 @@ The rhythm of handing over work: **the agent drafts → a person decides and ref
 
 Lessons from the course's simulation, in which a team worked with agents:
 
-- An agent that answered users on its own promised a fix date that nobody had agreed.
+- An agent that answered users on its own promised a fix date that nobody had agreed on.
 - An agent announced the launch decision on its own, and the post had to be taken down.
 - Even a **draft** “we're launching” recommendation, published in the morning, made half the team consider the question settled.
 - And manual checking where there is nothing left to catch is a signal that it's time to give the agent more independence.
@@ -98,4 +98,4 @@ Start with the weakest item: one change per area, each change with an owner and 
 
 “Most of these habits helped teams long before agents, but with agents, skipping them has become more costly.”
 
-Tools for a team agent are Claude Tag (Claude in Slack; see [Claude Tag](page:kb/guides/claude-tag)) or managed agents on the Claude platform. Use them only if they are approved in your organization. Until you have a team agent, many of these habits can be started in a shared Claude project the team uses: a written goal, one owner for each piece of work, a “done” rubric. How the organization should make decisions about access and risk: [Rolling out Claude in an organization](page:kb/guides/deploying-claude-enterprise).
+The tools for a team agent are Claude Tag (Claude in Slack; see [Claude Tag](page:kb/guides/claude-tag)) or managed agents on the Claude platform. Use them only if they are approved in your organization. Until you have a team agent, many of these habits can be started in a shared Claude project the team uses: a written goal, one owner for each piece of work, a “done” rubric. For how an organization should decide on access and risk, see [Rolling out Claude in an organization](page:kb/guides/deploying-claude-enterprise).

@@ -3,8 +3,8 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark">
 <title>Regulatory data · AI Competence Hub</title>
 <script>try{var t=localStorage.getItem('hub-theme');document.documentElement.dataset.theme=t==='dark'?'dark':'light';}catch(e){}</script>
-<link rel="stylesheet" href="../../assets/styles/tokens.css"><link rel="stylesheet" href="../../assets/styles/components.css"><link rel="stylesheet" href="../../assets/styles/theme.css"><link rel="stylesheet" href="../../assets/styles/layouts/concern.css"><link rel="stylesheet" href="../../assets/styles/layouts/concern-l2.css"><link rel="stylesheet" href="../../../../assets/discovery.css"><script defer src="../../../../assets/discovery.js"></script><link rel="stylesheet" href="../../../../assets/ui/fonts.css?v=31af9632de"><link rel="stylesheet" href="../../../../assets/ui/tokens.css?v=7a14df66bd"><link rel="stylesheet" href="../../../../assets/ui/primitives.css?v=ea6572a6e0"><link rel="stylesheet" href="../../../../assets/ui/workspace.css?v=416781b646"><link rel="stylesheet" href="../../../../assets/site.css?v=5480d3be4e">
-<script src="../../../../assets/search-en.js"></script><script src="../../../../assets/i18n-en.js"></script><script src="../../../../assets/site.js?v=cfae61d4bb" defer data-root="../../../.." data-t-none="Nothing matches your search." data-t-light="Light mode" data-t-dark="Dark mode" data-t-mail-body="Page: {title}
+<link rel="stylesheet" href="../../assets/styles/tokens.css"><link rel="stylesheet" href="../../assets/styles/components.css"><link rel="stylesheet" href="../../assets/styles/theme.css"><link rel="stylesheet" href="../../assets/styles/layouts/concern.css"><link rel="stylesheet" href="../../assets/styles/layouts/concern-l2.css"><link rel="stylesheet" href="../../../../assets/discovery.css"><script defer src="../../../../assets/discovery.js"></script><link rel="stylesheet" href="../../../../assets/ui/fonts.css?v=31af9632de"><link rel="stylesheet" href="../../../../assets/ui/tokens.css?v=7a14df66bd"><link rel="stylesheet" href="../../../../assets/ui/primitives.css?v=ea6572a6e0"><link rel="stylesheet" href="../../../../assets/ui/workspace.css?v=416781b646"><link rel="stylesheet" href="../../../../assets/site.css?v=ca3f012564">
+<script src="../../../../assets/search-en.js"></script><script src="../../../../assets/i18n-en.js"></script><script src="../../../../assets/site.js?v=f0c9aa38f9" defer data-root="../../../.." data-t-none="Nothing matches your search." data-t-light="Light mode" data-t-dark="Dark mode" data-t-mail-body="Page: {title}
 ID: {ref}
 Address: {url}
 
@@ -195,7 +195,7 @@ Question or comment:
       <h1 class="page-header__title">Regulatory data</h1>
     </div>
   </div>
-  <p class="page-header__intent">Regulatory data is the governed data layer that feeds the Bank's supervisory reporting obligations — the datasets assembled, transformed, validated, and submitted to the regulator on monthly, quarterly, and ad hoc cycles. It encompasses the reporting datasets extracted from source systems, the data lineage documentation that evidences aggregation accuracy and completeness in line with the BCBS 239 principles, supervisory submission records, and the data residency and localization controls set by applicable law on personal data. The regulatory data domain is where data-quality failures and lineage gaps become supervisory findings; its governance disciplines — CDE ownership, documented transformation logic, reproducible aggregation — determine the Bank's regulatory risk posture. <strong>The GenAI opportunity is to automate regulatory report assembly across multiple form types, map BCBS 239 data lineage from source to report field, and monitor data-residency compliance continuously</strong> — sustaining submission quality and reducing the manual assembly burden that typically occupies the regulatory reporting team for 10–15 analyst days per cycle.</p>
+  <p class="page-header__intent">Regulatory data is the governed data layer that feeds the Bank's supervisory reporting obligations — the datasets assembled, transformed, validated, and submitted to the regulator on monthly, quarterly, and ad hoc cycles. It encompasses the reporting datasets extracted from source systems, the data lineage documentation that evidences aggregation accuracy and completeness in line with the BCBS 239 principles, supervisory submission records, and the data residency and localization controls set by applicable law on personal data. The regulatory data domain is where data-quality failures and lineage gaps become supervisory findings; its governance disciplines — CDE ownership, documented transformation logic, reproducible aggregation — determine the Bank's regulatory risk posture. <strong>The generative AI opportunity is to automate regulatory report assembly across multiple form types, map BCBS 239 data lineage from source to report field, and monitor data-residency compliance continuously</strong> — sustaining submission quality and reducing the manual assembly burden that typically occupies the regulatory reporting team for 10–15 analyst days per cycle.</p>
 </header>
 <style>
   #problems-tab-reporting-datasets:checked ~ .problems-tab-bar label[for="problems-tab-reporting-datasets"] {
@@ -218,7 +218,7 @@ Question or comment:
     <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Insights &amp; analytics</h3><p>Regulatory reporting dataset completeness — whether the data extracted from source systems covers the full population required for each form — is validated manually during each submission cycle. Incomplete populations due to missing system extracts, extract-timing mismatches, or scope definition errors are identified during the validation step, often too close to the submission deadline for comprehensive remediation.</p></article><article class="discovery-context-card"><h3>Enablement</h3><p>Regulatory change management — identifying the data impact of new reporting requirements from the regulator — requires the regulatory reporting team to map the new form fields against existing data sources, identify gaps, and define the remediation program. The mapping exercise is done manually from form specifications; for major reporting changes, the mapping consumes several weeks before implementation work can begin.</p></article><article class="discovery-context-card"><h3>Automation</h3><p>Monthly and quarterly regulatory submissions follow prescribed formats applied to structured source data through defined transformation logic. The assembly, validation, and variance commentary steps repeat each cycle with the same rules and the same source systems — the pattern is highly repeatable and a strong candidate for AI-driven execution with regulatory reporting team review and sign-off.</p></article><article class="discovery-context-card"><h3>New business opportunities</h3><p>Regulatory reporting teams that automate assembly and validation can redirect analyst capacity from collation to quality assurance, regulatory change management, and proactive supervisor engagement. Banks that demonstrate consistently accurate, timely submissions with documented lineage build supervisory trust that reduces the intensity of examination cycles.</p></article></div>
   </div>
 </section>
-<div id="main-content" class="l3-sections" aria-label="Sub-concerns">
+<div id="main-content" class="l3-sections" aria-label="Subsections">
 <section class="l3-section" id="regulatory-reporting-datasets">
   <header class="l3-section__head">
     <h2 class="l3-section__title">Regulatory reporting datasets</h2>
@@ -253,7 +253,7 @@ Question or comment:
       <p>The AI agent reads the current and prior cycle datasets, calculates field-level variances, and classifies each material variance against known drivers — portfolio balance movements, risk grade changes, market rate movements, and FX revaluation — using data available from the credit, market risk, and finance systems. Variances that can be attributed to a documented driver are summarized in the variance brief; residuals that exceed a defined unexplained threshold are flagged for analyst investigation. The brief is structured to align with the form's section structure, enabling the review to proceed field-by-field.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The regulatory reporting team completes the variance review for each cycle with a structured, pre-populated brief, directing analytical effort to unexplained residuals rather than variance identification.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -284,7 +284,7 @@ Question or comment:
     </div>
     <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
   </summary>
-  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#risk-data-reporting">Risk data and supervisory reporting</a></p>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory requirements:</span> <a href="../../regulatory-horizon/index.html#risk-data-reporting">Risk data and supervisory reporting</a></p>
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>BCBS 239 Principle 3 calls for regulatory submissions to be reproducible and for the data lineage from source to submission field to be documented. In practice, the documentation for each submission cycle is scattered across procedure manuals, email threads documenting ad hoc adjustments, and version-controlled SQL scripts. Assembling the complete lineage evidence for a prior-cycle supervisory inquiry requires the regulatory reporting team to reconstruct the assembly process from multiple sources. The reconstruction is time-consuming and may be incomplete where ad hoc adjustments were applied without documentation.</p>
@@ -294,7 +294,7 @@ Question or comment:
       <p>The AI agent captures the extraction query executed, the transformation logic version applied, and the validation results for each form field at the point of each regulatory dataset assembly run. It packages this information as a structured lineage record linked to the submission identifier and archived in the data lineage repository. The lineage record for any prior submission is retrievable on demand, enabling the regulatory reporting team to respond to supervisory inquiries with complete documented evidence. The CDO uses the archive for BCBS 239 lineage evidence in supervisory examinations.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">Each regulatory submission carries a complete, archived lineage record enabling full reproducibility and serving as BCBS 239 supervisory examination evidence.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -335,7 +335,7 @@ Question or comment:
       <p>The AI agent reads the submission cycle calendar, executes the extraction query for the required population against each source system, applies the documented transformation logic for each form field, and runs the regulatory validation rule set. The output is a validated dataset with the validation summary — pass counts, failure counts, and material unexplained variances flagged for review. The regulatory reporting team reviews the validation summary, investigates flagged variances, and approves the dataset for submission. The extraction, transformation, and validation steps are logged with a reproducible audit record.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">Regulatory reporting datasets are assembled, transformed, and validated for each cycle through automated execution, with analyst capacity directed to variance investigation and sign-off.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -380,7 +380,7 @@ Question or comment:
     </div>
     <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
   </summary>
-  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#risk-data-reporting">Risk data and supervisory reporting</a></p>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory requirements:</span> <a href="../../regulatory-horizon/index.html#risk-data-reporting">Risk data and supervisory reporting</a></p>
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>ELT pipeline changes are deployed through the change management process, but the impact on BCBS 239 lineage documentation is assessed informally and inconsistently. Data governance team involvement in the pipeline change process depends on the change owner's awareness of the lineage obligation. Pipeline changes that modify transformation logic for regulated CDEs are deployed without updated lineage documentation, creating a documentation lag that accumulates between formal lineage reviews.</p>
@@ -390,7 +390,7 @@ Question or comment:
       <p>The AI agent reads the proposed pipeline change specification — the fields modified, the transformation logic amended, and the source-to-target mappings updated — and cross-references the affected fields against the BCBS 239 lineage register and regulatory report field mappings. It identifies the CDEs and report fields whose lineage documentation requires updating and generates a draft updated lineage entry for each affected field. Data stewards review and approve the draft lineage entries; the data governance team reviews the pre-deployment impact assessment before the pipeline change is deployed to production.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">BCBS 239 lineage documentation is updated at the point of pipeline change, maintaining current documentation without retrospective remediation cycles.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -421,7 +421,7 @@ Question or comment:
     </div>
     <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
   </summary>
-  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#risk-data-reporting">Risk data and supervisory reporting</a></p>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory requirements:</span> <a href="../../regulatory-horizon/index.html#risk-data-reporting">Risk data and supervisory reporting</a></p>
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>BCBS 239 lineage documentation is maintained for CDEs that were in scope at the initial lineage program implementation; CDEs introduced through subsequent pipeline changes and new reporting requirements lack lineage entries. The scope of the documentation gap grows continuously as ELT pipelines evolve. The data governance team identifies lineage gaps reactively — when an auditor or supervisor requests the lineage trace for a specific CDE — rather than through systematic gap detection. Supervisory examination findings require remediation within defined timelines, creating compressed workloads when gaps are large.</p>
@@ -431,7 +431,7 @@ Question or comment:
       <p>The AI agent reads the current BCBS 239 lineage register and the enterprise data catalog, identifies CDEs that appear in regulatory report field mappings but have no corresponding lineage entry or have a lineage entry that terminates before the source system, and classifies each gap by severity — missing end-to-end trace, partial trace stopping mid-pipeline, and stale trace reflecting a prior pipeline configuration. The monthly gap report is ranked by the regulatory report that consumes each affected CDE, the next submission date, and the examination risk tier. The data governance team uses the report to structure the lineage remediation program.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The BCBS 239 lineage documentation gap is continuously monitored and remediated, with supervisory examination exposure from undocumented lineage maintained at an acceptable level.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -462,7 +462,7 @@ Question or comment:
     </div>
     <span class="scenario-complexity scenario-complexity--L" title="Complexity">L</span>
   </summary>
-  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#risk-data-reporting">Risk data and supervisory reporting</a></p>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory requirements:</span> <a href="../../regulatory-horizon/index.html#risk-data-reporting">Risk data and supervisory reporting</a></p>
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>BCBS 239 Principle 3 calls for documented lineage from source data through all transformations to the final regulatory report. Maintaining this lineage map as ELT pipelines and source systems evolve is a continuous governance discipline. The lineage map typically lags the production pipeline at the time of supervisory review, creating compliance risk when the documented and operational pipelines diverge.</p>
@@ -472,7 +472,7 @@ Question or comment:
       <p>The AI agent reads ELT pipeline metadata, source system schemas, and transformation logic from the data warehouse. It constructs the end-to-end lineage map for each CDE in BCBS 239 scope — tracing from source field through each transformation step to the regulatory report field. The lineage map is rendered in an examination-ready format and flagged where gaps or undocumented transformations exist, for the data governance team to resolve.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">A complete, BCBS 239 Principle 3-aligned lineage map for every in-scope CDE is maintained in production-accurate form and available for supervisory examination at any point in the regulatory calendar.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -527,7 +527,7 @@ Question or comment:
       <p>The AI agent reads the draft submission and applies cross-field consistency checks, population completeness verification, and variance analysis against the prior submission cycle. It produces a pre-submission quality report — flagging inconsistencies between form sections, population count variances, and material metric movements that require explanatory narrative. The regulatory reporting manager reviews the flagged items, resolves or documents each one, and signs off the submission with the quality report as supporting evidence.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">Regulatory returns submitted to the regulator pass a formalized pre-submission quality gate — cross-field consistency checks, completeness verification, and prior-period variance analysis — before the regulatory reporting manager's sign-off.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -568,7 +568,7 @@ Question or comment:
       <p>The AI agent reads the regulatory submission calendar, tracks the completion status of each step — data extraction, transformation, validation, sign-off, and transmission — for each in-flight submission, and produces a weekly workload forecast. The forecast identifies deadlines in the next 30 days, the current step status for each submission, and weeks where the combined submission workload exceeds defined capacity thresholds. The regulatory reporting lead uses the forecast to assign additional resources to at-risk submissions ahead of the deadline.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The regulatory reporting lead holds a continuous, 30-day forward view of submission workload and capacity conflicts, enabling proactive resource allocation before deadline compression occurs.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -609,7 +609,7 @@ Question or comment:
       <p>The AI agent reads the supervisory request specification, identifies the data fields and population required, queries the relevant source systems, applies the transformation logic appropriate to the request, and produces a structured draft response in the format specified by the requesting authority. For requests where the data field or population definition is ambiguous, the AI agent produces a clarification brief for the regulatory reporting lead before proceeding with assembly. The regulatory reporting team reviews the draft, applies any judgment-based adjustments, and submits within the response window.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">Ad hoc supervisory data requests are assembled within the regulatory response window through AI-driven extraction and formatting, with analyst capacity directed to review and judgment rather than data assembly.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -650,7 +650,7 @@ Question or comment:
       <p>The AI agent reads submission outcomes, validation logs, ad hoc request handling times, and reviewer assignments across all supervisory submission cycles into a continuous portfolio-health view. The view surfaces filings with recurring issues, average reviewer cycle by filing type, and supervisor-side inquiry patterns. The Head of Regulatory Reporting reads the view weekly and adjusts staffing, process, or controls in advance of subsequent cycles.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The Head of Regulatory Reporting holds a continuously updated supervisory submission portfolio-health view, surfacing filing reliability and reviewer capacity signals across all supervisory submission cycles.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -695,7 +695,7 @@ Question or comment:
     </div>
     <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
   </summary>
-  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#personal-data">Personal data and consent</a></p>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory requirements:</span> <a href="../../regulatory-horizon/index.html#personal-data">Personal data and consent</a></p>
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>Where data localization law applies, it commonly requires personal data of citizens to be stored and processed on domestic servers. Cloud services and cross-border API integrations create a continuously evolving data flow landscape where unregistered flows accumulate between periodic mapping exercises and create regulatory exposure before the next review.</p>
@@ -705,7 +705,7 @@ Question or comment:
       <p>The AI agent reads data flow logs, cloud storage configurations, API integration records, and the data inventory from the enterprise data catalog. It identifies flows in which personal data subject to localization requirements crosses to external jurisdictions, maps each flow against the legal basis register, and flags unregistered or potentially non-compliant flows for the DPO and compliance team. The audit runs on a monthly cadence and produces a flagged flow register for compliance review.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The DPO and compliance team receive a monthly audit of data flows for compliance with data localization requirements, covering cloud services and cross-border API integrations against the legal basis register.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -736,7 +736,7 @@ Question or comment:
     </div>
     <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
   </summary>
-  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#personal-data">Personal data and consent</a></p>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory requirements:</span> <a href="../../regulatory-horizon/index.html#personal-data">Personal data and consent</a></p>
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>The data residency inventory is maintained through periodic mapping exercises; between exercises, infrastructure changes — cloud region migrations, new SaaS platform adoptions, data warehouse migrations — alter the storage location of data assets without triggering an inventory update. The data privacy officer relies on the inventory to demonstrate compliance with data localization requirements; a stale inventory that does not reflect current storage locations fails the regulatory evidence standard.</p>
@@ -746,7 +746,7 @@ Question or comment:
       <p>The AI agent reads the current data residency inventory and queries infrastructure configuration records — cloud storage account locations, database host regions, and SaaS platform data-at-rest region settings — and identifies assets where the recorded storage location in the inventory diverges from the current infrastructure configuration. Divergences are ranked by the sensitivity of the personal data held in the affected asset. The data privacy team receives the monthly currency report and updates the inventory and legal basis register for assets whose storage location has changed.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The data residency inventory reflects current infrastructure storage locations, providing a reliable evidence base for regulatory compliance and enabling prompt identification of jurisdiction changes.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -777,7 +777,7 @@ Question or comment:
     </div>
     <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
   </summary>
-  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#personal-data">Personal data and consent</a></p>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory requirements:</span> <a href="../../regulatory-horizon/index.html#personal-data">Personal data and consent</a></p>
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>Cross-border data flows arise through API integrations, cloud service configurations, and data replication pipelines that evolve continuously as the Bank's technology landscape changes. The data residency compliance posture is assessed through periodic data flow mapping exercises; between assessments, new integrations may create cross-border flows of personal data without a documented legal basis. Compliance failures under applicable law on personal data carry significant regulatory consequences; detection through periodic mapping is insufficient in a continuously changing integration landscape.</p>
@@ -787,7 +787,7 @@ Question or comment:
       <p>The AI agent monitors API gateway logs, cloud service telemetry, and data replication event streams, applies data classification rules to identify flows involving personal data attributes, and checks each cross-border flow against the legal basis register. Flows of personal data subject to localization requirements destined for foreign jurisdiction systems without a documented legal basis entry generate an immediate alert to the data privacy team — flow source, destination, data category, estimated volume, and the closest existing legal basis entry if partial coverage exists. The data privacy team assesses the legal basis and updates the register or initiates remediation.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">Cross-border flows of personal data subject to localization requirements without a documented legal basis are detected and escalated within hours, maintaining continuous data residency compliance in an evolving integration landscape.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -842,7 +842,7 @@ Question or comment:
       <p>The AI agent reads data remediation ticket status, ELT pipeline deployment records, and data quality monitoring outputs for each field in the regulatory change scope and maps progress against the field-level readiness plan. The readiness tracker shows the completion status for each field — source data available, transformation logic tested, quality validation passed, sign-off obtained — and highlights fields on the critical path where progress is behind plan relative to the submission deadline. The regulatory reporting and data governance leads use the tracker as the management dashboard; status updates are continuous rather than periodic.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The regulatory reporting and data governance leads hold a continuous, field-level readiness view for each in-flight regulatory change, enabling timely escalation of critical-path risks before the submission deadline.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -883,7 +883,7 @@ Question or comment:
       <p>The AI agent reads the new reporting form specification, queries the enterprise data catalog for each field requirement, and determines whether an existing CDE covers the data need. For covered fields, it documents the source system, transformation logic, and data quality risk. For uncovered fields, it flags the gap with an assessment of remediation options; the regulatory change program team uses the AI-generated impact assessment as the basis for the implementation plan.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The regulatory change program team receives an AI-generated data impact assessment for each new reporting requirement — mapping new form fields to existing sources, documenting coverage gaps, and assessing remediation options — as the implementation planning baseline.</p>
       <div class="okr-grid">
         <div class="okr-kr">
@@ -924,7 +924,7 @@ Question or comment:
       <p>The AI agent reads the published form specification change, extracts new and amended field definitions, and queries the enterprise data catalog for each field — identifying existing source data assets that cover the definition, transformation requirements, and data quality gaps. Fields with no covering source are identified as requiring new data collection; fields with partial coverage are described with the gap between the source data and the field requirement. The gap assessment is structured as a remediation program input: field, gap type, covering source or required new source, and estimated remediation effort. The data governance and regulatory reporting teams use the assessment to scope and timeline the program.</p>
     </div>
     <div class="scenario-section">
-      <div class="scenario-section__label">OKR</div>
+      <div class="scenario-section__label">Acceptance criteria</div>
       <p class="okr-objective">The data remediation program for each regulatory reporting change is scoped from an AI-generated gap assessment, with new data collection requirements and transformation gaps identified within days of the regulation publication.</p>
       <div class="okr-grid">
         <div class="okr-kr">

@@ -1,5 +1,5 @@
 ---
-title: "Rolling out Claude in an organization: five decisions, the complete guide"
+title: "Rolling out Claude in an organization: five decisions — the complete guide"
 summary: How a leader and the owner of an organization in Claude can make the five decisions that shape a rollout (structure, access, governance, spend and visibility), and what position a regulated department needs.
 category: For leaders
 level: deep
@@ -14,9 +14,9 @@ source_url: https://academy.claude.com/courses/deploying-claude-enterprise-with-
 source_hash: c9f7fdf66a5f
 ---
 
-This guide is for those who decide **how** Claude will arrive in the organization: the owners of the organization in Claude (the main administrators of its account), IT, information security, finance and heads of departments. It retells Anthropic's course on rolling out Claude Enterprise and has been checked against the Help Center.
+This guide is for people who decide **how** Claude will be brought into the organization: the owners of the organization in Claude (the main administrators of its account), IT, information security, finance and heads of departments. It retells Anthropic's course on rolling out Claude Enterprise and has been checked against the Help Center.
 
-After it, you will be able to go through the five rollout decisions (structure, access, governance, spend, visibility), understand what position a regulated department needs, and read adoption signals. For a head of department the most important parts are “Access”, “Spend”, “Adoption signals” and “Regulated department”: they show what to ask for in your pilot and what to agree with IT, security and the budget owner.
+By the end, you will be able to go through the five rollout decisions (structure, access, governance, spend, visibility), understand what position a regulated department needs, and read adoption signals. For a head of department the most important parts are “Access”, “Spend”, “Adoption signals” and “Regulated department”: they show what to ask for in your pilot and what to agree with IT, security and the budget owner.
 
 The course teaches not which buttons to press but **judgment**: which decisions to make, in what order, and who makes them. The course's running example is a fintech company with five departments, one of which operates under financial regulation. In a bank the whole organization operates under regulation, so read the “Regulated department” part with particular care.
 
@@ -112,7 +112,7 @@ The risk is sprawl: dozens of nearly identical skills, unchecked procedures that
 - The organization's shared instructions are two or three lines on style and rules: they apply in every conversation.
 - You can loosen the policy at any time; tightening it doesn't remove what has already been published, so that will need reviewing.
 
-Skills and how to review them in detail: [Claude skills: the complete guide](page:kb/guides/skills-complete-guide).
+For skills and how to review them in detail, see [Claude skills: the complete guide](page:kb/guides/skills-complete-guide).
 
 ## Spend: limits and levers {#spend}
 
@@ -181,4 +181,4 @@ The course's final steps: confirm the four hard-to-undo settings (or hand them t
 
 Three questions for any new capability: **who should get it? what will pass through it? does it change the risk** (a new class of data, a new degree of independence, new people)? If any answer is “yes”, go to the data risk owner. In the course's example, Claude Tag (Claude in Slack) was turned off for the regulated department, and the risk owner signed off on that decision.
 
-How people and agents work together within teams: [People and agents on one team](page:kb/guides/human-agent-teams). Links to the course and the Help Center are in the Reference section: [Anthropic learning](page:reference/anthropic).
+For how people and agents work together within teams, see [People and agents on one team](page:kb/guides/human-agent-teams). Links to the course and the Help Center are in the Reference section: [Anthropic learning](page:reference/anthropic).

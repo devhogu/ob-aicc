@@ -97,7 +97,7 @@
 вся неделя: whole week
 сезон отпусков: vacation season
 "Сейчас {pi}, итерация {it} ({title}), неделя {week} из {weeks}. ": "Now: {pi}, iteration {it} ({title}), week {week} of {weeks}. "
-"В этой итерации {n} {work}, без итерации — {loose}. ": "This iteration has {n} {work}; {loose} with no iteration. "
+"В этой итерации {n} {work}, без итерации — {loose}. ": "This iteration has {n} {work}; {loose} not assigned to an iteration. "
 Ближайшая Review — {review}, Planning — {planning}.: "Next Review: {review}; Planning: {planning}."
 работа|работы|работ: work item|work items
 

@@ -34,7 +34,7 @@ flowchart TB
 
 ## Program backlog {#backlog}
 
-The [[backlog|backlog]] is an ordered list of the Capabilities and Features of all started initiatives. The order within an initiative is set by the product manager; the order across initiatives and the dependencies are set by the program decision forum. An item moves to “Ready” when its outcome and [[acceptance-criteria|acceptance criteria]] are clear. A review is not yet acceptance: the product manager accepts a Feature, and the business owner accepts the working solution.
+The [[backlog|backlog]] is an ordered list of the Capabilities and Features of all started initiatives. The order within an initiative is set by the product manager; the order across initiatives and the dependencies are set by the program decision forum. An item moves to “Ready” when its outcome and [[acceptance-criteria|acceptance criteria]] are clear. A review is not acceptance: the product manager accepts a Feature, and the business owner accepts the working solution.
 
 ## Working cycle {#cadence}
 
