@@ -1,0 +1,23 @@
+<GraceChangeDesignContext graceVersion="4.0">
+  <Change>C-HUB-V2-EN</Change>
+  <NormativeStatus>non-normative</NormativeStatus>
+  <Rationale>
+    <Observation>Measured on 2026-10-09 at commit 5a0918e91: 57 Russian Markdown pages (about 42,000 words, of which 37 are knowledge-base guides); 77 catalog pages; the Справочник data (26 acts, 9 resources, 39 Anthropic sources, about 2,100 words), learning maps (about 2,300 words), 15 project cards (about 5,000 words), vocabulary (104 terms, about 2,700 words); about 300 Russian interface strings inside tools/library.py (111 lines), tools/cards.py (106), tools/cadence.py (30), site.js (48) and build.py (4); site.json names and messages keyed by 'ru' only.</Observation>
+    <Observation>The scenario catalog of v2 was imported from v1's Russian catalog, which was itself translated from v1's English catalog; html/aicc/v1/en/discovery holds that English original. v2 has since changed the catalog (the regulatory page, 295 file-safe links, labels, spaces, statuses), so an English re-import must reapply those changes.</Observation>
+    <Observation>Learning progress is kept in the browser under keys made of the map id and the step's guide id and anchor; these are language-neutral, so a reader's progress carries over between editions if ids and anchors stay the same in English. This is one reason anchors must match.</Observation>
+    <Observation>Most knowledge-base guides retell English Anthropic material with banking examples added. Their English edition is a translation of our Russian guide (with its examples and structure), not a copy of the original course text.</Observation>
+    <Observation>Risk: Length differences: English labels are usually shorter but some phrases are longer; the time tiles, kanban captions, tab titles and SVG labels of the roadmap and maps are the tight spots.</Observation>
+    <Observation>Risk: Plural and date rules differ (Russian has three plural forms, English two; month names and date ranges); the Python and JavaScript formatters must change together, which the calendar parity test already guards.</Observation>
+  </Rationale>
+  <Alternatives>
+    <Alternative>Translating the catalog from the current Russian instead of re-importing the English original: more faithful to v2's edits but a large translation job; the plan should prefer the re-import with the v2 edits reapplied, and translate only what v2 added.</Alternative>
+    <Alternative>Separate English design or templates: rejected by the owner's requirement of one identical design.</Alternative>
+    <Alternative>Falling back to Russian text where English is missing (the C-HUB-V2 rule): replaced here by a hard requirement of a complete English edition; the fallback may remain only as a build-time safety that the check reports as a failure.</Alternative>
+  </Alternatives>
+  <DeferredDecisions>
+    <Decision>Settled by the owner on 2026-10-09 (see the spec's assumptions); none open.</Decision>
+  </DeferredDecisions>
+  <Scenarios>
+    <Scenario>A reader on /aicc/v2/ru/kb/guides/skills-complete-guide/index.html#test presses the language switch and lands on /aicc/v2/en/kb/guides/skills-complete-guide/index.html#test with the same tab open and the same step bar, showing the same ticked steps.</Scenario>
+  </Scenarios>
+</GraceChangeDesignContext>

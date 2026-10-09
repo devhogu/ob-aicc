@@ -1,0 +1,52 @@
+<GraceChangeSpec graceVersion="4.0" status="approved">
+  <C-HUB-V2-EN>
+    <Summary>Add a full English edition of the AI Competence Hub (version 2) that matches the Russian edition one to one: every page, part, card, map, step, diagram, interaction, effect and style, built from an English corpus kept beside the Russian one, published at /aicc/v2/en/ and packed for offline use the same way as the Russian edition.</Summary>
+    <Problem>The Hub exists only in Russian. Its approved change C-HUB-V2 left English as a later translation and allowed a missing translation to show the Russian text. The owner now wants the English edition in full and identical in design, effects and content. The build, the data files, the scripts and the checks all assume one language: about 300 interface strings are written into the build tools and the page script, the data files (Справочник, learning maps, project cards, vocabulary, calendar) carry Russian text only, and the check enforces Russian-specific rules.</Problem>
+    <Goals>
+      <Goal>An English page for every Russian page of v2, at the same address under /aicc/v2/en/ instead of /aicc/v2/ru/, with the same page id, title role, headings, anchors, tabs, cards, tables, figures and links, so that switching language keeps the reader on the same page and the same place in it.</Goal>
+      <Goal>The same behaviour in both editions: the PI and iteration tiles and calendar with Planning and Review, the projects board with tabs, filters, status lines and in-place views; the Справочник and knowledge base search and chips; the learning roadmap, maps, step bars, dots, ticks and progress (shared between languages, since the reader is the same); the course tabs and their links; the diagrams, drawn in English; the site search over the English pages; light and dark themes; desktop and phone layouts.</Goal>
+      <Goal>One design: both editions use the same stylesheet, script, interface kit and icons. No English-only styling; where English text is longer or shorter, the shared design is adjusted so both editions lay out well.</Goal>
+      <Goal>An English corpus beside the Russian one: pages in content/en mirroring content/ru; English fields beside the Russian ones in the data files (reference, learning, cards, vocabulary, calendar, site settings); the scenario catalog in English with the same pages, cards and anchors; all of it published under the English site's sources the way the Russian sources are.</Goal>
+      <Goal>A language switch on every page of both editions that leads to the same page in the other language; the site root /aicc/ keeps opening the Russian edition.</Goal>
+      <Goal>Offline packages built like the Russian one (site that opens from files, full source, drawn diagrams, README in the edition's language): one bilingual package with both editions, and separate Russian and English packages, written side by side.</Goal>
+    </Goals>
+    <Constraints>
+      <Constraint>Russian stays the source of truth. Each English text records which Russian text it translates (by content hash); when the Russian changes, the check reports the English as stale until it is updated. A structural difference (a page, part, anchor, card, step or component present in one edition only) fails the check.</Constraint>
+      <Constraint>English is written as natural, plain English for bank staff, not a word-for-word rendering. One English term list, built from the vocabulary and the corpus translation map before translation starts, is used by every page; industry terms appear in plain English (funnel, not «воронка (funnel)»); the English vocabulary page shows the English term and its definition only, without the Russian term.</Constraint>
+      <Constraint>Every rule of the Russian edition holds in English: the Hub names (AI Competence Hub, Competence Hub, Hub), the forbidden wording of site.json and its English equivalents, no bank name, no statement of the Hub's legal nature or authority, only approved tools recommended, the three roles, the Draft status and the page id on every page, no hard-wrapped Markdown, no reference to v1.</Constraint>
+      <Constraint>The owner's own wording (the home page and any text marked as the owner's) is translated faithfully, keeping its tone; it is not improved in translation.</Constraint>
+      <Constraint>Laws and regulators: the official English title where one exists, otherwise a translated title with the Russian original in brackets. Course and product names stay as their owners publish them.</Constraint>
+      <Constraint>The Russian edition does not change in content or design, apart from the shared design adjustments, the language switch, and the moving of interface strings into message tables with identical Russian output; its pages are compared before and after to prove it.</Constraint>
+      <Constraint>Interface strings, dates, month names, plural forms and number formats come from per-language message tables and formatters used identically by the Python build and the page script; the calendar's Python and JavaScript renderings stay identical in both languages.</Constraint>
+      <Constraint>Every phase is verified (build, check, tests, browser checks where rendering changes), committed and pushed. The live site changes only through a verified publish on the owner's word.</Constraint>
+    </Constraints>
+    <NonGoals>
+      <NonGoal>Any change to v1, or translating v1.</NonGoal>
+      <NonGoal>Making English the source language, or a two-way synchronisation of edits made in English.</NonGoal>
+      <NonGoal>Other languages, and switching the language by the browser's settings.</NonGoal>
+      <NonGoal>New content or new features beyond what the Russian edition has at the start of this change; Russian content added during the change is translated before it closes.</NonGoal>
+    </NonGoals>
+    <AcceptanceCriteria>
+      <Criterion>The build writes html/aicc/v2/ru and html/aicc/v2/en; every page exists in both, and a parity check confirms for each pair the same page id, the same anchors in the same order, the same tabs, cards, steps, table shapes, figures and interactive components, and links that resolve inside the same edition.</Criterion>
+      <Criterion>No visible text of an English page is Russian, except Russian originals of law titles given in brackets by rule; the English site check (links, anchors, page ids, Draft chip, forbidden wording, term convention) passes, and the Russian check passes unchanged.</Criterion>
+      <Criterion>A browser sweep of every page pair at desktop and phone width, in light and dark theme, finds no script error, no missing file, no horizontal overflow and no layout break; side-by-side screenshots show the same structure; the interactions listed in the goals behave the same in both editions, including the language switch landing on the same page and part.</Criterion>
+      <Criterion>The Russian pages are unchanged apart from the language switch and the agreed shared design adjustments, shown by a before-and-after comparison.</Criterion>
+      <Criterion>The English corpus is complete (no page, data field or catalog card without English), every English text is current against its Russian source, and the English sources are published under /aicc/v2/en/.</Criterion>
+      <Criterion>The bilingual, English and Russian offline packages open from files with every page styled and working (the bilingual one with a working language switch) and each rebuilds from its own source into an identical site; the Russian package's site is unchanged in content apart from the language switch.</Criterion>
+      <Criterion>After the owner's word, /aicc/v2/en/ is live, the switch works on the server, and /aicc/ still opens the Russian edition.</Criterion>
+    </AcceptanceCriteria>
+    <AffectedAreas><M-PORTAL-LOCALIZATION /><M-PORTAL-PROJECTION /><M-PORTAL-SOURCE /><M-PORTABLE-EXPORT /><M-AICC-DEPLOY /></AffectedAreas>
+    <VerificationIntent>
+      <ExpectedCommand>python3 aicc/v2/tools/build.py</ExpectedCommand>
+      <ExpectedCommand>python3 aicc/v2/tools/check.py --idempotent</ExpectedCommand>
+      <ExpectedCommand>python3 -m unittest discover -s aicc/v2/tests</ExpectedCommand>
+      <ExpectedCommand>portal/tools/with-browser-env.sh portal/.venv/bin/python aicc/v2/tools/check_browser.py</ExpectedCommand>
+      <ExpectedEvidence>The parity check over every page pair; the English and Russian site checks; the staleness report showing no stale English; the Python and JavaScript calendar parity in both languages; the Russian before-and-after comparison; the browser sweep of both editions (desktop, phone, light, dark) with the interaction script; the side-by-side screenshots; the English package opened from files and rebuilt identically; the served manifest after publishing.</ExpectedEvidence>
+    </VerificationIntent>
+    <Assumptions>
+      <Assumption>The owner asked on 2026-10-09 for a full English version of the package, site and corpus with the design fully kept, "full match ... in effects and design and content, everything", and instructed "lets spec and plan".</Assumption>
+      <Assumption>Owner decisions of 2026-10-09: Russian stays the source of truth and English is a maintained translation, a Russian edit marking its English page as needing an update; /aicc/ keeps opening Russian with English one click away; one bilingual package and separate Russian and English packages (the answer read as both); plain English industry terms, with no Russian term on the English vocabulary page; official English law titles where they exist, otherwise a translated title with the Russian original in brackets. With these decisions the owner settled every open point of the draft, and the spec is approved on that basis.</Assumption>
+      <Assumption>C-HUB-V2 is still active (its lifecycle close-out is pending); this change builds on its delivered state and does not reopen it.</Assumption>
+    </Assumptions>
+  </C-HUB-V2-EN>
+</GraceChangeSpec>

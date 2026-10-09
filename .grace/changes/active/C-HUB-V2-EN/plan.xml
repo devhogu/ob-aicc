@@ -1,0 +1,135 @@
+<GraceChangePlan graceVersion="4.0" status="approved">
+  <C-HUB-V2-EN>
+    <IntentSummary>Execute the approved spec C-HUB-V2-EN: make the v2 build bilingual without changing the Russian output, add the English corpus (term list, data, pages, catalog), prove page-for-page parity of content, effects and design, then pack the bilingual, Russian and English editions and publish English at /aicc/v2/en/ on the owner's word.</IntentSummary>
+    <BaselineAssertions>
+      <MustExist>
+        <Value>M-PORTAL-LOCALIZATION</Value>
+        <Value>M-PORTAL-PROJECTION</Value>
+        <Value>M-PORTABLE-EXPORT</Value>
+      </MustExist>
+      <MustPassCommand><Command>python3 aicc/v2/tools/check.py --idempotent</Command></MustPassCommand>
+      <MustPassCommand><Command>python3 -m unittest discover -s aicc/v2/tests</Command></MustPassCommand>
+    </BaselineAssertions>
+    <TargetAssertions>
+      <MustVerify>
+        <Module>M-PORTAL-LOCALIZATION</Module>
+        <Module>M-PORTAL-PROJECTION</Module>
+        <Module>M-PORTABLE-EXPORT</Module>
+      </MustVerify>
+      <MustPassCommand><Command>python3 aicc/v2/tools/build.py</Command></MustPassCommand>
+      <MustPassCommand><Command>python3 aicc/v2/tools/check.py --idempotent</Command></MustPassCommand>
+      <MustPassCommand><Command>python3 -m unittest discover -s aicc/v2/tests</Command></MustPassCommand>
+      <MustPassCommand><Command>portal/tools/with-browser-env.sh portal/.venv/bin/python aicc/v2/tools/check_browser.py</Command></MustPassCommand>
+    </TargetAssertions>
+    <DurableScope>
+      <GraphAnchors><M-PORTAL-LOCALIZATION /><M-PORTAL-PROJECTION /><M-PORTAL-SOURCE /><M-PORTABLE-EXPORT /><M-AICC-DEPLOY /></GraphAnchors>
+      <VerificationAnchors><V-M-PORTAL-LOCALIZATION /><V-M-PORTAL-PROJECTION /><V-M-PORTABLE-EXPORT /></VerificationAnchors>
+      <ContextArtifact>ux-guidelines.xml</ContextArtifact>
+      <ContextArtifact>deployment.xml</ContextArtifact>
+    </DurableScope>
+    <ObservedWriteScope>
+      <Glob>aicc/v2/**</Glob>
+      <Glob>html/aicc/v2/**</Glob>
+      <Glob>.grace/changes/active/C-HUB-V2-EN/**</Glob>
+    </ObservedWriteScope>
+    <ImplementationPlan>
+      <T-001>
+        <Title>English term list and style rules</Title>
+        <DependsOn></DependsOn>
+        <AcceptanceCriteria>
+          <Criterion>aicc/v2/i18n/terms-en.yaml gives one English rendering for every vocabulary term, Hub name, role, forum, profile, state, level and recurring interface phrase, drawn from the vocabulary and the corpus translation map; aicc/v2/i18n/style-en.md states the English voice, the Hub names, the forbidden English wording, the law-title rule and the plain-term rule.</Criterion>
+          <Criterion>A test loads the term list and fails on a missing vocabulary id or a duplicate English rendering for different Russian terms.</Criterion>
+        </AcceptanceCriteria>
+        <Verification><Command>python3 -m unittest discover -s aicc/v2/tests</Command></Verification>
+      </T-001>
+      <T-002>
+        <Title>Bilingual build with identical Russian output</Title>
+        <DependsOn></DependsOn>
+        <AcceptanceCriteria>
+          <Criterion>The build loops over the languages of site.json; names, messages and every interface string of build.py, library.py, cards.py, cadence.py and site.js come from per-language tables; dates, month names, ranges and plurals come from per-language formatters, the same in Python and JavaScript.</Criterion>
+          <Criterion>Each page carries its lang, its own search index and a language switch to the same page in the other edition (keeping the anchor); sources are published per edition.</Criterion>
+          <Criterion>The Russian pages, compared before and after with the switch masked, are byte-identical; the calendar's Python and JavaScript renderings match in both languages.</Criterion>
+        </AcceptanceCriteria>
+        <Verification>
+          <Command>python3 aicc/v2/tools/build.py</Command>
+          <Command>python3 aicc/v2/tools/check.py --idempotent</Command>
+          <Command>python3 -m unittest discover -s aicc/v2/tests</Command>
+        </Verification>
+      </T-002>
+      <T-003>
+        <Title>English check, parity check and staleness report</Title>
+        <DependsOn>T-002</DependsOn>
+        <AcceptanceCriteria>
+          <Criterion>The site check runs per edition; for English it fails on visible Russian text (except law originals in brackets), on the forbidden English wording and on a broken term convention.</Criterion>
+          <Criterion>A parity check compares each page pair: page id, anchors in order, tabs, cards, steps, table shapes, figures, interactive components and in-edition links; any difference fails.</Criterion>
+          <Criterion>Each English source records the content hash of the Russian source it translates; the check lists English texts that are stale or missing and fails while any remain.</Criterion>
+        </AcceptanceCriteria>
+        <Verification>
+          <Command>python3 aicc/v2/tools/check.py --idempotent</Command>
+          <Command>python3 -m unittest discover -s aicc/v2/tests</Command>
+        </Verification>
+      </T-003>
+      <T-004>
+        <Title>English data</Title>
+        <DependsOn>T-001, T-002</DependsOn>
+        <AcceptanceCriteria>
+          <Criterion>The Справочник data (acts, resources, Anthropic sources), learning maps, project cards and their schema and template, vocabulary definitions, calendar seasons and site settings carry English beside Russian, using the term list; the English vocabulary page shows English terms and definitions only; law titles follow the law-title rule.</Criterion>
+          <Criterion>The generated English pages (reference, knowledge base index, roadmap, maps, projects views, vocabulary) pass the English and parity checks.</Criterion>
+        </AcceptanceCriteria>
+        <Verification>
+          <Command>python3 aicc/v2/tools/check.py --idempotent</Command>
+          <Command>python3 -m unittest discover -s aicc/v2/tests</Command>
+        </Verification>
+      </T-004>
+      <T-005>
+        <Title>English pages and diagrams</Title>
+        <DependsOn>T-001, T-003</DependsOn>
+        <AcceptanceCriteria>
+          <Criterion>content/en mirrors content/ru for all pages (hub, services, process, projects, responsible AI, reference, knowledge base guides, legal pages), translated with the term list and style rules, line-edited for natural English and reviewed against the Russian; the owner's wording on the home page is translated faithfully.</Criterion>
+          <Criterion>Every diagram is drawn in English in both themes; the English and parity checks pass and no English page is stale.</Criterion>
+        </AcceptanceCriteria>
+        <Verification>
+          <Command>python3 aicc/v2/tools/build.py</Command>
+          <Command>python3 aicc/v2/tools/check.py --idempotent</Command>
+        </Verification>
+      </T-005>
+      <T-006>
+        <Title>English scenario catalog</Title>
+        <DependsOn>T-003</DependsOn>
+        <AcceptanceCriteria>
+          <Criterion>The catalog's English pages come from v1's English original through the import with v2's adjustments, and v2's later edits (the regulatory page, file-safe links, labels, statuses, spacing) are reapplied; text added in v2 only is translated; the import tool carries a complete module map.</Criterion>
+          <Criterion>Every catalog page, card and anchor exists in both editions; the catalog search finds English scenarios; the English and parity checks pass.</Criterion>
+        </AcceptanceCriteria>
+        <Verification>
+          <Command>python3 aicc/v2/tools/build.py</Command>
+          <Command>python3 aicc/v2/tools/check.py --idempotent</Command>
+        </Verification>
+      </T-006>
+      <T-007>
+        <Title>Design and behaviour parity</Title>
+        <DependsOn>T-004, T-005, T-006</DependsOn>
+        <AcceptanceCriteria>
+          <Criterion>The browser sweep covers both editions at desktop and phone width in light and dark: no script error, missing file, overflow or layout break; side-by-side screenshots of every page pair show the same structure.</Criterion>
+          <Criterion>An interaction script runs in both editions: time tiles and calendar, projects tabs, filters, status lines and in-place views, Справочник and knowledge base search and chips, roadmap, maps, step bars, ticks and shared progress, course tabs and their links, site search, theme, and the language switch landing on the same page and part.</Criterion>
+          <Criterion>Layout differences are fixed in the shared stylesheet only; the Russian pages are unchanged apart from the switch and these shared fixes, shown by the before-and-after comparison.</Criterion>
+        </AcceptanceCriteria>
+        <Verification>
+          <Command>portal/tools/with-browser-env.sh portal/.venv/bin/python aicc/v2/tools/check_browser.py</Command>
+          <Command>python3 aicc/v2/tools/check.py --idempotent</Command>
+        </Verification>
+      </T-007>
+      <T-008>
+        <Title>Packages and publishing</Title>
+        <DependsOn>T-007</DependsOn>
+        <AcceptanceCriteria>
+          <Criterion>tools/package.py writes the bilingual, Russian and English packages side by side, each with its site, full source, drawn diagrams and a README in its language; each opens from files with every page styled and working (the bilingual one with the switch) and rebuilds into an identical site.</Criterion>
+          <Criterion>On the owner's word the site is published; /aicc/v2/en/ is live, the switch works on the server, /aicc/ still opens Russian, and the served manifest matches.</Criterion>
+        </AcceptanceCriteria>
+        <Verification>
+          <Command>python3 aicc/v2/tools/package.py</Command>
+          <Command>python3 aicc/v2/tools/check.py --idempotent</Command>
+        </Verification>
+      </T-008>
+    </ImplementationPlan>
+  </C-HUB-V2-EN>
+</GraceChangePlan>
