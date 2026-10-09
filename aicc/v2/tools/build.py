@@ -383,12 +383,25 @@ def course(body):
     return f'{intro}<div class="course" data-tabs><div class="course-tabs" role="tablist">{heads}</div>{panels}</div>{tail}'
 
 
+def stamp(name):
+    """A version mark for a stylesheet or script taken from its content, so a browser never keeps a stale copy after a change."""
+    source = SRC / name
+    if not source.is_file():
+        return ''
+    if name not in STAMPS:
+        STAMPS[name] = '?v=' + hashlib.sha1(source.read_bytes()).hexdigest()[:10]
+    return STAMPS[name]
+
+
+STAMPS = {}
+
+
 def render_page(page, pages, site):
     m = site['messages']['ru']
     names = site['names']['ru']
     here = page.url
     root = posixpath.relpath('.', posixpath.dirname(here))
-    asset = lambda name: rel(here, 'assets/' + name)
+    asset = lambda name: rel(here, 'assets/' + name) + stamp(name)
     context = ''
     if len(page.headings) >= 2 and page.layout not in ('home', 'course'):
         context = (f'<aside class="o-context" aria-label="{escape(m["on_this_page"])}"><strong>{escape(m["on_this_page"])}</strong>' +
