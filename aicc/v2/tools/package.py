@@ -44,9 +44,11 @@ source/aicc/v2/         полный исходный код Хаба:
   site.json, site.css, site.js, ui/   настройки, стили, скрипты, набор интерфейса
   tools/                сборка, проверка, упаковка
   tests/                тесты
+source/portal/.cache/mermaid-hub/   уже нарисованные схемы: пересборка обходится без браузера
 
 КАК ПЕРЕСОБРАТЬ
-Нужен Python 3 с пакетами markdown-it-py и PyYAML.
+Нужен Python 3 с пакетами markdown-it-py и PyYAML. Новые или изменённые схемы
+рисуются через Node и Chromium (tools/render-mermaid.js); без изменений в схемах они не нужны.
   cd source
   python3 aicc/v2/tools/build.py                 # результат: source/html/aicc/v2
   python3 aicc/v2/tools/check.py --idempotent    # проверка ссылок, якорей, словаря
@@ -71,6 +73,10 @@ def main():
     shutil.rmtree(pack, ignore_errors=True)
     shutil.copytree(SITE, pack / 'site', ignore=SKIP)
     shutil.copytree(SRC, pack / 'source' / 'aicc' / 'v2', ignore=SKIP)
+    # the diagrams already drawn, so the source rebuilds without a browser (tools/diagrams.py reads this cache first)
+    cache = ROOT / 'portal' / '.cache' / 'mermaid-hub'
+    if cache.is_dir():
+        shutil.copytree(cache, pack / 'source' / 'portal' / '.cache' / 'mermaid-hub')
     (pack / 'index.html').write_text(
         '<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=site/ru/index.html">'
         '<title>Хаб Компетенций по AI</title></head><body><p><a href="site/ru/index.html">Хаб Компетенций по AI — открыть</a></p></body></html>\n',
