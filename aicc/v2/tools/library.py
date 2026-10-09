@@ -209,7 +209,7 @@ def roadmap_svg(data, maps, link, totals):
     fork = xs[-1] + 110
     ys = [round(mid + (k - (len(branches) - 1) / 2) * spread) for k in range(len(branches))]
     out = [f'<svg class="rm-svg" viewBox="0 0 {W} {H}" role="img" aria-label="Дорожная карта обучения">',
-           '<defs><linearGradient id="rm-grad" x1="0" x2="1"><stop offset="0" stop-color="#d6006f"/><stop offset="1" stop-color="#5b6bd6"/></linearGradient></defs>',
+           f'<defs><linearGradient id="rm-grad" gradientUnits="userSpaceOnUse" x1="{x0}" y1="{mid}" x2="{fork}" y2="{mid}"><stop offset="0" stop-color="#d6006f"/><stop offset="1" stop-color="#5b6bd6"/></linearGradient></defs>',
            f'<path class="rm-track" d="M{x0},{mid} L{fork},{mid}"/>']
     for k, y in enumerate(ys):
         out.append(f'<path class="rm-track rm-track--branch rm-track--b{k}" d="M{fork},{mid} C{fork + 70},{mid} {fork + 50},{y} {fork + 120},{y} L{W - 70},{y}"/>')
