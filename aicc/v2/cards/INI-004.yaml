@@ -1,43 +1,64 @@
 id: INI-004
 title: "FP&A: отчётность по финансовым показателям для руководства Банка"
+title_en: "FP&A: financial performance reporting for the Bank's management"
 summary: "Готовим отчётность FP&A единым автоматизированным конвейером и показываем её руководству Банка через единый портал: одинаково каждый месяц и каждый квартал."
+summary_en: "We prepare FP&A reporting through a single automated pipeline and show it to the Bank's management through a single portal, the same way every month and every quarter."
 profile: initiative
 class_of_service: инициатива
 stage: Воронка
 function: "FP&A"
+function_en: "FP&A"
 area: "Управленческая отчётность и материалы для инвесторов"
+area_en: "Management reporting and investor materials"
 people:
-  business_owner: {position: "представитель функции FP&A, которой нужен результат", holder: ""}
-  product_manager: {position: "менеджер продукта Хаба по этой теме", holder: ""}
-  project_manager: {position: "кто ведёт проект", holder: ""}
+  business_owner: {position: "представитель функции FP&A, которой нужен результат", position_en: "a representative of the FP&A function, which needs the result", holder: ""}
+  product_manager: {position: "менеджер продукта Хаба по этой теме", position_en: "the Hub's product manager for this topic", holder: ""}
+  project_manager: {position: "кто ведёт проект", position_en: "whoever runs the project", holder: ""}
 outcome:
   problem: "FP&A уже готовит отчёты с применением AI, но отчётность различается от периода к периоду, зависит от ручных операций и не имеет общего канала для руководства Банка."
+  problem_en: "FP&A already prepares reports with AI, but the reporting differs from period to period, depends on manual operations, and has no common channel to the Bank's management."
   intended_outcome: "Портал для руководства запущен с первым ежемесячным выпуском; конвейер на основе AI-агентов один раз полностью подготовил выпуск; определения показателей сходятся у FP&A, форма квартального выпуска готова."
+  intended_outcome_en: "The management portal is live with its first monthly issue; the pipeline built on AI agents has prepared a full issue once; FP&A's metric definitions are consistent, and the format of the quarterly issue is ready."
   measure: "Число выпусков, предоставленных в срок; доля значений со ссылкой на контролируемый источник; число устранённых ручных операций; часы на подготовку выпуска; число определённых показателей."
+  measure_en: "Number of issues delivered on time; share of values with a reference to a controlled source; number of manual operations removed; hours spent preparing an issue; number of metrics defined."
   baseline: "Не измерено."
+  baseline_en: "Not measured."
   target: "Не задано."
+  target_en: "Not set."
 constraints:
   appetite: "Без отдельного бюджета: рабочее время того, кто ведёт проект."
+  appetite_en: "No separate budget: the working time of whoever runs the project."
   review_point: "К концу 2026 года: смотрим, что получилось, и решаем, продолжать ли."
+  review_point_en: "By the end of 2026: we look at what has come of it and decide whether to continue."
   exit_criterion: "Ежемесячный выпуск один раз подготовлен конвейером и предоставлен через портал."
+  exit_criterion_en: "A monthly issue has been prepared by the pipeline and delivered through the portal once."
   stop_threshold: "Значения выпуска не удаётся подтвердить ссылкой на контролируемый источник."
+  stop_threshold_en: "The values in an issue cannot be backed by a reference to a controlled source."
 checklist:
-  - {item: "Описать отчёты, которые FP&A уже готовит с применением AI: показатели, источники, график, ручные операции", state: "не начато"}
-  - {item: "Договориться с FP&A о стандартном наборе показателей и составе ежемесячного и квартального выпусков", state: "не начато"}
-  - {item: "Создать вместе с FP&A портал для руководства и выпускать через него ежемесячный отчёт", state: "не начато"}
-  - {item: "Настроить конвейер на основе AI-агентов: собирает, рассчитывает, готовит черновик и публикует показатели", state: "не начато"}
-  - {item: "Подтверждать каждое значение ссылкой на контролируемый источник с датой", state: "не начато"}
-  - {item: "Подготовить ежемесячный выпуск целиком и разработать форму квартального", state: "не начато"}
+  - {item: "Описать отчёты, которые FP&A уже готовит с применением AI: показатели, источники, график, ручные операции", item_en: "Describe the reports FP&A already prepares with AI: metrics, sources, schedule, manual operations", state: "не начато"}
+  - {item: "Договориться с FP&A о стандартном наборе показателей и составе ежемесячного и квартального выпусков", item_en: "Agree with FP&A on a standard set of metrics and the contents of the monthly and quarterly issues", state: "не начато"}
+  - {item: "Создать вместе с FP&A портал для руководства и выпускать через него ежемесячный отчёт", item_en: "Build the management portal together with FP&A and publish the monthly report through it", state: "не начато"}
+  - {item: "Настроить конвейер на основе AI-агентов: собирает, рассчитывает, готовит черновик и публикует показатели", item_en: "Set up the pipeline built on AI agents: it collects, calculates, drafts and publishes the metrics", state: "не начато"}
+  - {item: "Подтверждать каждое значение ссылкой на контролируемый источник с датой", item_en: "Back every value with a dated reference to a controlled source", state: "не начато"}
+  - {item: "Подготовить ежемесячный выпуск целиком и разработать форму квартального", item_en: "Prepare a complete monthly issue and design the format of the quarterly one", state: "не начато"}
 live:
   status: не задан
   next_step: "Описать, какие отчёты FP&A готовит сейчас и какие ручные операции в них остаются."
+  next_step_en: "Describe which reports FP&A prepares now and which manual operations remain in them."
   risks:
     - "Отчётность читает руководство Банка и она может дойти до инвесторов: каждое значение должно иметь контролируемый источник, а выпуск перед отправкой проверяет человек."
     - "Информационное взаимодействие с инвесторами за пределами финансовых показателей, изменение методик FP&A и систем учёта в работу не входят."
+  risks_en:
+    - "The reporting is read by the Bank's management and may reach investors: every value must have a controlled source, and a person checks each issue before it is sent."
+    - "Investor communication beyond financial performance metrics and changes to FP&A methods and accounting systems are out of scope."
   dependencies:
     - "Время сотрудников FP&A, источники данных и портал для руководства."
     - "Проверка выпуска перед первым предоставлением."
     - "Проверка представителями контрольных функций."
+  dependencies_en:
+    - "The time of FP&A staff, the data sources and the management portal."
+    - "A review of the issue before it is first delivered."
+    - "Review by representatives of the control functions."
 decisions: []
 closure: {result: "", lessons: ""}
 links: {jira: "", confluence: ""}

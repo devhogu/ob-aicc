@@ -1,0 +1,601 @@
+<!--page {"id": "catalog/shared-banking-capabilities/credit-decisioning", "title": "Credit decisioning", "styles": ["tokens.css", "components.css", "theme.css", "layouts/concern.css", "layouts/concern-l2.css"], "summary": "Credit decisioning is the structured process through which the Bank assesses borrower creditworthiness, sets lending terms, and manages limit exposure across the credit lifecycle — from origination scoring through…", "source_hash": "e3ff17f8f05b"} -->
+<div class="discovery-content">
+
+<div class="page">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;">
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <span class="breadcrumb__item">
+    <a class="breadcrumb__link" href="../../index.html">Discovery Catalog</a>
+  </span>
+  <span class="breadcrumb__item">
+    <span class="breadcrumb__sep" aria-hidden="true">/</span>
+    <a class="breadcrumb__link" href="../index.html">Shared Banking Capabilities</a>
+  </span>
+  <span class="breadcrumb__item">
+    <span class="breadcrumb__sep" aria-hidden="true">/</span>
+    <span class="breadcrumb__current" aria-current="page">Credit decisioning</span>
+  </span>
+</nav>
+</div>
+<header class="page-header">
+  <div class="page-header__title-row">
+    <div>
+      <h1 class="page-header__title">Credit decisioning</h1>
+    </div>
+  </div>
+  <p class="page-header__intent">Credit decisioning is the structured process through which the Bank assesses borrower creditworthiness, sets lending terms, and manages limit exposure across the credit lifecycle — from origination scoring through annual review and line management. In line with Basel III Pillar 1 and the regulator's credit-risk requirements, the Bank maintains model documentation, governance records, and audit trails for every material credit decision. Scorecard performance, override rates, and decline reason distributions are key supervisory metrics. <strong>The opportunity for GenAI is to accelerate the analysis-intensive stages of the decisioning cycle</strong> — decline pattern synthesis, annual borrower review, and override documentation — while preserving human accountability for every material credit judgment.</p>
+</header>
+<style>
+  #problems-tab-application-underwriting:checked ~ .problems-tab-bar label[for="problems-tab-application-underwriting"] {
+    color: var(--ink-accent);
+    border-bottom-color: var(--ink-accent);
+    background: var(--paper-blue-soft);
+    font-weight: 600;
+  }
+  #problems-tab-application-underwriting:checked ~ .problems-panel[data-tab="application-underwriting"] {
+    display: block;
+  }
+</style>
+<section class="concern-problems" aria-label="Problems">
+  <input type="radio" class="problems-tab-input" name="problems-tabs" id="problems-tab-application-underwriting" value="application-underwriting" checked aria-label="Application underwriting">
+  <div class="problems-tab-bar" role="tablist">
+    <label class="problems-tab-label" for="problems-tab-application-underwriting" role="tab" aria-controls="problems-panel-application-underwriting">Application underwriting</label>
+  </div>
+  <hr class="problems-divider">
+  <div class="problems-panel" id="problems-panel-application-underwriting" data-tab="application-underwriting" role="tabpanel" aria-labelledby="problems-tab-application-underwriting">
+    <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Insights &amp; analytics</h3><p>Origination funnel conversion, decline reason distributions, scorecard performance, and override rates are reported monthly to the Risk Committee but are not available to underwriting managers in real time. Scorecard drift — gradual divergence between model predictions and observed default rates — is caught only at the quarterly recalibration cycle, allowing the model to operate on degraded assumptions for weeks.</p></article><article class="discovery-context-card"><h3>Enablement</h3><p>Complex credit applications — SME borrowers with multi-entity structures, project finance facilities, or borrowers near the automatic decline boundary — require underwriters to synthesize bureau data, financial statements, sector analysis, and group exposure before reaching a decision. The judgment synthesis step is bottlenecked on a small team of senior underwriters whose capacity constrains application throughput.</p></article><article class="discovery-context-card"><h3>Automation</h3><p>Decline notification letters, credit committee memos, and override justification documentation are structured outputs that follow prescribed formats under consumer credit regulations and internal credit policy. The templated nature of these documents — with credit decision, key factors, and regulatory disclosures as standard fields — makes them strong candidates for automated drafting from structured decision data.</p></article><article class="discovery-context-card"><h3>New business opportunities</h3><p>Banks that reduce average application-to-decision time — from days to hours for standard cases — improve conversion at the point of customer intent and reduce cost per originated loan. GenAI-backed synthesis of bureau and financial data accelerates the analysis phase without relaxing underwriting standards, creating a throughput advantage over peers relying on fully manual workflows.</p></article></div>
+  </div>
+</section>
+<div id="main-content" class="l3-sections" aria-label="Sub-concerns">
+<section class="l3-section" id="scorecard-model-performance">
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Scorecard &amp; model performance</h2>
+    <p class="l3-section__intent">Ongoing monitoring of credit scoring model performance against observed default outcomes — tracking Gini coefficients, population stability index (PSI), and characteristic-level drift across origination cohorts. Under model governance requirements — and, where the Bank uses internal-ratings models, the Basel III IRB requirements — material model drift triggers a mandatory recalibration and board notification cycle. Current practice monitors model performance quarterly, with drift identified weeks after it emerges in origination data.</p>
+  </header>
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
+  </div>
+  <div class="l3-section__scenarios">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:shared-banking-capabilities/credit-decisioning/scorecard-model-performance/credit-origination-analytics" id="scenario-credit-origination-analytics" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Credit Origination Analytics</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent produces weekly origination analytics — funnel conversion, decline reason clustering, scorecard drift indicators, and policy-change attribution — for underwriting management review. The output includes segment-level approval-rate comparisons and closed-loan performance attribution unavailable from the monthly management reporting cycle. Underwriting management reviews a current picture each week and acts on scorecard drift before the next regulatory review cycle.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
+  </summary>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#ai-governance">AI governance</a></p>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Underwriting management reviews approval rate trends and decline distributions at the monthly reporting cycle; scorecard drift, policy-change attribution, and decline-regret analysis require multi-step manual investigations that delay corrective action. Segment-level approval-rate comparisons are unavailable without bespoke analyst work, leaving potential disparate impact signals undetected between formal model validation cycles. Monthly retrospective reporting means scorecard drift identified in the cycle can represent six to eight weeks of degraded decisioning quality before corrective action is taken.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads the origination system, bureau pull data, and closed-loan performance data on a weekly cadence, producing funnel conversion by step, decline reason clustering, scorecard drift indicators by characteristic, and policy-change attribution. Segment-level approval-rate comparisons are included as a standard output to support fair-lending monitoring. Underwriting management reviews the weekly output and directs scorecard recalibration or policy adjustment before the signal accumulates to a regulatory review threshold.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">Weekly origination analytics — funnel conversion, decline reason clustering, scorecard drift indicators, policy-change attribution, and segment-level approval-rate comparisons — are available for underwriting management review each week.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>AI-produced weekly origination analytics report delivered for ≥48 of 52 weeks in year 1; all prescribed analytical dimensions covered in each weekly output.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥80% of weekly analytics accepted by underwriting management as accurate and actionable without requiring supplementary analysis; scorecard drift indicators validated against model monitoring reports in ≥90% of reviewed weeks.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Origination analytics available weekly vs. monthly in the prior process; scorecard drift detection latency reduced from 6–8 weeks to ≤7 days.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:shared-banking-capabilities/credit-decisioning/scorecard-model-performance/model-recalibration-brief-drafting" id="scenario-model-recalibration-brief-drafting" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Model recalibration brief drafting</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Automated drafting of the model recalibration brief for credit scoring models flagged for mandatory or recommended recalibration — summarizing the performance trigger, the characteristic drift profile, the affected origination cohorts, and the proposed recalibration scope — in the format required for model risk committee approval. The brief provides the model risk committee with the performance evidence and recalibration scope without requiring the model developer to assemble the pack from monitoring outputs.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
+  </summary>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#model-risk">Model risk management</a></p>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Under model governance requirements — and, where the Bank uses internal-ratings models, the Basel III IRB standards — model recalibration requires board notification and model risk committee approval; the supporting brief must document the performance trigger, drift evidence, and recalibration scope. Manual assembly of the recalibration brief from monitoring reports, PSI outputs, and cohort performance data consumes 2–3 days of model developer time before the committee review process can begin.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads the model monitoring reports, characteristic drift outputs, and affected cohort performance data and drafts the recalibration brief in the model risk committee's prescribed format — performance trigger summary, drift evidence, affected cohort analysis, and proposed recalibration scope. The model developer reviews the draft, adds technical methodology context, and submits to the model risk committee queue.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">Model recalibration briefs are drafted from monitoring output data and available for model developer review within 1 business day of recalibration trigger.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>AI-drafted recalibration briefs used for ≥85% of mandatory and recommended recalibration events within 9 months of go-live.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>Model risk committee return rate for recalibration brief documentation deficiency eliminated within 12 months; brief quality confirmed sufficient for supervisory review in ≥97% of sampled recalibrations.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Draft brief available within 24 hours of recalibration trigger so the model developer can complete and submit to committee within 3 business days of the trigger event.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:shared-banking-capabilities/credit-decisioning/scorecard-model-performance/scorecard-characteristic-drift-monitoring" id="scenario-scorecard-characteristic-drift-monitoring" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Scorecard characteristic drift monitoring</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Continuous monitoring of population stability index and characteristic-level distribution drift across active credit scoring models — tracking deviations in the input characteristic distributions between the development population and current origination cohorts. Characteristic drift that precedes performance degradation is identified and escalated to model risk management before the Gini coefficient decline triggers a mandatory recalibration cycle.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
+  </summary>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#model-risk">Model risk management</a></p>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Under model governance requirements — and, where the Bank uses internal-ratings models, the Basel III IRB requirements — material model drift triggers a mandatory recalibration and board notification cycle; current practice monitors model performance quarterly, with characteristic drift identified weeks after it emerges in origination data. Leading-indicator drift detection — at the characteristic level rather than the output Gini — enables earlier intervention and reduces the period during which decisioning occurs on a drifted model.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent computes PSI and characteristic-level distribution metrics from each origination cohort against the development population baseline and flags characteristics with PSI above prescribed drift thresholds, producing a drift alert with the specific characteristics, their current vs. development distributions, and the recommended monitoring escalation level. Model risk management reviews the drift alerts, determines whether recalibration is warranted, and documents the assessment for the model governance record.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">Characteristic-level drift across active credit scoring models is monitored continuously and escalated to model risk management before output performance degradation becomes material.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>AI-produced characteristic drift monitoring covering all active credit scoring models within 9 months of go-live.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥80% of model recalibration triggers identified via characteristic drift alert rather than output Gini decline within 18 months; mean detection lead time vs. Gini decline ≥4 weeks.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Drift metrics computed and alerts issued within 24 hours of each origination cohort closing so monitoring is current with the origination cycle.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+  </div>
+</section>
+<section class="l3-section" id="annual-credit-review">
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Annual credit review</h2>
+    <p class="l3-section__intent">Structured review of each borrower's creditworthiness, financial performance, covenant compliance, and risk rating — required annually for all material credit facilities under credit-risk governance requirements, in line with Basel III Pillar 2. The review cycle for a mid-size SME or corporate portfolio spans hundreds of borrowers, each requiring a review memo with financial analysis, risk rating update, and limit recommendation. Relationship managers and credit analysts spend the majority of the review cycle on data assembly and memo drafting rather than on the judgment steps.</p>
+  </header>
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
+  </div>
+  <div class="l3-section__scenarios">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:shared-banking-capabilities/credit-decisioning/annual-credit-review/annual-review-portfolio-scheduling-optimisation" id="scenario-annual-review-portfolio-scheduling-optimisation" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Annual review portfolio scheduling optimization</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Automated sequencing of the annual credit review calendar — prioritizing reviews by facility maturity, covenant reset dates, and current risk rating — so that the highest-priority reviews are completed before their regulatory or contractual deadlines. The schedule accounts for analyst capacity and identifies the reviews at risk of missing their deadline with sufficient lead time for management intervention.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Annual credit reviews are scheduled by relationship managers based on informal knowledge of facility maturity dates and relationship management priorities; reviews for facilities with imminent covenant resets or approaching regulatory classification deadlines are not systematically prioritized. Credit-risk governance rules commonly require the annual review cycle to be completed within prescribed timelines; overdue reviews represent a regulatory gap that must be reported and remediated.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads the credit portfolio's facility maturity dates, covenant reset schedules, current risk ratings, and analyst capacity data, and produces a prioritized annual review schedule with deadline-at-risk flags for reviews that are unlikely to complete within the regulatory and contractual timeline. Credit operations uses the schedule to allocate analyst capacity, with deadline-at-risk cases escalated to management for capacity intervention before the deadline window closes.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">The annual credit review calendar is sequenced by regulatory and contractual priority so deadline-at-risk reviews are identified and escalated before the deadline window.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>AI-produced review schedule used by credit operations for ≥90% of annual review cycle planning within 6 months of go-live.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>Overdue review rate reduced by ≥30% vs. prior cycle; deadline-at-risk escalations actioned within 2 business days in ≥85% of cases.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Schedule refreshed weekly throughout the review cycle so capacity reallocation decisions are based on current completion status and remaining deadlines.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:shared-banking-capabilities/credit-decisioning/annual-credit-review/annual-review-memo-drafting" id="scenario-annual-review-memo-drafting" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Annual credit review memo drafting</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Automated drafting of the annual credit review memo for each borrower in the portfolio — covering financial performance analysis, risk rating update rationale, covenant compliance summary, and limit recommendation — from financial statement data and the credit file. Credit analysts review and apply judgment on the rating recommendation and limit decision, concentrating effort on the judgment steps rather than data assembly and memo structure.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>The annual credit review cycle for a mid-size SME or corporate portfolio spans hundreds of borrowers, each requiring a review memo that synthesizes financial analysis, risk rating update, covenant compliance, and limit recommendation. Relationship managers and credit analysts spend the majority of the review cycle on data assembly and memo drafting rather than on the judgment steps — risk rating calibration, limit recommendation, and covenant waiver assessment — that constitute the regulatory and supervisory substance of the review.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads the borrower's financial statements, prior review memo, risk rating history, covenant compliance data, and credit file, and drafts the annual review memo in the prescribed format — financial analysis narrative, ratio calculations, risk rating update rationale, covenant compliance summary, and limit recommendation basis. The credit analyst reviews the draft, applies judgment on the rating and limit recommendation, and completes the sign-off memo with any adjustments and the forward-looking credit assessment.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">Annual credit review memos are drafted from financial statement and credit file data and available for credit analyst judgment review without manual data assembly.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>AI-drafted review memos used for ≥75% of annual credit reviews within the first full review cycle after go-live.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥85% of AI-drafted memos accepted by credit analysts with minor adjustments only; credit committee confirms memo quality meets regulatory documentation standard in ≥97% of sampled reviews.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Draft memo available within 4 hours of financial data submission so the credit analyst can complete the review within a single working session.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:shared-banking-capabilities/credit-decisioning/annual-credit-review/credit-review-financial-ratio-benchmarking" id="scenario-credit-review-financial-ratio-benchmarking" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Credit review financial ratio benchmarking</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Automated benchmarking of each borrower's financial ratios against the sector peer group — leverage, coverage, liquidity, and margin — as part of the annual credit review cycle, with deviation flags identifying borrowers whose ratios have moved materially relative to the peer distribution. Ratio benchmarking supports the risk rating update rationale and surfaces borrowers whose credit profile has deteriorated relative to peers, warranting deeper review before the annual cycle deadline.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Annual credit review memos are expected to contextualize the borrower's financial performance against sector peers; credit analysts currently construct peer comparisons informally or omit them due to time constraints within the review cycle. Borrowers whose ratios have deteriorated relative to peers represent a higher risk rating migration risk; without systematic benchmarking, these migrations are identified at the rating committee step rather than during the analyst review, creating last-minute rating changes and committee rework.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent calculates the borrower's key financial ratios from the submitted financial statements and benchmarks them against the sector peer distribution from the Bank's internal credit database and external sector data, producing a benchmarking table with deviation flags for ratio movements in the bottom quartile. Credit analysts incorporate the benchmarking output into the review memo, with the peer deviation flags informing the risk rating update rationale and limit recommendation.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">Financial ratio benchmarking against sector peers is produced for each annual credit review and incorporated into the review memo rationale.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>AI-produced benchmarking output used in ≥80% of annual credit review memos within the first full review cycle after go-live.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥80% of credit analysts report that peer benchmarking output materially informed their risk rating assessment; rating migration surprises at committee stage reduced by ≥20% vs. prior cycle.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Benchmarking output available within 2 hours of financial statement submission so it is available during the analyst's primary review session.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+  </div>
+</section>
+<section class="l3-section" id="underwriter-review-override">
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Underwriter review &amp; override</h2>
+    <p class="l3-section__intent">Manual review of applications referred from automated decisioning — near-boundary cases, complex borrower structures, policy exceptions, and appeals — where an underwriter applies judgment beyond the scorecard output. Where the Bank uses internal-ratings models, the Basel III IRB standards call for override rates and override performance to be tracked and reported; override documentation must capture the specific factors that led to the deviation from model recommendation. High override rates are a supervisory flag. Declined applications additionally require a decline notification carrying the prescribed reasons and disclosures.</p>
+  </header>
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
+  </div>
+  <div class="l3-section__scenarios">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:shared-banking-capabilities/credit-decisioning/underwriter-review-override/adverse-action-notification-drafting" id="scenario-adverse-action-notification-drafting" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Adverse Action Notification Drafting</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent drafts the credit decline or adverse action notification from structured decision data — reason codes, regulatory disclosures, and appeal rights — in the format required by consumer credit regulations. The draft covers all mandatory disclosure elements under consumer protection requirements, including credit bureau contact information and appeal rights. The case handler reviews and sends; regulatory disclosure completeness is consistent across all decline notifications.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
+  </summary>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#consumer-conduct">Consumer protection and conduct</a></p>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Consumer credit regulations commonly require decline notifications to include specific adverse action reasons, credit bureau contact information, and appeal rights; drafting compliant notifications manually consumes case-handler time on each decline. Quality varies across drafters, and compliance gaps — missing required disclosures or incorrectly stated reason codes — surface only in post-dispatch QA reviews or supervisory examinations. High decline volumes across retail and SME origination mean the aggregate compliance exposure is material even when individual error rates are low.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads the structured decision record — outcome, primary decline reasons, applicable regulation, and customer profile — and generates the compliant notification in the prescribed format with all required disclosure elements. The case handler reviews the draft and sends; no manual drafting of regulatory disclosure language is required. Disclosure completeness is monitored through QA review of a sample of AI-generated notifications; systemic gaps surface in QA before reaching supervisory examination.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">Adverse action notifications for all credit decline decisions comply with consumer protection disclosure requirements, with consistent mandatory content regardless of case handler or decline volume.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent is used to draft adverse action notifications for ≥95% of consumer credit decline decisions within 12 months of go-live.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥90% of AI-drafted notifications accepted by case handlers without material amendment; QA review confirms required disclosure completeness in ≥97% of sampled notifications.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Per-notification drafting time reduced from 10–20 minutes of manual composition to ≤5 minutes of case handler review and dispatch.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:shared-banking-capabilities/credit-decisioning/underwriter-review-override/underwriter-application-synthesis" id="scenario-underwriter-application-synthesis" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--enablement">Enablement</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Underwriter Application Synthesis</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent assembles bureau data, financial statement analysis, sector context, and group exposure summary into a structured underwriter pack for referred applications, ready for judgment review and decision documentation. The pack includes key financial ratios, red flags, and comparable case references drawn from prior credit decisions. The underwriter reviews the pack, applies judgment, and documents the decision; pre-synthesis work is eliminated from the underwriter's case cycle.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Applications referred to underwriting require the underwriter to gather bureau reports, financial statements, sector analysis, and group-level exposure from multiple systems before the credit judgment can be applied. For complex SME or near-boundary cases, pre-synthesis work consumes the majority of the underwriter's time on each case, constraining the volume of cases that can receive thorough review within the decisioning SLA. Override documentation requirements — capturing the basis for departure from scorecard recommendation — add further administrative load on the same resource.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>When an application is referred, the AI agent reads the bureau report, financial statements, sector classification, group exposure, and prior facility history. It assembles a structured synthesis pack with key ratios, red flags, and comparable case references, and pre-populates the override documentation template with the decision inputs. The underwriter reviews the pack, applies judgment, completes the documentation, and releases the decision; cases decided per underwriter per decisioning period is the primary outcome metric.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">Referred applications are provided with a structured underwriter pack — bureau data, financial statement analysis, sector context, group exposure summary, key ratios, red flags, and comparable case references — and a pre-populated override documentation template ready for underwriter judgment review.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>AI-produced underwriter synthesis packs used for ≥90% of referred applications within 12 months of go-live.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥85% of synthesis packs accepted by underwriters as complete and sufficient for the credit judgment step without requiring supplementary data gathering; override documentation pre-population accuracy confirmed at ≥90% on periodic credit audit.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Synthesis pack and pre-populated override template available within 30 minutes of referral, vs. 1–3 hours of underwriter multi-system assembly per case in the prior process.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:shared-banking-capabilities/credit-decisioning/underwriter-review-override/underwriter-override-pattern-analytics" id="scenario-underwriter-override-pattern-analytics" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Underwriter override pattern analytics</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Systematic analysis of override decisions — approve-against-model and decline-against-model — across the underwriter population, tracking override rates by underwriter, product, and applicant segment alongside the subsequent performance of overridden accounts. The analysis surfaces override patterns that indicate systematic underwriter deviation from model recommendation, enabling credit risk management to identify high-override underwriters and assess whether their overrides produce superior or inferior default outcomes.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Where the Bank uses internal-ratings models, the Basel III IRB standards call for override rates and override performance to be tracked and reported; high override rates are a supervisory flag that requires documented investigation of the basis for systematic deviation from model recommendation. Current override performance reporting is produced at portfolio level quarterly; underwriter-level patterns that would identify systematic over-optimism or systematic over-conservatism are not surfaced until the aggregate override rate exceeds the supervisory threshold.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent analyzes override decisions by underwriter, product, and applicant segment, comparing each underwriter's override rate against the portfolio median and tracking the 12-month default rate on overridden accounts against the model's predicted probability of default. Credit risk management reviews the underwriter-level analysis, identifies patterns requiring coaching or process intervention, and retains the output as the documented override performance record for supervisory purposes.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">Override rates and subsequent performance are tracked at the underwriter level and available to credit risk management for coaching intervention and supervisory reporting.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>AI-produced override performance analysis covering all active underwriters within 6 months of go-live; used in ≥2 credit risk governance reviews per year.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>Override rate at or below supervisory threshold maintained across ≥90% of underwriter population; underwriter-level default performance on overrides within ±10% of model baseline within 18 months.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Override performance report refreshed monthly so coaching and intervention decisions are based on data no older than 30 days.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+  </div>
+</section>
+<section class="l3-section" id="covenant-monitoring">
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Covenant monitoring</h2>
+    <p class="l3-section__intent">Ongoing tracking of financial and maintenance covenant compliance across the credit portfolio — debt-service coverage ratios, leverage ratios, liquidity covenants, and reporting covenants — with breach identification and escalation. Covenant breaches trigger waiver negotiations, facility restructuring, or acceleration rights under the loan documentation. Credit-risk reporting requirements commonly provide that material covenant breaches are reported to the supervisor. Monitoring across a mid-size portfolio requires monthly or quarterly data extraction across hundreds of facilities.</p>
+  </header>
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
+  </div>
+  <div class="l3-section__scenarios">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:shared-banking-capabilities/credit-decisioning/covenant-monitoring/covenant-waiver-pack-drafting" id="scenario-covenant-waiver-pack-drafting" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Covenant waiver pack drafting</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Automated drafting of the covenant waiver or amendment pack for borrowers in breach — summarizing the breached covenant, the breach magnitude, the borrower's explanation, the credit officer's assessment, and the proposed waiver or amendment terms — in the format required for credit committee approval. The pack enables the credit officer to present the waiver case to committee without manual assembly of the breach evidence and assessment narrative.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Covenant breach waiver packs require the credit officer to collate the breach event, the facility terms, the borrower's explanation, and the credit assessment narrative before presenting to credit committee; manual assembly from multiple source records consumes 2–4 hours per waiver request. Waiver packs that do not meet the credit committee's documentation standard are returned for rework, delaying waiver approval and creating contractual ambiguity during the gap period.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads the breach flag, facility agreement, borrower financial submission, and the credit officer's assessment notes, and drafts the waiver pack in the credit committee's prescribed format — breach summary, facility terms, borrower explanation, credit assessment, and proposed waiver or amendment terms. The credit officer reviews the draft, adds forward-looking credit context, and submits to the credit committee queue.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">Covenant waiver packs are drafted from breach event and facility data and available for credit officer review within the same day as the breach escalation.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>AI-drafted waiver packs used for ≥80% of covenant breach waivers within 9 months of go-live.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>Credit committee return rate for waiver pack documentation deficiency reduced by ≥60% vs. pre-deployment baseline within 12 months.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Draft waiver pack available within 3 hours of breach escalation so the credit officer can complete the pack for committee submission within the same business day.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:shared-banking-capabilities/credit-decisioning/covenant-monitoring/covenant-compliance-continuous-monitoring" id="scenario-covenant-compliance-continuous-monitoring" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Covenant compliance monitoring</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Automated extraction and computation of financial covenant compliance metrics — debt-service coverage ratios, leverage ratios, liquidity covenants, and reporting covenants — from borrower financial submissions and account data on each reporting cycle, with breach flags routed to the responsible relationship manager. Automated monitoring eliminates the manual data extraction and ratio calculation step that currently consumes the majority of covenant monitoring analyst time per facility.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Covenant monitoring across a mid-size portfolio requires monthly or quarterly data extraction across hundreds of facilities, each requiring ratio computation from the borrower's financial submission and comparison against the specific covenant threshold in the facility agreement. Credit-risk reporting requirements commonly provide that material covenant breaches are reported to the supervisor; breaches identified after the reporting deadline create a regulatory compliance gap for the period between breach occurrence and identification.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent extracts the relevant financial metrics from each borrower's financial submission, computes the covenant ratios specified in the facility agreement, and compares results against the covenant thresholds, routing breach flags with the specific covenant, the computed ratio, and the threshold to the relationship manager and credit monitoring team. Relationship managers receive breach notifications within the reporting cycle, enabling waiver negotiation or facility restructuring before the supervisory reporting deadline.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">Financial and maintenance covenant compliance is computed from borrower financial submissions on each reporting cycle and breach flags are routed to relationship managers within the reporting period.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>AI-produced covenant compliance monitoring covering ≥85% of material credit facilities within 9 months of go-live.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>Breach detection rate improves by ≥25% vs. prior manual cycle; fewer than 2% of breaches identified after the supervisory reporting deadline within 12 months.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Covenant compliance computation completed within 24 hours of financial submission receipt so breach flags are available before the end of the reporting period.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:shared-banking-capabilities/credit-decisioning/covenant-monitoring/covenant-breach-pattern-analytics" id="scenario-covenant-breach-pattern-analytics" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Covenant breach pattern analytics</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Systematic analysis of covenant breach patterns across the credit portfolio — identifying which covenant types, sectors, and facility structures produce the highest breach frequency and the shortest time-to-breach from origination — to inform covenant structure calibration on new originations. The analysis supports credit risk management's review of covenant design standards and the relationship between covenant thresholds and observed borrower financial trajectories.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Covenant breaches are managed case-by-case at the relationship manager level; portfolio-level patterns — covenant types with elevated breach frequency, sectors where standard thresholds are systematically tight, or facility structures with short time-to-breach — are not synthesized into a structured feedback signal for covenant design. Without portfolio-level breach pattern analysis, covenant structures on new originations are calibrated against policy precedent rather than against the observed performance of comparable prior facilities.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent analyzes the covenant breach history across the portfolio — by covenant type, sector, facility structure, and time-to-breach — and produces a ranked pattern report identifying the combinations with elevated breach frequency and the covenant threshold levels that have proven non-predictive of actual default. Credit risk management uses the pattern report to recalibrate covenant design standards on new originations, with the breach frequency evidence available for the credit policy update rationale.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">Covenant breach patterns across the portfolio are analyzed by covenant type, sector, and facility structure and available for credit policy calibration on a rolling basis.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>Breach pattern analysis used in ≥1 credit covenant design review within the first 18 months of go-live.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>Covenant breach frequency on new originations declines by ≥15% within 24 months of covenant design recalibration informed by the analysis.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Breach pattern analysis refreshed semi-annually from the accumulated breach history so design calibration reflects the most recent portfolio experience.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+  </div>
+</section>
+</div>
+
+</div>
+</div>

@@ -171,44 +171,46 @@ Question or comment:
 </svg><span>Reference</span></a></div></nav></details></aside>
 <main class="o-main hub-main" id="main" tabindex="-1">
 <div class="crumbbar"><div class="crumbline"><nav class="o-eyebrow crumbs" aria-label="Breadcrumb"><a href="../index.html">Projects</a> / <span aria-current="page">Create a card</span></nav></div></div>
-<div class="o-reading o-single"><div class="o-copy"><h1>Create a card</h1><article class="page-body o-doc"><p class="lede">Create a card, and your project will appear in every view of this section.</p><ol><li>Copy the template below into a file named <code>cards/IDENTIFIER.yaml</code>.</li><li>Fill in the required fields: identifier, title, summary, profile, state, people’s positions, problem and intended outcome, and the live status.</li><li>For an idea, set the state to “Воронка” (Funnel). You can add the rest later.</li><li>Update the card as the work goes on: the next build shows the changes in every view.</li></ol><p>A schema checks the card: the build stops and tells you what to fix. The schema is <code>cards/schema.json</code>.</p><h2>Template</h2><pre><code># Шаблон карточки проекта. Скопируйте файл, назовите по идентификатору (INI-020.yaml) и заполните.
-# Обязательны: id, title, summary, profile, stage, people, outcome, live.
-# Текст, в котором есть двоеточие, берите в двойные кавычки.
+<div class="o-reading o-single"><div class="o-copy"><h1>Create a card</h1><article class="page-body o-doc"><p class="lede">Create a card, and your project will appear in every view of this section.</p><ol><li>Copy the template below into a file named <code>cards/IDENTIFIER.yaml</code>.</li><li>Fill in the required fields: identifier, title, summary, profile, state, people’s positions, problem and intended outcome, and the live status.</li><li>For an idea, set the stage to <span lang="ru">Воронка</span> (Funnel). You can add the rest later.</li><li>Update the card as the work goes on: the next build shows the changes in every view.</li></ol><p>A schema checks the card: the build stops and tells you what to fix. The schema is <code>cards/schema.json</code>.</p><h2>Template</h2><pre><code># Project card template (English edition). Copy the file, name it after the card ID (INI-020.yaml) and fill it in.
+# Required: id, title, summary, profile, stage, people, outcome, live. Put any text that contains a colon in double quotes.
+# The site is written in Russian first: Russian fields hold the source text, and each English text sits beside it with _en.
+# Fixed values (class_of_service, stage, state, status) are written in Russian exactly as listed; their English names are shown in the comments.
 id: INI-000
-title: Название проекта
-summary: Одно-два предложения о том, что делаем.
+title: Project name in Russian
+title_en: Project name
+summary_en: One or two sentences on what we are doing.
 profile: initiative            # initiative | run-rate | recurring-check | enablement
-class_of_service: инициатива   # инициатива | текущая работа | срочная работа
-stage: Воронка                 # Воронка | Проработка | Готово к старту | В работе | Завершено | Отложено | Закрыто
-function: &quot;&quot;                   # функция, которой нужен результат
-area: &quot;&quot;                       # услуга: например «Сервисы знаний»
+class_of_service: <span lang="ru">инициатива</span>   # <span lang="ru">инициатива</span> = initiative | <span lang="ru">текущая работа</span> = run-rate | <span lang="ru">срочная работа</span> = urgent
+stage: <span lang="ru">Воронка</span>                 # <span lang="ru">Воронка</span> = Funnel | <span lang="ru">Проработка</span> = Shaping | <span lang="ru">Готово к старту</span> = Ready | <span lang="ru">В работе</span> = Doing | <span lang="ru">Завершено</span> = Done | <span lang="ru">Отложено</span> = On hold | <span lang="ru">Закрыто</span> = Closed
+function_en: &quot;&quot;                # the function that needs the result
+area_en: &quot;&quot;                    # the service, for example &quot;Knowledge services&quot;
 people:
-  business_owner: {position: &quot;кто в функции отвечает за результат&quot;, holder: &quot;&quot;}
-  product_manager: {position: &quot;кто отвечает за то, что делаем&quot;, holder: &quot;&quot;}
-  project_manager: {position: &quot;кто ведёт проект&quot;, holder: &quot;&quot;}
+  business_owner: {position_en: &quot;who in the function owns the result&quot;, holder: &quot;&quot;}
+  product_manager: {position_en: &quot;who owns what we build&quot;, holder: &quot;&quot;}
+  project_manager: {position_en: &quot;who runs the project&quot;, holder: &quot;&quot;}
 outcome:
-  problem: Какая задача или потребность.
-  intended_outcome: Какой результат хотим получить.
-  measure: Чем измерим.
-  baseline: Как сейчас.
-  target: Как хотим.
+  problem_en: The problem or need.
+  intended_outcome_en: The result we want.
+  measure_en: How we measure it.
+  baseline_en: How it is now.
+  target_en: How we want it to be.
 constraints:
-  appetite: Сколько усилий готовы вложить.
-  review_point: Когда смотрим, продолжать ли.
-  exit_criterion: Когда шаг считаем пройденным.
-  stop_threshold: Когда останавливаемся.
+  appetite_en: How much effort we are ready to put in.
+  review_point_en: When we look at whether to continue.
+  exit_criterion_en: When we consider the step done.
+  stop_threshold_en: When we stop.
 checklist:
-  - {item: &quot;Памятка по практике: пункт&quot;, state: &quot;не начато&quot;}
+  - {item_en: &quot;Practice note: item&quot;, state: &quot;<span lang="ru">не начато</span>&quot;}   # <span lang="ru">не начато</span> = not started
 live:
-  status: не задан             # зелёный | жёлтый | красный | не задан
-  next_step: &quot;&quot;
-  risks: []
-  dependencies: []
+  status: <span lang="ru">не задан</span>             # <span lang="ru">зелёный</span> = green | <span lang="ru">жёлтый</span> = yellow | <span lang="ru">красный</span> = red | <span lang="ru">не задан</span> = not set
+  next_step_en: &quot;&quot;
+  risks_en: []
+  dependencies_en: []
 work:
-  - {id: CAP-000, type: capability, title: &quot;Возможность&quot;, state: Бэклог}
-  - {id: FEAT-000, type: feature, parent: CAP-000, title: &quot;Функция&quot;, state: Бэклог, jira: &quot;&quot;}
-decisions: []                  # - {what: &quot;что решили&quot;, who: &quot;кто&quot;, when: &quot;когда&quot;}
-closure: {result: &quot;&quot;, lessons: &quot;&quot;}
+  - {id: CAP-000, type: capability, title_en: &quot;Capability&quot;, state: <span lang="ru">Бэклог</span>}   # <span lang="ru">Бэклог</span> = Backlog
+  - {id: FEAT-000, type: feature, parent: CAP-000, title_en: &quot;Feature&quot;, state: <span lang="ru">Бэклог</span>, jira: &quot;&quot;}
+decisions: []                  # - {what_en: &quot;what was decided&quot;, who: &quot;who&quot;, when: &quot;when&quot;}
+closure: {result_en: &quot;&quot;, lessons_en: &quot;&quot;}
 links: {jira: &quot;&quot;, confluence: &quot;&quot;}
 </code></pre></article></div></div>
 </main>

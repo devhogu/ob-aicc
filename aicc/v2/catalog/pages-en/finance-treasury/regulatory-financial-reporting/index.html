@@ -1,0 +1,601 @@
+<!--page {"id": "catalog/finance-treasury/regulatory-financial-reporting", "title": "Regulatory financial reporting", "styles": ["tokens.css", "components.css", "theme.css", "layouts/concern.css", "layouts/concern-l2.css"], "summary": "Regulatory financial reporting is the Bank's obligation to submit accurate, complete, and timely financial data to the prudential supervisor — in the regulator's own return forms or in a standardized template framework…", "source_hash": "a9aa4351d51e"} -->
+<div class="discovery-content">
+
+<div class="page">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;">
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <span class="breadcrumb__item">
+    <a class="breadcrumb__link" href="../../index.html">Discovery Catalog</a>
+  </span>
+  <span class="breadcrumb__item">
+    <span class="breadcrumb__sep" aria-hidden="true">/</span>
+    <a class="breadcrumb__link" href="../index.html">Finance &amp; Treasury</a>
+  </span>
+  <span class="breadcrumb__item">
+    <span class="breadcrumb__sep" aria-hidden="true">/</span>
+    <span class="breadcrumb__current" aria-current="page">Regulatory financial reporting</span>
+  </span>
+</nav>
+</div>
+<header class="page-header">
+  <div class="page-header__title-row">
+    <div>
+      <h1 class="page-header__title">Regulatory financial reporting</h1>
+    </div>
+  </div>
+  <p class="page-header__intent">Regulatory financial reporting is the Bank's obligation to submit accurate, complete, and timely financial data to the prudential supervisor — in the regulator's own return forms or in a standardized template framework such as COREP and FINREP. Returns cover capital adequacy (Basel III/IV Pillar 1), credit risk, market risk, operational risk, and IFRS-based financial statements across monthly, quarterly, and annual cycles. Errors in regulatory returns trigger supervisory scrutiny and can lead to enforcement action. <strong>The GenAI opportunity is automated data quality validation and narrative drafting — reducing the manual effort in each submission cycle and creating space for regulatory teams to focus on judgment rather than assembly.</strong></p>
+</header>
+<style>
+  #problems-tab-basel-corep-finrep:checked ~ .problems-tab-bar label[for="problems-tab-basel-corep-finrep"] {
+    color: var(--ink-accent);
+    border-bottom-color: var(--ink-accent);
+    background: var(--paper-blue-soft);
+    font-weight: 600;
+  }
+  #problems-tab-basel-corep-finrep:checked ~ .problems-panel[data-tab="basel-corep-finrep"] {
+    display: block;
+  }
+</style>
+<section class="concern-problems" aria-label="Problems">
+  <input type="radio" class="problems-tab-input" name="problems-tabs" id="problems-tab-basel-corep-finrep" value="basel-corep-finrep" checked aria-label="Basel &amp; supervisory reporting">
+  <div class="problems-tab-bar" role="tablist">
+    <label class="problems-tab-label" for="problems-tab-basel-corep-finrep" role="tab" aria-controls="problems-panel-basel-corep-finrep">Basel &amp; supervisory reporting</label>
+  </div>
+  <hr class="problems-divider">
+  <div class="problems-panel" id="problems-panel-basel-corep-finrep" data-tab="basel-corep-finrep" role="tabpanel" aria-labelledby="problems-tab-basel-corep-finrep">
+    <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Insights &amp; analytics</h3><p>Capital adequacy returns in a template framework such as COREP contain hundreds of data cells with embedded validation rules and cross-template consistency requirements. Regulatory Reporting teams identify data quality failures by running the regulator's XBRL validation suite — a process that surfaces failures late in the submission timeline, compressing the remediation window before the regulatory deadline.</p></article><article class="discovery-context-card"><h3>Enablement</h3><p>Regulatory Reporting managers spend significant time translating between the regulatory data model (the supervisory reporting templates) and the Bank's internal financial data — mapping GL accounts to template cells, reconciling to management accounts, and documenting the data lineage. The mapping maintenance burden grows with each regulatory update and each internal system change.</p></article><article class="discovery-context-card"><h3>Automation</h3><p>Explanatory notes, movement commentary, and management narrative accompanying supervisory submissions are drafted manually each cycle from quantitative template data and prior-period submissions. Each narrative section is structurally predictable — the regulatory format is prescribed — and the inputs are drawn from a known set of financial data.</p></article><article class="discovery-context-card"><h3>New business opportunities</h3><p>Banks that build regulatory reporting automation — validated data feeds, template pre-population, and narrative generation — create a capability that scales without proportional headcount growth as regulatory requirements increase. Supervisors have generally increased reporting granularity and frequency in recent years; the trend continues.</p></article></div>
+  </div>
+</section>
+<div id="main-content" class="l3-sections" aria-label="Sub-concerns">
+<section class="l3-section" id="corep-finrep-validation">
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Supervisory template data quality validation</h2>
+    <p class="l3-section__intent">Where the regulator prescribes a standardized template framework such as COREP and FINREP, submissions contain hundreds of data cells with embedded validation rules — intra-template arithmetic checks, cross-template consistency requirements, and regulatory threshold comparisons. Each return must pass the regulator's full XBRL validation suite before submission. Data quality failures discovered late in the cycle require emergency remediation that risks missing the submission deadline.</p>
+  </header>
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
+  </div>
+  <div class="l3-section__scenarios">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/regulatory-financial-reporting/corep-finrep-validation/corep-finrep-movement-commentary" id="scenario-corep-finrep-movement-commentary" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Supervisory Template Movement Commentary</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent analyzes the period-on-period movements in material cells of the supervisory reporting templates (such as COREP and FINREP), identifies the top five movements by absolute value, and drafts attributive commentary for each — enabling the regulatory reporting team to include a pre-validated narrative addendum with the submission.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Supervisory template submissions are accompanied by management commentary on material movements, drafted by the regulatory reporting team after validation is complete. The drafting cycle begins once the data is validated, compressing the remaining submission window and producing commentary that is reactive rather than analytical.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads the current and prior-period template data immediately after the validation run completes. It identifies the top five template cells with the largest absolute period-on-period movement, cross-references each movement against the corresponding GL and risk system data to identify the driver, and drafts a commentary paragraph per movement in the regulatory reporting team's house format. The team reviews each paragraph for accuracy and regulatory tone before inclusion in the submission package.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">The regulatory reporting team receives, immediately after each validation run, drafted commentary on the five largest period-on-period movements in supervisory reporting template cells, each attributed to its GL or risk system driver, for inclusion in the submission package.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>AI-drafted movement commentary used for ≥4 quarterly template submission cycles within year 1; top five movements covered in each cycle.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥85% of commentary paragraphs accepted by the regulatory reporting team without material rewrite; driver attribution confirmed against GL and risk system data in ≥95% of reviewed paragraphs.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Commentary drafts available within 2 hours of the validation run, vs. drafting started only after validation with a compressed submission window in the prior process.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/regulatory-financial-reporting/corep-finrep-validation/corep-finrep-submission-readiness-check" id="scenario-corep-finrep-submission-readiness-check" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Supervisory Template Submission Readiness Check</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">On the day before the submission deadline for supervisory reporting templates (such as COREP or FINREP), the AI agent runs a final submission readiness check — confirming that all templates are populated, the XBRL validation suite has passed, the management commentary is attached, and the prior-period comparison is consistent — and presents a readiness certificate to the regulatory reporting lead.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
+  </summary>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#risk-data-reporting">Risk data and supervisory reporting</a></p>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Last-minute template submission issues — missing template sections, XBRL validation failures from a late data correction, or commentary that refers to a prior draft rather than the final data — are identified by the regulatory reporting lead through a manual pre-submission checklist. The checklist is not consistently executed under time pressure, and submission-day issues may require emergency remediation within a narrow window before the deadline.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent runs a structured submission readiness check on the day before the deadline: confirms template completeness, reruns the XBRL validation suite against the final data file, checks that the management commentary is attached and references the correct reporting period, and confirms that the prior-period comparison figures are consistent with the prior approved submission. Results are presented to the regulatory reporting lead as a readiness certificate with a pass/fail status per check. Any failed checks are presented with the specific issue and the responsible team for remediation.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">The regulatory reporting lead receives, on the day before each template submission deadline, a readiness certificate with pass/fail status for template completeness, XBRL validation, commentary attachment, and prior-period comparison consistency.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>AI-produced readiness check run for 100% of template submission cycles within year 1; all four check categories covered.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥90% of failed checks remediated by the responsible team before the deadline; no submission-day emergency remediation required for an issue covered by the check.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Readiness certificate available one business day before the deadline, vs. a manual checklist inconsistently executed under time pressure in the prior process.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/regulatory-financial-reporting/corep-finrep-validation/corep-finrep-data-quality-check" id="scenario-corep-finrep-data-quality-check" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Supervisory Template Data Quality Validation</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent validates the data in supervisory reporting templates (such as COREP and FINREP) against the regulator's validation rules, cross-template consistency requirements, and prior-quarter benchmarks, delivering a prioritized exception report before the submission deadline.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
+  </summary>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#risk-data-reporting">Risk data and supervisory reporting</a></p>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Supervisory template submissions contain hundreds of data cells with embedded validation rules and cross-template consistency requirements. Data quality failures identified late in the cycle compress the remediation window before the submission deadline and risk regulatory scrutiny.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent ingests the populated templates, runs all prescribed XBRL validation rules, checks cross-template consistency, and compares each material cell movement to the prior quarter with a materiality-ranked exception list. Finance receives the structured data quality report with prioritized remediation items with sufficient lead time to remediate them before the submission deadline.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">Supervisory reporting template data is validated against the regulator's validation rules, cross-template consistency requirements, and prior-quarter benchmarks before the submission deadline, with a prioritized exception report delivered to Finance with sufficient remediation lead time.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>AI-produced data quality validation used for 100% of quarterly template submission cycles within year 1.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥90% of validation exception reports result in Finance remediating all flagged items before submission; post-submission supervisory query rate on data quality grounds reduced by ≥40% vs. the pre-deployment baseline.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Prioritized exception report available within 1 business day of template population, vs. 2–4 days of manual validation in the prior process.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+  </div>
+</section>
+<section class="l3-section" id="local-prudential-returns">
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Local prudential returns</h2>
+    <p class="l3-section__intent">Local prudential returns — the regulator's own return series and capital adequacy tables — are submitted monthly, quarterly, and annually to the regulator. Each return requires data extraction from the GL and risk systems, mapping to the prescribed template format, and narrative explanation of significant movements. Return accuracy is subject to regulatory examination during on-site inspections.</p>
+  </header>
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
+  </div>
+  <div class="l3-section__scenarios">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/regulatory-financial-reporting/local-prudential-returns/prudential-return-movement-insights" id="scenario-prudential-return-movement-insights" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Prudential Return Movement Insights</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent compares the current-period prudential return to the prior submission and identifies the five largest cell-level movements, attributing each to its GL or risk system driver — providing the regulatory reporting team with a pre-drafted narrative explanation for each material movement before the submission narrative deadline.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>The regulator requires narrative explanation of material movements in prudential returns. The regulatory reporting team identifies the material movements manually after the template is populated and drafts explanatory narrative under submission deadline pressure, without a systematic cross-reference to the underlying driver in the GL or risk systems.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads the populated current-period template and the prior approved submission. It identifies the five largest cell-level movements by absolute value, maps each to the corresponding GL account or risk system driver, and drafts an attributive explanation in the regulatory house style for each movement. The regulatory reporting team reviews each explanation for accuracy and regulatory tone, confirms the driver attribution, and includes the approved explanations in the submission narrative. The draft is available as soon as the current-period template is validated.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">The regulatory reporting team receives, as soon as the current-period prudential return template is validated, a drafted explanation of each of the five largest cell-level movements, attributed to its GL account or risk system driver.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>AI-drafted movement explanations used for ≥90% of prudential return submissions in year 1; five largest movements covered in each return.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥85% of explanations approved by the regulatory reporting team without material rewrite; driver attribution confirmed in ≥95% of reviewed explanations.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Draft explanations available on the day the template is validated, vs. manual identification and drafting under submission deadline pressure in the prior process.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/regulatory-financial-reporting/local-prudential-returns/prudential-return-submission-calendar" id="scenario-prudential-return-submission-calendar" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Prudential Return Submission Calendar</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent maintains an integrated submission calendar for all prudential returns — with submission deadlines, internal data-ready dates, and sign-off milestones — and issues a weekly preparation status report to the regulatory reporting lead throughout each submission cycle.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Prudential return submission calendars span monthly, quarterly, and annual cycles across multiple return series. The regulatory reporting team tracks submission deadlines in a manual calendar that does not integrate with the internal data-ready milestones or the GL close schedule — creating periodic deadline-proximity surprises when the data-ready date for a quarterly return is discovered to conflict with the GL close window.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent maintains a structured submission calendar integrating each return's regulatory deadline, the internal data-ready milestone required, the GL close date dependency, and the sign-off milestone schedule. Each week it issues a preparation status report to the regulatory reporting lead — showing returns due within the next 30 days, current data-readiness status against each, and any milestone that is behind schedule. Deadline-proximity alerts are issued when a data-ready milestone is tracking late against the submission deadline. The regulatory reporting lead confirms the calendar at the start of each quarter.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">The regulatory reporting lead receives a weekly preparation status report from an integrated submission calendar — returns due within the next 30 days, data-readiness against each, and milestones behind schedule — covering every prudential return.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>AI-produced weekly status report delivered for ≥48 of 52 weeks in year 1; all monthly, quarterly, and annual return series included in the calendar.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥85% of deadline-proximity alerts confirmed by the regulatory reporting lead as requiring action; calendar confirmed by the lead at the start of each quarter without material correction.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Data-ready and GL close conflicts flagged up to 30 days ahead, vs. deadline-proximity surprises from a manual calendar in the prior process.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/regulatory-financial-reporting/local-prudential-returns/prudential-return-data-extraction-validation" id="scenario-prudential-return-data-extraction-validation" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Prudential Return Data Extraction &amp; Validation</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent extracts data from the GL and risk systems into the regulator's prescribed prudential return template formats, applies the Bank's regulatory mapping rules, and validates the extracted data against intra-template arithmetic and cross-template consistency checks before the regulatory reporting team's review.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Prudential return preparation requires data to be extracted from the GL and risk systems and mapped to prescribed regulatory template formats — a manual process that is repeated each monthly, quarterly, and annual cycle and accounts for the majority of the regulatory reporting team's production time. Data mapping errors are identified through validation checks run by the team after extraction, adding a remediation loop to an already compressed submission timeline.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads the GL and risk system data extracts and applies the Bank's regulatory mapping rules for the relevant return. It populates the prescribed template cells, runs the embedded intra-template arithmetic checks and cross-template consistency validations, and presents the populated template and a structured exception list to the regulatory reporting team. The team reviews the exceptions, corrects source data errors at the GL or risk system level, and confirms the final template before submission. The AI agent re-runs the validation after each correction cycle.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">The regulatory reporting team receives each prudential return populated from GL and risk system extracts under the Bank's regulatory mapping rules, with a structured exception list from the intra-template arithmetic and cross-template consistency checks.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>AI-populated templates used for ≥90% of monthly, quarterly, and annual prudential return cycles in year 1.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥90% of populated cells accepted by the regulatory reporting team without manual re-mapping; ≥85% of listed exceptions confirmed as genuine source data or mapping errors.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Populated template and exception list available within 1 business day of the GL and risk system extracts, vs. manual extraction and mapping that takes the majority of the team's production time in the prior process.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+  </div>
+</section>
+<section class="l3-section" id="regulatory-narrative">
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Regulatory submission narrative</h2>
+    <p class="l3-section__intent">Supervisory reporting templates and local prudential returns require explanatory narrative alongside quantitative templates — management commentary on significant movements, notes on methodology changes, and explanations of items exceeding supervisory movement thresholds. Narrative quality and consistency across submission cycles affect the Bank's relationship with the regulator.</p>
+  </header>
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
+  </div>
+  <div class="l3-section__scenarios">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/regulatory-financial-reporting/regulatory-narrative/regulatory-narrative-consistency-tracking" id="scenario-regulatory-narrative-consistency-tracking" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Regulatory Narrative Consistency Tracking</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent cross-references the narrative in the current regulatory submission against prior approved submissions to flag any statement that contradicts or materially departs from an established position — enabling the regulatory reporting team to address potential consistency concerns before filing.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Regulatory submission narratives are reviewed for quality within the current submission but not systematically cross-referenced against prior submissions for consistency. Statements that contradict a prior-period explanation — a methodology description that conflicts with last year's ICAAP narrative, or a threshold explanation that differs from the prior capital adequacy return commentary — are identified by the regulator during inspection rather than by the Bank before filing.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads the draft narrative for the current submission and the approved narratives from the prior four submission cycles. It identifies passages in the current draft where the stated methodology, threshold, or explanation differs from the corresponding passage in a prior submission, and presents each divergence to the regulatory reporting team with the prior-period text alongside. The team reviews each divergence and confirms whether it reflects an intentional methodology change — which should be explicitly disclosed — or an unintended inconsistency for correction.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">The regulatory reporting team receives, before filing, every passage in the draft submission narrative whose stated methodology, threshold, or explanation departs from the approved narratives of the prior four submission cycles, with the prior-period text alongside.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>AI-produced consistency review run on ≥90% of regulatory submission narratives in year 1.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥80% of presented divergences confirmed by the team as either an intentional change to disclose or an inconsistency to correct; no contradiction with a prior submission first identified by the regulator during inspection.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Divergence list available within 1 business day of the draft narrative, vs. no systematic cross-reference to prior submissions in the prior process.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/regulatory-financial-reporting/regulatory-narrative/regulatory-narrative-movement-threshold-flags" id="scenario-regulatory-narrative-movement-threshold-flags" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Regulatory Narrative Movement Threshold Coverage</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent identifies every template cell that exceeds the regulator's stated movement explanation threshold for the current submission period, confirms that a narrative explanation exists for each, and flags any threshold-breaching movement that is not covered in the draft narrative.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>The regulator prescribes movement explanation thresholds — cells where the period-on-period change exceeds a defined percentage or absolute amount require narrative explanation in the submission commentary. Identifying all threshold-breaching movements and confirming narrative coverage is performed manually by the regulatory reporting team, and under submission deadline pressure some threshold-breaching items may lack explanation — a finding that emerges in the regulator's validation review rather than before filing.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads the current-period template data and the regulator's published movement explanation thresholds. It identifies every cell where the period-on-period movement exceeds the threshold and cross-references each against the draft narrative to confirm that an explanation exists. Threshold-breaching cells without narrative coverage are presented to the regulatory reporting team in a gap list with the movement amount, the threshold, and the relevant template row reference. The team drafts explanations for each uncovered item before submission.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">The regulatory reporting team receives, before submission, a gap list of every template cell whose period-on-period movement exceeds the regulator's explanation threshold and is not covered in the draft narrative, with the movement amount, the threshold, and the template row reference.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>AI-produced threshold coverage check run on ≥95% of submissions subject to movement explanation thresholds in year 1.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>100% of gap-list items given an explanation by the team before submission; ≥95% of threshold breaches identified by the AI agent confirmed against the template data.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Gap list available within 2 hours of the draft narrative, vs. manual identification with gaps emerging in the regulator's validation review in the prior process.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/regulatory-financial-reporting/regulatory-narrative/regulatory-narrative-investor-disclosure-drafting" id="scenario-regulatory-narrative-investor-disclosure-drafting" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Regulatory Submission Narrative &amp; Investor Disclosure Drafting</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent drafts the narrative sections accompanying prudential returns and produces the full text of the Bank's investor-facing disclosures — quarterly earnings releases, annual MD&amp;A, and investor letters — from closed financial data and prior submissions.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--L" title="Complexity">L</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Local prudential returns require explanatory narrative — movement commentary, one-time item notes, and deviation explanations — while annual and quarterly investor disclosures require 40–120 pages of MD&amp;A and earnings commentary. Both workflows share the same source data but are produced by different teams with inconsistent output quality across cycles; cross-period consistency and disclosure completeness are checked manually.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads the current-period quantitative data, prior submissions, movement thresholds defined in supervisory guidance, and prior investor disclosures as style anchors. For regulatory returns, it drafts explanatory narrative in the prescribed supervisory format. For investor disclosures, it generates MD&amp;A and earnings release text with cross-period consistency checking, disclosure compliance review against applicable IFRS and securities regulation, and forward-looking statement flagging. Finance and IR review and apply judgment on tone and commitment framing.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">Narrative sections accompanying prudential returns and full investor-facing disclosures — quarterly earnings releases, annual MD&amp;A, and investor letters — are drafted from closed financial data and prior submissions with cross-period consistency verified and forward-looking statements flagged.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>AI-drafted regulatory narrative and investor disclosure sections used for ≥4 quarterly and ≥1 annual reporting cycles within year 1.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥80% of AI-drafted sections accepted by Finance and IR without material structural rewrite; IFRS and securities regulation compliance review confirms required disclosure elements present in ≥97% of reviewed disclosures.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Full draft of regulatory narrative and investor disclosure available for Finance and IR review within 5 business days of data close, vs. 2–3 weeks of manual production in the prior process.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+  </div>
+</section>
+<section class="l3-section" id="investor-disclosure">
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Investor disclosure &amp; statutory accounts</h2>
+    <p class="l3-section__intent">Annual IFRS financial statements, quarterly earnings releases, and investor letters are the Bank's public financial disclosure — filed with the regulator where required and published for investors. Each document requires cross-period consistency, numerical reconciliation across sections, and disclosure compliance review against applicable IFRS and securities regulation requirements.</p>
+  </header>
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
+  </div>
+  <div class="l3-section__scenarios">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/regulatory-financial-reporting/investor-disclosure/investor-disclosure-numerical-consistency" id="scenario-investor-disclosure-numerical-consistency" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Investor Disclosure Numerical Consistency Check</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Before the annual IFRS financial statements or quarterly earnings release is published, the AI agent verifies numerical consistency across all document sections — cross-footing tables, reconciling figures that appear in multiple sections, and confirming period comparatives against prior published documents.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Annual IFRS financial statements and quarterly earnings releases contain hundreds of numerical figures that must be consistent across sections — balance sheet totals that reconcile across the primary statements, ratios that are consistent with their component numerators and denominators, and comparative figures that match the prior period's published disclosure. Manual consistency review by the disclosure team catches most errors but operates under time pressure near publication and treats each document as a standalone review without systematic cross-referencing to prior publications.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads the draft financial statements or earnings release and applies a structured consistency check: cross-footing all table totals, verifying that figures appearing in multiple sections match, recomputing all stated ratios from their disclosed components, and comparing all comparative period figures against the prior approved publication. Exceptions — inconsistencies, rounding errors, and unexplained differences from prior publications — are presented in a numbered exception list to the disclosure team before publication. The team confirms each exception as intentional or directs a correction.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">The disclosure team receives, before the annual IFRS financial statements or a quarterly earnings release is published, a numbered exception list from cross-footing table totals, matching figures that appear in multiple sections, recomputing stated ratios, and checking comparatives against prior publications.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>AI-produced consistency check run on ≥4 quarterly earnings releases and ≥1 set of annual IFRS financial statements within year 1.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥85% of listed exceptions confirmed by the disclosure team as either intentional or requiring correction; no numerical inconsistency identified after publication.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Exception list available within 2 hours of each draft, vs. manual review under time pressure near publication in the prior process.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/regulatory-financial-reporting/investor-disclosure/earnings-release-drafting" id="scenario-earnings-release-drafting" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Earnings Release Drafting</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent drafts the quarterly earnings release from the closed management accounts, the capital and liquidity position, and the three most recent prior releases as style anchors — giving the CFO and IR team a complete draft on the day reporting closes, with all material movements attributed.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Quarterly earnings releases are drafted by the CFO's office and the IR team from multiple source documents, with the drafting cycle beginning after all source documents are finalized. The process takes three to five days, and early drafts circulated for review frequently require structural revision as the CFO's framing develops — extending the cycle further and creating version control risk across a large review group.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads the closed management accounts, capital and liquidity reports, and the three most recent approved earnings releases as style and structural anchors. It generates a draft covering the standard release sections — financial highlights, segment performance, capital and liquidity, outlook, and financial tables — with attributed commentary for each material movement. The CFO and IR team receive the draft on the day reporting closes, review for strategic framing and forward guidance, and edit; the AI agent produces a revised draft from each round of edits. The numerical consistency check is run against the final draft before publication.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">The CFO and IR team receive a complete draft of the quarterly earnings release — financial highlights, segment performance, capital and liquidity, outlook, and financial tables, with each material movement attributed — on the day reporting closes.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>AI-drafted earnings release used for ≥4 quarterly reporting cycles within year 1; all standard release sections covered.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥80% of drafts accepted by the CFO and IR team without material structural revision; figures reconcile to the closed management accounts and capital and liquidity reports in ≥98% of reviewed drafts.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Complete draft available on the day reporting closes, vs. three to five days of drafting after source documents are finalized in the prior process.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/regulatory-financial-reporting/investor-disclosure/ifrs-disclosure-compliance-review" id="scenario-ifrs-disclosure-compliance-review" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">IFRS Disclosure Compliance Review</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent reviews the draft annual IFRS financial statements against the applicable disclosure requirements — IFRS 7, IFRS 9, IFRS 13, and IAS 1 — and produces a compliance gap list identifying required disclosures that are absent or incomplete in the draft.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
+  </summary>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#expected-credit-loss">Expected credit loss</a></p>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Annual IFRS financial statements carry extensive disclosure requirements under IFRS 7 (financial instruments), IFRS 9 (impairment), IFRS 13 (fair value), and IAS 1 (presentation). The disclosure compliance review is conducted manually by the external auditors and by the Bank's technical accounting team, with gaps identified in the audit review process rather than before the draft is submitted for audit. Late-stage gap identification adds to the audit timetable.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads the draft IFRS financial statements and a structured disclosure checklist derived from the applicable IFRS standards. It maps each required disclosure element to the corresponding section of the draft, identifies elements that are absent or incomplete, and produces a numbered compliance gap list with the IFRS reference, the disclosure requirement, and the location in the draft where the disclosure is expected. The technical accounting team reviews the gap list before the draft is submitted to the auditors, reducing audit-stage queries on disclosure completeness.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">The technical accounting team receives, before the draft annual IFRS financial statements are submitted to the auditors, a numbered compliance gap list of required IFRS 7, IFRS 9, IFRS 13, and IAS 1 disclosures that are absent or incomplete.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>AI-produced disclosure compliance review run on ≥1 set of annual IFRS financial statements within year 1; all four standards in the disclosure checklist covered.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥85% of listed gaps confirmed by the technical accounting team as genuine; audit-stage queries on disclosure completeness reduced by ≥50% vs. the prior year.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Gap list available within 2 business days of the draft statements, vs. gaps identified during the audit review in the prior process.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+  </div>
+</section>
+</div>
+
+</div>
+</div>

@@ -157,7 +157,7 @@ Capabilities и Features, ещё не принятые: Capabilities and Feature
 Скопируйте шаблон ниже в файл <code>cards/ИДЕНТИФИКАТОР.yaml</code>.: Copy the template below into a file named <code>cards/IDENTIFIER.yaml</code>.
 ? 'Заполните обязательные поля: идентификатор, название, суть, профиль, состояние, позиции людей, задачу и ожидаемый результат, текущее состояние.'
 : 'Fill in the required fields: identifier, title, summary, profile, state, people’s positions, problem and intended outcome, and the live status.'
-Для идеи поставьте состояние «Воронка». Остальное можно добавить позже.: For an idea, set the state to “Воронка” (Funnel). You can add the rest later.
+Для идеи поставьте состояние «Воронка». Остальное можно добавить позже.: 'For an idea, set the stage to <span lang="ru">Воронка</span> (Funnel). You can add the rest later.'
 'Обновляйте карточку по мере работы: при следующей сборке все виды покажут изменения.': 'Update the card as the work goes on: the next build shows the changes in every view.'
 'Карточка проверяется схемой: сборка остановится и подскажет, что поправить. Схема — <code>cards/schema.json</code>.': 'A schema checks the card: the build stops and tells you what to fix. The schema is <code>cards/schema.json</code>.'
 Шаблон: Template

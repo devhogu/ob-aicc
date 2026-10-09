@@ -1,42 +1,63 @@
 id: INI-008
 title: "Базы знаний функций"
+title_en: "Knowledge bases for functions"
 summary: "Строим базы знаний функций Банка по одному общему подходу: ответы единообразны, со ссылками на источники, у каждого источника есть тот, кто его ведёт, и дата пересмотра."
+summary_en: "We build knowledge bases for the Bank's functions using one common approach: answers are consistent and cite their sources, and every source has someone who maintains it and a review date."
 profile: initiative
 class_of_service: инициатива
 stage: Воронка
 area: "Сервисы знаний"
+area_en: "Knowledge services"
 people:
-  business_owner: {position: "представитель функции, чьи знания собираются в базу", holder: ""}
-  product_manager: {position: "менеджер продукта Хаба по этой теме", holder: ""}
-  project_manager: {position: "кто ведёт проект", holder: ""}
+  business_owner: {position: "представитель функции, чьи знания собираются в базу", position_en: "a representative of the function whose knowledge goes into the base", holder: ""}
+  product_manager: {position: "менеджер продукта Хаба по этой теме", position_en: "the Hub's product manager for this topic", holder: ""}
+  project_manager: {position: "кто ведёт проект", position_en: "whoever runs the project", holder: ""}
 outcome:
   problem: "У каждой функции есть знания, которые сотрудники ежедневно ищут или уточняют у коллег. Они лежат в документах, которые не ведутся как контролируемые источники. Ответы на одни и те же вопросы различаются, а знания уходят вместе с сотрудниками."
+  problem_en: "Every function has knowledge that employees look up or ask colleagues about every day. It sits in documents that are not maintained as controlled sources. Answers to the same questions differ, and knowledge leaves with the people who hold it."
   intended_outcome: "Общий подход ко всем базам знаний, ранжированный перечень баз по функциям, первая база знаний для правовой функции в работе, начата вторая."
+  intended_outcome_en: "A common approach for all knowledge bases, a ranked list of bases by function, the first knowledge base, for the legal function, in use, and a second one started."
   measure: "Число источников с тем, кто их ведёт, и датой пересмотра; число ответов со ссылкой на источник; число сотрудников, которые пользуются базой."
+  measure_en: "Number of sources with someone who maintains them and a review date; number of answers that cite a source; number of employees who use the base."
   baseline: "Не измерено."
+  baseline_en: "Not measured."
   target: "Не задано."
+  target_en: "Not set."
 constraints:
   appetite: "Без отдельного бюджета: рабочее время того, кто ведёт проект."
+  appetite_en: "No separate budget: the working time of whoever runs the project."
   review_point: "К концу 2026 года: смотрим, что получилось, и решаем, продолжать ли."
+  review_point_en: "By the end of 2026: we look at what has come of it and decide whether to continue."
   exit_criterion: "Первая база знаний, для правовой функции, используется; у её источников есть тот, кто их ведёт, и дата пересмотра."
+  exit_criterion_en: "The first knowledge base, for the legal function, is in use; its sources have someone who maintains them and a review date."
   stop_threshold: "Источники остаются без того, кто их ведёт: такие знания в базу не берём."
+  stop_threshold_en: "Sources are left without anyone to maintain them: we do not take such knowledge into the base."
 checklist:
-  - {item: "Договориться об общем подходе: источники, ведущий и дата пересмотра у каждого источника, доступ по классу данных, ответы со ссылкой на источник", state: "не начато"}
-  - {item: "Вместе с каждой функцией составить перечень знаний, которые нужны её сотрудникам каждый день", state: "не начато"}
-  - {item: "Ранжировать кандидатов по востребованности и выполнимости", state: "не начато"}
-  - {item: "Создать первую базу знаний вместе с правовой функцией и начать вторую", state: "не начато"}
-  - {item: "Записать выводы, полезные для следующих баз знаний", state: "не начато"}
+  - {item: "Договориться об общем подходе: источники, ведущий и дата пересмотра у каждого источника, доступ по классу данных, ответы со ссылкой на источник", item_en: "Agree on a common approach: sources, a maintainer and a review date for each source, access by data class, answers that cite a source", state: "не начато"}
+  - {item: "Вместе с каждой функцией составить перечень знаний, которые нужны её сотрудникам каждый день", item_en: "Together with each function, list the knowledge its employees need every day", state: "не начато"}
+  - {item: "Ранжировать кандидатов по востребованности и выполнимости", item_en: "Rank the candidates by demand and feasibility", state: "не начато"}
+  - {item: "Создать первую базу знаний вместе с правовой функцией и начать вторую", item_en: "Build the first knowledge base together with the legal function and start a second one", state: "не начато"}
+  - {item: "Записать выводы, полезные для следующих баз знаний", item_en: "Write down the lessons that will help with the next knowledge bases", state: "не начато"}
 live:
   status: не задан
   next_step: "Описать общий подход к базам знаний и составить перечень кандидатов."
+  next_step_en: "Describe the common approach to knowledge bases and list the candidates."
   risks:
     - "Используются конфиденциальные документы: доступ нужно давать по классу данных."
     - "Публикация знаний за пределами Банка и источники без того, кто их ведёт, в работу не входят."
+  risks_en:
+    - "Confidential documents are used: access must be granted by data class."
+    - "Publishing knowledge outside the Bank and sources with no one to maintain them are out of scope."
   dependencies:
     - "Перечень функций и их знаний из INI-002."
     - "Документы-источники, у которых есть тот, кто их ведёт, и дата пересмотра."
     - "Представители функций, которые знают свои источники."
     - "Проверка представителями контрольных функций."
+  dependencies_en:
+    - "The list of functions and their knowledge from INI-002."
+    - "Source documents that have someone who maintains them and a review date."
+    - "Representatives of the functions who know their own sources."
+    - "Review by representatives of the control functions."
 decisions: []
 closure: {result: "", lessons: ""}
 links: {jira: "", confluence: ""}

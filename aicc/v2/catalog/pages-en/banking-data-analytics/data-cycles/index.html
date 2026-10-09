@@ -1,0 +1,1107 @@
+<!--page {"id": "catalog/banking-data-analytics/data-cycles", "title": "Data Cycles", "styles": ["tokens.css", "components.css", "theme.css", "layouts/service.css", "layouts/concern.css", "layouts/flow-set.css"], "summary": "The recurring data governance cycles — data quality assessment (BCBS 239), master/reference data stewardship, lineage/control attestation, and regulatory data submission.", "source_hash": "8b2ddc039c78"} -->
+<div class="discovery-content">
+
+<div class="page">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;">
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <span class="breadcrumb__item">
+    <a class="breadcrumb__link" href="../../index.html">Discovery Catalog</a>
+  </span>
+  <span class="breadcrumb__item">
+    <span class="breadcrumb__sep" aria-hidden="true">/</span>
+    <a class="breadcrumb__link" href="../index.html">Banking Data &amp; Analytics</a>
+  </span>
+  <span class="breadcrumb__item">
+    <span class="breadcrumb__sep" aria-hidden="true">/</span>
+    <span class="breadcrumb__current" aria-current="page">Data Cycles</span>
+  </span>
+</nav>
+</div>
+<header class="page-header">
+  <div class="page-header__title-row">
+    <div>
+      <h1 class="page-header__title">Data Cycles</h1>
+    </div>
+  </div>
+  <p class="page-header__intent">The recurring data governance cycles — data quality assessment (BCBS 239), master/reference data stewardship, lineage/control attestation, and regulatory data submission.</p>
+</header>
+<div id="main-content" class="flow-categories" aria-label="Flow categories">
+<section class="flow-category" id="stewardship-quality">
+  <h2 class="flow-category__title">Stewardship &amp; quality</h2>
+  <div class="flow-category__table">
+<details class="flow-detail" id="data-quality-assessment-cycle">
+  <summary class="flow-detail__summary">
+    <div class="flow-detail__title-col">
+      <h3 class="flow-detail__title">Data quality assessment cycle (BCBS 239)</h3>
+    </div>
+    <p class="flow-detail__intent">Monthly data quality assessment across critical data elements — profile, score, issue, remediate, and retest — aligned to BCBS 239 Principles 3 and 4 (accuracy and integrity, completeness) and the Bank's approved data quality dimensions. The cycle anchor is the interval from quality assessment to confirmed remediation.</p>
+  </summary>
+  <div class="flow-detail__body">
+    <p class="flow-detail__intent-full">The data quality assessment cycle is the Bank's primary mechanism for measuring, managing, and improving the quality of its critical data elements (CDEs) — the data items that are material to risk aggregation, regulatory reporting, and business decision-making. BCBS 239 (the Basel Committee on Banking Supervision's Principles for Effective Risk Data Aggregation and Risk Reporting, January 2013) calls for a data architecture and quality framework that ensures risk data is accurate, complete, timely, consistent, and aggregated on demand. Supervisors commonly reference the BCBS 239 principles in their expectations for systemically important banks. The cycle runs monthly for CDE quality scoring and quarterly for a comprehensive quality assessment that includes all data dimensions — completeness, accuracy, timeliness, consistency, validity, and uniqueness — across the full operational and risk data estate. Data quality issues identified in the cycle feed a remediation pipeline managed by data domain stewards in coordination with IT and source-system owners. GenAI can accelerate the cycle by automating data profiling across large CDE populations, classifying quality issues from profiling output, and drafting remediation plans from structured issue records — enabling the data quality team to process a larger CDE inventory per cycle without proportional headcount growth.</p>
+    <section class="flow-detail__problems" aria-label="Flow lens problems">
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>CDE quality dimension scores are measured monthly but tracked informally between cycles. The CDO lacks a continuous view of the data quality trajectory — which CDEs are improving, which are stable, which are deteriorating — and the connection between quality trends and downstream risk reporting impact is not routinely surfaced.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Remediation resource allocation across the issue backlog is not systematically optimized against downstream regulatory reporting impact. Issues in less-visible data domains that affect BCBS 239 risk aggregation may be deprioritized relative to issues in high-profile business reporting systems, creating a compliance exposure that the standard prioritization process does not detect.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Data profiling execution, quality score calculation, issue classification from profiling output, and remediation plan drafting from structured issue records are structured, rule-based tasks applied to large data volumes each cycle. Quality dimension checks follow the Bank's approved definitions and are amenable to AI-driven assessment with steward review.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Data quality issue histories — root causes, remediation actions, and time-to-resolution — are held in individual issue records rather than in a structured knowledge base. Systematic patterns in quality failures — the same ETL transformation consistently producing null values for a category of CDEs — are not detected across the issue history, preventing proactive engineering fixes from being prioritized.</p></article></div>
+    </section>
+<nav class="flow-stages" aria-label="Flow stages">
+  <button class="flow-stages__stage" type="button" data-stage="profile" data-flow-id="urn:financial-services:flow:banking-data-analytics/data-quality-assessment-cycle" id="stage-data-quality-assessment-cycle--profile">
+    <span class="flow-stages__stage-label">Profile</span>
+    <span class="flow-stages__arrow" aria-hidden="true">→</span>
+  </button>
+  <button class="flow-stages__stage" type="button" data-stage="score" data-flow-id="urn:financial-services:flow:banking-data-analytics/data-quality-assessment-cycle" id="stage-data-quality-assessment-cycle--score">
+    <span class="flow-stages__stage-label">Score</span>
+    <span class="flow-stages__arrow" aria-hidden="true">→</span>
+  </button>
+  <button class="flow-stages__stage" type="button" data-stage="issue" data-flow-id="urn:financial-services:flow:banking-data-analytics/data-quality-assessment-cycle" id="stage-data-quality-assessment-cycle--issue">
+    <span class="flow-stages__stage-label">Issue</span>
+    <span class="flow-stages__arrow" aria-hidden="true">→</span>
+  </button>
+  <button class="flow-stages__stage" type="button" data-stage="remediate" data-flow-id="urn:financial-services:flow:banking-data-analytics/data-quality-assessment-cycle" id="stage-data-quality-assessment-cycle--remediate">
+    <span class="flow-stages__stage-label">Remediate</span>
+    <span class="flow-stages__arrow" aria-hidden="true">→</span>
+  </button>
+  <button class="flow-stages__stage" type="button" data-stage="retest" data-flow-id="urn:financial-services:flow:banking-data-analytics/data-quality-assessment-cycle" id="stage-data-quality-assessment-cycle--retest">
+    <span class="flow-stages__stage-label">Retest</span>
+  </button>
+</nav>
+<section class="concern-scenarios" aria-label="Scenarios">
+  <div class="scenarios-column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
+  </div>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/data-quality-assessment-cycle/dq-profiling-and-scoring-automation" id="scenario-dq-profiling-and-scoring-automation" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">CDE Profiling and Scoring Automation</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent executes the monthly CDE profiling run and quality dimension scoring across all onboarded CDEs, applying the Bank's approved quality dimension definitions to each element and producing a scored output for steward review. Every onboarded CDE is profiled each cycle rather than the subset reachable within the engineering team's available cycle capacity; CDEs in sources not yet onboarded are flagged for engineering prioritization. The data quality team reviews scored output and approves the cycle results.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
+  </summary>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#risk-data-reporting">Risk data and supervisory reporting</a></p>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Profiling coverage is incomplete each cycle — approximately 60–70% of identified CDEs are profiled — because onboarding new data sources to the profiling framework requires engineering effort that competes with other priorities. Quality dimension scoring is applied inconsistently by domain stewards when automated scoring is not available, reducing comparability across domains.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent applies pre-configured profiling rules across all onboarded source systems each month — null checks, range validation, referential integrity, format consistency, and duplicate detection — and translates profiling outputs into quality dimension scores using the Bank's approved quality dimension definitions. The scored output is delivered to domain stewards for review within the assessment cycle. Coverage gaps in non-onboarded sources are flagged separately for engineering prioritization.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">Monthly CDE profiling and quality dimension scoring extends to 100% of onboarded CDEs, with the approved quality dimension definitions applied consistently across all domains and scored output delivered for steward review within the assessment cycle.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent executes the full monthly profiling run covering 100% of onboarded CDEs for ≥ 12 consecutive months; coverage gap flags for non-onboarded sources delivered to the engineering prioritization queue each cycle.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥ 90% of scored outputs accepted by domain stewards without recalculation; dimension scoring consistency validated as uniform across domains in ≥ 85% of monthly cycles.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Profiling and scoring of all onboarded CDEs completed within each monthly cycle (previously approximately 60–70% of identified CDEs), with non-onboarded sources flagged to engineering in the same cycle.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/data-quality-assessment-cycle/dq-remediation-plan-drafting" id="scenario-dq-remediation-plan-drafting" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--enablement">Enablement</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">DQ Remediation Plan Drafting</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">For each prioritized data quality issue, the AI agent generates a structured remediation plan from the issue record — root-cause hypothesis, recommended remediation action, responsible IT owner, and target retest date — enabling data stewards to initiate remediation without a manual drafting step. The steward reviews and confirms the plan before IT engagement. Drafting quality is calibrated against the Bank's remediation framework and root-cause classification.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Root-cause investigation for data quality issues requires the data quality team to trace the issue through the ETL pipeline to the source system; where lineage documentation is incomplete, investigations can consume days before root cause is identified. Each investigation and remediation plan is drafted from scratch by the steward, consuming time that could be redirected to higher-judgment quality work.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads the issue record — affected CDE, quality dimension failure, profiling output — and traverses available lineage documentation to produce a root-cause hypothesis and a pre-populated remediation plan covering recommended action, responsible IT owner derived from the CDE ownership registry, and a retest date proposal. The steward reviews, adjusts if required, and submits the plan to IT. Where lineage documentation is insufficient for automated traversal, the AI agent flags the gap for steward investigation.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">Data stewards initiate remediation for each prioritized quality issue from an AI-generated plan covering root-cause hypothesis, recommended action, responsible IT owner, and target retest date, calibrated to the Bank's root-cause classification framework.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent generates a remediation plan for ≥ 90% of prioritized issues within 1 business day of issue confirmation; lineage-gap flags raised for ≥ 95% of issues where lineage documentation is insufficient for automated traversal.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥ 80% of AI-generated plans confirmed and submitted to IT by stewards without material amendment; root-cause hypotheses validated against IT findings in ≥ 75% of closed issues.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Steward time per remediation plan reduced from manual investigation and drafting (typically half to a full day) to ≤ 1 hour of review and confirmation per issue.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/data-quality-assessment-cycle/dq-continuous-posture-monitor" id="scenario-dq-continuous-posture-monitor" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">CDE Quality Trajectory Monitor</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent monitors CDE quality dimension scores on a continuous basis between formal monthly assessments, surfacing deteriorating dimensions and downstream risk reporting impact to the CDO before the next scoring cycle. The dashboard tracks completeness, accuracy, timeliness, and consistency trajectories per CDE domain and flags CDEs where quality is trending below threshold. The CDO uses the trajectory view to direct pre-emptive steward engagement.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Quality dimension scores are produced monthly and tracked informally between cycles. The CDO has no continuous view of which CDEs are deteriorating and cannot connect quality trends to downstream regulatory reporting impact without commissioning a manual extraction exercise. Deterioration that begins between cycles is visible only after the next formal scoring run.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads interim profiling outputs and quality scores from weekly profiling runs between the monthly assessments and maintains a running trajectory per CDE and domain. Dimensions trending below threshold trigger an alert with a downstream impact assessment identifying which BCBS 239 risk aggregation outputs and regulatory submissions consume the affected CDE. The CDO reviews the trajectory dashboard on a weekly cadence rather than waiting for the monthly cycle.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">The CDO holds a continuous quality trajectory view per CDE domain between formal monthly assessments, with deteriorating dimensions and their downstream BCBS 239 impact surfaced on a weekly basis.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent maintains the continuous trajectory dashboard covering 100% of registered CDEs; weekly threshold-breach alerts issued for ≥ 95% of qualifying deteriorations within 12 months of go-live.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥ 80% of threshold-breach alerts rated as requiring pre-emptive steward engagement by the CDO; downstream BCBS 239 impact assessments validated as accurate by the risk reporting team in ≥ 85% of alerts.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>CDE quality deterioration surfaced within 7 days of the threshold crossing, compared to identification at the next formal monthly scoring cycle.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/data-quality-assessment-cycle/dq-remediation-impact-prioritisation" id="scenario-dq-remediation-impact-prioritisation" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--optimize">Optimize</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">DQ Remediation Impact Prioritization</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent scores each open data quality issue by its downstream impact on BCBS 239 risk aggregation and regulatory submission accuracy, re-ordering the remediation backlog by regulatory materiality rather than issue visibility. The data quality team directs remediation resources to issues with the highest compliance exposure first. The CDO uses the ranked backlog to justify remediation resource allocation to the data governance council.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
+  </summary>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#risk-data-reporting">Risk data and supervisory reporting</a></p>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Remediation resource allocation across the issue backlog is not systematically aligned to downstream regulatory reporting impact. Issues in less-visible data domains that affect BCBS 239 risk aggregation may be deprioritized relative to issues in high-profile business reporting systems, accumulating compliance exposure that the standard prioritization process does not detect.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent maps each open issue to the downstream reports, risk metrics, and regulatory submissions that consume the affected CDE, scores impact by regulatory materiality, and re-orders the remediation queue accordingly. Issues affecting BCBS 239 risk aggregation CDEs and time-sensitive regulatory submissions are surfaced at the top of the queue with a compliance exposure summary. The data quality team reviews the ranked queue at the start of each remediation sprint.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">The data quality team's remediation resources are directed by a regulatory-materiality-ranked backlog, with BCBS 239 risk aggregation CDEs and time-sensitive regulatory submissions surfaced at the top of each sprint queue.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent re-orders the remediation queue by regulatory materiality for ≥ 95% of sprint cycles within 12 months of go-live; downstream impact mapping covers 100% of open issues against the data catalog.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥ 85% of top-ranked issues confirmed as correctly prioritized by the data quality team at sprint start; compliance exposure summary accepted without material revision for ≥ 80% of BCBS 239 material flags.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Remediation queue ranking available to the team at the start of each sprint, replacing end-of-sprint manual prioritization reviews.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/data-quality-assessment-cycle/dq-failure-pattern-knowledge-base" id="scenario-dq-failure-pattern-knowledge-base" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--new-opps">New opps</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">DQ Failure Pattern Knowledge Base</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent mines the accumulated issue history across closed remediation cycles to detect systemic failure patterns — recurring root causes, ETL transformation categories producing disproportionate quality failures, source systems with persistent accuracy gaps — and surfaces them as a prioritized engineering program for the CDO and data engineering lead. The pattern analysis shifts investment from reactive per-cycle remediation toward proactive pipeline quality improvement. Detection runs quarterly against the closed-issue register.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Data quality issue histories are held in individual issue records rather than a structured knowledge base. Systematic patterns — the same ETL transformation consistently producing null values for a category of CDEs, a specific source system repeatedly failing timeliness standards — are not detected across the issue history, and engineering investment in pipeline quality improvement is not informed by cumulative failure evidence.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads the closed-issue register across all completed remediation cycles, clusters issues by root-cause category, ETL transformation type, and source system, and identifies patterns where the same root cause appears across multiple CDEs or cycles. It produces a quarterly pattern report ranking systemic failure categories by cumulative quality impact and recommending engineering remediation actions with estimated CDE coverage benefit. The CDO uses the report to direct a pipeline quality investment program alongside the standard per-cycle remediation effort.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">The CDO directs pipeline quality investment using a quarterly pattern analysis of closed remediation issues, identifying systemic ETL failure categories and source-system gaps ranked by cumulative quality impact.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent produces the quarterly pattern report for ≥ 4 consecutive quarters within the first 12 months; analysis covers 100% of closed issues in the remediation register across all CDE domains.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥ 80% of identified systemic failure patterns confirmed as actionable engineering priorities by the CDO and data engineering lead; pipeline quality investment program initiated within 30 days of the first pattern report.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Cross-cycle identification of systemic patterns moves from ad hoc manual retrospectives to a structured quarterly report delivered within 5 business days of quarter close.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+</section>
+  </div>
+</details>
+<details class="flow-detail" id="master-reference-data-cycle">
+  <summary class="flow-detail__summary">
+    <div class="flow-detail__title-col">
+      <h3 class="flow-detail__title">Master &amp; reference data stewardship cycle</h3>
+    </div>
+    <p class="flow-detail__intent">Quarterly master data governance cycle — CDE ownership definition, golden record curation, reference data refresh, and cross-domain consistency validation. The cycle anchor is the interval from data definition change to validated golden record publication.</p>
+  </summary>
+  <div class="flow-detail__body">
+    <p class="flow-detail__intent-full">The master and reference data stewardship cycle governs the Bank's authoritative records for customers, counterparties, products, accounts, instruments, and the reference and code tables that classify transaction and risk data across the enterprise. Master data management — the practice of maintaining a single, accurate, and authoritative record for each critical entity — is foundational to BCBS 239 risk data aggregation; without consistent customer, counterparty, and instrument identifiers, risk aggregation across sub-systems produces inconsistent exposure pictures. The cycle runs quarterly for comprehensive master data quality review and governance decisions — new CDE definitions, ownership changes, deduplication initiatives, and reference data refresh — with a monthly monitoring cadence for golden record quality scores. The FATF Recommendations on customer due diligence (CDD) and the regulator's KYC requirements set accuracy and completeness expectations for customer master data that the stewardship cycle must satisfy. GenAI can support the cycle by automating deduplication candidate identification, enriching incomplete master data records from available sources, and drafting data stewardship decisions from structured governance inputs.</p>
+    <section class="flow-detail__problems" aria-label="Flow lens problems">
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Master data quality — golden record completeness, deduplication coverage, cross-domain identifier consistency — is assessed quarterly. The CDO lacks a continuous view of master data estate health between formal stewardship cycles and cannot quantify the impact of outstanding deduplication backlogs on downstream risk aggregation accuracy.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Deduplication candidate review prioritization is not systematically aligned to the downstream regulatory and risk impact of specific master data CDEs. High-volume, low-impact customer match pairs consume review capacity that would be better directed at counterparty and instrument CDEs that affect BCBS 239 risk aggregation.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Deduplication candidate identification from statistical matching, reference data refresh from authoritative external sources, cross-domain consistency validation queries, and data stewardship decision documentation are structured, high-volume tasks amenable to AI-assisted execution with steward review.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Master data governance decisions and their downstream quality impacts are documented in individual meeting records rather than in a structured governance knowledge base. Recurring disputes — the same cross-domain identifier inconsistency arising from the same source system interface limitation — are resolved from first principles each time rather than through a cataloged resolution pattern.</p></article></div>
+    </section>
+<nav class="flow-stages" aria-label="Flow stages">
+  <button class="flow-stages__stage" type="button" data-stage="define" data-flow-id="urn:financial-services:flow:banking-data-analytics/master-reference-data-cycle" id="stage-master-reference-data-cycle--define">
+    <span class="flow-stages__stage-label">Define</span>
+    <span class="flow-stages__arrow" aria-hidden="true">→</span>
+  </button>
+  <button class="flow-stages__stage" type="button" data-stage="govern" data-flow-id="urn:financial-services:flow:banking-data-analytics/master-reference-data-cycle" id="stage-master-reference-data-cycle--govern">
+    <span class="flow-stages__stage-label">Govern</span>
+    <span class="flow-stages__arrow" aria-hidden="true">→</span>
+  </button>
+  <button class="flow-stages__stage" type="button" data-stage="curate" data-flow-id="urn:financial-services:flow:banking-data-analytics/master-reference-data-cycle" id="stage-master-reference-data-cycle--curate">
+    <span class="flow-stages__stage-label">Curate</span>
+    <span class="flow-stages__arrow" aria-hidden="true">→</span>
+  </button>
+  <button class="flow-stages__stage" type="button" data-stage="validate" data-flow-id="urn:financial-services:flow:banking-data-analytics/master-reference-data-cycle" id="stage-master-reference-data-cycle--validate">
+    <span class="flow-stages__stage-label">Validate</span>
+    <span class="flow-stages__arrow" aria-hidden="true">→</span>
+  </button>
+  <button class="flow-stages__stage" type="button" data-stage="publish" data-flow-id="urn:financial-services:flow:banking-data-analytics/master-reference-data-cycle" id="stage-master-reference-data-cycle--publish">
+    <span class="flow-stages__stage-label">Publish</span>
+  </button>
+</nav>
+<section class="concern-scenarios" aria-label="Scenarios">
+  <div class="scenarios-column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
+  </div>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/master-reference-data-cycle/golden-record-deduplication-assist" id="scenario-golden-record-deduplication-assist" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Golden Record Deduplication Assist</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent applies probabilistic matching across name variants, Cyrillic-Latin transliterations, tax identifiers, and address fields to produce scored deduplication candidates for data steward review on a weekly cadence, compressing the time from the quarterly governance decision to an actionable candidate queue. The data steward reviews high-confidence candidates and resolves edge cases; the MDM hub golden record is updated following steward approval. Lower-confidence candidates are queued for judgment review rather than auto-merged.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Customer master data accumulates duplicate and inconsistent records across core banking, CRM, and KYC systems as entities are onboarded across channels and products. Deduplication campaigns are periodic, leaving the golden record stale between cycles. Local market characteristics — Cyrillic-Latin transliterations, alias conventions, and thin tax-identifier coverage — compound the deduplication workload beyond what campaign-based steward review can clear within standard cycle capacity.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads entity records from all source systems weekly and applies probabilistic matching across name variants, transliterations, tax identifiers, and address fields, producing a confidence-scored candidate list. High-confidence matches are presented to the steward as a batch-approval track; edge cases and lower-confidence matches are queued for individual judgment review. The MDM hub golden record is updated following steward approval, with the merge decision and confidence score recorded in the governance log.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">The MDM hub golden record for customer and entity master data is maintained at production quality on a weekly cadence through AI-assisted probabilistic deduplication, with high-confidence candidates batched for steward approval and edge cases queued for judgment review.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent produces deduplication candidate lists for ≥ 95% of weekly cadence cycles within 12 months of go-live; matching covers name variants, Cyrillic-Latin transliterations, tax identifiers, and address fields across all source systems.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥ 80% of high-confidence batch candidates approved by stewards without individual judgment review; post-merge golden record accuracy verified at ≥ 95% in quarterly data quality assessments.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Deduplication cycle shifted from periodic quarterly campaigns to a continuous weekly cadence; golden record staleness window reduced from up to 3 months to ≤ 7 days.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/master-reference-data-cycle/governance-decision-documentation" id="scenario-governance-decision-documentation" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--new-opps">New opps</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Master Data Governance Decision Documentation</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent produces structured governance decision records from data governance forum inputs — capturing the decision scope, rationale, affected CDEs, ownership assignments, and implementation actions — and indexes each record in a queryable knowledge base accessible to stewards, IT, and the data governance council. The governance secretary reviews and approves each record before it is published. The knowledge base enables recurrent disputes to be resolved by reference to prior decisions rather than from first principles.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Master data governance decisions and their downstream quality impacts are documented in individual meeting minutes rather than a structured governance knowledge base. Recurring cross-domain disputes — the same identifier inconsistency arising from the same source system interface limitation — are resolved from first principles each time because prior decisions are not retrievable in a usable form. Stewards and IT owners lack a reference standard for disputed CDE ownership and quality expectations.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads governance forum meeting notes and structured decision inputs, extracts each decision, and generates a formal decision record — scope, rationale, affected CDEs, ownership assignments, and required IT implementation actions. Once the governance secretary approves them, records are indexed by CDE, domain, decision type, and date and published to the governance knowledge base. At each forum, the AI agent retrieves relevant prior decisions for recurring agenda items and surfaces them to the chair before the session opens, reducing re-litigation of settled issues.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">Data governance forum decisions are captured in structured, queryable records indexed by CDE, domain, and decision type, enabling stewards and IT to resolve recurring disputes by reference to prior decisions rather than from first principles.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent generates governance decision records for ≥ 95% of actionable forum decisions within 2 business days of each session; prior decision retrieval deployed for 100% of governance forum recurring agenda items.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥ 85% of decision records approved by the governance secretary without material amendment; re-litigation rate for settled issues reduced by ≥ 50% year-on-year as measured by governance forum minutes.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Decision documentation turnaround reduced from end-of-meeting minutes (typically 3–5 business days) to approved records available within 2 business days; prior decisions surfaced to chair before each session.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/master-reference-data-cycle/master-data-estate-health-monitor" id="scenario-master-data-estate-health-monitor" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Master Data Estate Health Monitor</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent monitors golden record quality scores, deduplication coverage rates, and cross-domain identifier consistency across the master data estate on a continuous basis between quarterly stewardship cycles, surfacing deterioration and outstanding backlog impact to the CDO. The monitor tracks customer, counterparty, and instrument CDEs by domain and quantifies the BCBS 239 risk aggregation exposure from deduplication backlogs and cross-system identifier mismatches. The CDO uses the output for quarterly data governance council reporting.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Master data quality is assessed quarterly; between cycles, gaps accumulate as deduplication backlogs grow and cross-system identifier consistency deteriorates without systematic detection. The CDO cannot quantify the impact of outstanding deduplication backlogs on downstream risk aggregation accuracy without commissioning a manual assessment. Data governance council reporting on data quality relies on manual aggregation from domain-level inputs with no common scoring baseline.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads golden record quality metrics, deduplication coverage counts, and cross-domain identifier consistency scores from the MDM hub and producing systems on a weekly cadence. It maintains a continuous master data health dashboard per CDE domain with trailing quality trend lines and a deduplication backlog estimate expressed as a share of the total entity population. The BCBS 239 impact section quantifies how outstanding backlogs affect counterparty and instrument exposure aggregation accuracy. The CDO prepares the quarterly data governance council report from the dashboard.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">The CDO monitors golden record quality, deduplication coverage, and cross-domain identifier consistency on a continuous weekly basis, with BCBS 239 risk aggregation exposure from outstanding backlogs quantified and reported to the data governance council quarterly.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent maintains the continuous master data health dashboard covering customer, counterparty, and instrument CDE domains for ≥ 48 weeks within the first 12 months; BCBS 239 impact section included in each quarterly governance council report.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥ 85% of dashboard quality scores validated against MDM hub outputs by the data governance team at quarterly review; BCBS 239 deduplication backlog impact estimates accepted by the risk reporting team as directionally accurate in ≥ 80% of quarters.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Master data health assessment cycle reduced from quarterly manual aggregation to a continuous weekly dashboard; governance council reporting prepared from dashboard output in ≤ 1 business day.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/master-reference-data-cycle/deduplication-impact-prioritisation" id="scenario-deduplication-impact-prioritisation" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--optimize">Optimize</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Deduplication Candidate Impact Prioritization</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent ranks the deduplication candidate queue by downstream regulatory and risk impact of the affected entity type, directing data steward review capacity toward counterparty and instrument CDEs that affect BCBS 239 risk aggregation ahead of high-volume, lower-impact retail customer match pairs. The ranking integrates entity type, exposure materiality, and consuming report dependency to produce a steward review schedule aligned to the BCBS 239 principles. The data governance lead uses the ranked schedule to allocate the steward team's review capacity.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Deduplication candidate review prioritization is not systematically aligned to the downstream regulatory and risk impact of specific master data CDEs. High-volume retail customer match pairs consume review capacity that would produce higher compliance value if directed at counterparty and instrument CDEs material to BCBS 239 risk aggregation. The curation backlog accumulates across cycles without differentiation by entity materiality.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads the deduplication candidate queue and maps each entity type and candidate pair to downstream risk and regulatory report dependencies sourced from the data catalog. It scores each pair by entity type materiality — counterparty and instrument CDEs used in BCBS 239 aggregation receive the highest weight — and produces a ranked steward review schedule. High-confidence retail pairs above a defined match threshold are separated into a batch-approval track, reserving the judgment queue for high-materiality, lower-confidence matches. The data governance lead confirms the ranking and allocates steward review capacity from it.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">The data steward team's review capacity is directed toward counterparty and instrument CDE deduplication candidates with the highest BCBS 239 risk aggregation materiality, with high-volume retail pairs managed through a separate batch-approval track.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent produces a ranked steward review schedule for ≥ 95% of weekly deduplication candidate queues within 12 months of go-live; batch-approval track active for high-confidence retail pairs from go-live.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥ 85% of materiality-based prioritization rankings confirmed as correctly ordered by the data governance lead; BCBS 239 material CDE backlog cleared at a rate ≥ 50% faster than the baseline before the AI agent within 12 months.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Clearance of the counterparty and instrument CDE deduplication queue moved from quarterly campaign-based review to a continuous weekly steward cadence.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/master-reference-data-cycle/reference-data-change-impact-map" id="scenario-reference-data-change-impact-map" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--enablement">Enablement</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Reference Data Change Impact Map</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">When a reference data or taxonomy change is approved in the governance cycle — a product code revised by the regulator, an updated FIBO entity classification, a new sector definition — the AI agent traces the downstream impact across all consuming systems and reports before publication and produces a prioritized propagation plan ranked by submission deadline. The data governance team uses the plan to coordinate the propagation sprint before the next regulatory submission cycle. Each consuming system receives a data transformation note describing the mapping from the prior to the revised classification.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Reference data taxonomy changes propagate inconsistently across systems when the governance team manually identifies affected downstream assets. Consuming systems filing against superseded classifications continue to do so until individually updated, creating a compliance exposure window. For regulatory submission cycles, the propagation lag is a filing risk that is managed reactively rather than through a pre-publication impact assessment.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads the approved reference data change and queries the enterprise data catalog for all downstream assets referencing the affected code or classification. It produces a system-by-system, report-by-report impact map with update priority ranked by submission deadline and regulatory materiality. For each consuming system, it drafts a data transformation note covering the field-level mapping from prior to revised classification. The data governance team uses the impact map and transformation notes to plan and sequence the propagation sprint before the next submission deadline.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">When a reference data or taxonomy change is approved in the governance cycle, the data governance team receives a system-by-system, report-by-report impact map with a propagation plan ranked by submission deadline before publication, accompanied by a data transformation note for each consuming system.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent produces the impact map and transformation notes for ≥ 95% of approved reference data changes within 12 months of go-live; coverage extends to all consuming systems in the enterprise data catalog.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥ 85% of impact maps accepted by the data governance team as complete and correctly prioritized without material additions; transformation notes validated as field-level accurate in ≥ 90% of consuming systems.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Impact map delivered within 3 business days of governance approval, enabling propagation sprint planning before the next regulatory submission deadline for ≥ 90% of approved changes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+</section>
+  </div>
+</details>
+<details class="flow-detail" id="lineage-control-attestation-cycle">
+  <summary class="flow-detail__summary">
+    <div class="flow-detail__title-col">
+      <h3 class="flow-detail__title">Lineage &amp; control attestation cycle</h3>
+    </div>
+    <p class="flow-detail__intent">Semi-annual data lineage mapping and control attestation cycle — documenting the end-to-end path from source to regulatory report field, testing transformation controls, and attesting lineage accuracy in line with the BCBS 239 principles. The cycle anchor is the interval from pipeline change to updated, attested lineage documentation.</p>
+  </summary>
+  <div class="flow-detail__body">
+    <p class="flow-detail__intent-full">The lineage and control attestation cycle documents the end-to-end data lineage for each critical data element — the traceable path from origination in a source system through every ETL transformation, aggregation step, and system boundary to the regulatory report field or risk metric where it is consumed. BCBS 239 Principle 5 (timeliness) and Principle 6 (adaptability) call for banks to be able to generate accurate aggregated risk data on demand; effective lineage documentation is the enabler that makes on-demand aggregation possible and auditable. The cycle runs semi-annually for full lineage review and attestation. Between cycles, lineage documentation is updated on a change-triggered basis — when a source system changes, when a pipeline is modified, or when a new regulatory reporting field is introduced. The attestation step requires the data governance team and owners of the data domains to sign off that documented lineage accurately reflects the production pipeline configuration. GenAI can support the cycle by automatically traversing pipeline metadata to generate draft lineage documentation, comparing documented lineage against actual pipeline configurations to identify undocumented changes, and drafting attestation-ready lineage summaries for steward review.</p>
+    <section class="flow-detail__problems" aria-label="Flow lens problems">
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Lineage documentation currency — how many CDEs have lineage documentation that matches the current production configuration — is not measured continuously. The CDO cannot answer the BCBS 239 question of whether the Bank's risk data aggregation capability is audit-ready without commissioning a manual coverage assessment.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Lineage mapping effort is allocated to CDEs that are in scope for the current attestation cycle, based on the prior cycle's scope definition. CDEs that have changed their production pipeline configuration between attestation cycles are not re-attested until the next full cycle, creating a window of unattested lineage change that accumulates without systematic detection.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Pipeline metadata traversal for lineage discovery, transformation logic documentation from ETL script parsing, control total comparison across pipeline boundaries, and attestation-ready lineage summary drafting are structured technical tasks that follow repeatable patterns amenable to AI-assisted execution with engineering and governance review.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Prior attestation findings — lineage gaps, control test failures, and documentation deficiencies identified in previous cycles — are documented in attestation reports but not synthesized into a pattern analysis that would prioritize systematic pipeline quality improvements over individual cycle remediations.</p></article></div>
+    </section>
+<nav class="flow-stages" aria-label="Flow stages">
+  <button class="flow-stages__stage" type="button" data-stage="map" data-flow-id="urn:financial-services:flow:banking-data-analytics/lineage-control-attestation-cycle" id="stage-lineage-control-attestation-cycle--map">
+    <span class="flow-stages__stage-label">Map</span>
+    <span class="flow-stages__arrow" aria-hidden="true">→</span>
+  </button>
+  <button class="flow-stages__stage" type="button" data-stage="document" data-flow-id="urn:financial-services:flow:banking-data-analytics/lineage-control-attestation-cycle" id="stage-lineage-control-attestation-cycle--document">
+    <span class="flow-stages__stage-label">Document</span>
+    <span class="flow-stages__arrow" aria-hidden="true">→</span>
+  </button>
+  <button class="flow-stages__stage" type="button" data-stage="test" data-flow-id="urn:financial-services:flow:banking-data-analytics/lineage-control-attestation-cycle" id="stage-lineage-control-attestation-cycle--test">
+    <span class="flow-stages__stage-label">Test controls</span>
+    <span class="flow-stages__arrow" aria-hidden="true">→</span>
+  </button>
+  <button class="flow-stages__stage" type="button" data-stage="attest" data-flow-id="urn:financial-services:flow:banking-data-analytics/lineage-control-attestation-cycle" id="stage-lineage-control-attestation-cycle--attest">
+    <span class="flow-stages__stage-label">Attest</span>
+    <span class="flow-stages__arrow" aria-hidden="true">→</span>
+  </button>
+  <button class="flow-stages__stage" type="button" data-stage="renew" data-flow-id="urn:financial-services:flow:banking-data-analytics/lineage-control-attestation-cycle" id="stage-lineage-control-attestation-cycle--renew">
+    <span class="flow-stages__stage-label">Renew</span>
+  </button>
+</nav>
+<section class="concern-scenarios" aria-label="Scenarios">
+  <div class="scenarios-column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
+  </div>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/lineage-control-attestation-cycle/change-triggered-lineage-prioritisation" id="scenario-change-triggered-lineage-prioritisation" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--optimize">Optimize</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Change-Triggered Lineage Update Prioritization</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent monitors the production deployment pipeline and flags each release that modifies a CDE lineage path, creating a prioritized lineage update queue ranked by the regulatory materiality of the affected CDEs. The data governance team processes update requests as they arise rather than absorbing a large undocumented change backlog at each semi-annual attestation. CDEs with the highest BCBS 239 materiality receive lineage update requests on the same sprint cycle as the pipeline change that affects them.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Change-driven lineage updates depend on the data engineering team flagging pipeline changes to the data governance function. The change management process does not consistently trigger lineage update requirements; pipeline changes that alter CDE lineage paths are implemented without corresponding documentation updates, creating an accumulating divergence between documented and production lineage that the semi-annual attestation cycle must absorb in a compressed window.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads deployment release notes and pipeline change logs from the production change management system and identifies releases that modify ETL transformations, data source connections, or aggregation logic for any registered CDE. For each qualifying change, it creates a lineage update ticket ranked by the CDE's regulatory materiality and assigns it to the responsible data domain steward. The governance function has a continuously updated queue rather than a semi-annual backlog. Changes to BCBS 239 material CDEs produce update tickets on the same sprint cycle as the deployment.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">Every production deployment that modifies a CDE lineage path generates a lineage update ticket within the same sprint cycle, ranked by the regulatory materiality of the affected CDE.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent monitors ≥ 95% of production deployments within 12 months of go-live; lineage update tickets raised for ≥ 90% of qualifying deployments within 2 business days of release.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥ 85% of raised tickets accepted by data domain stewards as correctly scoped and prioritized without reclassification; BCBS 239 material CDE tickets closed within the same sprint cycle in ≥ 80% of cases.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Attestation-cycle lineage backlog from undocumented pipeline changes reduced by ≥ 70% year-on-year as measured against the prior semi-annual attestation volume.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/lineage-control-attestation-cycle/lineage-documentation-automation" id="scenario-lineage-documentation-automation" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Lineage Documentation Automation</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent traverses production ETL scripts and pipeline metadata to generate draft business-readable lineage documentation for each CDE — source system and field, each transformation step with a business-readable logic description, intermediate data stores, and consuming regulatory report fields — for data steward review and approval. The steward reviews the draft for accuracy and approves it for publication to the data catalog. Lineage documentation cycle time is compressed from weeks to days for each CDE in scope.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Lineage documentation quality is constrained by the competing demands on data engineering time. Documentation written under production pressure uses technical descriptions not readable to business stakeholders or supervisors; the business-readable translation step is typically deferred to the attestation cycle and performed under deadline pressure. Pipeline metadata contains the information needed for accurate lineage documentation but it is not automatically surfaced in a business-readable form.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads ETL scripts, transformation configuration files, and data catalog metadata for the CDE in scope and generates a structured lineage record in business-readable form: source system and field, each transformation step with a plain-language description of the logic applied, intermediate staging tables, and the regulatory report field or risk metric where the CDE is consumed. Technical terms are translated using the approved data dictionary. The data steward reviews the draft lineage record for accuracy and approves it for publication to the data catalog.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">Data stewards receive AI-generated business-readable draft lineage documentation for each CDE — from source field through every transformation step to consuming regulatory report field — for review and approval before publication to the data catalog.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent produces draft lineage records for ≥ 90% of CDEs queued for documentation within 12 months of go-live; coverage extends to all onboarded source systems and ETL pipeline configurations.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥ 80% of draft lineage records approved by data stewards without material amendment; business-readable translation accuracy validated against approved data dictionary in ≥ 90% of records.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Lineage documentation cycle time per CDE reduced from weeks of manual technical translation to ≤ 3 business days from the AI agent's draft to steward approval.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/lineage-control-attestation-cycle/attestation-pack-drafting" id="scenario-attestation-pack-drafting" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--enablement">Enablement</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Lineage Attestation Pack Drafting</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent produces an attestation-ready lineage summary per CDE — source path, transformation steps in plain language, control test results, and a comparison of current documentation against the production configuration — enabling owners of the data domains to conduct a substantive attestation review rather than a formality sign-off. The owner of the data domain reviews the summary and attests to its accuracy; the AI agent does not attest on the owner's behalf. The data governance team uses the signed attestation packs as the evidence base for supervisory examination against the BCBS 239 principles.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
+  </summary>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#risk-data-reporting">Risk data and supervisory reporting</a></p>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Attestation by owners of the data domains requires owners to review lineage documentation that is often technically dense. Owners of data domains who are not data engineering specialists cannot meaningfully assess whether the documented transformation logic matches the production configuration without a readability translation step. Attestation becomes a formality rather than a substantive assurance step, reducing the governance value of the cycle for BCBS 239 supervisory purposes.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads the current lineage documentation for each CDE in the attestation scope, reformats it into a owner-readable summary covering source path, key transformation logic in plain language, control test results from the current cycle, and a flag for any differences between the documented and production configuration identified by the lineage currency dashboard. The summary is delivered to the owner of the data domain as a structured attestation pack. The owner of the data domain reviews the summary, resolves any flagged differences, and signs the attestation record.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">Owners of the data domains conduct substantive BCBS 239 attestation reviews using AI-generated attestation packs that present CDE lineage and control test results in business-readable form.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>AI-generated attestation packs cover 100% of CDEs in the attestation scope for ≥ 2 consecutive semi-annual cycles within 12 months of go-live; delivery completed ≥ 5 business days before the attestation sign-off deadline.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥ 85% of AI-generated packs accepted by owners of the data domains without material amendment; documented and production configuration divergence flags resolved by owners of the data domains in ≥ 90% of cases before sign-off.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Per-CDE attestation pack preparation time reduced from days of manual documentation review to ≤ 2 hours of owner of the data domain review per CDE.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/lineage-control-attestation-cycle/lineage-currency-dashboard" id="scenario-lineage-currency-dashboard" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Lineage Documentation Currency Dashboard</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent compares documented lineage records in the data catalog against current production pipeline configurations on a continuous basis, quantifying the share of CDEs with lineage documentation that accurately reflects the production state. The currency dashboard gives the CDO a weekly-updated BCBS 239 audit-readiness signal without commissioning a manual assessment exercise. CDEs with undocumented pipeline changes are ranked by regulatory materiality to prioritize the documentation backlog.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
+  </summary>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#risk-data-reporting">Risk data and supervisory reporting</a></p>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Lineage documentation currency — the share of CDEs with lineage documentation matching the current production configuration — is not measured continuously. The CDO cannot answer the BCBS 239 audit-readiness question without commissioning a manual coverage assessment, and undocumented pipeline changes accumulate between attestation cycles without systematic detection.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads pipeline metadata from production ETL and data pipeline configurations and compares each pipeline segment against the current lineage documentation in the data catalog. CDEs where the production configuration differs from the documented lineage are flagged as stale, with the nature of the change and its downstream impact on regulatory reporting noted. The currency score — percentage of CDEs with current, accurate lineage documentation — is updated weekly and presented on the BCBS 239 readiness dashboard. The data governance team reviews and confirms the stale flags.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">The CDO holds a continuous BCBS 239 audit-readiness signal expressed as the share of CDEs with lineage documentation accurately reflecting the current production pipeline configuration, updated weekly and ranked by regulatory materiality.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent updates the lineage currency score on a weekly cadence covering 100% of in-scope CDEs for ≥ 48 weeks within the first 12 months; stale documentation flags raised for ≥ 95% of qualifying pipeline-to-documentation divergences.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥ 90% of stale documentation flags confirmed as genuine divergences by the data governance team; lineage currency score validated against the semi-annual attestation findings in ≥ 95% of CDEs.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Audit-readiness assessment cycle reduced from a commissioned manual coverage assessment (typically weeks) to a weekly automated score available within 1 business day of the pipeline metadata read.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/lineage-control-attestation-cycle/attestation-findings-pattern-synthesis" id="scenario-attestation-findings-pattern-synthesis" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--new-opps">New opps</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Attestation Findings Pattern Synthesis</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent synthesizes attestation findings across cycles — lineage gaps, control test failures, documentation deficiencies, and undocumented pipeline changes — into a pattern analysis that ranks systemic pipeline quality weaknesses by frequency and BCBS 239 materiality. The CDO and data engineering lead use the pattern analysis to direct a structured pipeline quality improvement program alongside the standard per-cycle remediation effort. The analysis runs after each semi-annual attestation cycle closes.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Prior attestation findings are documented in attestation reports but not synthesized into a cross-cycle pattern analysis. Lineage gaps, recurring control test failures, and documentation deficiencies identified in one cycle reappear in the next because they are addressed as individual findings rather than as symptoms of systemic pipeline quality weaknesses. The attestation cycle produces compliance evidence but does not generate a proactive engineering improvement program.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads attestation reports from the preceding cycles, classifies each finding by type — lineage gap, control test failure, documentation deficiency, undocumented change — and clusters findings by affected pipeline segment, ETL system, and CDE domain. It produces a pattern synthesis ranking systemic weaknesses by recurrence frequency and BCBS 239 materiality, with a recommended engineering remediation prioritization. The CDO presents the pattern synthesis to the data engineering lead at the close of each attestation cycle as the basis for a pipeline quality investment plan.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">The CDO and data engineering lead direct pipeline quality investment using a cross-cycle attestation findings pattern synthesis ranked by recurrence frequency and BCBS 239 materiality.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent produces a pattern synthesis after ≥ 2 consecutive semi-annual attestation cycle closings within the first 12 months, covering 100% of classified finding types across all in-scope pipeline segments and CDE domains.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥ 80% of ranked systemic weaknesses rated decision-relevant by the CDO and data engineering lead without material reclassification; engineering remediation program initiated within 30 days of each synthesis delivery.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Pattern synthesis delivered to the CDO within 5 business days of attestation cycle close, where no cross-cycle finding review was performed before.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+</section>
+  </div>
+</details>
+  </div>
+</section>
+<section class="flow-category" id="submission-disclosure">
+  <h2 class="flow-category__title">Submission &amp; disclosure</h2>
+  <div class="flow-category__table">
+<details class="flow-detail" id="regulatory-data-submission-cycle">
+  <summary class="flow-detail__summary">
+    <div class="flow-detail__title-col">
+      <h3 class="flow-detail__title">Regulatory data submission cycle</h3>
+    </div>
+    <p class="flow-detail__intent">Monthly and quarterly regulatory data submissions to the regulator — data aggregation, format validation, submission, post-submission reconciliation, and supervisory query resolution. Aligned to the BCBS 239 data aggregation principles and supervisory submission standards. The cycle anchor is the interval from reporting-period close to accepted submission and closed supervisory queries.</p>
+  </summary>
+  <div class="flow-detail__body">
+    <p class="flow-detail__intent-full">The regulatory data submission cycle governs the Bank's periodic data submissions to the regulator — the prescribed datasets that underpin prudential supervision, financial stability monitoring, and statistical reporting. Each supervisory authority publishes its own submission forms, validation rules, and electronic submission protocols. Where the Bank operates in more than one jurisdiction, the submission cycle runs in parallel across regulatory perimeters with different calendars, formats, and data definitions. BCBS 239 Principle 3 (accuracy and integrity) calls for a bank to be able to produce complete, accurate, and timely regulatory data for supervisors. The submission cycle is the operational expression of that principle — the recurring test of whether the data architecture and quality framework are performing to standard. Supervisory data requests outside the standard submission calendar — ad hoc requests arising from supervisory investigation, on-site inspection, or financial stability analysis — must be fulfilled on demand from the same data infrastructure. GenAI can support the cycle by automating data aggregation validation commentary, drafting explanatory notes for submission exceptions, and assembling supervisory query response packs from the lineage documentation and data quality record.</p>
+    <section class="flow-detail__problems" aria-label="Flow lens problems">
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Submission performance — validation failure rates, exception volumes, query frequencies by supervisor — is tracked informally by the regulatory reporting team but not aggregated into a quality trend analysis across submissions and supervisors. The CDO cannot produce a scorecard against the BCBS 239 principles without manual extraction from submission records.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Validation exception resolution is performed sequentially by the reporting team against each supervisor's deadline. Where the Bank operates in more than one jurisdiction, cross-supervisor pattern analysis — identifying data quality issues that consistently generate exceptions across multiple supervisors because they originate in the same source system — is not applied within the standard submission cycle.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Regulatory submission aggregation commentary, validation exception explanatory notes, post-submission reconciliation difference commentary, and supervisory query response drafts are structured writing tasks with consistent frameworks. Lineage traversal for specific CDE data points follows a reproducible path from source to submitted value amenable to AI-assisted response generation.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Supervisory query histories — which data points were challenged, which explanations were accepted, which methodology changes were requested — accumulate in individual query files rather than in a consolidated knowledge base. Each query cycle re-performs the investigation and drafting effort that prior cycle responses could have informed.</p></article></div>
+    </section>
+<nav class="flow-stages" aria-label="Flow stages">
+  <button class="flow-stages__stage" type="button" data-stage="aggregate" data-flow-id="urn:financial-services:flow:banking-data-analytics/regulatory-data-submission-cycle" id="stage-regulatory-data-submission-cycle--aggregate">
+    <span class="flow-stages__stage-label">Aggregate</span>
+    <span class="flow-stages__arrow" aria-hidden="true">→</span>
+  </button>
+  <button class="flow-stages__stage" type="button" data-stage="validate" data-flow-id="urn:financial-services:flow:banking-data-analytics/regulatory-data-submission-cycle" id="stage-regulatory-data-submission-cycle--validate">
+    <span class="flow-stages__stage-label">Validate</span>
+    <span class="flow-stages__arrow" aria-hidden="true">→</span>
+  </button>
+  <button class="flow-stages__stage" type="button" data-stage="submit" data-flow-id="urn:financial-services:flow:banking-data-analytics/regulatory-data-submission-cycle" id="stage-regulatory-data-submission-cycle--submit">
+    <span class="flow-stages__stage-label">Submit</span>
+    <span class="flow-stages__arrow" aria-hidden="true">→</span>
+  </button>
+  <button class="flow-stages__stage" type="button" data-stage="reconcile" data-flow-id="urn:financial-services:flow:banking-data-analytics/regulatory-data-submission-cycle" id="stage-regulatory-data-submission-cycle--reconcile">
+    <span class="flow-stages__stage-label">Reconcile</span>
+    <span class="flow-stages__arrow" aria-hidden="true">→</span>
+  </button>
+  <button class="flow-stages__stage" type="button" data-stage="resolve" data-flow-id="urn:financial-services:flow:banking-data-analytics/regulatory-data-submission-cycle" id="stage-regulatory-data-submission-cycle--resolve">
+    <span class="flow-stages__stage-label">Resolve queries</span>
+  </button>
+</nav>
+<section class="concern-scenarios" aria-label="Scenarios">
+  <div class="scenarios-column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
+  </div>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/regulatory-data-submission-cycle/submission-commentary-automation" id="scenario-submission-commentary-automation" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Regulatory Submission Commentary Automation</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent drafts the standard narrative components of the regulatory submission package — data aggregation methodology commentary, validation exception explanatory notes, and post-submission reconciliation difference commentary — from structured data inputs and prior-period reference text. The regulatory reporting team reviews and approves each component before submission or response. Drafting effort is compressed from days to hours per cycle.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Regulatory submission aggregation commentary, validation exception explanatory notes, and post-submission reconciliation difference commentary are structured writing tasks performed manually each cycle. Across supervisors and forms with different structures and commentary requirements, the drafting effort accumulates to a material portion of the regulatory reporting team's cycle capacity, reducing time available for data quality investigation.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads the aggregated submission dataset, validation exception report, and prior-period commentary for each supervisor and produces draft narrative components aligned to each supervisor's prescribed format and the Bank's standard methodology descriptions. Exception explanatory notes are generated from exception metadata and available root-cause classification. The regulatory reporting team reviews each draft, applies professional judgment on exceptions requiring methodological explanation, and approves before submission or response.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">The regulatory reporting team reviews and approves AI-drafted narrative components — aggregation methodology commentary, validation exception explanatory notes, and post-submission reconciliation difference commentary — before each submission or supervisory response.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent produces draft narrative components for ≥ 90% of submission cycles within 12 months of go-live; all prescribed commentary sections covered in each draft.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥ 85% of draft components accepted by the regulatory reporting team without material methodological revision; exception explanatory notes rated as accurate in ≥ 90% of cases by the team lead.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Commentary drafting effort per submission cycle reduced from days of manual writing to ≤ 4 hours of team review and approval per cycle.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/regulatory-data-submission-cycle/supervisory-query-response-assistant" id="scenario-supervisory-query-response-assistant" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--enablement">Enablement</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Supervisory Query Response Assistant</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">For each supervisory query, the AI agent traverses lineage documentation, re-runs the relevant aggregation logic, and retrieves prior query responses on the same data point to produce a structured draft response pack for analyst review. The regulatory analyst reviews the draft, applies professional judgment, and signs off before transmission to the supervisor. Retrieval and drafting effort per query is compressed from days to hours.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Supervisory queries require the data management team to retrieve lineage documentation, re-run aggregation logic for specific data points, and draft explanatory responses in the supervisor's preferred format. Where lineage documentation is incomplete or the aggregation logic has changed since the submission, query responses require additional investigation that delays the supervisory dialogue and consumes regulatory reporting team capacity during the next submission preparation window.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads the supervisory query text, identifies the CDE and submission data point referenced, and traverses the lineage record to reconstruct the source-to-submitted-value path. It re-runs the relevant aggregation logic for the data point in question and retrieves prior query-response records on the same topic from the query knowledge base. The draft response pack includes the lineage narrative, aggregation methodology summary, and any relevant prior explanation, structured in the supervisor's expected response format for analyst review and approval.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">For each supervisory query, the regulatory analyst reviews an AI-assembled response pack — lineage narrative, aggregation methodology summary, and prior relevant explanations — and signs off before transmission to the supervisor.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent assembles the response pack for ≥ 90% of supervisory queries within 1 business day of query receipt for ≥ 12 months following go-live; lineage traversal, aggregation re-run, and prior query retrieval included in each pack.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥ 85% of response packs accepted by analysts as a sufficient basis for sign-off without additional data retrieval; lineage narrative accuracy confirmed by data governance review in ≥ 90% of packs.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Per-query retrieval and drafting cycle reduced from days of manual investigation to ≤ 4 hours of analyst review and sign-off per query.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/regulatory-data-submission-cycle/submission-quality-trend-scorecard" id="scenario-submission-quality-trend-scorecard" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Regulatory Submission Quality Scorecard</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent aggregates validation failure rates, exception volumes, post-submission reconciliation differences, and supervisory query frequencies across the Bank's regulatory submissions into a rolling quality scorecard for the CDO. The scorecard tracks the trajectory against the BCBS 239 principles by supervisor and submission form type. The CDO uses the scorecard as the primary evidence base for data governance council reporting and for directing data quality investment toward submission-critical CDEs.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
+  </summary>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/index.html#risk-data-reporting">Risk data and supervisory reporting</a></p>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Submission performance is tracked informally by the regulatory reporting team but not aggregated into a quality trend analysis across submissions and supervisors. The CDO cannot produce a scorecard against the BCBS 239 principles without manual extraction from submission records, and the connection between submission exceptions and upstream data quality failures is not routinely surfaced.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads validation exception reports, post-submission reconciliation outputs, and supervisory query logs from each submission cycle. It produces a monthly quality scorecard segmented by supervisor, submission form, and data domain, with trending metrics for exception volume, reconciliation difference materiality, and query frequency. The scorecard links each exception category to the upstream CDE quality dimension failure driving it, enabling the CDO to direct remediation investment at the source.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">The CDO holds a rolling scorecard against the BCBS 239 principles, tracking validation failure rates, exception volumes, and supervisory query frequencies by supervisor and form type, linked to upstream CDE quality dimension failures.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent produces the monthly quality scorecard covering all regulatory submissions for ≥ 12 consecutive months; each scorecard includes exception-to-CDE linkage for ≥ 90% of exception categories.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥ 85% of CDE-to-exception linkages confirmed as accurate by the data quality team; scorecard used as primary evidence base for data governance council reporting in ≥ 10 of 12 monthly cycles.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Scorecard against the BCBS 239 principles produced within 5 business days of each monthly cycle close, replacing manual aggregation exercises that previously required 2–3 weeks per cycle.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/regulatory-data-submission-cycle/cross-supervisor-exception-pattern" id="scenario-cross-supervisor-exception-pattern" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--optimize">Optimize</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Cross-Supervisor Exception Pattern Analysis</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Where the Bank operates in more than one jurisdiction, the AI agent analyzes validation exception logs across the submission cycles of its supervisors to identify data quality failures that generate exceptions in multiple regulatory perimeters from the same source-system root cause. The analysis re-orders exception resolution effort from a per-supervisor queue to a cross-supervisor root-cause queue, enabling the data quality team to resolve a single source-system issue that clears exceptions across all perimeters simultaneously. The CDO uses the output to direct pre-submission remediation effort.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Validation exception resolution is performed sequentially against each supervisor's deadline. Cross-supervisor pattern analysis — identifying data quality issues that consistently generate exceptions across multiple supervisors because they originate in the same source system — is not applied within the standard submission cycle. The same root cause is investigated and corrected separately for each supervisor's form, multiplying remediation effort without improving underlying data quality.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads exception logs from the most recent submission cycles for each supervisor and clusters exceptions by the source-system CDE and data quality dimension they trace to. It identifies source-system root causes that generate exceptions across multiple regulatory perimeters and ranks them by aggregated exception volume across all supervisors. The data quality team resolves the highest-ranked shared root causes before the next submission deadline, reducing total exception volume across all perimeters from a single remediation action.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">The data quality team resolves regulatory submission exceptions from a cross-supervisor root-cause queue, directing remediation effort toward source-system issues that clear exceptions across all regulatory perimeters simultaneously.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent produces cross-supervisor exception pattern analysis before ≥ 90% of submission deadlines across all regulatory perimeters; coverage extends to 100% of exception categories in each cycle.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥ 80% of identified shared root causes confirmed as accurate by the data quality team; at least one cross-perimeter root cause resolved per cycle in ≥ 75% of submission periods.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Total cross-supervisor exception volume reduced by ≥ 20% year-on-year as shared root causes are systematically resolved; pattern analysis delivered ≥ 5 business days before each submission deadline.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/regulatory-data-submission-cycle/supervisory-query-knowledge-base" id="scenario-supervisory-query-knowledge-base" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--new-opps">New opps</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Supervisory Query Knowledge Base</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent consolidates the Bank's supervisory query histories into a structured knowledge base, classifying each query by data point, challenge type, and resolution approach and surfacing recurrent patterns to the CDO and regulatory reporting team. The knowledge base is used to anticipate query categories in advance of submission, to accelerate response drafting by reference to prior accepted explanations, and to direct pre-submission data quality improvement at chronically challenged data points. The CDO uses the pattern analysis for BCBS 239 program governance reporting.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Supervisory query histories accumulate in individual query files rather than a consolidated knowledge base. Each query cycle re-performs the investigation and drafting effort that prior cycle responses could have informed. Recurrent challenges on the same data points — indicative of a systematic data quality or methodology issue — are not identified as a pattern because query records are not aggregated and classified.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads all historical supervisory query and response records, classifies each query by CDE, data quality dimension, submission form, and resolution type, and builds a structured knowledge base accessible to the regulatory reporting team. The knowledge base surfaces recurrent query patterns ranked by frequency and identifies data points that have been challenged by more than one supervisor. Pre-submission briefings for the regulatory reporting team include the top recurring challenge categories for each upcoming submission deadline.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">The regulatory reporting team applies a consolidated supervisory query knowledge base — classifying queries by CDE, challenge type, and resolution approach — to anticipate recurrent query categories and accelerate response drafting.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent ingests and classifies ≥ 95% of historical supervisory query records by end of month 3; knowledge base refreshed for each new query cycle within 2 business days of response closure.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥ 80% of recurrent query patterns confirmed as decision-relevant by the regulatory reporting team; pre-submission challenge category briefings used in ≥ 90% of upcoming submission preparation cycles within 12 months.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Per-query response drafting time reduced by ≥ 40% for recurrent challenge categories within 12 months, as prior accepted explanations are surfaced by the knowledge base before drafting begins.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+</section>
+  </div>
+</details>
+  </div>
+</section>
+</div>
+
+</div>
+<div class="modal" id="stageModal" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="modal__panel">
+    <button class="modal__close" type="button" aria-label="Close">×</button>
+    <div class="modal__content"></div>
+  </div>
+</div>
+
+<script>
+(function () {
+  // Per-flow stage map, embedded by the composer at render time.
+  // Keyed by flow URN → list of stage objects.
+  const FLOW_STAGES = {"urn:financial-services:flow:banking-data-analytics/data-quality-assessment-cycle": [{"slug": "profile", "label": "Profile", "title": "Automated data profiling across the CDE inventory", "intent": "Runs automated profiling rules across the CDE inventory — null checks, range validation, referential integrity, format consistency, and duplicate detection — producing a profiling output that measures each data quality dimension for each CDE at the assessment date. The quantitative foundation of the BCBS 239 quality assessment.", "problem": "Data profiling runs are executed on a monthly cycle across the CDE inventory, which spans 8–15 source systems with different data access methods and schedules. Profiling coverage is incomplete — approximately 60–70% of identified CDEs are profiled in any given cycle — because the engineering effort to onboard new data sources to the profiling framework is not prioritized against other data engineering demands."}, {"slug": "score", "label": "Score", "title": "CDE quality dimension scoring and aggregate data quality index", "intent": "Translates profiling outputs into quality dimension scores for each CDE — completeness rate, accuracy pass rate, timeliness compliance rate — and aggregates scores into a data quality index by domain and across the full CDE inventory. The scoring stage that converts raw profiling metrics into a manageable performance indicator.", "problem": "Quality dimension scoring methodologies are defined in the data governance framework but applied inconsistently by different domain stewards when automated scoring is not available. The aggregate data quality index relies on domain-level submissions that use locally interpreted scoring definitions rather than a centrally automated measurement, reducing comparability across domains."}, {"slug": "issue", "label": "Issue", "title": "Data quality issue identification, classification, and prioritization", "intent": "Identifies data quality issues from the scoring output — CDEs that have fallen below acceptable quality thresholds — classifies them by dimension, domain, severity, and downstream impact on risk reporting and regulatory submissions, and prioritizes them for the remediation pipeline. The triage stage that governs remediation resource allocation.", "problem": "Quality issue prioritization requires the data quality team to assess the downstream impact of each issue — which risk reports, regulatory submissions, or business decisions consume the affected CDE. Impact assessment is performed manually by the steward team with input from domain knowledge; the process does not scale to a large CDE inventory and typically results in over-prioritization of visible issues in prominent reporting systems."}, {"slug": "remediate", "label": "Remediate", "title": "Root-cause investigation and source-system remediation", "intent": "Investigates the root cause of each prioritized data quality issue — source system defect, ETL transformation error, governance gap, or upstream process failure — and executes the appropriate remediation action with IT or source-system owners. The operational stage that addresses quality failures at source.", "problem": "Data quality root-cause investigation requires the data quality team to trace the issue from the CDE measurement point back through the ETL pipeline to the source system. The lineage documentation required to perform this trace is inconsistently maintained; investigations for issues in poorly documented data pipelines can consume days before the root cause is identified."}, {"slug": "retest", "label": "Retest", "title": "Post-remediation quality validation and issue closure", "intent": "Re-profiles the affected CDE after remediation to confirm that the quality issue has been resolved, validates the score improvement against the remediation objective, and closes the issue in the data quality register with documented evidence. The quality assurance stage that closes the assessment cycle loop.", "problem": "Retest scheduling is managed manually by data stewards who must coordinate with IT on system deployment timelines and then re-run profiling for the affected CDE. Retests are often delayed because the scheduling coordination is not systematically tracked, and issues remain open in the register beyond their planned resolution date without escalation."}], "urn:financial-services:flow:banking-data-analytics/master-reference-data-cycle": [{"slug": "define", "label": "Define", "title": "CDE ownership definition and master data standard setting", "intent": "Defines and updates the critical data element definitions — the business definitions, data ownership assignments, quality standards, and authoritative source designations — for each master data domain. The governance foundation stage that establishes what the golden record is and who owns it.", "problem": "CDE definitions are maintained in a data dictionary that is updated infrequently and reviewed only when data quality issues surface. Business ownership of master data CDEs is often disputed between product, operations, and finance teams; without clear ownership, quality accountability cannot be assigned and quality improvement actions have no clear sponsor."}, {"slug": "govern", "label": "Govern", "title": "Master data governance decisions — deduplication, standards enforcement, and ownership disputes", "intent": "Resolves governance decisions about the master data estate — deduplication of customer and counterparty records, enforcement of data standards across source systems, resolution of ownership disputes between domains, and approval of new master data CDE definitions. The decision stage.", "problem": "Master data governance decisions require cross-functional consensus between business lines, IT, Risk, Finance, and Compliance — each with a stake in the authoritative definition and quality of shared data entities. Governance forums are convened infrequently and decisions are deferred when the sponsoring data owner does not have sufficient authority to resolve cross-functional disputes."}, {"slug": "curate", "label": "Curate", "title": "Golden record curation — deduplication, enrichment, and standardization", "intent": "Applies the approved governance decisions to the master data records — executing deduplication to create or merge golden records, enriching incomplete records from validated data sources, and standardizing data values to the approved reference data classifications. The operational stage that implements governance decisions in the data layer.", "problem": "Golden record curation for large customer master populations — where the deduplication exercise identifies tens of thousands of candidate matches — is a semi-automated process requiring human review of lower-confidence match pairs. The capacity to review candidate matches is limited, creating a curation backlog that accumulates across quarterly cycles."}, {"slug": "validate", "label": "Validate", "title": "Cross-domain consistency validation of curated master records", "intent": "Validates that curated master data records are consistent across consuming systems — that the customer identifier used by the credit risk system matches the customer identifier in the AML system, that product codes in the loans sub-ledger align to the product master — confirming that golden record updates have propagated correctly. The quality assurance stage.", "problem": "Cross-domain consistency validation requires querying multiple systems and comparing identifier and attribute values across them. Where consuming systems have local copies of master data that are not synchronized in real time, curation updates in the master data system are not reflected in consuming systems until the next ETL cycle — creating a window of cross-system inconsistency that affects downstream risk aggregation."}, {"slug": "publish", "label": "Publish", "title": "Authoritative golden record publication to consuming systems", "intent": "Publishes validated golden records to consuming systems through the approved data distribution mechanism — API, ETL pipeline, or reference data feed — and updates the data catalog with the revised CDE definitions, ownership, and quality metrics. The closing stage that makes the curated master data available to downstream consumers.", "problem": "Golden record publication to consuming systems follows a batch ETL pattern on a weekly or monthly schedule in most banks, creating a lag between master data governance decisions and their reflection in downstream risk, regulatory, and business reporting. The publication lag is not tracked against downstream consuming system SLAs, and governance decisions that affect time-sensitive regulatory reporting are not prioritized for accelerated publication."}], "urn:financial-services:flow:banking-data-analytics/lineage-control-attestation-cycle": [{"slug": "map", "label": "Map", "title": "End-to-end lineage mapping from source to consumption point", "intent": "Maps the complete lineage path for each CDE from its origination in the source system through each ETL transformation, aggregation logic, and data store to the regulatory report field or risk metric where it is consumed. The discovery stage that produces or updates the lineage record.", "problem": "Lineage mapping requires the data engineering team to traverse production pipeline configurations — ETL scripts, transformation logic, mapping files — and translate them into business-readable lineage documentation. Pipeline configurations change frequently through operational releases; documented lineage lags production configuration by one or more release cycles when updates are not triggered by a formal change management process."}, {"slug": "document", "label": "Document", "title": "Lineage documentation in the data catalog with transformation logic and business definitions", "intent": "Documents each lineage path in the data catalog — source system and field, each transformation step with business-readable logic description, intermediate data stores, and consuming report fields — in a format that is auditable by supervisors and usable by data consumers. The documentation stage.", "problem": "Lineage documentation quality is constrained by the competing demands on data engineering time. Documentation written under production pressure uses technical descriptions that are not readable to business stakeholders or supervisors; business-readable documentation requires a translation step that is typically deferred to the attestation cycle and performed under deadline pressure."}, {"slug": "test", "label": "Test controls", "title": "Transformation control testing — data integrity checks across pipeline boundaries", "intent": "Tests the data integrity controls at each pipeline boundary — confirming that record counts, control totals, and CDE values are preserved accurately through each transformation step from source to consumption — and documents test results as evidence for the attestation. The assurance stage.", "problem": "Transformation control testing is performed manually by data engineering and quality teams for a subset of critical pipelines. Coverage is determined by team capacity rather than CDE materiality; pipelines feeding BCBS 239 risk aggregation CDEs are tested only when they are within the team's available review capacity."}, {"slug": "attest", "label": "Attest", "title": "Lineage accuracy attestation by owners of the data domains and governance team", "intent": "Obtains formal attestation from owners of the data domains and the data governance function that documented lineage accurately represents the production pipeline configuration for each CDE — the governance sign-off that meets the expectations of the BCBS 239 principles and provides a basis for regulatory examination defense. The governance gate.", "problem": "Attestation by owners of the data domains requires owners to review lineage documentation that is often technically dense. Owners of data domains who are not data engineering specialists cannot meaningfully attest that the documented transformation logic matches the production configuration without a readability translation. Attestation is therefore frequently a formality rather than a substantive assurance step."}, {"slug": "renew", "label": "Renew", "title": "Cycle-triggered lineage refresh and change-driven updates between cycles", "intent": "Renews lineage documentation at the semi-annual cycle trigger and processes change-driven updates between cycles — updating lineage records when source system changes, pipeline modifications, or new regulatory reporting requirements alter the production lineage path. The maintenance stage that keeps documentation current.", "problem": "Change-driven lineage updates depend on the data engineering team flagging pipeline changes to the data governance function. The change management process does not consistently trigger lineage update requirements; pipeline changes that alter CDE lineage paths are implemented without corresponding documentation updates, creating an accumulating divergence between documented and production lineage."}], "urn:financial-services:flow:banking-data-analytics/regulatory-data-submission-cycle": [{"slug": "aggregate", "label": "Aggregate", "title": "Regulatory data aggregation from source systems per submission specifications", "intent": "Aggregates the regulatory submission dataset from source systems — applying the supervisor's prescribed entity scope, reporting population definitions, data dictionary mappings, and aggregation logic — and produces the candidate submission dataset. The data assembly stage.", "problem": "Regulatory data aggregation for each supervisor's forms requires applying entity-specific and jurisdiction-specific definitions that differ from the Bank's internal management reporting definitions. The mapping from internal data definitions to regulatory definitions is maintained manually for each supervisor and form type; changes to regulatory data requirements require parallel updates to mapping tables that are not always implemented in time for the next submission."}, {"slug": "validate", "label": "Validate", "title": "Data quality validation against supervisory rules and internal quality standards", "intent": "Applies the supervisor's published validation rules and the Bank's internal data quality standards to the aggregated submission dataset — identifying format errors, internal consistency failures, and values outside plausible ranges — and produces a validation exception report for review before submission.", "problem": "Regulatory validation rule sets are published by each supervisor and updated periodically. Each supervisor maintains its own validation engine; keeping the Bank's pre-submission validation tools current with the latest rule set requires a dedicated technical maintenance effort that is not always resourced proportionally to the update frequency."}, {"slug": "submit", "label": "Submit", "title": "Regulatory data submission through the prescribed supervisory channel", "intent": "Packages the validated dataset in the supervisor's required format — XBRL, XML, delimited text, or portal upload — and submits it through the prescribed channel within the regulatory deadline. The regulatory obligation fulfillment stage.", "problem": "Submission packaging and channel requirements differ by supervisor and are subject to periodic technical updates. Electronic portal outages, digital signature renewal failures, and format version mismatches are recurring submission-day operational failures that are managed reactively rather than through proactive technical readiness checks before each deadline."}, {"slug": "reconcile", "label": "Reconcile", "title": "Post-submission reconciliation to management data and prior period", "intent": "Reconciles submitted regulatory data to the management accounts, the prior-period submission, and concurrent submissions to other supervisors — confirming that the prudential picture presented to each supervisor is internally coherent and consistent with management reporting. The post-submission assurance stage.", "problem": "Post-submission reconciliation between regulatory submissions and management accounts reveals differences that originate in regulatory-specific data definitions, timing differences, or scope differences between the regulatory perimeter and the management reporting perimeter. Recurring differences are investigated each cycle rather than being addressed through permanent mapping or scope alignment."}, {"slug": "resolve", "label": "Resolve queries", "title": "Supervisory query management and ad hoc data request fulfillment", "intent": "Manages supervisory queries arising from submitted data — providing lineage evidence, clarifying methodology, and responding to plausibility challenges from the regulator — and fulfills ad hoc supervisory data requests outside the standard submission calendar in line with the BCBS 239 principles. The ongoing supervisory relationship management stage.", "problem": "Supervisory queries require the data management team to retrieve lineage documentation, re-run aggregation logic for specific data points, and draft explanatory responses in the supervisor's preferred format. Where lineage documentation is incomplete or the aggregation logic has changed since the submission, query responses require additional investigation that delays the supervisory dialog."}]};
+  const STAGE_LABELS = {
+    problem: "Problem to solve",
+  };
+
+  const modalEl   = document.getElementById('stageModal');
+  const contentEl = modalEl.querySelector('.modal__content');
+  const closeBtn  = modalEl.querySelector('.modal__close');
+
+  function openModal()  { modalEl.classList.add('is-open');    modalEl.setAttribute('aria-hidden', 'false'); }
+  function closeModal() { modalEl.classList.remove('is-open'); modalEl.setAttribute('aria-hidden', 'true');  }
+
+  closeBtn.addEventListener('click', closeModal);
+  modalEl.addEventListener('click', (e) => { if (e.target === modalEl) closeModal(); });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modalEl.classList.contains('is-open')) closeModal();
+  });
+
+  function escapeHtml(s) {
+    return String(s).replace(/[&<>"']/g, (c) => (
+      {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]
+    ));
+  }
+
+  // Auto-open the <details> for a flow when arrived via #fragment
+  // (e.g. linked from L1 page flow-card or top-page value-streams card —
+  // clicking an individual flow name navigates here with #<flow-slug>).
+  function openDetailsFromHash() {
+    const id = window.location.hash.slice(1);
+    if (!id) return;
+    const target = document.getElementById(id);
+    if (target && target.tagName === 'DETAILS') {
+      target.open = true;
+      // Defer scroll so the layout reflows after open.
+      setTimeout(() => target.scrollIntoView({ behavior: 'smooth', block: 'start' }), 50);
+    }
+  }
+  openDetailsFromHash();
+  window.addEventListener('hashchange', openDetailsFromHash);
+
+  document.querySelectorAll('.flow-stages__stage').forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const stageSlug = btn.dataset.stage;
+      const flowUrn   = btn.dataset.flowId;
+      const stages    = FLOW_STAGES[flowUrn] || [];
+      const stage     = stages.find((s) => s.slug === stageSlug) || {};
+      contentEl.innerHTML = `
+        <div class="modal__eyebrow">${escapeHtml(stage.label || stageSlug)}</div>
+        <h3 class="modal__title">${escapeHtml(stage.title || stage.label || stageSlug)}</h3>
+        ${stage.intent  ? `<p class="modal__intent">${escapeHtml(stage.intent)}</p>` : ''}
+        ${stage.problem ? `
+          <div class="modal__problem">
+            <div class="modal__problem-label">${escapeHtml(STAGE_LABELS.problem)}</div>
+            <p>${escapeHtml(stage.problem)}</p>
+          </div>` : ''}
+      `;
+      openModal();
+    });
+  });
+})();
+</script>
+</div>

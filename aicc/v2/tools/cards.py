@@ -22,6 +22,8 @@ import jsonschema
 import yaml
 
 import cadence
+import re
+
 import i18n
 from i18n import T, P, loc
 
@@ -60,7 +62,7 @@ def load_cards(directory=CARDS):
     validator = jsonschema.Draft202012Validator(schema)
     cards, seen, work_seen = [], set(), set()
     for path in sorted(directory.glob('*.yaml')):
-        if path.name == 'template.yaml':
+        if path.name.startswith('template'):
             continue
         card = yaml.safe_load(path.read_text(encoding='utf-8'))
         problems = sorted(validator.iter_errors(card), key=lambda e: list(e.path))
@@ -81,6 +83,13 @@ def load_cards(directory=CARDS):
                 raise ValueError(f'{path.name}: {item["id"]} names a parent that is not on the card')
         cards.append(card)
     return cards
+
+
+def russian_marked(text):
+    """In a translated edition, Russian words kept on purpose (the fixed values a card is written with) are marked as Russian."""
+    if i18n.lang() == i18n.SOURCE:
+        return text
+    return re.sub(r'[А-Яа-яЁё][А-Яа-яЁё ]*[А-Яа-яЁё]|[А-Яа-яЁё]', lambda m: f'<span lang="ru">{m[0]}</span>', text)
 
 
 def add_pages(pages, site, terms, api):
@@ -242,6 +251,8 @@ def add_pages(pages, site, terms, api):
                              'href': rel(api.url_of(here), api.url_of(ids[c['id']]))} for w in c.get('work', [])]}
                  for c in sorted(cards, key=rank_key) if c.get('work')]
     cal_data = {k: cadence.DATA[k] for k in ('days', 'year_end_from', 'seasons')} | {'rows': plan_rows}
+    if i18n.lang() == i18n.SOURCE:  # the Russian page carries the calendar without its translations, as it always did
+        cal_data['seasons'] = [{k: v for k, v in x.items() if not k.endswith('_en')} for x in cal_data['seasons']]
     plan = (tip(cadence.plan_status(day, plan_rows), ' data-pi-status')
             + f'<section class="pi-cal" data-pi-calendar="{e(json.dumps(cal_data, ensure_ascii=False))}">{cadence.calendar_html(day, 0, plan_rows)}</section>')
 
@@ -296,14 +307,15 @@ def add_pages(pages, site, terms, api):
 
     # ---- how to bring a card
     here = 'projects/new'
-    template = (CARDS / 'template.yaml').read_text(encoding='utf-8')
+    own = CARDS / f'template-{i18n.lang()}.yaml'  # the edition's template; its fixed Russian values are marked as Russian
+    template = (own if i18n.lang() != i18n.SOURCE and own.exists() else CARDS / 'template.yaml').read_text(encoding='utf-8')
     body = (f'<p class="lede">{T("Заведите карточку, и ваш проект появится во всех видах раздела.")}</p>'
             f'<ol><li>{T("Скопируйте шаблон ниже в файл <code>cards/ИДЕНТИФИКАТОР.yaml</code>.")}</li>'
             f'<li>{T("Заполните обязательные поля: идентификатор, название, суть, профиль, состояние, позиции людей, задачу и ожидаемый результат, текущее состояние.")}</li>'
             f'<li>{T("Для идеи поставьте состояние «Воронка». Остальное можно добавить позже.")}</li>'
             f'<li>{T("Обновляйте карточку по мере работы: при следующей сборке все виды покажут изменения.")}</li></ol>'
             f'<p>{T("Карточка проверяется схемой: сборка остановится и подскажет, что поправить. Схема — <code>cards/schema.json</code>.")}</p>'
-            f'<h2>{T("Шаблон")}</h2><pre><code>{e(template)}</code></pre>')
+            f'<h2>{T("Шаблон")}</h2><pre><code>{russian_marked(e(template))}</code></pre>')
     pages[here] = Page(here, T('Завести карточку'), 'projects', 40, T('Как принести идею или проект.'), body)
     pages[here].nav = False
 

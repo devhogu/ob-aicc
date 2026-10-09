@@ -15,6 +15,7 @@ from pathlib import Path
 
 import yaml
 
+import i18n
 from i18n import T, loc
 
 SRC = Path(__file__).resolve().parents[1]
@@ -79,7 +80,13 @@ def add_pages(pages, site, api):
         title, kind, what, for_us, group = (loc(a, f) for f in ('title', 'kind', 'what', 'for_us', 'group'))
         return (f'<article class="lib-card" data-lib-item data-group="{e(group)}" data-find="{find_text(title, kind, what, for_us, group)}">'
                 f'<div class="lib-card__top"><small>{e(kind)}</small><span class="lib-tag {cls}">{e(label)}</span></div>'
-                f'<h3>{e(title)}</h3><p>{e(what)}</p><p class="lib-for"><b>{T('Для нас.')}</b> {e(for_us)}</p></article>')
+                f'<h3>{e(title)}{original(a)}</h3><p>{e(what)}</p><p class="lib-for"><b>{T('Для нас.')}</b> {e(for_us)}</p></article>')
+
+    def original(a):
+        """A translated law title without an official English one carries its Russian original in brackets, marked as Russian."""
+        if i18n.lang() != i18n.SOURCE and a.get('title_ru_original'):
+            return f' <span class="ru-original" lang="ru">({e(a["title_ru_original"])})</span>'
+        return ''
     body = (f'<p class="lede">{T("Кто и что регулирует AI и данные — у нас, в регионе и в мире. Коротко: что это за документ и что он значит для нас. "
                                  "Это ориентир для разговора, а не юридическое заключение; за точным текстом обращайтесь к первоисточнику и юристам.")}</p>'
             f'<p class="lib-legend"><span class="lib-tag is-applies">{T("действует для нас")}</span> {T("требования, которые применяются напрямую")} · '
@@ -109,14 +116,16 @@ def add_pages(pages, site, api):
     lgroups = list(dict.fromkeys(loc(x, 'group') for x in links))
 
     def outside(x):
-        lang = f'<span class="lib-tag is-applies">{T("на русском")}</span>' if x['lang'] == 'ru' else '<span class="lib-tag is-benchmark">EN</span>'
+        # a Russian page with an English twin (url_en) is given in English to English readers
+        language = 'en' if i18n.lang() != i18n.SOURCE and x.get('url_en') else x['lang']
+        lang = f'<span class="lib-tag is-applies">{T("на русском")}</span>' if language == 'ru' else '<span class="lib-tag is-benchmark">EN</span>'
         retold = [pages[f'kb/guides/{g}'] for g in x.get('ours', []) if f'kb/guides/{g}' in pages]
         mine = (f'<p class="lib-ours"><b>{T("Пересказ у нас:")}</b> ' + ', '.join(
             f'<a href="{e(rel(url_of("reference/anthropic"), url_of(g.id)))}">{e(g.title)}</a>' for g in retold) + '</p>') if retold else ''
         title, what, group = (loc(x, f) for f in ('title', 'what', 'group'))
         return (f'<article class="lib-card" data-lib-item data-group="{e(group)}" data-find="{find_text(title, what, group, x["lang"])}">'
                 f'<div class="lib-card__top"><small>{e(group)}</small>{lang}</div>'
-                f'<h3><a href="{e(x["url"])}" target="_blank" rel="noopener">{e(title)} ↗</a></h3><p>{e(what)}</p>{mine}</article>')
+                f'<h3><a href="{e(link_of(x))}" target="_blank" rel="noopener">{e(title)} ↗</a></h3><p>{e(what)}</p>{mine}</article>')
     body = (f'<p class="lede">{T("Всё обучение от Anthropic, создателя Claude, в одном месте: сначала официальные материалы на русском, "
                                  "затем учебный портал Claude Academy с бесплатными курсами и практические материалы на английском. Ссылки ведут на первоисточник.")}</p>'
             f'<p class="pf-tip">{T("Короткие пересказы самого полезного — на русском и с нашими примерами — в {link}.", link=f'<a href="{e(rel(url_of("reference/anthropic"), url_of("kb")))}">{T("Базе знаний")}</a>')}</p>'
@@ -184,11 +193,27 @@ def add_pages(pages, site, api):
         p.body = (f'<p class="kb-head"><a href="{e(rel(url_of(p.id), url_of(here)))}">{T("← Все руководства")}</a>'
                   f'<span>{e(category(m))}</span><span>{e(level)}</span><span>{T("{n} мин", n=e(m.get("minutes", "")))}</span></p>\n\n' + p.body)
         if m.get('source_url'):  # a retelling of an outside guide names it and links to the original
-            ru = '/ru/' in m['source_url'] or '/docs/ru' in m['source_url']
-            p.body += ('\n\n<!--course-end-->' if p.layout == 'course' else '') + (f'\n\n<p class="kb-source">{T("По материалам:")} <a href="{e(m["source_url"])}">{e(m.get("source", m["source_url"]))}</a> — '
+            url, name = source_of(m)
+            ru = '/ru/' in url or '/docs/ru' in url
+            p.body += ('\n\n<!--course-end-->' if p.layout == 'course' else '') + (f'\n\n<p class="kb-source">{T("По материалам:")} <a href="{e(url)}">{e(name)}</a> — '
                        + (T('официальная документация Anthropic на русском. Здесь — короткая выжимка с нашими примерами.') + '</p>\n' if ru else
                           T('Anthropic, на английском. Здесь — короткий пересказ на русском с нашими примерами.') + '</p>\n'))
         p.nav = False
+
+
+def link_of(obj):
+    """An outside address in the edition's language: url_en where the same page exists in English; most addresses are the same in both."""
+    return obj.get('url_en') if i18n.lang() != i18n.SOURCE and obj.get('url_en') else obj['url']
+
+
+def source_of(meta):
+    """The original a guide retells, as the edition's readers should reach it: a translation names it (source_en) and links to its English page,
+    which Anthropic publishes at the same address with /en/ for /ru/ (source_url_en overrides)."""
+    url, name = meta['source_url'], meta.get('source', meta['source_url'])
+    if i18n.lang() != i18n.SOURCE:
+        url = meta.get('source_url_en') or url.replace('/docs/ru/', '/docs/en/').replace('support.claude.com/ru', 'support.claude.com/en')
+        name = meta.get('source_en') or name
+    return url, name
 
 
 LEVEL_COLORS = ['#9aa3b2', '#5b6bd6', '#d6006f', '#7a3db8']
@@ -334,8 +359,9 @@ def add_maps(pages, api):
             return loc(step, 'title') or page.title, rel(url_of(here), url_of(page.id)), T('раздел Хаба'), int(step.get('minutes', 20)), step['page'], False
         url = step['url']
         kind = T('курс') if '/courses/' in url else (T('практикум') if 'github.com' in url else T('документация'))
-        label = T('{kind} на русском', kind=kind) if step.get('lang') == 'ru' else T('{kind}, EN', kind=kind)
-        return loc(step, 'title'), step['url'], label, int(step.get('minutes', 30)), step['url'], True
+        language = 'en' if i18n.lang() != i18n.SOURCE and step.get('url_en') else step.get('lang')
+        label = T('{kind} на русском', kind=kind) if language == 'ru' else T('{kind}, EN', kind=kind)
+        return loc(step, 'title'), link_of(step), label, int(step.get('minutes', 30)), step['url'], True  # the key stays the Russian address: progress is shared
 
     def totals(m, here):
         steps = [s for lv in m['levels'] for s in lv['steps']]

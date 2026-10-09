@@ -109,6 +109,12 @@
         "target": {
           "type": "string"
         }
+      },
+      "patternProperties": {
+        "^[a-z_]+_en$": {
+          "type": "string",
+          "description": "English text beside the Russian field of the same name without _en."
+        }
       }
     },
     "constraints": {
@@ -126,6 +132,12 @@
         },
         "stop_threshold": {
           "type": "string"
+        }
+      },
+      "patternProperties": {
+        "^[a-z_]+_en$": {
+          "type": "string",
+          "description": "English text beside the Russian field of the same name without _en."
         }
       }
     },
@@ -151,6 +163,12 @@
           },
           "note": {
             "type": "string"
+          }
+        },
+        "patternProperties": {
+          "^[a-z_]+_en$": {
+            "type": "string",
+            "description": "English text beside the Russian field of the same name without _en."
           }
         }
       }
@@ -188,6 +206,19 @@
         "updated": {
           "type": "string",
           "description": "Дата последнего обновления, если ведётся."
+        }
+      },
+      "patternProperties": {
+        "^next_step_en$": {
+          "type": "string",
+          "description": "English text beside the Russian field of the same name without _en."
+        },
+        "^(risks|dependencies)_en$": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "English list beside the Russian list of the same name without _en."
         }
       }
     },
@@ -244,6 +275,12 @@
             "pattern": "^\\d{4}-PIQ[1-4] I(0[1-9]|1[0-2])$",
             "description": "Итерация, в которую запланирована работа, например «2026-PIQ4 I11». Пусто — ещё не запланирована."
           }
+        },
+        "patternProperties": {
+          "^[a-z_]+_en$": {
+            "type": "string",
+            "description": "English text beside the Russian field of the same name without _en."
+          }
         }
       }
     },
@@ -265,6 +302,12 @@
           "when": {
             "type": "string"
           }
+        },
+        "patternProperties": {
+          "^[a-z_]+_en$": {
+            "type": "string",
+            "description": "English text beside the Russian field of the same name without _en."
+          }
         }
       }
     },
@@ -277,6 +320,12 @@
         },
         "lessons": {
           "type": "string"
+        }
+      },
+      "patternProperties": {
+        "^[a-z_]+_en$": {
+          "type": "string",
+          "description": "English text beside the Russian field of the same name without _en."
         }
       }
     },
@@ -302,6 +351,12 @@
       "description": "Стратегическая тема, в которую вносит вклад карточка."
     }
   },
+  "patternProperties": {
+    "^[a-z_]+_en$": {
+      "type": "string",
+      "description": "English text beside the Russian field of the same name without _en."
+    }
+  },
   "$defs": {
     "person": {
       "type": "object",
@@ -317,6 +372,12 @@
         "holder": {
           "type": "string",
           "description": "Кто сейчас на этой позиции. Пусто, пока в репозитории имена не ведутся."
+        }
+      },
+      "patternProperties": {
+        "^[a-z_]+_en$": {
+          "type": "string",
+          "description": "English text beside the Russian field of the same name without _en."
         }
       }
     }

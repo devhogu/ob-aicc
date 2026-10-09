@@ -1,46 +1,82 @@
 # Open resources worth knowing, condensed from the v1 reference (portal/content/ru/reference/resources).
 - id: deeplearning-ai
   group: Учиться
+  group_en: "Learn"
   title: DeepLearning.AI
+  title_en: "DeepLearning.AI"
   what: Бесплатные короткие курсы на час-два по запросам к моделям, работе с источниками, оценке и агентам; еженедельная рассылка The Batch.
+  what_en: "Free short courses of an hour or two on prompting models, working with sources, evaluation, and agents; the weekly newsletter The Batch."
   for_us: Быстрый способ освоить те методы, которыми мы строим решения.
+  for_us_en: "A quick way to learn the methods we use to build solutions."
 - id: hugging-face
   group: Учиться
+  group_en: "Learn"
   title: Hugging Face
+  title_en: "Hugging Face"
   what: Открытые модели и наборы данных с карточками и лицензиями, документация и бесплатный курс.
+  what_en: "Open models and datasets with cards and licenses, documentation, and a free course."
   for_us: Здесь сравнивают открытые модели; карточка модели — первое, что читают перед выбором.
+  for_us_en: "This is where open models are compared; the model card is the first thing to read before choosing one."
 - id: arxiv-and-hugging-face-papers
   group: Следить за отраслью
+  group_en: "Follow the industry"
   title: arXiv и Hugging Face Papers
+  title_en: "arXiv and Hugging Face Papers"
   what: Препринты исследований AI и ежедневная подборка статей со ссылками на код; она заменила закрытый в 2025 году Papers with Code.
+  what_en: "Preprints of AI research and a daily selection of papers with links to code; it replaced Papers with Code, which closed in 2025."
   for_us: "Проверить заявление поставщика: что сказано в статье и подтверждается ли результат."
+  for_us_en: "To check a vendor’s claim: what the paper says and whether the result holds up."
 - id: stanford-hai-ai-index
   group: Следить за отраслью
+  group_en: "Follow the industry"
   title: Stanford HAI — AI Index
+  title_en: "Stanford HAI — AI Index"
   what: Ежегодный доклад с данными об исследованиях, моделях, затратах, внедрении и регулировании AI.
+  what_en: "An annual report with data on AI research, models, costs, adoption, and regulation."
   for_us: Надёжный источник для цифр об AI в отчётах и предложениях.
+  for_us_en: "A reliable source of figures on AI for reports and proposals."
 - id: mckinsey-and-quantumblack
   group: Следить за отраслью
+  group_en: "Follow the industry"
   title: McKinsey и QuantumBlack
+  title_en: "McKinsey and QuantumBlack"
   what: Ежегодный обзор состояния AI и оценки ценности генеративного AI по функциям.
+  what_en: "An annual survey of the state of AI and estimates of the value of generative AI by function."
   for_us: На эти обзоры часто ссылаются руководители; оценки — первое приближение, не обещание.
+  for_us_en: "Leaders often cite these surveys; the estimates are a first approximation, not a promise."
 - id: bis-innovation-hub
   group: Финансовый сектор
+  group_en: "Financial sector"
   title: BIS и его Инновационный центр
+  title_en: "BIS and its Innovation Hub"
   what: Исследования, которые читают центральные банки, и проекты, которые центр делает вместе с ними.
+  what_en: "Research that central banks read, and projects the Innovation Hub carries out together with them."
   for_us: О чём сегодня пишет BIS, о том со временем спрашивает регулятор.
+  for_us_en: "What the BIS writes about today, regulators eventually ask about."
 - id: imf-and-world-bank
   group: Финансовый сектор
+  group_en: "Financial sector"
   title: МВФ и Всемирный банк
+  title_en: "IMF and World Bank"
   what: Аналитика по цифровым финансам, финансовой доступности и AI для правительств и центральных банков.
+  what_en: "Analysis of digital finance, financial inclusion, and AI for governments and central banks."
   for_us: Политика региона в цифровых финансах формируется при их участии.
+  for_us_en: "The region’s digital finance policy takes shape with their involvement."
 - id: world-economic-forum
   group: Финансовый сектор
+  group_en: "Financial sector"
   title: Всемирный экономический форум
+  title_en: "World Economic Forum"
   what: Доклады об управлении AI и будущем финансовых услуг, рассчитанные на советы директоров.
+  what_en: "Reports on AI governance and the future of financial services, written for boards of directors."
   for_us: Общий язык руководителей в разговоре об AI.
+  for_us_en: "A common language for leaders when they talk about AI."
 - id: mitre-atlas-and-ai-incident-database
   group: Безопасность и инциденты
+  group_en: "Security and incidents"
   title: MITRE ATLAS и база инцидентов с AI
+  title_en: "MITRE ATLAS and the AI Incident Database"
   what: Матрица атак на системы AI и открытая база реальных инцидентов с AI.
+  what_en: "A matrix of attacks on AI systems and an open database of real AI incidents."
   for_us: Термины для модели угроз и примеры того, что уже случалось у других.
+  for_us_en: "Terms for a threat model, and examples of what has already happened elsewhere."

@@ -1,42 +1,60 @@
 id: INI-015
 title: "Комплаенс — подготовка регулярной отчётности и типовых форм помощником на рабочем месте"
+title_en: "Compliance: regular reporting and standard forms prepared by a workspace assistant"
 summary: "Берём на себя рутину в функции комплаенс: помощник на рабочем месте сотрудника готовит черновики регулярной отчётности и заполняет типовые формы."
+summary_en: "We take routine work off the Compliance function: an assistant on the employee's computer drafts regular reports and fills in standard forms."
 profile: run-rate
 class_of_service: текущая работа
 stage: Воронка
 function: Комплаенс
+function_en: "Compliance"
 area: "Автоматизация рабочего места"
+area_en: "Workspace automation"
 people:
-  business_owner: {position: "представитель функции комплаенс, который формулирует просьбы и принимает результат", holder: ""}
-  product_manager: {position: "менеджер продукта Хаба по текущей работе", holder: ""}
-  project_manager: {position: "кто ведёт карточку и очередь просьб", holder: ""}
+  business_owner: {position: "представитель функции комплаенс, который формулирует просьбы и принимает результат", position_en: "a representative of the Compliance function who makes the requests and accepts the result", holder: ""}
+  product_manager: {position: "менеджер продукта Хаба по текущей работе", position_en: "the Hub's product manager for run-rate work", holder: ""}
+  project_manager: {position: "кто ведёт карточку и очередь просьб", position_en: "whoever runs the card and the request queue", holder: ""}
 outcome:
   problem: Сотрудники комплаенс тратят много времени на подготовку регулярной отчётности и заполнение типовых форм вручную.
+  problem_en: "Compliance staff spend a lot of time preparing regular reports and filling in standard forms by hand."
   intended_outcome: Черновики регулярной отчётности и форм готовит ассистент Claude на рабочем месте каждого сотрудника, а сотрудник проверяет результат и использует его.
+  intended_outcome_en: "Drafts of regular reports and forms are prepared by the Claude assistant on each employee's computer, and the employee checks the result and uses it."
   measure: Время подготовки типового отчёта или формы.
+  measure_en: "Time to prepare a standard report or form."
   baseline: Не измерено.
+  baseline_en: "Not measured."
   target: Не задано.
+  target_en: "Not set."
 constraints:
   appetite: Одна итерация на один вид отчёта или формы.
+  appetite_en: "One iteration per type of report or form."
   review_point: После трёх готовых шаблонов.
+  review_point_en: "After three finished templates."
   exit_criterion: Сотрудник получает черновик, который можно использовать после проверки.
+  exit_criterion_en: "The employee gets a draft that can be used after checking."
   stop_threshold: Проверка результата занимает столько же времени, сколько подготовка вручную.
+  stop_threshold_en: "Checking the result takes as long as preparing it by hand."
 checklist:
-  - {item: "Проверка рабочего места: что помощник видит и меняет на компьютере сотрудника", state: "не начато", note: "Проверяется вместе с теми, кто отвечает за информационную безопасность; решение за функцией комплаенс."}
-  - {item: "Где хранятся результаты и кто к ним имеет доступ", state: "не начато"}
-  - {item: "Как сотрудник проверяет результат до использования", state: "не начато"}
-  - {item: "Что делаем, если помощник ошибся", state: "не начато"}
+  - {item: "Проверка рабочего места: что помощник видит и меняет на компьютере сотрудника", item_en: "Workspace review: what the assistant sees and changes on the employee's computer", state: "не начато", note: "Проверяется вместе с теми, кто отвечает за информационную безопасность; решение за функцией комплаенс.", note_en: "Reviewed together with the people responsible for information security; the decision rests with the Compliance function."}
+  - {item: "Где хранятся результаты и кто к ним имеет доступ", item_en: "Where the results are stored and who has access to them", state: "не начато"}
+  - {item: "Как сотрудник проверяет результат до использования", item_en: "How the employee checks the result before using it", state: "не начато"}
+  - {item: "Что делаем, если помощник ошибся", item_en: "What we do if the assistant makes a mistake", state: "не начато"}
 live:
   status: не задан
   next_step: Описать первые виды отчётности и форм, которые хотим автоматизировать.
+  next_step_en: "Describe the first types of reports and forms we want to automate."
   risks:
     - "Помощник на рабочем месте может получить доступ к конфиденциальным данным: проверка рабочего места нужна до начала."
+  risks_en:
+    - "The workspace assistant may get access to confidential data: a workspace review is needed before starting."
   dependencies:
     - "Решение по информационной безопасности о том, где и как запускается помощник."
+  dependencies_en:
+    - "An information security decision on where and how the assistant runs."
 work:
-  - {id: CAP-002, type: capability, title: "Помощник на рабочем месте для функции комплаенс", state: Бэклог, class_of_service: текущая работа}
-  - {id: FEAT-003, type: feature, parent: CAP-002, title: "Регулярная отчётность: черновик по шаблону", state: Бэклог, class_of_service: текущая работа}
-  - {id: FEAT-004, type: feature, parent: CAP-002, title: "Типовая форма: заполнение по шаблону", state: Бэклог, class_of_service: текущая работа}
+  - {id: CAP-002, type: capability, title: "Помощник на рабочем месте для функции комплаенс", title_en: "Workspace assistant for the Compliance function", state: Бэклог, class_of_service: текущая работа}
+  - {id: FEAT-003, type: feature, parent: CAP-002, title: "Регулярная отчётность: черновик по шаблону", title_en: "Regular reporting: a draft from a template", state: Бэклог, class_of_service: текущая работа}
+  - {id: FEAT-004, type: feature, parent: CAP-002, title: "Типовая форма: заполнение по шаблону", title_en: "Standard form: filled in from a template", state: Бэклог, class_of_service: текущая работа}
 decisions: []
 closure: {result: "", lessons: ""}
 links: {jira: "", confluence: ""}

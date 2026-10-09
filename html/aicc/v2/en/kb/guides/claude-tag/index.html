@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en" data-theme="light"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark">
-<title>Claude Tag: Claude в Slack вашей команды · AI Competence Hub</title>
+<title>Claude Tag: Claude in your team&#x27;s Slack · AI Competence Hub</title>
 <script>try{var t=localStorage.getItem('hub-theme');document.documentElement.dataset.theme=t==='dark'?'dark':'light';}catch(e){}</script>
 <link rel="stylesheet" href="../../../../assets/ui/fonts.css?v=31af9632de"><link rel="stylesheet" href="../../../../assets/ui/tokens.css?v=7a14df66bd"><link rel="stylesheet" href="../../../../assets/ui/primitives.css?v=ea6572a6e0"><link rel="stylesheet" href="../../../../assets/ui/workspace.css?v=416781b646"><link rel="stylesheet" href="../../../../assets/site.css?v=5480d3be4e">
 <script src="../../../../assets/search-en.js"></script><script src="../../../../assets/i18n-en.js"></script><script src="../../../../assets/site.js?v=cfae61d4bb" defer data-root="../../../.." data-t-none="Nothing matches your search." data-t-light="Light mode" data-t-dark="Dark mode" data-t-mail-body="Page: {title}
@@ -170,124 +170,124 @@ Question or comment:
   <path d="M4 4v16" />
 </svg><span>Reference</span></a></div></nav></details></aside>
 <main class="o-main hub-main" id="main" tabindex="-1">
-<div class="crumbbar"><div class="crumbline"><nav class="o-eyebrow crumbs" aria-label="Breadcrumb"><a href="../../index.html">Knowledge Base</a> / <span aria-current="page">Claude Tag: Claude в Slack вашей команды</span></nav></div></div>
-<div class="o-reading o-single"><div class="o-copy"><h1>Claude Tag: Claude в Slack вашей команды</h1><article class="page-body o-doc"><p class="kb-head"><a href="../../index.html">← All guides</a><span>Claude Tag</span><span>basic</span><span>10 min</span></p>
-<nav class="lm-walk lm-walk--top lm-walk--l2" data-walk="leadership" aria-label="Step 4 of 8 on the “Внедрение и руководство” map"><div class="lm-walk__head"><a class="lm-walk__map" href="../../maps/leadership/index.html#step-4" data-map="leadership">Learning map: <b>Внедрение и руководство</b></a><span class="lm-walk__pos">Step <b>4</b> of 8 · level 2, практик</span></div><ol class="lm-walk__dots" aria-label="Map steps"><li><a class="lm-dot lm-dot--l1" href="../ai-fluency-4d/index.html" data-map="leadership" data-dot-step="leadership|ai-fluency-4d#" title="Step 1. Четыре навыка работы с AI (4D)">1</a></li><li><a class="lm-dot lm-dot--l1" href="../../../responsible-ai/index.html" data-map="leadership" data-dot-step="leadership|responsible-ai" title="Step 2. Ответственный AI — курс в шести частях">2</a></li><li class="lm-dot-gap"><a class="lm-dot lm-dot--l2" href="../human-agent-teams/index.html" data-map="leadership" data-dot-step="leadership|human-agent-teams#" title="Step 3. Люди и агенты в одной команде">3</a></li><li><a class="lm-dot lm-dot--l2 is-here" href="index.html" data-map="leadership" data-dot-step="leadership|claude-tag#" title="Step 4. Claude Tag: Claude в Slack вашей команды" aria-current="step">4</a></li><li class="lm-dot-gap"><a class="lm-dot lm-dot--l3" href="../deploying-claude-enterprise/index.html" data-map="leadership" data-dot-step="leadership|deploying-claude-enterprise#" title="Step 5. Внедрение Claude в организации: пять решений — полное руководство">5</a></li><li class="lm-dot-gap"><a class="lm-dot lm-dot--l4" href="../deploying-claude-enterprise/index.html#adoption" data-map="leadership" data-dot-step="leadership|deploying-claude-enterprise#adoption" title="Step 6. Сигналы внедрения">6</a></li><li><a class="lm-dot lm-dot--l4" href="../../maps/leadership/index.html#step-7" data-map="leadership" data-dot-step="leadership|https://academy.claude.com/courses/deploying-claude-enterprise-with-confidence" title="Step 7. Курс: Deploying Claude Enterprise with Confidence">7</a></li><li><a class="lm-dot lm-dot--l4" href="../../maps/leadership/index.html#step-8" data-map="leadership" data-dot-step="leadership|https://academy.claude.com/courses/building-effective-human-agent-teams" title="Step 8. Курс: Building Effective Human-Agent Teams">8</a></li></ol><div class="lm-walk__moves"><a class="lm-walk__prev" href="../human-agent-teams/index.html" data-map="leadership"><small>← Back · step 3 · guide</small><span>Люди и агенты в одной команде</span></a><a class="lm-walk__next" href="../deploying-claude-enterprise/index.html" data-map="leadership"><small>Next · step 5 · guide →</small><span>Внедрение Claude в организации: пять решений — полное руководство</span></a></div></nav>
-<p>Это руководство — для руководителя, который решает, нужен ли команде агент в общем канале, и для участников таких каналов. После него вы будете понимать, как агент работает в общих каналах, чьими правами он пользуется, что происходит с данными и что решить до пилота.</p>
-<p class="pf-tip"><b>Доступен ли он вам.</b> Claude Tag работает только в Slack и только на планах Team и Enterprise, сейчас в публичной бете. Он недоступен организациям с отключённым хранением данных (<span class="en">Zero Data Retention</span>, ZDR), собственными ключами шифрования (CMEK) или конфигурацией HIPAA. Если ваша организация не пользуется Slack или Claude Tag не включён — это руководство пока для ознакомления: привычки из него пригодятся для любого командного агента.</p>
-<p>Claude Tag — это Claude в рабочем пространстве Slack вашей команды. Вы пишете <code>@Claude</code> и задачу — ответ приходит в ветке обсуждения. Claude сначала читает канал, включая сообщения до того, как его добавили, работает с подключёнными инструментами и продолжает работу, когда вы закрыли ноутбук. Добавить в канал: <code>/invite @Claude</code>.</p>
-<p>Три привычки из курса Anthropic: <strong>работайте с Claude как с коллегой, работайте там, где работает команда, расширяйте доверие постепенно.</strong></p>
-<div class="course" data-tabs><div class="course-tabs" role="tablist"><button type="button" role="tab" data-tab="where" aria-selected=true><b>1</b><span>Где давать работу</span></button><button type="button" role="tab" data-tab="request"><b>2</b><span>Как поставить задачу</span></button><button type="button" role="tab" data-tab="memory"><b>3</b><span>Память и правила канала</span></button><button type="button" role="tab" data-tab="proactive"><b>4</b><span>Ответы без упоминания и постоянные обязанности</span></button><button type="button" role="tab" data-tab="routines"><b>5</b><span>Задачи по расписанию</span></button><button type="button" role="tab" data-tab="safety"><b>6</b><span>Безопасность</span></button><button type="button" role="tab" data-tab="habits"><b>7</b><span>Девять привычек команды</span></button></div><section class="tab-panel" id="where" data-tab-panel="where"><h2 class="tab-title">1. Где давать работу</h2>
+<div class="crumbbar"><div class="crumbline"><nav class="o-eyebrow crumbs" aria-label="Breadcrumb"><a href="../../index.html">Knowledge Base</a> / <span aria-current="page">Claude Tag: Claude in your team&#x27;s Slack</span></nav></div></div>
+<div class="o-reading o-single"><div class="o-copy"><h1>Claude Tag: Claude in your team&#x27;s Slack</h1><article class="page-body o-doc"><p class="kb-head"><a href="../../index.html">← All guides</a><span>Claude Tag</span><span>basic</span><span>10 min</span></p>
+<nav class="lm-walk lm-walk--top lm-walk--l2" data-walk="leadership" aria-label="Step 4 of 8 on the “Adoption and leadership” map"><div class="lm-walk__head"><a class="lm-walk__map" href="../../maps/leadership/index.html#step-4" data-map="leadership">Learning map: <b>Adoption and leadership</b></a><span class="lm-walk__pos">Step <b>4</b> of 8 · level 2, practitioner</span></div><ol class="lm-walk__dots" aria-label="Map steps"><li><a class="lm-dot lm-dot--l1" href="../ai-fluency-4d/index.html" data-map="leadership" data-dot-step="leadership|ai-fluency-4d#" title="Step 1. Four skills for working with AI (4D)">1</a></li><li><a class="lm-dot lm-dot--l1" href="../../../responsible-ai/index.html" data-map="leadership" data-dot-step="leadership|responsible-ai" title="Step 2. Responsible AI: a course in six parts">2</a></li><li class="lm-dot-gap"><a class="lm-dot lm-dot--l2" href="../human-agent-teams/index.html" data-map="leadership" data-dot-step="leadership|human-agent-teams#" title="Step 3. People and agents on one team">3</a></li><li><a class="lm-dot lm-dot--l2 is-here" href="index.html" data-map="leadership" data-dot-step="leadership|claude-tag#" title="Step 4. Claude Tag: Claude in your team&#x27;s Slack" aria-current="step">4</a></li><li class="lm-dot-gap"><a class="lm-dot lm-dot--l3" href="../deploying-claude-enterprise/index.html" data-map="leadership" data-dot-step="leadership|deploying-claude-enterprise#" title="Step 5. Rolling out Claude in an organization: five decisions, the complete guide">5</a></li><li class="lm-dot-gap"><a class="lm-dot lm-dot--l4" href="../deploying-claude-enterprise/index.html#adoption" data-map="leadership" data-dot-step="leadership|deploying-claude-enterprise#adoption" title="Step 6. Adoption signals">6</a></li><li><a class="lm-dot lm-dot--l4" href="../../maps/leadership/index.html#step-7" data-map="leadership" data-dot-step="leadership|https://academy.claude.com/courses/deploying-claude-enterprise-with-confidence" title="Step 7. Course: Deploying Claude Enterprise with Confidence">7</a></li><li><a class="lm-dot lm-dot--l4" href="../../maps/leadership/index.html#step-8" data-map="leadership" data-dot-step="leadership|https://academy.claude.com/courses/building-effective-human-agent-teams" title="Step 8. Course: Building Effective Human-Agent Teams">8</a></li></ol><div class="lm-walk__moves"><a class="lm-walk__prev" href="../human-agent-teams/index.html" data-map="leadership"><small>← Back · step 3 · guide</small><span>People and agents on one team</span></a><a class="lm-walk__next" href="../deploying-claude-enterprise/index.html" data-map="leadership"><small>Next · step 5 · guide →</small><span>Rolling out Claude in an organization: five decisions, the complete guide</span></a></div></nav>
+<p>This guide is for a leader who is deciding whether the team needs an agent in a shared channel, and for the members of such channels. After it, you will understand how the agent works in shared channels, whose permissions it uses, what happens to the data and what to decide before a pilot.</p>
+<p class="pf-tip"><b>Is it available to you?</b> Claude Tag works only in Slack and only on the Team and Enterprise plans, and is currently in public beta. It isn't available to organizations with <span class="en">Zero Data Retention</span> (ZDR), customer-managed encryption keys (CMEK) or a HIPAA configuration. If your organization doesn't use Slack or Claude Tag isn't turned on, this guide is for background reading for now: its habits will be useful for any team agent.</p>
+<p>Claude Tag is Claude in your team's Slack workspace. You write <code>@Claude</code> and the task, and the answer arrives in a thread. Claude first reads the channel, including messages from before it was added, works with the connected tools and keeps working after you've closed your laptop. To add it to a channel: <code>/invite @Claude</code>.</p>
+<p>Three habits from Anthropic's course: <strong>work with Claude as you would with a colleague, work where the team works, extend trust gradually.</strong></p>
+<div class="course" data-tabs><div class="course-tabs" role="tablist"><button type="button" role="tab" data-tab="where" aria-selected=true><b>1</b><span>Where to give it work</span></button><button type="button" role="tab" data-tab="request"><b>2</b><span>How to set a task</span></button><button type="button" role="tab" data-tab="memory"><b>3</b><span>Channel memory and rules</span></button><button type="button" role="tab" data-tab="proactive"><b>4</b><span>Answers without a mention and standing duties</span></button><button type="button" role="tab" data-tab="routines"><b>5</b><span>Scheduled tasks</span></button><button type="button" role="tab" data-tab="safety"><b>6</b><span>Safety</span></button><button type="button" role="tab" data-tab="habits"><b>7</b><span>Nine team habits</span></button></div><section class="tab-panel" id="where" data-tab-panel="where"><h2 class="tab-title">1. Where to give it work</h2>
 <div class="o-table-wrap"><table>
 <thead>
 <tr>
-<th>Где</th>
-<th>От чьего имени</th>
-<th>Память</th>
-<th>Когда</th>
+<th>Where</th>
+<th>On whose behalf</th>
+<th>Memory</th>
+<th>When</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Личные сообщения</td>
-<td>от вашего, с вашими подключениями (почта, календарь, файлы)</td>
-<td>видна только вам</td>
-<td>личные задачи; проверяйте перед отправкой — всё от вашего имени</td>
+<td>Direct messages</td>
+<td>yours, with your connections (email, calendar, files)</td>
+<td>visible only to you</td>
+<td>personal tasks; check before sending, since everything goes out in your name</td>
 </tr>
 <tr>
-<td>Публичный канал</td>
-<td>от <strong>своей</strong> учётной записи с инструментами канала</td>
-<td>заметки канала</td>
-<td>командная работа — по умолчанию лучший выбор</td>
+<td>Public channel</td>
+<td>under <strong>its own</strong> account with the channel's tools</td>
+<td>channel notes</td>
+<td>team work: the best choice by default</td>
 </tr>
 <tr>
-<td>Закрытый канал</td>
-<td>своя учётная запись, границы канала</td>
-<td>только заметки канала</td>
-<td>«список участников — это список доступа; держите его коротким»</td>
+<td>Private channel</td>
+<td>its own account, within the channel's bounds</td>
+<td>channel notes only</td>
+<td>“the member list is the access list; keep it short”</td>
 </tr>
 </tbody>
 </table></div>
-<p>Правило: спрашивайте там, где спросили бы коллегу. Если подходят несколько мест — выбирайте <strong>публичный канал</strong>: коллеги достраивают работу, исправления идут на пользу всем, настройка делается один раз.</p>
-<h3 id="rights">Важно про права</h3>
-<p>В командных инструментах Claude действует под своей учётной записью, и её правами может воспользоваться <strong>любой участник канала</strong>: если учётная запись умеет менять заявки, это может попросить любой. Ваши личные подключения в канале работают только для ваших запросов и после подтверждения.</p>
-<p><strong>Проверка.</strong> Спросите в канале «@Claude, к чему у тебя здесь есть доступ?», затем запросите одну реальную запись и сверьте с источником.</p>
-<p class="course-next"><a href="#request">Next: Как поставить задачу →</a></p></section><section class="tab-panel" id="request" data-tab-panel="request"><h2 class="tab-title">2. Как поставить задачу</h2>
+<p>The rule: ask where you would ask a colleague. If several places fit, choose a <strong>public channel</strong>: colleagues build on the work, corrections benefit everyone, and setup is done once.</p>
+<h3 id="rights">Important: permissions</h3>
+<p>In team tools Claude acts under its own account, and <strong>any member of the channel</strong> can use its permissions: if the account can change tickets, anyone can ask it to. Your personal connections work in a channel only for your own requests and after you confirm.</p>
+<p><strong>Check.</strong> Ask in the channel “@Claude, what do you have access to here?”, then request one real record and check it against the source.</p>
+<p class="course-next"><a href="#request">Next: How to set a task →</a></p></section><section class="tab-panel" id="request" data-tab-panel="request"><h2 class="tab-title">2. How to set a task</h2>
 <ol class="rai-principles">
-<li><b>Цель и зачем</b><span>Думайте о результате, а не о шагах.</span></li>
-<li><b>Входные данные и пример</b><span>Что использовать, как выглядит хороший результат.</span></li>
-<li><b>Способ проверки</b><span>Рубрика, ссылки на источники, разделение «проверено / выведено».</span></li>
-<li><b>Приоритеты</b><span>Какие решения Claude должен вернуть вам.</span></li>
-<li><b>Форма результата</b><span>Сообщение, таблица, документ.</span></li>
+<li><b>The goal and why</b><span>Think about the result, not the steps.</span></li>
+<li><b>Inputs and an example</b><span>What to use, and what a good result looks like.</span></li>
+<li><b>How to check</b><span>A rubric, links to sources, separating “verified” from “inferred”.</span></li>
+<li><b>Priorities</b><span>Which decisions Claude should bring back to you.</span></li>
+<li><b>The form of the result</b><span>A message, a table, a document.</span></li>
 </ol>
-<p>Для сложных задач просите сначала план. Ход работы Claude показывает в одном сообщении-чек-листе. Поправить — <strong>ответом в ветке</strong>, а не редактированием своего исходного сообщения. Результат проверяйте тем тщательнее, чем выше ставки.</p>
-<p class="course-next"><a href="#memory">Next: Память и правила канала →</a></p></section><section class="tab-panel" id="memory" data-tab-panel="memory"><h2 class="tab-title">3. Память и правила канала</h2>
+<p>For complex tasks, ask for a plan first. Claude shows its progress in a single checklist message. To correct it, <strong>reply in the thread</strong> rather than editing your original message. Check the result more thoroughly the higher the stakes.</p>
+<p class="course-next"><a href="#memory">Next: Channel memory and rules →</a></p></section><section class="tab-panel" id="memory" data-tab-panel="memory"><h2 class="tab-title">3. Channel memory and rules</h2>
 <ul>
-<li><strong>Память</strong> — заметки Claude: «@Claude, запомни для этого канала: …», «что ты помнишь о…», «забудь запись про…».</li>
-<li><strong>Инструкции канала</strong> — правила на странице настроек канала. Они важнее памяти, но это <strong>не жёсткий замок</strong>: запреты обеспечиваются настройками и правами, а не текстом.</li>
+<li><strong>Memory</strong> is Claude's notes: “@Claude, remember for this channel: …”, “what do you remember about…”, “forget the note about…”.</li>
+<li><strong>Channel instructions</strong> are rules on the channel's settings page. They take priority over memory, but they are <strong>not a hard lock</strong>: restrictions are enforced by settings and permissions, not by text.</li>
 </ul>
 <div class="o-table-wrap"><table>
 <thead>
 <tr>
-<th>Симптом</th>
-<th>Причина</th>
+<th>Symptom</th>
+<th>Cause</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>поверхностные ответы</td>
-<td>нет нужных инструментов</td>
+<td>shallow answers</td>
+<td>the tools it needs are missing</td>
 </tr>
 <tr>
-<td>отвечает лишнее</td>
-<td>не задана роль канала</td>
+<td>answers things it shouldn't</td>
+<td>the channel's role isn't set</td>
 </tr>
 <tr>
-<td>одна и та же ошибка</td>
-<td>не сказали «запомни для этого канала»</td>
+<td>the same mistake again</td>
+<td>nobody said “remember for this channel”</td>
 </tr>
 <tr>
-<td>молчит</td>
-<td>не включён в канале</td>
+<td>stays silent</td>
+<td>not turned on in the channel</td>
 </tr>
 </tbody>
 </table></div>
-<p class="course-next"><a href="#proactive">Next: Ответы без упоминания и постоянные обязанности →</a></p></section><section class="tab-panel" id="proactive" data-tab-panel="proactive"><h2 class="tab-title">4. Ответы без упоминания и постоянные обязанности</h2>
-<p>Один канал — один вид работы: тогда Claude становится в нём специалистом. Включите «Respond automatically» (отвечать автоматически) и одной строкой опишите, на что отвечать и во что не вмешиваться: канал поддержки, справка по внутренним правилам, проектный канал. Выключить для ветки — <code>!mute</code>.</p>
-<p><strong>Постоянная обязанность</strong> — Claude ведёт что-то днями и неделями: координирует, отвечает за результат, обеспечивает преемственность при смене людей. Решения о сроках, объёме и компромиссах он приносит людям — например, пачкой дважды в неделю.</p>
-<p class="course-next"><a href="#routines">Next: Задачи по расписанию →</a></p></section><section class="tab-panel" id="routines" data-tab-panel="routines"><h2 class="tab-title">5. Задачи по расписанию</h2>
-<p>Одним сообщением опишите: что читать, что искать, что публиковать, когда и что делать в пограничных случаях — например, «если ничего не требует внимания, ничего не публикуй». Первый пост считайте черновиком, правки — ответом в ветке. Список — <code>!routines</code>. Задача принадлежит каналу и продолжает работать, даже если автор ушёл.</p>
-<p class="course-next"><a href="#safety">Next: Безопасность →</a></p></section><section class="tab-panel" id="safety" data-tab-panel="safety"><h2 class="tab-title">6. Безопасность</h2>
+<p class="course-next"><a href="#proactive">Next: Answers without a mention and standing duties →</a></p></section><section class="tab-panel" id="proactive" data-tab-panel="proactive"><h2 class="tab-title">4. Answers without a mention and standing duties</h2>
+<p>One channel, one kind of work: that way Claude becomes a specialist in it. Turn on “Respond automatically” and describe in one line what to answer and what to stay out of: a support channel, help on internal rules, a project channel. To turn it off for a thread: <code>!mute</code>.</p>
+<p>A <strong>standing duty</strong> is something Claude keeps running for days and weeks: it coordinates, takes responsibility for the result, provides continuity when people change. Decisions on deadlines, scope and trade-offs it brings to people, for example in a batch twice a week.</p>
+<p class="course-next"><a href="#routines">Next: Scheduled tasks →</a></p></section><section class="tab-panel" id="routines" data-tab-panel="routines"><h2 class="tab-title">5. Scheduled tasks</h2>
+<p>In one message, describe what to read, what to look for, what to post, when, and what to do in edge cases, for example “if nothing needs attention, post nothing”. Treat the first post as a draft, and make corrections by replying in the thread. To list them: <code>!routines</code>. A task belongs to the channel and keeps running even if its author has left.</p>
+<p class="course-next"><a href="#safety">Next: Safety →</a></p></section><section class="tab-panel" id="safety" data-tab-panel="safety"><h2 class="tab-title">6. Safety</h2>
 <ul>
-<li>Каждая ветка работает в отдельной изолированной среде; исходящий трафик по умолчанию запрещён; действия — от служебных учётных записей.</li>
-<li><strong>Ограничения в тексте задачи направляют Claude, но не запрещают</strong> — запреты обеспечивайте вне разговора: правами и настройками.</li>
-<li>Изменение и удаление сообщений в Slack не удаляет их из записи на стороне Anthropic.</li>
-<li>Во время беты нет автоматического срока хранения переписки и памяти; собственный срок хранения организации к Claude Tag не применяется.</li>
-<li>Администратор не видит переписку с Claude, но видит аналитику и активность.</li>
+<li>Each thread runs in its own isolated environment; outbound traffic is blocked by default; actions are taken from service accounts.</li>
+<li><strong>Restrictions written in a task steer Claude but don't prohibit anything</strong>: enforce restrictions outside the conversation, with permissions and settings.</li>
+<li>Editing or deleting messages in Slack doesn't remove them from the record on Anthropic's side.</li>
+<li>During the beta there is no automatic retention period for conversations and memory; the organization's own retention period doesn't apply to Claude Tag.</li>
+<li>An administrator can't see conversations with Claude but can see analytics and activity.</li>
 </ul>
-<p><strong>Что решить руководителю до пилота.</strong></p>
+<p><strong>What a leader should decide before a pilot.</strong></p>
 <ol>
-<li>Нужен ли Claude Tag вашей функции вообще: для регулируемого подразделения решение принимает владелец риска данных с учётом правил хранения выше. В примере из курса о внедрении Claude Tag для регулируемого подразделения выключили (см. <a href="../deploying-claude-enterprise/index.html#new-product">Внедрение Claude в организации</a>).</li>
-<li>В какие каналы его приглашать и кто в них состоит: всё, что умеет учётная запись Claude в канале, может попросить любой участник.</li>
-<li>Какие инструменты и права дать учётной записи канала — начните с доступа только на чтение.</li>
-<li>Кто отвечает за инструкции канала и за задачи по расписанию.</li>
+<li>Whether your function needs Claude Tag at all: for a regulated department, the data risk owner decides, taking into account the retention rules above. In the course's example of rolling out Claude Tag, it was turned off for the regulated department (see <a href="../deploying-claude-enterprise/index.html#new-product">Rolling out Claude in an organization</a>).</li>
+<li>Which channels to invite it to and who is in them: anything Claude's account can do in a channel, any member can ask for.</li>
+<li>Which tools and permissions to give the channel's account: start with read-only access.</li>
+<li>Who is responsible for the channel instructions and the scheduled tasks.</li>
 </ol>
-<p class="course-next"><a href="#habits">Next: Девять привычек команды →</a></p></section><section class="tab-panel" id="habits" data-tab-panel="habits"><h2 class="tab-title">7. Девять привычек команды</h2>
+<p class="course-next"><a href="#habits">Next: Nine team habits →</a></p></section><section class="tab-panel" id="habits" data-tab-panel="habits"><h2 class="tab-title">7. Nine team habits</h2>
 <ol>
-<li>Не объяснять заново то, что уже есть в канале.</li>
-<li>Проверять результат по источнику.</li>
-<li>Вести работу в канале, а не в личных сообщениях.</li>
-<li>Сохранять исправления в память канала.</li>
-<li>Один вид работы на канал.</li>
-<li>Задать правила для ответов без упоминания.</li>
-<li>Еженедельную работу — в задачу по расписанию.</li>
-<li>Каждый запрос — с целью, источниками и проверкой.</li>
-<li>Одна постоянная обязанность с понятными решениями, которые возвращаются людям.</li>
+<li>Don't explain again what is already in the channel.</li>
+<li>Check the result against the source.</li>
+<li>Keep the work in the channel, not in direct messages.</li>
+<li>Save corrections to the channel's memory.</li>
+<li>One kind of work per channel.</li>
+<li>Set rules for answers without a mention.</li>
+<li>Turn weekly work into a scheduled task.</li>
+<li>Every request comes with a goal, sources and a check.</li>
+<li>One standing duty, with clear decisions that come back to people.</li>
 </ol>
-<p>Как устроена работа людей и агентов в команде — <a href="../human-agent-teams/index.html">Люди и агенты в одной команде</a>.</p>
+<p>How people and agents work together on a team: <a href="../human-agent-teams/index.html">People and agents on one team</a>.</p>
 </section></div>
-<nav class="lm-walk lm-walk--bottom lm-walk--l2" data-walk="leadership" aria-label="Step 4 of 8 on the “Внедрение и руководство” map"><div class="lm-walk__head"><a class="lm-walk__map" href="../../maps/leadership/index.html#step-4" data-map="leadership">Learning map: <b>Внедрение и руководство</b></a><span class="lm-walk__pos">Step <b>4</b> of 8 · level 2, практик</span></div><ol class="lm-walk__dots" aria-label="Map steps"><li><a class="lm-dot lm-dot--l1" href="../ai-fluency-4d/index.html" data-map="leadership" data-dot-step="leadership|ai-fluency-4d#" title="Step 1. Четыре навыка работы с AI (4D)">1</a></li><li><a class="lm-dot lm-dot--l1" href="../../../responsible-ai/index.html" data-map="leadership" data-dot-step="leadership|responsible-ai" title="Step 2. Ответственный AI — курс в шести частях">2</a></li><li class="lm-dot-gap"><a class="lm-dot lm-dot--l2" href="../human-agent-teams/index.html" data-map="leadership" data-dot-step="leadership|human-agent-teams#" title="Step 3. Люди и агенты в одной команде">3</a></li><li><a class="lm-dot lm-dot--l2 is-here" href="index.html" data-map="leadership" data-dot-step="leadership|claude-tag#" title="Step 4. Claude Tag: Claude в Slack вашей команды" aria-current="step">4</a></li><li class="lm-dot-gap"><a class="lm-dot lm-dot--l3" href="../deploying-claude-enterprise/index.html" data-map="leadership" data-dot-step="leadership|deploying-claude-enterprise#" title="Step 5. Внедрение Claude в организации: пять решений — полное руководство">5</a></li><li class="lm-dot-gap"><a class="lm-dot lm-dot--l4" href="../deploying-claude-enterprise/index.html#adoption" data-map="leadership" data-dot-step="leadership|deploying-claude-enterprise#adoption" title="Step 6. Сигналы внедрения">6</a></li><li><a class="lm-dot lm-dot--l4" href="../../maps/leadership/index.html#step-7" data-map="leadership" data-dot-step="leadership|https://academy.claude.com/courses/deploying-claude-enterprise-with-confidence" title="Step 7. Курс: Deploying Claude Enterprise with Confidence">7</a></li><li><a class="lm-dot lm-dot--l4" href="../../maps/leadership/index.html#step-8" data-map="leadership" data-dot-step="leadership|https://academy.claude.com/courses/building-effective-human-agent-teams" title="Step 8. Курс: Building Effective Human-Agent Teams">8</a></li></ol><div class="lm-walk__done" data-step="leadership|claude-tag#"><div><p><b>After this step you can:</b> понимать, как агент работает в общих каналах и что решить до пилота — если вы пользуетесь Slack.</p></div><button type="button" class="lm-walk__check" data-step-toggle aria-pressed="false"><span class="is-off">Mark step as done</span><span class="is-on">Step done ✓</span></button></div><div class="lm-walk__moves"><a class="lm-walk__prev" href="../human-agent-teams/index.html" data-map="leadership"><small>← Back · step 3 · guide</small><span>Люди и агенты в одной команде</span></a><a class="lm-walk__next" href="../deploying-claude-enterprise/index.html" data-map="leadership"><small>Next · step 5 · guide →</small><span>Внедрение Claude в организации: пять решений — полное руководство</span></a></div></nav>
-<p class="kb-source">Based on: <a href="https://academy.claude.com/courses/introduction-to-claude-tag">Introduction to Claude Tag — Claude Academy, документация Claude Tag</a> — Anthropic, in English. This page is a short summary with our own examples.</p>
+<nav class="lm-walk lm-walk--bottom lm-walk--l2" data-walk="leadership" aria-label="Step 4 of 8 on the “Adoption and leadership” map"><div class="lm-walk__head"><a class="lm-walk__map" href="../../maps/leadership/index.html#step-4" data-map="leadership">Learning map: <b>Adoption and leadership</b></a><span class="lm-walk__pos">Step <b>4</b> of 8 · level 2, practitioner</span></div><ol class="lm-walk__dots" aria-label="Map steps"><li><a class="lm-dot lm-dot--l1" href="../ai-fluency-4d/index.html" data-map="leadership" data-dot-step="leadership|ai-fluency-4d#" title="Step 1. Four skills for working with AI (4D)">1</a></li><li><a class="lm-dot lm-dot--l1" href="../../../responsible-ai/index.html" data-map="leadership" data-dot-step="leadership|responsible-ai" title="Step 2. Responsible AI: a course in six parts">2</a></li><li class="lm-dot-gap"><a class="lm-dot lm-dot--l2" href="../human-agent-teams/index.html" data-map="leadership" data-dot-step="leadership|human-agent-teams#" title="Step 3. People and agents on one team">3</a></li><li><a class="lm-dot lm-dot--l2 is-here" href="index.html" data-map="leadership" data-dot-step="leadership|claude-tag#" title="Step 4. Claude Tag: Claude in your team&#x27;s Slack" aria-current="step">4</a></li><li class="lm-dot-gap"><a class="lm-dot lm-dot--l3" href="../deploying-claude-enterprise/index.html" data-map="leadership" data-dot-step="leadership|deploying-claude-enterprise#" title="Step 5. Rolling out Claude in an organization: five decisions, the complete guide">5</a></li><li class="lm-dot-gap"><a class="lm-dot lm-dot--l4" href="../deploying-claude-enterprise/index.html#adoption" data-map="leadership" data-dot-step="leadership|deploying-claude-enterprise#adoption" title="Step 6. Adoption signals">6</a></li><li><a class="lm-dot lm-dot--l4" href="../../maps/leadership/index.html#step-7" data-map="leadership" data-dot-step="leadership|https://academy.claude.com/courses/deploying-claude-enterprise-with-confidence" title="Step 7. Course: Deploying Claude Enterprise with Confidence">7</a></li><li><a class="lm-dot lm-dot--l4" href="../../maps/leadership/index.html#step-8" data-map="leadership" data-dot-step="leadership|https://academy.claude.com/courses/building-effective-human-agent-teams" title="Step 8. Course: Building Effective Human-Agent Teams">8</a></li></ol><div class="lm-walk__done" data-step="leadership|claude-tag#"><div><p><b>After this step you can:</b> understand how an agent works in shared channels and what to decide before a pilot, if you use Slack.</p></div><button type="button" class="lm-walk__check" data-step-toggle aria-pressed="false"><span class="is-off">Mark step as done</span><span class="is-on">Step done ✓</span></button></div><div class="lm-walk__moves"><a class="lm-walk__prev" href="../human-agent-teams/index.html" data-map="leadership"><small>← Back · step 3 · guide</small><span>People and agents on one team</span></a><a class="lm-walk__next" href="../deploying-claude-enterprise/index.html" data-map="leadership"><small>Next · step 5 · guide →</small><span>Rolling out Claude in an organization: five decisions, the complete guide</span></a></div></nav>
+<p class="kb-source">Based on: <a href="https://academy.claude.com/courses/introduction-to-claude-tag">Introduction to Claude Tag — Claude Academy, Claude Tag documentation</a> — Anthropic, in English. This page is a short summary with our own examples.</p>
 </article></div></div>
 </main>
 <footer class="o-footbar">
@@ -296,7 +296,7 @@ Question or comment:
 <button type="button" class="pagefb" data-dialog="fb" aria-haspopup="dialog"><span>Page feedback</span><span>ID: X5M96</span></button></div>
 </footer>
 </div>
-<dialog id="fb" class="fb" aria-labelledby="fb-t" data-subject="Competence Hub [X5M96]: page feedback" data-ref="X5M96" data-page="Claude Tag: Claude в Slack вашей команды">
+<dialog id="fb" class="fb" aria-labelledby="fb-t" data-subject="Competence Hub [X5M96]: page feedback" data-ref="X5M96" data-page="Claude Tag: Claude in your team&#x27;s Slack">
   <form method="dialog">
     <div class="fb-head"><h2 id="fb-t">Page feedback</h2><code>ID: X5M96</code></div>
     <div class="fb-body"><p>Leave feedback on the content of this page: <a data-mail href="mailto:talimbayev@obank.kg">feedback</a>.</p><button class="oc-button" value="close">Close</button></div>

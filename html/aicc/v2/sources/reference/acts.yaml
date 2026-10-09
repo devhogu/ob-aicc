@@ -2,183 +2,320 @@
 # group: where it belongs; weight: applies (действует для нас), partners (касается партнёров и поставщиков), benchmark (ориентир).
 - id: nbkr
   group: Кыргызская Республика
+  group_en: "Kyrgyz Republic"
   weight: applies
   title: Национальный банк Кыргызской Республики
+  title_en: "National Bank of the Kyrgyz Republic"
   kind: Центральный банк и банковский надзор
+  kind_en: "Central bank and banking supervisor"
   what: Акты о банковской деятельности, информационной безопасности, аутсорсинге, операционном риске и платёжных системах.
+  what_en: "Acts on banking, information security, outsourcing, operational risk, and payment systems."
   for_us: Любое применение AI, которое затрагивает банковский процесс, данные клиентов или третьих лиц, подпадает под его требования.
+  for_us_en: "Any use of AI that touches a banking process or the data of customers or third parties falls under its requirements."
 - id: kg-digital-code
   group: Кыргызская Республика
+  group_en: "Kyrgyz Republic"
   weight: applies
   title: Цифровой кодекс Кыргызской Республики
+  title_en: "Digital Code of the Kyrgyz Republic"
+  title_ru_original: "Цифровой кодекс Кыргызской Республики"
   kind: Кодекс
+  kind_en: "Code"
   what: "Действует с февраля 2026 года и объединяет нормы о цифровых услугах, электронной подписи, биометрической идентификации, защите персональных данных и системах AI. Заменил закон 2008 года «Об информации персонального характера»."
+  what_en: "In force since February 2026, it brings together the rules on digital services, electronic signatures, biometric identification, personal data protection, and AI systems. It replaced the 2008 Law “On Personal Information.”"
   for_us: "Применяется к каждому решению с AI, которое работает с данными клиентов или работников: какие данные, для чего, с каким согласием и где обрабатывать; к самим системам AI — через требования к оценке их опасности."
+  for_us_en: "It applies to every AI solution that works with customer or employee data: which data, for what purpose, with what consent, and where to process it. It applies to AI systems themselves through the requirements for assessing their hazard."
 - id: kg-high-risk-ai-requirements
   group: Кыргызская Республика
+  group_en: "Kyrgyz Republic"
   weight: applies
   title: Требования к оценке опасности систем AI и к системам высокой степени опасности
+  title_en: "Requirements for the hazard assessment of AI systems and for high-hazard AI systems"
+  title_ru_original: "Требования к оценке опасности систем AI и к системам высокой степени опасности"
   kind: Постановление Кабинета Министров № 770 от 2 декабря 2025 года
+  kind_en: "Cabinet of Ministers Resolution No. 770 of 2 December 2025"
   what: "Принято во исполнение Цифрового кодекса: методика оценки опасности систем AI, управление рисками систем высокой степени опасности, их открытость, понятность, контролируемость, точность, надёжность, качество данных и техническая документация."
+  what_en: "Adopted to implement the Digital Code: a method for assessing the hazard of AI systems, and risk management for high-hazard systems, with their transparency, understandability, controllability, accuracy, reliability, data quality, and technical documentation."
   for_us: Распространяется на владельцев систем AI независимо от формы собственности. Наши категории риска и проверки нужно сверять с этой методикой.
+  for_us_en: "It applies to owners of AI systems whatever their form of ownership. Our risk tiers and checks need to be reconciled with this method."
 - id: kg-aml-body
   group: Кыргызская Республика
+  group_en: "Kyrgyz Republic"
   weight: applies
   title: Противодействие отмыванию денег и финансированию терроризма
+  title_en: "Anti-money laundering and countering the financing of terrorism"
   kind: Закон и орган финансовой разведки
+  kind_en: "Law and financial intelligence unit"
   what: Изучение клиентов, мониторинг операций и сообщения о подозрительной деятельности.
+  what_en: "Customer due diligence, transaction monitoring, and suspicious activity reports."
   for_us: AI в изучении клиентов, мониторинге и проверке по спискам сохраняет предусмотренные законом проверки и след решений.
+  for_us_en: "Where AI is used in customer due diligence, monitoring, and list screening, the checks the law requires and the decision trail stay in place."
 - id: kg-digital-development
   group: Кыргызская Республика
+  group_en: "Kyrgyz Republic"
   weight: applies
   title: Цифровое развитие
+  title_en: "Digital development"
   kind: Министерство, акты и программы
+  kind_en: "Ministry, acts and programs"
   what: Направление цифровизации страны, правила для государственных информационных систем и электронных услуг; проект положения об этике AI вынесен на общественное обсуждение в сентябре 2026 года.
+  what_en: "The direction of the country’s digitalization and the rules for government information systems and electronic services; a draft regulation on AI ethics was put out for public consultation in September 2026."
   for_us: Задаёт рамки внедрения AI в стране и порядок взаимодействия с государством, в том числе в идентификации.
+  for_us_en: "It sets the framework for adopting AI in the country and the way to work with the state, including in identification."
 - id: kz-law-on-ai
   group: Казахстан
+  group_en: "Kazakhstan"
   weight: benchmark
   title: Закон «Об искусственном интеллекте»
+  title_en: "Law “On Artificial Intelligence”"
+  title_ru_original: "Закон «Об искусственном интеллекте»"
   kind: Закон и национальная концепция
+  kind_en: "Law and national concept"
   what: Первый в регионе специальный закон об AI с классификацией систем по риску.
+  what_en: "The first dedicated AI law in the region, with a classification of systems by risk."
   for_us: Пример соседней страны, с которым полезно сверять наш подход к категориям риска; касается партнёров, работающих в Казахстане.
+  for_us_en: "An example from a neighboring country that is worth comparing our approach to risk tiers against; it concerns partners operating in Kazakhstan."
 - id: kz-personal-data-law
   group: Казахстан
+  group_en: "Kazakhstan"
   weight: partners
   title: Закон «О персональных данных и их защите»
+  title_en: "Law “On Personal Data and Their Protection”"
+  title_ru_original: "Закон «О персональных данных и их защите»"
   kind: Закон
+  kind_en: "Law"
   what: Основания обработки, согласие, права субъектов, передача данных за рубеж и хранение отдельных данных в стране.
+  what_en: "Legal grounds for processing, consent, the rights of data subjects, cross-border transfer, and in-country storage of certain data."
   for_us: Касается партнёров и поставщиков, которые обрабатывают данные резидентов Казахстана.
+  for_us_en: "It concerns partners and suppliers that process the data of Kazakhstan residents."
 - id: kz-financial-regulators
   group: Казахстан
+  group_en: "Kazakhstan"
   weight: benchmark
   title: Национальный Банк и Агентство по регулированию финансового рынка
+  title_en: "National Bank of Kazakhstan and the Agency for Regulation and Development of the Financial Market"
+  title_ru_original: "Национальный Банк и Агентство по регулированию финансового рынка"
   kind: Центральный банк и финансовый надзор
+  kind_en: "Central bank and financial supervisor"
   what: Регулирование банков и финансовых организаций, в том числе их технологий, данных и поставщиков.
+  what_en: "Regulation of banks and financial organizations, including their technology, data, and suppliers."
   for_us: Надзорная практика соседнего рынка с самым развитым финтехом в регионе.
+  for_us_en: "Supervisory practice in the neighboring market with the most developed fintech in the region."
 - id: aifc
   group: Казахстан
+  group_en: "Kazakhstan"
   weight: benchmark
   title: Международный финансовый центр «Астана»
+  title_en: "Astana International Financial Centre (AIFC)"
   kind: Финансовый центр с собственным регулированием
+  kind_en: "Financial center with its own regulation"
   what: Свои правила для финансовых услуг, данных и технологий и регуляторная «песочница».
+  what_en: "Its own rules for financial services, data, and technology, and a regulatory sandbox."
   for_us: Ориентир для экспериментов в регулируемой среде и возможная площадка для партнёров.
+  for_us_en: "A reference point for experiments in a regulated environment and a possible venue for partners."
 - id: ru-personal-data-law
   group: Российская Федерация
+  group_en: "Russian Federation"
   weight: partners
   title: Федеральный закон «О персональных данных» (152-ФЗ)
+  title_en: "Federal Law “On Personal Data” (No. 152-FZ)"
+  title_ru_original: "Федеральный закон «О персональных данных» (152-ФЗ)"
   kind: Федеральный закон
+  kind_en: "Federal law"
   what: Требует хранить персональные данные граждан России в базах данных на территории страны.
+  what_en: "Requires the personal data of Russian citizens to be stored in databases located in Russia."
   for_us: Важен при выборе поставщиков и партнёров, работающих с данными граждан России.
+  for_us_en: "It matters when choosing suppliers and partners that work with the data of Russian citizens."
 - id: ru-national-ai-strategy
   group: Российская Федерация
+  group_en: "Russian Federation"
   weight: benchmark
   title: Национальная стратегия развития AI и экспериментальные правовые режимы
+  title_en: "National AI development strategy and experimental legal regimes"
   kind: Указ Президента и федеральные законы
+  kind_en: "Presidential decree and federal laws"
   what: Цели до 2030 года и режимы, в которых AI испытывают с временными исключениями из правил.
+  what_en: "Goals up to 2030, and regimes in which AI is tested with temporary exemptions from the rules."
   for_us: Влияет на регион и поставщиков; пример того, как устроить регулируемый эксперимент.
+  for_us_en: "It affects the region and suppliers; an example of how to set up a regulated experiment."
 - id: bank-of-russia-on-ai
   group: Российская Федерация
+  group_en: "Russian Federation"
   weight: benchmark
   title: Банк России об AI на финансовом рынке
+  title_en: "Bank of Russia on AI in the financial market"
   kind: Доклады и рекомендации регулятора
+  kind_en: "Regulator’s reports and recommendations"
   what: Позиция центрального банка о выгодах, рисках и регулировании AI в финансах.
+  what_en: "The central bank’s position on the benefits, risks, and regulation of AI in finance."
   for_us: Практика крупнейшего соседнего рынка, которая, вероятно, повлияет на регуляторов региона.
+  for_us_en: "Practice in the largest neighboring market, which is likely to influence the region’s regulators."
 - id: ru-ai-code-of-ethics
   group: Российская Федерация
+  group_en: "Russian Federation"
   weight: benchmark
   title: Кодекс этики в сфере AI
+  title_en: "AI Code of Ethics"
+  title_ru_original: "Кодекс этики в сфере AI"
   kind: Добровольный отраслевой кодекс
+  kind_en: "Voluntary industry code"
   what: Этические обязательства разработчиков и пользователей AI.
+  what_en: "Ethical commitments of AI developers and users."
   for_us: Ориентир этической практики на языке отрасли региона.
+  for_us_en: "A reference point for ethical practice, in the language of the region’s industry."
 - id: eu-ai-act
   group: Европейский союз
+  group_en: "European Union"
   weight: benchmark
   title: Регламент ЕС об искусственном интеллекте (AI Act)
+  title_en: "EU Artificial Intelligence Act (AI Act)"
   kind: Регламент ЕС
+  kind_en: "EU regulation"
   what: "Обязанности по уровню риска: запрещённые практики, применения высокого риска, требования прозрачности."
+  what_en: "Obligations by level of risk: prohibited practices, high-risk uses, and transparency requirements."
   for_us: Поставщики строят продукты под него; его риск-ориентированная логика — основа наших категорий риска.
+  for_us_en: "Suppliers build their products to meet it; its risk-based logic is the basis of our risk tiers."
 - id: eu-gdpr
   group: Европейский союз
+  group_en: "European Union"
   weight: benchmark
   title: Общий регламент по защите данных (GDPR)
+  title_en: "General Data Protection Regulation (GDPR)"
   kind: Регламент ЕС
+  kind_en: "EU regulation"
   what: Эталонный режим защиты персональных данных и образец для законов многих стран, в том числе региона.
+  what_en: "The reference regime for personal data protection and the model for the laws of many countries, including those of the region."
   for_us: Законы региона опираются на те же понятия, а поставщики — на соответствие ему.
+  for_us_en: "The region’s laws rest on the same concepts, and suppliers rely on complying with it."
 - id: eu-dora
   group: Европейский союз
+  group_en: "European Union"
   weight: benchmark
   title: Цифровая операционная устойчивость (DORA)
+  title_en: "Digital Operational Resilience Act (DORA)"
   kind: Регламент ЕС и рекомендации EBA
+  kind_en: "EU regulation and EBA guidelines"
   what: Риски ИКТ, сообщения об инцидентах, тестирование устойчивости и риски третьих сторон.
+  what_en: "ICT risk, incident reporting, resilience testing, and third-party risk."
   for_us: Самый ясный пример того, чего надзор ждёт по инцидентам, устойчивости и поставщикам.
+  for_us_en: "The clearest example of what supervisors expect on incidents, resilience, and suppliers."
 - id: us-model-risk-and-consumer-guidance
   group: США
+  group_en: "United States"
   weight: benchmark
   title: Модельный риск и AI в кредитовании
+  title_en: "Model risk and AI in lending"
   kind: Надзорные рекомендации
+  kind_en: "Supervisory guidance"
   what: Эталонная практика управления модельным риском; кредитное решение объясняют конкретно, какой бы ни была модель.
+  what_en: "The reference practice of model risk management; a credit decision is explained in specific terms, whatever the model."
   for_us: Независимая проверка моделей и объяснимость кредитных решений — требования, которые встречаются у любого надзора.
+  for_us_en: "Independent model review and explainable credit decisions are requirements you meet under any supervisor."
 - id: us-federal-and-state-ai-policy
   group: США
+  group_en: "United States"
   weight: benchmark
   title: Политика США в области AI
+  title_en: "US AI policy"
   kind: Указы, правила закупок, законы штатов
+  kind_en: "Executive orders, procurement rules, state laws"
   what: Федеральная политика меняется с администрацией; штаты принимают законы об AI для потребителей.
+  what_en: "Federal policy changes with each administration; states pass AI laws to protect consumers."
   for_us: Направление крупнейшего рынка моделей и сервисов, которые мы используем.
+  for_us_en: "The direction of the largest market for the models and services we use."
 - id: oecd-ai-principles
   group: Международные принципы
+  group_en: "International principles"
   weight: benchmark
   title: Принципы ОЭСР в области AI
+  title_en: "OECD AI Principles"
   kind: Межправительственные принципы
+  kind_en: "Intergovernmental principles"
   what: Первый межправительственный стандарт AI, заслуживающего доверия.
+  what_en: "The first intergovernmental standard for trustworthy AI."
   for_us: Самое краткое изложение того, чего от применения AI будут ждать регулятор и инвестор.
+  for_us_en: "The shortest statement of what regulators and investors will expect from the use of AI."
 - id: unesco-recommendation-ethics-ai
   group: Международные принципы
+  group_en: "International principles"
   weight: benchmark
   title: Рекомендация ЮНЕСКО об этике AI
+  title_en: "UNESCO Recommendation on the Ethics of Artificial Intelligence"
   kind: Документ международной организации
+  kind_en: "International organization document"
   what: Этика AI с точки зрения прав человека, достоинства, разнообразия и окружающей среды.
+  what_en: "AI ethics from the standpoint of human rights, dignity, diversity, and the environment."
   for_us: Кыргызская Республика к ней присоединилась; на неё скорее всего сошлётся государственный орган.
+  for_us_en: "The Kyrgyz Republic has joined it; a government body is likely to refer to it."
 - id: council-of-europe-ai-convention
   group: Международные принципы
+  group_en: "International principles"
   weight: benchmark
   title: Рамочная конвенция Совета Европы об AI
+  title_en: "Council of Europe Framework Convention on Artificial Intelligence"
   kind: Международный договор
+  kind_en: "International treaty"
   what: "Первый договор об AI: права человека, демократия и верховенство права на всём жизненном цикле AI."
+  what_en: "The first treaty on AI: human rights, democracy, and the rule of law across the whole AI lifecycle."
   for_us: Закрепляет ожидание, что у затронутых AI людей есть права и способы защиты.
+  for_us_en: "It sets the expectation that people affected by AI have rights and remedies."
 - id: g7-hiroshima-ai-process
   group: Международные принципы
+  group_en: "International principles"
   weight: benchmark
   title: Хиросимский процесс G7
+  title_en: "G7 Hiroshima AI Process"
   kind: Добровольные обязательства разработчиков
+  kind_en: "Voluntary commitments of developers"
   what: Принципы и кодекс поведения для создателей самых мощных моделей.
+  what_en: "Principles and a code of conduct for the developers of the most powerful models."
   for_us: Определяет, каких сведений о безопасности и прозрачности ждать от поставщиков моделей.
+  for_us_en: "It defines what safety and transparency information to expect from model providers."
 - id: financial-standard-setters-on-ai
   group: Международные принципы
+  group_en: "International principles"
   weight: benchmark
   title: FSB, Базельский комитет и BIS об AI
+  title_en: "FSB, Basel Committee and BIS on AI"
   kind: Доклады органов, задающих стандарты
+  kind_en: "Reports of standard-setting bodies"
   what: "Позиция органов, чьи стандарты внедряют национальные регуляторы: выгоды и риски AI для организаций и системы."
+  what_en: "The position of the bodies whose standards national regulators adopt: the benefits and risks of AI for institutions and for the system."
   for_us: По этим темам будут развиваться требования регуляторов региона; подготовиться заранее дешевле.
+  for_us_en: "The region’s regulators will develop their requirements along these topics; preparing early costs less."
 - id: nist-ai-rmf
   group: Стандарты и методологии
+  group_en: "Standards and frameworks"
   weight: benchmark
   title: NIST AI Risk Management Framework
+  title_en: "NIST AI Risk Management Framework"
   kind: Добровольная методология
+  kind_en: "Voluntary framework"
   what: Характеристики AI, заслуживающего доверия, и работа с рисками по шагам, с отдельным профилем для генеративного AI.
+  what_en: "The characteristics of trustworthy AI and step-by-step risk management, with a separate profile for generative AI."
   for_us: Самая практичная методология; на неё мы опираемся, объясняя категории риска и точки контроля.
+  for_us_en: "The most practical framework; we rely on it when we explain risk tiers and checkpoints."
 - id: iso-iec-ai-standards
   group: Стандарты и методологии
+  group_en: "Standards and frameworks"
   weight: benchmark
   title: Стандарты ISO/IEC по AI (в том числе 42001)
+  title_en: "ISO/IEC standards on AI (including ISO/IEC 42001)"
   kind: Международные стандарты
+  kind_en: "International standards"
   what: "Система менеджмента AI: политика, роли, оценка рисков, контроль и улучшение."
+  what_en: "An AI management system: policy, roles, risk assessment, control, and improvement."
   for_us: По ним партнёр или регулятор, скорее всего, оценит, насколько полно устроено управление AI.
+  for_us_en: "A partner or regulator will most likely use them to judge how completely AI governance is set up."
 - id: owasp-top-10-llm
   group: Стандарты и методологии
+  group_en: "Standards and frameworks"
   weight: benchmark
   title: OWASP Top 10 для приложений на больших языковых моделях
+  title_en: "OWASP Top 10 for Large Language Model Applications"
   kind: Перечень рисков безопасности
+  kind_en: "List of security risks"
   what: "Десять главных рисков приложений на больших языковых моделях: промпт-инъекции, утечки, избыточные права и другие."
+  what_en: "The ten main risks of applications built on large language models: prompt injection, data leakage, excessive permissions, and others."
   for_us: Список атак, которые нужно уметь проверять в решениях с генеративным AI.
+  for_us_en: "The list of attacks you need to be able to test for in generative AI solutions."

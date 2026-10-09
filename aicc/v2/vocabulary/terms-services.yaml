@@ -1,49 +1,69 @@
 - id: reusable-package
   ru: пакет
   en: reusable package
+  term_en: "reusable package"
   definition: "То, что остаётся после работы и годится для повторного применения: метод, шаблоны, набор инструментов или программный компонент. С ним следующее подразделение получает результат за дни, а не за недели."
+  definition_en: "What remains after a piece of work and can be used again: a method, templates, a toolkit, or a software component. With it, the next department gets its result in days rather than weeks."
 
 - id: proof-of-concept
   ru: проверка осуществимости
   en: proof of concept
+  term_en: "proof of concept"
   definition: "Короткая проверка на деле, что идея работает: решение пробуют в небольшом объёме и по результату решают, продолжать ли."
+  definition_en: "A short hands-on check that an idea works: the solution is tried on a small scale, and the result decides whether to continue."
 
 - id: timebox
   ru: тайм-бокс
   en: timebox
+  term_en: "time-box"
   definition: "Заранее заданный срок для работы или эксперимента. Когда срок вышел, смотрят на результат, а не продлевают работу молча."
+  definition_en: "A time limit set in advance for a piece of work or an experiment. When the time is up, you look at the result instead of quietly extending the work."
 
 - id: sandbox
   ru: лабораторная среда
   en: sandbox
+  term_en: "sandbox"
   definition: "Изолированная среда для экспериментов: данные только для чтения, все действия записываются, ничего не попадает в рабочие системы."
+  definition_en: "An isolated environment for experiments: data is read-only, every action is logged, and nothing reaches production systems."
 
 - id: leading-indicator
   ru: опережающий показатель
   en: leading indicator
+  term_en: "leading indicator"
   definition: "Признак, который виден рано и подсказывает, что работа идёт к нужному результату, ещё до того, как результат можно измерить."
+  definition_en: "A sign that shows up early and suggests the work is heading toward the intended result, before the result itself can be measured."
 
 - id: acceptance-criteria
   ru: критерии приёмки
   en: acceptance criteria
+  term_en: "acceptance criteria"
   definition: "Записанные заранее условия: что решение должно делать и чего не должно, чтобы им можно было пользоваться."
+  definition_en: "Conditions written down in advance: what the solution must do, and must not do, for it to be fit for use."
 
 - id: support-level
   ru: уровень поддержки
   en: support level
+  term_en: "support level"
   definition: "Договорённость о том, как решение поддерживают после запуска: никак, по запросу, в оговорённые сроки или мы сами его эксплуатируем."
+  definition_en: "An agreement on how a solution is supported after launch: not at all, on request, within agreed times, or we run it ourselves."
 
 - id: data-lineage
   ru: происхождение данных
   en: data lineage
+  term_en: "data lineage"
   definition: "Прослеживаемый путь каждой цифры от источника до отчёта: откуда взята, как преобразована, кто за неё отвечает."
+  definition_en: "The traceable path of every figure from its source to the report: where it came from, how it was transformed, and who is responsible for it."
 
 - id: skill-library
   ru: библиотека навыков
   en: skill library
+  term_en: "skill library"
   definition: "Собранные для одного вида работы готовые запросы к модели и приёмы, которыми сотрудники пользуются и которые сами пополняют."
+  definition_en: "Ready-made prompts and techniques gathered for one kind of work, which employees use and add to themselves."
 
 - id: community-of-practice
   ru: профессиональное сообщество
   en: community of practice
+  term_en: "community of practice"
   definition: "Сотрудники разных подразделений, которые регулярно делятся опытом применения AI в похожей работе."
+  definition_en: "Employees from different departments who regularly share their experience of applying AI to similar work."

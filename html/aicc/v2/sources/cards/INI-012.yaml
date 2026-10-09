@@ -1,41 +1,61 @@
 id: INI-012
 title: "Проверка и надёжность"
+title_en: "Assurance and reliability"
 summary: "Постоянная работа для небольших повторяющихся просьб функций Банка: небольшие оценки и последующие действия по результатам проверок. Каждая просьба идёт отдельной строкой в одну итерацию, без отдельной карточки проекта."
+summary_en: "Standing work for small, recurring requests from the Bank's functions: small assessments and follow-up actions after reviews. Each request goes in as a separate line for one iteration, with no separate project card."
 profile: run-rate
 class_of_service: текущая работа
 stage: Воронка
 area: "Управление и контроль"
+area_en: "Governance"
 people:
-  business_owner: {position: "представитель функции, которая формулирует просьбы и принимает результат", holder: ""}
-  product_manager: {position: "менеджер продукта Хаба по текущей работе", holder: ""}
-  project_manager: {position: "кто ведёт очередь просьб", holder: ""}
+  business_owner: {position: "представитель функции, которая формулирует просьбы и принимает результат", position_en: "a representative of the function that makes the requests and accepts the result", holder: ""}
+  product_manager: {position: "менеджер продукта Хаба по текущей работе", position_en: "the Hub's product manager for run-rate work", holder: ""}
+  project_manager: {position: "кто ведёт очередь просьб", position_en: "whoever runs the request queue", holder: ""}
 outcome:
   problem: "У функций возникают небольшие повторяющиеся потребности: оценка, пересмотр критериев, запись об уровне риска, последующие действия по итогам мониторинга. Оформлять под каждую отдельный проект слишком тяжело."
+  problem_en: "Functions have small, recurring needs: an assessment, a revision of criteria, a risk tier record, follow-up actions after monitoring. Setting up a separate project for each is too heavy."
   intended_outcome: "Оперативная и понятная поддержка: по каждой просьбе записаны заказчик, приоритет, критерии приёмки и результат, а работа укладывается в одну итерацию."
+  intended_outcome_en: "Prompt, clear support: for every request, the requester, priority, acceptance criteria and result are recorded, and the work fits into one iteration."
   measure: "Доля запросов, взятых в итерацию и принятых до её конца; доля принятых запросов, где записаны переданный результат, выполненные критерии и дата."
+  measure_en: "Share of requests taken into an iteration and accepted before it ends; share of accepted requests with the delivered result, the criteria met and the date recorded."
   baseline: "Запросов в работе пока нет, доли не считаются."
+  baseline_en: "No requests in progress yet, so the shares are not calculated."
   target: "Все взятые в работу запросы укладываются в итерацию и принимаются по критериям."
+  target_en: "Every request taken into work fits into the iteration and is accepted against its criteria."
 constraints:
   appetite: "Одна итерация на один запрос, из общей мощности команды Хаба."
+  appetite_en: "One iteration per request, out of the Hub team's shared capacity."
   review_point: "Раз в неделю смотрим очередь и берём в работу запрос с наивысшим приоритетом, который помещается в итерацию."
+  review_point_en: "Once a week we look at the queue and take into work the highest-priority request that fits into the iteration."
   exit_criterion: "Заказчик принял результат по заранее названным критериям приёмки."
+  exit_criterion_en: "The requester has accepted the result against acceptance criteria named in advance."
   stop_threshold: "Запрос не помещается в одну итерацию."
+  stop_threshold_en: "The request does not fit into one iteration."
 checklist:
-  - {item: "Назван тот, кому нужен результат, и ожидаемая выгода", state: "не начато"}
-  - {item: "Записаны критерии приёмки", state: "не начато"}
-  - {item: "Если применяется AI: названа цель применения и класс данных", state: "не начато"}
-  - {item: "Есть место в WIP-лимите и запрос помещается в одну итерацию", state: "не начато"}
-  - {item: "Результат передан заказчику и принят по критериям", state: "не начато"}
+  - {item: "Назван тот, кому нужен результат, и ожидаемая выгода", item_en: "The person who needs the result and the expected benefit are named", state: "не начато"}
+  - {item: "Записаны критерии приёмки", item_en: "Acceptance criteria are recorded", state: "не начато"}
+  - {item: "Если применяется AI: названа цель применения и класс данных", item_en: "If AI is used: the purpose of use and the data class are named", state: "не начато"}
+  - {item: "Есть место в WIP-лимите и запрос помещается в одну итерацию", item_en: "There is room within the WIP limit and the request fits into one iteration", state: "не начато"}
+  - {item: "Результат передан заказчику и принят по критериям", item_en: "The result has been handed to the requester and accepted against the criteria", state: "не начато"}
 live:
   status: не задан
   next_step: "Собрать первые просьбы функций по оценке и проверке."
+  next_step_en: "Collect the functions' first requests for assessment and review."
   risks:
     - "Запрос не помещается в одну итерацию: тогда оформляем его отдельным проектом."
     - "Общая мощность команды ограничена: срочный запрос меняет очерёдность, но не добавляет рук."
+  risks_en:
+    - "A request does not fit into one iteration: then we set it up as a separate project."
+    - "The team's shared capacity is limited: an urgent request changes the order but adds no extra hands."
   dependencies:
     - "Свободное место в WIP-лимите."
     - "Представитель функции, которой нужен результат."
     - "Если применяется AI: проверка цели применения и класса данных."
+  dependencies_en:
+    - "Free room within the WIP limit."
+    - "A representative of the function that needs the result."
+    - "If AI is used: a review of the purpose of use and the data class."
 decisions: []
 closure: {result: "", lessons: ""}
 links: {jira: "", confluence: ""}

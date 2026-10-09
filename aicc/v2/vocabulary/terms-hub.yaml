@@ -1,19 +1,27 @@
 - id: knowledge-base
   ru: база знаний
   en: knowledge base
+  term_en: "knowledge base"
   definition: "Собранные в одном месте документы и правила, у которых есть владелец и срок пересмотра. AI отвечает по ним и показывает, откуда взят ответ."
+  definition_en: "Documents and rules gathered in one place, each with an owner and a review date. AI answers from them and shows where the answer comes from."
 
 - id: maturity-level
   ru: уровень зрелости
   en: maturity level
+  term_en: "maturity level"
   definition: "Ступень на пути внедрения AI: от первых контролируемых экспериментов до работы AI-агентов. Ступень считается пройденной, когда её показатели выполнены."
+  definition_en: "A stage on the path of adopting AI, from the first controlled experiments to AI agents at work. A stage counts as complete when its indicators are met."
 
 - id: governance
   ru: управление и контроль
   en: governance
+  term_en: "governance"
   definition: "Как устроены решения и ответственность вокруг работы с AI: стратегия и способ работы, документы и процессы, правила и критерии, риски, проверки и наблюдение за работающими решениями."
+  definition_en: "How decisions and responsibilities around work with AI are organized: strategy and way of working, documents and processes, rules and criteria, risks, checks, and monitoring of solutions in operation."
 
 - id: strategic-theme
   ru: стратегическая тема
   en: strategic theme
+  term_en: "strategic theme"
   definition: "Область, в которой AI должен дать бизнесу больше всего пользы в ближайшие годы. Каждая инициатива вносит вклад хотя бы в одну тему."
+  definition_en: "An area in which AI should bring the business the most value in the coming years. Every initiative contributes to at least one theme."

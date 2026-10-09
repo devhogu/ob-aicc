@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en" data-theme="light"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark">
-<title>Как писать запросы к Claude: полное руководство · AI Competence Hub</title>
+<title>How to write prompts for Claude: the complete guide · AI Competence Hub</title>
 <script>try{var t=localStorage.getItem('hub-theme');document.documentElement.dataset.theme=t==='dark'?'dark':'light';}catch(e){}</script>
 <link rel="stylesheet" href="../../../../assets/ui/fonts.css?v=31af9632de"><link rel="stylesheet" href="../../../../assets/ui/tokens.css?v=7a14df66bd"><link rel="stylesheet" href="../../../../assets/ui/primitives.css?v=ea6572a6e0"><link rel="stylesheet" href="../../../../assets/ui/workspace.css?v=416781b646"><link rel="stylesheet" href="../../../../assets/site.css?v=5480d3be4e">
 <script src="../../../../assets/search-en.js"></script><script src="../../../../assets/i18n-en.js"></script><script src="../../../../assets/site.js?v=cfae61d4bb" defer data-root="../../../.." data-t-none="Nothing matches your search." data-t-light="Light mode" data-t-dark="Dark mode" data-t-mail-body="Page: {title}
@@ -170,305 +170,305 @@ Question or comment:
   <path d="M4 4v16" />
 </svg><span>Reference</span></a></div></nav></details></aside>
 <main class="o-main hub-main" id="main" tabindex="-1">
-<div class="crumbbar"><div class="crumbline"><nav class="o-eyebrow crumbs" aria-label="Breadcrumb"><a href="../../index.html">Knowledge Base</a> / <span aria-current="page">Как писать запросы к Claude: полное руководство</span></nav></div></div>
-<div class="o-reading o-single"><div class="o-copy"><h1>Как писать запросы к Claude: полное руководство</h1><article class="page-body o-doc"><p class="kb-head"><a href="../../index.html">← All guides</a><span>Prompting Claude</span><span>complete guide</span><span>35 min</span></p>
-<nav class="lm-walk lm-walk--top lm-walk--l4" data-walk="prompting" aria-label="Step 10 of 12 on the “Запросы к Claude” map"><div class="lm-walk__head"><a class="lm-walk__map" href="../../maps/prompting/index.html#step-10" data-map="prompting">Learning map: <b>Запросы к Claude</b></a><span class="lm-walk__pos">Step <b>10</b> of 12 · level 4, эксперт</span></div><ol class="lm-walk__dots" aria-label="Map steps"><li><a class="lm-dot lm-dot--l1" href="../writing-a-task/index.html" data-map="prompting" data-dot-step="prompting|writing-a-task#" title="Step 1. Как поставить задачу ассистенту">1</a></li><li><a class="lm-dot lm-dot--l1" href="../prompt-clear-and-direct/index.html" data-map="prompting" data-dot-step="prompting|prompt-clear-and-direct#" title="Step 2. Пишите ясно и объясняйте зачем">2</a></li><li><a class="lm-dot lm-dot--l1" href="../prompt-examples/index.html" data-map="prompting" data-dot-step="prompting|prompt-examples#" title="Step 3. Покажите пример">3</a></li><li class="lm-dot-gap"><a class="lm-dot lm-dot--l2" href="../prompt-structure/index.html" data-map="prompting" data-dot-step="prompting|prompt-structure#" title="Step 4. Роль и структура: разделите инструкции и данные">4</a></li><li><a class="lm-dot lm-dot--l2" href="../prompt-output-format/index.html" data-map="prompting" data-dot-step="prompting|prompt-output-format#" title="Step 5. Формат ответа: просите то, что нужно">5</a></li><li><a class="lm-dot lm-dot--l2" href="../prompt-long-documents/index.html" data-map="prompting" data-dot-step="prompting|prompt-long-documents#" title="Step 6. Длинные документы: сначала текст, потом вопрос">6</a></li><li class="lm-dot-gap"><a class="lm-dot lm-dot--l3" href="../prompt-thinking/index.html" data-map="prompting" data-dot-step="prompting|prompt-thinking#" title="Step 7. Дайте подумать: размышление и уровень усилия">7</a></li><li><a class="lm-dot lm-dot--l3" href="../prompt-fewer-hallucinations/index.html" data-map="prompting" data-dot-step="prompting|prompt-fewer-hallucinations#" title="Step 8. Как снизить выдумки">8</a></li><li><a class="lm-dot lm-dot--l3" href="../prompt-chains/index.html" data-map="prompting" data-dot-step="prompting|prompt-chains#" title="Step 9. Большую задачу — цепочкой запросов">9</a></li><li class="lm-dot-gap"><a class="lm-dot lm-dot--l4 is-here" href="index.html" data-map="prompting" data-dot-step="prompting|prompting-complete-guide#" title="Step 10. Как писать запросы к Claude: полное руководство" aria-current="step">10</a></li><li><a class="lm-dot lm-dot--l4" href="../../maps/prompting/index.html#step-11" data-map="prompting" data-dot-step="prompting|https://platform.claude.com/docs/ru/build-with-claude/prompt-engineering/claude-prompting-best-practices" title="Step 11. Лучшие практики составления подсказок — документация на русском">11</a></li><li><a class="lm-dot lm-dot--l4" href="../../maps/prompting/index.html#step-12" data-map="prompting" data-dot-step="prompting|https://github.com/anthropics/prompt-eng-interactive-tutorial" title="Step 12. Интерактивный учебник Anthropic по запросам">12</a></li></ol><div class="lm-walk__moves"><a class="lm-walk__prev" href="../prompt-chains/index.html" data-map="prompting"><small>← Back · step 9 · guide</small><span>Большую задачу — цепочкой запросов</span></a><a class="lm-walk__next" href="../../maps/prompting/index.html#step-11" data-map="prompting"><small>Next · step 11 · Anthropic documentation in Russian →</small><span>Лучшие практики составления подсказок — документация на русском</span></a></div></nav>
-<p>Хороший <a class="term" href="../../../reference/vocabulary/index.html#prompt" title="Инструкции и контекст, которые модель получает в момент использования. Системный запрос задаёт разработчик, и он действует постоянно.">запрос к модели</a> — это не магическая формула, а хорошо поставленная задача: так же, как вы объяснили бы её толковому новому сотруднику. Это руководство собирает всё, что Anthropic сегодня рекомендует для своих моделей, и переводит на язык нашей работы — писем, отчётов, таблиц, договоров и справок.</p>
-<p><strong>Для кого и что даст.</strong> Для тех, кто уже освоил отдельные приёмы и хочет писать запросы для повторяющихся и сложных задач. После него вы сможете построить сложный запрос по каркасу, сохранить его как шаблон и улучшить, проверив на 5–10 своих прошлых примерах.</p>
-<p>Девять вкладок идут от простого к сложному. Вкладки 1–7 — справочник по приёмам из коротких руководств серии, начиная с <a href="../writing-a-task/index.html">Как поставить задачу ассистенту</a>. Новое — во вкладках 8 «Шаблоны, цепочки и улучшение запроса» и 9 «Каркас сложного запроса»: с них и начните, если короткие руководства вы уже прошли.</p>
-<p>Документация Anthropic приводит примеры на английском; здесь они переведены и дополнены нашими. Писать запросы можно по-русски — Claude отвечает на языке, на котором к нему обращаются.</p>
-<div class="course" data-tabs><div class="course-tabs" role="tablist"><button type="button" role="tab" data-tab="clear" aria-selected=true><b>1</b><span>Основа: ясно, конкретно и зачем</span></button><button type="button" role="tab" data-tab="examples"><b>2</b><span>Примеры: показать, а не описать</span></button><button type="button" role="tab" data-tab="structure"><b>3</b><span>Структура: роль, данные, инструкции</span></button><button type="button" role="tab" data-tab="long"><b>4</b><span>Длинные документы</span></button><button type="button" role="tab" data-tab="format"><b>5</b><span>Формат, объём и рамки задачи</span></button><button type="button" role="tab" data-tab="thinking"><b>6</b><span>Размышления и режимы работы</span></button><button type="button" role="tab" data-tab="accuracy"><b>7</b><span>Точность: меньше выдумок</span></button><button type="button" role="tab" data-tab="iterate"><b>8</b><span>Шаблоны, цепочки и улучшение запроса</span></button><button type="button" role="tab" data-tab="skeleton"><b>9</b><span>Каркас сложного запроса</span></button></div><section class="tab-panel" id="clear" data-tab-panel="clear"><h2 class="tab-title">1. Основа: ясно, конкретно и зачем</h2>
-<p>Anthropic советует думать о Claude как о <strong>блестящем, но новом сотруднике</strong>: он многое умеет, но не знает ваших норм, привычек и того, что «и так понятно».</p>
-<h3 id="golden">Тест на коллегу</h3>
-<p>Покажите запрос коллеге, который ничего не знает о задаче, и попросите выполнить. Если он запутается — запутается и Claude.</p>
-<h3 id="direct">Говорите прямо, что нужно</h3>
+<div class="crumbbar"><div class="crumbline"><nav class="o-eyebrow crumbs" aria-label="Breadcrumb"><a href="../../index.html">Knowledge Base</a> / <span aria-current="page">How to write prompts for Claude: the complete guide</span></nav></div></div>
+<div class="o-reading o-single"><div class="o-copy"><h1>How to write prompts for Claude: the complete guide</h1><article class="page-body o-doc"><p class="kb-head"><a href="../../index.html">← All guides</a><span>Prompting Claude</span><span>complete guide</span><span>35 min</span></p>
+<nav class="lm-walk lm-walk--top lm-walk--l4" data-walk="prompting" aria-label="Step 10 of 12 on the “Prompting Claude” map"><div class="lm-walk__head"><a class="lm-walk__map" href="../../maps/prompting/index.html#step-10" data-map="prompting">Learning map: <b>Prompting Claude</b></a><span class="lm-walk__pos">Step <b>10</b> of 12 · level 4, expert</span></div><ol class="lm-walk__dots" aria-label="Map steps"><li><a class="lm-dot lm-dot--l1" href="../writing-a-task/index.html" data-map="prompting" data-dot-step="prompting|writing-a-task#" title="Step 1. How to give the assistant a task">1</a></li><li><a class="lm-dot lm-dot--l1" href="../prompt-clear-and-direct/index.html" data-map="prompting" data-dot-step="prompting|prompt-clear-and-direct#" title="Step 2. Be clear and explain why">2</a></li><li><a class="lm-dot lm-dot--l1" href="../prompt-examples/index.html" data-map="prompting" data-dot-step="prompting|prompt-examples#" title="Step 3. Show an example">3</a></li><li class="lm-dot-gap"><a class="lm-dot lm-dot--l2" href="../prompt-structure/index.html" data-map="prompting" data-dot-step="prompting|prompt-structure#" title="Step 4. Role and structure: separate instructions from data">4</a></li><li><a class="lm-dot lm-dot--l2" href="../prompt-output-format/index.html" data-map="prompting" data-dot-step="prompting|prompt-output-format#" title="Step 5. Answer format: ask for what you need">5</a></li><li><a class="lm-dot lm-dot--l2" href="../prompt-long-documents/index.html" data-map="prompting" data-dot-step="prompting|prompt-long-documents#" title="Step 6. Long documents: text first, question last">6</a></li><li class="lm-dot-gap"><a class="lm-dot lm-dot--l3" href="../prompt-thinking/index.html" data-map="prompting" data-dot-step="prompting|prompt-thinking#" title="Step 7. Let it think: thinking and effort level">7</a></li><li><a class="lm-dot lm-dot--l3" href="../prompt-fewer-hallucinations/index.html" data-map="prompting" data-dot-step="prompting|prompt-fewer-hallucinations#" title="Step 8. How to reduce made-up answers">8</a></li><li><a class="lm-dot lm-dot--l3" href="../prompt-chains/index.html" data-map="prompting" data-dot-step="prompting|prompt-chains#" title="Step 9. A big task as a chain of prompts">9</a></li><li class="lm-dot-gap"><a class="lm-dot lm-dot--l4 is-here" href="index.html" data-map="prompting" data-dot-step="prompting|prompting-complete-guide#" title="Step 10. How to write prompts for Claude: the complete guide" aria-current="step">10</a></li><li><a class="lm-dot lm-dot--l4" href="../../maps/prompting/index.html#step-11" data-map="prompting" data-dot-step="prompting|https://platform.claude.com/docs/ru/build-with-claude/prompt-engineering/claude-prompting-best-practices" title="Step 11. Prompting best practices">11</a></li><li><a class="lm-dot lm-dot--l4" href="../../maps/prompting/index.html#step-12" data-map="prompting" data-dot-step="prompting|https://github.com/anthropics/prompt-eng-interactive-tutorial" title="Step 12. Anthropic&#x27;s interactive prompting tutorial">12</a></li></ol><div class="lm-walk__moves"><a class="lm-walk__prev" href="../prompt-chains/index.html" data-map="prompting"><small>← Back · step 9 · guide</small><span>A big task as a chain of prompts</span></a><a class="lm-walk__next" href="../../maps/prompting/index.html#step-11" data-map="prompting"><small>Next · step 11 · Anthropic documentation, EN →</small><span>Prompting best practices</span></a></div></nav>
+<p>A good <a class="term" href="../../../reference/vocabulary/index.html#prompt" title="The instructions and context a model receives at the moment it is used. The system prompt is set by the developer and applies all the time.">prompt</a> isn't a magic formula but a well-defined task: the way you would explain it to a smart new employee. This guide brings together everything Anthropic currently recommends for its models and puts it in terms of our work — emails, reports, spreadsheets, contracts, and summaries.</p>
+<p><strong>Who it's for and what it gives you.</strong> For those who have already mastered individual techniques and want to write prompts for recurring and complex tasks. Afterwards you'll be able to build a complex prompt from a skeleton, save it as a template, and improve it by testing it on 5–10 of your own past examples.</p>
+<p>The nine tabs go from simple to complex. Tabs 1–7 are a reference to the techniques from the series' short guides, starting with <a href="../writing-a-task/index.html">How to give the assistant a task</a>. What's new is in tab 8, “Templates, chains, and improving a prompt”, and tab 9, “The skeleton of a complex prompt”: start with them if you have already been through the short guides.</p>
+<p>Anthropic's documentation gives its examples in English; here they are adapted and supplemented with our own. You can also write prompts in Russian: Claude replies in the language you write to it in.</p>
+<div class="course" data-tabs><div class="course-tabs" role="tablist"><button type="button" role="tab" data-tab="clear" aria-selected=true><b>1</b><span>The basics: clear, specific, and why</span></button><button type="button" role="tab" data-tab="examples"><b>2</b><span>Examples: show, don't describe</span></button><button type="button" role="tab" data-tab="structure"><b>3</b><span>Structure: role, data, instructions</span></button><button type="button" role="tab" data-tab="long"><b>4</b><span>Long documents</span></button><button type="button" role="tab" data-tab="format"><b>5</b><span>Format, length, and the scope of the task</span></button><button type="button" role="tab" data-tab="thinking"><b>6</b><span>Thinking and modes of work</span></button><button type="button" role="tab" data-tab="accuracy"><b>7</b><span>Accuracy: fewer made-up answers</span></button><button type="button" role="tab" data-tab="iterate"><b>8</b><span>Templates, chains, and improving a prompt</span></button><button type="button" role="tab" data-tab="skeleton"><b>9</b><span>The skeleton of a complex prompt</span></button></div><section class="tab-panel" id="clear" data-tab-panel="clear"><h2 class="tab-title">1. The basics: clear, specific, and why</h2>
+<p>Anthropic advises thinking of Claude as a <strong>brilliant but new employee</strong>: it can do a lot, but it doesn't know your norms, your habits, or what “goes without saying.”</p>
+<h3 id="golden">The colleague test</h3>
+<p>Show your prompt to a colleague who knows nothing about the task and ask them to do it. If they get confused, so will Claude.</p>
+<h3 id="direct">Say directly what you need</h3>
 <div class="o-table-wrap"><table>
 <thead>
 <tr>
-<th>Слабее</th>
-<th>Сильнее</th>
+<th>Weaker</th>
+<th>Stronger</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>«Напиши письмо о задержке проекта»</td>
-<td>«Напиши письмо нашему корпоративному клиенту: интеграция задерживается на две недели из-за проверки безопасности, новый срок — 15 ноября. Тон спокойный, извиняющийся без лишнего. До 150 слов.»</td>
+<td>“Write an email about the project delay”</td>
+<td>“Write an email to our corporate client: the integration is delayed by two weeks because of a security review; the new deadline is 15 November. Calm tone, apologetic without overdoing it. Up to 150 words.”</td>
 </tr>
 <tr>
-<td>«Сделай анализ продаж»</td>
-<td>«Сравни продажи по продуктам за сентябрь и август. Нужны три главных изменения и их вероятные причины. Таблица и пять строк выводов для руководителя.»</td>
+<td>“Do a sales analysis”</td>
+<td>“Compare sales by product for September and August. I need the three biggest changes and their likely causes. A table and five lines of conclusions for my manager.”</td>
 </tr>
 </tbody>
 </table></div>
 <ul>
-<li>Укажите <strong>формат и ограничения</strong>: длину, структуру, язык.</li>
-<li>Если важен порядок или полнота — дайте <strong>шаги нумерованным списком</strong>.</li>
-<li>Хотите «с запасом», подробно, творчески — <strong>попросите явно</strong>: модель не станет делать больше, чем вы попросили.</li>
+<li>Specify the <strong>format and constraints</strong>: length, structure, language.</li>
+<li>If order or completeness matters, give <strong>the steps as a numbered list</strong>.</li>
+<li>If you want more than the minimum — detailed, creative — <strong>ask for it explicitly</strong>: the model won't do more than you asked.</li>
 </ul>
-<h3 id="describe">Три вещи, которые стоит описать</h3>
-<p>Курс AI Fluency выделяет три стороны описания задачи:</p>
+<h3 id="describe">Three things worth describing</h3>
+<p>The AI Fluency course names three aspects of describing a task:</p>
 <div class="rai-cards rai-cards--3">
-<article><h3>Что получить</h3><p>Результат, формат, адресат, стиль: «служебная записка на одну страницу для финансового директора».</p></article>
-<article><h3>Как подойти</h3><p>Порядок работы: «сначала выпиши цифры из отчёта, потом сравни с планом, потом сделай выводы».</p></article>
-<article><h3>Как себя вести</h3><p>Роль собеседника: «будь критичным, ищи слабые места», «отвечай коротко», «задавай вопросы, если чего-то не хватает».</p></article>
+<article><h3>What to get</h3><p>The result, the format, the reader, the style: “a one-page internal memo for the chief financial officer.”</p></article>
+<article><h3>How to approach it</h3><p>The order of work: “first copy out the figures from the report, then compare them with the plan, then draw conclusions.”</p></article>
+<article><h3>How to behave</h3><p>The role of your counterpart: “be critical, look for weak spots”, “answer briefly”, “ask questions if anything is missing.”</p></article>
 </div>
-<h3 id="why">Объясняйте зачем</h3>
-<p>Причина работает лучше запрета: Claude понимает смысл и сам переносит его на похожие случаи.</p>
+<h3 id="why">Explain why</h3>
+<p>A reason works better than a prohibition: Claude understands the point and carries it over to similar cases on its own.</p>
 <div class="o-table-wrap"><table>
 <thead>
 <tr>
-<th>Слабее</th>
-<th>Сильнее</th>
+<th>Weaker</th>
+<th>Stronger</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>«Никаких сокращений»</td>
-<td>«Текст прочитает клиент, который не знает наших внутренних терминов, поэтому пиши без сокращений и аббревиатур.»</td>
+<td>“No abbreviations”</td>
+<td>“This text will be read by a customer who doesn't know our internal terms, so write without abbreviations or acronyms.”</td>
 </tr>
 </tbody>
 </table></div>
-<p>Удобная форма из документации Anthropic:</p>
-<pre><code>Я работаю над [большая задача] для [кого].
-Им нужно [что даст результат].
-С учётом этого: [просьба].
+<p>A handy form from Anthropic's documentation:</p>
+<pre><code>I'm working on [the bigger task] for [whom].
+They need [what the result will give them].
+With that in mind: [the request].
 </code></pre>
-<p class="course-next"><a href="#examples">Next: Примеры: показать, а не описать →</a></p></section><section class="tab-panel" id="examples" data-tab-panel="examples"><h2 class="tab-title">2. Примеры: показать, а не описать</h2>
-<p>Примеры — <strong>один из самых надёжных способов</strong> задать формат, тон и структуру ответа. Описать стиль словами трудно, показать — легко.</p>
+<p class="course-next"><a href="#examples">Next: Examples: show, don't describe →</a></p></section><section class="tab-panel" id="examples" data-tab-panel="examples"><h2 class="tab-title">2. Examples: show, don't describe</h2>
+<p>Examples are <strong>one of the most reliable ways</strong> to set the format, tone, and structure of an answer. A style is hard to describe in words and easy to show.</p>
 <div class="rai-cards rai-cards--3">
-<article><h3>Похожие</h3><p>Близкие к настоящей задаче: те же документы, тот же адресат, та же сложность.</p></article>
-<article><h3>Разные</h3><p>Непохожие друг на друга, с пограничными случаями — иначе Claude перенимает случайную деталь: одинаковую длину, одно и то же начало.</p></article>
-<article><h3>Отделённые</h3><p>Явно помеченные как примеры, чтобы их не спутали с инструкцией: «Пример 1:» или метки &lt;example&gt;.</p></article>
+<article><h3>Relevant</h3><p>Close to the real task: the same kind of documents, the same reader, the same difficulty.</p></article>
+<article><h3>Varied</h3><p>Different from one another, including edge cases — otherwise Claude picks up an accidental detail: the same length, the same opening.</p></article>
+<article><h3>Set apart</h3><p>Clearly marked as examples so they aren't mistaken for instructions: “Example 1:” or &lt;example&gt; tags.</p></article>
 </div>
 <ul>
-<li><strong>Сколько:</strong> лучше всего — <strong>три–пять</strong> примеров.</li>
-<li><strong>Положительный пример сильнее запрета.</strong> Показать, как надо, работает лучше, чем перечислять, как не надо.</li>
-<li><strong>Попросите помощи:</strong> Claude может оценить, достаточно ли разные ваши примеры, или придумать ещё несколько по образцу.</li>
+<li><strong>How many:</strong> <strong>three to five</strong> examples work best.</li>
+<li><strong>A positive example beats a prohibition.</strong> Showing how to do it works better than listing how not to.</li>
+<li><strong>Ask for help:</strong> Claude can assess whether your examples are varied enough, or come up with a few more along the same lines.</li>
 </ul>
-<pre><code>Ответь клиенту в том же стиле, что и в примерах.
+<pre><code>Reply to the customer in the same style as in the examples.
 
 &lt;examples&gt;
 &lt;example&gt;
-Вопрос: Можно ли закрыть карту через приложение?
-Ответ: Да. Откройте карту → «Настройки» → «Закрыть карту». Остаток переведём на ваш счёт.
+Question: Can I close my card in the app?
+Answer: Yes. Open the card → “Settings” → “Close card”. We'll transfer the remaining balance to your account.
 &lt;/example&gt;
 &lt;example&gt;
-Вопрос: Почему не прошёл платёж?
-Ответ: Чаще всего из-за лимита по карте. Проверьте его в разделе «Карта» → «Лимиты». Если лимит не исчерпан — напишите нам, разберёмся.
+Question: Why didn't my payment go through?
+Answer: Most often it's because of the card limit. Check it under “Card” → “Limits”. If you haven't reached the limit, write to us and we'll sort it out.
 &lt;/example&gt;
 &lt;/examples&gt;
 
-Вопрос клиента: {вопрос}
+Customer question: {question}
 </code></pre>
-<p>Самый простой источник примеров — ваша собственная хорошая работа: два–три удачных письма, справки или ответа.</p>
-<p class="course-next"><a href="#structure">Next: Структура: роль, данные, инструкции →</a></p></section><section class="tab-panel" id="structure" data-tab-panel="structure"><h2 class="tab-title">3. Структура: роль, данные, инструкции</h2>
-<p>Когда в запросе смешаны инструкции, документы, примеры и вопрос, модель может принять часть документа за указание. Помогают две привычки.</p>
-<h3 id="role">Роль</h3>
-<p>Одна фраза в начале фокусирует тон и знания: «Ты — аналитик кредитных рисков. Объясняй коротко и без жаргона». Полезно назвать и аудиторию: «…для сотрудников отделений, не знакомых с методикой». Длинные «легенды» о роли современным моделям обычно не нужны — достаточно одного-двух предложений.</p>
-<h3 id="tags">Подписанные коробки для данных</h3>
-<p>Оберните каждую часть запроса в понятную метку — XML-теги, то есть слова в угловых скобках. Это как подписать коробки при переезде.</p>
+<p>The simplest source of examples is your own good work: two or three emails, summaries, or replies that turned out well.</p>
+<p class="course-next"><a href="#structure">Next: Structure: role, data, instructions →</a></p></section><section class="tab-panel" id="structure" data-tab-panel="structure"><h2 class="tab-title">3. Structure: role, data, instructions</h2>
+<p>When instructions, documents, examples, and the question are mixed together in a prompt, the model may take part of a document for an instruction. Two habits help.</p>
+<h3 id="role">Role</h3>
+<p>One sentence at the start focuses the tone and knowledge: “You are a credit risk analyst. Explain things briefly and without jargon.” It also helps to name the audience: “…for branch staff who aren't familiar with the methodology.” Current models usually don't need long role “backstories”: one or two sentences are enough.</p>
+<h3 id="tags">Labeled boxes for data</h3>
+<p>Wrap each part of the prompt in a clear tag — XML tags, that is, words in angle brackets. It's like labeling boxes when you move house.</p>
 <pre><code>&lt;instructions&gt;
-Сравни два договора и перечисли различия в условиях оплаты.
-Ответ — таблица: пункт, договор А, договор Б, чем это важно для нас.
+Compare the two contracts and list the differences in payment terms.
+Answer as a table: clause, contract A, contract B, why it matters for us.
 &lt;/instructions&gt;
 
 &lt;documents&gt;
   &lt;document index=&quot;1&quot;&gt;
-    &lt;source&gt;Договор А, ред. 2026&lt;/source&gt;
-    &lt;document_content&gt;…текст…&lt;/document_content&gt;
+    &lt;source&gt;Contract A, 2026 edition&lt;/source&gt;
+    &lt;document_content&gt;…text…&lt;/document_content&gt;
   &lt;/document&gt;
   &lt;document index=&quot;2&quot;&gt;
-    &lt;source&gt;Договор Б&lt;/source&gt;
-    &lt;document_content&gt;…текст…&lt;/document_content&gt;
+    &lt;source&gt;Contract B&lt;/source&gt;
+    &lt;document_content&gt;…text…&lt;/document_content&gt;
   &lt;/document&gt;
 &lt;/documents&gt;
 </code></pre>
 <ul>
-<li>Названия меток — понятные и одинаковые из запроса в запрос.</li>
-<li>Вкладывайте метки, когда части естественно вложены.</li>
-<li>Ссылайтесь на метки в инструкции: «по документу 1».</li>
+<li>Tag names should be clear and the same from prompt to prompt.</li>
+<li>Nest tags when the parts are naturally nested.</li>
+<li>Refer to the tags in your instructions: “based on document 1.”</li>
 </ul>
-<p>Метки — не обязательный синтаксис: для простой просьбы они не нужны. Они полезны, когда в запросе много частей.</p>
-<h3 id="safety">Это ещё и безопасность</h3>
-<p>Если документ пришёл извне — письмо, страница, файл клиента, — в нём может оказаться текст, похожий на команду. Явная граница «вот моя просьба, а вот вставленный документ» снижает риск <a class="term" href="../../../reference/vocabulary/index.html#prompt-injection" title="Текст во входных данных, который модель выполняет как инструкцию вопреки замыслу разработчика. Он может быть спрятан в документе, письме или веб-странице.">промпт-инъекции</a>.</p>
-<p class="course-next"><a href="#long">Next: Длинные документы →</a></p></section><section class="tab-panel" id="long" data-tab-panel="long"><h2 class="tab-title">4. Длинные документы</h2>
-<p>Claude читает очень длинные тексты: годовой отчёт, пакет договоров, десяток регламентов. Три приёма из документации Anthropic делают ответ точнее.</p>
+<p>Tags aren't required syntax: a simple request doesn't need them. They help when a prompt has many parts.</p>
+<h3 id="safety">It's also about security</h3>
+<p>If a document came from outside — an email, a web page, a customer's file — it may contain text that looks like a command. An explicit boundary between “here is my request” and “here is the pasted document” reduces the risk of <a class="term" href="../../../reference/vocabulary/index.html#prompt-injection" title="Text in the input that the model carries out as an instruction, against the developer’s intent. It can be hidden in a document, an email, or a web page.">prompt injection</a>.</p>
+<p class="course-next"><a href="#long">Next: Long documents →</a></p></section><section class="tab-panel" id="long" data-tab-panel="long"><h2 class="tab-title">4. Long documents</h2>
+<p>Claude reads very long texts: an annual report, a set of contracts, a dozen regulations. Three techniques from Anthropic's documentation make the answer more accurate.</p>
 <ol class="rai-flow">
-<li><b>Документы — вверху</b><span>сначала все материалы, а вопрос и инструкции — в самом конце</span></li>
-<li><b>У каждого — метка</b><span>с названием и источником, как в примере выше</span></li>
-<li><b>Сначала цитаты</b><span>потом ответ, опирающийся только на них</span></li>
+<li><b>Documents at the top</b><span>all the materials first, with the question and instructions at the very end</span></li>
+<li><b>Each with a tag</b><span>with a title and a source, as in the example above</span></li>
+<li><b>Quotes first</b><span>then an answer based only on them</span></li>
 </ol>
 <ul>
-<li><strong>Вопрос в конце</strong> — по тестам Anthropic это улучшает качество ответа до <strong>30 процентов</strong>, особенно когда документов несколько.</li>
-<li><strong>Цитаты сначала:</strong> «Сначала выпиши дословно фрагменты, которые относятся к вопросу. Затем ответь, опираясь только на них». Claude сосредотачивается на нужном, а вы проверяете ответ по цитатам — это и есть <a class="term" href="../../../reference/vocabulary/index.html#grounding" title="Привязка ответов модели к проверенным источникам, чтобы каждый ответ можно было перепроверить.">опора на источники</a>.</li>
-<li><strong>Называйте файлы осмысленно:</strong> «Отчёт_Q3_2026.pdf» Claude поймёт лучше, чем «document1.pdf».</li>
+<li><strong>The question at the end:</strong> in Anthropic's tests this improves answer quality by up to <strong>30 percent</strong>, especially when there are several documents.</li>
+<li><strong>Quotes first:</strong> “First, copy out word for word the passages that relate to the question. Then answer based only on them.” Claude focuses on what matters, and you check the answer against the quotes — this is what <a class="term" href="../../../reference/vocabulary/index.html#grounding" title="Tying a model’s answers to verified sources, so that every answer can be checked.">grounding</a> means.</li>
+<li><strong>Give files meaningful names:</strong> Claude will understand “Report_Q3_2026.pdf” better than “document1.pdf”.</li>
 </ul>
-<p class="course-next"><a href="#format">Next: Формат, объём и рамки задачи →</a></p></section><section class="tab-panel" id="format" data-tab-panel="format"><h2 class="tab-title">5. Формат, объём и рамки задачи</h2>
-<h3 id="positive">Говорите, что делать, а не чего не делать</h3>
+<p class="course-next"><a href="#format">Next: Format, length, and the scope of the task →</a></p></section><section class="tab-panel" id="format" data-tab-panel="format"><h2 class="tab-title">5. Format, length, and the scope of the task</h2>
+<h3 id="positive">Say what to do, not what not to do</h3>
 <div class="o-table-wrap"><table>
 <thead>
 <tr>
-<th>Слабее</th>
-<th>Сильнее</th>
+<th>Weaker</th>
+<th>Stronger</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>«Не используй списки»</td>
-<td>«Пиши связным текстом, абзацами»</td>
+<td>“Don't use lists”</td>
+<td>“Write in flowing prose, in paragraphs”</td>
 </tr>
 <tr>
-<td>«Не пиши длинно»</td>
-<td>«Не больше пяти предложений»</td>
+<td>“Don't make it long”</td>
+<td>“No more than five sentences”</td>
 </tr>
 <tr>
-<td>«Без вступлений»</td>
-<td>«Отвечай сразу по существу, первым предложением — вывод»</td>
+<td>“No introductions”</td>
+<td>“Get straight to the point; the first sentence is the conclusion”</td>
 </tr>
 </tbody>
 </table></div>
-<h3 id="match">Стиль запроса — стиль ответа</h3>
-<p>Если запрос весь в маркерах и выделениях, ответ, скорее всего, будет таким же. Хотите спокойный деловой текст — так и пишите запрос.</p>
-<h3 id="length">Объём</h3>
-<p>Современные модели Claude отвечают довольно кратко и могут пропускать итоговое резюме. Нужен подробный разбор — попросите. Нужно совсем коротко — назовите предел: «до 100 слов». Хорошее правило из документации: <strong>сначала результат</strong>, потом подробности; и <strong>понятность важнее краткости</strong> — сокращайте отбором содержания, а не телеграфным стилем.</p>
-<h3 id="verb">Действие или совет — решает глагол</h3>
-<p>«Можешь подсказать, как улучшить письмо?» — получите советы. «Перепиши письмо» — получите новое письмо. Выбирайте глагол под то, что вам нужно.</p>
-<h3 id="scope">Рамки задачи</h3>
+<h3 id="match">The style of the prompt sets the style of the answer</h3>
+<p>If the prompt is all bullets and highlighting, the answer will most likely be the same. If you want calm business prose, write the prompt that way.</p>
+<h3 id="length">Length</h3>
+<p>Current Claude models answer fairly briefly and may skip a closing summary. If you need a detailed analysis, ask for it. If you need something very short, set a limit: “up to 100 words.” A good rule from the documentation: <strong>the result first</strong>, then the details; and <strong>clarity matters more than brevity</strong> — shorten by choosing what to include, not by writing in telegram style.</p>
+<h3 id="verb">Action or advice: the verb decides</h3>
+<p>“Can you suggest how to improve this email?” gets you advice. “Rewrite this email” gets you a new email. Choose the verb that matches what you need.</p>
+<h3 id="scope">The scope of the task</h3>
 <ul>
-<li>Современные модели следуют указаниям <strong>буквально</strong>. Хотите, чтобы правило касалось всего документа, — скажите: «примени это ко всем разделам, а не только к первому».</li>
-<li>Просите только идеи — так и скажите: «дай варианты и остановись», иначе Claude может сразу начать делать.</li>
-<li>Не пишите заглавными «ОБЯЗАТЕЛЬНО» и «КРИТИЧЕСКИ ВАЖНО»: новые модели и так внимательны к инструкциям, а нажим приводит к перегибам.</li>
+<li>Current models follow instructions <strong>literally</strong>. If you want a rule to apply to the whole document, say so: “apply this to all sections, not just the first one.”</li>
+<li>If you want only ideas, say so: “give me options and stop”; otherwise Claude may start doing the work right away.</li>
+<li>Don't write “MUST” and “CRITICALLY IMPORTANT” in capitals: new models already pay close attention to instructions, and pressure leads to overcorrection.</li>
 </ul>
-<h3 id="strict">Если формат должен быть строгим</h3>
-<p>Для повторяющихся задач дайте шаблон ответа с метками или полями — например, «для каждого конкурента: сильные стороны, слабые стороны, наш ответ в 30 словах». Шаблон плюс пример — самый надёжный способ получать одинаковый результат каждый раз.</p>
-<p class="course-next"><a href="#thinking">Next: Размышления и режимы работы →</a></p></section><section class="tab-panel" id="thinking" data-tab-panel="thinking"><h2 class="tab-title">6. Размышления и режимы работы</h2>
-<p>Современные модели Claude <strong>сами решают, когда и сколько думать</strong>. На самых новых моделях размышление включено всегда, а его глубину задаёт уровень усилия.</p>
-<h3 id="effort">Уровень усилия в приложении</h3>
+<h3 id="strict">If the format has to be strict</h3>
+<p>For recurring tasks, give an answer template with tags or fields — for example, “for each competitor: strengths, weaknesses, our response in 30 words.” A template plus an example is the most reliable way to get the same kind of result every time.</p>
+<p class="course-next"><a href="#thinking">Next: Thinking and modes of work →</a></p></section><section class="tab-panel" id="thinking" data-tab-panel="thinking"><h2 class="tab-title">6. Thinking and modes of work</h2>
+<p>Current Claude models <strong>decide for themselves when and how much to think</strong>. On the newest models thinking is always on, and the effort level sets how deep it goes.</p>
+<h3 id="effort">The effort level in the app</h3>
 <div class="o-table-wrap"><table>
 <thead>
 <tr>
-<th>Уровень</th>
-<th>Когда</th>
+<th>Level</th>
+<th>When</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Low, Medium</td>
-<td>рутина: перевод, переформулировка, короткие ответы; экономит лимит</td>
+<td>routine work: translating, rephrasing, short answers; saves your limit</td>
 </tr>
 <tr>
 <td>High</td>
-<td>лучший баланс для большинства задач</td>
+<td>the best balance for most tasks</td>
 </tr>
 <tr>
 <td>Xhigh, Max</td>
-<td>сложные расчёты, глубокий анализ документов, многошаговое планирование</td>
+<td>complex calculations, in-depth document analysis, multi-step planning</td>
 </tr>
 </tbody>
 </table></div>
-<p>Уровень усилия задаёт, насколько глубоко модель размышляет перед ответом. Модель и уровень выбираются рядом с кнопкой отправки сообщения; какие из них доступны вам, зависит от плана и настроек организации. Повышайте уровень для расчётов, детального анализа документов и сложного планирования — это надёжнее, чем уговаривать модель «думать лучше» в тексте запроса.</p>
-<h3 id="how-think">Как просить подумать</h3>
+<p>The effort level controls how deeply the model thinks before answering. You choose the model and the level next to the send button; which of them you have depends on your plan and your organization's settings. Raise the level for calculations, detailed document analysis, and complex planning — this is more reliable than coaxing the model to “think harder” in the text of the prompt.</p>
+<h3 id="how-think">How to ask it to think</h3>
 <ul>
-<li>Короткая общая установка — «подумай тщательно, прежде чем ответить» — обычно работает лучше расписанного по шагам плана рассуждений.</li>
-<li><strong>Не просите выписывать рассуждения</strong> в отдельный блок: на новых моделях такая просьба может быть отклонена, а размышления и так происходят.</li>
-<li><strong>Самопроверка:</strong> «Прежде чем закончить, проверь ответ по этим критериям: …» — полезная последняя строка запроса.</li>
+<li>A short general instruction — “think carefully before you answer” — usually works better than a step-by-step reasoning plan.</li>
+<li><strong>Don't ask for the reasoning to be written out</strong> in a separate block: on new models such a request may be declined, and the thinking happens anyway.</li>
+<li><strong>Self-check:</strong> “Before you finish, check your answer against these criteria: …” is a useful last line for a prompt.</li>
 </ul>
-<h3 id="modes">Поиск, размышление или исследование</h3>
+<h3 id="modes">Search, thinking, or research</h3>
 <div class="rai-cards rai-cards--3">
-<article><h3>Веб-поиск</h3><p>Простой фактический вопрос, где важна свежесть: курс валют, новость, текущее правило.</p></article>
-<article><h3>Размышление</h3><p>Сложное рассуждение без свежих данных: расчёт, разбор договора, логика решения.</p></article>
-<article><h3>Исследование</h3><p>Отчёт по пяти и более источникам: обзор рынка, сравнение подходов регуляторов.</p></article>
+<article><h3>Web search</h3><p>A simple factual question where freshness matters: an exchange rate, a news item, a current rule.</p></article>
+<article><h3>Thinking</h3><p>Complex reasoning that doesn't need fresh data: a calculation, a review of a contract, the logic of a decision.</p></article>
+<article><h3>Research</h3><p>A report drawing on five or more sources: a market overview, a comparison of regulators' approaches.</p></article>
 </div>
-<p>Если ваша организация отключила поиск, работайте с документами, которые даёте сами.</p>
-<p class="course-next"><a href="#accuracy">Next: Точность: меньше выдумок →</a></p></section><section class="tab-panel" id="accuracy" data-tab-panel="accuracy"><h2 class="tab-title">7. Точность: меньше выдумок</h2>
-<p>Модель старается ответить всегда — даже когда ответа не знает. Так появляется <a class="term" href="../../../reference/vocabulary/index.html#hallucination" title="Гладкий, уверенный и ошибочный результат модели: несуществующий факт, число или ссылка. Её ещё называют конфабуляцией.">галлюцинация</a>. Полностью её не исключить, но сильно уменьшить — можно.</p>
+<p>If your organization has turned search off, work with the documents you provide yourself.</p>
+<p class="course-next"><a href="#accuracy">Next: Accuracy: fewer made-up answers →</a></p></section><section class="tab-panel" id="accuracy" data-tab-panel="accuracy"><h2 class="tab-title">7. Accuracy: fewer made-up answers</h2>
+<p>A model always tries to answer, even when it doesn't know the answer. That's how a <a class="term" href="../../../reference/vocabulary/index.html#hallucination" title="A smooth, confident, and wrong model output: a fact, figure, or reference that doesn’t exist. It is also called confabulation.">hallucination</a> happens. You can't rule it out completely, but you can greatly reduce it.</p>
 <ol class="rai-principles">
-<li><b>Разрешите сказать «не знаю»</b><span>«Если в отчёте не хватает данных для вывода — так и напиши: „недостаточно данных“, не додумывай».</span></li>
-<li><b>Ограничьте источники</b><span>«Отвечай только по приложенным документам, а не по общим знаниям».</span></li>
-<li><b>Сначала цитаты</b><span>«Выпиши дословные фрагменты; если их нет — напиши „подходящих цитат нет“. Анализ — только по выписанным цитатам».</span></li>
-<li><b>Проверка по источникам</b><span>«Для каждого утверждения найди подтверждающую цитату. Если не нашёл — удали утверждение и отметь место».</span></li>
-<li><b>Уверенность и источник</b><span>«Для каждого вывода укажи источник и насколько ты уверен».</span></li>
-<li><b>Свежие факты — через поиск</b><span>Тарифы, требования, ставки, правила меняются. Если поиск включён: «Проверь поиском всё, что могло измениться: что разрешено, что требуется, сколько стоит — даже если уверен».</span></li>
-<li><b>Два прогона</b><span>Задайте один и тот же запрос дважды в новых разговорах. Где ответы расходятся — там, вероятно, выдумка.</span></li>
+<li><b>Allow it to say “I don't know”</b><span>“If the report doesn't have enough data for a conclusion, say so — ‘not enough data’ — and don't fill in the gaps.”</span></li>
+<li><b>Limit the sources</b><span>“Answer only from the attached documents, not from general knowledge.”</span></li>
+<li><b>Quotes first</b><span>“Copy out the passages word for word; if there are none, write ‘no relevant quotes’. Base the analysis only on the quotes you copied out.”</span></li>
+<li><b>Check against the sources</b><span>“For each statement, find a supporting quote. If you can't find one, remove the statement and mark the spot.”</span></li>
+<li><b>Confidence and source</b><span>“For each conclusion, give the source and say how confident you are.”</span></li>
+<li><b>Fresh facts through search</b><span>Fees, requirements, rates, and rules change. If search is turned on: “Use search to check anything that might have changed — what's allowed, what's required, what it costs — even if you're sure.”</span></li>
+<li><b>Two runs</b><span>Ask the same prompt twice in new conversations. Where the answers differ, something is probably made up.</span></li>
 </ol>
-<p>Эти приёмы снижают ошибки, но не отменяют проверки: цифры, даты, названия и ссылки, которые уйдут клиенту, руководителю или регулятору, сверяйте сами. Подробно — <a href="../checking-results/index.html">Как проверять результат AI</a>.</p>
-<h3 id="quoting">Внимание к цитированию</h3>
-<p>В сводках модель иногда переносит фразы источника без кавычек. Если важно отличать цитату от пересказа (например, в материалах для комплаенса), скажите это прямо и покажите пример правильного оформления.</p>
-<p class="course-next"><a href="#iterate">Next: Шаблоны, цепочки и улучшение запроса →</a></p></section><section class="tab-panel" id="iterate" data-tab-panel="iterate"><h2 class="tab-title">8. Шаблоны, цепочки и улучшение запроса</h2>
-<h3 id="template">Шаблон с переменными</h3>
-<p>Шаблон — это сохранённый запрос для задачи, которая повторяется каждую неделю или месяц. В нём есть <strong>постоянная часть</strong> — роль, правила, формат — и <strong>переменные</strong>: то, что меняется каждый раз, например документ, период или тема. Постоянную часть сохраните, а переменные подставляйте каждый раз в метках, чтобы было видно, где они начинаются и заканчиваются. В примере ниже переменные — в фигурных скобках.</p>
-<pre><code>Ты готовишь краткую справку для руководителя.
-&lt;report&gt;{ТЕКСТ ОТЧЁТА}&lt;/report&gt;
-&lt;period&gt;{ПЕРИОД}&lt;/period&gt;
-Сделай справку по шаблону: три главных изменения, риски, что предложить.
+<p>These techniques reduce errors but don't replace checking: check figures, dates, names, and references that will go to a customer, a manager, or a regulator yourself. For details, see <a href="../checking-results/index.html">How to check AI output</a>.</p>
+<h3 id="quoting">Careful quoting</h3>
+<p>In summaries the model sometimes carries phrases over from the source without quotation marks. If it matters to tell a quote from a paraphrase (for example, in materials for compliance), say so directly and show an example of the correct formatting.</p>
+<p class="course-next"><a href="#iterate">Next: Templates, chains, and improving a prompt →</a></p></section><section class="tab-panel" id="iterate" data-tab-panel="iterate"><h2 class="tab-title">8. Templates, chains, and improving a prompt</h2>
+<h3 id="template">A template with variables</h3>
+<p>A template is a saved prompt for a task that comes up every week or month. It has a <strong>fixed part</strong> — the role, the rules, the format — and <strong>variables</strong>: what changes each time, such as the document, the period, or the topic. Save the fixed part and fill in the variables each time inside tags, so it's clear where they start and end. In the example below the variables are in curly braces.</p>
+<pre><code>You are preparing a brief summary for a manager.
+&lt;report&gt;{REPORT TEXT}&lt;/report&gt;
+&lt;period&gt;{PERIOD}&lt;/period&gt;
+Write the summary using this template: the three main changes, the risks, what to propose.
 </code></pre>
-<p>Ещё пример — еженедельная сводка обращений: «Ты — аналитик контакт-центра. Вот обезличенная выгрузка обращений за неделю в &lt;data&gt;. Сгруппируй по темам, покажи пять самых частых, сравни с прошлой неделей из &lt;previous&gt;. Если тему определить нельзя, отнеси обращение в „Прочее“ и не додумывай».</p>
-<p>Сохранить такой шаблон удобно в <a href="../claude-projects/index.html">проекте</a> или превратить в <a href="../skills-complete-guide/index.html">навык</a>.</p>
-<h3 id="chain">Цепочка: черновик → проверка → доработка</h3>
-<p>Большую задачу лучше разбить на шаги, где каждый — отдельный запрос с одной целью. Главный образец из документации — самокоррекция:</p>
+<p>Another example is a weekly summary of customer requests: “You are a contact center analyst. Here is an anonymized export of the week's customer requests in &lt;data&gt;. Group them by topic, show the five most frequent, and compare with the previous week in &lt;previous&gt;. If a topic can't be determined, put the request under ‘Other’ and don't guess.”</p>
+<p>It's convenient to save such a template in a <a href="../claude-projects/index.html">project</a> or turn it into a <a href="../skills-complete-guide/index.html">skill</a>.</p>
+<h3 id="chain">A chain: draft → review → revise</h3>
+<p>A big task is better split into steps, where each one is a separate prompt with one goal. The main pattern from the documentation is self-correction:</p>
 <ol class="rai-flow">
-<li><b>Черновик</b><span>«напиши справку по данным»</span></li>
-<li><b>Проверка</b><span>«вот справка и исходные данные: найди ошибки и неподтверждённые утверждения»</span></li>
-<li><b>Доработка</b><span>«исправь справку по замечаниям»</span></li>
+<li><b>Draft</b><span>“write a summary from the data”</span></li>
+<li><b>Review</b><span>“here is the summary and the source data: find errors and unsupported statements”</span></li>
+<li><b>Revise</b><span>“fix the summary based on the comments”</span></li>
 </ol>
-<p>Совет для проверок: просите найти <strong>всё</strong>, а важное отбирайте отдельным шагом. Если сразу просить «только серьёзные проблемы», модель буквально сообщит меньше и может пропустить нужное.</p>
-<h3 id="improve">Как улучшать запрос</h3>
+<p>A tip for reviews: ask it to find <strong>everything</strong>, and pick out what matters in a separate step. If you ask for “only serious problems” right away, the model will take you literally, report less, and may miss something you need.</p>
+<h3 id="improve">How to improve a prompt</h3>
 <ol>
-<li><strong>Определите, что такое «хорошо»</strong> — конкретно и проверяемо: «таблица из пяти колонок, все цифры с источником», а не «качественная справка».</li>
-<li><strong>Соберите 5–10 примеров</strong> своей прошлой работы по этой задаче.</li>
-<li><strong>Прогоните запрос</strong> на этих примерах и сравните с тем, как сделали бы вы.</li>
-<li><strong>Доработайте</strong> запрос по найденным расхождениям. Начинайте с простого и добавляйте приёмы только по необходимости.</li>
-<li><strong>Попросите Claude помочь:</strong> «Вот мой запрос и что получилось. Как улучшить запрос, чтобы результат был таким: …» — простой и сильный приём.</li>
+<li><strong>Define what “good” means</strong> — specifically and verifiably: “a five-column table, every figure with a source”, not “a quality summary.”</li>
+<li><strong>Collect 5–10 examples</strong> of your past work on this task.</li>
+<li><strong>Run the prompt</strong> on these examples and compare the results with how you would have done it.</li>
+<li><strong>Refine</strong> the prompt based on the differences you find. Start simple and add techniques only when needed.</li>
+<li><strong>Ask Claude for help:</strong> “Here is my prompt and what I got. How can I improve the prompt so the result looks like this: …” — a simple and powerful technique.</li>
 </ol>
-<p>Первый запрос — начало разговора, а не окончательная просьба: уточнять по ходу нормально.</p>
-<h3 id="try">Попробуйте сейчас: шаблон для своей задачи</h3>
+<p>Your first prompt is the start of a conversation, not a final request: refining as you go is normal.</p>
+<h3 id="try">Try it now: a template for your own task</h3>
 <ol>
-<li>Выберите задачу, которую делаете каждую неделю: сводку, отчёт, протокол совещания, проверку документов по чек-листу.</li>
-<li>Напишите запрос по каркасу из вкладки 9 и отметьте переменные в фигурных скобках.</li>
-<li>Возьмите 5–10 прошлых случаев этой задачи — без персональных данных — и прогоните на них шаблон.</li>
-<li>Сравните с тем, что сделали тогда вы, запишите расхождения и поправьте шаблон.</li>
+<li>Choose a task you do every week: a summary, a report, meeting minutes, checking documents against a checklist.</li>
+<li>Write a prompt following the skeleton in tab 9 and mark the variables in curly braces.</li>
+<li>Take 5–10 past cases of this task — without personal data — and run the template on them.</li>
+<li>Compare the results with what you did at the time, note the differences, and adjust the template.</li>
 </ol>
-<p class="course-next"><a href="#skeleton">Next: Каркас сложного запроса →</a></p></section><section class="tab-panel" id="skeleton" data-tab-panel="skeleton"><h2 class="tab-title">9. Каркас сложного запроса</h2>
-<p>Для серьёзной задачи — анализа, отчёта, регулярного процесса — удобно идти по каркасу из учебника Anthropic.</p>
+<p class="course-next"><a href="#skeleton">Next: The skeleton of a complex prompt →</a></p></section><section class="tab-panel" id="skeleton" data-tab-panel="skeleton"><h2 class="tab-title">9. The skeleton of a complex prompt</h2>
+<p>For a serious task — an analysis, a report, a recurring process — it helps to follow the skeleton from Anthropic's tutorial.</p>
 <ol class="rai-principles">
-<li><b>Роль и контекст</b><span>Кто ты и для чего эта работа.</span></li>
-<li><b>Тон</b><span>Как говорить с адресатом.</span></li>
-<li><b>Задача и правила</b><span>Что сделать, что важно, что делать, если ответа нет.</span></li>
-<li><b>Примеры</b><span>Один–пять образцов хорошего результата.</span></li>
-<li><b>Данные</b><span>Документы и входные сведения — в метках.</span></li>
-<li><b>Сама просьба</b><span>Ближе к концу, после данных.</span></li>
-<li><b>Формат ответа</b><span>Структура, объём, порядок.</span></li>
+<li><b>Role and context</b><span>Who you are and what this work is for.</span></li>
+<li><b>Tone</b><span>How to speak to the reader.</span></li>
+<li><b>Task and rules</b><span>What to do, what matters, what to do if there's no answer.</span></li>
+<li><b>Examples</b><span>One to five samples of a good result.</span></li>
+<li><b>Data</b><span>Documents and input information, in tags.</span></li>
+<li><b>The request itself</b><span>Near the end, after the data.</span></li>
+<li><b>Answer format</b><span>Structure, length, order.</span></li>
 </ol>
-<p>Сначала добейтесь хорошего результата с полным каркасом, потом уберите лишнее.</p>
-<h3 id="full-example">Пример целиком</h3>
-<pre><code>Ты — финансовый аналитик. Готовишь материал для правления.
-Пиши деловым языком, без жаргона: читатели — не финансисты.
+<p>First get a good result with the full skeleton, then remove what isn't needed.</p>
+<h3 id="full-example">A complete example</h3>
+<pre><code>You are a financial analyst preparing material for the Management Board.
+Write in business language, without jargon: the readers are not finance specialists.
 
-Задача: по квартальному отчёту подготовь справку на одну страницу.
-Если для вывода не хватает данных — так и напиши, не додумывай.
-Цифры бери только из отчёта; для каждой укажи раздел, откуда она.
+Task: prepare a one-page summary based on the quarterly report.
+If there isn't enough data for a conclusion, say so and don't fill in the gaps.
+Take figures only from the report; for each one, give the section it comes from.
 
 &lt;example&gt;
-Выручка выросла на 12% (раздел 2.1) за счёт розничного кредитования…
+Revenue grew by 12% (section 2.1) thanks to retail lending…
 &lt;/example&gt;
 
 &lt;report&gt;
-{ТЕКСТ КВАРТАЛЬНОГО ОТЧЁТА}
+{QUARTERLY REPORT TEXT}
 &lt;/report&gt;
 
-Сделай справку: 1) три главных изменения квартала; 2) два риска;
-3) что предложить правлению. Каждый пункт — 2–3 предложения.
-Перед тем как закончить, проверь: у каждой цифры есть ссылка на раздел.
+Write the summary: 1) the three main changes in the quarter; 2) two risks;
+3) what to propose to the Board. Each point is 2–3 sentences.
+Before you finish, check that every figure has a section reference.
 </code></pre>
-<h3 id="learn">Где учиться дальше</h3>
+<h3 id="learn">Where to learn more</h3>
 <ul>
-<li>Интерактивный учебник Anthropic по запросам — девять глав с упражнениями, от структуры запроса до сложных задач; там есть и упражнение для финансовых услуг. Учебник написан для прежних моделей: где он расходится с этим руководством, верно это руководство.</li>
-<li>Курсы Claude 101 и AI Fluency — уроки «Getting better results» и «Effective prompting techniques».</li>
-<li>Все ссылки — в Справочнике: <a href="../../../reference/anthropic/index.html">Обучение Anthropic</a>.</li>
+<li>Anthropic's interactive prompting tutorial: nine chapters with exercises, from the structure of a prompt to complex tasks; it includes an exercise for financial services. The tutorial was written for earlier models: where it differs from this guide, this guide is right.</li>
+<li>The Claude 101 and AI Fluency courses: the lessons “Getting better results” and “Effective prompting techniques”.</li>
+<li>All the links are in the Reference section: <a href="../../../reference/anthropic/index.html">Anthropic learning</a>.</li>
 </ul>
 </section></div>
-<nav class="lm-walk lm-walk--bottom lm-walk--l4" data-walk="prompting" aria-label="Step 10 of 12 on the “Запросы к Claude” map"><div class="lm-walk__head"><a class="lm-walk__map" href="../../maps/prompting/index.html#step-10" data-map="prompting">Learning map: <b>Запросы к Claude</b></a><span class="lm-walk__pos">Step <b>10</b> of 12 · level 4, эксперт</span></div><ol class="lm-walk__dots" aria-label="Map steps"><li><a class="lm-dot lm-dot--l1" href="../writing-a-task/index.html" data-map="prompting" data-dot-step="prompting|writing-a-task#" title="Step 1. Как поставить задачу ассистенту">1</a></li><li><a class="lm-dot lm-dot--l1" href="../prompt-clear-and-direct/index.html" data-map="prompting" data-dot-step="prompting|prompt-clear-and-direct#" title="Step 2. Пишите ясно и объясняйте зачем">2</a></li><li><a class="lm-dot lm-dot--l1" href="../prompt-examples/index.html" data-map="prompting" data-dot-step="prompting|prompt-examples#" title="Step 3. Покажите пример">3</a></li><li class="lm-dot-gap"><a class="lm-dot lm-dot--l2" href="../prompt-structure/index.html" data-map="prompting" data-dot-step="prompting|prompt-structure#" title="Step 4. Роль и структура: разделите инструкции и данные">4</a></li><li><a class="lm-dot lm-dot--l2" href="../prompt-output-format/index.html" data-map="prompting" data-dot-step="prompting|prompt-output-format#" title="Step 5. Формат ответа: просите то, что нужно">5</a></li><li><a class="lm-dot lm-dot--l2" href="../prompt-long-documents/index.html" data-map="prompting" data-dot-step="prompting|prompt-long-documents#" title="Step 6. Длинные документы: сначала текст, потом вопрос">6</a></li><li class="lm-dot-gap"><a class="lm-dot lm-dot--l3" href="../prompt-thinking/index.html" data-map="prompting" data-dot-step="prompting|prompt-thinking#" title="Step 7. Дайте подумать: размышление и уровень усилия">7</a></li><li><a class="lm-dot lm-dot--l3" href="../prompt-fewer-hallucinations/index.html" data-map="prompting" data-dot-step="prompting|prompt-fewer-hallucinations#" title="Step 8. Как снизить выдумки">8</a></li><li><a class="lm-dot lm-dot--l3" href="../prompt-chains/index.html" data-map="prompting" data-dot-step="prompting|prompt-chains#" title="Step 9. Большую задачу — цепочкой запросов">9</a></li><li class="lm-dot-gap"><a class="lm-dot lm-dot--l4 is-here" href="index.html" data-map="prompting" data-dot-step="prompting|prompting-complete-guide#" title="Step 10. Как писать запросы к Claude: полное руководство" aria-current="step">10</a></li><li><a class="lm-dot lm-dot--l4" href="../../maps/prompting/index.html#step-11" data-map="prompting" data-dot-step="prompting|https://platform.claude.com/docs/ru/build-with-claude/prompt-engineering/claude-prompting-best-practices" title="Step 11. Лучшие практики составления подсказок — документация на русском">11</a></li><li><a class="lm-dot lm-dot--l4" href="../../maps/prompting/index.html#step-12" data-map="prompting" data-dot-step="prompting|https://github.com/anthropics/prompt-eng-interactive-tutorial" title="Step 12. Интерактивный учебник Anthropic по запросам">12</a></li></ol><div class="lm-walk__done" data-step="prompting|prompting-complete-guide#"><div><p><b>After this step you can:</b> строить сложный запрос по каркасу и улучшать его на 5–10 примерах.</p><p><b>Try this:</b> Сделайте шаблон для своей еженедельной задачи и проверьте на прошлых примерах.</p></div><button type="button" class="lm-walk__check" data-step-toggle aria-pressed="false"><span class="is-off">Mark step as done</span><span class="is-on">Step done ✓</span></button></div><div class="lm-walk__moves"><a class="lm-walk__prev" href="../prompt-chains/index.html" data-map="prompting"><small>← Back · step 9 · guide</small><span>Большую задачу — цепочкой запросов</span></a><a class="lm-walk__next" href="../../maps/prompting/index.html#step-11" data-map="prompting"><small>Next · step 11 · Anthropic documentation in Russian →</small><span>Лучшие практики составления подсказок — документация на русском</span></a></div></nav>
-<p class="kb-source">Based on: <a href="https://platform.claude.com/docs/ru/build-with-claude/prompt-engineering/claude-prompting-best-practices">Лучшие практики составления подсказок — документация платформы Claude</a> — the official Anthropic documentation in Russian. This page is a short summary with our own examples.</p>
+<nav class="lm-walk lm-walk--bottom lm-walk--l4" data-walk="prompting" aria-label="Step 10 of 12 on the “Prompting Claude” map"><div class="lm-walk__head"><a class="lm-walk__map" href="../../maps/prompting/index.html#step-10" data-map="prompting">Learning map: <b>Prompting Claude</b></a><span class="lm-walk__pos">Step <b>10</b> of 12 · level 4, expert</span></div><ol class="lm-walk__dots" aria-label="Map steps"><li><a class="lm-dot lm-dot--l1" href="../writing-a-task/index.html" data-map="prompting" data-dot-step="prompting|writing-a-task#" title="Step 1. How to give the assistant a task">1</a></li><li><a class="lm-dot lm-dot--l1" href="../prompt-clear-and-direct/index.html" data-map="prompting" data-dot-step="prompting|prompt-clear-and-direct#" title="Step 2. Be clear and explain why">2</a></li><li><a class="lm-dot lm-dot--l1" href="../prompt-examples/index.html" data-map="prompting" data-dot-step="prompting|prompt-examples#" title="Step 3. Show an example">3</a></li><li class="lm-dot-gap"><a class="lm-dot lm-dot--l2" href="../prompt-structure/index.html" data-map="prompting" data-dot-step="prompting|prompt-structure#" title="Step 4. Role and structure: separate instructions from data">4</a></li><li><a class="lm-dot lm-dot--l2" href="../prompt-output-format/index.html" data-map="prompting" data-dot-step="prompting|prompt-output-format#" title="Step 5. Answer format: ask for what you need">5</a></li><li><a class="lm-dot lm-dot--l2" href="../prompt-long-documents/index.html" data-map="prompting" data-dot-step="prompting|prompt-long-documents#" title="Step 6. Long documents: text first, question last">6</a></li><li class="lm-dot-gap"><a class="lm-dot lm-dot--l3" href="../prompt-thinking/index.html" data-map="prompting" data-dot-step="prompting|prompt-thinking#" title="Step 7. Let it think: thinking and effort level">7</a></li><li><a class="lm-dot lm-dot--l3" href="../prompt-fewer-hallucinations/index.html" data-map="prompting" data-dot-step="prompting|prompt-fewer-hallucinations#" title="Step 8. How to reduce made-up answers">8</a></li><li><a class="lm-dot lm-dot--l3" href="../prompt-chains/index.html" data-map="prompting" data-dot-step="prompting|prompt-chains#" title="Step 9. A big task as a chain of prompts">9</a></li><li class="lm-dot-gap"><a class="lm-dot lm-dot--l4 is-here" href="index.html" data-map="prompting" data-dot-step="prompting|prompting-complete-guide#" title="Step 10. How to write prompts for Claude: the complete guide" aria-current="step">10</a></li><li><a class="lm-dot lm-dot--l4" href="../../maps/prompting/index.html#step-11" data-map="prompting" data-dot-step="prompting|https://platform.claude.com/docs/ru/build-with-claude/prompt-engineering/claude-prompting-best-practices" title="Step 11. Prompting best practices">11</a></li><li><a class="lm-dot lm-dot--l4" href="../../maps/prompting/index.html#step-12" data-map="prompting" data-dot-step="prompting|https://github.com/anthropics/prompt-eng-interactive-tutorial" title="Step 12. Anthropic&#x27;s interactive prompting tutorial">12</a></li></ol><div class="lm-walk__done" data-step="prompting|prompting-complete-guide#"><div><p><b>After this step you can:</b> build a complex prompt from a framework and improve it on 5–10 examples.</p><p><b>Try this:</b> Make a template for one of your weekly tasks and test it on past examples.</p></div><button type="button" class="lm-walk__check" data-step-toggle aria-pressed="false"><span class="is-off">Mark step as done</span><span class="is-on">Step done ✓</span></button></div><div class="lm-walk__moves"><a class="lm-walk__prev" href="../prompt-chains/index.html" data-map="prompting"><small>← Back · step 9 · guide</small><span>A big task as a chain of prompts</span></a><a class="lm-walk__next" href="../../maps/prompting/index.html#step-11" data-map="prompting"><small>Next · step 11 · Anthropic documentation, EN →</small><span>Prompting best practices</span></a></div></nav>
+<p class="kb-source">Based on: <a href="https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices">Prompting best practices — Claude Platform documentation</a> — Anthropic, in English. This page is a short summary with our own examples.</p>
 </article></div></div>
 </main>
 <footer class="o-footbar">
@@ -477,7 +477,7 @@ Question or comment:
 <button type="button" class="pagefb" data-dialog="fb" aria-haspopup="dialog"><span>Page feedback</span><span>ID: PR4SS</span></button></div>
 </footer>
 </div>
-<dialog id="fb" class="fb" aria-labelledby="fb-t" data-subject="Competence Hub [PR4SS]: page feedback" data-ref="PR4SS" data-page="Как писать запросы к Claude: полное руководство">
+<dialog id="fb" class="fb" aria-labelledby="fb-t" data-subject="Competence Hub [PR4SS]: page feedback" data-ref="PR4SS" data-page="How to write prompts for Claude: the complete guide">
   <form method="dialog">
     <div class="fb-head"><h2 id="fb-t">Page feedback</h2><code>ID: PR4SS</code></div>
     <div class="fb-body"><p>Leave feedback on the content of this page: <a data-mail href="mailto:talimbayev@obank.kg">feedback</a>.</p><button class="oc-button" value="close">Close</button></div>

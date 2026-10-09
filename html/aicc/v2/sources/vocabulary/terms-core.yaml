@@ -1,219 +1,307 @@
 - id: funnel
   ru: воронка
   en: funnel
+  term_en: "funnel"
   definition: "Входной уровень: сюда попадают все предложения и потребности, пока их не разобрали и не выбрали, что делать дальше."
+  definition_en: "The entry level: every proposal and need lands here until it has been reviewed and a decision made on what to do next."
 
 - id: portfolio
   ru: портфель
   en: portfolio
+  term_en: "portfolio"
   definition: "Уровень, на котором выбранные предложения становятся инициативами и получают место в очереди на работу."
+  definition_en: "The level at which the selected proposals become initiatives and get a place in the queue for work."
 
 - id: program
   ru: программа
   en: program
+  term_en: "program"
   definition: "Уровень, на котором инициатива раскладывается на возможности и функции, а работа идёт короткими итерациями."
+  definition_en: "The level at which an initiative is broken down into Capabilities and Features, and the work runs in short iterations."
 
 - id: team-level
   ru: командный уровень
   en: team level
+  term_en: "team level"
   definition: "Уровень повседневной работы команд. Он живёт в Jira, Хаб на него только ссылается."
+  definition_en: "The level of the teams’ day-to-day work. It lives in Jira; the Hub only links to it."
 
 - id: initiative
   ru: инициатива
   en: initiative
+  term_en: "initiative"
   definition: "Работа, которая приносит новый результат и требует отдельного решения о старте. Всё, что крупнее небольшой повторяющейся задачи."
+  definition_en: "Work that brings a new result and needs its own start decision. Anything bigger than a small recurring task."
 
 - id: capability
   ru: Capability
   en: capability
+  term_en: "Capability"
   definition: "Крупный кусок результата инициативы, который можно показать и проверить. Состоит из функций."
+  definition_en: "A large piece of an initiative’s result that can be shown and checked. It is made up of Features."
 
 - id: feature
   ru: Feature
   en: feature
+  term_en: "Feature"
   definition: "Небольшая законченная часть возможности, которую команда делает за одну итерацию."
+  definition_en: "A small, complete part of a Capability that a team builds in one iteration."
 
 - id: project-card
   ru: карточка проекта
   en: project card
+  term_en: "project card"
   definition: "Живая запись о проекте: что делаем, зачем, кто отвечает, на каком этапе. Её ведёт руководитель проекта, сайт показывает её как есть."
+  definition_en: "A living record of a project: what we are doing, why, who is responsible, and at what stage. The project manager keeps it, and the site shows it as it is."
 
 - id: project-profile
   ru: профиль проекта
   en: project profile
+  term_en: "project profile"
   definition: "Готовое описание вида работы: как он устроен, какие этапы проходит, какие нужны роли и что принято проверять."
+  definition_en: "A ready-made description of a kind of work: how it is organized, which stages it goes through, which roles it needs, and what is usually checked."
 
 - id: run-rate
   ru: текущая работа
   en: run-rate work
+  term_en: "run-rate work"
   definition: "Небольшая повторяющаяся работа, которая выполняется в рамках одной итерации по понятному шаблону."
+  definition_en: "Small recurring work that is done within one iteration to a clear template."
 
 - id: urgent
   ru: срочная работа
   en: urgent work
+  term_en: "urgent work"
   definition: "Работа, которую нельзя отложить: её берут вне очереди и сразу сообщают, что из-за неё сдвинулось."
+  definition_en: "Work that can’t be put off: it is taken out of turn, and what it pushed back is reported right away."
 
 - id: class-of-service
   ru: класс обслуживания
   en: class of service
+  term_en: "class of service"
   definition: "Способ работы с задачей по её срочности и размеру: текущая работа, инициатива или срочная работа."
+  definition_en: "A way of handling a piece of work by its urgency and size: run-rate work, an initiative, or urgent work."
 
 - id: business-owner
   ru: бизнес-владелец
   en: business owner
+  term_en: "business owner"
   definition: "Человек из подразделения, которому нужен результат. Отвечает за то, зачем делаем, и принимает решение, стоит ли продолжать."
+  definition_en: "The person in a department who needs the result. Responsible for why we are doing it, and decides whether it is worth continuing."
 
 - id: product-manager
   ru: менеджер продукта
   en: product manager
+  term_en: "product manager"
   definition: "Отвечает за то, что именно делаем и в каком порядке: формулирует ценность и следит, чтобы результат был полезен."
+  definition_en: "Responsible for what exactly we do and in what order: sets out the value and makes sure the result is useful."
 
 - id: project-manager
   ru: руководитель проекта
   en: project manager
+  term_en: "project manager"
   definition: "Ведёт проект день за днём и поддерживает его карточку в актуальном состоянии."
+  definition_en: "Runs the project day by day and keeps its card up to date."
 
 - id: product-management-forum
   ru: форум управления продуктами
   en: product management forum
+  term_en: "product management forum"
   definition: "Регулярная встреча, где смотрят на воронку и портфель: что ждёт, что застряло, что пора начать или остановить."
+  definition_en: "A regular meeting that looks at the funnel and the portfolio: what is waiting, what is stuck, what it is time to start or stop."
 
 - id: program-decision-forum
   ru: форум решений по программе
   en: program decision forum
+  term_en: "program decision forum"
   definition: "Регулярная встреча, где решают вопросы программы: порядок работ, зависимости, что делать при срыве."
+  definition_en: "A regular meeting that settles program questions: the order of work, dependencies, and what to do when something slips."
 
 - id: shaping
   ru: проработка
   en: shaping
+  term_en: "shaping"
   definition: "Состояние инициативы, в котором уточняют задачу, ожидаемый результат и границы, чтобы решить, браться ли за неё."
+  definition_en: "The state of an initiative in which the problem, the intended outcome, and the boundaries are clarified, so that we can decide whether to take it on."
 
 - id: ready
   ru: готово к старту
   en: ready
+  term_en: "ready"
   definition: "Состояние инициативы: всё понятно, решение о старте можно принимать, когда освободится место."
+  definition_en: "The state of an initiative when everything is clear and the start decision can be made as soon as there is room."
 
 - id: doing
   ru: в работе
   en: doing
+  term_en: "doing"
   definition: "Состояние инициативы, по которой идёт работа."
+  definition_en: "The state of an initiative that is being worked on."
 
 - id: done
   ru: завершено
   en: done
+  term_en: "done"
   definition: "Состояние инициативы, по которой работа закончена и результат зафиксирован."
+  definition_en: "The state of an initiative whose work is finished and whose result is recorded."
 
 - id: start-decision
   ru: решение о старте
   en: start decision
+  term_en: "start decision"
   definition: "Решение взять инициативу в работу. Принимает бизнес-владелец вместе с менеджером продукта по заранее известному правилу."
+  definition_en: "The decision to take an initiative into work. The business owner makes it together with the product manager, by a rule known in advance."
 
 - id: invest-decision
   ru: решение о вложении
   en: invest decision
+  term_en: "investment decision"
   definition: "Решение выделить инициативе объём усилий на следующий шаг. Принимается после проработки и повторяется на контрольных точках."
+  definition_en: "The decision to give an initiative an amount of effort for its next step. It is made after shaping and repeated at review points."
 
 - id: persevere-pivot-stop
   ru: продолжить, изменить курс или остановить
   en: persevere, pivot or stop
+  term_en: "persevere, pivot, or stop"
   definition: "Решение на контрольной точке: идём дальше как есть, меняем направление или прекращаем работу."
+  definition_en: "The decision at a review point: carry on as we are, change direction, or stop the work."
 
 - id: exit-criterion
   ru: критерий выхода
   en: exit criterion
+  term_en: "exit criterion"
   definition: "Заранее записанное условие, при котором шаг считается пройденным."
+  definition_en: "A condition, written down in advance, under which a step counts as complete."
 
 - id: appetite
   ru: допустимый объём вложений
   en: appetite
+  term_en: "appetite"
   definition: "Сколько усилий мы готовы вложить в инициативу, прежде чем останавливаться и смотреть на результат."
+  definition_en: "How much effort we are willing to put into an initiative before we stop and look at the result."
 
 - id: stop-threshold
   ru: порог остановки
   en: stop threshold
+  term_en: "stop threshold"
   definition: "Заранее записанный признак, при котором работу прекращают или пересматривают."
+  definition_en: "A sign, written down in advance, at which the work is stopped or reconsidered."
 
 - id: wip-limit
   ru: WIP-лимит
   en: work in progress limit
+  term_en: "WIP limit"
   definition: "Сколько работ одновременно может быть в одном состоянии. Новая работа начинается, когда освободилось место."
+  definition_en: "How many work items can be in one state at the same time. New work starts when room frees up."
 
 - id: pull
   ru: вытягивание
   en: pull
+  term_en: "pull"
   definition: "Принцип: работу берут, когда есть свободные силы, а не назначают сверху, пока места нет."
+  definition_en: "The principle that work is taken on when there is free capacity, not assigned from above while there is no room."
 
 - id: wsjf
   ru: очерёдность по ценности и срокам
   en: WSJF
+  term_en: "WSJF"
   definition: "Способ расставить равные по важности работы: сначала то, что даёт больше ценности за меньшее время. Используется, только чтобы выбрать между равными."
+  definition_en: "Weighted shortest job first: a way of ordering work items of equal importance, starting with whatever gives more value in less time. It is used only to choose between equals."
 
 - id: mvp
   ru: минимально жизнеспособный продукт
   en: MVP
+  term_en: "MVP"
   definition: "Самая маленькая версия решения, которую можно дать пользователям и по ней понять, нужно ли продолжать."
+  definition_en: "Minimum viable product: the smallest version of a solution that can be given to users and that shows whether to continue."
 
 - id: business-case
   ru: бизнес-кейс
   en: business case
+  term_en: "business case"
   definition: "Короткое обоснование: какая задача, какой результат, чем измерим и во что это обойдётся."
+  definition_en: "A short justification: what the problem is, what the result will be, how we will measure it, and what it will cost."
 
 - id: backlog
   ru: бэклог
   en: backlog
+  term_en: "backlog"
   definition: "Упорядоченный список работ, которые ждут своей очереди."
+  definition_en: "An ordered list of work items waiting their turn."
 
 - id: kanban
   ru: канбан
   en: kanban
+  term_en: "Kanban"
   definition: "Доска, на которой работа движется по состояниям слева направо, а число работ в каждом состоянии ограничено."
+  definition_en: "A board on which work moves through states from left to right, and the number of work items in each state is limited."
 
 - id: iteration
   ru: итерация
   en: iteration
+  term_en: "iteration"
   definition: "Короткий период работы фиксированной длины, в конце которого есть что показать."
+  definition_en: "A short period of work of fixed length, at the end of which there is something to show."
 
 - id: program-increment
   ru: программный инкремент
   en: program increment
+  term_en: "program increment"
   definition: "Несколько итераций подряд, по итогам которых программа планирует следующий отрезок."
+  definition_en: "Several iterations in a row, at the end of which the program plans its next stretch."
 
 - id: lead-time
   ru: время от идеи до результата
   en: lead time
+  term_en: "lead time"
   definition: "Сколько проходит от появления работы до её завершения."
+  definition_en: "How long it takes from the moment a work item appears until it is finished."
 
 - id: cycle-time
   ru: время работы
   en: cycle time
+  term_en: "cycle time"
   definition: "Сколько работа находится в активной разработке."
+  definition_en: "How long a work item spends in active development."
 
 - id: throughput
   ru: пропускная способность
   en: throughput
+  term_en: "throughput"
   definition: "Сколько работ завершается за период."
+  definition_en: "How many work items are finished in a period."
 
 - id: decision-log
   ru: журнал решений
   en: decision log
+  term_en: "decision log"
   definition: "Запись на карточке проекта: что решили, кто, когда."
+  definition_en: "A record on the project card: what was decided, by whom, and when."
 
 - id: practice-checklist
   ru: памятка по практике
   en: practice checklist
+  term_en: "practice checklist"
   definition: "Короткий список того, что в работе такого вида обычно проверяют, с кем и по каким материалам. Это подсказка, а не требование Хаба."
+  definition_en: "A short list of what is usually checked in this kind of work, with whom, and against which materials. It is a hint, not a requirement of the Hub."
 
 - id: risk-tier
   ru: категория риска
   en: risk tier
+  term_en: "risk tier"
   definition: "Оценка того, насколько серьёзны последствия ошибки решения с AI. От неё зависит, насколько глубокими будут проверки."
+  definition_en: "An assessment of how serious the consequences of a mistake by an AI solution would be. It sets how deep the checks go."
 
 - id: human-in-the-loop
   ru: человек в контуре
   en: human in the loop
+  term_en: "human in the loop"
   definition: "Подход, при котором человек проверяет каждый результат AI, прежде чем его используют, и подтверждает каждое действие."
+  definition_en: "An approach in which a person checks every AI result before it is used and confirms every action."
 
 - id: workspace-automation
   ru: автоматизация рабочего места
   en: workspace automation
+  term_en: "workspace automation"
   definition: "Помощник на AI, который работает на компьютере сотрудника и берёт на себя рутину: подготовку отчётов, заполнение форм."
+  definition_en: "An AI assistant that runs on an employee’s computer and takes over routine work, such as preparing reports and filling in forms."

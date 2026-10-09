@@ -55,11 +55,14 @@ class Signature(HTMLParser):
         self.text = []
         self._skip = []
         self._table = None
+        self._svg = 0  # ids inside a drawing come from its content and differ between languages
 
     def handle_starttag(self, tag, attrs):
         a = dict(attrs)
         if tag == 'main':
             self.main += 1
+        if tag == 'svg':
+            self._svg += 1
         if tag in ('br', 'img', 'meta', 'link', 'input', 'hr', 'wbr', 'path', 'circle', 'rect', 'line', 'polyline', 'polygon', 'use', 'stop'):
             self._void(tag, a)
             return
@@ -81,7 +84,7 @@ class Signature(HTMLParser):
     def _void(self, tag, a):
         if not self.main:
             return
-        if a.get('id'):
+        if a.get('id') and not self._svg:
             self.ids.append(a['id'])
         for key in KEYED:
             if key in a:
@@ -97,6 +100,8 @@ class Signature(HTMLParser):
             return
         if self._skip:
             self._skip.pop()
+        if tag == 'svg':
+            self._svg -= 1
         if tag == 'main':
             self.main -= 1
         if tag == 'table' and self._table is not None:
@@ -178,10 +183,10 @@ def staleness(lang):
         if _front(own.read_text(encoding='utf-8')).get('source_hash') != source_hash(path.read_text(encoding='utf-8')):
             stale.append(f'page content/{lang}/{rel}')
     # data files: i18n/sources-<lang>.yaml records the hash of the Russian part of each file when it was translated
-    record_path = SRC / 'i18n' / f'sources-{lang}.yaml'
-    record = yaml.safe_load(record_path.read_text(encoding='utf-8')) if record_path.exists() else {}
-    record = record or {}
-    data = [p for folder in ('reference', 'learning', 'cards', 'vocabulary') for p in sorted((SRC / folder).glob('*.yaml')) if p.name != 'template.yaml']
+    record = {}
+    for record_path in sorted((SRC / 'i18n').glob(f'sources-{lang}*.yaml')):  # one record per translator, merged
+        record.update(yaml.safe_load(record_path.read_text(encoding='utf-8')) or {})
+    data = [p for folder in ('reference', 'learning', 'cards', 'vocabulary') for p in sorted((SRC / folder).glob('*.yaml')) if not p.name.startswith('template')]
     data.append(SRC / 'calendar.json')
     for path in data:
         key = path.relative_to(SRC).as_posix()

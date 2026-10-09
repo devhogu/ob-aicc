@@ -33,7 +33,7 @@ class Loading(unittest.TestCase):
     def test_unknown_stage_unknown_field_and_missing_field_are_refused(self):
         with self.assertRaisesRegex(ValueError, 'stage'):
             cards.load_cards(self.folder(**{'INI-014.yaml': GOOD.replace('stage: Воронка', 'stage: Одобрено')}))
-        with self.assertRaisesRegex(ValueError, 'additional|Additional'):
+        with self.assertRaisesRegex(ValueError, 'additional|Additional|does not match any of the regexes'):  # unknown fields are refused; only an English twin (_en) may be added
             cards.load_cards(self.folder(**{'INI-014.yaml': GOOD + 'secret: 1\n'}))
         with self.assertRaisesRegex(ValueError, 'folks|required|people'):
             cards.load_cards(self.folder(**{'INI-014.yaml': GOOD.replace('people:', 'folks:')}))

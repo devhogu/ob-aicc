@@ -1,0 +1,717 @@
+<!--page {"id": "catalog/customer-market-intelligence/retention-churn", "title": "Retention & churn", "styles": ["tokens.css", "components.css", "theme.css", "layouts/concern.css", "layouts/concern-l2.css"], "summary": "Retention and churn analytics tracks the rate at which customers deepen or reduce their banking relationship, and identifies the drivers that push customers toward exit.", "source_hash": "3004c72ae5c3"} -->
+<div class="discovery-content">
+
+<div class="page">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;">
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <span class="breadcrumb__item">
+    <a class="breadcrumb__link" href="../../index.html">Discovery Catalog</a>
+  </span>
+  <span class="breadcrumb__item">
+    <span class="breadcrumb__sep" aria-hidden="true">/</span>
+    <a class="breadcrumb__link" href="../index.html">Customer &amp; Market Intelligence</a>
+  </span>
+  <span class="breadcrumb__item">
+    <span class="breadcrumb__sep" aria-hidden="true">/</span>
+    <span class="breadcrumb__current" aria-current="page">Retention &amp; churn</span>
+  </span>
+</nav>
+</div>
+<header class="page-header">
+  <div class="page-header__title-row">
+    <div>
+      <h1 class="page-header__title">Retention &amp; churn</h1>
+    </div>
+  </div>
+  <p class="page-header__intent">Retention and churn analytics tracks the rate at which customers deepen or reduce their banking relationship, and identifies the drivers that push customers toward exit. In retail banking, primary account attrition is commonly concentrated around salary-crediting switches, digital-competitor acquisition, and product fee dissatisfaction — all of which produce detectable behavioral signals weeks before formal account closure. <strong>GenAI enables the Bank to move from retrospective churn reporting to prospective at-risk identification</strong>, compressing the window from signal to intervention from quarters to weeks.</p>
+</header>
+<div id="main-content" class="l3-sections" aria-label="Sub-concerns">
+<section class="l3-section" id="churn-cohort-analysis">
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Churn cohort analysis</h2>
+    <p class="l3-section__intent">Retrospective analysis of which customer cohorts have churned, at what rate, and with what pattern — the foundation for understanding which segment and product combinations have chronic retention problems. Cohort analysis by origination vintage, product bundle, and acquisition channel reveals structural retention differences that aggregate churn rates conceal. Churn cohort analysis must distinguish salary-crediting switches (high-value, swift) from product-fee-driven attrition (gradual, price-sensitive).</p>
+  </header>
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
+  </div>
+  <div class="l3-section__scenarios">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-market-intelligence/retention-churn/churn-cohort-analysis/churn-rate-automated-report" id="scenario-churn-rate-automated-report" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Churn Rate Automated Report</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Automated monthly churn-rate report by segment, product, and origination vintage — produced from core banking data without manual extraction — delivered to commercial leadership as part of the standard management pack.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Monthly churn reporting requires analyst extraction from core banking and CRM systems, standardized into a consistent format, with commentary written against a template. The process takes one to two analyst days per cycle and the output structure is unchanged month to month. Late delivery of the churn report delays the commercial review meeting preparation.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads account-closure and product-exit events from core banking monthly, computes churn rates by segment, product, and origination vintage, and produces the standard management report with trend commentary. Analysts review the AI-generated output and add forward-looking commentary; the data-assembly and formatting step is eliminated.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">Commercial leadership receives the monthly churn-rate report by segment, product, and origination vintage, with trend commentary, as part of the standard management pack and in time for commercial review preparation.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent delivers the churn-rate report for ≥95% of scheduled monthly cycles for ≥12 consecutive months post go-live.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥85% of reports accepted by analysts without correction of computed rates; ≥80% accepted by commercial leadership as the basis for the review without supplementary data requests.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Churn report production reduced from one to two analyst days of extraction and formatting per cycle to ≤2 hours of analyst review and commentary.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-market-intelligence/retention-churn/churn-cohort-analysis/cohort-retention-cross-sell-window" id="scenario-cohort-retention-cross-sell-window" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--optimize">Optimize</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Cohort Cross-Sell Window Analysis</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent analyzes product-deepening rates by cohort, segment, and tenure to identify the post-onboarding windows when cross-sell conversion probability is highest for each product category.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Cross-sell campaigns are timed to product launch cycles and seasonal calendars. The windows within the customer lifecycle when each segment is most receptive to each product — inferred from cohort conversion data — are not used to sequence outreach. Off-peak contact dilutes the commercial offer without increasing reach.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads product-holding events and contact-outcome records across customer cohorts, identifying the post-onboarding windows at which conversion probability peaks by product and segment. Product heads confirm the windows, and campaign and relationship management teams re-sequence the cross-sell program to match them; campaign efficiency improves without increasing contact volume.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">The post-onboarding windows of highest cross-sell conversion probability — by cohort, segment, and tenure for each product category — are available to campaign and relationship management teams from quarterly cohort product-deepening analysis.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent refreshes the cross-sell window analysis for ≥90% of active product categories on the scheduled quarterly cadence for ≥4 consecutive quarters.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥70% of recommended cross-sell windows confirmed as commercially actionable by product heads on quarterly review.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Cross-sell window identification cycle reduced from annual retrospective analysis to quarterly automated cohort output.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-market-intelligence/retention-churn/churn-cohort-analysis/churn-driver-attribution-by-cohort" id="scenario-churn-driver-attribution-by-cohort" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Churn Driver Attribution by Cohort</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent attributes churn events by cohort to primary driver categories — price sensitivity, service failure, digital-competitor acquisition, salary-crediting switch — and produces a quarterly attribution report for commercial and retention strategy.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Churn is tracked as a rate by segment. Why customers from specific cohorts exit — the driver rather than the rate — is understood only from exit surveys, which capture a voluntary sample of departing customers with inherent selection bias. Cohorts with high churn rates from service-failure drivers and cohorts churning due to competitor price actions require different retention responses, but the current reporting does not distinguish them.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads churn events with pre-exit behavioral signals, contact history, and where available exit-survey data, attributes each cohort's churn to primary driver categories using a classification model, and produces a quarterly attribution report. Commercial and retention teams design cohort-specific interventions based on driver attribution rather than rate alone.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">Commercial and retention teams receive a quarterly attribution report assigning each cohort's churn to primary driver categories — price sensitivity, service failure, digital-competitor acquisition, salary-crediting switch — so that interventions are designed by driver rather than by rate alone.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent produces the driver-attribution report for ≥90% of scheduled quarterly cycles for ≥4 consecutive quarters post go-live, covering all cohorts with churn events in the period.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥75% of cohort driver attributions confirmed as plausible by commercial and retention teams on quarterly review; attribution consistent with exit-survey responses in ≥70% of cases where survey data exists.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Churn-driver understanding moved from exit-survey samples to full-cohort attribution within 3 weeks of quarter close.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+  </div>
+</section>
+<section class="l3-section" id="save-program-design">
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Save-program design</h2>
+    <p class="l3-section__intent">The structured process of designing retention interventions — by cohort, trigger signal, channel, offer type, and timing — that constitute the Bank's proactive churn-prevention program. Save-program ROI is determined by which customers are contacted, with which offer, through which channel, and at what point in the at-risk trajectory. In retail banking, save programs typically combine a fee-waiver or rate offer with a personal outreach from a relationship manager — a combination that is effective only for high-value customers and counterproductive for lower-value cohorts.</p>
+  </header>
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
+  </div>
+  <div class="l3-section__scenarios">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-market-intelligence/retention-churn/save-program-design/save-programme-contact-scheduler" id="scenario-save-programme-contact-scheduler" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Save-Program Contact Scheduler</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent generates a weekly save-program contact schedule from the current at-risk list, assigning each customer to the recommended intervention type, channel, and timing based on the cohort brief and relationship-manager capacity constraints.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Save-program contact scheduling is performed manually by the retention operations team, who take the at-risk list, apply the cohort brief, and allocate customers to relationship managers and outreach channels while managing capacity constraints. The scheduling process takes one to two working days per week and produces a static list that is out of date by mid-week as new at-risk customers enter the scoring cycle.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads the weekly at-risk list, cohort intervention briefs, relationship-manager capacity data, and channel-capacity constraints, and generates an optimized contact schedule. Relationship managers receive their weekly queue automatically; retention operations reviews and approves the schedule rather than building it. The schedule updates when new at-risk customers enter mid-week.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">Relationship managers receive their weekly save-program contact queue — each at-risk customer assigned an intervention type, channel, and timing within capacity constraints — from a schedule that retention operations reviews and approves rather than builds.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent generates the contact schedule for ≥95% of weekly cycles for ≥48 consecutive weeks post go-live and updates it for new at-risk customers entering mid-week.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥85% of AI-generated schedules approved by retention operations with minor amendment or none.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Schedule preparation reduced from one to two working days per week to ≤2 hours of retention operations review.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-market-intelligence/retention-churn/save-program-design/save-program-cohort-brief" id="scenario-save-program-cohort-brief" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--enablement">Enablement</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Save-Program Cohort Brief</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent generates a cohort-level intervention brief for each at-risk cluster, specifying recommended offer type, channel, timing, and expected save rate based on prior-cycle efficacy data.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Save-program interventions are designed once per cycle applying a standard offer set to all at-risk customers regardless of churn driver or cohort profile. Fee-waiver offers go to customers who would have stayed anyway; relationship-manager calls are allocated to price-sensitive cohorts better served by a self-service offer.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads cohort profiles, driver attribution from the at-risk model, and prior-cycle save-program outcome data, then produces a cohort brief specifying recommended intervention type, channel, timing, and expected save rate per at-risk cluster. The save-program team reviews the brief with the retention team lead and executes against the cohort-specific recommendations.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">A cohort-level intervention brief — specifying recommended offer type, channel, timing, and expected save rate from prior-cycle efficacy data — is available to the save-program team at the start of each save-program cycle.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent generates a cohort intervention brief for ≥95% of at-risk clusters identified in each scoring cycle for ≥48 consecutive cycles post go-live.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥80% of cohort intervention briefs confirmed as sufficient for program execution by the retention team lead without supplementary manual design work.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Save-program cohort brief preparation cycle reduced from 5–7 days of manual cohort analysis and brief drafting to ≤24 hours of automated production.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-market-intelligence/retention-churn/save-program-design/save-offer-effectiveness-insights" id="scenario-save-offer-effectiveness-insights" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Save-Offer Effectiveness Insights</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent analyzes the outcomes of the prior three save-program cycles to identify which offer types, delivery channels, and contact timings produced the highest save rates by churn driver and cohort, and produces a design brief for the next cycle.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Save-program design relies on accumulated experience and practitioner judgment. Which offer produced the best save rate for salary-switch churn in the SME segment in the last quarter, relative to the cost of the offer, is not available as a systematic analytical input. The program is adjusted through informal observation rather than structured outcome analysis.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads save-program contact records, offer details, cost data, and 90-day retention outcomes from the prior three cycles. It identifies offer-channel-timing combinations with above-average save rates by churn driver and cohort, and produces a design brief specifying the recommended combination set for the next program cycle. The save-program team designs the next cycle from the brief, which replaces informal program calibration with an evidence base.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">The save-program team receives a design brief before each program cycle, built from the outcomes of the prior three cycles, specifying the offer, channel, and timing combinations with the highest save rates by churn driver and cohort.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent produces the design brief for ≥90% of save-program cycles for ≥4 consecutive cycles post go-live, drawing on contact records, offer details, cost data, and 90-day retention outcomes.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥75% of recommended combinations adopted by the save-program team in the next cycle's design.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Program calibration moved from informal observation to a structured design brief available ≥1 week before each program cycle starts.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+  </div>
+</section>
+<section class="l3-section" id="at-risk-customer-identification">
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">At-risk customer identification</h2>
+    <p class="l3-section__intent">Forward-looking identification of currently-active customers displaying the behavioral precursors to churn — the operational output that enables proactive save-program targeting. At-risk scoring depends on multi-signal aggregation: no single signal (usage decline, support-ticket spike, payment failure) is sufficient; the combination determines risk level. Banks that can score their entire active base weekly rather than sample quarterly contact the right customers before the exit decision is made.</p>
+  </header>
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
+  </div>
+  <div class="l3-section__scenarios">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-market-intelligence/retention-churn/at-risk-customer-identification/segment-specific-at-risk-profiling" id="scenario-segment-specific-at-risk-profiling" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Segment-Specific At-Risk Profiling</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent applies segment-specific at-risk thresholds to the weekly at-risk scoring output, producing separate prioritized lists for the SME, retail mass, and emerging-affluent segments calibrated to each segment's churn-signal profile.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>The at-risk model produces a single ranked list calibrated on the full active base. Segments with different behavioral profiles — SME customers, whose primary churn signal is credit-facility utilization decline rather than transaction-frequency drop — receive the same scoring threshold as retail customers. SME at-risk customers are systematically under-flagged in the unified model output.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads the weekly at-risk score output and applies segment-specific thresholds calibrated on historical churn patterns per segment. The SME relationship team, the retail mass save-program team, and the affluent relationship team each receive a segment-specific at-risk list with thresholds appropriate for their customer profile. SME at-risk customers are no longer under-flagged by a threshold calibrated on the full active base.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">The SME relationship team, the retail mass save-program team, and the affluent relationship team each receive a weekly at-risk list scored against thresholds calibrated to their segment's churn-signal profile.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent produces all three segment-specific at-risk lists for ≥95% of weekly scoring cycles for ≥48 consecutive weeks post go-live.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥75% of customers on each segment list confirmed as requiring intervention by the receiving team; share of SME churners flagged before exit raised to ≥70%.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Segment-specific lists available within 24 hours of each weekly at-risk scoring run, replacing a single unified list.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-market-intelligence/retention-churn/at-risk-customer-identification/at-risk-scoring-and-triage" id="scenario-at-risk-scoring-and-triage" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">At-Risk Scoring and Triage</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent scores the full active customer base for churn probability weekly, surfacing a prioritized at-risk list for save-program and relationship-manager action.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>At-risk identification relies on relationship managers recognizing disengagement signals in their own books, supplemented by occasional analytics-team cohort studies. The multi-signal pattern that precedes churn — usage decline, support escalation, reduced transaction frequency, failed direct debit — is not assembled systematically across the full base before the customer exits.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads usage, support, payment, and digital-activity signals weekly for every active customer, scores churn probability using the multi-signal pattern, and produces a triage list ranked by risk score and segment priority. The retention team lead reviews the top-ranked flags weekly, and save-program teams and relationship managers work from the AI-generated list rather than reactive referrals.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">A weekly at-risk score covering the full active customer base is available to save-program teams and relationship managers, giving retention teams a prioritized intervention queue calibrated to current churn probability.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent produces the ranked at-risk list for ≥95% of weekly scoring cycles for ≥48 consecutive weeks within 12 months of go-live.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥75% of top-decile at-risk flags confirmed as requiring intervention by the retention team lead on weekly review.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>At-risk identification moved from relationship-manager referrals and occasional cohort studies to weekly automated scoring of the full active base within 90 days of go-live.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-market-intelligence/retention-churn/at-risk-customer-identification/early-warning-signal-calibration" id="scenario-early-warning-signal-calibration" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Early-Warning Signal Calibration</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent analyzes historical churn events to identify the combination of behavioral signals that preceded exit at each lead time — 2 weeks, 4 weeks, 8 weeks — and produces a signal-calibration report for the at-risk model team.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>The at-risk model uses a fixed signal set selected at initial build. The relative predictive weight of signals changes as the customer base evolves — digital adoption increases, new product features alter usage patterns — but the model signal calibration is not reviewed until the next full model rebuild cycle, which occurs annually. The model accumulates silent decay between rebuilds.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads confirmed churn events from the prior 12 months, traces the behavioral signal pattern in the weeks preceding each exit, and produces a signal-calibration report showing which signals carry the strongest lead-time predictive value at 2, 4, and 8 weeks before churn. The model team uses the AI-generated calibration report as the primary input to the next recalibration cycle.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">The at-risk model team receives a signal-calibration report showing which behavioral signals carry the strongest predictive value at 2, 4, and 8 weeks before churn, as the primary input to the next recalibration cycle.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent produces the signal-calibration report for ≥90% of scheduled calibration reviews from go-live, covering all confirmed churn events from the prior 12 months.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥80% of signal rankings confirmed as statistically valid by the model team; the report used as the primary input in 100% of recalibration cycles.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Signal-calibration review cycle reduced from once per annual model rebuild to at least two interim calibration reports per year.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+  </div>
+</section>
+<section class="l3-section" id="intervention-efficacy-tracking">
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Intervention efficacy tracking</h2>
+    <p class="l3-section__intent">Systematic measurement of which save-program interventions worked — for which cohorts, in which channels, at which points in the at-risk trajectory — so that future intervention design is informed by accumulated evidence rather than intuition. Efficacy tracking is the feedback loop that makes the save program a learning system. Without it, the same ineffective interventions are repeated each cycle while effective ones are not scaled.</p>
+  </header>
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
+  </div>
+  <div class="l3-section__scenarios">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-market-intelligence/retention-churn/intervention-efficacy-tracking/save-program-efficacy-report" id="scenario-save-program-efficacy-report" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Save-Program Efficacy Report</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Automated monthly report of save-program outcomes by cohort, intervention type, and channel, with AI-generated narrative identifying which interventions are working and which should be retired.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Save-program outcomes are tracked informally — contacts made and customers retained — without systematic breakdown by intervention type, cohort, or channel. Whether a fee waiver outperformed a relationship-manager call for a specific churn cluster is answerable only through a retrospective custom analysis.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads save-program contact logs, offer details, and 90-day post-contact retention outcomes; produces a monthly efficacy report by intervention type, cohort, and channel; and flags which interventions are above or below expected save rate. The retention team lead reviews the AI-generated narrative and adjusts the program based on accumulated evidence.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">A monthly save-program efficacy report — covering outcomes by cohort, intervention type, and channel with narrative identifying which interventions should be continued or retired — is available to the retention team on the scheduled delivery date without manual assembly.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent delivers the save-program efficacy report for ≥95% of scheduled monthly cycles for ≥12 consecutive months post go-live.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥80% of efficacy reports accepted by the retention team lead as the basis for the next cycle's offer mix calibration without requiring supplementary manual analysis.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Efficacy report production cycle reduced from 5–7 days of manual outcome aggregation and commentary drafting to ≤24 hours of automated assembly.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-market-intelligence/retention-churn/intervention-efficacy-tracking/intervention-efficacy-trend-report" id="scenario-intervention-efficacy-trend-report" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Intervention Efficacy Trend Report</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent tracks the save rate trend for each intervention type across consecutive program cycles, surfacing whether a previously effective intervention type is decaying in performance and requires redesign.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Save-program interventions are reviewed for efficacy in the current cycle but not trended across cycles. An intervention that produced a 55% save rate in Q1 and is now delivering 38% in Q3 is declining materially, but without a trend view the Q3 number looks adequate in isolation and the intervention is not queued for redesign.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads efficacy outcomes from consecutive program cycles, computes trend direction and statistical significance for each intervention type, and flags intervention types with declining save-rate trends for design review. The save-program team uses the trend report alongside the current-cycle efficacy output to distinguish genuinely effective interventions from those in decline.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">The save-program team receives a save-rate trend view for each intervention type across consecutive program cycles, with interventions in statistically significant decline flagged for design review.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent produces the trend report for ≥95% of program cycles for ≥4 consecutive cycles post go-live, covering every active intervention type.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥75% of decline flags confirmed as warranting design review by the save-program team.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Cross-cycle efficacy trending moved from not performed to a report delivered alongside each current-cycle efficacy output.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-market-intelligence/retention-churn/intervention-efficacy-tracking/intervention-roi-by-cohort" id="scenario-intervention-roi-by-cohort" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Intervention ROI by Cohort</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent calculates the net ROI of each save-program intervention type by cohort — saved revenue minus offer cost and relationship-manager time — and produces a ranked ROI table for program investment decisions.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Save-program efficacy is measured as save rate: the proportion of contacted at-risk customers who remained active 90 days after contact. Save rate does not account for offer cost or the value of the customer saved. A 60% save rate on a fee-waiver offer for a low-CLV cohort may produce negative ROI; a 30% save rate on a rate offer for a high-CLV cohort may generate substantial value. The program is optimized for save rate rather than economic return.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads save-program outcomes alongside offer costs, relationship-manager time allocation, and CLV data for contacted customers, computes net ROI per intervention type per cohort, and produces a ranked ROI table. The save-program team allocates the next-cycle intervention budget to positive-ROI cohort-offer combinations and retires negative-ROI ones.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">The save-program team receives a ranked table of net ROI per intervention type per cohort — saved revenue minus offer cost and relationship-manager time — as the basis for next-cycle intervention budget allocation.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent produces the ROI table for ≥90% of save-program cycles for ≥4 consecutive cycles post go-live, covering all cohort-offer combinations with completed 90-day outcomes.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥80% of ROI rankings accepted by the save-program team as the basis for budget allocation; negative-ROI combinations retired or redesigned in ≥75% of cases.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Program evaluation moved from save rate alone to net ROI per cohort-offer combination, available within 2 weeks of each 90-day outcome window closing.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+  </div>
+</section>
+<section class="l3-section" id="contact-pattern-indicators">
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Contact-pattern indicators</h2>
+    <p class="l3-section__intent">Monitoring customer contact patterns — rising contact frequency, unresolved multi-contact chains, channel-switching after failed service interactions — as leading indicators of churn risk. A customer who contacts the Bank three times in a month about the same issue and receives no resolution is materially more likely to churn than the contact-frequency number alone suggests. Under conduct-supervision requirements, systematic tracking of unresolved-contact chains is commonly a component of complaint-monitoring obligations.</p>
+  </header>
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
+  </div>
+  <div class="l3-section__scenarios">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-market-intelligence/retention-churn/contact-pattern-indicators/channel-switching-churn-signal" id="scenario-channel-switching-churn-signal" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Channel-Switching Churn Signal</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent identifies customers who switch to an assisted channel — phone, branch — after a failed digital-channel interaction, flagging the pattern as a composite churn precursor for retention prioritization.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Channel-switching after digital failure is a known churn precursor: a customer who cannot complete a task in the mobile app and subsequently calls the contact center is materially more likely to exit than a customer who calls without prior digital failure. This pattern is not detected systematically because digital-failure events and subsequent contact-center contacts are logged in separate systems with no cross-system linkage.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads mobile-app error and incomplete-journey events alongside contact-center contact logs, links events by customer and temporal proximity, and identifies the channel-switch pattern. Customers matching the pattern are added to the retention at-risk queue with a higher churn-precursor weight than usage-decline signals alone, and the retention team reviews a sample of the flags.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">Customers who switch to phone or branch after a failed digital-channel interaction are identified and added to the retention at-risk queue as a composite churn precursor, weighted above usage-decline signals alone.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent links mobile-app error and incomplete-journey events to contact-center contacts for ≥95% of weekly at-risk cycles for ≥48 consecutive weeks post go-live.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥70% of flagged channel-switch customers confirmed as warranting retention attention by the retention team on sampled review.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Detection of the channel-switch pattern moved from not detected, with events logged in separate systems, to inclusion in the at-risk queue within one week of the triggering contact.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-market-intelligence/retention-churn/contact-pattern-indicators/contact-frequency-trend-monitor" id="scenario-contact-frequency-trend-monitor" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Contact Frequency Trend Monitor</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent tracks weekly contact frequency per customer against a personalized baseline, flagging customers whose contact rate has risen significantly for service-quality review and retention alert.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Contact-center management tracks aggregate contact volume per week. Individual customer-level contact frequency trends are not monitored. A customer whose contact rate triples in a four-week window — typically indicating a persistent unresolved issue — appears only as a marginal increment in the aggregate weekly contact count and receives no special attention.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads customer-level contact logs weekly, computes contact frequency relative to each customer's own baseline over the prior 90 days, and flags customers showing a material acceleration. The service-quality team reviews flagged customers and escalates where the accelerated contact indicates an unresolved issue; the at-risk model receives the elevated contact-frequency signal as a churn precursor input.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">The service-quality team receives a weekly list of customers whose contact rate has accelerated materially against their own 90-day baseline, and the at-risk model receives the same signal as a churn-precursor input.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent computes customer-level contact frequency against baseline for ≥95% of weekly cycles for ≥48 consecutive weeks post go-live.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥70% of flagged customers confirmed by the service-quality team as having an unresolved issue requiring escalation.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Contact-frequency monitoring moved from aggregate weekly volume to customer-level flags within 24 hours of week close.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-market-intelligence/retention-churn/contact-pattern-indicators/multi-contact-chain-detection" id="scenario-multi-contact-chain-detection" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Multi-Contact Chain Detection</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent links customer contacts across channels by topic and time proximity weekly, identifies unresolved multi-contact chains, and surfaces customers with repeat unresolved issues for prioritized intervention before they reach formal complaint or churn.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Customer contacts are logged per interaction across phone, chat, email, and branch channels with individual ticket IDs. A customer who calls three times about the same unresolved issue appears as three separate contacts in the system. The unresolved chain — the most reliable precursor to formal complaint or churn — is invisible in the ticket-level data.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads all customer interaction logs, links contacts by customer, topic, and temporal proximity, identifies chains of two or more interactions on the same unresolved issue, and produces a weekly prioritized list of customers with open multi-contact chains. Customer-experience and operations teams triage the list before formal complaints or exit behaviors materialize.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">Customer-experience and operations teams receive a weekly prioritized list of customers with open multi-contact chains — two or more interactions on the same unresolved issue across channels — for triage before formal complaint or churn.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent links contacts across phone, chat, email, and branch and delivers the prioritized chain list for ≥95% of weekly cycles for ≥48 consecutive weeks post go-live.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥80% of detected chains confirmed as a single unresolved issue by the triaging team; ≥70% of listed customers contacted within 5 business days.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Unresolved multi-contact chains moved from invisible in ticket-level data to a weekly list within 24 hours of week close.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+  </div>
+</section>
+</div>
+
+</div>
+</div>

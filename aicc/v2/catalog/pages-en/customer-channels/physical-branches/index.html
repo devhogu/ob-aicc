@@ -1,0 +1,601 @@
+<!--page {"id": "catalog/customer-channels/physical-branches", "title": "Physical branches", "styles": ["tokens.css", "components.css", "theme.css", "layouts/concern.css", "layouts/concern-l2.css"], "summary": "Physical branches remain a regulated distribution anchor — licensing requirements commonly set minimum network obligations, and supervisory guidance on consumer access constrains closure decisions.", "source_hash": "de1813b32724"} -->
+<div class="discovery-content">
+
+<div class="page">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;">
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <span class="breadcrumb__item">
+    <a class="breadcrumb__link" href="../../index.html">Discovery Catalog</a>
+  </span>
+  <span class="breadcrumb__item">
+    <span class="breadcrumb__sep" aria-hidden="true">/</span>
+    <a class="breadcrumb__link" href="../index.html">Customer &amp; Channels</a>
+  </span>
+  <span class="breadcrumb__item">
+    <span class="breadcrumb__sep" aria-hidden="true">/</span>
+    <span class="breadcrumb__current" aria-current="page">Physical branches</span>
+  </span>
+</nav>
+</div>
+<header class="page-header">
+  <div class="page-header__title-row">
+    <div>
+      <h1 class="page-header__title">Physical branches</h1>
+    </div>
+  </div>
+  <p class="page-header__intent">Physical branches remain a regulated distribution anchor — licensing requirements commonly set minimum network obligations, and supervisory guidance on consumer access constrains closure decisions. Within that regulatory frame, branch economics are under pressure: digital adoption rate is rising, transaction mix is shifting away from cash, and the cost per assisted interaction is multiples of the digital equivalent. <strong>The opportunity for GenAI is continuous instrumentation of branch network economics and staffing efficiency</strong> — replacing annual network reviews and manual performance packs with a weekly signal that enables the Head of Branches to act on footfall shifts, queue problems, and consolidation candidates as they emerge.</p>
+</header>
+<style>
+  #problems-tab-network-design-operations:checked ~ .problems-tab-bar label[for="problems-tab-network-design-operations"] {
+    color: var(--ink-accent);
+    border-bottom-color: var(--ink-accent);
+    background: var(--paper-blue-soft);
+    font-weight: 600;
+  }
+  #problems-tab-network-design-operations:checked ~ .problems-panel[data-tab="network-design-operations"] {
+    display: block;
+  }
+</style>
+<section class="concern-problems" aria-label="Problems">
+  <input type="radio" class="problems-tab-input" name="problems-tabs" id="problems-tab-network-design-operations" value="network-design-operations" checked aria-label="Network design &amp; operations">
+  <div class="problems-tab-bar" role="tablist">
+    <label class="problems-tab-label" for="problems-tab-network-design-operations" role="tab" aria-controls="problems-panel-network-design-operations">Network design &amp; operations</label>
+  </div>
+  <hr class="problems-divider">
+  <div class="problems-panel" id="problems-panel-network-design-operations" data-tab="network-design-operations" role="tabpanel" aria-labelledby="problems-tab-network-design-operations">
+    <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Insights &amp; analytics</h3><p>Branch network economics — footfall density, transaction mix, revenue per visit, and cross-sell conversion by branch — are assembled in periodic reviews from multiple system exports. The Head of Branches lacks a continuous view of how digital adoption shifts and competitor network moves are changing the economics of individual branches between planning cycles.</p></article><article class="discovery-context-card"><h3>Enablement</h3><p>Network reconfiguration decisions — which branches to convert to a lighter format, which sites to consolidate, where demand justifies a new point of presence — require cross-referencing demographic data, digital adoption rates, competitor branch maps, and regulatory access constraints. The planning exercise is completed annually and is bottlenecked on the strategy team.</p></article><article class="discovery-context-card"><h3>Automation</h3><p>Branch cash replenishment orders, teller staffing schedules, and vault balancing are calculated manually by branch managers from prior-period data. The structured, data-driven nature of each calculation makes it a candidate for AI-driven automation that frees branch manager time for customer engagement.</p></article><article class="discovery-context-card"><h3>New business opportunities</h3><p>Branches that identify footfall peaks, convert walk-in traffic to cross-sell conversations, and minimize queue time without adding headcount outperform peers on revenue per square meter. GenAI-backed staffing optimization and cash management free branch managers to focus on conversion rather than logistics.</p></article></div>
+  </div>
+</section>
+<div id="main-content" class="l3-sections" aria-label="Sub-concerns">
+<section class="l3-section" id="branch-network-planning">
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Branch network planning</h2>
+    <p class="l3-section__intent">The strategic configuration of the branch network — site selection, branch density, format allocation, and consolidation decisions — governed by the regulator's licensing framework and consumer access obligations. Network planning cycles are annual; the inputs — demographic data, digital adoption metrics, competitor positions, and regulatory access maps — change continuously. Branch network decisions commit capital and headcount for three to five years, making the planning exercise high-stakes and analytically demanding.</p>
+  </header>
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
+  </div>
+  <div class="l3-section__scenarios">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-channels/physical-branches/branch-network-planning/branch-regulatory-notification-drafting" id="scenario-branch-regulatory-notification-drafting" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Branch Regulatory Notification Drafting</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent drafts regulatory notifications for branch network changes — new openings, format conversions, and closures — under the regulator's licensing requirements, populating the mandatory fields from the approved change record and generating a complete draft for compliance review before submission. The compliance team reviews and submits; preparation time per notification and the completeness rate on first submission are the primary metrics.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Branch network change notifications to the regulator require structured submissions with mandatory fields drawn from the approved change record — location, format, capacity, access provisions, and implementation timeline. Manual drafting of regulatory notifications from change records is a consistent administrative bottleneck; deadlines for notification submission — typically 30–90 days before implementation — are linked to the implementation timeline, and late notifications delay the entire network change program. Notification completeness on first submission is a quality control concern; regulatory notifications returned for amendment introduce further delay.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads the approved branch change record — location, format type, capacity, consumer access provisions, and implementation dates — and generates the regulatory notification in the format required by the regulator. The compliance team reviews and submits; any fields requiring judgment beyond the structured change record are flagged for human completion before submission. Notification preparation time, completeness rate on first submission, and days from change approval to notification submission are tracked against the pre-deployment manual drafting baseline.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">A complete draft regulatory notification for each approved branch network change — opening, format conversion, or closure — is available to the compliance team for review and submission, with the mandatory fields populated from the approved change record and fields requiring judgment flagged for human completion.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent drafts the regulatory notification for ≥95% of approved branch change records within 2 working days of change approval, for ≥12 consecutive months post go-live.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥85% of drafts submitted by the compliance team without material amendment; ≥90% of notifications accepted as complete on first submission.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Notification preparation time reduced from several working days of manual drafting per change to ≤1 day of compliance review; days from change approval to notification submission tracked against the pre-deployment baseline.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-channels/physical-branches/branch-network-planning/branch-network-performance-intelligence" id="scenario-branch-network-performance-intelligence" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Branch Network Performance Intelligence</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent monitors demographic, digital adoption, and competitor density data at catchment level on a quarterly cadence, updating the branch network performance model and flagging locations where the economics case for the current format has shifted materially since the last annual review. The Head of Branches and Head of Network Planning review the quarterly signal brief before determining whether an off-cycle network review is warranted. The brief provides a continuous monitoring layer between annual network planning cycles.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Branch network planning relies on an annual review cycle; demographic shifts, digital adoption rate changes, and competitor branch closures or openings affect network economics on a continuous basis but are not incorporated into the network model between annual reviews. A branch whose catchment demographics have shifted materially — new residential development, a competitor closure, or a significant digital adoption increase in the serving segment — may remain in the current configuration for up to 12 months before the annual review identifies the case for reconfiguration. Network changes typically require regulatory engagement with defined lead times; early identification of cases for reconfiguration allows the Bank to complete the regulatory process within the annual capital allocation cycle.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads demographic data, digital adoption metrics, competitor branch location changes, and the Bank's current network configuration, and updates the catchment-level branch performance model on a quarterly cadence. It flags branches where the economics case has shifted materially from the prior annual review baseline and estimates the network planning implication — reconfiguration, format change, or regulatory engagement — for each flagged location. The Head of Branches and the Head of Network Planning review the quarterly brief, and the Head of Branches determines whether an off-cycle review process should be initiated; branches flagged and acted upon in advance of the annual cycle are tracked as the primary efficiency outcome.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">A quarterly catchment-level signal brief — flagging the branches where the economics case for the current format has shifted materially since the last annual review, with the network planning implication for each — is available to the Head of Branches and Head of Network Planning between annual planning cycles.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent updates the catchment-level branch performance model and delivers the signal brief for ≥95% of scheduled quarterly cycles for ≥4 consecutive quarters post go-live.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥75% of flagged branches confirmed by the Head of Branches as warranting an off-cycle review or inclusion in the next annual review; branches flagged and acted upon ahead of the annual cycle tracked as primary outcome metric.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Identification of a material catchment shift reduced from up to 12 months at the annual network review to quarterly delivery within 2 weeks of data refresh.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-channels/physical-branches/branch-network-planning/branch-site-selection-modelling" id="scenario-branch-site-selection-modelling" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--new-opps">New opps</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Branch Site Selection Modeling</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent models the commercial case for candidate branch locations from demographic data, digital adoption rates, competitor density, and the Bank's existing customer distribution in each catchment. The output ranks candidate sites by projected revenue contribution and customer acquisition potential over a three-year horizon, with the assumption set transparent for network planning review. The Head of Network Planning reviews the model output before site selection decisions are made.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Branch site selection models are constructed manually by the network planning team from demographic data, competitor maps, and internal customer distribution data — a process that limits the number of candidate sites that can be evaluated within a planning cycle. Sites that are commercially viable but outside the team's established catchment knowledge are not systematically evaluated; the constraint is model production capacity rather than data availability. Where the regulator's financial inclusion framework gives regulatory credit for new branch openings in underserved catchments, the commercial model for these locations requires a financial inclusion overlay that is not currently built into the standard site assessment.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads demographic and income data by catchment, digital adoption rates, competitor branch density, and the Bank's existing customer distribution, and generates a three-year commercial model for each candidate site covering projected revenue, customer acquisition potential, and financial inclusion credit assessment. Sites are ranked by commercial return and flagged where financial inclusion regulatory credit applies. The Head of Network Planning reviews the ranked site list before capital allocation; sites evaluated and actioned from the AI agent's output are tracked against the prior manual assessment capacity.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">A ranked list of candidate branch sites — each with a three-year commercial model covering projected revenue, customer acquisition potential, and financial inclusion credit assessment, with the assumption set transparent — is available to the Head of Network Planning before site selection and capital allocation.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent generates a three-year commercial model for ≥90% of candidate sites submitted in each network planning cycle, for ≥2 consecutive planning cycles post go-live.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥75% of ranked site assessments accepted by the Head of Network Planning as the basis for site selection without manual remodeling; sites evaluated and actioned per cycle tracked against the prior manual assessment capacity.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Site assessment reduced from manual model construction by the network planning team, which caps the number of sites evaluated per cycle, to ≤2 days of AI-generated modeling and review per candidate site.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+  </div>
+</section>
+<section class="l3-section" id="branch-performance-reporting">
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Branch performance reporting</h2>
+    <p class="l3-section__intent">The monthly and quarterly reporting cycle that measures branch network performance against targets — customer volume, transaction mix, revenue per visit, queue time, cross-sell conversion, and complaint rate. Regional managers use the pack to calibrate branch manager coaching and resource allocation. Supervisors commonly expect branch-level performance data as a component of the consumer access reporting submitted during on-site inspections. The reporting cycle consumes significant network team time in collation and currently delivers results that are already several weeks stale by the time review conversations occur.</p>
+  </header>
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
+  </div>
+  <div class="l3-section__scenarios">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-channels/physical-branches/branch-performance-reporting/branch-performance-data-automation" id="scenario-branch-performance-data-automation" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Branch Performance Data Automation</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent automates the extraction, transformation, and consolidation of branch performance data from operational source systems into the reporting data model on a daily cadence, replacing the manual export and reconciliation cycle. The Head of Branches and regional managers can access current-state branch metrics at any point in the month rather than waiting for the end-of-period manual pack. Data freshness — the lag between operational event and reporting availability — is the primary technical outcome metric.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Branch performance reporting data is extracted manually from multiple operational systems at period end; intra-month performance is not visible to regional managers or the Head of Branches except through ad hoc requests to the BI team. The manual extraction process introduces transformation errors and reconciliation steps that compound the 10–15 day delay between period close and pack delivery. Regional managers who need a current-state view of a branch's performance during the month cannot access it without commissioning a bespoke BI extract, which is not available at operational cadence.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent runs daily extraction jobs from each operational source system — transaction system, CRM, queue management, complaint log — transforming and loading the data into the branch performance reporting model with a defined reconciliation check at each step. Any source system extraction failure or reconciliation discrepancy is flagged to the BI team for immediate resolution. Data freshness — the maximum lag between operational event and reporting availability — and extraction failure rate are tracked as the primary technical outcome metrics; intra-month data availability replaces the end-of-period manual extract model.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">Current-state branch performance data — extracted daily from the transaction system, CRM, queue management, and complaint log, and reconciled at each step — is available to the Head of Branches and regional managers at any point in the month, replacing the end-of-period manual extract.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent completes the daily extraction, transformation, and load for ≥98% of scheduled source-system runs for ≥48 consecutive weeks post go-live.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥95% of daily loads pass the reconciliation checks without BI team correction; 100% of extraction failures and reconciliation discrepancies flagged to the BI team on the day of occurrence.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Data freshness improved from a 10–15 day lag after period close to ≤24 hours between operational event and reporting availability.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-channels/physical-branches/branch-performance-reporting/regional-manager-coaching-brief" id="scenario-regional-manager-coaching-brief" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--enablement">Enablement</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Regional Manager Coaching Brief</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent generates a pre-meeting coaching brief for each regional manager's branch review session from the branch performance data — identifying the two to three branches with the most significant performance variances, the metric drivers behind each variance, and a structured agenda for the review conversation. The Head of Branches reviews the brief before the regional manager meeting cycle; the brief replaces manual review preparation by the regional manager team. Coaching session preparation time and the proportion of review sessions identifying a specific branch management intervention are the primary outcome metrics.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Regional managers prepare for branch review sessions by manually reviewing performance data for each branch in their portfolio — a preparation process that compresses the quality of coaching conversations when review cycles are frequent and the branch count is high. Without a structured brief that surfaces the highest-priority performance variances and their drivers, review conversations focus on branches the regional manager is already tracking rather than on the branches with the most acute performance gaps. The Head of Branches has no visibility into which regional manager review sessions are producing actionable outcomes and which are being conducted without a structured performance basis.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads branch performance data for each regional manager's portfolio and identifies the two to three branches with the most significant variances against target across the key metrics — queue time, cross-sell conversion, revenue per visit, and complaint rate. For each flagged branch it provides the metric driver breakdown and a structured agenda point for the review conversation. The Head of Branches reviews the brief before the regional manager meeting cycle; review session preparation time and the rate of sessions producing a documented branch management intervention are tracked as outcome metrics.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">A pre-meeting coaching brief for each regional manager's branch review session — identifying the two to three branches with the most significant variances against target, the metric drivers behind each, and a structured agenda — is available to the Head of Branches and the regional manager before each review cycle.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent generates a coaching brief for ≥95% of scheduled regional manager branch review sessions for ≥12 consecutive months post go-live.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥80% of briefs confirmed by the Head of Branches as a sufficient basis for the review session without supplementary manual preparation; ≥70% of review sessions produce a documented branch management intervention.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Review session preparation reduced from manual review of performance data for every branch in the portfolio to ≤30 minutes of brief review per session.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-channels/physical-branches/branch-performance-reporting/branch-performance-pack-intelligence" id="scenario-branch-performance-pack-intelligence" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Branch Performance Pack Intelligence</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent generates the monthly branch performance pack for regional manager review — covering customer volume, transaction mix, revenue per visit, queue time, cross-sell conversion, and complaint rate per branch — from live operational data, with variance-to-target commentary and peer-benchmarking highlights included in each report. Regional managers receive the pack within 24 hours of period close, with anomalies flagged for immediate follow-up. Pack delivery timeliness and regional manager confirmation that the output meets review requirements are the primary adoption metrics.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Monthly branch performance packs are assembled manually by the network team from multiple system exports — transaction system, CRM, complaint log, and queue management system — a process that takes 10–15 working days and delivers results several weeks stale by the time regional review conversations occur. Without timely data, regional managers conduct review sessions without a current-state signal on queue performance, cross-sell trends, or complaint volumes. Branch-level performance data is commonly a component of the consumer access reporting that supervisors review during on-site inspections; the manual assembly process creates a risk that reporting data is not current at the point of inspection.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads live branch operational data — footfall, transaction logs, CRM cross-sell records, queue management data, and complaint records — and generates the monthly performance pack per branch on a fixed delivery schedule within 24 hours of period close. The pack includes variance-to-target commentary and flags branches with anomalous performance for regional manager follow-up. Pack delivery cycle from period close and regional manager confirmation rate — the proportion of packs confirmed as sufficient for review without supplementary manual extraction — are tracked as primary outcome metrics.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">A monthly performance pack per branch — covering customer volume, transaction mix, revenue per visit, queue time, cross-sell conversion, and complaint rate, with variance-to-target commentary, peer-benchmarking highlights, and anomaly flags — is available to regional managers within 24 hours of period close.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent delivers the branch performance pack within 24 hours of period close for ≥95% of monthly cycles for ≥12 consecutive months post go-live.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥80% of packs confirmed by regional managers as sufficient for review without supplementary manual extraction.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Pack assembly and delivery cycle reduced from 10–15 working days of manual assembly from multiple system exports to ≤24 hours from period close.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+  </div>
+</section>
+<section class="l3-section" id="teller-frontline-operations">
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Teller &amp; frontline operations</h2>
+    <p class="l3-section__intent">The staffing, scheduling, and queue management of the teller line and frontline service staff — the primary cost driver for an assisted branch interaction. Teller operations are governed by consumer service standards and, commonly, by consumer-protection guidance on maximum queue times at banking points. Optimal staffing requires matching shift capacity to intraday footfall patterns that vary by branch, day of week, and local event calendar. Manual scheduling from historical averages is insufficient to manage intraday variance.</p>
+  </header>
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
+  </div>
+  <div class="l3-section__scenarios">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-channels/physical-branches/teller-frontline-operations/teller-schedule-generation" id="scenario-teller-schedule-generation" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Teller Schedule Generation</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent generates the weekly teller staffing schedule for each branch from the footfall demand forecast, contracted shift patterns, and staff availability, minimizing idle staffing while maintaining the queue-time service level at each intraday interval. The branch manager reviews and confirms the schedule before publication; any override is recorded with a reason code for schedule accuracy improvement. Schedule efficiency — the ratio of productive teller time to total paid hours — and queue-time service-level adherence are the primary outcome metrics.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Teller schedules are built manually by branch managers from historical average footfall data; the schedule does not reflect intraday demand variability from payroll cycles, local events, or day-of-week patterns that are stable and predictable from operational data. Maximum queue times are a service standard, commonly reflected in consumer-protection guidance; manual scheduling from averages generates both understaffed intervals — where queue times exceed the standard — and overstaffed intervals — where teller idle time generates unnecessary payroll cost. Branch managers spend 2–4 hours per week on manual schedule construction, a burden that grows with branch size and does not benefit from analytical optimization.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads the weekly footfall demand forecast, contracted shift patterns, and staff availability, and generates an optimized teller schedule minimizing idle staffing while maintaining the queue-time service level at each 30-minute interval. The branch manager reviews and confirms before publication; overrides are recorded with reason codes. Schedule efficiency ratio and queue-time service-level adherence rate are tracked weekly against the prior manual schedule baseline; branch manager scheduling time is a secondary efficiency outcome.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">An optimized weekly teller schedule for each branch — generated from the footfall demand forecast, contracted shift patterns, and staff availability, and holding the queue-time service level at each 30-minute interval — is available to the branch manager for review and confirmation before publication.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent generates the weekly teller schedule for ≥95% of branches on each scheduling cycle for ≥48 consecutive weeks post go-live.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥85% of schedules confirmed by branch managers without override, with every override recorded with a reason code; schedule efficiency ratio and queue-time service-level adherence tracked as primary outcome metrics.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Branch manager scheduling time reduced from 2–4 hours of manual schedule construction per week to ≤20 minutes of review and confirmation.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-channels/physical-branches/teller-frontline-operations/teller-performance-coaching-brief" id="scenario-teller-performance-coaching-brief" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--enablement">Enablement</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Teller Performance Coaching Brief</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent generates a monthly teller performance coaching brief for each branch manager from individual teller transaction metrics — throughput rate, error frequency, cross-sell referral rate, and customer complaint attribution. The brief identifies the tellers with the most significant performance gaps and the specific metrics driving underperformance, structured as a coaching agenda for the branch manager's monthly review cycle. Branch manager coaching preparation time and the proportion of tellers showing performance improvement within two review cycles are the primary outcome metrics.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Branch managers assess individual teller performance from transaction system reports that require manual extraction and calculation of per-teller metrics; the analytical burden compresses the quality and frequency of individual coaching conversations. Tellers whose performance is degrading on a leading metric — rising error rate or declining cross-sell referral rate — are identified only when the gap has become material, rather than at the early signal. The Head of Branches has no consolidated view of teller performance quality across the network; frontline performance improvement is managed entirely at the branch manager level without a systematic signal for coaching program direction.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads per-teller transaction metrics — throughput rate, error frequency, cross-sell referral count, and complaint attribution — and generates a monthly coaching brief per branch manager identifying the tellers with the most significant performance gaps and the metric drivers behind each gap. The brief structures the findings as a coaching agenda, which the branch manager reviews and uses in the monthly review cycle. Branch manager coaching preparation time and the rate of tellers showing measurable performance improvement within two review cycles are the primary outcome metrics.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">A monthly teller performance coaching brief — identifying the tellers with the most significant performance gaps and the metrics driving each gap, structured as a coaching agenda — is available to each branch manager before the monthly review cycle.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent delivers the coaching brief to ≥95% of branch managers on each monthly cycle for ≥12 consecutive months post go-live.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥80% of coaching agenda items confirmed as actionable by branch managers; ≥60% of coached tellers show measurable improvement on the flagged metric within two review cycles.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Branch manager coaching preparation reduced from manual extraction and calculation of per-teller metrics to ≤15 minutes of brief review per month.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-channels/physical-branches/teller-frontline-operations/branch-operations-intelligence" id="scenario-branch-operations-intelligence" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Branch Operations Intelligence</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent analyzes teller queue patterns against staffing schedules across branches, identifies understaffed periods and their demand drivers, and recommends shift-level adjustments before the next scheduling cycle. The analysis decomposes queue-time exceedances by branch, day of week, and intraday interval, with supporting rationale drawn from payroll calendar and historical footfall data. Branch managers and regional managers receive a weekly queue and staffing brief without manual extraction from the queue management and scheduling systems.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Branch staffing schedules are set from monthly historical average footfall, leaving intraday queue spikes — driven by payroll cycles, seasonal demand, or local events — without analytical support. Queue-time exceedances become visible only in monthly performance packs that arrive several weeks after the event, too late to change the schedule that caused them. Without timely queue decomposition, branch managers cannot adjust staffing in advance of recurring demand patterns.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads real-time queue data, historical footfall patterns, and staffing schedules across branches, flagging queue-time exceedances and decomposing their demand drivers. It recommends shift-level adjustments before the next scheduling cycle, with supporting rationale drawn from payroll calendar and historical pattern data. Branch managers review the weekly brief and apply the adjustments they accept; queue-time service-level adherence and the number of recurring exceedance intervals are tracked against the pre-deployment baseline.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">A weekly queue and staffing brief — flagging queue-time exceedances by branch and interval, decomposing their demand drivers, and recommending shift-level adjustments — is available to branch managers and regional managers before the next scheduling cycle.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent delivers the queue and staffing brief for ≥95% of branches on each weekly cycle for ≥48 consecutive weeks post go-live.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥75% of recommended shift-level adjustments applied by branch managers in the next schedule; queue-time service-level adherence tracked as primary outcome metric.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Queue exceedance diagnosis reduced from monthly performance packs arriving several weeks stale to a weekly brief delivered before the next scheduling cycle.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+  </div>
+</section>
+<section class="l3-section" id="cash-management">
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Cash management</h2>
+    <p class="l3-section__intent">The daily management of vault cash across the branch network — replenishment ordering, intraday balancing, and end-of-day reconciliation. Cash management ties up working capital at the cost of overnight treasury funding; excess vault cash reduces net interest income while insufficient cash creates service failures. Cash circulation rules commonly require branches to maintain minimum denominations for customer service. Replenishment logistics are managed through armored carrier contracts with fixed visit frequencies, making over-ordering costly to unwind.</p>
+  </header>
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
+  </div>
+  <div class="l3-section__scenarios">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-channels/physical-branches/cash-management/branch-cash-replenishment-forecast" id="scenario-branch-cash-replenishment-forecast" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Branch Cash Replenishment Forecast</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent forecasts branch vault cash requirements from historical draw patterns, calendar events, and local deposit mix, generating the weekly replenishment order for treasury operations review. The forecast carries a confidence range per branch, accounting for payroll cycles, public holidays, and local demand variability that manual orders cannot model accurately. Branch managers review the recommendation before submission, retaining decision authority while eliminating the manual calculation burden.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Branch cash replenishment orders are calculated manually by branch managers from recent actuals, with fixed safety margins that do not reflect demand variability. Over-ordering ties up working capital at overnight funding cost; under-ordering creates service failures at peak demand periods. Demand variability from payroll cycles, public holidays, and local events exceeds what a manager can model accurately from recent history alone.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads historical vault cash draw data, local transaction patterns, and calendar inputs to generate a weekly replenishment order per branch with a confidence range. The branch manager reviews and confirms before submission to treasury operations. Out-of-service events from vault depletion and average idle cash balance are the primary outcome metrics tracked against the pre-deployment baseline.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">A weekly branch vault replenishment order with a per-branch confidence range is available for treasury operations review, generated from historical draw patterns, calendar events, and local deposit mix.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent produces replenishment recommendations for ≥95% of branches on each weekly ordering cycle for ≥48 consecutive weeks post go-live.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥85% of AI-generated replenishment orders confirmed by branch managers without material volume amendment before submission to treasury operations.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Branch manager order calculation time reduced from 45–90 minutes of manual actuals review per branch to ≤10 minutes of recommendation confirmation.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-channels/physical-branches/cash-management/vault-cash-reconciliation-automation" id="scenario-vault-cash-reconciliation-automation" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Vault Cash Reconciliation Automation</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent generates the daily vault cash reconciliation report for each branch from teller transaction records, cash-in records, and end-of-day count inputs, flagging discrepancies above the defined tolerance for branch manager and treasury operations review. The branch manager reviews and attests to the reconciliation; discrepancies are escalated through the standard cash control process. Reconciliation preparation time per branch and discrepancy detection rate are the primary outcome metrics.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Daily vault cash reconciliation is performed manually by branch managers from teller transaction records and end-of-day cash counts; reconciliation preparation is a consistent administrative burden at the end of each operating day. Cash circulation rules commonly require branches to maintain daily reconciliation records accessible to supervisors; manual reconciliation produces records of variable completeness when branch manager time is constrained by operational activity. Discrepancies that fall within manual tolerance but are part of a recurring drift pattern are not identified until a larger gap emerges; early pattern detection requires longitudinal analysis of daily reconciliation data that manual review cannot provide.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads teller transaction records, cash receipt logs, and end-of-day count inputs per branch, generates the daily reconciliation report with variance computation, and flags discrepancies above the defined tolerance with supporting transaction detail. Branch managers review and attest digitally; the complete reconciliation record is maintained in the document management system for supervisory access. Reconciliation preparation time per branch and the rate at which discrepancies above tolerance are detected and escalated on the day of occurrence are tracked against the pre-deployment manual baseline.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">A daily vault cash reconciliation report for each branch — with the variance computed from teller transaction records, cash receipt logs, and end-of-day counts, and discrepancies above tolerance flagged with supporting transaction detail — is available to the branch manager for review and attestation and to treasury operations for escalation.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent generates the daily reconciliation report for ≥98% of branch operating days for ≥48 consecutive weeks post go-live.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥95% of reports attested by branch managers without manual recalculation; 100% of discrepancies above tolerance detected and escalated on the day of occurrence.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Reconciliation preparation time per branch reduced from 30–45 minutes of manual end-of-day reconciliation to ≤10 minutes of review and digital attestation.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-channels/physical-branches/cash-management/branch-cash-demand-intelligence" id="scenario-branch-cash-demand-intelligence" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Branch Cash Demand Intelligence</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent produces a weekly branch cash demand brief decomposed by location, day-of-week pattern, and calendar event, surfacing the branches and periods where current vault cash levels and replenishment intervals create the highest service failure risk. The brief identifies branches where demand has shifted materially from the prior-period baseline and quantifies the working capital cost of current over-ordering patterns. The Head of Treasury Operations reviews the brief and directs replenishment logistics adjustments before the next ordering cycle.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Branch vault cash management is optimized at the branch level through manager-initiated replenishment orders; a portfolio-level view of cash demand patterns, idle cash concentration, and service failure risk across the branch network is not available to treasury operations. Branches with elevated service failure risk — where demand variability exceeds the current replenishment interval — are not distinguishable from lower-risk locations without discrete analytical work per branch. The working capital cost of network-wide over-ordering is material but is not quantified in the current reporting model; treasury operations cannot identify where idle cash reduction would have the greatest impact without a consolidated demand intelligence view.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads vault cash draw records and replenishment history across the branch network, computes weekly demand forecasts by location, and produces the portfolio-level brief covering service failure risk by branch, idle cash concentration, and branches where demand has shifted from the prior baseline. The brief quantifies the working capital cost of current over-ordering patterns and estimates the impact of targeted interval reductions at high-idle-cash locations. The Head of Treasury Operations reviews the brief and directs replenishment interval adjustments; out-of-service events from vault depletion and aggregate idle cash balance across the network are tracked as primary outcome metrics.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">A weekly portfolio-level branch cash demand brief — covering service failure risk by branch, idle cash concentration, branches where demand has shifted from the prior baseline, and the working capital cost of current over-ordering — is available to the Head of Treasury Operations before each ordering cycle.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent delivers the branch cash demand brief for ≥95% of scheduled weekly cycles for ≥48 consecutive weeks post go-live.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥75% of recommended replenishment interval adjustments confirmed as actionable by the Head of Treasury Operations; out-of-service events from vault depletion and aggregate idle cash balance tracked as primary outcome metrics.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Network-wide cash demand analysis reduced from discrete analytical work per branch to weekly automated delivery ahead of the next ordering cycle.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+  </div>
+</section>
+</div>
+
+</div>
+</div>
