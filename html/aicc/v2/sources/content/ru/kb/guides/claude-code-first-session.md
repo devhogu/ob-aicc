@@ -4,7 +4,7 @@ summary: Запустить Claude Code в своём репозитории, с
 category: Claude Code
 level: basic
 minutes: 8
-order: 50
+order: 49
 tags: claude code, разработка, терминал, репозиторий, claude.md
 source: Best practices for Claude Code
 source_url: https://code.claude.com/docs/en/best-practices

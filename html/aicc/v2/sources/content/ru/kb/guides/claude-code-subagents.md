@@ -4,7 +4,7 @@ summary: Отдельные исполнители со своим контек�
 category: Claude Code
 level: advanced
 minutes: 8
-order: 54
+order: 55
 tags: claude code, помощники, subagents, контекст, делегирование
 source: "Создание пользовательских subagents (документация на русском) и курс Introduction to Subagents"
 source_url: https://code.claude.com/docs/ru/sub-agents

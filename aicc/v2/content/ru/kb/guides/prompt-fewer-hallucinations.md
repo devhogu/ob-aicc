@@ -1,13 +1,13 @@
 ---
 title: "Как снизить выдумки"
 summary: Семь приёмов, которые заметно уменьшают уверенные ошибки модели, — от разрешения сказать «не знаю» до проверки по цитатам и двух прогонов.
-category: Промпт-инжиниринг
+category: Запросы к Claude
 level: basic
 minutes: 5
 order: 27
 tags: промпт, галлюцинации, выдумки, проверка, точность
-source: Prompting best practices
-source_url: https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices
+source: Лучшие практики составления подсказок
+source_url: https://platform.claude.com/docs/ru/build-with-claude/prompt-engineering/claude-prompting-best-practices
 ---
 
 Модель старается ответить всегда — даже когда ответа не знает. Так появляется [[hallucination|галлюцинация]]: гладкий и уверенный, но придуманный факт, цифра или ссылка. Полностью исключить её нельзя, но сильно снизить — можно. После этого руководства вы сможете дописывать в запрос приёмы, которые делают ответ проверяемым и честным там, где данных не хватает.

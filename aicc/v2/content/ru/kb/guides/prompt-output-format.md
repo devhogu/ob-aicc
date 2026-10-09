@@ -1,13 +1,13 @@
 ---
 title: "Формат ответа: просите то, что нужно"
 summary: Как получить ответ в нужном виде и нужной длины — таблицей, абзацами, коротко — и почему «делай так» работает лучше, чем «не делай так».
-category: Промпт-инжиниринг
+category: Запросы к Claude
 level: basic
 minutes: 4
-order: 26
+order: 24
 tags: промпт, формат, стиль, длина, таблица
-source: Prompting best practices
-source_url: https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices
+source: Лучшие практики составления подсказок
+source_url: https://platform.claude.com/docs/ru/build-with-claude/prompt-engineering/claude-prompting-best-practices
 ---
 
 Claude может ответить почти в любом виде: таблицей, списком, письмом, короткой справкой. Это руководство — о четырёх приёмах, которые помогают получить нужную форму и длину с первого раза, без лишних «переделай короче».

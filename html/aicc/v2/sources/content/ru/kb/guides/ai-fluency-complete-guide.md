@@ -8,7 +8,7 @@ order: 5
 featured: true
 layout: course
 tags: ai fluency, 4d, делегирование, описание, оценка, ответственность, грамотность, личная политика
-source: "AI Fluency: Framework and Foundations — Claude Academy (авторы фреймворка R. Dakan и J. Feller)"
+source: "AI Fluency: Framework and Foundations — Claude Academy"
 source_url: https://academy.claude.com/courses/ai-fluency-framework-foundations
 ---
 
@@ -16,7 +16,7 @@ source_url: https://academy.claude.com/courses/ai-fluency-framework-foundations
 
 Это пересказ курса AI Fluency, по которому Anthropic обучает и собственных сотрудников; фреймворк разработали Рик Дакан и Джозеф Феллер. Курс не про «десять лучших запросов» — такие советы быстро устаревают, — а про умения, которые остаются: работать с AI **эффективно, экономно, этично и безопасно**. Он просит перестать относиться к AI как к «проверке орфографии следующего уровня» и научиться **думать вместе с ним**.
 
-Каждая вкладка ниже — отдельная тема с упражнением; читать можно по порядку или выборочно. Около 30 минут на всё.
+Каждая вкладка ниже — отдельная тема, почти в каждой есть упражнение; читать можно по порядку или выборочно. Около 30 минут на всё.
 
 ## Три способа работать с AI {#modes}
 

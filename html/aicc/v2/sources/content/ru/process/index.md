@@ -2,7 +2,7 @@
 title: Процесс
 summary: Сквозная модель Хаба: четыре уровня, одна карточка и решения в точках контроля.
 order: 0
-related: process/portfolio, process/program, process/roles, projects
+related: hub/how-we-work, services/how-to-engage, projects
 ---
 
 Любая работа с AI проходит один путь — от идеи до результата. Хаб показывает три уровня этого пути: [[funnel|воронку]], [[portfolio|портфель]] и [[program|программу]]. Четвёртый, [[team-level|командный уровень]], ведётся в Jira. Через все уровни проходит одна [[project-card|карточка проекта]], а решения принимают в точках контроля — на месте или на форуме своего уровня.

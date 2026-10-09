@@ -4,7 +4,7 @@ summary: Почему расход растёт в длинных сеансах
 category: Claude Code
 level: basic
 minutes: 5
-order: 57
+order: 54
 tags: claude code, расходы, контекст, модель, лимиты
 source: Эффективное управление затратами (документация на русском)
 source_url: https://code.claude.com/docs/ru/costs

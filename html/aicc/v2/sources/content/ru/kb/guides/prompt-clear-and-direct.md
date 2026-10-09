@@ -1,13 +1,13 @@
 ---
 title: "Пишите ясно и объясняйте зачем"
 summary: Тест на коллегу — главная проверка любого запроса — и почему одна фраза о том, зачем нужен результат, улучшает ответ сильнее, чем десять запретов.
-category: Промпт-инжиниринг
+category: Запросы к Claude
 level: basic
 minutes: 4
 order: 21
 tags: промпт, ясность, контекст, тест на коллегу
-source: Prompting best practices
-source_url: https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices
+source: Лучшие практики составления подсказок
+source_url: https://platform.claude.com/docs/ru/build-with-claude/prompt-engineering/claude-prompting-best-practices
 ---
 
 Это руководство — о двух привычках, которые улучшают почти любой [[prompt|запрос]]: проверять его «тестом на коллегу» и объяснять, зачем нужен результат. После него вы сможете за минуту найти, чего не хватает в вашем запросе, и дописать это.

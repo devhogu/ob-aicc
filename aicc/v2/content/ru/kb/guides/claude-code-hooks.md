@@ -4,7 +4,7 @@ summary: Автоматические команды в ключевые мом�
 category: Claude Code
 level: advanced
 minutes: 6
-order: 55
+order: 56
 tags: claude code, хуки, hooks, автоматизация, правила
 source: Автоматизация действий с помощью hooks (документация на русском)
 source_url: https://code.claude.com/docs/ru/hooks-guide

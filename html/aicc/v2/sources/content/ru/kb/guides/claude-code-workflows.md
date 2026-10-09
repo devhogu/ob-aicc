@@ -4,7 +4,7 @@ summary: Готовые последовательности запросов �
 category: Claude Code
 level: basic
 minutes: 7
-order: 53
+order: 51
 tags: claude code, сценарии, отладка, тесты, рефакторинг, pr
 source: Распространённые рабочие процессы (документация на русском)
 source_url: https://code.claude.com/docs/ru/common-workflows

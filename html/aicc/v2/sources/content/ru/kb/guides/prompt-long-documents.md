@@ -1,13 +1,13 @@
 ---
 title: "Длинные документы: сначала текст, потом вопрос"
 summary: Три приёма для работы с большими документами — порядок частей запроса, метки для каждого документа и цитаты перед ответом — и готовый запрос для сравнения двух договоров.
-category: Промпт-инжиниринг
+category: Запросы к Claude
 level: basic
 minutes: 5
 order: 25
 tags: промпт, документы, длинный контекст, цитаты, договор
-source: Prompting best practices
-source_url: https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices
+source: Лучшие практики составления подсказок
+source_url: https://platform.claude.com/docs/ru/build-with-claude/prompt-engineering/claude-prompting-best-practices
 ---
 
 Claude может прочитать очень длинный текст: годовой отчёт, договор, десяток регламентов сразу. Но в длинном тексте детали легко теряются — и у людей, и у модели. Это руководство — о трёх приёмах, после которых вы сможете задавать вопросы по большим документам и проверять ответ по цитатам.
@@ -26,7 +26,7 @@ Claude может прочитать очень длинный текст: го�
 
 ## У каждого документа — своя метка {#tags}
 
-Метки вы уже знаете по шагу [Роль и структура](page:kb/guides/prompt-structure). Для нескольких документов удобно дать каждому номер (`index`), источник (`<source>`) и текст (`<document_content>`):
+Метки вы уже знаете по руководству [Роль и структура](page:kb/guides/prompt-structure). Для нескольких документов удобно дать каждому номер (`index`), источник (`<source>`) и текст (`<document_content>`):
 
 ```
 <documents>

@@ -17,6 +17,8 @@ import yaml
 
 SRC = Path(__file__).resolve().parents[1]
 WEIGHT = {'applies': ('действует для нас', 'is-applies'), 'partners': ('касается партнёров', 'is-partners'), 'benchmark': ('ориентир', 'is-benchmark')}
+CATEGORY_ORDER = ['Начало работы', 'Безопасная работа', 'Запросы к Claude', 'Claude', 'Claude Cowork', 'Автоматизация',
+                  'Claude Tag', 'Для руководителей', 'Claude Code', 'Обучение']
 LEVEL = {'start': 'с нуля', 'basic': 'базовый', 'advanced': 'продвинутый', 'deep': 'полное руководство'}
 
 
@@ -106,7 +108,10 @@ def add_pages(pages, site, api):
                                         'Claude Academy и все её курсы, официальная документация на русском и практические материалы Anthropic.', body)
 
     # the knowledge base: guides by category
-    guides = sorted((p for pid, p in pages.items() if pid.startswith('kb/guides/')), key=lambda p: (p.order, p.title.casefold()))
+    # categories in the order a newcomer needs them, the same as the learning roadmap; within one, the guide's order
+    rank = {c: n for n, c in enumerate(CATEGORY_ORDER)}
+    guides = sorted((p for pid, p in pages.items() if pid.startswith('kb/guides/')),
+                    key=lambda p: (rank.get(p.meta.get('category', ''), len(rank)), p.order, p.title.casefold()))
     cats = list(dict.fromkeys(p.meta.get('category', 'Разное') for p in guides))
     here = 'kb'
 
@@ -169,8 +174,8 @@ def add_pages(pages, site, api):
         p.nav = False
 
 
-LEVEL_COLORS = ['#9aa3b2', '#5b6bd6', '#d6006f', '#2e9e5b']
-BRANCH_COLORS = ['#5b6bd6', '#2e9e5b', '#d98a00']
+LEVEL_COLORS = ['#9aa3b2', '#5b6bd6', '#d6006f', '#7a3db8']
+BRANCH_COLORS = ['#5b6bd6', '#0f7c80', '#d98a00']
 
 
 def wrap(text, width):
@@ -310,7 +315,9 @@ def add_maps(pages, api):
         if step.get('page'):
             page = pages[step['page']]
             return step.get('title') or page.title, rel(url_of(here), url_of(page.id)), 'раздел Хаба', int(step.get('minutes', 20)), step['page'], False
-        label = 'курс на русском' if step.get('lang') == 'ru' else 'курс, EN'
+        url = step['url']
+        kind = 'курс' if '/courses/' in url else ('практикум' if 'github.com' in url else 'документация')
+        label = f'{kind} на русском' if step.get('lang') == 'ru' else f'{kind}, EN'
         return step['title'], step['url'], label, int(step.get('minutes', 30)), step['url'], True
 
     def totals(m, here):
@@ -409,13 +416,13 @@ def add_maps(pages, api):
     first = data['roadmap']['core'][0]
     start = (f'<nav class="lm-walk lm-walk--map lm-walk--top" aria-label="Начало маршрута"><div class="lm-walk__head">'
              f'<span class="lm-walk__pos">{len(data["roadmap"]["core"])} остановки для всех, затем специализация по роли</span>'
-             f'<a class="lm-walk__go" href="{e(rel(url_of(here), url_of(f"kb/maps/{first}")))}">Начать: остановка 1 — {e(maps[first]["title"])} →</a></div></nav>')
+             f'<a class="lm-walk__go" data-road-continue href="{e(rel(url_of(here), url_of(f"kb/maps/{first}")))}">Начать: остановка 1 — {e(maps[first]["title"])} →</a></div></nav>')
     body = (f'<p class="lede">{e(data["roadmap"]["lede"])}</p>' + start +
             '<p class="pf-tip">Отмечайте пройденные шаги на картах — прогресс сохраняется в вашем браузере и виден здесь. '
             '<button type="button" class="lm-reset" data-learn-reset>Сбросить прогресс</button></p>'
             f'<figure class="rm-figure">{roadmap_svg(data, maps, lambda mid: rel(url_of(here), url_of(f"kb/maps/{mid}")), lambda mm: totals(mm, here))}'
             '<figcaption>Начните со старта и двигайтесь по станциям. После четвёртой — выберите специализацию. Кольцо вокруг станции заполняется по мере прохождения карты.</figcaption></figure>'
-            f'<h2 class="rm-h">Остановки по порядку</h2><ol class="rm-line">{stops}</ol><div class="rm-fork"><span>Специализации — по вашей роли</span></div><div class="rm-branches">{branches}</div>'
+            f'<h2 class="rm-h">Остановки по порядку</h2><ol class="rm-line">{stops}</ol><div class="rm-fork"><span>Специализации — по вашей роли</span></div><div class="rm-branches" id="rm-branches">{branches}</div>'
             f'<p>Отдельные руководства и поиск по ним — в <a href="{e(rel(url_of(here), url_of("kb")))}">Базе знаний</a>.</p>')
     page = Page(here, data['roadmap']['title'], 'kb', 1, data['roadmap']['lede'], body)
     page.nav_title = 'Карты обучения'
@@ -459,7 +466,7 @@ def walk_steps(pages, api, maps, levels, order, step_info, before, after, move):
             """Address, title and kind of step k as seen from the host page; an outside course is reached through its card on the map."""
             info = step_info(steps[k][1], host)
             if info[5]:
-                return rel(url_of(host), url_of(map_page)) + f'#step-{k + 1}', info[0], 'курс на сайте Anthropic'
+                return rel(url_of(host), url_of(map_page)) + f'#step-{k + 1}', info[0], info[2] + ' Anthropic'
             return info[1], info[0], info[2]
 
         for k, (lvl, st) in enumerate(steps):

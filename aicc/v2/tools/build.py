@@ -473,7 +473,11 @@ def search_entries(page):
 
 
 def next_label(page):
-    return page.section
+    """The Russian name of the page's section, shown under a search result."""
+    return SECTION_NAMES.get(page.section, page.section)
+
+
+SECTION_NAMES = {s['id']: s['label']['ru'] for s in json.loads((SRC / 'site.json').read_text(encoding='utf-8'))['sections']}
 
 
 def write(path, text):

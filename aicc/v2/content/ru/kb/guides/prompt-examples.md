@@ -1,13 +1,13 @@
 ---
 title: "Покажите пример"
 summary: Примеры — самый надёжный способ задать тон, формат и структуру ответа. Сколько их нужно, какими они должны быть и как вставить их в запрос.
-category: Промпт-инжиниринг
+category: Запросы к Claude
 level: basic
 minutes: 4
 order: 22
 tags: промпт, примеры, образец, few-shot, формат
-source: Prompting best practices
-source_url: https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices
+source: Лучшие практики составления подсказок
+source_url: https://platform.claude.com/docs/ru/build-with-claude/prompt-engineering/claude-prompting-best-practices
 ---
 
 Описать стиль словами трудно, показать — легко. Это руководство о том, как задать тон и формат ответа готовыми образцами: после него вы сможете дать Claude свои удачные письма или справки и получить новый текст в том же стиле.
@@ -24,7 +24,7 @@ source_url: https://platform.claude.com/docs/en/build-with-claude/prompt-enginee
 
 ## Как это выглядит {#how}
 
-Ниже каждый пример обёрнут в метку `<example>` … `</example>`. Метка — это просто слово в угловых скобках: она показывает Claude, где пример начинается и где заканчивается. Подробнее о метках — в шаге [Роль и структура](page:kb/guides/prompt-structure). Ответы в примере условные.
+Ниже каждый пример обёрнут в метку `<example>` … `</example>`. Метка — это просто слово в угловых скобках: она показывает Claude, где пример начинается и где заканчивается. Подробнее о метках — в руководстве [Роль и структура](page:kb/guides/prompt-structure). Ответы в примере условные.
 
 ```
 Ответь клиенту в том же стиле, что и в примерах.

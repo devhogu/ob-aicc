@@ -4,7 +4,7 @@ summary: Агентный цикл, инструменты, что видит Cl
 category: Claude Code
 level: basic
 minutes: 6
-order: 49
+order: 50
 tags: claude code, агентный цикл, инструменты, режимы, контекст
 source: Как работает Claude Code (документация на русском)
 source_url: https://code.claude.com/docs/ru/how-claude-code-works

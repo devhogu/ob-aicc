@@ -125,7 +125,7 @@
       var dz = document.createElement('dialog'); dz.id = 'dz'; dz.className = 'dz';
       var bar = document.createElement('div'); bar.className = 'dz-bar';
       var cap = fig.querySelector('figcaption'); var span = document.createElement('span'); span.textContent = cap ? cap.textContent : ''; bar.appendChild(span);
-      var close = document.createElement('button'); close.type = 'button'; close.className = 'oc-button'; close.textContent = d.tDzClose || 'Close'; close.addEventListener('click', function () { dz.close(); }); bar.appendChild(close);
+      var close = document.createElement('button'); close.type = 'button'; close.className = 'oc-button'; close.textContent = d.tDzClose || 'Закрыть'; close.addEventListener('click', function () { dz.close(); }); bar.appendChild(close);
       dz.appendChild(bar);
       fig.querySelectorAll('.mm').forEach(function (m) {
         var c = m.cloneNode(true); var svg = c.querySelector('svg');
@@ -173,6 +173,14 @@
       root.querySelectorAll('.kb-column').forEach(function (col) {
         var n = col.querySelectorAll('[data-kb-open]:not([hidden])').length, c = col.querySelector('.kb-count'); if (c) c.textContent = n;
       });
+      // a board drawn as a table (the program, rows by project): each header counts the cards still shown in its column
+      root.querySelectorAll('table').forEach(function (t) {
+        t.querySelectorAll('thead th').forEach(function (th, i) {
+          var c = th.querySelector('.kb-count'); if (!c) return;
+          var n = 0; t.querySelectorAll('tbody tr').forEach(function (tr) { var td = tr.children[i]; if (td) n += td.querySelectorAll('[data-kb-open]:not([hidden])').length; });
+          c.textContent = n;
+        });
+      });
       if (count) count.textContent = 'Показано: ' + shown;
       if (opener && opener.hidden) close();
     }
@@ -210,11 +218,28 @@
       // the search and filters sit right above the open view
       var open = root.querySelector('[data-tab-panel="' + key + '"]'), after = open && open.querySelector('.pf-tip');
       if (bar && after) after.after(bar);
+      // a course: the step bars around it belong to the whole course; the bottom one waits for the last part,
+      // and both step aside while the open part is itself a step of the same map (it has its own bars)
+      if (root.classList.contains('course') && open) {
+        var parts = {};
+        open.querySelectorAll('.lm-walk[data-walk]').forEach(function (b) { parts[b.dataset.walk] = true; });
+        Array.prototype.forEach.call(root.parentElement.children, function (el) {
+          if (!el.matches('.lm-walk[data-walk]')) return;
+          var late = el.classList.contains('lm-walk--bottom') && key !== keys[keys.length - 1];
+          el.style.display = late || parts[el.dataset.walk] ? 'none' : '';
+        });
+      }
       root.dispatchEvent(new Event('kb-refresh', {bubbles: true}));
     }
     // a tab opens from the address (#plan) and keeps it, so a view can be linked to
-    function fromHash() {
-      var k = decodeURIComponent(location.hash.slice(1)); if (keys.indexOf(k) >= 0) { show(k); return true; }
+    function fromHash(ev) {
+      var k = decodeURIComponent(location.hash.slice(1));
+      if (keys.indexOf(k) >= 0) {
+        show(k);
+        // «Дальше» inside a course leads to the start of the next part, not to where the old one ended
+        if (ev && root.classList.contains('course')) root.querySelector('[data-tab-panel="' + k + '"]').scrollIntoView({block: 'start'});
+        return true;
+      }
       // a part inside a view (#cowork-schedule) opens its view and scrolls to it
       var target = k && document.getElementById(k), panel = target && target.closest('[data-tab-panel]');
       if (panel && root.contains(panel)) { show(panel.dataset.tabPanel); target.scrollIntoView(); return true; }
@@ -272,12 +297,29 @@
         Object.keys(state).forEach(function (k) { if (state[k] && k.indexOf(id + '|') === 0) done++; });
         seg.classList.toggle('is-complete', total > 0 && done >= total);
       });
+      // the roadmap's start button follows the reader: the first stop not yet finished, then the choice of a specialisation
+      document.querySelectorAll('[data-road-continue]').forEach(function (a) {
+        var stops = document.querySelectorAll('.rm-stop'), started = false;
+        for (var i = 0; i < stops.length; i++) {
+          var card = stops[i].querySelector('.rm-card'), bar = stops[i].querySelector('[data-map-progress]');
+          var id = bar.dataset.mapProgress, total = parseInt(bar.dataset.total, 10) || 0, done = 0;
+          Object.keys(state).forEach(function (k) { if (state[k] && k.indexOf(id + '|') === 0) done++; });
+          if (done) started = true;
+          if (done < total) {
+            a.href = card.getAttribute('href');
+            a.textContent = (started ? 'Продолжить' : 'Начать') + ': остановка ' + (i + 1) + ' — ' + card.querySelector('h3').textContent + ' →';
+            return;
+          }
+        }
+        a.href = '#rm-branches'; a.textContent = 'Основной маршрут пройден — выберите специализацию →';
+      });
       // stations on the roadmap: a ring filled by the share of the map's steps that are done
       document.querySelectorAll('[data-ring]').forEach(function (ring) {
         var id = ring.dataset.ring, total = parseInt(ring.dataset.total, 10) || 0, done = 0;
         Object.keys(state).forEach(function (k) { if (state[k] && k.indexOf(id + '|') === 0) done++; });
         var len = 2 * Math.PI * parseFloat(ring.getAttribute('r')), share = total ? Math.min(1, done / total) : 0;
         ring.style.strokeDasharray = (len * share) + ' ' + len;
+        ring.style.visibility = share > 0 ? '' : 'hidden';  // a round cap would draw a dot for nothing done
         ring.classList.toggle('is-complete', share >= 1);
       });
     }

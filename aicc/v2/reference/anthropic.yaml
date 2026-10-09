@@ -47,7 +47,7 @@
   what: Ответы на вопросы о работе в Claude — проекты, файлы, аккаунт, планы, безопасность.
   lang: ru
   url: https://support.claude.com/ru
-  ours: [claude-work-complete-guide]
+  ours: [claude-work-complete-guide, claude-projects]
 - group: Claude Academy
   title: Claude Academy — главная
   what: Учебный портал Anthropic по Claude — курсы, материалы по продуктам и подборки. Бесплатно, с сертификатами.
@@ -82,7 +82,7 @@
   what: Работа Claude с вашими файлами, папками и приложениями.
   lang: en
   url: https://academy.claude.com/products/cowork
-  ours: [claude-work-complete-guide]
+  ours: [claude-cowork, claude-work-complete-guide]
 - group: Claude Academy
   title: Материалы по Claude Code
   what: Агентная разработка в терминале, редакторе и настольном приложении.
@@ -117,13 +117,13 @@
   what: Повседневная работа с Claude — от первого разговора до проектов, артефактов и навыков.
   lang: en
   url: https://academy.claude.com/courses/claude-101
-  ours: [claude-work-complete-guide, claude-overview]
+  ours: [claude-overview, claude-work-complete-guide, claude-skills]
 - group: Курсы для всех
   title: Introduction to Claude Cowork
   what: Поручать Claude многошаговую работу — рабочее пространство, контекст, циклы задач.
   lang: en
   url: https://academy.claude.com/courses/introduction-to-claude-cowork
-  ours: [claude-work-complete-guide]
+  ours: [claude-cowork, claude-work-complete-guide]
 - group: Курсы для всех
   title: Introduction to Claude Tag
   what: Claude в Slack команды — что ему поручать и как направлять.
@@ -162,7 +162,7 @@
   ours: [claude-code-in-action]
 - group: Курсы по Claude Code и агентам
   title: Introduction to Agent Skills
-  what: Создавать, настраивать и делиться навыками в Claude Code.
+  what: Создавать и настраивать навыки в Claude Code и делиться ими.
   lang: en
   url: https://academy.claude.com/courses/introduction-to-agent-skills
   ours: [skills-complete-guide]

@@ -1,12 +1,12 @@
 ---
 title: "Дайте подумать: размышление и уровень усилия"
 summary: Современные модели Claude сами решают, когда и сколько размышлять. Как помочь им на сложных задачах, когда поднимать уровень усилия и чего больше не стоит делать.
-category: Промпт-инжиниринг
+category: Запросы к Claude
 level: basic
 minutes: 4
-order: 24
+order: 26
 tags: промпт, рассуждение, размышление, уровень усилия, анализ
-source: Лучшие практики составления подсказок (документация на русском)
+source: Лучшие практики составления подсказок
 source_url: https://platform.claude.com/docs/ru/build-with-claude/prompt-engineering/claude-prompting-best-practices
 ---
 

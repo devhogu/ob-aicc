@@ -1,13 +1,13 @@
 ---
 title: "Роль и структура: разделите инструкции и данные"
 summary: Одна фраза о роли задаёт тон, а простые метки вокруг документов не дают Claude спутать вставленный текст с вашими указаниями.
-category: Промпт-инжиниринг
+category: Запросы к Claude
 level: basic
 minutes: 4
 order: 23
 tags: промпт, роль, метки, xml, структура
-source: Prompting best practices
-source_url: https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices
+source: Лучшие практики составления подсказок
+source_url: https://platform.claude.com/docs/ru/build-with-claude/prompt-engineering/claude-prompting-best-practices
 ---
 
 Когда в запросе вперемешку ваши указания, вставленные документы, примеры и вопрос, Claude может принять кусок документа за указание. Это руководство — о двух простых привычках против этого. После него вы сможете задать Claude роль и разделить в запросе инструкции и данные метками.

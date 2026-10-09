@@ -159,7 +159,7 @@ def add_pages(pages, site, terms, api):
     pf_en = {'Воронка': 'Funnel', 'Проработка': 'Shaping', 'Готово к старту': 'Ready', 'В работе': 'Doing', 'Завершено': 'Done'}
     pf_gate = {s: f'{NEXT_POINT[s][0]} — {NEXT_POINT[s][1]}' for s in STAGES}
     pf_gate['В работе'] = f'WIP-лимит {wip.get("portfolio", 1)} · {NEXT_POINT["В работе"][0].lower()} — бизнес-владелец'
-    pg_en = {'Бэклог': 'Backlog', 'Готово к работе': 'Ready', 'В работе': 'Active', 'На проверке': 'Review', 'Завершено': 'Done'}
+    pg_en = {'Бэклог': 'Backlog', 'Готово к работе': 'Ready', 'В работе': 'Doing', 'На проверке': 'Review', 'Завершено': 'Done'}
     pg_gate = {'Бэклог': 'Порядок — менеджер продукта; между проектами — форум решений по программе', 'Готово к работе': f'Понятны результат и критерии приёмки · лимит {wip.get("program_ready", 2)}',
                'В работе': f'WIP-лимит {wip.get("program", 1)}', 'На проверке': 'Приёмка Feature — менеджер продукта', 'Завершено': 'Принято и отмечено на карточке'}
 
@@ -206,7 +206,7 @@ def add_pages(pages, site, terms, api):
     # where each project is
     cols = ''.join(column(s, pf_en[s], len(by_stage[s]), pf_gate[s],
                           ''.join(kb_card(here, c, c['id'], c['title'], PROFILE_TITLE[c['profile']], c['live'].get('next_step') or c['stage'],
-                                          c.get('function') or '—', c.get('class_of_service') or '') for c in sorted(by_stage[s], key=rank_key)))
+                                          c.get('function') or '—', c.get('area') or c.get('class_of_service') or '') for c in sorted(by_stage[s], key=rank_key)))
                    for s in STAGES)
     portfolio = (tip(pf_status)
                  + f'<div class="kb-scroll"><div class="kb-board kb-accordion" data-kb-accordion>{cols}</div></div>')
@@ -321,12 +321,12 @@ def render_card(card, page_id, pages, terms, api, ids, point=None):
     checklist = card.get('checklist') or []
     mark = {'сделано': '✔', 'не начато': '○', 'не нужно': '—'}
     check = ''.join(f'<li class="check {"done" if c["state"] == "сделано" else ""}"><span aria-hidden="true">{mark[c["state"]]}</span> {e(c["item"])}'
-                    + (f' <em>{e(c["note"])}</em>' if c.get('note') else '') + f' <span class="check-state">{e(c["state"])}</span></li>' for c in checklist)
+                    + (f' — <em>{e(c["note"])}</em>' if c.get('note') else '') + f' <span class="check-state">{e(c["state"])}</span></li>' for c in checklist)
     live = card['live']
     risks = ''.join(f'<li>{e(r)}</li>' for r in live.get('risks', [])) or '<li>—</li>'
     deps = ''.join(f'<li>{e(r)}</li>' for r in live.get('dependencies', [])) or '<li>—</li>'
     work = ''.join(
-        f'<tr><td>{e(w["id"])}</td><td>{"возможность" if w["type"] == "capability" else "функция"}</td><td>{e(w["title"])}</td><td>{e(w["state"])}</td><td>{e(w.get("jira") or "—")}</td></tr>'
+        f'<tr><td>{e(w["id"])}</td><td>{"Capability" if w["type"] == "capability" else "Feature"}</td><td>{e(w["title"])}</td><td>{e(w["state"])}</td><td>{e(w.get("jira") or "—")}</td></tr>'
         for w in card.get('work', []))
     decisions = ''.join(f'<tr><td>{e(d["what"])}</td><td>{e(d.get("who") or "—")}</td><td>{e(d.get("when") or "—")}</td></tr>' for d in card.get('decisions', []))
     closure = card.get('closure') or {}
