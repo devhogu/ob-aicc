@@ -152,7 +152,7 @@ async def check():
         context = await browser.new_context()
         page = await context.new_page()
         await page.goto((SITE / 'index.html').as_uri())
-        await page.wait_for_url('**/ru/index.html')
+        await page.wait_for_url(f'**/{langs[0]}/index.html')  # the entry opens the first edition present (Russian, or English in an English-only package)
         await context.close()
         await browser.close()
     # layout parity: a translated page about as long as its Russian twin (text length differs, structure must not)
