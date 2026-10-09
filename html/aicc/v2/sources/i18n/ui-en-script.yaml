@@ -1,0 +1,119 @@
+# English interface strings of the PI calendar (aicc/v2/tools/cadence.py) and the page script (aicc/v2/site.js).
+# Russian key: English value. Placeholders in braces stay as they are. Terms follow aicc/v2/i18n/terms-en.yaml.
+
+# months: nominative (iteration names), genitive (long dates) and short (date ranges)
+январь: January
+февраль: February
+март: March
+апрель: April
+май: May
+июнь: June
+июль: July
+август: August
+сентябрь: September
+октябрь: October
+ноябрь: November
+декабрь: December
+января: January
+февраля: February
+марта: March
+апреля: April
+мая: May
+июня: June
+июля: July
+августа: August
+сентября: September
+октября: October
+ноября: November
+декабря: December
+янв: Jan
+фев: Feb
+мар: Mar
+апр: Apr
+июн: Jun
+июл: Jul
+авг: Aug
+сен: Sep
+окт: Oct
+ноя: Nov
+дек: Dec
+
+# weekdays
+понедельник: Monday
+вторник: Tuesday
+среда: Wednesday
+четверг: Thursday
+пятница: Friday
+суббота: Saturday
+воскресенье: Sunday
+пн: Mon
+вт: Tue
+ср: Wed
+чт: Thu
+пт: Fri
+сб: Sat
+вс: Sun
+
+# work states (the values held by the cards)
+Бэклог: Backlog
+Готово к работе: Ready
+В работе: Doing
+На проверке: In review
+Завершено: Done
+
+# the PI calendar: time tiles, the plan, the week and work item views
+Сегодня: Today
+сегодня: today
+Сейчас: Now
+" · сейчас": " · now"
+" (эта неделя)": " (this week)"
+"{n} нед.": "{n} wk"
+Программный инкремент · неделя {week} из {weeks}: Program increment · week {week} of {weeks}
+Итерация · неделя {week} из {weeks}: Iteration · week {week} of {weeks}
+Итерация · {n} нед.: Iteration · {n} wk
+неделя {week} из {weeks}: week {week} of {weeks}
+Неделя {week} из {weeks} · итерация {it} · PI {pi}: Week {week} of {weeks} · iteration {it} · PI {pi}
+итерация {it}: iteration {it}
+Предыдущий PI: Previous PI
+Следующий PI: Next PI
+идёт: in progress
+завершён: finished
+впереди: ahead
+Пройдено {pct}%: "{pct}% done"
+Недели итерации {label} ({title}): Weeks of iteration {label} ({title})
+Работа по итерациям {pi}: Work by iteration, {pi}
+Работа в итерации {label}: Work in iteration {label}
+Проект: Project
+Проект {id}: Project {id}
+Не запланировано: Not planned
+ещё не запланировано: not planned yet
+В этом PI работы не запланировано.: No work is planned in this PI.
+В эту итерацию работа пока не запланирована.: No work is planned for this iteration yet.
+Полная карточка проекта →: Full project card →
+нерабочие: days off
+нерабочий день: day off
+сокращённый день: short day
+вероятны отсутствия: absences likely
+вся неделя: whole week
+сезон отпусков: vacation season
+"Сейчас {pi}, итерация {it} ({title}), неделя {week} из {weeks}. ": "Now: {pi}, iteration {it} ({title}), week {week} of {weeks}. "
+"В этой итерации {n} {work}, без итерации — {loose}. ": "This iteration has {n} {work}; {loose} with no iteration. "
+Ближайшая Review — {review}, Planning — {planning}.: "Next Review: {review}; Planning: {planning}."
+работа|работы|работ: work item|work items
+
+# lists, search and dialogs
+"Показано: {count}": "Showing: {count}"
+Ничего не найдено: Nothing found
+Не найдено.: Not found.
+Закрыть: Close
+
+# learning maps and the roadmap
+"{done} из {total}": "{done} of {total}"
+"{n} шагов": "{n} steps"
+Карта пройдена ✓: Map completed ✓
+"Начать: шаг 1": "Start: step 1"
+"Продолжить: шаг {n}": "Continue: step {n}"
+"Начать: остановка {n}": "Start: stop {n}"
+"Продолжить: остановка {n}": "Continue: stop {n}"
+Основной маршрут пройден — выберите специализацию →: Core route completed — choose a specialization →
+Сбросить отметки о пройденных шагах во всех картах?: Clear the done marks on every step of every map?

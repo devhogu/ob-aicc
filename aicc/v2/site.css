@@ -1188,3 +1188,7 @@ button.here-key{font-size:11px;padding:2px 8px 2px 5px;gap:4px;white-space:nowra
 .o-table-wrap table:not(:has(th:nth-child(4))){min-width:0}
 .course-tabs button{text-align:left}
 @media (max-width:900px){.page-body .rai-flow li:first-child{clip-path:none;border-radius:10px}}
+/* the language switch: a header control beside the theme button, the same size and look */
+.o-header .lang-switch{display:inline-flex;align-items:center;justify-content:center;min-width:40px;height:40px;padding:0 10px;border:1px solid var(--shell-control-border);border-radius:8px;background:var(--shell-control-bg);color:var(--shell-header-text);font:600 13px/1 var(--font-body);letter-spacing:.04em;text-decoration:none}
+.o-header .lang-switch:hover{background:var(--shell-input-bg)}
+.o-header .lang-switch:focus-visible{outline:3px solid var(--shell-focus);outline-offset:2px}

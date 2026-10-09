@@ -1,14 +1,15 @@
 #!/usr/bin/env python3
 # START_MODULE_CONTRACT
-#   PURPOSE: Check the built Hub site (version 2): links, anchors, page identifiers, Draft chip, vocabulary convention, forbidden wording.
+#   PURPOSE: Check the built Hub site (version 2), every edition: links, anchors, page identifiers, Draft chip, forbidden wording, search; the Russian vocabulary convention on Russian pages.
 #   SCOPE: Reads html/aicc/v2 and aicc/v2 only; never writes except through the build it runs for --idempotent.
 #   DEPENDS: M-PORTAL-SOURCE
-#   LINKS: C-HUB-V2, V-M-PORTAL-PROJECTION
+#   LINKS: C-HUB-V2, C-HUB-V2-EN, V-M-PORTAL-PROJECTION
 # END_MODULE_CONTRACT
 #
 # START_MODULE_MAP
 #   check - return the list of errors of the built site
 #   tree_hash - checksum of every file of the built site
+#   translations - parity, Russian text and staleness of each translated edition
 # END_MODULE_MAP
 """Check html/aicc/v2: python3 aicc/v2/tools/check.py [--idempotent]"""
 import hashlib
@@ -23,6 +24,8 @@ import sys
 from urllib.parse import unquote, urlsplit
 
 import yaml
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 ROOT = Path(__file__).resolve().parents[3]
 SRC = ROOT / 'aicc' / 'v2'
@@ -97,22 +100,28 @@ def check():
         parsed[name] = Parsed()
         parsed[name].feed(path.read_text(encoding='utf-8'))
     forbidden = [re.compile(re.escape(w), re.I) for w in site['forbidden']] + [re.compile(p) for p in site['forbidden_patterns']]
-    content_pages = {n for n in pages if n.startswith('ru/')}
+    english = SRC / 'i18n' / 'terms-en.yaml'  # the English forms of the forbidden wording, for the English edition
+    listed = yaml.safe_load(english.read_text(encoding='utf-8')) if english.exists() else {}
+    forbidden_by = {'en': [re.compile(r'(?<![\w-])' + re.escape(w) + r'(?![\w-])', re.I) for w in listed.get('forbidden_en', [])]
+                    + [re.compile(p) for p in listed.get('forbidden_patterns_en', [])]}
+    languages = site.get('languages', ['ru'])
+    content_pages = {n for n in pages if n.split('/')[0] in languages}
     for name in sorted(content_pages):
         p, text = parsed[name], path_text(parsed[name])
-        page_id = name[len('ru/'):-len('/index.html')] if name != 'ru/index.html' else 'index'
+        lang = name.split('/')[0]
+        page_id = name[len(lang) + 1:-len('/index.html')] if name != f'{lang}/index.html' else 'index'
         if p.h1 != 1:
             errors.append(f'{name}: {p.h1} h1')
         if p.chips != 1:
             errors.append(f'{name}: the Draft chip is missing')
         if len(p.page_ids) != 1 or p.page_ids[0] != 'ID: ' + ids.get(page_id, '?'):
             errors.append(f'{name}: page identifier missing or wrong ({p.page_ids})')
-        for pattern in forbidden:
+        for pattern in forbidden + forbidden_by.get(lang, []):
             hit = pattern.search(text)
             if hit:
                 errors.append(f'{name}: forbidden wording {hit[0]!r}')
         carried = 'class="discovery-content"' in pages[name].read_text(encoding='utf-8')  # carried over verbatim from the catalog
-        if name != 'ru/reference/vocabulary/index.html' and not carried:
+        if lang == 'ru' and name != 'ru/reference/vocabulary/index.html' and not carried:  # the Russian convention: an English term only beside its Russian word
             for term in terms:
                 if term['ru'].lower().startswith(term['en'].lower()):
                     continue  # the Russian text itself uses the English word, as the terminology map prescribes
@@ -138,15 +147,56 @@ def check():
                 errors.append(f'{name}: broken reference {ref}')
             elif parts.fragment and target in parsed and unquote(parts.fragment) not in parsed[target].ids:
                 errors.append(f'{name}: missing anchor {ref}')
-    index = (OUT / 'assets' / 'search-ru.js').read_text(encoding='utf-8')
-    entries = json.loads(index[len('window.AICC_SEARCH_INDEX='):].rstrip(';\n'))
-    for entry in entries:
-        parts = urlsplit(entry['u'])
-        if parts.path not in parsed or parts.fragment and parts.fragment not in parsed[parts.path].ids:
-            errors.append(f'search result does not resolve: {entry["u"]}')
+    for lang in languages:
+        index = (OUT / 'assets' / f'search-{lang}.js').read_text(encoding='utf-8')
+        entries = json.loads(index[len('window.AICC_SEARCH_INDEX='):].rstrip(';\n'))
+        for entry in entries:
+            parts = urlsplit(entry['u'])
+            if not parts.path.startswith(lang + '/'):
+                errors.append(f'search-{lang}: result in another edition: {entry["u"]}')
+            if parts.path not in parsed or parts.fragment and parts.fragment not in parsed[parts.path].ids:
+                errors.append(f'search result does not resolve: {entry["u"]}')
     entry = OUT / 'index.html'
     if 'url=ru/index.html' not in entry.read_text(encoding='utf-8'):
         errors.append('the site entry must forward to ru/index.html')
+    errors.extend(translations(site, languages))
+    return errors
+
+
+# START_CONTRACT: translations
+#   PURPOSE: Hold every translated edition to the Russian one: page pairs share their structure (always), and while the edition is marked complete it has no Russian text and no missing or stale translation (reported as warnings while it is a draft).
+#   INPUTS: { site: dict; languages: list }
+#   OUTPUTS: { list - errors; warnings are printed }
+#   SIDE_EFFECTS: Prints a summary of the translation state.
+# END_CONTRACT: translations
+def translations(site, languages):
+    import parity
+    errors = []
+    for lang in languages:
+        if lang == 'ru':
+            continue
+        strict = site.get('editions', {}).get(lang) == 'complete'
+        incomplete = []
+        ru_pages = sorted(p.relative_to(OUT / 'ru').as_posix() for p in (OUT / 'ru').rglob('index.html') if 'catalog/assets' not in p.as_posix())
+        for name in ru_pages:
+            own = OUT / lang / name
+            if not own.exists():
+                errors.append(f'{lang}/{name}: the page is missing in this edition')
+                continue
+            ru_sig, own_sig = parity.signature(OUT / 'ru' / name), parity.signature(own)
+            errors.extend(parity.compare(ru_sig, own_sig, name, lang, ordered=name != 'reference/vocabulary/index.html'))  # the vocabulary is alphabetical in each language
+            words = parity.cyrillic(own_sig)
+            if words:
+                incomplete.append(f'{lang}/{name}: Russian text ({len(words)} words, e.g. {", ".join(words[:3])})')
+        extra = sorted(p.relative_to(OUT / lang).as_posix() for p in (OUT / lang).rglob('index.html') if 'catalog/assets' not in p.as_posix() and not (OUT / 'ru' / p.relative_to(OUT / lang)).exists())
+        errors.extend(f'{lang}/{name}: a page without its Russian source' for name in extra)
+        missing, stale = parity.staleness(lang)
+        incomplete += [f'{lang}: no translation of {x}' for x in missing] + [f'{lang}: translation older than its Russian source: {x}' for x in stale]
+        if strict:
+            errors.extend(incomplete)
+        else:
+            print(f'{lang} edition (draft): {len(ru_pages)} page pairs; {sum(1 for x in incomplete if "Russian text" in x)} pages with Russian text; '
+                  f'{len(missing)} translations missing; {len(stale)} stale')
     return errors
 
 

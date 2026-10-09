@@ -1,5 +1,14 @@
 /* AI Competence Hub: theme, search and navigation. No external requests; the search index loads as a script so the site also opens from a folder. */
 (function () {
+  // the page's words: Russian is the source and its own key; an English page loads assets/i18n-en.js, which sets window.HUB_I18N
+  var I = window.HUB_I18N || null;
+  function T(s, v) { var t = I && I[s] || s; if (v) t = t.replace(/\{(\w+)\}/g, function (_, k) { return v[k]; }); return t; }
+  // the plural form for a count: the three Russian forms (one, few, many); a translation gives 'one|other' under 'one|few|many'
+  function P(n, f) {
+    if (!I) { var k = Math.abs(n) % 100, j = k % 10; return j === 1 && k !== 11 ? f[0] : j >= 2 && j <= 4 && (k < 12 || k > 14) ? f[1] : f[2]; }
+    var o = I[f.join('|')]; if (!o) return f[2];
+    o = o.split('|'); return Math.abs(n) === 1 ? o[0] : (o[1] || o[0]);
+  }
   var script = document.currentScript;
   var d = script ? script.dataset : {};
   var root = document.documentElement;
@@ -19,6 +28,12 @@
       label();
     });
   }
+  // the language switch keeps the reader's place: the address's #part goes along unless the link names its own
+  document.querySelectorAll('[data-lang-switch]').forEach(function (a) {
+    var base = a.getAttribute('href') || '';
+    function carry() { a.setAttribute('href', base.indexOf('#') < 0 ? base + location.hash : base); }
+    ['click', 'auxclick', 'contextmenu', 'focus'].forEach(function (k) { a.addEventListener(k, carry); });
+  });
   var navd = document.querySelector('.o-nav details');
   if (navd && window.matchMedia('(max-width: 1100px)').matches) navd.removeAttribute('open');
 
@@ -125,7 +140,7 @@
       var dz = document.createElement('dialog'); dz.id = 'dz'; dz.className = 'dz';
       var bar = document.createElement('div'); bar.className = 'dz-bar';
       var cap = fig.querySelector('figcaption'); var span = document.createElement('span'); span.textContent = cap ? cap.textContent : ''; bar.appendChild(span);
-      var close = document.createElement('button'); close.type = 'button'; close.className = 'oc-button'; close.textContent = d.tDzClose || 'Закрыть'; close.addEventListener('click', function () { dz.close(); }); bar.appendChild(close);
+      var close = document.createElement('button'); close.type = 'button'; close.className = 'oc-button'; close.textContent = d.tDzClose || T('Закрыть'); close.addEventListener('click', function () { dz.close(); }); bar.appendChild(close);
       dz.appendChild(bar);
       fig.querySelectorAll('.mm').forEach(function (m) {
         var c = m.cloneNode(true); var svg = c.querySelector('svg');
@@ -181,7 +196,7 @@
           c.textContent = n;
         });
       });
-      if (count) count.textContent = 'Показано: ' + shown;
+      if (count) count.textContent = T('Показано: {count}', {count: shown});
       if (opener && opener.hidden) close();
     }
     function close(focus) {
@@ -266,7 +281,7 @@
         Object.keys(state).forEach(function (k) { if (state[k] && k.indexOf(id + '|') === 0) done++; });
         done = Math.min(done, total);
         var bar = el.querySelector('i'); if (bar) bar.style.width = (total ? Math.round(100 * done / total) : 0) + '%';
-        var label = el.querySelector('b'); if (label) label.textContent = done ? done + ' из ' + total : (el.classList.contains('lm-progress--mini') ? total + ' шагов' : '0 из ' + total);
+        var label = el.querySelector('b'); if (label) label.textContent = done ? T('{done} из {total}', {done: done, total: total}) : (el.classList.contains('lm-progress--mini') ? T('{n} шагов', {n: total}) : T('{done} из {total}', {done: 0, total: total}));
         el.classList.toggle('is-complete', total > 0 && done >= total);
       });
       // the drawn path: done steps, and the first step still to do pulses as "you are here"
@@ -285,10 +300,10 @@
       document.querySelectorAll('[data-walk-continue]').forEach(function (a) {
         var steps = document.querySelectorAll('.lm-step[data-step]'), todo = null, n = 0;
         for (var i = 0; i < steps.length; i++) if (!state[steps[i].dataset.step]) { todo = steps[i]; n = i + 1; break; }
-        if (!todo) { a.textContent = 'Карта пройдена ✓'; a.href = '#level-1'; a.classList.add('is-complete'); return; }
+        if (!todo) { a.textContent = T('Карта пройдена ✓'); a.href = '#level-1'; a.classList.add('is-complete'); return; }
         var link = todo.querySelector('.lm-title a');
         a.href = link && !link.target ? link.getAttribute('href') : '#' + todo.id;
-        a.textContent = (n === 1 ? 'Начать: шаг 1' : 'Продолжить: шаг ' + n) + ' — ' + (link ? link.textContent.replace(' ↗', '') : '') + ' →';
+        a.textContent = (n === 1 ? T('Начать: шаг 1') : T('Продолжить: шаг {n}', {n: n})) + ' — ' + (link ? link.textContent.replace(' ↗', '') : '') + ' →';
         if (link && link.dataset.map) a.dataset.map = link.dataset.map;
       });
       // the roadmap line: the segment after a stop turns green once that map is done
@@ -307,11 +322,11 @@
           if (done) started = true;
           if (done < total) {
             a.href = card.getAttribute('href');
-            a.textContent = (started ? 'Продолжить' : 'Начать') + ': остановка ' + (i + 1) + ' — ' + card.querySelector('h3').textContent + ' →';
+            a.textContent = T(started ? 'Продолжить: остановка {n}' : 'Начать: остановка {n}', {n: i + 1}) + ' — ' + card.querySelector('h3').textContent + ' →';
             return;
           }
         }
-        a.href = '#rm-branches'; a.textContent = 'Основной маршрут пройден — выберите специализацию →';
+        a.href = '#rm-branches'; a.textContent = T('Основной маршрут пройден — выберите специализацию →');
       });
       // stations on the roadmap: a ring filled by the share of the map's steps that are done
       document.querySelectorAll('[data-ring]').forEach(function (ring) {
@@ -326,7 +341,7 @@
     document.addEventListener('click', function (ev) {
       var b = ev.target.closest('[data-step-toggle]');
       if (b) { var id = b.closest('[data-step]').dataset.step; if (state[id]) delete state[id]; else state[id] = true; save(state); paint(); return; }
-      if (ev.target.closest('[data-learn-reset]') && confirm('Сбросить отметки о пройденных шагах во всех картах?')) { state = {}; save(state); paint(); }
+      if (ev.target.closest('[data-learn-reset]') && confirm(T('Сбросить отметки о пройденных шагах во всех картах?'))) { state = {}; save(state); paint(); }
     });
     paint();
   })();
@@ -355,7 +370,7 @@
         el.hidden = !ok; if (ok) shown++;
       });
       root.querySelectorAll('[data-lib-section]').forEach(function (s) { s.hidden = !s.querySelector('[data-lib-item]:not([hidden])'); });
-      count.textContent = shown ? 'Показано: ' + shown : 'Ничего не найдено';
+      count.textContent = shown ? T('Показано: {count}', {count: shown}) : T('Ничего не найдено');
     }
     search.addEventListener('input', apply);
     root.querySelectorAll('[data-lib-group]').forEach(function (b) {
@@ -385,7 +400,7 @@
     function firstMonday(y, m) { var t = at(y, m, 1); return t + ((3 - parts(t).wd + 7) % 7) * DAY - 3 * DAY; }
     function iteration(y, m) {
       var s = firstMonday(y, m), n = firstMonday(y + (m === 12 ? 1 : 0), m % 12 + 1);
-      return {name: 'I' + (m < 10 ? '0' : '') + m, label: 'i' + (m < 10 ? '0' : '') + m, month: m, year: y, pi: y + '-PIQ' + (Math.floor((m - 1) / 3) + 1), start: s, end: n - DAY, weeks: Math.round((n - s) / WEEK), title: MONTHS[m - 1]};
+      return {name: 'I' + (m < 10 ? '0' : '') + m, label: 'i' + (m < 10 ? '0' : '') + m, month: m, year: y, pi: y + '-PIQ' + (Math.floor((m - 1) / 3) + 1), start: s, end: n - DAY, weeks: Math.round((n - s) / WEEK), title: T(MONTHS[m - 1])};
     }
     function itKey(i) { return i.year + '-' + (i.month < 10 ? '0' : '') + i.month; }
     function weekOf(t) {
@@ -400,13 +415,15 @@
     function lostDays(monday) { var n = 0; for (var k = 0; k < 5; k++) { var d = dayKind(monday + k * DAY); if (d === 'off' || d === 'away') n++; } return n; }
     function weekNote(monday) {
       var groups = {off: [], away: [], short: []};
-      for (var k = 0; k < 5; k++) { var t = monday + k * DAY, d = dayKind(t), p = parts(t); if (d) groups[d].push(p.d + ' ' + SHORT[p.m - 1]); }
+      for (var k = 0; k < 5; k++) { var t = monday + k * DAY, d = dayKind(t), p = parts(t); if (d) groups[d].push(p.d + ' ' + T(SHORT[p.m - 1])); }
       var out = [['off', 'нерабочие'], ['away', 'вероятны отсутствия'], ['short', 'сокращённый день']].filter(function (g) { return groups[g[0]].length; })
-        .map(function (g) { return g[1] + ': ' + (groups[g[0]].length === 5 ? 'вся неделя' : groups[g[0]].join(', ')); });
+        .map(function (g) { return T(g[1]) + ': ' + (groups[g[0]].length === 5 ? T('вся неделя') : groups[g[0]].join(', ')); });
       var friday = iso(monday + 4 * DAY), mon = iso(monday);
-      data.seasons.forEach(function (s) { if (s.from <= friday && mon <= s.to) out.push(s.text); });
+      data.seasons.forEach(function (s) { if (s.from <= friday && mon <= s.to) out.push(season(s)); });
       return out.join('; ');
     }
+    // a season's text in the page's language: its own text_en when the data has one, else the table's (cadence.season)
+    function season(s) { return I && s.text_en || T(s.text); }
     function increment(y, q) {
       var its = [1, 2, 3].map(function (k) { return iteration(y, 3 * (q - 1) + k); }), last = its[2], name = y + '-PIQ' + q;
       var ipWeek = last.weeks;
@@ -418,11 +435,11 @@
     function qIndex(name) { var m = /^(\d{4})-PIQ(\d)$/.exec(name); return +m[1] * 4 + +m[2] - 1; }
     function span(a, b, long) {
       var x = parts(a), y = parts(b), n = long ? LONG : SHORT;
-      return x.d + ' ' + n[x.m - 1] + (x.y !== y.y ? ' ' + x.y : '') + ' – ' + y.d + ' ' + n[y.m - 1] + ' ' + y.y;
+      return x.d + ' ' + T(n[x.m - 1]) + (x.y !== y.y ? ' ' + x.y : '') + ' – ' + y.d + ' ' + T(n[y.m - 1]) + ' ' + y.y;
     }
     function today() { var n = new Date(); return at(n.getFullYear(), n.getMonth() + 1, n.getDate()); }
     function item(x) {
-      return '<a class="pi-item pi-item--' + (STATE_CLASS[x.state] || 'backlog') + '" href="' + esc(x.href) + '" data-item="' + esc(x.id) + '" title="' + esc(x.title) + ' · ' + esc(x.state) + '"><b>' + esc(x.id) + '</b><span>' + esc(x.title) + '</span></a>';
+      return '<a class="pi-item pi-item--' + (STATE_CLASS[x.state] || 'backlog') + '" href="' + esc(x.href) + '" data-item="' + esc(x.id) + '" title="' + esc(x.title) + ' · ' + esc(T(x.state)) + '"><b>' + esc(x.id) + '</b><span>' + esc(x.title) + '</span></a>';
     }
     function board(pi, it, sel) {
       var names = pi.iterations.map(function (i) { return pi.name + ' ' + i.name; });
@@ -437,22 +454,22 @@
         body.push('<tr data-kb-row data-find="' + esc(row.find) + '" data-function="' + esc(row['function']) + '" data-area="' + esc(row.area) + '"><th scope="row"><a href="' + esc(row.href) + '">' + esc(row.id) + '</a><span>' + esc(row.title) + '</span></th>' +
           cells.map(function (c, k) { return '<td' + cls(itKey(pi.iterations[k]) === itKey(sel) ? 'is-selected' : '') + '>' + c.map(item).join('') + '</td>'; }).join('') + '<td class="pi-loose">' + loose.map(item).join('') + '</td></tr>');
       });
-      if (!body.length) body.push('<tr><td colspan="5" class="pi-empty">В этом PI работы не запланировано.</td></tr>');
-      return '<div class="o-table-wrap pi-board-wrap"><table class="pi-board"><thead><tr><th>Проект</th>' + head + '<th>Не запланировано</th></tr></thead><tbody>' + body.join('') + '</tbody></table></div>';
+      if (!body.length) body.push('<tr><td colspan="5" class="pi-empty">' + T('В этом PI работы не запланировано.') + '</td></tr>');
+      return '<div class="o-table-wrap pi-board-wrap"><table class="pi-board"><thead><tr><th>' + T('Проект') + '</th>' + head + '<th>' + T('Не запланировано') + '</th></tr></thead><tbody>' + body.join('') + '</tbody></table></div>';
     }
-    function short(a, b) { var x = parts(a), y = parts(b); return x.m === y.m ? x.d + '–' + y.d + ' ' + SHORT[y.m - 1] : x.d + ' ' + SHORT[x.m - 1] + ' – ' + y.d + ' ' + SHORT[y.m - 1]; }
+    function short(a, b) { var x = parts(a), y = parts(b); return x.m === y.m ? x.d + '–' + y.d + ' ' + T(SHORT[y.m - 1]) : x.d + ' ' + T(SHORT[x.m - 1]) + ' – ' + y.d + ' ' + T(SHORT[y.m - 1]); }
     var TAG = {ip: 'Planning', review: 'Review'};
     function weekKind(i, w, ip) {
       if (i.pi + ' ' + i.name + 'W' + w === ip) return 'ip';
       return w === i.weeks && i.month % 3 ? 'review' : '';
     }
     function quiet(s, kind) { return !kind && lostDays(s) > 2; }
-    function wtext(prefix, s, kind) { return prefix + ' · ' + weekRange(s, kind) + (kind ? ' · ' + TAG[kind] : '') + (quiet(s, kind) ? ' · вероятны отсутствия' : ''); }
+    function wtext(prefix, s, kind) { return prefix + ' · ' + weekRange(s, kind) + (kind ? ' · ' + TAG[kind] : '') + (quiet(s, kind) ? ' · ' + T('вероятны отсутствия') : ''); }
     function weekRange(s, kind) { return short(s, s + (kind === 'ip' ? 4 : 6) * DAY); }
     function here(day) {
       var w = weekOf(day), it = w[0], week = w[1], pi = increment(it.year, Math.floor((it.month - 1) / 3) + 1), p = parts(day);
       var monday = day - p.wd * DAY, piWeeks = Math.round((pi.end - pi.start + DAY) / WEEK), piWeek = Math.round((monday - pi.start) / WEEK) + 1, ip = pi.ip.name;
-      function pick(text, now) { return esc(text + (now ? ' · сейчас' : '')); }
+      function pick(text, now) { return esc(text + (now ? T(' · сейчас') : '')); }
       var segs = pi.iterations.map(function (i) {
         var cells = '';
         for (var n = 1; n <= i.weeks; n++) {
@@ -462,11 +479,11 @@
         }
         var cur = itKey(i) === itKey(it);
         return '<li' + cls(cur ? 'is-current' : '', i.end < monday ? 'is-done' : '', cur ? 'is-picked' : '') + ' data-here-it="' + itKey(i) + '" style="flex:' + i.weeks + '"><span class="here-cells">' + cells + '</span>' +
-          '<button type="button" class="here-it" data-here-week data-range="' + i.label + ' · ' + short(i.start, i.end) + ' · ' + i.weeks + ' нед."><b>' + i.label + ' · ' + i.title + '</b><span>' + short(i.start, i.end) + '</span></button></li>';
+          '<button type="button" class="here-it" data-here-week data-range="' + i.label + ' · ' + short(i.start, i.end) + ' · ' + T('{n} нед.', {n: i.weeks}) + '"><b>' + i.label + ' · ' + i.title + '</b><span>' + short(i.start, i.end) + '</span></button></li>';
       }).join('');
       var now = weekKind(it, week, ip);
-      return '<div class="here-tile" data-week="' + iso(monday) + '" tabindex="0"><small>Сегодня</small><strong>' + p.d + ' ' + LONG[p.m - 1] + ' ' + p.y + '</strong><span>' + DAYS[p.wd] + '</span></div>' +
-        '<div class="here-tile" data-pi="' + pi.name + '" tabindex="0"><small>Программный инкремент · неделя ' + piWeek + ' из ' + piWeeks + '</small><div class="here-head"><strong>PI ' + pi.name + '</strong><span>' + span(pi.start, pi.end) + '</span></div>' +
+      return '<div class="here-tile" data-week="' + iso(monday) + '" tabindex="0"><small>' + T('Сегодня') + '</small><strong>' + p.d + ' ' + T(LONG[p.m - 1]) + ' ' + p.y + '</strong><span>' + T(DAYS[p.wd]) + '</span></div>' +
+        '<div class="here-tile" data-pi="' + pi.name + '" tabindex="0"><small>' + T('Программный инкремент · неделя {week} из {weeks}', {week: piWeek, weeks: piWeeks}) + '</small><div class="here-head"><strong>PI ' + pi.name + '</strong><span>' + span(pi.start, pi.end) + '</span></div>' +
         '<ol class="here-pi">' + segs + '</ol>' +
         '<span class="here-range" data-here-range>' + pick(wtext(it.label + ' W' + week, monday, now), true) + '</span>' +
         '</div>' +
@@ -476,7 +493,7 @@
     function iterTile(i, day, pick) {
       var w = weekOf(day), cur = itKey(i) === itKey(w[0]), monday = day - parts(day).wd * DAY, ip = increment(i.year, Math.floor((i.month - 1) / 3) + 1).ip.name;
       if (pick === null) pick = cur ? monday : i.start;
-      function text(n, s) { return esc(wtext('W' + n, s, weekKind(i, n, ip)) + (s === monday ? ' · сейчас' : '')); }
+      function text(n, s) { return esc(wtext('W' + n, s, weekKind(i, n, ip)) + (s === monday ? T(' · сейчас') : '')); }
       var weeks = '', shown = '';
       for (var n = 1; n <= i.weeks; n++) {
         var s = i.start + (n - 1) * WEEK, k = weekKind(i, n, ip);
@@ -484,7 +501,7 @@
           ' data-here-week data-range="' + text(n, s) + '">' + (k ? TAG[k] : 'W' + n) + '</button></li>';
         if (s === pick) shown = text(n, s);
       }
-      return '<div class="here-tile" data-it="' + itKey(i) + '" tabindex="0"><small>Итерация · ' + (cur ? 'неделя ' + w[1] + ' из ' + i.weeks : i.weeks + ' нед.') + '</small><div class="here-head"><strong>' + i.label + ' · ' + i.title + '</strong><span>' + span(i.start, i.end) + '</span></div>' +
+      return '<div class="here-tile" data-it="' + itKey(i) + '" tabindex="0"><small>' + (cur ? T('Итерация · неделя {week} из {weeks}', {week: w[1], weeks: i.weeks}) : T('Итерация · {n} нед.', {n: i.weeks})) + '</small><div class="here-head"><strong>' + i.label + ' · ' + i.title + '</strong><span>' + span(i.start, i.end) + '</span></div>' +
         '<ol class="here-weeks">' + weeks + '</ol><span class="here-range" data-here-range>' + shown + '</span></div>';
     }
     function iterTileOf(key, day, n) { var p = key.split('-').map(Number), i = iteration(p[0], p[1]); return iterTile(i, day, n ? i.start + (n - 1) * WEEK : null); }
@@ -496,18 +513,18 @@
       var shown = pis.filter(function (p) { return p.name === state.pi; })[0] || pis[0];
       var sel = shown.iterations.filter(function (i) { return itKey(i) === state.it; })[0] || (it.pi === shown.name ? it : shown.iterations[0]);
       var monday = it.start + (week - 1) * WEEK, note = weekNote(monday);
-      var out = ['<div class="pi-bar"><div class="pi-now" data-week="' + iso(monday) + '" tabindex="0"><span class="pi-now__label">Сейчас</span><strong>' + it.pi + ' · ' + it.label + ' · неделя ' + week + ' из ' + it.weeks + '</strong><span>' + span(monday, monday + 6 * DAY) + '</span>' +
+      var out = ['<div class="pi-bar"><div class="pi-now" data-week="' + iso(monday) + '" tabindex="0"><span class="pi-now__label">' + T('Сейчас') + '</span><strong>' + it.pi + ' · ' + it.label + ' · ' + T('неделя {week} из {weeks}', {week: week, weeks: it.weeks}) + '</strong><span>' + span(monday, monday + 6 * DAY) + '</span>' +
         (note ? '<span class="pi-note">' + esc(note) + '</span>' : '') + '</div>' +
-        '<div class="pi-nav"><button type="button" data-pi-step="-1" aria-label="Предыдущий PI">‹</button><button type="button" data-pi-step="0">Сегодня</button><button type="button" data-pi-step="1" aria-label="Следующий PI">›</button></div></div><div class="pi-row">'];
+        '<div class="pi-nav"><button type="button" data-pi-step="-1" aria-label="' + T('Предыдущий PI') + '">‹</button><button type="button" data-pi-step="0">' + T('Сегодня') + '</button><button type="button" data-pi-step="1" aria-label="' + T('Следующий PI') + '">›</button></div></div><div class="pi-row">'];
       pis.forEach(function (pi) {
         var total = Math.round((pi.end - pi.start) / DAY) + 1, done = Math.max(0, Math.min(total, Math.round((day - pi.start) / DAY) + 1)), pct = Math.floor(100 * done / total);
-        var st = pi.name === it.pi ? 'идёт' : (done === total ? 'завершён' : 'впереди');
+        var st = pi.name === it.pi ? T('идёт') : (done === total ? T('завершён') : T('впереди'));
         var its = pi.iterations.map(function (i) {
-          return '<li' + cls(itKey(i) === itKey(it) ? 'is-current' : '', itKey(i) === itKey(sel) ? 'is-selected' : '') + ' data-it="' + itKey(i) + '" tabindex="0"><b>' + i.label + '</b><em>' + i.title + '</em><span>' + span(i.start, i.end) + ' · ' + i.weeks + ' нед.</span></li>';
+          return '<li' + cls(itKey(i) === itKey(it) ? 'is-current' : '', itKey(i) === itKey(sel) ? 'is-selected' : '') + ' data-it="' + itKey(i) + '" tabindex="0"><b>' + i.label + '</b><em>' + i.title + '</em><span>' + span(i.start, i.end) + ' · ' + T('{n} нед.', {n: i.weeks}) + '</span></li>';
         }).join('');
         out.push('<article' + cls('pi-card', pi.name === it.pi ? 'is-current' : '', pi.name === shown.name ? 'is-selected' : '') + ' data-pi="' + pi.name + '" tabindex="0">' +
           '<header><strong>' + pi.name + '</strong><small>' + st + '</small></header><span class="pi-dates">' + span(pi.start, pi.end) + '</span>' +
-          '<div class="pi-progress" title="Пройдено ' + pct + '%"><span style="width:' + pct + '%"></span></div>' +
+          '<div class="pi-progress" title="' + T('Пройдено {pct}%', {pct: pct}) + '"><span style="width:' + pct + '%"></span></div>' +
           '<ol class="pi-its">' + its + '</ol><p class="pi-ip"><b>Planning</b> ' + span(pi.ip.start, pi.ip.end) + '</p></article>');
       });
       out.push('</div>');
@@ -516,8 +533,8 @@
         var start = sel.start + (n - 1) * WEEK, name = sel.pi + ' ' + sel.name + 'W' + n, text = weekNote(start);
         weeks.push('<li' + cls(start === monday ? 'is-current' : '', name === shown.ip.name ? 'is-ip' : '', weekKind(sel, n, shown.ip.name) === 'review' ? 'is-review' : '') + ' data-week="' + iso(start) + '" tabindex="0"><b>W' + n + '</b><span>' + span(start, start + 6 * DAY) + '</span>' + (text ? '<small>' + esc(text.split(';')[0]) + '</small>' : '') + '</li>');
       }
-      out.push('<div class="pi-weeks"><span class="pi-weeks__label">Недели итерации ' + sel.label + ' (' + sel.title + ')</span><ol>' + weeks.join('') + '</ol></div>' +
-        '<h3 class="pi-board-title">Работа по итерациям ' + shown.name + '</h3>' + board(shown, it, sel));
+      out.push('<div class="pi-weeks"><span class="pi-weeks__label">' + T('Недели итерации {label} ({title})', {label: sel.label, title: sel.title}) + '</span><ol>' + weeks.join('') + '</ol></div>' +
+        '<h3 class="pi-board-title">' + T('Работа по итерациям {pi}', {pi: shown.name}) + '</h3>' + board(shown, it, sel));
       return out.join('');
     }
 
@@ -533,32 +550,31 @@
     function weekView(key, day) {
       var start = fromIso(key), w = weekOf(start), i = w[0], events = [];
       var friday = iso(start + 4 * DAY), mon = iso(start);
-      data.seasons.forEach(function (s) { if (s.from <= friday && mon <= s.to) events.push(s.text); });
+      data.seasons.forEach(function (s) { if (s.from <= friday && mon <= s.to) events.push(season(s)); });
       var kind = weekKind(i, w[1], piByName(i.pi).ip.name);
       if (kind) events.unshift(TAG[kind]);
       var days = [];
       for (var k = 0; k < 7; k++) {
         var t = start + k * DAY, p = parts(t), dk = k < 5 ? dayKind(t) : '';
-        days.push('<li' + cls(k > 4 ? 'is-weekend' : '', dk ? 'is-' + dk : '', t === day ? 'is-today' : '') + '><small>' + ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'][k] + '</small><b>' + p.d + '</b><span>' + SHORT[p.m - 1] + '</span></li>');
+        days.push('<li' + cls(k > 4 ? 'is-weekend' : '', dk ? 'is-' + dk : '', t === day ? 'is-today' : '') + '><small>' + T(['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'][k]) + '</small><b>' + p.d + '</b><span>' + T(SHORT[p.m - 1]) + '</span></li>');
       }
-      return '<header><small>Неделя ' + w[1] + ' из ' + i.weeks + ' · итерация <a href="#" data-it="' + itKey(i) + '">' + i.label + ' ' + i.title + '</a> · PI <a href="#" data-pi="' + i.pi + '">' + i.pi + '</a></small><h2>W' + w[1] + ' · ' + span(start, start + 6 * DAY) + '</h2>' +
+      return '<header><small>' + T('Неделя {week} из {weeks} · итерация {it} · PI {pi}', {week: w[1], weeks: i.weeks, it: '<a href="#" data-it="' + itKey(i) + '">' + i.label + ' ' + i.title + '</a>', pi: '<a href="#" data-pi="' + i.pi + '">' + i.pi + '</a>'}) + '</small><h2>W' + w[1] + ' · ' + span(start, start + 6 * DAY) + '</h2>' +
         (events.length ? '<p class="pop-events">' + events.map(function (e) { return '<span>' + esc(e) + '</span>'; }).join('') + '</p>' : '') + '</header>' +
         '<ol class="pop-days">' + days.join('') + '</ol>' +
-        '<p class="pop-legend"><span class="is-off">нерабочий день</span><span class="is-short">сокращённый день</span><span class="is-away">вероятны отсутствия</span><span class="is-today">сегодня</span></p>' +
-        '<h3>Работа в итерации ' + i.label + '</h3>' + itemList(work([i.pi + ' ' + i.name]), 'В эту итерацию работа пока не запланирована.');
+        '<p class="pop-legend"><span class="is-off">' + T('нерабочий день') + '</span><span class="is-short">' + T('сокращённый день') + '</span><span class="is-away">' + T('вероятны отсутствия') + '</span><span class="is-today">' + T('сегодня') + '</span></p>' +
+        '<h3>' + T('Работа в итерации {label}', {label: i.label}) + '</h3>' + itemList(work([i.pi + ' ' + i.name]), T('В эту итерацию работа пока не запланирована.'));
     }
     function itemView(id) {
       var found = null, card = null;
       data.rows.forEach(function (row) { row.items.forEach(function (x) { if (x.id === id) { found = x; card = row; } }); });
-      if (!found) return '<p class="pop-muted">Не найдено.</p>';
+      if (!found) return '<p class="pop-muted">' + T('Не найдено.') + '</p>';
       var tpl = document.querySelector('template[data-kb-detail="' + card.id + '"]'), wrap = document.createElement('div');
       if (tpl) wrap.appendChild(tpl.content.cloneNode(true));
-      var planned = found.iteration ? 'итерация <a href="#" data-it="' + found.iteration.slice(0, 4) + '-' + found.iteration.slice(11, 13) + '">' + esc(found.iteration.replace(' I', ' i')) + '</a>' : 'ещё не запланировано';
-      return '<button type="button" class="pi-view__close" data-item-close aria-label="Закрыть">×</button><header><small>' + esc(found.id) + ' · ' + esc(found.state) + ' · ' + planned + '</small><h2>' + esc(found.title) + '</h2></header>' +
-        '<h3>Проект ' + esc(card.id) + '</h3><div class="pop-card">' + wrap.innerHTML + '</div>' +
-        '<p><a class="pop-full" href="' + esc(card.href) + '">Полная карточка проекта →</a></p>';
+      var planned = found.iteration ? T('итерация {it}', {it: '<a href="#" data-it="' + found.iteration.slice(0, 4) + '-' + found.iteration.slice(11, 13) + '">' + esc(found.iteration.replace(' I', ' i')) + '</a>'}) : T('ещё не запланировано');
+      return '<button type="button" class="pi-view__close" data-item-close aria-label="' + T('Закрыть') + '">×</button><header><small>' + esc(found.id) + ' · ' + esc(T(found.state)) + ' · ' + planned + '</small><h2>' + esc(found.title) + '</h2></header>' +
+        '<h3>' + T('Проект {id}', {id: esc(card.id)}) + '</h3><div class="pop-card">' + wrap.innerHTML + '</div>' +
+        '<p><a class="pop-full" href="' + esc(card.href) + '">' + T('Полная карточка проекта →') + '</a></p>';
     }
-    function plural(n, f) { var k = n % 100; return k >= 11 && k <= 14 ? f[2] : n % 10 === 1 ? f[0] : n % 10 >= 2 && n % 10 <= 4 ? f[1] : f[2]; }
     // one line on where the plan stands today; the same text as cadence.plan_status
     function status(day) {
       var w = weekOf(day), it = w[0], week = w[1], monday = day - parts(day).wd * DAY, here = it.pi + ' ' + it.name, planned = 0, loose = 0, nxt = {};
@@ -568,11 +584,11 @@
       }); });
       for (var k = 0; k < 30; k++) {
         var s = monday + k * WEEK, ww = weekOf(s), i = ww[0], kind = weekKind(i, ww[1], increment(i.year, Math.floor((i.month - 1) / 3) + 1).ip.name);
-        if (kind && !nxt[kind]) nxt[kind] = weekRange(s, kind) + (k === 0 ? ' (эта неделя)' : '');
+        if (kind && !nxt[kind]) nxt[kind] = weekRange(s, kind) + (k === 0 ? T(' (эта неделя)') : '');
       }
-      return 'Сейчас ' + it.pi + ', итерация ' + it.label + ' (' + it.title + '), неделя ' + week + ' из ' + it.weeks + '. ' +
-        'В этой итерации ' + planned + ' ' + plural(planned, ['работа', 'работы', 'работ']) + ', без итерации — ' + loose + '. ' +
-        'Ближайшая Review — ' + (nxt.review || '—') + ', Planning — ' + (nxt.ip || '—') + '.';
+      return T('Сейчас {pi}, итерация {it} ({title}), неделя {week} из {weeks}. ', {pi: it.pi, it: it.label, title: it.title, week: week, weeks: it.weeks}) +
+        T('В этой итерации {n} {work}, без итерации — {loose}. ', {n: planned, work: P(planned, ['работа', 'работы', 'работ']), loose: loose}) +
+        T('Ближайшая Review — {review}, Planning — {planning}.', {review: nxt.review || '—', planning: nxt.ip || '—'});
     }
     return {data: data, today: today, at: at, here: here, status: status, iterTileOf: iterTileOf, calendar: calendar, weekView: weekView, itemView: itemView, qIndex: qIndex, weekOf: weekOf, fromIso: fromIso, itKey: itKey};
   })();

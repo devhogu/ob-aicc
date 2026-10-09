@@ -1,0 +1,198 @@
+# English interface strings of the project views and card pages (aicc/v2/tools/cards.py).
+# Russian key: English value. Placeholders in braces stay as they are.
+
+# States of the Portfolio and columns of the Program board
+Воронка: Funnel
+Проработка: Shaping
+Готово к старту: Ready
+В работе: Doing
+Завершено: Done
+Отложено: Deferred
+Закрыто: Closed
+Бэклог: Backlog
+Готово к работе: Ready
+На проверке: In review
+Отложено и закрыто: Deferred and closed
+
+# Classes of service, profiles, status, checklist states
+инициатива: initiative
+текущая работа: run-rate work
+срочная работа: urgent work
+Инициатива: Initiative
+Текущая работа: Run-rate work
+Регулярная проверка: Recurring check
+Обучение и внедрение: Enablement
+зелёный: green
+жёлтый: yellow
+красный: red
+не задан: not set
+не начато: not started
+сделано: done
+не нужно: not needed
+
+# Control points: what is decided, by whom, on what
+—: —
+Взять в проработку: Take into shaping
+Решение о старте: Start decision
+Продолжить, изменить курс или остановить: Persevere, pivot, or stop
+Подтверждение результата: Confirm the result
+Вернуться в воронку: Return to the funnel
+Взять в работу: Take into work
+менеджер продукта: product manager
+менеджер продукта с бизнес-владельцем: product manager with the business owner
+бизнес-владелец и менеджер продукта: business owner and product manager
+бизнес-владелец: business owner
+На карточке записаны задача, кому станет легче и как поймём, что получилось.: The card records the problem, who it helps, and how we will know it worked.
+Записаны ожидаемый результат, критерий выхода, допустимый объём вложений и порог остановки.: The intended outcome, exit criterion, appetite, and stop threshold are recorded.
+Есть место по WIP-лимиту; бизнес-кейс и условия на карточке.: There is room under the WIP limit; the business case and conditions are on the card.
+Достигнут критерий выхода или порог остановки, записанные до старта.: The exit criterion or stop threshold recorded before the start has been reached.
+Результат и уроки записаны на карточке.: The result and lessons are recorded on the card.
+Наступили условия возвращения, записанные на карточке.: The return conditions recorded on the card have been met.
+Причина закрытия записана на карточке.: The reason for closing is recorded on the card.
+Есть место по WIP-лимиту; запрос записан строкой на постоянной карточке.: There is room under the WIP limit; the request is a line on the standing card.
+
+# Column gates
+WIP-лимит {n}: WIP limit {n}
+WIP-лимит {n} · {point} — бизнес-владелец: WIP limit {n} · {point} — business owner
+Порядок — менеджер продукта; между проектами — форум решений по программе: 'Order: product manager; across projects: program decision forum'
+Понятны результат и критерии приёмки · лимит {n}: Outcome and acceptance criteria are clear · limit {n}
+Приёмка Feature — менеджер продукта: 'Feature acceptance: product manager'
+Принято и отмечено на карточке: Accepted and marked on the card
+
+# Tabs and their hints
+Портфель: Portfolio
+Программа: Program
+План PI: PI plan
+Решения: Decisions
+Реестр: Register
+где каждый проект: where each project is
+что делается сейчас: what is being done now
+что по итерациям: what happens in each iteration
+что дальше: what comes next
+кто что решает: who decides what
+все карточки: all cards
+
+# Counts in the status lines
+проект|проекта|проектов: project|projects
+карточка|карточки|карточек: card|cards
+в воронке: in the funnel
+в проработке: in shaping
+готовы к старту: ready to start
+в работе: in progress
+завершены: done
+отложены: deferred
+закрыты: closed
+в бэклоге: in the backlog
+готовы к работе: ready
+на проверке: in review
+
+# Status lines
+'{n} {noun}: {counts}.': '{n} {noun}: {counts}.'
+В работе {n} из {lim} — {verdict}: '{n} of {lim} in progress: {verdict}'
+есть место для старта.: there is room to start one more.
+лимит занят, следующий старт ждёт места.: the limit is reached; the next start waits for room.
+Ближайшее решение у {n} {noun} — «{point}», решает {who}.: 'Next decision for {n} {noun}: “{point}”, made by the {who}.'
+'{n} Capabilities и Features: {counts}.': '{n} Capabilities and Features: {counts}.'
+Features в работе {doing} из {lim}, готовы к работе {ready} из {ready_lim}.: 'Features in progress: {doing} of {lim}; ready: {ready} of {ready_lim}.'
+'Срочная работа: {n}.': 'Urgent work: {n}.'
+Срочной работы нет.: No urgent work.
+'Capabilities и Features пока нет: они появляются после решения о старте.': 'No Capabilities or Features yet: they appear after the start decision.'
+Не начато {n} {noun} и {m} Capabilities и Features.: 'Not started: {n} {noun} and {m} Capabilities and Features.'
+Первым в очереди — {id} «{title}».: 'First in line: {id} “{title}”.'
+'Решения ждут {n} {noun}, все решает {who}: {points}.': 'Decisions are pending for {n} {noun}, all made by the {who}: {points}.'
+'Решения ждут {n} {noun}: {points}.': 'Decisions are pending for {n} {noun}: {points}.'
+«{point}» — {n}: “{point}” — {n}
+«{point}» — {n}, решает {who}: “{point}” — {n}, made by the {who}
+'Принято решений: {n}.': 'Decisions made: {n}.'
+Принятых решений пока нет.: No decisions made yet.
+
+# Where we are now
+Где мы сейчас: Where we are now
+'Портфель · проектов: {n}': 'Portfolio · projects: {n}'
+'Программа · Capabilities и Features: {n}': 'Program · Capabilities and Features: {n}'
+Карточки — по состоянию на {date}; дата, PI и итерация считаются от сегодняшнего дня.: Cards as of {date}; the date, PI and iteration are counted from today.
+
+# Filter bar, board and detail view
+Найти: Search
+'Найти: идентификатор, название, функция': 'Search: ID, title, function'
+Функция: Function
+Все функции: All functions
+Услуга: Service
+Все услуги: All services
+'Показано: {n}': 'Showing: {n}'
+Показать колонку «{title}»: Show the “{title}” column
+Пока ничего: Nothing yet
+Полная карточка →: Full card →
+Закрыть ×: Close ×
+Состояние: State
+Следующая точка контроля: Next checkpoint
+Кто решает: Who decides
+Задача: Problem
+Ожидаемый результат: Intended outcome
+Следующий шаг.: Next step.
+
+# Tables
+Проекты, ещё не начатые: Projects not yet started
+Capabilities и Features, ещё не принятые: Capabilities and Features not yet accepted
+Место: Rank
+Карточка: Card
+Название: Title
+Ключ: Key
+Вид: Type
+Итерация: Iteration
+Профиль: Profile
+Что решили: What was decided
+Кто: Who
+Когда: When
+без места: unranked
+Журнал решений: Decision log
+'Решений пока не записано: все проекты ещё в начале пути.': 'No decisions recorded yet: every project is still at the start.'
+
+# Pages
+Проекты: Projects
+'Все проекты на одной странице: портфель, программа, план PI по итерациям, бэклог, решения и реестр.': 'All projects on one page: portfolio, program, PI plan by iteration, backlog, decisions, and register.'
+Завести карточку: Create a card
+Как принести идею или проект.: How to bring an idea or a project.
+Заведите карточку, и ваш проект появится во всех видах раздела.: Create a card, and your project will appear in every view of this section.
+Скопируйте шаблон ниже в файл <code>cards/ИДЕНТИФИКАТОР.yaml</code>.: Copy the template below into a file named <code>cards/IDENTIFIER.yaml</code>.
+? 'Заполните обязательные поля: идентификатор, название, суть, профиль, состояние, позиции людей, задачу и ожидаемый результат, текущее состояние.'
+: 'Fill in the required fields: identifier, title, summary, profile, state, people’s positions, problem and intended outcome, and the live status.'
+Для идеи поставьте состояние «Воронка». Остальное можно добавить позже.: For an idea, set the state to “Воронка” (Funnel). You can add the rest later.
+'Обновляйте карточку по мере работы: при следующей сборке все виды покажут изменения.': 'Update the card as the work goes on: the next build shows the changes in every view.'
+'Карточка проверяется схемой: сборка остановится и подскажет, что поправить. Схема — <code>cards/schema.json</code>.': 'A schema checks the card: the build stops and tells you what to fix. The schema is <code>cards/schema.json</code>.'
+Шаблон: Template
+
+# Card page
+← К проектам: ← Back to projects
+Точка контроля: Checkpoint
+На что опирается.: Based on.
+'Критерий выхода на карточке: {criterion}': 'Exit criterion on the card: {criterion}'
+'Как устроена работа такого вида: <a href="{href}">профиль «{profile}»</a>.': 'How this kind of work runs: <a href="{href}">the “{profile}” profile</a>.'
+Класс обслуживания: Class of service
+Бизнес-владелец: Business owner
+Менеджер продукта: Product manager
+Руководитель проекта: Project manager
+Место в бэклоге: Backlog rank
+Статус: Status
+Люди: People
+Роль: Role
+Позиция: Position
+Задача и результат: Problem and outcome
+Чем измерим: How we measure it
+Как сейчас: Where we are now
+Как хотим: Where we want to be
+Условия: Conditions
+Допустимый объём вложений: Appetite
+Контрольная точка: Review point
+Критерий выхода: Exit criterion
+Порог остановки: Stop threshold
+Памятка по практике: Practice checklist
+Сейчас: Now
+Главные риски: Main risks
+Зависимости: Dependencies
+Работа: Work
+Решений пока не записано.: No decisions recorded yet.
+Итог: Closure
+Результат.: Result.
+Чему научились.: What we learned.
+Ссылки: Links

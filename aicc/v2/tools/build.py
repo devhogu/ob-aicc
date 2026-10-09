@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # START_MODULE_CONTRACT
-#   PURPOSE: Build the AI Competence Hub site (version 2) from its Russian Markdown pages, vocabulary and project cards.
-#   SCOPE: Reads aicc/v2 only; writes html/aicc/v2 only. Self-contained: shares no code or file with version 1.
+#   PURPOSE: Build the AI Competence Hub site (version 2) in each of its languages from its Markdown pages, vocabulary and project cards; Russian is the source and English its translation.
+#   SCOPE: Reads aicc/v2 only; writes html/aicc/v2 only (ru/, en/, assets/, sources/). Self-contained: shares no code or file with version 1.
 #   DEPENDS: markdown-it-py, PyYAML
 #   LINKS: C-HUB-V2, M-PORTAL-PROJECTION
 # END_MODULE_CONTRACT
@@ -13,7 +13,9 @@
 #   short_id - stable five-character page identifier
 #   load_pages - read the Markdown pages and the generated pages
 #   render_markdown - Markdown to HTML with term markers, page links and heading ids
-#   build - write the whole site
+#   build_edition - write one edition
+#   build - write the whole site, one edition per language
+#   messages - the site messages of the edition being built
 # END_MODULE_MAP
 """Build html/aicc/v2: python3 aicc/v2/tools/build.py"""
 import hashlib
@@ -29,6 +31,10 @@ from urllib.parse import quote
 
 import yaml
 from markdown_it import MarkdownIt
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import i18n  # noqa: E402
+from i18n import T, loc  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[3]
 SRC = ROOT / 'aicc' / 'v2'
@@ -92,8 +98,9 @@ def plain(html):
     return re.sub(r'\s+', ' ', re.sub(r'<[^>]+>', ' ', html.replace('</p>', ' '))).strip()
 
 
-def url_of(page_id, lang='ru'):
-    """The file of a page below the site root; every address names its file so the site also opens from a folder."""
+def url_of(page_id, lang=None):
+    """The file of a page below the site root, in the edition being built unless a language is given; every address names its file so the site also opens from a folder."""
+    lang = lang or i18n.lang()
     if page_id == 'index':
         return f'{lang}/index.html'
     return f'{lang}/{page_id}/index.html'
@@ -140,9 +147,11 @@ def front_matter(text, path):
 
 
 def term_html(terms, key, surface, here):
-    """A vocabulary term as it appears in running text: the Russian word with the English term beside it, linked to the vocabulary."""
+    """A vocabulary term as it appears in running text, linked to the vocabulary: in Russian the word with the English term beside it, in English the plain term."""
     entry = terms[key]
     href = rel(here, url_of('reference/vocabulary')) + '#' + key
+    if i18n.lang() != i18n.SOURCE:
+        return f'<a class="term" href="{href}" title="{escape(loc(entry, "definition"), quote=True)}">{escape(surface or loc(entry, "term") or entry["en"])}</a>'
     return (f'<a class="term" href="{href}" title="{escape(entry["definition"], quote=True)}">'
             f'{escape(surface or entry["ru"])}' + ('' if (surface or entry['ru']).lower().startswith(entry['en'].lower()) else f' <span class="term-en">({escape(entry["en"])})</span>') + '</a>')
 
@@ -192,6 +201,8 @@ def render_markdown(text, page, terms, pages, site):
     tokens = md.parse(text)
     used = set()
     page.headings = []
+    hint = HEADING_IDS.get(page.id) if i18n.lang() != i18n.SOURCE else None  # a translation keeps the Russian page's anchors
+    order = []
     for i, token in enumerate(tokens):
         if token.type == 'heading_open':
             inline = tokens[i + 1]
@@ -201,17 +212,20 @@ def render_markdown(text, page, terms, pages, site):
                 if inline.children and inline.children[-1].type == 'text':
                     inline.children[-1].content = re.sub(r'\s*\{#[\w-]+\}\s*$', '', inline.children[-1].content)
             label = plain(md.renderer.renderInline(inline.children, md.options, {}))
-            ident = explicit[1] if explicit else slug(label)
+            ident = explicit[1] if explicit else (hint[len(order)] if hint and len(order) < len(hint) else slug(label))
             n = 2
             base = ident
             while ident in used:
                 ident = f'{base}-{n}'
                 n += 1
             used.add(ident)
+            order.append(ident)
             token.attrSet('id', ident)
             if token.tag in ('h2', 'h3'):
                 page.headings.append((token.tag, ident, label))
     html = md.renderer.render(tokens, md.options, {})
+    if i18n.lang() == i18n.SOURCE:
+        HEADING_IDS[page.id] = order
     if figures:
         import diagrams
         drawn = diagrams.render([code for code, _ in figures])
@@ -220,7 +234,7 @@ def render_markdown(text, page, terms, pages, site):
             if svgs is None:
                 raise ValueError(f'{page.id}: a diagram could not be drawn')
             cap = f'<figcaption>{escape(caption)}</figcaption>' if caption else ''
-            figure = (f'<figure class="o-diagram" role="group" aria-label="{escape(caption or page.title)}"><button type="button" class="dz-open" aria-label="Открыть крупно">{icon("maximize")}</button>'
+            figure = (f'<figure class="o-diagram" role="group" aria-label="{escape(caption or page.title)}"><button type="button" class="dz-open" aria-label="{escape(T('Открыть крупно'))}">{icon("maximize")}</button>'
                       f'<div class="mm mm-light">{svgs["light"]}</div><div class="mm mm-dark">{svgs["dark"]}</div>{cap}</figure>')
             html = re.sub(r'<p>@@FIGURE' + str(n) + r'@@</p>', lambda _: figure, html)
     # headings written as HTML blocks count too, in the order they appear
@@ -228,14 +242,23 @@ def render_markdown(text, page, terms, pages, site):
     return html.replace('<table>', '<div class="o-table-wrap"><table>').replace('</table>', '</table></div>')
 
 
+HEADING_IDS = {}  # page id -> the anchors of the Russian page's headings, in order
+
+
 def load_pages(site, terms):
+    """The pages of the edition: every Russian page, with its translation's text where one exists (otherwise the Russian text, marked as a fallback)."""
     pages = {}
-    content = SRC / 'content' / 'ru'
+    content = SRC / 'content' / i18n.SOURCE
+    edition = SRC / 'content' / i18n.lang()
     for path in sorted(content.rglob('*.md')):
         relative = path.relative_to(content).with_suffix('')
         page_id = relative.as_posix()
         if page_id.endswith('/index'):
             page_id = page_id[:-len('/index')]
+        own = edition / path.relative_to(content)
+        fallback = i18n.lang() != i18n.SOURCE and not own.exists()
+        if i18n.lang() != i18n.SOURCE and own.exists():
+            path = own
         meta, body = front_matter(path.read_text(encoding='utf-8'), path)
         first = page_id.split('/')[0]
         section = 'hub' if page_id == 'index' or first not in {s['id'] for s in site['sections']} else first
@@ -243,6 +266,11 @@ def load_pages(site, terms):
                               source=path, nav=str(meta.get('nav', 'true')).lower() not in ('false', 'no', '0'), nav_title=meta.get('nav_title'), layout=meta.get('layout', ''))
         pages[page_id].related = [x.strip() for x in meta.get('related', '').split(',') if x.strip()]
         pages[page_id].meta = meta
+        pages[page_id].fallback = fallback
+    if i18n.lang() != i18n.SOURCE and edition.exists():
+        orphans = [p for p in edition.rglob('*.md') if not (content / p.relative_to(edition)).exists()]
+        if orphans:
+            raise ValueError(f'translations without a Russian page: {orphans}')
     return pages
 
 
@@ -251,6 +279,9 @@ def load_catalog(pages):
     base = SRC / 'catalog' / 'pages'
     if not base.exists():
         return
+    own = SRC / 'catalog' / f'pages-{i18n.lang()}'
+    if i18n.lang() != i18n.SOURCE and own.exists():
+        base = own
     home = (base / 'index.html').read_text(encoding='utf-8')
     order = {}
     for n, href in enumerate(re.findall(r'href="([^"#]+)', home)):
@@ -261,25 +292,41 @@ def load_catalog(pages):
         body = text[text.index('-->\n') + 4:]
         section = meta.get('section', 'catalog')
         page = Page(meta['id'], meta['title'], section, meta.get('order') or (0 if meta['id'] == 'catalog' else order.get(meta['id'], 9999)), meta['summary'], body, layout='raw',
-                    nav_title='Обзор' if meta['id'] == 'catalog' else None)
+                    nav_title=T('Обзор') if meta['id'] == 'catalog' else None)
         page.styles = meta['styles']
+        page.fallback = i18n.lang() != i18n.SOURCE and base.name == 'pages'
         pages[meta['id']] = page
 
 
 def add_generated(pages, site, terms):
     """Pages that are projections of data rather than Markdown: the vocabulary, the project views, the reference and the knowledge base."""
-    rows = ''.join(
-        f'<tr id="{escape(t["id"])}"><td><strong>{escape(t["ru"])}</strong> <span class="term-en">({escape(t["en"])})</span></td>'
-        f'<td>{escape(t["definition"])}</td></tr>' for t in sorted(terms.values(), key=lambda t: t['ru'].casefold()))
-    m = site['messages']['ru']
+    if i18n.lang() == i18n.SOURCE:
+        rows = ''.join(
+            f'<tr id="{escape(t["id"])}"><td><strong>{escape(t["ru"])}</strong> <span class="term-en">({escape(t["en"])})</span></td>'
+            f'<td>{escape(t["definition"])}</td></tr>' for t in sorted(terms.values(), key=lambda t: t['ru'].casefold()))
+    else:  # the English vocabulary: the English term and its definition only
+        word = lambda t: loc(t, 'term') or t['en']
+        rows = ''.join(
+            f'<tr id="{escape(t["id"])}"><td><strong>{escape(word(t))}</strong></td><td>{escape(loc(t, "definition"))}</td></tr>'
+            for t in sorted(terms.values(), key=lambda t: word(t).casefold()))
+    m = messages(site)
     body = (f'<p class="lede">{escape(m["vocabulary_intro"])}</p><div class="o-table-wrap"><table class="vocabulary"><thead><tr>'
             f'<th>{escape(m["vocabulary_term"])}</th><th>{escape(m["vocabulary_definition"])}</th></tr></thead><tbody>{rows}</tbody></table></div>')
-    pages['reference/vocabulary'] = Page('reference/vocabulary', 'Словарь', 'reference', 30, m['vocabulary_intro'], body)
+    pages['reference/vocabulary'] = Page('reference/vocabulary', T('Словарь'), 'reference', 30, m['vocabulary_intro'], body)
     import cards
     import library
     library.add_pages(pages, site, sys.modules[__name__])
     library.add_maps(pages, sys.modules[__name__])
     cards.add_pages(pages, site, terms, sys.modules[__name__])
+
+
+def messages(site):
+    """The site messages of the edition, the Russian ones standing in for any the edition lacks."""
+    return {**site['messages'][i18n.SOURCE], **site['messages'].get(i18n.lang(), {})}
+
+
+def label_of(section):
+    return section['label'].get(i18n.lang()) or section['label'][i18n.SOURCE]
 
 
 def section_members(pages, section_id):
@@ -288,7 +335,7 @@ def section_members(pages, section_id):
 
 def navigation(page, pages, site):
     groups = []
-    m = site['messages']['ru']
+    m = messages(site)
     for section in site['sections']:
         members = section_members(pages, section['id'])
         if not members:
@@ -308,18 +355,18 @@ def navigation(page, pages, site):
                 for p in shown) + '</div>'
         groups.append(f'<div class="portal-nav-group{" is-current" if current else ""}"><a class="portal-section-link" data-section="{section["id"]}" '
                       f'href="{escape(rel(page.url, first.url))}"' + (' aria-current="true"' if current else '') +
-                      f'>{icon(section["icon"])}<span>{escape(section["label"]["ru"])}</span></a>{local}</div>')
+                      f'>{icon(section["icon"])}<span>{escape(label_of(section))}</span></a>{local}</div>')
     return (f'<aside class="o-nav"><details open><summary>{escape(m["nav_summary"])}</summary>'
             f'<nav class="portal-sections" aria-label="{escape(m["nav_label"])}">{"".join(groups)}</nav></details></aside>')
 
 
 def crumbbar(page, pages, site, has_ctx=False):
     """The line above the title: where the page sits in its section, and the next page of the section."""
-    m = site['messages']['ru']
+    m = messages(site)
     section = next(s for s in site['sections'] if s['id'] == page.section)
     members = section_members(pages, page.section)
     root = members[0] if members else page
-    parts = f'<a href="{escape(rel(page.url, root.url))}">{escape(section["label"]["ru"])}</a>'
+    parts = f'<a href="{escape(rel(page.url, root.url))}">{escape(label_of(section))}</a>'
     if page is not root:
         parts += f' / <span aria-current="page">{escape(page.nav_title)}</span>'
     following = ''
@@ -332,7 +379,7 @@ def crumbbar(page, pages, site, has_ctx=False):
 
 def page_end(page, pages, site):
     """The end of a reading page, as on the overview pages of the kit: back and next within the section, then related pages in boxes."""
-    m = site['messages']['ru']
+    m = messages(site)
     members = section_members(pages, page.section)
     out = ''
     if page in members:
@@ -354,7 +401,7 @@ def page_end(page, pages, site):
             raise ValueError(f'{page.id}: related page {pid} does not exist')
         related.append(pages[pid])
     if related:
-        labels = {s['id']: s['label']['ru'] for s in site['sections']}
+        labels = {s['id']: label_of(s) for s in site['sections']}
         cards = ''.join(
             f'<li class="o-card linked card--compact" data-tip="{escape(r.summary)}" data-tip-title="{escape(r.title)}">'
             f'<p class="card-kicker">{escape(labels[r.section])}</p><h3><a href="{escape(rel(page.url, r.url))}">{escape(r.title)}</a></h3>'
@@ -378,7 +425,7 @@ def course(body):
                     for n, (key, title, _) in enumerate(sections))
     panels = ''.join(
         f'<section class="tab-panel" id="{key}" data-tab-panel="{key}"><h2 class="tab-title">{n + 1}. {title}</h2>{html}'
-        + (f'<p class="course-next"><a href="#{sections[n + 1][0]}">Дальше: {sections[n + 1][1]} →</a></p>' if n + 1 < len(sections) else '')
+        + (f'<p class="course-next"><a href="#{sections[n + 1][0]}">{T('Дальше:')} {sections[n + 1][1]} →</a></p>' if n + 1 < len(sections) else '')
         + '</section>' for n, (key, title, html) in enumerate(sections))
     return f'{intro}<div class="course" data-tabs><div class="course-tabs" role="tablist">{heads}</div>{panels}</div>{tail}'
 
@@ -397,8 +444,8 @@ STAMPS = {}
 
 
 def render_page(page, pages, site):
-    m = site['messages']['ru']
-    names = site['names']['ru']
+    m = messages(site)
+    names = site['names'].get(i18n.lang()) or site['names'][i18n.SOURCE]
     here = page.url
     root = posixpath.relpath('.', posixpath.dirname(here))
     asset = lambda name: rel(here, 'assets/' + name) + stamp(name)
@@ -411,7 +458,7 @@ def render_page(page, pages, site):
     extra_head = ''
     if page.layout == 'raw':
         styles = ['tokens.css', 'components.css', 'theme.css'] + [s for s in page.styles if s.startswith('layouts/')]
-        extra_head = (''.join(f'<link rel="stylesheet" href="{escape(rel(here, "ru/catalog/assets/styles/" + s))}">' for s in styles) +
+        extra_head = (''.join(f'<link rel="stylesheet" href="{escape(rel(here, i18n.lang() + "/catalog/assets/styles/" + s))}">' for s in styles) +
                       f'<link rel="stylesheet" href="{escape(asset("discovery.css"))}"><script defer src="{escape(asset("discovery.js"))}"></script>')
     if page.layout == 'raw':
         body = page.body
@@ -424,20 +471,20 @@ def render_page(page, pages, site):
         single = '' if context else ' o-single'
         body = (f'<div class="o-reading{single}"><div class="o-copy"><h1>{escape(page.title)}</h1><article class="page-body o-doc">{page.body}</article>{page_end(page, pages, site)}</div>{context}</div>')
     return f'''<!doctype html>
-<html lang="ru" data-theme="light"><head>
+<html lang="{i18n.lang()}" data-theme="light"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark">
 <title>{escape(page.title)} · {escape(names["title"])}</title>
 <script>try{{var t=localStorage.getItem('hub-theme');document.documentElement.dataset.theme=t==='dark'?'dark':'light';}}catch(e){{}}</script>
 {extra_head}{''.join(f'<link rel="stylesheet" href="{asset("ui/" + n)}">' for n in ('fonts.css', 'tokens.css', 'primitives.css', 'workspace.css'))}<link rel="stylesheet" href="{asset("site.css")}">
-<script src="{asset("search-ru.js")}"></script><script src="{asset("site.js")}" defer data-root="{escape(root)}" data-t-none="{escape(m["search_none"])}" data-t-light="{escape(m["theme_to_light"])}" data-t-dark="{escape(m["theme_to_dark"])}" data-t-mail-body="{escape(m["fb_mail_body"])}"></script>
+<script src="{asset("search-" + i18n.lang() + ".js")}"></script>{edition_script(asset)}<script src="{asset("site.js")}" defer data-root="{escape(root)}" data-t-none="{escape(m["search_none"])}" data-t-light="{escape(m["theme_to_light"])}" data-t-dark="{escape(m["theme_to_dark"])}" data-t-mail-body="{escape(m["fb_mail_body"])}"></script>
 </head><body class="portal-workspace" data-portal-section="{page.section}" data-page="{escape(page.id)}">
 <a class="o-skip" href="#main">{escape(m["skip"])}</a>
 <header class="o-header">
   <a class="o-identity" href="{escape(rel(here, url_of("index")))}"><img src="{escape(rel(here, "assets/ui/assets/logos/hub-mark.svg"))}" width="36" height="36" alt=""><span>{escape(names["title"])}</span></a>
-  <span class="header-scope">{escape(section["label"]["ru"])}</span>
+  <span class="header-scope">{escape(label_of(section))}</span>
   <span class="status-chip" title="{escape(m["status_chip_title"])}">{escape(m["status_chip"])}</span>
   <div class="o-search" role="search"><label class="o-sr-only" for="q">{escape(m["search_label"])}</label><input id="q" type="search" autocomplete="off" placeholder="{escape(m["search_label"])}" aria-controls="results"><div id="results" class="o-search-results" hidden></div></div>
-  <div class="o-tools"><button id="theme-switch" type="button" class="theme-switch" aria-label="{escape(m["theme_to_dark"])}" title="{escape(m["theme_to_dark"])}"><span class="ts-moon">{icon("moon")}</span><span class="ts-sun">{icon("sun")}</span></button></div>
+  <div class="o-tools">{language_switch(page, site)}<button id="theme-switch" type="button" class="theme-switch" aria-label="{escape(m["theme_to_dark"])}" title="{escape(m["theme_to_dark"])}"><span class="ts-moon">{icon("moon")}</span><span class="ts-sun">{icon("sun")}</span></button></div>
 </header>
 <div class="o-frame">{navigation(page, pages, site)}
 <main class="o-main hub-main" id="main" tabindex="-1">
@@ -460,6 +507,23 @@ def render_page(page, pages, site):
 '''
 
 
+def edition_script(asset):
+    """The page script's words in the edition's language (none for Russian, the script's own language)."""
+    return '' if i18n.lang() == i18n.SOURCE else f'<script src="{asset("i18n-" + i18n.lang() + ".js")}"></script>'
+
+
+def language_switch(page, site):
+    """A link to the same page in each other edition; the page script carries the reader's place (#part) along."""
+    out = ''
+    for other in site['languages']:
+        if other == i18n.lang():
+            continue
+        name = site.get('language_names', {}).get(other, {'short': other.upper(), 'name': other})
+        out += (f'<a class="lang-switch" href="{escape(rel(page.url, url_of(page.id, other)))}" hreflang="{other}" lang="{other}" '
+                f'data-lang-switch title="{escape(name["name"])}" aria-label="{escape(name["name"])}">{escape(name["short"])}</a>')
+    return out
+
+
 def search_entries(page):
     entries = [{'u': page.url, 't': next_label(page), 'h': page.title, 'x': plain(page.body)[:360]}]
     if page.layout == 'raw':
@@ -473,11 +537,12 @@ def search_entries(page):
 
 
 def next_label(page):
-    """The Russian name of the page's section, shown under a search result."""
-    return SECTION_NAMES.get(page.section, page.section)
+    """The name of the page's section in the edition's language, shown under a search result."""
+    section = SECTIONS.get(page.section)
+    return label_of(section) if section else page.section
 
 
-SECTION_NAMES = {s['id']: s['label']['ru'] for s in json.loads((SRC / 'site.json').read_text(encoding='utf-8'))['sections']}
+SECTIONS = {s['id']: s for s in json.loads((SRC / 'site.json').read_text(encoding='utf-8'))['sections']}
 
 
 def write(path, text):
@@ -486,33 +551,36 @@ def write(path, text):
 
 
 def publish_sources(site):
-    """The source files of this version, so it can be read without the repository."""
+    """The source files of this version, so it can be read without the repository; one listing page per edition."""
     base = OUT / 'sources'
     listing = []
-    for folder in ('content', 'vocabulary', 'cards', 'reference', 'learning'):
+    for folder in ('content', 'vocabulary', 'cards', 'reference', 'learning', 'i18n'):
         for path in sorted((SRC / folder).rglob('*')):
             if path.is_file() and path.suffix in ('.md', '.yaml', '.yml', '.json'):
                 target = base / path.relative_to(SRC)
                 target.parent.mkdir(parents=True, exist_ok=True)
                 shutil.copyfile(path, target)
                 listing.append(path.relative_to(SRC).as_posix())
-    m = site['messages']['ru']
     items = ''.join(f'<li><a href="{escape(quote(item))}">{escape(item)}</a></li>' for item in listing)
-    write(base / 'index.html', f'<!doctype html><html lang="ru"><head><meta charset="utf-8"><title>{escape(m["sources_title"])}</title></head>'
-          f'<body style="font:16px/1.5 system-ui,sans-serif;max-width:60rem;margin:2rem auto;padding:0 1rem"><h1>{escape(m["sources_title"])}</h1>'
-          f'<p>{escape(m["sources_intro"])} <a href="../ru/index.html">{escape(m["back_to_site"])}</a></p><ul>{items}</ul></body></html>\n')
+    for language in site['languages']:
+        i18n.use(language)
+        m = messages(site)
+        name = 'index.html' if language == i18n.SOURCE else f'index-{language}.html'
+        write(base / name, f'<!doctype html><html lang="{language}"><head><meta charset="utf-8"><title>{escape(m["sources_title"])}</title></head>'
+              f'<body style="font:16px/1.5 system-ui,sans-serif;max-width:60rem;margin:2rem auto;padding:0 1rem"><h1>{escape(m["sources_title"])}</h1>'
+              f'<p>{escape(m["sources_intro"])} <a href="../{language}/index.html">{escape(m["back_to_site"])}</a></p><ul>{items}</ul></body></html>\n')
+    i18n.use(i18n.SOURCE)
     return len(listing) + 1
 
 
-# START_CONTRACT: build
-#   PURPOSE: Write the whole site: pages, search index, assets, the language entry and the source files.
-#   INPUTS: { }
-#   OUTPUTS: { dict - counts }
-#   SIDE_EFFECTS: Replaces html/aicc/v2.
-# END_CONTRACT: build
-def build():
-    site = load_site()
-    terms = load_terms()
+# START_CONTRACT: build_edition
+#   PURPOSE: Write one edition (the language set by i18n.use): its pages, its search index, its catalog assets and, for a translation, the page script's words.
+#   INPUTS: { site: dict; terms: dict }
+#   OUTPUTS: { dict - page id to Page }
+#   SIDE_EFFECTS: Writes html/aicc/v2/<lang>/ and assets/search-<lang>.js (and assets/i18n-<lang>.js).
+# END_CONTRACT: build_edition
+def build_edition(site, terms):
+    language = i18n.lang()
     pages = load_pages(site, terms)
     load_catalog(pages)
     add_generated(pages, site, terms)
@@ -524,16 +592,37 @@ def build():
             page.body = render_markdown(page.body, page, terms, pages, site)
         else:
             page.headings = []
-    shutil.rmtree(OUT, ignore_errors=True)
     for page in pages.values():
         write(OUT / page.url, render_page(page, pages, site))
     entries = [e for page in sorted(pages.values(), key=lambda p: p.id) for e in search_entries(page)]
-    write(OUT / 'assets' / 'search-ru.js', 'window.AICC_SEARCH_INDEX=' + json.dumps(entries, ensure_ascii=False, separators=(',', ':')) + ';\n')
+    write(OUT / 'assets' / f'search-{language}.js', 'window.AICC_SEARCH_INDEX=' + json.dumps(entries, ensure_ascii=False, separators=(',', ':')) + ';\n')
+    if (SRC / 'catalog').exists():
+        shutil.copytree(SRC / 'catalog' / 'assets', OUT / language / 'catalog' / 'assets')
+    if language != i18n.SOURCE:
+        write(OUT / 'assets' / f'i18n-{language}.js', 'window.HUB_I18N=' + json.dumps(i18n.table(), ensure_ascii=False, separators=(',', ':'), sort_keys=True) + ';\n')
+    return pages
+
+
+# START_CONTRACT: build
+#   PURPOSE: Write the whole site: every edition, the shared assets, the language entry and the source files.
+#   INPUTS: { }
+#   OUTPUTS: { dict - counts }
+#   SIDE_EFFECTS: Replaces html/aicc/v2.
+# END_CONTRACT: build
+def build():
+    site = load_site()
+    terms = load_terms()
+    shutil.rmtree(OUT, ignore_errors=True)
+    editions = {}
+    for language in site['languages']:
+        i18n.use(language)
+        editions[language] = build_edition(site, terms)
+    i18n.use(i18n.SOURCE)
+    pages = editions[i18n.SOURCE]
     shutil.copytree(SRC / 'ui', OUT / 'assets' / 'ui', ignore=shutil.ignore_patterns('icons'))
     shutil.copy(SRC / 'site.css', OUT / 'assets' / 'site.css')
     shutil.copy(SRC / 'site.js', OUT / 'assets' / 'site.js')
     if (SRC / 'catalog').exists():
-        shutil.copytree(SRC / 'catalog' / 'assets', OUT / 'ru' / 'catalog' / 'assets')
         shutil.copy(SRC / 'catalog' / 'discovery.css', OUT / 'assets' / 'discovery.css')
         shutil.copy(SRC / 'catalog' / 'discovery.js', OUT / 'assets' / 'discovery.js')
     write(OUT / 'index.html', '<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=ru/index.html">'
@@ -541,9 +630,13 @@ def build():
     sources = publish_sources(site)
     ids = {p.id: p.ident for p in pages.values()}
     write(OUT / 'assets' / 'page-ids.json', json.dumps(ids, ensure_ascii=False, indent=1, sort_keys=True) + '\n')
-    return {'pages': len(pages), 'terms': len(terms), 'sources': sources}
+    fallbacks = {lang: sorted(p.id for p in eds.values() if getattr(p, 'fallback', False)) for lang, eds in editions.items() if lang != i18n.SOURCE}
+    return {'pages': len(pages), 'terms': len(terms), 'sources': sources, 'editions': len(editions),
+            'fallbacks': {k: len(v) for k, v in fallbacks.items()}, 'missing': len(i18n.missing())}
 
 
 if __name__ == '__main__':
     counts = build()
     print('built v2: %(pages)d pages, %(terms)d terms, %(sources)d source files' % counts)
+    if counts['editions'] > 1:
+        print('editions: %d; pages on the Russian text: %s; strings without a translation: %d' % (counts['editions'], counts['fallbacks'], counts['missing']))

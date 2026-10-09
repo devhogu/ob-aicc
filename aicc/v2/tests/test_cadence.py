@@ -1,6 +1,7 @@
 """PI calendar: the rules give the dates of the agreed calendar, and the page script draws the same calendar as the build."""
 from datetime import date, timedelta
 import json
+import re
 from pathlib import Path
 import shutil
 import subprocess
@@ -9,6 +10,7 @@ import unittest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'tools'))
 import cadence
+import i18n
 
 SITE_JS = Path(__file__).resolve().parents[1] / 'site.js'
 
@@ -52,31 +54,69 @@ class Rules(unittest.TestCase):
         self.assertEqual(cadence.week_note(date(2026, 10, 12)), '')
 
 
+class English(unittest.TestCase):
+    def tearDown(self):
+        i18n.use(i18n.SOURCE)
+
+    def test_dates_and_notes_read_in_english(self):
+        i18n.use('en')
+        self.assertEqual(cadence.short(date(2026, 11, 23), date(2026, 11, 29)), '23–29 Nov')
+        self.assertEqual(cadence.span(date(2026, 9, 28), date(2026, 11, 1)), '28 Sep – 1 Nov 2026')
+        self.assertEqual(cadence.span(date(2026, 11, 30), date(2027, 1, 3)), '30 Nov 2026 – 3 Jan 2027')
+        self.assertEqual(cadence.iteration(2026, 10)['title'], 'October')
+        self.assertEqual(cadence.week_note(date(2027, 1, 4)), 'days off: 4 Jan, 5 Jan, 6 Jan, 7 Jan; absences likely: 8 Jan')
+        self.assertEqual(cadence.week_note(date(2027, 7, 12)), i18n.T('сезон отпусков'))
+        self.assertNotEqual(i18n.T('сезон отпусков'), 'сезон отпусков')
+
+
+CYRILLIC = re.compile('[А-Яа-яЁё]')
+RU_ROWS = [{'id': 'INI-001', 'title': 'Проект <первый>', 'href': '../ini-001/', 'find': 'ini-001', 'function': 'HR', 'area': 'Услуга "А"',
+           'items': [{'id': 'FEAT-001', 'title': 'Отчёт', 'state': 'В работе', 'iteration': '2026-PIQ4 I11', 'href': '../ini-001/'},
+                     {'id': 'FEAT-002', 'title': 'Форма', 'state': 'Бэклог', 'iteration': '', 'href': '../ini-001/'},
+                     {'id': 'FEAT-003', 'title': 'Сверка', 'state': 'Завершено', 'iteration': '2027-PIQ1 I02', 'href': '../ini-001/'}]},
+          {'id': 'INI-002', 'title': 'Второй', 'href': '../ini-002/', 'find': 'ini-002', 'function': '', 'area': '',
+           'items': [{'id': 'FEAT-004', 'title': 'Готово', 'state': 'Завершено', 'iteration': '', 'href': '../ini-002/'}]}]
+# the same work with English titles; states stay the Russian values the cards hold, and the page shows them translated
+EN_ROWS = [{**row, 'title': title, 'area': area, 'items': [{**x, 'title': t} for x, t in zip(row['items'], titles)]}
+           for row, title, area, titles in zip(RU_ROWS, ('Project <one>', 'Second'), ('Service "A"', ''), (('Report', 'Form', 'Check'), ('Done',)))]
+
+
 @unittest.skipUnless(shutil.which('node'), 'node is not installed')
 class PageScript(unittest.TestCase):
-    def test_the_script_draws_what_the_build_draws(self):
+    def draw(self, language, rows):
+        """The script's and the build's calendar, tiles and status line for 90 dates in one edition language."""
         text = SITE_JS.read_text(encoding='utf-8')
+        words = text[text.index('var I = window.HUB_I18N'):text.index('var script = document.currentScript')]
         block = text[text.index('var PI = (function'):text.index('window.HubPI')]
         days = [date(2026, 9, 27) + timedelta(days=9 * k) for k in range(90)]
-        rows = [{'id': 'INI-001', 'title': 'Проект <первый>', 'href': '../ini-001/', 'find': 'ini-001', 'function': 'HR', 'area': 'Услуга "А"',
-                 'items': [{'id': 'FEAT-001', 'title': 'Отчёт', 'state': 'В работе', 'iteration': '2026-PIQ4 I11', 'href': '../ini-001/'},
-                           {'id': 'FEAT-002', 'title': 'Форма', 'state': 'Бэклог', 'iteration': '', 'href': '../ini-001/'},
-                           {'id': 'FEAT-003', 'title': 'Сверка', 'state': 'Завершено', 'iteration': '2027-PIQ1 I02', 'href': '../ini-001/'}]},
-                {'id': 'INI-002', 'title': 'Второй', 'href': '../ini-002/', 'find': 'ini-002', 'function': '', 'area': '',
-                 'items': [{'id': 'FEAT-004', 'title': 'Готово', 'state': 'Завершено', 'iteration': '', 'href': '../ini-002/'}]}]
+        table = None if language == i18n.SOURCE else i18n.table(language)  # what the build writes to assets/i18n-<lang>.js
         data = {k: cadence.DATA[k] for k in ('days', 'year_end_from', 'seasons')} | {'rows': rows}
-        program = block + (f'Object.assign(PI.data, {json.dumps(data, ensure_ascii=False)});'
+        program = f'var window = {{HUB_I18N: {json.dumps(table, ensure_ascii=False)}}};' + words + block + (f'Object.assign(PI.data, {json.dumps(data, ensure_ascii=False)});'
                            f'var days = {json.dumps([d.isoformat() for d in days])};'
                            'var out = []; days.forEach(function (s) { var p = s.split("-").map(Number), t = PI.at(p[0], p[1], p[2]);'
                            '[-1, 0, 2].forEach(function (k) { out.push(PI.calendar(t, k)); }); out.push(PI.here(t)); out.push(PI.status(t)); });'
                            'process.stdout.write(JSON.stringify(out));')
         got = json.loads(subprocess.run(['node', '-e', program], capture_output=True, text=True, check=True).stdout)
-        want = [x for d in days for x in [cadence.calendar_html(d, k, rows) for k in (-1, 0, 2)] + [cadence.here_html(d), cadence.plan_status(d, rows)]]
-        self.assertIn('FEAT-001', cadence.calendar_html(date(2026, 10, 8), 0, rows))  # planned in I11 of the current PI
+        i18n.use(language)
+        try:
+            want = [x for d in days for x in [cadence.calendar_html(d, k, rows) for k in (-1, 0, 2)] + [cadence.here_html(d), cadence.plan_status(d, rows)]]
+            first = cadence.calendar_html(date(2026, 10, 8), 0, rows)
+        finally:
+            i18n.use(i18n.SOURCE)
+        self.assertIn('FEAT-001', first)  # planned in I11 of the current PI
         self.assertNotIn('FEAT-004', ''.join(want))  # done and never planned: shown nowhere
         for g, w in zip(got, want):
             self.assertEqual(g, w)
         self.assertEqual(len(got), len(want))
+        return want
+
+    def test_the_script_draws_what_the_build_draws(self):
+        self.draw(i18n.SOURCE, RU_ROWS)
+
+    def test_the_script_draws_what_the_build_draws_in_english(self):
+        want = self.draw('en', EN_ROWS)
+        self.assertIn('Planning', want[0])
+        self.assertEqual([x for x in want if CYRILLIC.search(x)][:1], [])  # every word of the calendar is translated
 
 
 if __name__ == '__main__':

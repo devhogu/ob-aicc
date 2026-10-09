@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en" data-theme="light"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark">
+<title>Настроить Claude Code под проект: CLAUDE.md, разрешения, навыки, хуки · AI Competence Hub</title>
+<script>try{var t=localStorage.getItem('hub-theme');document.documentElement.dataset.theme=t==='dark'?'dark':'light';}catch(e){}</script>
+<link rel="stylesheet" href="../../../../assets/ui/fonts.css?v=31af9632de"><link rel="stylesheet" href="../../../../assets/ui/tokens.css?v=7a14df66bd"><link rel="stylesheet" href="../../../../assets/ui/primitives.css?v=ea6572a6e0"><link rel="stylesheet" href="../../../../assets/ui/workspace.css?v=416781b646"><link rel="stylesheet" href="../../../../assets/site.css?v=5480d3be4e">
+<script src="../../../../assets/search-en.js"></script><script src="../../../../assets/i18n-en.js"></script><script src="../../../../assets/site.js?v=cfae61d4bb" defer data-root="../../../.." data-t-none="Nothing matches your search." data-t-light="Light mode" data-t-dark="Dark mode" data-t-mail-body="Page: {title}
+ID: {ref}
+Address: {url}
+
+Question or comment:
+"></script>
+</head><body class="portal-workspace" data-portal-section="kb" data-page="kb/guides/claude-code-setup">
+<a class="o-skip" href="#main">Skip to content</a>
+<header class="o-header">
+  <a class="o-identity" href="../../../index.html"><img src="../../../../assets/ui/assets/logos/hub-mark.svg" width="36" height="36" alt=""><span>AI Competence Hub</span></a>
+  <span class="header-scope">Knowledge Base</span>
+  <span class="status-chip" title="This page and the records on it are drafts: nothing in them has been adopted or approved">Draft</span>
+  <div class="o-search" role="search"><label class="o-sr-only" for="q">Search the Hub</label><input id="q" type="search" autocomplete="off" placeholder="Search the Hub" aria-controls="results"><div id="results" class="o-search-results" hidden></div></div>
+  <div class="o-tools"><a class="lang-switch" href="../../../../ru/kb/guides/claude-code-setup/index.html" hreflang="ru" lang="ru" data-lang-switch title="Русская версия" aria-label="Русская версия">RU</a><button id="theme-switch" type="button" class="theme-switch" aria-label="Dark mode" title="Dark mode"><span class="ts-moon"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" />
+</svg></span><span class="ts-sun"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <circle cx="12" cy="12" r="4" />
+  <path d="M12 2v2" />
+  <path d="M12 20v2" />
+  <path d="m4.93 4.93 1.41 1.41" />
+  <path d="m17.66 17.66 1.41 1.41" />
+  <path d="M2 12h2" />
+  <path d="M20 12h2" />
+  <path d="m6.34 17.66-1.41 1.41" />
+  <path d="m19.07 4.93-1.41 1.41" />
+</svg></span></button></div>
+</header>
+<div class="o-frame"><aside class="o-nav"><details open><summary>Site sections</summary><nav class="portal-sections" aria-label="Sections"><div class="portal-nav-group"><a class="portal-section-link" data-section="hub" href="../../../index.html"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect x="16" y="16" width="6" height="6" rx="1" />
+  <rect x="2" y="16" width="6" height="6" rx="1" />
+  <rect x="9" y="2" width="6" height="6" rx="1" />
+  <path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3" />
+  <path d="M12 12V8" />
+</svg><span>Competence Hub</span></a></div><div class="portal-nav-group"><a class="portal-section-link" data-section="services" href="../../../services/index.html"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+  <path d="M16 3.128a4 4 0 0 1 0 7.744" />
+  <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+  <circle cx="9" cy="7" r="4" />
+</svg><span>Services</span></a></div><div class="portal-nav-group"><a class="portal-section-link" data-section="process" href="../../../process/index.html"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect width="8" height="8" x="3" y="3" rx="2" />
+  <path d="M7 11v4a2 2 0 0 0 2 2h4" />
+  <rect width="8" height="8" x="13" y="13" rx="2" />
+</svg><span>Process</span></a></div><div class="portal-nav-group"><a class="portal-section-link" data-section="catalog" href="../../../catalog/index.html"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M8 5h13" />
+  <path d="M13 12h8" />
+  <path d="M13 19h8" />
+  <path d="M3 10a2 2 0 0 0 2 2h3" />
+  <path d="M3 5v12a2 2 0 0 0 2 2h3" />
+</svg><span>Discovery Catalog</span></a></div><div class="portal-nav-group"><a class="portal-section-link" data-section="projects" href="../../../projects/index.html"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z" />
+  <path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12" />
+  <path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17" />
+</svg><span>Projects</span></a></div><div class="portal-nav-group"><a class="portal-section-link" data-section="responsible-ai" href="../../../responsible-ai/index.html"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+  <path d="m9 12 2 2 4-4" />
+</svg><span>Responsible AI</span></a></div><div class="portal-nav-group is-current"><a class="portal-section-link" data-section="kb" href="../../index.html" aria-current="true"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <circle cx="12" cy="12" r="10" />
+  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+  <path d="M12 17h.01" />
+</svg><span>Knowledge Base</span></a><div class="portal-local-nav"><a href="../../index.html">Knowledge Base</a><a href="../../maps/index.html">Learning maps</a></div></div><div class="portal-nav-group"><a class="portal-section-link" data-section="reference" href="../../../reference/index.html"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m16 6 4 14" />
+  <path d="M12 6v14" />
+  <path d="M8 8v12" />
+  <path d="M4 4v16" />
+</svg><span>Reference</span></a></div></nav></details></aside>
+<main class="o-main hub-main" id="main" tabindex="-1">
+<div class="crumbbar has-ctx"><div class="crumbline"><nav class="o-eyebrow crumbs" aria-label="Breadcrumb"><a href="../../index.html">Knowledge Base</a> / <span aria-current="page">Настроить Claude Code под проект: CLAUDE.md, разрешения, навыки, хуки</span></nav></div></div>
+<div class="o-reading"><div class="o-copy"><h1>Настроить Claude Code под проект: CLAUDE.md, разрешения, навыки, хуки</h1><article class="page-body o-doc"><p class="kb-head"><a href="../../index.html">← All guides</a><span>Claude Code</span><span>advanced</span><span>8 min</span></p>
+<nav class="lm-walk lm-walk--top lm-walk--l2" data-walk="claude-code" aria-label="Step 5 of 13 on the “Claude Code” map"><div class="lm-walk__head"><a class="lm-walk__map" href="../../maps/claude-code/index.html#step-5" data-map="claude-code">Learning map: <b>Claude Code</b></a><span class="lm-walk__pos">Step <b>5</b> of 13 · level 2, практик</span></div><ol class="lm-walk__dots" aria-label="Map steps"><li><a class="lm-dot lm-dot--l1" href="../claude-code-first-session/index.html" data-map="claude-code" data-dot-step="claude-code|claude-code-first-session#" title="Step 1. Claude Code: первый сеанс в репозитории">1</a></li><li><a class="lm-dot lm-dot--l1" href="../claude-code-how-it-works/index.html" data-map="claude-code" data-dot-step="claude-code|claude-code-how-it-works#" title="Step 2. Как работает Claude Code">2</a></li><li><a class="lm-dot lm-dot--l1" href="../claude-code-workflows/index.html" data-map="claude-code" data-dot-step="claude-code|claude-code-workflows#" title="Step 3. Claude Code: рецепты на каждый день">3</a></li><li class="lm-dot-gap"><a class="lm-dot lm-dot--l2" href="../claude-code-best-practices/index.html" data-map="claude-code" data-dot-step="claude-code|claude-code-best-practices#" title="Step 4. Claude Code: приёмы, которые работают">4</a></li><li><a class="lm-dot lm-dot--l2 is-here" href="index.html" data-map="claude-code" data-dot-step="claude-code|claude-code-setup#" title="Step 5. Настроить Claude Code под проект: CLAUDE.md, разрешения, навыки, хуки" aria-current="step">5</a></li><li><a class="lm-dot lm-dot--l2" href="../claude-code-costs/index.html" data-map="claude-code" data-dot-step="claude-code|claude-code-costs#" title="Step 6. Claude Code: как беречь контекст и бюджет">6</a></li><li class="lm-dot-gap"><a class="lm-dot lm-dot--l3" href="../claude-code-subagents/index.html" data-map="claude-code" data-dot-step="claude-code|claude-code-subagents#" title="Step 7. Помощники в Claude Code (subagents)">7</a></li><li><a class="lm-dot lm-dot--l3" href="../claude-code-hooks/index.html" data-map="claude-code" data-dot-step="claude-code|claude-code-hooks#" title="Step 8. Хуки в Claude Code: то, что должно происходить всегда">8</a></li><li><a class="lm-dot lm-dot--l3" href="../claude-code-mcp/index.html" data-map="claude-code" data-dot-step="claude-code|claude-code-mcp#" title="Step 9. Подключения MCP: Claude Code и ваши инструменты">9</a></li><li class="lm-dot-gap"><a class="lm-dot lm-dot--l4" href="../claude-code-in-action/index.html" data-map="claude-code" data-dot-step="claude-code|claude-code-in-action#" title="Step 10. Claude Code в действии: долгие сеансы, автоматизация и проверка — полное руководство">10</a></li><li><a class="lm-dot lm-dot--l4" href="../claude-code-in-action/index.html#safety" data-map="claude-code" data-dot-step="claude-code|claude-code-in-action#safety" title="Step 11. Безопасность в регулируемой организации">11</a></li><li><a class="lm-dot lm-dot--l4" href="../../maps/claude-code/index.html#step-12" data-map="claude-code" data-dot-step="claude-code|https://code.claude.com/docs/ru/overview" title="Step 12. Документация Claude Code на русском">12</a></li><li><a class="lm-dot lm-dot--l4" href="../../maps/claude-code/index.html#step-13" data-map="claude-code" data-dot-step="claude-code|https://academy.claude.com/courses/claude-code-in-action" title="Step 13. Курс: Claude Code in Action">13</a></li></ol><div class="lm-walk__moves"><a class="lm-walk__prev" href="../claude-code-best-practices/index.html" data-map="claude-code"><small>← Back · step 4 · guide</small><span>Claude Code: приёмы, которые работают</span></a><a class="lm-walk__next" href="../claude-code-costs/index.html" data-map="claude-code"><small>Next · step 6 · guide →</small><span>Claude Code: как беречь контекст и бюджет</span></a></div></nav>
+<p>После этого руководства вы сможете довести <code>CLAUDE.md</code> до короткой рабочей памятки, настроить разрешения — что можно без вопросов, а что нельзя никогда, — и выбрать, чем закрыть повторяющуюся работу: навыком, помощником, хуком или подключением.</p>
+<p>Несколько минут настройки делают каждый следующий сеанс заметно лучше.</p>
+<h2 id="claude-md">CLAUDE.md — короткая памятка проекта</h2>
+<p>Claude читает этот файл в начале каждого сеанса. Заготовку создаёт <code>/init</code>; доводите её со временем. Для каждой строки спрашивайте себя: «Если её убрать, Claude начнёт ошибаться?» Если нет — удаляйте.</p>
+<div class="o-table-wrap"><table>
+<thead>
+<tr>
+<th>Включать</th>
+<th>Не включать</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Команды сборки и тестов, которые нельзя угадать</td>
+<td>То, что видно из кода</td>
+</tr>
+<tr>
+<td>Правила стиля, отличные от обычных</td>
+<td>Общеизвестные правила языка</td>
+</tr>
+<tr>
+<td>Как называть ветки и оформлять PR</td>
+<td>Подробную документацию API (лучше ссылка)</td>
+</tr>
+<tr>
+<td>Решения по архитектуре, особенности окружения</td>
+<td>Часто меняющиеся сведения, длинные объяснения</td>
+</tr>
+</tbody>
+</table></div>
+<p>Пример фрагмента для проекта в регулируемой среде (команды замените своими):</p>
+<pre><code class="language-markdown"># Сборка и тесты
+- Сборка: ./gradlew build
+- Тесты одного модуля: ./gradlew :payments:test
+
+# Правила
+- Работать только в текущей ветке; коммит и отправку делает разработчик
+- Не читать и не править .env и каталог secrets/
+- Тестовые данные — только вымышленные, без реальных данных клиентов
+- Миграции базы данных не менять без отдельного согласования
+</code></pre>
+<p>Если Claude упорно нарушает правило из файла — скорее всего, файл слишком длинный и правило теряется. Храните <code>CLAUDE.md</code> в git: он становится ценнее со временем. Помните, что <code>CLAUDE.md</code> — просьба, а не гарантия: то, что нельзя никогда, закрывайте разрешениями и хуками.</p>
+<h2 id="permissions">Разрешения</h2>
+<p>Режим разрешений задаёт общее поведение (режимы описаны в <a href="../claude-code-how-it-works/index.html#safety">Как работает Claude Code</a>). Для чувствительного кода выбирайте ручной режим: каждое действие проходит через вас.</p>
+<p>Правила разрешений уточняют режим для отдельных команд и файлов: <code>allow</code> — безопасное и частое без вопросов (линтер, тесты), <code>deny</code> — то, что нельзя никогда. Посмотреть и изменить правила можно командой <code>/permissions</code> или в файле настроек: <code>~/.claude/settings.json</code> — ваши личные, <code>.claude/settings.json</code> — общие для проекта (хранятся в git). Пример по документации:</p>
+<pre><code class="language-json">{
+  &quot;permissions&quot;: {
+    &quot;allow&quot;: [
+      &quot;Bash(npm run lint)&quot;,
+      &quot;Bash(npm run test *)&quot;
+    ],
+    &quot;deny&quot;: [
+      &quot;Read(./.env)&quot;,
+      &quot;Read(./.env.*)&quot;,
+      &quot;Read(./secrets/**)&quot;
+    ]
+  }
+}
+</code></pre>
+<ul>
+<li>Запрет на чтение действует на встроенные инструменты Claude и на распознаваемые команды вроде <code>cat</code>, но не на программу, которая открывает файлы сама (например, скрипт на Python). Для защиты на уровне системы включите изолированную среду (песочницу) командой <code>/sandbox</code>.</li>
+<li>Файл <code>.claudeignore</code> Claude Code не учитывает — переносите его записи в правила <code>deny</code>.</li>
+<li>Надёжнее всего — не держать настоящих секретов в рабочей копии вовсе.</li>
+</ul>
+<h2 id="extend">Что выбрать для повторяющегося</h2>
+<div class="rai-cards rai-cards--4">
+<article><h3>Навык</h3><p>Знания и процедуры, нужные иногда: <code>.claude/skills/имя/SKILL.md</code>. Claude подключает сам или по команде <code>/имя</code>. Подробно — <a href="../skills-complete-guide/index.html#code">Навыки в Claude Code</a>.</p></article>
+<article><h3>Помощник</h3><p>Отдельный исполнитель со своим контекстом и инструментами — например, ревьюер безопасности: <code>.claude/agents/</code>. Подробно — <a href="../claude-code-subagents/index.html">Помощники</a>.</p></article>
+<article><h3>Хук</h3><p>Команда, которая выполняется каждый раз без исключений: проверка после правки, запрет записи в папку. Подробно — <a href="../claude-code-hooks/index.html">Хуки</a>.</p></article>
+<article><h3>Подключения (MCP)</h3><p>Доступ к трекеру задач, базе данных, документации — командой <code>claude mcp add</code>, если подключение одобрено. Подробно — <a href="../claude-code-mcp/index.html">Подключения MCP</a>.</p></article>
+</div>
+<p>Правило выбора: <code>CLAUDE.md</code> — то, что нужно всегда; навык — то, что нужно иногда; хук — то, что должно происходить обязательно.</p>
+<h2 id="safety">Безопасность</h2>
+<p><code>CLAUDE.md</code>, навыки и настройки проекта лежат в git и читаются в каждом сеансе — паролей, ключей и токенов в них быть не должно. Подключайте только одобренные инструменты и смотрите изменения (<code>git diff</code>) перед коммитом.</p>
+<p><strong>Попробуйте:</strong> добавьте в <code>.claude/settings.json</code> проекта правило <code>deny</code> для файлов с секретами, откройте новый сеанс и попросите Claude прочитать <code>.env</code> — он должен получить отказ. Проверьте правила командой <code>/permissions</code>.</p>
+<nav class="lm-walk lm-walk--bottom lm-walk--l2" data-walk="claude-code" aria-label="Step 5 of 13 on the “Claude Code” map"><div class="lm-walk__head"><a class="lm-walk__map" href="../../maps/claude-code/index.html#step-5" data-map="claude-code">Learning map: <b>Claude Code</b></a><span class="lm-walk__pos">Step <b>5</b> of 13 · level 2, практик</span></div><ol class="lm-walk__dots" aria-label="Map steps"><li><a class="lm-dot lm-dot--l1" href="../claude-code-first-session/index.html" data-map="claude-code" data-dot-step="claude-code|claude-code-first-session#" title="Step 1. Claude Code: первый сеанс в репозитории">1</a></li><li><a class="lm-dot lm-dot--l1" href="../claude-code-how-it-works/index.html" data-map="claude-code" data-dot-step="claude-code|claude-code-how-it-works#" title="Step 2. Как работает Claude Code">2</a></li><li><a class="lm-dot lm-dot--l1" href="../claude-code-workflows/index.html" data-map="claude-code" data-dot-step="claude-code|claude-code-workflows#" title="Step 3. Claude Code: рецепты на каждый день">3</a></li><li class="lm-dot-gap"><a class="lm-dot lm-dot--l2" href="../claude-code-best-practices/index.html" data-map="claude-code" data-dot-step="claude-code|claude-code-best-practices#" title="Step 4. Claude Code: приёмы, которые работают">4</a></li><li><a class="lm-dot lm-dot--l2 is-here" href="index.html" data-map="claude-code" data-dot-step="claude-code|claude-code-setup#" title="Step 5. Настроить Claude Code под проект: CLAUDE.md, разрешения, навыки, хуки" aria-current="step">5</a></li><li><a class="lm-dot lm-dot--l2" href="../claude-code-costs/index.html" data-map="claude-code" data-dot-step="claude-code|claude-code-costs#" title="Step 6. Claude Code: как беречь контекст и бюджет">6</a></li><li class="lm-dot-gap"><a class="lm-dot lm-dot--l3" href="../claude-code-subagents/index.html" data-map="claude-code" data-dot-step="claude-code|claude-code-subagents#" title="Step 7. Помощники в Claude Code (subagents)">7</a></li><li><a class="lm-dot lm-dot--l3" href="../claude-code-hooks/index.html" data-map="claude-code" data-dot-step="claude-code|claude-code-hooks#" title="Step 8. Хуки в Claude Code: то, что должно происходить всегда">8</a></li><li><a class="lm-dot lm-dot--l3" href="../claude-code-mcp/index.html" data-map="claude-code" data-dot-step="claude-code|claude-code-mcp#" title="Step 9. Подключения MCP: Claude Code и ваши инструменты">9</a></li><li class="lm-dot-gap"><a class="lm-dot lm-dot--l4" href="../claude-code-in-action/index.html" data-map="claude-code" data-dot-step="claude-code|claude-code-in-action#" title="Step 10. Claude Code в действии: долгие сеансы, автоматизация и проверка — полное руководство">10</a></li><li><a class="lm-dot lm-dot--l4" href="../claude-code-in-action/index.html#safety" data-map="claude-code" data-dot-step="claude-code|claude-code-in-action#safety" title="Step 11. Безопасность в регулируемой организации">11</a></li><li><a class="lm-dot lm-dot--l4" href="../../maps/claude-code/index.html#step-12" data-map="claude-code" data-dot-step="claude-code|https://code.claude.com/docs/ru/overview" title="Step 12. Документация Claude Code на русском">12</a></li><li><a class="lm-dot lm-dot--l4" href="../../maps/claude-code/index.html#step-13" data-map="claude-code" data-dot-step="claude-code|https://academy.claude.com/courses/claude-code-in-action" title="Step 13. Курс: Claude Code in Action">13</a></li></ol><div class="lm-walk__done" data-step="claude-code|claude-code-setup#"><div><p><b>After this step you can:</b> настроить CLAUDE.md и разрешения allow/deny и выбирать между навыком, помощником, хуком и подключением.</p><p><b>Try this:</b> Запретите чтение .env правилом deny и проверьте отказ.</p></div><button type="button" class="lm-walk__check" data-step-toggle aria-pressed="false"><span class="is-off">Mark step as done</span><span class="is-on">Step done ✓</span></button></div><div class="lm-walk__moves"><a class="lm-walk__prev" href="../claude-code-best-practices/index.html" data-map="claude-code"><small>← Back · step 4 · guide</small><span>Claude Code: приёмы, которые работают</span></a><a class="lm-walk__next" href="../claude-code-costs/index.html" data-map="claude-code"><small>Next · step 6 · guide →</small><span>Claude Code: как беречь контекст и бюджет</span></a></div></nav>
+<p class="kb-source">Based on: <a href="https://code.claude.com/docs/en/best-practices">Best practices for Claude Code</a> — Anthropic, in English. This page is a short summary with our own examples.</p>
+</article></div><aside class="o-context" aria-label="On this page"><strong>On this page</strong><a class="lv2" href="#claude-md">CLAUDE.md — короткая памятка проекта</a><a class="lv2" href="#permissions">Разрешения</a><a class="lv2" href="#extend">Что выбрать для повторяющегося</a><a class="lv2" href="#safety">Безопасность</a></aside></div>
+</main>
+<footer class="o-footbar">
+<nav class="fb-left" aria-label="Legal information"><a href="../../../privacy/index.html">Privacy</a><a href="../../../terms-of-use/index.html">Terms of use</a></nav>
+<div class="fb-right"><span class="foot-text">© 2026 AI Competence Hub · v2.1 <a class="contact" href="mailto:talimbayev@obank.kg?subject=Competence%20Hub%20%5BXWPG8%5D%3A%20page%20feedback">Contact us</a></span>
+<button type="button" class="pagefb" data-dialog="fb" aria-haspopup="dialog"><span>Page feedback</span><span>ID: XWPG8</span></button></div>
+</footer>
+</div>
+<dialog id="fb" class="fb" aria-labelledby="fb-t" data-subject="Competence Hub [XWPG8]: page feedback" data-ref="XWPG8" data-page="Настроить Claude Code под проект: CLAUDE.md, разрешения, навыки, хуки">
+  <form method="dialog">
+    <div class="fb-head"><h2 id="fb-t">Page feedback</h2><code>ID: XWPG8</code></div>
+    <div class="fb-body"><p>Leave feedback on the content of this page: <a data-mail href="mailto:talimbayev@obank.kg">feedback</a>.</p><button class="oc-button" value="close">Close</button></div>
+  </form>
+</dialog>
+</body></html>

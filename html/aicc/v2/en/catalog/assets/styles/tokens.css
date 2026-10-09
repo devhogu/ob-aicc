@@ -1,0 +1,131 @@
+/* @urn:           urn:financial-services:style:tokens@1.0.0 */
+/* @version:       1.0.0 */
+/* @kind:          style */
+/* @description:   Design tokens — colors, spacing, typography, brushes, shadows, radii. */
+/* @engine_compat: ">=1.0.0" */
+/* @last_modified: 2026-05-02 */
+/* v4 GenAI token additions: --genai-soft, --genai-line, --genai-text, --genai-accent for scenario card OKR styling */
+
+/* Google Fonts — Latin + Cyrillic + Latin-ext subsets so EN, RU and KZ
+   content all render in the same family (no system-font fallback for
+   Russian/Cyrillic in the RU package). The `subset` parameter on the
+   Google Fonts URL pins the character ranges fetched. */
+
+
+/* ================================================================
+   TOKEN LAYER
+   All design decisions live here. Theme files override this block
+   only — zero component edits needed to reskin a peer framework.
+   ================================================================ */
+
+.discovery-content {
+
+  /* --- Surface palette --------------------------------------- */
+  --paper:        #ffffff;
+  --paper-soft:   #fdfcfa;    /* off-white — scenario-card body, flow-detail body */
+  --paper-2:      #F6F4F0;    /* card head — main/teal/sage cards */
+  --paper-3:      #EDEBE6;    /* card head — flow / deeper variant */
+  --paper-deep:   #E5E1D8;    /* reserved for future use          */
+  --paper-warm:   #fff8e1;    /* problems section — warm cream (matches v4) */
+  --paper-blue-soft: rgba(30, 90, 205, 0.07);  /* active-tab bg, problems-tab-label hover */
+
+  /* --- Ink palette ------------------------------------------ */
+  --ink-primary:   #1a1209;           /* body text, card titles           */
+  --ink-body:      rgba(0,0,0,0.95);  /* running body text                */
+  --ink-secondary: #615d59;           /* intent text, sub-group items     */
+  --ink-tertiary:  #a39e98;           /* labels, footer, faint chrome     */
+
+  /* --- Eyebrow ─ not yet promoted to .discovery-content in AUDIT; preserved here --- */
+  --ink-eyebrow:  #4a5568;    /* card eyebrow (slate-600)          */
+
+  /* --- Accent ----------------------------------------------- */
+  --ink-accent:    #7A5C2E;   /* page eyebrow                      */
+  --ink-accent-lt: #A07840;   /* dot separators                    */
+
+  /* --- GenAI-enabled label color ---------------------------- */
+  --genai-label:       #0a5483;    /* "GenAI-enabled" highlight in h1   */
+  --ink-accent-deep:   #08476f;    /* reserved — navy deep (no longer used for lens labels) */
+
+  /* --- Orange ink — problems lens + scenario section labels - */
+  --ink-orange-deep:   #a3601a;    /* deep amber/rust; WCAG AA on --paper-warm (#fff8e1) */
+
+  /* --- GenAI v4 tokens (scenario card OKR styling) --------- */
+  --genai-soft:       rgba(251, 191, 36, 0.10);  /* OKR objective bg — light amber tint */
+  --genai-line:       rgba(251, 191, 36, 0.42);  /* Left border line + okr-kr border */
+  --genai-text:       #854d0e;                   /* Section labels — deep amber */
+  --genai-accent:     #ca8a04;                   /* Okr-dim labels — gold */
+
+  /* --- Border / rule ---------------------------------------- */
+  --border:       rgba(0,0,0,0.10);
+  --border-hover: rgba(0,0,0,0.20);
+  --rule-soft:    rgba(0,0,0,0.07);
+  --rule-warm:    rgba(122,92,46,0.25);    /* warm-tinted rule for card--data border etc. */
+  --overlay-scrim: rgba(20,25,35,0.55);    /* modal/overlay scrim */
+  --shadow-modal:  0 24px 64px rgba(20,25,35,0.32);  /* modal panel drop shadow */
+  --radius-md:    0.375rem;   /* 6px — between --radius-label (3px) and --radius-card (12px); used for OKR cells */
+
+  /* --- Brush gradients (title highlights) -------------------
+     Override --brush-title-* and --brush-peer-* to reskin.    */
+  --brush-title-start:  rgba(30, 90, 205, 0.32);   /* blue — main card titles   */
+  --brush-title-mid:    rgba(30, 90, 205, 0.12);
+  --brush-peer-start:   rgba(85, 140, 75, 0.32);   /* green — peer card titles  */
+  --brush-peer-mid:     rgba(85, 140, 75, 0.12);
+  --brush-flow-start:   rgba(234, 179, 8, 0.34);   /* amber — flow item names   */
+  --brush-flow-mid:     rgba(234, 179, 8, 0.16);
+  --brush-orange-start: rgba(245, 130, 30, 0.50);  /* vivid orange — scenario card titles */
+  --brush-orange-mid:   rgba(245, 130, 30, 0.15);
+  --brush-label-start:  rgba(138, 142, 152, 0.12); /* gray  — section labels    */
+  --brush-label-mid:    rgba(138, 142, 152, 0.04);
+
+  /* --- Shadows ---------------------------------------------- */
+  --shadow-card:
+    0 1px 2px  rgba(0,0,0,0.04),
+    0 2px 6px  rgba(0,0,0,0.04),
+    0 4px 18px rgba(0,0,0,0.04);
+  --shadow-hover:
+    0 2px 4px  rgba(0,0,0,0.06),
+    0 4px 12px rgba(0,0,0,0.06),
+    0 8px 28px rgba(0,0,0,0.06);
+
+  /* --- Radius ----------------------------------------------- */
+  --radius-card:  0.75rem;
+  --radius-brush: 0.25rem;    /* 4px — brush highlight pill        */
+  --radius-label: 0.1875rem;  /* 3px — sub-group label pill        */
+
+  /* --- Type scale (modular — approx. 1.25 ratio) ------------
+     Base 1rem = 16px
+     xs:    0.6875rem  ≈ 11px   label / dot
+     sm:    0.72rem    ≈ 11.5px eyebrow / footer
+     base:  0.9375rem  ≈ 15px   body items
+     md:    1.125rem   ≈ 18px   flow items
+     lg:    1.5rem     ≈ 24px   card title
+     xl:    1.6875rem  ≈ 27px   card title --lg
+     2xl:   clamp(2.25rem, 4.6vw, 3.5rem) — page h1 (fluid)     */
+  --text-mono-tiny:      0.6875rem;                         /* Smaller mono label (sub-group label, flow-section label, scenario-lens) */
+  --text-eyebrow:        0.72rem;
+  --text-lens:           0.83rem;                           /* Mono lens label on warm-paper bg (problems-lens, stage pill) */
+  --text-body:           0.9375rem;
+  --text-flow:           1.125rem;
+  --text-h4:             1rem;                              /* H4 sub-heading inside a section body (must be < text-h3) */
+  --text-h3:             clamp(1rem, 1.5vw, 1.125rem);      /* H3 sub-section title (flow-detail, scenario-card, modal) */
+  --text-intent:         1.375rem;
+  --text-h2:             clamp(1.5rem, 3vw, 2rem);          /* H2 section heading (flow-category, l3-section, scenarios-heading) */
+  --text-card-title:     1.5rem;
+  --text-card-title-lg:  1.6875rem;
+  --text-page-title:     clamp(2.25rem, 4.6vw, 3.5rem);
+
+  /* --- Spacing scale (8px grid) ----------------------------- */
+  --space-1:  0.25rem;   /*  4px */
+  --space-2:  0.5rem;    /*  8px */
+  --space-3:  0.75rem;   /* 12px */
+  --space-4:  1rem;      /* 16px */
+  --space-5:  1.25rem;   /* 20px */
+  --space-6:  1.5rem;    /* 24px */
+  --space-8:  2rem;      /* 32px */
+  --space-10: 2.5rem;    /* 40px */
+
+  /* --- Font stacks ------------------------------------------ */
+  --font-serif: 'Fraunces', Georgia, serif;
+  --font-sans:  'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono:  'JetBrains Mono', 'SF Mono', 'Cascadia Code', monospace;
+}

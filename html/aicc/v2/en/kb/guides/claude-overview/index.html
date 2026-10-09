@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en" data-theme="light"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark">
+<title>Claude: что умеет и с чего начать · AI Competence Hub</title>
+<script>try{var t=localStorage.getItem('hub-theme');document.documentElement.dataset.theme=t==='dark'?'dark':'light';}catch(e){}</script>
+<link rel="stylesheet" href="../../../../assets/ui/fonts.css?v=31af9632de"><link rel="stylesheet" href="../../../../assets/ui/tokens.css?v=7a14df66bd"><link rel="stylesheet" href="../../../../assets/ui/primitives.css?v=ea6572a6e0"><link rel="stylesheet" href="../../../../assets/ui/workspace.css?v=416781b646"><link rel="stylesheet" href="../../../../assets/site.css?v=5480d3be4e">
+<script src="../../../../assets/search-en.js"></script><script src="../../../../assets/i18n-en.js"></script><script src="../../../../assets/site.js?v=cfae61d4bb" defer data-root="../../../.." data-t-none="Nothing matches your search." data-t-light="Light mode" data-t-dark="Dark mode" data-t-mail-body="Page: {title}
+ID: {ref}
+Address: {url}
+
+Question or comment:
+"></script>
+</head><body class="portal-workspace" data-portal-section="kb" data-page="kb/guides/claude-overview">
+<a class="o-skip" href="#main">Skip to content</a>
+<header class="o-header">
+  <a class="o-identity" href="../../../index.html"><img src="../../../../assets/ui/assets/logos/hub-mark.svg" width="36" height="36" alt=""><span>AI Competence Hub</span></a>
+  <span class="header-scope">Knowledge Base</span>
+  <span class="status-chip" title="This page and the records on it are drafts: nothing in them has been adopted or approved">Draft</span>
+  <div class="o-search" role="search"><label class="o-sr-only" for="q">Search the Hub</label><input id="q" type="search" autocomplete="off" placeholder="Search the Hub" aria-controls="results"><div id="results" class="o-search-results" hidden></div></div>
+  <div class="o-tools"><a class="lang-switch" href="../../../../ru/kb/guides/claude-overview/index.html" hreflang="ru" lang="ru" data-lang-switch title="Русская версия" aria-label="Русская версия">RU</a><button id="theme-switch" type="button" class="theme-switch" aria-label="Dark mode" title="Dark mode"><span class="ts-moon"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" />
+</svg></span><span class="ts-sun"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <circle cx="12" cy="12" r="4" />
+  <path d="M12 2v2" />
+  <path d="M12 20v2" />
+  <path d="m4.93 4.93 1.41 1.41" />
+  <path d="m17.66 17.66 1.41 1.41" />
+  <path d="M2 12h2" />
+  <path d="M20 12h2" />
+  <path d="m6.34 17.66-1.41 1.41" />
+  <path d="m19.07 4.93-1.41 1.41" />
+</svg></span></button></div>
+</header>
+<div class="o-frame"><aside class="o-nav"><details open><summary>Site sections</summary><nav class="portal-sections" aria-label="Sections"><div class="portal-nav-group"><a class="portal-section-link" data-section="hub" href="../../../index.html"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect x="16" y="16" width="6" height="6" rx="1" />
+  <rect x="2" y="16" width="6" height="6" rx="1" />
+  <rect x="9" y="2" width="6" height="6" rx="1" />
+  <path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3" />
+  <path d="M12 12V8" />
+</svg><span>Competence Hub</span></a></div><div class="portal-nav-group"><a class="portal-section-link" data-section="services" href="../../../services/index.html"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+  <path d="M16 3.128a4 4 0 0 1 0 7.744" />
+  <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+  <circle cx="9" cy="7" r="4" />
+</svg><span>Services</span></a></div><div class="portal-nav-group"><a class="portal-section-link" data-section="process" href="../../../process/index.html"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect width="8" height="8" x="3" y="3" rx="2" />
+  <path d="M7 11v4a2 2 0 0 0 2 2h4" />
+  <rect width="8" height="8" x="13" y="13" rx="2" />
+</svg><span>Process</span></a></div><div class="portal-nav-group"><a class="portal-section-link" data-section="catalog" href="../../../catalog/index.html"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M8 5h13" />
+  <path d="M13 12h8" />
+  <path d="M13 19h8" />
+  <path d="M3 10a2 2 0 0 0 2 2h3" />
+  <path d="M3 5v12a2 2 0 0 0 2 2h3" />
+</svg><span>Discovery Catalog</span></a></div><div class="portal-nav-group"><a class="portal-section-link" data-section="projects" href="../../../projects/index.html"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z" />
+  <path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12" />
+  <path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17" />
+</svg><span>Projects</span></a></div><div class="portal-nav-group"><a class="portal-section-link" data-section="responsible-ai" href="../../../responsible-ai/index.html"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+  <path d="m9 12 2 2 4-4" />
+</svg><span>Responsible AI</span></a></div><div class="portal-nav-group is-current"><a class="portal-section-link" data-section="kb" href="../../index.html" aria-current="true"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <circle cx="12" cy="12" r="10" />
+  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+  <path d="M12 17h.01" />
+</svg><span>Knowledge Base</span></a><div class="portal-local-nav"><a href="../../index.html">Knowledge Base</a><a href="../../maps/index.html">Learning maps</a></div></div><div class="portal-nav-group"><a class="portal-section-link" data-section="reference" href="../../../reference/index.html"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m16 6 4 14" />
+  <path d="M12 6v14" />
+  <path d="M8 8v12" />
+  <path d="M4 4v16" />
+</svg><span>Reference</span></a></div></nav></details></aside>
+<main class="o-main hub-main" id="main" tabindex="-1">
+<div class="crumbbar has-ctx"><div class="crumbline"><nav class="o-eyebrow crumbs" aria-label="Breadcrumb"><a href="../../index.html">Knowledge Base</a> / <span aria-current="page">Claude: что умеет и с чего начать</span></nav></div></div>
+<div class="o-reading"><div class="o-copy"><h1>Claude: что умеет и с чего начать</h1><article class="page-body o-doc"><p class="kb-head"><a href="../../index.html">← All guides</a><span>Claude</span><span>from scratch</span><span>6 min</span></p>
+<nav class="lm-walk lm-walk--top lm-walk--l1" data-walk="daily-work" aria-label="Step 1 of 14 on the “Claude в ежедневной работе” map"><div class="lm-walk__head"><a class="lm-walk__map" href="../../maps/daily-work/index.html#step-1" data-map="daily-work">Learning map: <b>Claude в ежедневной работе</b></a><span class="lm-walk__pos">Step <b>1</b> of 14 · level 1, новичок</span></div><ol class="lm-walk__dots" aria-label="Map steps"><li><a class="lm-dot lm-dot--l1 is-here" href="index.html" data-map="daily-work" data-dot-step="daily-work|claude-overview#" title="Step 1. Claude: что умеет и с чего начать" aria-current="step">1</a></li><li><a class="lm-dot lm-dot--l1" href="../claude-work-complete-guide/index.html#start" data-map="daily-work" data-dot-step="daily-work|claude-work-complete-guide#start" title="Step 2. Интерфейс, настройки и память">2</a></li><li><a class="lm-dot lm-dot--l1" href="../claude-projects/index.html" data-map="daily-work" data-dot-step="daily-work|claude-projects#" title="Step 3. Проекты в Claude: постоянный контекст для повторяющейся работы">3</a></li><li class="lm-dot-gap"><a class="lm-dot lm-dot--l2" href="../claude-work-complete-guide/index.html#projects" data-map="daily-work" data-dot-step="daily-work|claude-work-complete-guide#projects" title="Step 4. Проекты от создания до сопровождения">4</a></li><li><a class="lm-dot lm-dot--l2" href="../claude-work-complete-guide/index.html#files" data-map="daily-work" data-dot-step="daily-work|claude-work-complete-guide#files" title="Step 5. Файлы и документы в разговоре">5</a></li><li><a class="lm-dot lm-dot--l2" href="../claude-work-complete-guide/index.html#create-files" data-map="daily-work" data-dot-step="daily-work|claude-work-complete-guide#create-files" title="Step 6. Создание Word, Excel, PowerPoint и PDF">6</a></li><li><a class="lm-dot lm-dot--l2" href="../claude-work-complete-guide/index.html#office" data-map="daily-work" data-dot-step="daily-work|claude-work-complete-guide#office" title="Step 7. Claude в Excel, Word, PowerPoint и Outlook">7</a></li><li class="lm-dot-gap"><a class="lm-dot lm-dot--l3" href="../claude-work-complete-guide/index.html#connectors" data-map="daily-work" data-dot-step="daily-work|claude-work-complete-guide#connectors" title="Step 8. Подключения и исследование">8</a></li><li><a class="lm-dot lm-dot--l3" href="../claude-cowork/index.html" data-map="daily-work" data-dot-step="daily-work|claude-cowork#" title="Step 9. Claude Cowork: работа с вашими файлами и приложениями">9</a></li><li><a class="lm-dot lm-dot--l3" href="../claude-work-complete-guide/index.html#cowork" data-map="daily-work" data-dot-step="daily-work|claude-work-complete-guide#cowork" title="Step 10. Cowork — поручить Claude работу">10</a></li><li class="lm-dot-gap"><a class="lm-dot lm-dot--l4" href="../claude-work-complete-guide/index.html#safety" data-map="daily-work" data-dot-step="daily-work|claude-work-complete-guide#safety" title="Step 11. Безопасность и данные">11</a></li><li><a class="lm-dot lm-dot--l4" href="../claude-work-complete-guide/index.html#roles" data-map="daily-work" data-dot-step="daily-work|claude-work-complete-guide#roles" title="Step 12. Сценарии по ролям">12</a></li><li><a class="lm-dot lm-dot--l4" href="../../maps/daily-work/index.html#step-13" data-map="daily-work" data-dot-step="daily-work|https://academy.claude.com/courses/claude-101" title="Step 13. Курс: Claude 101">13</a></li><li><a class="lm-dot lm-dot--l4" href="../../maps/daily-work/index.html#step-14" data-map="daily-work" data-dot-step="daily-work|https://academy.claude.com/courses/introduction-to-claude-cowork" title="Step 14. Курс: Introduction to Claude Cowork">14</a></li></ol><div class="lm-walk__moves"><a class="lm-walk__prev" href="../../maps/daily-work/index.html" data-map="daily-work"><small>← To the start of the map</small><span>Claude в ежедневной работе</span></a><a class="lm-walk__next" href="../claude-work-complete-guide/index.html#start" data-map="daily-work"><small>Next · step 2 · part of a guide →</small><span>Интерфейс, настройки и память</span></a></div></nav>
+<p>Claude — AI-ассистент компании Anthropic. За шесть минут вы узнаете, из чего состоит Claude, и сможете для любой своей задачи выбрать подходящий способ — обычный разговор, проект, артефакт или навык.</p>
+<p>С Claude разговаривают обычным языком, дают ему документы и поручают работу: прочитать, сравнить, написать, посчитать. Правила из карты «Основы работы с AI» действуют и здесь: передавайте только то, <a href="../what-to-share/index.html">что можно передавать</a>, и проверяйте ответ, прежде чем он пойдёт дальше вас.</p>
+<h2 id="parts">Что есть в Claude</h2>
+<div class="rai-cards rai-cards--3">
+<article><h3>Разговор</h3><p>Задайте задачу своими словами и уточняйте по ходу. Каждый новый разговор начинается с чистого листа: о прошлых разговорах Claude не помнит, если не включена память.</p></article>
+<article><h3>Файлы</h3><p>Приложите документ, таблицу или картинку — Claude прочитает и ответит по ним. Только те данные, которые можно передавать.</p></article>
+<article><h3>Проекты</h3><p>Отдельная папка для повторяющейся работы: в ней лежат постоянные документы и правила, и Claude учитывает их в каждом разговоре проекта. <a href="../claude-projects/index.html">Подробнее</a>.</p></article>
+<article><h3>Артефакты</h3><p>Готовый результат — документ, таблица, схема, небольшое приложение — в отдельном окне рядом с разговором, где его удобно править и скачивать.</p></article>
+<article><h3>Навыки</h3><p>Записанная процедура: как именно делать определённую работу. Claude применяет её сам, когда она подходит к задаче. <a href="../claude-skills/index.html">Подробнее</a>.</p></article>
+<article><h3>Подключения и исследование</h3><p>Подключения дают Claude доступ к вашим рабочим системам — почте, файлам, календарю. Исследование — отчёт по многим источникам со ссылками. Работают, только если их включили в вашей организации.</p></article>
+</div>
+<h2 id="first">Первый разговор в Claude</h2>
+<ol>
+<li>Откройте Claude в одобренном рабочем аккаунте. Кнопки и меню там на английском, но писать можно по-русски — Claude ответит на языке вопроса.</li>
+<li>Нажмите кнопку нового разговора и начните с задачи, которую сами легко проверите: сводка письма, черновик служебной записки, разбор небольшой таблицы.</li>
+<li>Скажите, кто вы и для кого результат: «Я специалист операционного отдела, готовлю справку для руководителя».</li>
+<li>Уточняйте: «короче», «таблицей», «без вводных слов». Второй ответ обычно лучше первого.</li>
+</ol>
+<h2 id="choose">Когда что выбирать</h2>
+<div class="o-table-wrap"><table>
+<thead>
+<tr>
+<th>Ваша ситуация</th>
+<th>Что выбрать</th>
+<th>Пример</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Разовая задача</td>
+<td>обычный разговор</td>
+<td>сократить длинное письмо до пяти пунктов</td>
+</tr>
+<tr>
+<td>Одна и та же работа каждую неделю с одними документами</td>
+<td>проект</td>
+<td>ответы на типовые обращения клиентов по регламенту</td>
+</tr>
+<tr>
+<td>Нужен готовый документ или таблица, которые вы скачаете</td>
+<td>артефакт или файл</td>
+<td>служебная записка на одну страницу, таблица Excel по выгрузке</td>
+</tr>
+<tr>
+<td>Одна и та же процедура в разных задачах</td>
+<td>навык</td>
+<td>проверка любого документа по вашему чек-листу</td>
+</tr>
+</tbody>
+</table></div>
+<p>Если сомневаетесь, начните с обычного разговора. Когда заметите, что в третий раз прикладываете тот же регламент и объясняете то же самое, — пора сделать проект.</p>
+<p><strong>Попробуйте сейчас.</strong> Выпишите три задачи из своей рабочей недели и для каждой выберите строку таблицы. Ту задачу, что попала в «проект», возьмите в руководство <a href="../claude-projects/index.html">Проекты в Claude</a>.</p>
+<p>Какие возможности доступны именно вам, зависит от вашего плана и настроек организации. Работайте только в одобренном рабочем аккаунте; если нужной возможности нет — <a href="../../../services/how-to-engage/index.html">напишите нам</a>.</p>
+<p>Подробно, шаг за шагом — в руководстве <a href="../claude-work-complete-guide/index.html">Работа в Claude: проекты, документы, Office и Cowork</a>.</p>
+<nav class="lm-walk lm-walk--bottom lm-walk--l1" data-walk="daily-work" aria-label="Step 1 of 14 on the “Claude в ежедневной работе” map"><div class="lm-walk__head"><a class="lm-walk__map" href="../../maps/daily-work/index.html#step-1" data-map="daily-work">Learning map: <b>Claude в ежедневной работе</b></a><span class="lm-walk__pos">Step <b>1</b> of 14 · level 1, новичок</span></div><ol class="lm-walk__dots" aria-label="Map steps"><li><a class="lm-dot lm-dot--l1 is-here" href="index.html" data-map="daily-work" data-dot-step="daily-work|claude-overview#" title="Step 1. Claude: что умеет и с чего начать" aria-current="step">1</a></li><li><a class="lm-dot lm-dot--l1" href="../claude-work-complete-guide/index.html#start" data-map="daily-work" data-dot-step="daily-work|claude-work-complete-guide#start" title="Step 2. Интерфейс, настройки и память">2</a></li><li><a class="lm-dot lm-dot--l1" href="../claude-projects/index.html" data-map="daily-work" data-dot-step="daily-work|claude-projects#" title="Step 3. Проекты в Claude: постоянный контекст для повторяющейся работы">3</a></li><li class="lm-dot-gap"><a class="lm-dot lm-dot--l2" href="../claude-work-complete-guide/index.html#projects" data-map="daily-work" data-dot-step="daily-work|claude-work-complete-guide#projects" title="Step 4. Проекты от создания до сопровождения">4</a></li><li><a class="lm-dot lm-dot--l2" href="../claude-work-complete-guide/index.html#files" data-map="daily-work" data-dot-step="daily-work|claude-work-complete-guide#files" title="Step 5. Файлы и документы в разговоре">5</a></li><li><a class="lm-dot lm-dot--l2" href="../claude-work-complete-guide/index.html#create-files" data-map="daily-work" data-dot-step="daily-work|claude-work-complete-guide#create-files" title="Step 6. Создание Word, Excel, PowerPoint и PDF">6</a></li><li><a class="lm-dot lm-dot--l2" href="../claude-work-complete-guide/index.html#office" data-map="daily-work" data-dot-step="daily-work|claude-work-complete-guide#office" title="Step 7. Claude в Excel, Word, PowerPoint и Outlook">7</a></li><li class="lm-dot-gap"><a class="lm-dot lm-dot--l3" href="../claude-work-complete-guide/index.html#connectors" data-map="daily-work" data-dot-step="daily-work|claude-work-complete-guide#connectors" title="Step 8. Подключения и исследование">8</a></li><li><a class="lm-dot lm-dot--l3" href="../claude-cowork/index.html" data-map="daily-work" data-dot-step="daily-work|claude-cowork#" title="Step 9. Claude Cowork: работа с вашими файлами и приложениями">9</a></li><li><a class="lm-dot lm-dot--l3" href="../claude-work-complete-guide/index.html#cowork" data-map="daily-work" data-dot-step="daily-work|claude-work-complete-guide#cowork" title="Step 10. Cowork — поручить Claude работу">10</a></li><li class="lm-dot-gap"><a class="lm-dot lm-dot--l4" href="../claude-work-complete-guide/index.html#safety" data-map="daily-work" data-dot-step="daily-work|claude-work-complete-guide#safety" title="Step 11. Безопасность и данные">11</a></li><li><a class="lm-dot lm-dot--l4" href="../claude-work-complete-guide/index.html#roles" data-map="daily-work" data-dot-step="daily-work|claude-work-complete-guide#roles" title="Step 12. Сценарии по ролям">12</a></li><li><a class="lm-dot lm-dot--l4" href="../../maps/daily-work/index.html#step-13" data-map="daily-work" data-dot-step="daily-work|https://academy.claude.com/courses/claude-101" title="Step 13. Курс: Claude 101">13</a></li><li><a class="lm-dot lm-dot--l4" href="../../maps/daily-work/index.html#step-14" data-map="daily-work" data-dot-step="daily-work|https://academy.claude.com/courses/introduction-to-claude-cowork" title="Step 14. Курс: Introduction to Claude Cowork">14</a></li></ol><div class="lm-walk__done" data-step="daily-work|claude-overview#"><div><p><b>After this step you can:</b> выбирать между разговором, проектом, артефактом и навыком.</p><p><b>Try this:</b> Выпишите три задачи своей недели и для каждой выберите разговор, проект, файл или навык.</p></div><button type="button" class="lm-walk__check" data-step-toggle aria-pressed="false"><span class="is-off">Mark step as done</span><span class="is-on">Step done ✓</span></button></div><div class="lm-walk__moves"><a class="lm-walk__prev" href="../../maps/daily-work/index.html" data-map="daily-work"><small>← To the start of the map</small><span>Claude в ежедневной работе</span></a><a class="lm-walk__next" href="../claude-work-complete-guide/index.html#start" data-map="daily-work"><small>Next · step 2 · part of a guide →</small><span>Интерфейс, настройки и память</span></a></div></nav>
+<p class="kb-source">Based on: <a href="https://academy.claude.com/courses/claude-101">Claude 101</a> — Anthropic, in English. This page is a short summary with our own examples.</p>
+</article></div><aside class="o-context" aria-label="On this page"><strong>On this page</strong><a class="lv2" href="#parts">Что есть в Claude</a><a class="lv2" href="#first">Первый разговор в Claude</a><a class="lv2" href="#choose">Когда что выбирать</a></aside></div>
+</main>
+<footer class="o-footbar">
+<nav class="fb-left" aria-label="Legal information"><a href="../../../privacy/index.html">Privacy</a><a href="../../../terms-of-use/index.html">Terms of use</a></nav>
+<div class="fb-right"><span class="foot-text">© 2026 AI Competence Hub · v2.1 <a class="contact" href="mailto:talimbayev@obank.kg?subject=Competence%20Hub%20%5BAFWZM%5D%3A%20page%20feedback">Contact us</a></span>
+<button type="button" class="pagefb" data-dialog="fb" aria-haspopup="dialog"><span>Page feedback</span><span>ID: AFWZM</span></button></div>
+</footer>
+</div>
+<dialog id="fb" class="fb" aria-labelledby="fb-t" data-subject="Competence Hub [AFWZM]: page feedback" data-ref="AFWZM" data-page="Claude: что умеет и с чего начать">
+  <form method="dialog">
+    <div class="fb-head"><h2 id="fb-t">Page feedback</h2><code>ID: AFWZM</code></div>
+    <div class="fb-body"><p>Leave feedback on the content of this page: <a data-mail href="mailto:talimbayev@obank.kg">feedback</a>.</p><button class="oc-button" value="close">Close</button></div>
+  </form>
+</dialog>
+</body></html>

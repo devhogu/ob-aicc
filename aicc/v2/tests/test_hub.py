@@ -76,6 +76,10 @@ class Checker(unittest.TestCase):
         (out / 'index.html').write_text('<meta http-equiv="refresh" content="0; url=ru/index.html">', encoding='utf-8')
         (out / 'assets' / 'page-ids.json').write_text('{"index": "AAAAA"}', encoding='utf-8')
         (out / 'assets' / 'search-ru.js').write_text('window.AICC_SEARCH_INDEX=[];\n', encoding='utf-8')
+        (out / 'en').mkdir()  # the English edition's twin of the page
+        (out / 'en' / 'index.html').write_text(
+            '<html lang="en"><head><title>t</title></head><body><span class="status-chip">Draft</span><h1>Hub</h1><button class="pagefb"><span>Feedback</span><span>ID: AAAAA</span></button><p>Text</p></body></html>', encoding='utf-8')
+        (out / 'assets' / 'search-en.js').write_text('window.AICC_SEARCH_INDEX=[];\n', encoding='utf-8')
         original = check.OUT
         check.OUT = out
         self.addCleanup(setattr, check, 'OUT', original)

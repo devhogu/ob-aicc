@@ -1,0 +1,703 @@
+# English term list of the AI Competence Hub (C-HUB-V2-EN, T-001).
+# Every English text of the Hub (pages, data, interface strings, catalog) uses these renderings.
+# Sources: aicc/v2/vocabulary/*.yaml (id, ru, en), the English corpus (charter/en/documents/vocabulary.md,
+# charter/en/shared-technology-terminology.md) and charter/ru/translation-en-ru-map.md. Where the vocabulary
+# and the English corpus differ, the corpus wording wins and the entry carries a note.
+# Sections: terms (one per vocabulary id), names (fixed names by group), phrases (recurring interface and
+# content phrases), plurals, formats, forbidden_en, laws. Style rules: aicc/v2/i18n/style-en.md.
+# Checked by aicc/v2/tests/test_terms_en.py.
+
+# START_BLOCK_TERMS
+terms:
+  # core
+  - {id: funnel, ru: "воронка", en: "funnel"}
+  - {id: portfolio, ru: "портфель", en: "portfolio"}
+  - {id: program, ru: "программа", en: "program"}
+  - {id: team-level, ru: "командный уровень", en: "team level"}
+  - {id: initiative, ru: "инициатива", en: "initiative"}
+  - {id: capability, ru: "Capability", en: "Capability", note: "SAFe term, capitalized as on the Russian site and in the corpus; plural Capabilities. Vocabulary had lowercase."}
+  - {id: feature, ru: "Feature", en: "Feature", note: "SAFe term, capitalized as on the Russian site and in the corpus; plural Features. Vocabulary had lowercase."}
+  - {id: project-card, ru: "карточка проекта", en: "project card", note: "Short form in running text: card."}
+  - {id: project-profile, ru: "профиль проекта", en: "project profile", note: "Short form: profile."}
+  - {id: run-rate, ru: "текущая работа", en: "run-rate work", note: "Corpus: Run-rate work. As a lane label: Run-rate."}
+  - {id: urgent, ru: "срочная работа", en: "urgent work", note: "As a lane label: Urgent."}
+  - {id: class-of-service, ru: "класс обслуживания", en: "class of service"}
+  - {id: business-owner, ru: "бизнес-владелец", en: "business owner", note: "One of the three roles. Never Domain Owner."}
+  - {id: product-manager, ru: "менеджер продукта", en: "product manager", note: "One of the three roles."}
+  - {id: project-manager, ru: "руководитель проекта", en: "project manager", note: "One of the three roles. «руководитель» here is never head or lead."}
+  - {id: product-management-forum, ru: "форум управления продуктами", en: "product management forum"}
+  - {id: program-decision-forum, ru: "форум решений по программе", en: "program decision forum"}
+  - {id: shaping, ru: "проработка", en: "shaping", note: "As a column name: Shaping."}
+  - {id: ready, ru: "готово к старту", en: "ready", note: "As a column name: Ready; in a sentence: ready to start."}
+  - {id: doing, ru: "в работе", en: "doing", note: "As a column name: Doing; in a status sentence: in progress."}
+  - {id: done, ru: "завершено", en: "done", note: "As a column name: Done."}
+  - {id: start-decision, ru: "решение о старте", en: "start decision"}
+  - {id: invest-decision, ru: "решение о вложении", en: "investment decision", note: "Vocabulary had «invest decision», which is not idiomatic English."}
+  - {id: persevere-pivot-stop, ru: "продолжить, изменить курс или остановить", en: "persevere, pivot, or stop", note: "Serial comma per the corpus style (vocabulary: persevere, pivot or stop)."}
+  - {id: exit-criterion, ru: "критерий выхода", en: "exit criterion", note: "Plural: exit criteria."}
+  - {id: appetite, ru: "допустимый объём вложений", en: "appetite", note: "Industry term (how much we are willing to spend). Not the corpus AI Risk Appetite."}
+  - {id: stop-threshold, ru: "порог остановки", en: "stop threshold"}
+  - {id: wip-limit, ru: "WIP-лимит", en: "WIP limit", note: "Corpus: WIP limit is the accepted short form (full: limit on work in progress). Vocabulary had «work in progress limit»."}
+  - {id: pull, ru: "вытягивание", en: "pull"}
+  - {id: wsjf, ru: "очерёдность по ценности и срокам", en: "WSJF", note: "First use on a page: weighted shortest job first (WSJF)."}
+  - {id: mvp, ru: "минимально жизнеспособный продукт", en: "MVP", note: "First use on a page: minimum viable product (MVP)."}
+  - {id: business-case, ru: "бизнес-кейс", en: "business case"}
+  - {id: backlog, ru: "бэклог", en: "backlog"}
+  - {id: kanban, ru: "канбан", en: "Kanban", note: "Corpus capitalizes Kanban as the method name (Kanban board). Vocabulary had lowercase."}
+  - {id: iteration, ru: "итерация", en: "iteration", note: "Lowercase in running text (the corpus capitalizes it as a defined term). Labels such as i10 stay."}
+  - {id: program-increment, ru: "программный инкремент", en: "program increment", note: "Lowercase in running text as on the Russian site (corpus: Program Increment). Short form PI."}
+  - {id: lead-time, ru: "время от идеи до результата", en: "lead time"}
+  - {id: cycle-time, ru: "время работы", en: "cycle time"}
+  - {id: throughput, ru: "пропускная способность", en: "throughput"}
+  - {id: decision-log, ru: "журнал решений", en: "decision log"}
+  - {id: practice-checklist, ru: "памятка по практике", en: "practice checklist"}
+  - {id: risk-tier, ru: "категория риска", en: "risk tier", note: "Lowercase in running text (corpus: Risk Tier)."}
+  - {id: human-in-the-loop, ru: "человек в контуре", en: "human in the loop"}
+  - {id: workspace-automation, ru: "автоматизация рабочего места", en: "workspace automation"}
+  # hub
+  - {id: knowledge-base, ru: "база знаний", en: "knowledge base", note: "The site section is the Knowledge Base (capitalized as a name)."}
+  - {id: maturity-level, ru: "уровень зрелости", en: "maturity level", note: "Lowercase in running text (corpus: Maturity Level)."}
+  - {id: governance, ru: "управление и контроль", en: "governance"}
+  - {id: strategic-theme, ru: "стратегическая тема", en: "strategic theme"}
+  # responsible AI
+  - {id: responsible-ai, ru: "ответственный AI", en: "responsible AI"}
+  - {id: machine-learning, ru: "машинное обучение", en: "machine learning"}
+  - {id: llm, ru: "большая языковая модель", en: "LLM", note: "First use on a page: large language model (LLM)."}
+  - {id: generative-ai, ru: "генеративный AI", en: "generative AI"}
+  - {id: foundation-model, ru: "базовая модель", en: "foundation model"}
+  - {id: ai-agent, ru: "AI-агент", en: "AI agent"}
+  - {id: fine-tuning, ru: "дообучение", en: "fine-tuning"}
+  - {id: prompt, ru: "запрос к модели", en: "prompt", note: "«запрос» to a model or to Claude is a prompt; «писать запросы» is prompting."}
+  - {id: context-window, ru: "контекстное окно", en: "context window"}
+  - {id: token, ru: "токен", en: "token"}
+  - {id: embedding, ru: "эмбеддинг", en: "embedding"}
+  - {id: grounding, ru: "опора на источники", en: "grounding"}
+  - {id: evaluation-set, ru: "оценочный набор", en: "evaluation set"}
+  - {id: benchmark, ru: "эталонный тест", en: "benchmark", note: "The reference weight «ориентир» is rendered reference point, not benchmark."}
+  - {id: guardrails, ru: "защитные механизмы", en: "guardrails"}
+  - {id: human-on-the-loop, ru: "человек над контуром", en: "human on the loop"}
+  - {id: model-gateway, ru: "шлюз доступа к моделям", en: "model gateway"}
+  - {id: tool-gateway, ru: "шлюз доступа к инструментам", en: "tool gateway"}
+  - {id: hallucination, ru: "галлюцинация", en: "hallucination"}
+  - {id: bias, ru: "предвзятость", en: "bias"}
+  - {id: model-drift, ru: "дрейф", en: "drift"}
+  - {id: prompt-injection, ru: "промпт-инъекция", en: "prompt injection"}
+  - {id: data-leakage, ru: "утечка данных", en: "data leakage"}
+  - {id: jailbreak, ru: "обход защитных ограничений", en: "jailbreak"}
+  - {id: data-poisoning, ru: "отравление данных", en: "data poisoning"}
+  - {id: excessive-agency, ru: "избыточная самостоятельность", en: "excessive agency"}
+  - {id: overreliance, ru: "чрезмерное доверие", en: "over-reliance", note: "Corpus spelling over-reliance; vocabulary had overreliance."}
+  - {id: model-collapse, ru: "коллапс модели", en: "model collapse"}
+  - {id: risk-based-approach, ru: "риск-ориентированный подход", en: "risk-based approach"}
+  - {id: high-risk-ai, ru: "AI высокого риска", en: "high-risk AI"}
+  - {id: model-risk-management, ru: "управление модельным риском", en: "model risk management"}
+  - {id: independent-review, ru: "независимая проверка", en: "independent review"}
+  - {id: explainability, ru: "объяснимость", en: "explainability"}
+  - {id: impact-assessment, ru: "оценка воздействия", en: "impact assessment"}
+  - {id: model-card, ru: "карточка модели", en: "model card"}
+  - {id: ai-literacy, ru: "грамотность в области AI", en: "AI literacy"}
+  - {id: ai-incident, ru: "инцидент AI", en: "AI incident"}
+  - {id: shadow-ai, ru: "теневой AI", en: "shadow AI"}
+  - {id: open-banking, ru: "открытый банкинг", en: "open banking"}
+  - {id: embedded-finance, ru: "встроенные финансовые услуги", en: "embedded finance"}
+  - {id: regtech, ru: "регуляторные технологии", en: "regtech"}
+  - {id: alternative-data, ru: "альтернативные данные", en: "alternative data"}
+  - {id: liveness-check, ru: "проверка присутствия живого человека", en: "liveness check"}
+  - {id: real-time-scoring, ru: "скоринг в реальном времени", en: "real-time scoring"}
+  - {id: rag, ru: "ответы с опорой на поиск по документам", en: "RAG", note: "First use on a page: retrieval-augmented generation (RAG)."}
+  - {id: kyc, ru: "идентификация и проверка клиента", en: "KYC", note: "First use on a page: know your customer (KYC)."}
+  # services
+  - {id: reusable-package, ru: "пакет", en: "reusable package", note: "Short form in running text: package."}
+  - {id: proof-of-concept, ru: "проверка осуществимости", en: "proof of concept"}
+  - {id: timebox, ru: "тайм-бокс", en: "time-box", note: "Corpus spelling time-box (verb and adjective: time-boxed); vocabulary had timebox."}
+  - {id: sandbox, ru: "лабораторная среда", en: "sandbox", note: "Kept from the vocabulary; the corpus calls the environment the Lab. A regulator's «песочница» is a regulatory sandbox."}
+  - {id: leading-indicator, ru: "опережающий показатель", en: "leading indicator"}
+  - {id: acceptance-criteria, ru: "критерии приёмки", en: "acceptance criteria"}
+  - {id: support-level, ru: "уровень поддержки", en: "support level"}
+  - {id: data-lineage, ru: "происхождение данных", en: "data lineage"}
+  - {id: skill-library, ru: "библиотека навыков", en: "skill library"}
+  - {id: community-of-practice, ru: "профессиональное сообщество", en: "community of practice"}
+# END_BLOCK_TERMS
+
+# START_BLOCK_NAMES
+# Fixed names by group. Within a group every Russian name has one English name and no two names share one;
+# alias_of marks a longer or shorter Russian form of the same thing.
+names:
+  hub:
+    - {key: title, ru: "Хаб Компетенций по AI", en: "AI Competence Hub", note: "Full title: site title, home page heading, footer, page titles."}
+    - {key: middle, ru: "Хаб Компетенций", en: "Competence Hub", note: "Middle form: section label, mail subject, second mention in a heading."}
+    - {key: short, ru: "Хаб", en: "Hub", note: "Short form in running text: the Hub (capitalized, with the article)."}
+    - {key: owner-long, ru: "Хаб Компетенций и Решений", en: "Competence and Solutions Hub", note: "Owner's wording on the home page; keep the capitals."}
+    - {key: competence-center, ru: "Центр Компетенций", en: "Competence Center", note: "Both words capitalized; never AICC in reader text."}
+    - {key: competence-center-title, ru: "Центр Компетенций по AI", en: "AI Competence Center", note: "Title form."}
+  roles:
+    - {ru: "бизнес-владелец", en: "business owner"}
+    - {ru: "менеджер продукта", en: "product manager"}
+    - {ru: "руководитель проекта", en: "project manager"}
+  role_kickers:
+    - {ru: "Зачем", en: "Why"}
+    - {ru: "Что и в каком порядке", en: "What and in what order"}
+    - {ru: "Как и когда", en: "How and when"}
+  forums:
+    - {ru: "форум управления продуктами", en: "product management forum"}
+    - {ru: "форум решений по программе", en: "program decision forum"}
+  profiles:
+    - {key: initiative, ru: "Инициатива", en: "Initiative"}
+    - {key: run-rate, ru: "Текущая работа", en: "Run-rate work"}
+    - {key: recurring-check, ru: "Регулярная проверка", en: "Recurring check"}
+    - {key: enablement, ru: "Обучение и внедрение", en: "Enablement", note: "Corpus service area Enablement; the same name for the profile, the service direction and the card area."}
+  portfolio_states:
+    - {ru: "Воронка", en: "Funnel"}
+    - {ru: "Проработка", en: "Shaping"}
+    - {ru: "Готово к старту", en: "Ready"}
+    - {ru: "В работе", en: "Doing"}
+    - {ru: "Завершено", en: "Done"}
+    - {ru: "Отложено", en: "Deferred", note: "Corpus: Deferred."}
+    - {ru: "Закрыто", en: "Closed"}
+  portfolio_states_in_sentence:
+    - {ru: "в воронке", en: "in the funnel"}
+    - {ru: "в проработке", en: "in shaping"}
+    - {ru: "готовы к старту", en: "ready to start"}
+    - {ru: "в работе", en: "in progress"}
+    - {ru: "завершены", en: "done"}
+    - {ru: "отложены", en: "deferred"}
+    - {ru: "закрыты", en: "closed"}
+  program_states:
+    - {ru: "Бэклог", en: "Backlog"}
+    - {ru: "Готово к работе", en: "Ready"}
+    - {ru: "В работе", en: "Doing"}
+    - {ru: "На проверке", en: "In review", note: "Not Review, which is the name of the event."}
+    - {ru: "Завершено", en: "Done"}
+  program_states_in_sentence:
+    - {ru: "в бэклоге", en: "in the backlog"}
+    - {ru: "готовы к работе", en: "ready"}
+    - {ru: "в работе", en: "in progress"}
+    - {ru: "на проверке", en: "in review"}
+    - {ru: "завершены", en: "done"}
+  classes_of_service:
+    - {ru: "срочная работа", en: "urgent work", note: "Lane label: Urgent."}
+    - {ru: "инициатива", en: "initiative", note: "Lane label: Initiative."}
+    - {ru: "текущая работа", en: "run-rate work", note: "Lane label: Run-rate."}
+  card_status:
+    - {ru: "зелёный", en: "green"}
+    - {ru: "жёлтый", en: "yellow"}
+    - {ru: "красный", en: "red"}
+    - {ru: "не задан", en: "not set"}
+  checklist_states:
+    - {ru: "не начато", en: "not started"}
+    - {ru: "сделано", en: "done"}
+    - {ru: "не нужно", en: "not needed"}
+  card_gates:
+    - {ru: "Взять в проработку", en: "Take into shaping"}
+    - {ru: "Готово к старту", en: "Ready to start"}
+    - {ru: "Решение о старте", en: "Start decision"}
+    - {ru: "Продолжить, изменить курс или остановить", en: "Persevere, pivot, or stop"}
+    - {ru: "Подтверждение результата", en: "Confirm the result"}
+    - {ru: "Вернуться в воронку", en: "Return to the funnel"}
+    - {ru: "Взять в работу", en: "Take into work"}
+  card_fields:
+    - {ru: "Задача", en: "Problem"}
+    - {ru: "Задача и результат", en: "Problem and outcome"}
+    - {ru: "Ожидаемый результат", en: "Intended outcome"}
+    - {ru: "Чем измерим", en: "How we measure it"}
+    - {ru: "Как сейчас", en: "Where we are now"}
+    - {ru: "Как хотим", en: "Where we want to be"}
+    - {ru: "Люди", en: "People"}
+    - {ru: "Роль", en: "Role"}
+    - {ru: "Позиция", en: "Position"}
+    - {ru: "Кто", en: "Who"}
+    - {ru: "Условия", en: "Conditions"}
+    - {ru: "Допустимый объём вложений", en: "Appetite"}
+    - {ru: "Критерий выхода", en: "Exit criterion"}
+    - {ru: "Порог остановки", en: "Stop threshold"}
+    - {ru: "Контрольная точка", en: "Review point", note: "The card's review_point (when we look at the result). The learning maps' checkpoint is a different name, see learning."}
+    - {ru: "Сейчас", en: "Now"}
+    - {ru: "Следующий шаг", en: "Next step"}
+    - {ru: "Главные риски", en: "Main risks"}
+    - {ru: "Зависимости", en: "Dependencies"}
+    - {ru: "Работа", en: "Work"}
+    - {ru: "Журнал решений", en: "Decision log"}
+    - {ru: "Что решили", en: "What was decided"}
+    - {ru: "Когда", en: "When"}
+    - {ru: "Итог", en: "Closure"}
+    - {ru: "Результат", en: "Result"}
+    - {ru: "Чему научились", en: "What we learned"}
+    - {ru: "Ссылки", en: "Links"}
+    - {ru: "Шаблон", en: "Template"}
+    - {ru: "Следующая точка контроля", en: "Next checkpoint"}
+    - {ru: "Точка контроля", en: "Checkpoint"}
+    - {ru: "Кто решает", en: "Who decides"}
+    - {ru: "На что опирается", en: "Based on"}
+    - {ru: "Карточка", en: "Card"}
+    - {ru: "Ключ", en: "Key"}
+    - {ru: "Вид", en: "Type"}
+    - {ru: "Название", en: "Title"}
+    - {ru: "Состояние", en: "State"}
+    - {ru: "Статус", en: "Status"}
+    - {ru: "Профиль", en: "Profile"}
+    - {ru: "Функция", en: "Function"}
+    - {ru: "Услуга", en: "Service"}
+    - {ru: "Место", en: "Rank"}
+    - {ru: "Место в бэклоге", en: "Backlog rank"}
+    - {ru: "Итерация", en: "Iteration"}
+    - {ru: "Проект", en: "Project"}
+    - {ru: "Класс обслуживания", en: "Class of service"}
+  project_tabs:
+    - {key: portfolio, ru: "Портфель", en: "Portfolio", hint_ru: "где каждый проект", hint_en: "where each project is"}
+    - {key: program, ru: "Программа", en: "Program", hint_ru: "что делается сейчас", hint_en: "what is being done now"}
+    - {key: plan, ru: "План PI", en: "PI plan", hint_ru: "что по итерациям", hint_en: "what happens in each iteration"}
+    - {key: backlog, ru: "Бэклог", en: "Backlog", hint_ru: "что дальше", hint_en: "what comes next"}
+    - {key: decisions, ru: "Решения", en: "Decisions", hint_ru: "кто что решает", hint_en: "who decides what"}
+    - {key: register, ru: "Реестр", en: "Register", hint_ru: "все карточки", hint_en: "all cards"}
+  sections:
+    - {key: hub, ru: "Хаб Компетенций", en: "Competence Hub"}
+    - {key: services, ru: "Услуги", en: "Services"}
+    - {key: process, ru: "Процесс", en: "Process"}
+    - {key: catalog, ru: "Каталог сценариев", en: "Discovery Catalog", note: "The catalog's established English name, kept with its English original (T-006). A catalog entry is a scenario."}
+    - {key: catalog-title, ru: "Каталог сценариев для применения AI", en: "Discovery Catalog", alias_of: "Каталог сценариев"}
+    - {key: projects, ru: "Проекты", en: "Projects"}
+    - {key: responsible-ai, ru: "Ответственный AI", en: "Responsible AI"}
+    - {key: kb, ru: "База знаний", en: "Knowledge Base"}
+    - {key: reference, ru: "Справочник", en: "Reference"}
+  pages:
+    - {ru: "О нас", en: "About us"}
+    - {ru: "Чем мы занимаемся", en: "What we do"}
+    - {ru: "Как мы работаем", en: "How we work"}
+    - {ru: "Стратегия", en: "Strategy"}
+    - {ru: "Ценности и принципы", en: "Values and principles"}
+    - {ru: "Как обратиться", en: "How to engage"}
+    - {ru: "Воронка и портфель", en: "Funnel and portfolio"}
+    - {ru: "Программа", en: "Program"}
+    - {ru: "Профили проектов", en: "Project profiles"}
+    - {ru: "Роли и форумы", en: "Roles and forums"}
+    - {ru: "Термины AI простыми словами", en: "AI terms in plain words"}
+    - {ru: "Как мы это применяем", en: "How we apply it"}
+    - {ru: "Карты обучения", en: "Learning maps"}
+    - {ru: "Дорожная карта", en: "Roadmap"}
+    - {ru: "Дорожная карта обучения", en: "Learning roadmap"}
+    - {ru: "Словарь", en: "Vocabulary"}
+    - {ru: "Обзор", en: "Overview"}
+    - {ru: "Регуляторы и нормативные акты", en: "Regulators and legal acts"}
+    - {ru: "Ресурсы для обучения и исследований", en: "Learning and research resources"}
+    - {ru: "Обучение Anthropic", en: "Anthropic learning"}
+    - {ru: "Полные руководства", en: "Complete guides"}
+    - {ru: "Исходные файлы", en: "Source files"}
+    - {ru: "Конфиденциальность", en: "Privacy"}
+    - {ru: "Условия использования", en: "Terms of use"}
+    - {ru: "Правовая информация", en: "Legal information"}
+  service_directions:
+    - {key: build, ru: "Создание и сопровождение решений", en: "Building and running solutions"}
+    - {key: enablement, ru: "Обучение и внедрение", en: "Enablement", note: "Corpus service area Enablement; the same name for the profile, the service direction and the card area."}
+  services:
+    - {key: knowledge-services, ru: "Сервисы знаний", en: "Knowledge services"}
+    - {key: input-processing, ru: "Обработка входных данных", en: "Input processing"}
+    - {key: workplace-automation, ru: "Автоматизация рабочего места", en: "Workspace automation"}
+    - {key: analytics, ru: "Аналитика и поддержка решений", en: "Analytics and decision support"}
+    - {key: reporting, ru: "Управленческая отчётность и материалы для инвесторов", en: "Management reporting and investor materials"}
+    - {key: platforms, ru: "Платформы", en: "Platforms"}
+    - {key: governance, ru: "Управление и контроль", en: "Governance"}
+    - {key: training, ru: "Обучение и обмен знаниями", en: "Training and knowledge sharing"}
+    - {key: adoption, ru: "Внедрение и жизненный цикл решений", en: "Adoption and solution lifecycle"}
+  service_card_headings:
+    - {ru: "Что входит", en: "What's included"}
+    - {ru: "С чем приходят", en: "What to bring"}
+    - {ru: "Форма работы", en: "Form of work"}
+    - {ru: "Как идёт работа", en: "How the work goes"}
+    - {ru: "Когда подходит", en: "When it fits"}
+    - {ru: "Этапы и точки контроля", en: "Stages and checkpoints"}
+    - {ru: "Что получить", en: "What you get"}
+    - {ru: "Две формы работы", en: "Two forms of work"}
+  strategic_themes:
+    - {ru: "Понимание клиента", en: "Customer understanding"}
+    - {ru: "Аналитика для руководства", en: "Management analytics"}
+    - {ru: "AI в работе подразделений", en: "AI in the work of departments"}
+    - {ru: "Применение на рабочем месте", en: "AI at the workplace"}
+    - {ru: "AI в потоках, операциях и системах", en: "AI in flows, operations, and systems"}
+    - {ru: "Сопровождение и поддержка", en: "Maintenance and support"}
+  maturity_levels:
+    - {ru: "Основа", en: "Foundation"}
+    - {ru: "Контролируемое внедрение", en: "Controlled adoption"}
+    - {ru: "Встраивание", en: "Integration", note: "Not embedding, which is a vocabulary term."}
+    - {ru: "Масштабирование", en: "Scaling"}
+    - {ru: "Агентное применение", en: "Agentic use"}
+  learning_levels:
+    - {ru: "Новичок", en: "Beginner"}
+    - {ru: "Практик", en: "Practitioner"}
+    - {ru: "Продвинутый", en: "Advanced"}
+    - {ru: "Эксперт", en: "Expert"}
+  learning:
+    - {ru: "Карта обучения", en: "Learning map"}
+    - {ru: "Остановка", en: "Stop"}
+    - {ru: "Шаг", en: "Step"}
+    - {ru: "Уровень", en: "Level"}
+    - {ru: "Контрольная точка уровня", en: "Level checkpoint"}
+    - {ru: "Специализация", en: "Specialization"}
+    - {ru: "Маршрут", en: "Route"}
+    - {ru: "Разработчикам", en: "For developers"}
+    - {ru: "Руководителям", en: "For leaders"}
+    - {ru: "от нуля до эксперта", en: "from zero to expert"}
+  kb_categories:
+    - {ru: "Начало работы", en: "Getting started"}
+    - {ru: "Запросы к Claude", en: "Prompting Claude"}
+    - {ru: "Безопасная работа", en: "Working safely"}
+    - {ru: "Автоматизация", en: "Automation"}
+    - {ru: "Для руководителей", en: "For leaders"}
+    - {ru: "Обучение", en: "Learning"}
+    - {ru: "Разное", en: "Other"}
+  guide_kinds:
+    - {ru: "курс", en: "course"}
+    - {ru: "документация", en: "documentation"}
+    - {ru: "руководство", en: "guide"}
+    - {ru: "полное руководство", en: "complete guide"}
+    - {ru: "часть руководства", en: "part of a guide"}
+    - {ru: "практикум", en: "hands-on"}
+    - {ru: "раздел Хаба", en: "Hub section"}
+    - {ru: "руководство Хаба", en: "Hub guide"}
+    - {ru: "курс или документация", en: "course or documentation"}
+    - {ru: "с нуля", en: "from scratch"}
+    - {ru: "базовый", en: "basic"}
+    - {ru: "продвинутый", en: "advanced"}
+  reference_weights:
+    - {key: applies, ru: "действует для нас", en: "applies to us"}
+    - {key: partners, ru: "касается партнёров", en: "concerns partners"}
+    - {key: benchmark, ru: "ориентир", en: "reference point", note: "Not benchmark, which is a vocabulary term."}
+  act_groups:
+    - {ru: "Кыргызская Республика", en: "Kyrgyz Republic"}
+    - {ru: "Казахстан", en: "Kazakhstan"}
+    - {ru: "Российская Федерация", en: "Russian Federation"}
+    - {ru: "Европейский союз", en: "European Union"}
+    - {ru: "США", en: "United States"}
+    - {ru: "Международные принципы", en: "International principles"}
+    - {ru: "Стандарты и методологии", en: "Standards and frameworks"}
+  resource_groups:
+    - {ru: "Учиться", en: "Learn"}
+    - {ru: "Следить за отраслью", en: "Follow the industry"}
+    - {ru: "Финансовый сектор", en: "Financial sector"}
+    - {ru: "Безопасность и инциденты", en: "Security and incidents"}
+  anthropic_groups:
+    - {ru: "Документация на русском", en: "Documentation in Russian"}
+    - {ru: "Claude Academy", en: "Claude Academy"}
+    - {ru: "Курсы для всех", en: "Courses for everyone"}
+    - {ru: "Курсы для разработчиков", en: "Courses for developers"}
+    - {ru: "Курсы для руководителей", en: "Courses for leaders"}
+    - {ru: "Курсы по Claude Code и агентам", en: "Courses on Claude Code and agents"}
+    - {ru: "Практика и примеры", en: "Practice and examples"}
+  cadence:
+    - {ru: "Программный инкремент", en: "Program increment"}
+    - {ru: "PI", en: "PI", note: "PI names stay as built, e.g. PI 2026-PIQ4."}
+    - {ru: "Итерация", en: "Iteration", note: "Iteration labels stay: i10 stays i10, I10 stays I10."}
+    - {ru: "Неделя", en: "Week", note: "Week labels stay: W2."}
+    - {ru: "нед.", en: "wk", note: "Abbreviation after a number: 4 wk."}
+    - {ru: "Planning", en: "Planning", note: "The PI Planning week (IP week); the Russian site already writes Planning."}
+    - {ru: "неделя IP", en: "IP week"}
+    - {ru: "Review", en: "Review", note: "The iteration Review week; the Russian site already writes Review."}
+    - {ru: "идёт", en: "in progress"}
+    - {ru: "завершён", en: "finished"}
+    - {ru: "впереди", en: "ahead"}
+    - {ru: "нерабочий день", en: "day off"}
+    - {ru: "нерабочие", en: "days off"}
+    - {ru: "сокращённый день", en: "short day"}
+    - {ru: "вероятны отсутствия", en: "absences likely"}
+    - {ru: "сезон отпусков", en: "vacation season"}
+    - {ru: "вся неделя", en: "whole week"}
+    - {ru: "Сегодня", en: "Today"}
+  months:
+    - {ru: "январь", ru_genitive: "января", ru_short: "янв", en: "January", en_short: "Jan"}
+    - {ru: "февраль", ru_genitive: "февраля", ru_short: "фев", en: "February", en_short: "Feb"}
+    - {ru: "март", ru_genitive: "марта", ru_short: "мар", en: "March", en_short: "Mar"}
+    - {ru: "апрель", ru_genitive: "апреля", ru_short: "апр", en: "April", en_short: "Apr"}
+    - {ru: "май", ru_genitive: "мая", ru_short: "май", en: "May", en_short: "May"}
+    - {ru: "июнь", ru_genitive: "июня", ru_short: "июн", en: "June", en_short: "Jun"}
+    - {ru: "июль", ru_genitive: "июля", ru_short: "июл", en: "July", en_short: "Jul"}
+    - {ru: "август", ru_genitive: "августа", ru_short: "авг", en: "August", en_short: "Aug"}
+    - {ru: "сентябрь", ru_genitive: "сентября", ru_short: "сен", en: "September", en_short: "Sep"}
+    - {ru: "октябрь", ru_genitive: "октября", ru_short: "окт", en: "October", en_short: "Oct"}
+    - {ru: "ноябрь", ru_genitive: "ноября", ru_short: "ноя", en: "November", en_short: "Nov"}
+    - {ru: "декабрь", ru_genitive: "декабря", ru_short: "дек", en: "December", en_short: "Dec"}
+  weekdays:
+    - {ru: "понедельник", ru_short: "пн", en: "Monday", en_short: "Mon"}
+    - {ru: "вторник", ru_short: "вт", en: "Tuesday", en_short: "Tue"}
+    - {ru: "среда", ru_short: "ср", en: "Wednesday", en_short: "Wed"}
+    - {ru: "четверг", ru_short: "чт", en: "Thursday", en_short: "Thu"}
+    - {ru: "пятница", ru_short: "пт", en: "Friday", en_short: "Fri"}
+    - {ru: "суббота", ru_short: "сб", en: "Saturday", en_short: "Sat"}
+    - {ru: "воскресенье", ru_short: "вс", en: "Sunday", en_short: "Sun"}
+  organization:
+    - {ru: "Банк", en: "the Bank", note: "Capitalized «Банк» (the organization, never named) is the Bank; generic «банк» is a bank."}
+    - {ru: "функция", en: "function", note: "A business function of the Bank; plural functions."}
+    - {ru: "подразделение", en: "department"}
+    - {ru: "сотрудник", en: "employee", note: "Or staff for the group; in instructions address the reader as you."}
+    - {ru: "контрольные функции", en: "control functions"}
+    - {ru: "Комплаенс", en: "Compliance"}
+    - {ru: "правовая функция", en: "legal function"}
+    - {ru: "Клиентское обслуживание", en: "Customer service"}
+    - {ru: "Розничное кредитование", en: "Retail lending"}
+# END_BLOCK_NAMES
+
+# START_BLOCK_PHRASES
+# Recurring interface and content phrases, one fixed English rendering each. Placeholders in braces stay as they are.
+# key: the message key in site.json where the phrase is a site message.
+phrases:
+  # site messages (site.json messages.ru)
+  - {key: skip, ru: "К содержанию", en: "Skip to content"}
+  - {key: search_label, ru: "Поиск по Хабу", en: "Search the Hub"}
+  - {key: search_none, ru: "По запросу ничего не найдено.", en: "Nothing matches your search."}
+  - {key: theme_to_light, ru: "Дневной режим", en: "Light mode"}
+  - {key: theme_to_dark, ru: "Ночной режим", en: "Dark mode"}
+  - {key: nav_label, ru: "Разделы", en: "Sections"}
+  - {key: nav_summary, ru: "Разделы сайта", en: "Site sections"}
+  - {key: on_this_page, ru: "На этой странице", en: "On this page"}
+  - {key: status_chip, ru: "Черновик", en: "Draft"}
+  - {key: status_chip_title, ru: "Эта страница и показанные на ней записи — черновики: ничего в них не принято и не утверждено", en: "This page and the records on it are drafts: nothing in them has been adopted or approved"}
+  - {key: page_id_title, ru: "Идентификатор страницы: назовите его, когда пишете нам об этой странице", en: "Page ID: mention it when you write to us about this page"}
+  - {key: feedback, ru: "Написать об этой странице", en: "Write to us about this page"}
+  - {key: feedback_subject, ru: "Хаб Компетенций [{id}]: отзыв о странице", en: "Competence Hub [{id}]: page feedback"}
+  - {key: footer, ru: "© 2026 Хаб Компетенций по AI · v2.1", en: "© 2026 AI Competence Hub · v2.1"}
+  - {key: vocabulary_intro, ru: "Термины, которые мы используем. Английское слово рядом с русским — принятое в отрасли название.", en: "The terms we use and what they mean.", note: "Adapted on purpose: the English vocabulary page shows the English term only (spec)."}
+  - {key: vocabulary_term, ru: "Термин", en: "Term"}
+  - {key: vocabulary_definition, ru: "Что это значит", en: "What it means"}
+  - {key: sources_title, ru: "Исходные файлы", en: "Source files"}
+  - {key: sources_intro, ru: "Файлы, из которых собран этот сайт. Их можно прочитать без сервера.", en: "The files this site is built from. You can read them without a server."}
+  - {key: back_to_site, ru: "Вернуться на сайт", en: "Back to the site"}
+  - {key: next, ru: "Далее:", en: "Next:"}
+  - {key: breadcrumb, ru: "Навигационная цепочка", en: "Breadcrumb"}
+  - {key: baseline, ru: "Версия 0.1 · октябрь 2026", en: "Version 0.1 · October 2026"}
+  - {key: contact_us, ru: "Связаться с нами", en: "Contact us"}
+  - {key: privacy, ru: "Конфиденциальность", en: "Privacy"}
+  - {key: terms_of_use, ru: "Условия использования", en: "Terms of use"}
+  - {key: pagefb, ru: "Отзыв о странице", en: "Page feedback"}
+  - {key: fb_prov, ru: "Оставить отзыв о содержании этой страницы:", en: "Leave feedback on the content of this page:"}
+  - {key: fb_word, ru: "отзыв", en: "feedback"}
+  - {key: fb_close, ru: "Закрыть", en: "Close"}
+  - {key: fb_mail_body, ru: "Страница: {title}\nНомер: {ref}\nАдрес: {url}\n\nВопрос или замечание:\n", en: "Page: {title}\nID: {ref}\nAddress: {url}\n\nQuestion or comment:\n"}
+  - {key: legal_label, ru: "Правовая информация", en: "Legal information"}
+  - {key: back, ru: "Назад", en: "Back"}
+  - {key: next_word, ru: "Далее", en: "Next"}
+  - {key: read_further, ru: "Читайте также", en: "See also"}
+  - {key: as_of, ru: "8 октября 2026 года", en: "8 October 2026"}
+  # page furniture and navigation
+  - {ru: "Дальше: {next} →", en: "Next: {next} →"}
+  - {ru: "Дальше", en: "Next", note: "Same as Далее."}
+  - {ru: "Открыть →", en: "Open →"}
+  - {ru: "Открыть крупно", en: "Open full size"}
+  - {ru: "Поиск", en: "Search"}
+  - {ru: "Найти", en: "Search"}
+  - {ru: "Показано: {count}", en: "Showing: {count}"}
+  - {ru: "Все", en: "All"}
+  - {ru: "Ничего не найдено", en: "Nothing found"}
+  - {ru: "Не найдено.", en: "Not found."}
+  - {ru: "Закрыть ×", en: "Close ×"}
+  - {ru: "Пока ничего", en: "Nothing yet"}
+  - {ru: "Подробнее об услуге ›", en: "More about this service ›"}
+  - {ru: "Узнай больше", en: "Learn more"}
+  - {ru: "Впервые знакомитесь с Хабом или с AI?", en: "New to the Hub or to AI?"}
+  # knowledge base and guides
+  - {ru: "Попробуйте сейчас", en: "Try it now"}
+  - {ru: "Попробуйте сейчас.", en: "Try it now."}
+  - {ru: "Попробуйте:", en: "Try this:"}
+  - {ru: "Упражнение.", en: "Exercise."}
+  - {ru: "Проверка.", en: "Check."}
+  - {ru: "Подробно — в руководстве [{guide}]", en: "For details, see the guide [{guide}]"}
+  - {ru: "Подробно — на странице [{page}]", en: "For details, see the page [{page}]"}
+  - {ru: "Найти руководство", en: "Find a guide"}
+  - {ru: "← Все руководства", en: "← All guides"}
+  - {ru: "Руководства по работе с AI по категориям, с поиском.", en: "Guides to working with AI, by category, with search."}
+  - {ru: "около {minutes} мин", en: "about {minutes} min"}
+  - {ru: "около {hours} ч", en: "about {hours} h"}
+  - {ru: "{kind} на русском", en: "{kind} in Russian"}
+  - {ru: "на русском", en: "in Russian"}
+  - {ru: "Пересказ у нас:", en: "Our summary:"}
+  - {ru: "По материалам:", en: "Based on:"}
+  - {ru: "Полное руководство · {category}", en: "Complete guide · {category}"}
+  - {ru: "Найти: курс, тема, продукт", en: "Search: course, topic, product"}
+  - {ru: "Найти: курс, доклад, тема", en: "Search: course, report, topic"}
+  - {ru: "Найти: закон, регулятор, тема", en: "Search: law, regulator, topic"}
+  - {ru: "Зачем.", en: "Why."}
+  - {ru: "Для нас.", en: "For us."}
+  - {ru: "Это ориентир для разговора, а не юридическое заключение; за точным текстом обращайтесь к первоисточнику и юристам.", en: "This is a starting point for discussion, not legal advice; for the exact text, go to the original source and to the lawyers."}
+  - {ru: "Пользуйтесь только теми инструментами и аккаунтами, которые одобрены в вашей организации. Если инструмента нет — напишите нам, разберёмся вместе.", en: "Use only the tools and accounts approved in your organization. If a tool isn't available, write to us and we'll sort it out together."}
+  # learning maps
+  - {ru: "Отметить шаг пройденным", en: "Mark step as done"}
+  - {ru: "Отметить пройденным", en: "Mark as done"}
+  - {ru: "Шаг пройден ✓", en: "Step done ✓"}
+  - {ru: "Карта пройдена ✓", en: "Map completed ✓"}
+  - {ru: "Карта пройдена · {next} →", en: "Map completed · {next} →"}
+  - {ru: "Маршрут пройден", en: "Route completed"}
+  - {ru: "Основной маршрут пройден — выберите специализацию →", en: "Core route completed — choose a specialization →"}
+  - {ru: "Выберите специализацию", en: "Choose a specialization"}
+  - {ru: "Специализации — по вашей роли", en: "Specializations by role"}
+  - {ru: "Сбросить прогресс", en: "Reset progress"}
+  - {ru: "Сбросить отметки о пройденных шагах во всех картах?", en: "Clear the done marks on every step of every map?"}
+  - {ru: "Начать", en: "Start"}
+  - {ru: "Начать: шаг 1", en: "Start: step 1"}
+  - {ru: "Начать с шага 1 →", en: "Start with step 1 →"}
+  - {ru: "Продолжить", en: "Continue"}
+  - {ru: "Продолжить: шаг {n}", en: "Continue: step {n}"}
+  - {ru: "Начать: остановка 1 — {title}", en: "Start: stop 1 — {title}"}
+  - {ru: "Остановка {i} из {n}", en: "Stop {i} of {n}"}
+  - {ru: "Остановки по порядку", en: "Stops in order"}
+  - {ru: "Начало маршрута", en: "Start of the route"}
+  - {ru: "Шаг {n}. {title}", en: "Step {n}. {title}"}
+  - {ru: "Шаг {k} из {total} по карте «{map}»", en: "Step {k} of {total} on the “{map}” map"}
+  - {ru: "← Назад · шаг {k} · {kind}", en: "← Back · step {k} · {kind}"}
+  - {ru: "Далее · шаг {k} · {kind} →", en: "Next · step {k} · {kind} →"}
+  - {ru: "← К началу карты", en: "← To the start of the map"}
+  - {ru: "Предыдущая карта", en: "Previous map"}
+  - {ru: "Следующая карта", en: "Next map"}
+  - {ru: "Дальше по дорожной карте", en: "Next on the roadmap"}
+  - {ru: "Вернуться к дорожной карте", en: "Back to the roadmap"}
+  - {ru: "Вся дорожная карта →", en: "The whole roadmap →"}
+  - {ru: "Весь маршрут обучения", en: "The whole learning route"}
+  - {ru: "После этого шага вы сможете:", en: "After this step you can:"}
+  - {ru: "Для кого:", en: "Who it's for:"}
+  - {ru: "Шагов: {count}", en: "Steps: {count}"}
+  - {ru: "4 уровня · {count} шагов", en: "4 levels · {count} steps"}
+  - {ru: "Шаг {k} из {total} · уровень {level}, {name}", en: "Step {k} of {total} · level {level}, {name}"}
+  - {ru: "Контрольная точка.", en: "Checkpoint."}
+  - {ru: "Карты обучения: от нуля до эксперта", en: "Learning maps: from zero to expert"}
+  - {ru: "Claude: от нуля до эксперта", en: "Claude: from zero to expert"}
+  - {ru: "{done} из {total}", en: "{done} of {total}"}
+  # projects
+  - {ru: "Где мы сейчас", en: "Where we are now"}
+  - {ru: "Карточки — по состоянию на {date}", en: "Cards as of {date}"}
+  - {ru: "Завести карточку", en: "Create a card"}
+  - {ru: "Заведите карточку, и ваш проект появится во всех видах раздела.", en: "Create a card, and your project will appear in every view of this section."}
+  - {ru: "Как принести идею или проект.", en: "How to bring an idea or a project."}
+  - {ru: "Полная карточка →", en: "Full card →"}
+  - {ru: "Полная карточка проекта →", en: "Full project card →"}
+  - {ru: "← К проектам", en: "← Back to projects"}
+  - {ru: "Найти: идентификатор, название, функция", en: "Search: ID, title, function"}
+  - {ru: "Все функции", en: "All functions"}
+  - {ru: "Все услуги", en: "All services"}
+  - {ru: "Показать колонку «{title}»", en: "Show the “{title}” column"}
+  - {ru: "без места", en: "unranked"}
+  - {ru: "Решений пока не записано.", en: "No decisions recorded yet."}
+  - {ru: "Решений пока не записано: все проекты ещё в начале пути.", en: "No decisions recorded yet: every project is still at the start."}
+  - {ru: "Принятых решений пока нет.", en: "No decisions made yet."}
+  - {ru: "Принято решений: {n}.", en: "Decisions made: {n}."}
+  - {ru: "Срочной работы нет.", en: "No urgent work."}
+  - {ru: "Срочная работа: {n}.", en: "Urgent work: {n}."}
+  - {ru: "есть место для старта.", en: "there is room to start one more."}
+  - {ru: "лимит занят, следующий старт ждёт места.", en: "the limit is reached; the next start waits for room."}
+  - {ru: "Решения ждут {n} {projects}", en: "Decisions are pending for {n} {projects}"}
+  - {ru: "Первым в очереди — {title}", en: "First in line: {title}"}
+  - {ru: "Не начато {n} {projects} и {m} Capabilities и Features.", en: "Not started: {n} {projects} and {m} Capabilities and Features."}
+  - {ru: "Capabilities и Features пока нет: они появляются после решения о старте.", en: "No Capabilities or Features yet: they appear after the start decision."}
+  - {ru: "Проекты, ещё не начатые", en: "Projects not yet started"}
+  - {ru: "Capabilities и Features, ещё не принятые", en: "Capabilities and Features not yet accepted"}
+  - {ru: "Отложено и закрыто", en: "Deferred and closed"}
+  - {ru: "Приёмка Feature — менеджер продукта", en: "Feature acceptance: product manager"}
+  - {ru: "Принято и отмечено на карточке", en: "Accepted and marked on the card"}
+  - {ru: "Порядок — менеджер продукта; между проектами — форум решений по программе", en: "Order: product manager; across projects: program decision forum"}
+  - {ru: "Понятны результат и критерии приёмки", en: "Outcome and acceptance criteria are clear"}
+  - {ru: "Как устроена работа такого вида:", en: "How this kind of work runs:"}
+  - {ru: "дата, PI и итерация считаются от сегодняшнего дня", en: "the date, PI and iteration are counted from today"}
+  # calendar
+  - {ru: "Сейчас", en: "Now"}
+  - {ru: " · сейчас", en: " · now"}
+  - {ru: " (эта неделя)", en: " (this week)"}
+  - {ru: "Предыдущий PI", en: "Previous PI"}
+  - {ru: "Следующий PI", en: "Next PI"}
+  - {ru: "Программный инкремент · неделя {week} из {weeks}", en: "Program increment · week {week} of {weeks}"}
+  - {ru: "Итерация · неделя {week} из {weeks}", en: "Iteration · week {week} of {weeks}"}
+  - {ru: "Недели итерации {label}", en: "Weeks of iteration {label}"}
+  - {ru: "Работа по итерациям {pi}", en: "Work by iteration, {pi}"}
+  - {ru: "Работа в итерации {label}", en: "Work in iteration {label}"}
+  - {ru: "В этом PI работы не запланировано.", en: "No work is planned in this PI."}
+  - {ru: "В эту итерацию работа пока не запланирована.", en: "No work is planned for this iteration yet."}
+  - {ru: "Не запланировано", en: "Not planned"}
+  - {ru: "ещё не запланировано", en: "not planned yet"}
+  - {ru: "без итерации", en: "no iteration"}
+  - {ru: "Ближайшая Review — {review}, Planning — {planning}.", en: "Next Review: {review}; Planning: {planning}."}
+  - {ru: "Пройдено {pct}%", en: "{pct}% done"}
+# END_BLOCK_PHRASES
+
+# START_BLOCK_PLURALS
+# Russian has three forms (one, few, many); English has two (one, other). Numbers stay digits.
+plurals:
+  - {ru: ["проект", "проекта", "проектов"], en: ["project", "projects"]}
+  - {ru: ["карточка", "карточки", "карточек"], en: ["card", "cards"]}
+  - {ru: ["шаг", "шага", "шагов"], en: ["step", "steps"]}
+  - {ru: ["работа", "работы", "работ"], en: ["work item", "work items"]}
+  - {ru: ["решение", "решения", "решений"], en: ["decision", "decisions"]}
+  - {ru: ["уровень", "уровня", "уровней"], en: ["level", "levels"]}
+  - {ru: ["неделя", "недели", "недель"], en: ["week", "weeks"]}
+  - {ru: ["сценарий", "сценария", "сценариев"], en: ["scenario", "scenarios"]}
+# END_BLOCK_PLURALS
+
+# START_BLOCK_FORMATS
+formats:
+  date_long: "8 October 2026"
+  date_short: "8 Oct 2026"
+  date_range_same_month: "5–11 Oct 2026"
+  date_range_two_months: "28 Sep – 4 Oct 2026"
+  date_range_two_years: "28 Dec 2026 – 3 Jan 2027"
+  month_year: "October 2026"
+  weekday_date: "Thursday, 8 October 2026"
+  thousands: "1,110"
+  decimal: "2.5"
+  percent: "45%"
+  duration_minutes: "about 6 min"
+  duration_hours: "about 3 h"
+  range_dash: "– (en dash), no spaces between bare numbers (5–11), spaced between dated ends (28 Sep – 4 Oct)"
+# END_BLOCK_FORMATS
+
+# START_BLOCK_FORBIDDEN
+# English equivalents of site.json forbidden (and forbidden_patterns). The English check refuses them in visible text.
+forbidden_en:
+  - "Executive Sponsor"
+  - "Domain Owner"
+  - "Steering"
+  - "SteerCo"
+  - "DR-2026"
+  - "Head of the Competence Center"
+  - "Competence Center Lead"
+  - "consolidating"
+  - "has no authority"
+  - "no authority"
+  - "does not take decisions"
+  - "does not make decisions"
+  - "takes no decisions"
+  - "makes no decisions"
+  - "v1"
+  - "O!Bank"
+  - "Obank"
+forbidden_patterns_en:
+  - "AICC-[A-Z]{2,}-\\d+"
+# END_BLOCK_FORBIDDEN
+
+# START_BLOCK_LAWS
+# One entry per item of aicc/v2/reference/acts.yaml (plus acts named inside their text).
+# type: act (a law, regulation, code, resolution, standard or convention), body (a regulator or institution),
+#   topic (a descriptive heading of the reference, not the title of one act).
+# official: true only for an official English title or name confirmed from its publisher; false otherwise.
+# Rule: an act or body with official: false is written "en (ru_original)"; a topic is translated plainly.
+laws:
+  - {id: nbkr, type: body, official: true, en: "National Bank of the Kyrgyz Republic", ru_original: "Национальный банк Кыргызской Республики", kind: "Central bank and banking supervisor"}
+  - {id: kg-digital-code, type: act, official: false, en: "Digital Code of the Kyrgyz Republic", ru_original: "Цифровой кодекс Кыргызской Республики", kind: "Code"}
+  - {id: kg-personal-information-law-2008, type: act, official: false, en: "Law “On Personal Information” (2008)", ru_original: "Закон «Об информации персонального характера»", kind: "Law (replaced by the Digital Code)", note: "Named inside kg-digital-code."}
+  - {id: kg-high-risk-ai-requirements, type: act, official: false, en: "Requirements for the hazard assessment of AI systems and for high-hazard AI systems", ru_original: "Требования к оценке опасности систем AI и к системам высокой степени опасности", kind: "Cabinet of Ministers Resolution No. 770 of 2 December 2025"}
+  - {id: kg-aml-body, type: topic, official: false, en: "Anti-money laundering and countering the financing of terrorism", ru_original: "Противодействие отмыванию денег и финансированию терроризма", kind: "Law and financial intelligence unit"}
+  - {id: kg-digital-development, type: topic, official: false, en: "Digital development", ru_original: "Цифровое развитие", kind: "Ministry, acts and programs"}
+  - {id: kz-law-on-ai, type: act, official: false, en: "Law “On Artificial Intelligence”", ru_original: "Закон «Об искусственном интеллекте»", kind: "Law and national concept"}
+  - {id: kz-personal-data-law, type: act, official: false, en: "Law “On Personal Data and Their Protection”", ru_original: "Закон «О персональных данных и их защите»", kind: "Law"}
+  - {id: kz-financial-regulators, type: body, official: false, en: "National Bank of Kazakhstan and the Agency for Regulation and Development of the Financial Market", ru_original: "Национальный Банк и Агентство по регулированию финансового рынка", kind: "Central bank and financial supervisor", note: "Both bodies publish English names; not confirmed offline, so written with the Russian original."}
+  - {id: aifc, type: body, official: true, en: "Astana International Financial Centre (AIFC)", ru_original: "Международный финансовый центр «Астана»", kind: "Financial center with its own regulation", note: "Centre is part of the official name; running text keeps American spelling."}
+  - {id: ru-personal-data-law, type: act, official: false, en: "Federal Law “On Personal Data” (No. 152-FZ)", ru_original: "Федеральный закон «О персональных данных» (152-ФЗ)", kind: "Federal law"}
+  - {id: ru-national-ai-strategy, type: topic, official: false, en: "National AI development strategy and experimental legal regimes", ru_original: "Национальная стратегия развития AI и экспериментальные правовые режимы", kind: "Presidential decree and federal laws"}
+  - {id: bank-of-russia-on-ai, type: topic, official: false, en: "Bank of Russia on AI in the financial market", ru_original: "Банк России об AI на финансовом рынке", kind: "Regulator's reports and recommendations", note: "Bank of Russia is the official English name of the body."}
+  - {id: ru-ai-code-of-ethics, type: act, official: false, en: "AI Code of Ethics", ru_original: "Кодекс этики в сфере AI", kind: "Voluntary industry code"}
+  - {id: eu-ai-act, type: act, official: true, en: "EU Artificial Intelligence Act (AI Act)", ru_original: "Регламент ЕС об искусственном интеллекте (AI Act)", kind: "EU regulation", note: "Regulation (EU) 2024/1689."}
+  - {id: eu-gdpr, type: act, official: true, en: "General Data Protection Regulation (GDPR)", ru_original: "Общий регламент по защите данных (GDPR)", kind: "EU regulation", note: "Regulation (EU) 2016/679."}
+  - {id: eu-dora, type: act, official: true, en: "Digital Operational Resilience Act (DORA)", ru_original: "Цифровая операционная устойчивость (DORA)", kind: "EU regulation and EBA guidelines", note: "Regulation (EU) 2022/2554."}
+  - {id: us-model-risk-and-consumer-guidance, type: topic, official: false, en: "Model risk and AI in lending", ru_original: "Модельный риск и AI в кредитовании", kind: "Supervisory guidance"}
+  - {id: us-federal-and-state-ai-policy, type: topic, official: false, en: "US AI policy", ru_original: "Политика США в области AI", kind: "Executive orders, procurement rules, state laws"}
+  - {id: oecd-ai-principles, type: act, official: true, en: "OECD AI Principles", ru_original: "Принципы ОЭСР в области AI", kind: "Intergovernmental principles"}
+  - {id: unesco-recommendation-ethics-ai, type: act, official: true, en: "UNESCO Recommendation on the Ethics of Artificial Intelligence", ru_original: "Рекомендация ЮНЕСКО об этике AI", kind: "International organization document"}
+  - {id: council-of-europe-ai-convention, type: act, official: true, en: "Council of Europe Framework Convention on Artificial Intelligence", ru_original: "Рамочная конвенция Совета Европы об AI", kind: "International treaty", note: "Full title: Framework Convention on Artificial Intelligence and Human Rights, Democracy and the Rule of Law (CETS No. 225)."}
+  - {id: g7-hiroshima-ai-process, type: act, official: true, en: "G7 Hiroshima AI Process", ru_original: "Хиросимский процесс G7", kind: "Voluntary commitments of developers"}
+  - {id: financial-standard-setters-on-ai, type: topic, official: false, en: "FSB, Basel Committee and BIS on AI", ru_original: "FSB, Базельский комитет и BIS об AI", kind: "Reports of standard-setting bodies"}
+  - {id: nist-ai-rmf, type: act, official: true, en: "NIST AI Risk Management Framework", ru_original: "NIST AI Risk Management Framework", kind: "Voluntary framework"}
+  - {id: iso-iec-ai-standards, type: topic, official: false, en: "ISO/IEC standards on AI (including ISO/IEC 42001)", ru_original: "Стандарты ISO/IEC по AI (в том числе 42001)", kind: "International standards", note: "ISO/IEC 42001 itself is an official designation."}
+  - {id: owasp-top-10-llm, type: act, official: true, en: "OWASP Top 10 for Large Language Model Applications", ru_original: "OWASP Top 10 для приложений на больших языковых моделях", kind: "List of security risks"}
+# END_BLOCK_LAWS

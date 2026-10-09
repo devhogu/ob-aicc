@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en" data-theme="light"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark">
+<title>Навыки: научить Claude вашей процедуре · AI Competence Hub</title>
+<script>try{var t=localStorage.getItem('hub-theme');document.documentElement.dataset.theme=t==='dark'?'dark':'light';}catch(e){}</script>
+<link rel="stylesheet" href="../../../../assets/ui/fonts.css?v=31af9632de"><link rel="stylesheet" href="../../../../assets/ui/tokens.css?v=7a14df66bd"><link rel="stylesheet" href="../../../../assets/ui/primitives.css?v=ea6572a6e0"><link rel="stylesheet" href="../../../../assets/ui/workspace.css?v=416781b646"><link rel="stylesheet" href="../../../../assets/site.css?v=5480d3be4e">
+<script src="../../../../assets/search-en.js"></script><script src="../../../../assets/i18n-en.js"></script><script src="../../../../assets/site.js?v=cfae61d4bb" defer data-root="../../../.." data-t-none="Nothing matches your search." data-t-light="Light mode" data-t-dark="Dark mode" data-t-mail-body="Page: {title}
+ID: {ref}
+Address: {url}
+
+Question or comment:
+"></script>
+</head><body class="portal-workspace" data-portal-section="kb" data-page="kb/guides/claude-skills">
+<a class="o-skip" href="#main">Skip to content</a>
+<header class="o-header">
+  <a class="o-identity" href="../../../index.html"><img src="../../../../assets/ui/assets/logos/hub-mark.svg" width="36" height="36" alt=""><span>AI Competence Hub</span></a>
+  <span class="header-scope">Knowledge Base</span>
+  <span class="status-chip" title="This page and the records on it are drafts: nothing in them has been adopted or approved">Draft</span>
+  <div class="o-search" role="search"><label class="o-sr-only" for="q">Search the Hub</label><input id="q" type="search" autocomplete="off" placeholder="Search the Hub" aria-controls="results"><div id="results" class="o-search-results" hidden></div></div>
+  <div class="o-tools"><a class="lang-switch" href="../../../../ru/kb/guides/claude-skills/index.html" hreflang="ru" lang="ru" data-lang-switch title="Русская версия" aria-label="Русская версия">RU</a><button id="theme-switch" type="button" class="theme-switch" aria-label="Dark mode" title="Dark mode"><span class="ts-moon"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" />
+</svg></span><span class="ts-sun"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <circle cx="12" cy="12" r="4" />
+  <path d="M12 2v2" />
+  <path d="M12 20v2" />
+  <path d="m4.93 4.93 1.41 1.41" />
+  <path d="m17.66 17.66 1.41 1.41" />
+  <path d="M2 12h2" />
+  <path d="M20 12h2" />
+  <path d="m6.34 17.66-1.41 1.41" />
+  <path d="m19.07 4.93-1.41 1.41" />
+</svg></span></button></div>
+</header>
+<div class="o-frame"><aside class="o-nav"><details open><summary>Site sections</summary><nav class="portal-sections" aria-label="Sections"><div class="portal-nav-group"><a class="portal-section-link" data-section="hub" href="../../../index.html"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect x="16" y="16" width="6" height="6" rx="1" />
+  <rect x="2" y="16" width="6" height="6" rx="1" />
+  <rect x="9" y="2" width="6" height="6" rx="1" />
+  <path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3" />
+  <path d="M12 12V8" />
+</svg><span>Competence Hub</span></a></div><div class="portal-nav-group"><a class="portal-section-link" data-section="services" href="../../../services/index.html"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+  <path d="M16 3.128a4 4 0 0 1 0 7.744" />
+  <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+  <circle cx="9" cy="7" r="4" />
+</svg><span>Services</span></a></div><div class="portal-nav-group"><a class="portal-section-link" data-section="process" href="../../../process/index.html"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect width="8" height="8" x="3" y="3" rx="2" />
+  <path d="M7 11v4a2 2 0 0 0 2 2h4" />
+  <rect width="8" height="8" x="13" y="13" rx="2" />
+</svg><span>Process</span></a></div><div class="portal-nav-group"><a class="portal-section-link" data-section="catalog" href="../../../catalog/index.html"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M8 5h13" />
+  <path d="M13 12h8" />
+  <path d="M13 19h8" />
+  <path d="M3 10a2 2 0 0 0 2 2h3" />
+  <path d="M3 5v12a2 2 0 0 0 2 2h3" />
+</svg><span>Discovery Catalog</span></a></div><div class="portal-nav-group"><a class="portal-section-link" data-section="projects" href="../../../projects/index.html"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z" />
+  <path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12" />
+  <path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17" />
+</svg><span>Projects</span></a></div><div class="portal-nav-group"><a class="portal-section-link" data-section="responsible-ai" href="../../../responsible-ai/index.html"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+  <path d="m9 12 2 2 4-4" />
+</svg><span>Responsible AI</span></a></div><div class="portal-nav-group is-current"><a class="portal-section-link" data-section="kb" href="../../index.html" aria-current="true"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <circle cx="12" cy="12" r="10" />
+  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+  <path d="M12 17h.01" />
+</svg><span>Knowledge Base</span></a><div class="portal-local-nav"><a href="../../index.html">Knowledge Base</a><a href="../../maps/index.html">Learning maps</a></div></div><div class="portal-nav-group"><a class="portal-section-link" data-section="reference" href="../../../reference/index.html"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m16 6 4 14" />
+  <path d="M12 6v14" />
+  <path d="M8 8v12" />
+  <path d="M4 4v16" />
+</svg><span>Reference</span></a></div></nav></details></aside>
+<main class="o-main hub-main" id="main" tabindex="-1">
+<div class="crumbbar has-ctx"><div class="crumbline"><nav class="o-eyebrow crumbs" aria-label="Breadcrumb"><a href="../../index.html">Knowledge Base</a> / <span aria-current="page">Навыки: научить Claude вашей процедуре</span></nav></div></div>
+<div class="o-reading"><div class="o-copy"><h1>Навыки: научить Claude вашей процедуре</h1><article class="page-body o-doc"><p class="kb-head"><a href="../../index.html">← All guides</a><span>Claude</span><span>basic</span><span>6 min</span></p>
+<nav class="lm-walk lm-walk--top lm-walk--l1" data-walk="skills-automation" aria-label="Step 1 of 10 on the “Навыки и автоматизация рабочего места” map"><div class="lm-walk__head"><a class="lm-walk__map" href="../../maps/skills-automation/index.html#step-1" data-map="skills-automation">Learning map: <b>Навыки и автоматизация рабочего места</b></a><span class="lm-walk__pos">Step <b>1</b> of 10 · level 1, новичок</span></div><ol class="lm-walk__dots" aria-label="Map steps"><li><a class="lm-dot lm-dot--l1 is-here" href="index.html" data-map="skills-automation" data-dot-step="skills-automation|claude-skills#" title="Step 1. Навыки: научить Claude вашей процедуре" aria-current="step">1</a></li><li><a class="lm-dot lm-dot--l1" href="../automate-a-routine-task/index.html" data-map="skills-automation" data-dot-step="skills-automation|automate-a-routine-task#" title="Step 2. Как автоматизировать рутинную задачу">2</a></li><li class="lm-dot-gap"><a class="lm-dot lm-dot--l2" href="../skills-complete-guide/index.html#anatomy" data-map="skills-automation" data-dot-step="skills-automation|skills-complete-guide#anatomy" title="Step 3. Как устроен навык">3</a></li><li><a class="lm-dot lm-dot--l2" href="../skills-complete-guide/index.html#app" data-map="skills-automation" data-dot-step="skills-automation|skills-complete-guide#app" title="Step 4. Навыки в приложении Claude">4</a></li><li class="lm-dot-gap"><a class="lm-dot lm-dot--l3" href="../skills-complete-guide/index.html#write" data-map="skills-automation" data-dot-step="skills-automation|skills-complete-guide#write" title="Step 5. Как написать хороший навык">5</a></li><li><a class="lm-dot lm-dot--l3" href="../skills-complete-guide/index.html#test" data-map="skills-automation" data-dot-step="skills-automation|skills-complete-guide#test" title="Step 6. Проверка и улучшение навыка">6</a></li><li><a class="lm-dot lm-dot--l3" href="../claude-work-complete-guide/index.html#cowork-schedule" data-map="skills-automation" data-dot-step="skills-automation|claude-work-complete-guide#cowork-schedule" title="Step 7. Задачи по расписанию в Cowork">7</a></li><li class="lm-dot-gap"><a class="lm-dot lm-dot--l4" href="../skills-complete-guide/index.html#safety" data-map="skills-automation" data-dot-step="skills-automation|skills-complete-guide#safety" title="Step 8. Безопасность и распространение навыков">8</a></li><li><a class="lm-dot lm-dot--l4" href="../human-agent-teams/index.html" data-map="skills-automation" data-dot-step="skills-automation|human-agent-teams#" title="Step 9. Люди и агенты в одной команде">9</a></li><li><a class="lm-dot lm-dot--l4" href="../../maps/skills-automation/index.html#step-10" data-map="skills-automation" data-dot-step="skills-automation|https://academy.claude.com/courses/introduction-to-agent-skills" title="Step 10. Курс: Introduction to Agent Skills">10</a></li></ol><div class="lm-walk__moves"><a class="lm-walk__prev" href="../../maps/skills-automation/index.html" data-map="skills-automation"><small>← To the start of the map</small><span>Навыки и автоматизация рабочего места</span></a><a class="lm-walk__next" href="../automate-a-routine-task/index.html" data-map="skills-automation"><small>Next · step 2 · guide →</small><span>Как автоматизировать рутинную задачу</span></a></div></nav>
+<p>Это руководство — для тех, кто уже работает с Claude в разговорах и проектах и замечает, что снова и снова объясняет ему одно и то же. После него вы будете отличать навык от проекта и подключения и найдёте в своей работе первую процедуру, которую стоит записать навыком.</p>
+<p><strong>Навык</strong> — это записанная процедура: как именно делать определённую работу. Например, «как оформлять служебную записку по нашему шаблону» или «как проверять договор по списку требований». Claude сам применяет навык, когда видит, что тот подходит к задаче; процедуру можно вызвать и вручную, по имени.</p>
+<h2 id="vs">Навык, проект или подключение?</h2>
+<p>Все три возможности избавляют от повторов, но решают разные задачи.</p>
+<div class="rai-cards rai-cards--3">
+<article><h3>Проект</h3><p>Про <b>тему</b>: постоянные документы и правила для одной области работы, например «Квартальная отчётность». Действует только в разговорах этого проекта.</p></article>
+<article><h3>Навык</h3><p>Про <b>способ</b>: одна процедура, которую Claude применяет в любом разговоре и проекте, например «оформить таблицу по стандарту финансовой службы».</p></article>
+<article><h3>Подключение</h3><p>Про <b>доступ</b>: даёт Claude войти в рабочую систему — почту, календарь, хранилище файлов. Подключение открывает дверь, навык учит, что делать внутри.</p></article>
+</div>
+<p>Они хорошо работают вместе: проект «Отчётность» хранит регламенты, навык «оформить таблицу по стандарту» задаёт формат, а подключение к хранилищу даёт взять свежую выгрузку. Подключения и навыки работают, только если их включили в вашей организации.</p>
+<h2 id="parts">Из чего состоит навык</h2>
+<p>Навык — это папка, в которой главный файл называется <code>SKILL.md</code>. В нём три вещи: короткое название, описание того, когда навык применять, и сами шаги. Рядом можно положить шаблон и образец готовой работы, а для сложных случаев — небольшие программы-скрипты; для первого навыка они не нужны.</p>
+<p>Пока навык не нужен, Claude видит только его название и описание. Полный текст он читает, когда решает навык применить, поэтому навыки не загромождают каждый разговор. Писать файл вручную не обязательно: Claude может сам составить навык по вашему рассказу — как это сделать, показано в <a href="../skills-complete-guide/index.html#create-in-chat">полном руководстве</a>.</p>
+<h2 id="write">Как написать хороший навык</h2>
+<ol>
+<li><strong>Одна процедура.</strong> «Сводка протокола совещания», а не «всё про совещания».</li>
+<li><strong>Понятное описание «когда применять».</strong> По нему Claude решает, подходит ли навык к задаче.</li>
+<li><strong>Шаги по порядку.</strong> Что взять на входе, что сделать, что получить на выходе.</li>
+<li><strong>Образец результата.</strong> Хотя бы один пример готовой работы.</li>
+<li><strong>Проверка в конце.</strong> Например: «перечисли, что нужно уточнить у автора».</li>
+</ol>
+<h2 id="try">Попробуйте сейчас</h2>
+<p>Найдите кандидата в навык. Вспомните инструкцию, которую вы уже несколько раз вставляли в разные разговоры с Claude: порядок оформления записки, список проверки договора, структура еженедельной справки. Запишите её название одной строкой и решите по карточкам выше: это тема (проект), способ (навык) или доступ к системе (подключение)? Если способ — это ваш первый навык.</p>
+<p>Навыки, полезные многим, мы собираем в общую <a class="term" href="../../../reference/vocabulary/index.html#skill-library" title="Собранные для одного вида работы готовые запросы к модели и приёмы, которыми сотрудники пользуются и которые сами пополняют.">библиотеку навыков</a> — <a href="../../../services/how-to-engage/index.html">расскажите нам</a> о своём.</p>
+<p>Подробно — в руководстве <a href="../skills-complete-guide/index.html">Навыки Claude: полное руководство</a>.</p>
+<nav class="lm-walk lm-walk--bottom lm-walk--l1" data-walk="skills-automation" aria-label="Step 1 of 10 on the “Навыки и автоматизация рабочего места” map"><div class="lm-walk__head"><a class="lm-walk__map" href="../../maps/skills-automation/index.html#step-1" data-map="skills-automation">Learning map: <b>Навыки и автоматизация рабочего места</b></a><span class="lm-walk__pos">Step <b>1</b> of 10 · level 1, новичок</span></div><ol class="lm-walk__dots" aria-label="Map steps"><li><a class="lm-dot lm-dot--l1 is-here" href="index.html" data-map="skills-automation" data-dot-step="skills-automation|claude-skills#" title="Step 1. Навыки: научить Claude вашей процедуре" aria-current="step">1</a></li><li><a class="lm-dot lm-dot--l1" href="../automate-a-routine-task/index.html" data-map="skills-automation" data-dot-step="skills-automation|automate-a-routine-task#" title="Step 2. Как автоматизировать рутинную задачу">2</a></li><li class="lm-dot-gap"><a class="lm-dot lm-dot--l2" href="../skills-complete-guide/index.html#anatomy" data-map="skills-automation" data-dot-step="skills-automation|skills-complete-guide#anatomy" title="Step 3. Как устроен навык">3</a></li><li><a class="lm-dot lm-dot--l2" href="../skills-complete-guide/index.html#app" data-map="skills-automation" data-dot-step="skills-automation|skills-complete-guide#app" title="Step 4. Навыки в приложении Claude">4</a></li><li class="lm-dot-gap"><a class="lm-dot lm-dot--l3" href="../skills-complete-guide/index.html#write" data-map="skills-automation" data-dot-step="skills-automation|skills-complete-guide#write" title="Step 5. Как написать хороший навык">5</a></li><li><a class="lm-dot lm-dot--l3" href="../skills-complete-guide/index.html#test" data-map="skills-automation" data-dot-step="skills-automation|skills-complete-guide#test" title="Step 6. Проверка и улучшение навыка">6</a></li><li><a class="lm-dot lm-dot--l3" href="../claude-work-complete-guide/index.html#cowork-schedule" data-map="skills-automation" data-dot-step="skills-automation|claude-work-complete-guide#cowork-schedule" title="Step 7. Задачи по расписанию в Cowork">7</a></li><li class="lm-dot-gap"><a class="lm-dot lm-dot--l4" href="../skills-complete-guide/index.html#safety" data-map="skills-automation" data-dot-step="skills-automation|skills-complete-guide#safety" title="Step 8. Безопасность и распространение навыков">8</a></li><li><a class="lm-dot lm-dot--l4" href="../human-agent-teams/index.html" data-map="skills-automation" data-dot-step="skills-automation|human-agent-teams#" title="Step 9. Люди и агенты в одной команде">9</a></li><li><a class="lm-dot lm-dot--l4" href="../../maps/skills-automation/index.html#step-10" data-map="skills-automation" data-dot-step="skills-automation|https://academy.claude.com/courses/introduction-to-agent-skills" title="Step 10. Курс: Introduction to Agent Skills">10</a></li></ol><div class="lm-walk__done" data-step="skills-automation|claude-skills#"><div><p><b>After this step you can:</b> отличать навык от проекта и подключения.</p><p><b>Try this:</b> Найдите инструкцию, которую вставляли в разговоры трижды, и решите — проект, навык или подключение.</p></div><button type="button" class="lm-walk__check" data-step-toggle aria-pressed="false"><span class="is-off">Mark step as done</span><span class="is-on">Step done ✓</span></button></div><div class="lm-walk__moves"><a class="lm-walk__prev" href="../../maps/skills-automation/index.html" data-map="skills-automation"><small>← To the start of the map</small><span>Навыки и автоматизация рабочего места</span></a><a class="lm-walk__next" href="../automate-a-routine-task/index.html" data-map="skills-automation"><small>Next · step 2 · guide →</small><span>Как автоматизировать рутинную задачу</span></a></div></nav>
+<p class="kb-source">Based on: <a href="https://academy.claude.com/courses/claude-101">Claude 101 · Introduction to agent skills</a> — Anthropic, in English. This page is a short summary with our own examples.</p>
+</article></div><aside class="o-context" aria-label="On this page"><strong>On this page</strong><a class="lv2" href="#vs">Навык, проект или подключение?</a><a class="lv2" href="#parts">Из чего состоит навык</a><a class="lv2" href="#write">Как написать хороший навык</a><a class="lv2" href="#try">Попробуйте сейчас</a></aside></div>
+</main>
+<footer class="o-footbar">
+<nav class="fb-left" aria-label="Legal information"><a href="../../../privacy/index.html">Privacy</a><a href="../../../terms-of-use/index.html">Terms of use</a></nav>
+<div class="fb-right"><span class="foot-text">© 2026 AI Competence Hub · v2.1 <a class="contact" href="mailto:talimbayev@obank.kg?subject=Competence%20Hub%20%5BW5WE6%5D%3A%20page%20feedback">Contact us</a></span>
+<button type="button" class="pagefb" data-dialog="fb" aria-haspopup="dialog"><span>Page feedback</span><span>ID: W5WE6</span></button></div>
+</footer>
+</div>
+<dialog id="fb" class="fb" aria-labelledby="fb-t" data-subject="Competence Hub [W5WE6]: page feedback" data-ref="W5WE6" data-page="Навыки: научить Claude вашей процедуре">
+  <form method="dialog">
+    <div class="fb-head"><h2 id="fb-t">Page feedback</h2><code>ID: W5WE6</code></div>
+    <div class="fb-body"><p>Leave feedback on the content of this page: <a data-mail href="mailto:talimbayev@obank.kg">feedback</a>.</p><button class="oc-button" value="close">Close</button></div>
+  </form>
+</dialog>
+</body></html>
