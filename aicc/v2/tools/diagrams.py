@@ -25,7 +25,7 @@ NPX = Path(os.environ.get('MMDC_NPX', os.path.expanduser('~/.npm/_npx/668c188756
 CHROME = os.environ.get('MMDC_CHROME', os.path.expanduser('~/.cache/ms-playwright/chromium-1234/chrome-linux64/chrome'))
 LIBS = ROOT / 'portal' / '.tools' / 'pw-syslibs'
 FONT = ROOT / 'aicc' / 'v2' / 'ui' / 'assets' / 'fonts' / 'golos-text' / 'GolosText-variable.woff2'
-GATE = 'Точка контроля: '
+GATE = ('Точка контроля: ', 'Checkpoint: ')  # in each edition's language
 
 
 def wrap(text, width=28):
@@ -56,7 +56,7 @@ def prepare(code):
     def gate(m):
         gates.append(m[1])
         return f'{m[1]}["{m[2][:1].upper() + m[2][1:]}"]'
-    code = re.sub(r'(\b[A-Za-z][A-Za-z0-9_]*)\["' + re.escape(GATE) + r'([^"]*)"\]', gate, code)
+    code = re.sub(r'(\b[A-Za-z][A-Za-z0-9_]*)\["(?:' + '|'.join(map(re.escape, GATE)) + r')([^"]*)"\]', gate, code)
     lines = [l if l.lstrip().startswith('subgraph ') else re.sub(r'"([^"]*)"', lambda m: '"%s"' % wrap(m[1]), l) for l in code.split('\n')]
     code = '\n'.join(lines)
     if gates:

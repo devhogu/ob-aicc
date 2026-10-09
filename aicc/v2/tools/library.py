@@ -325,9 +325,15 @@ def map_svg(map_id, m, infos, levels):
     out.extend(nodes)
     out.append(f'<g class="lm-goal"><circle cx="{x1 + 50}" cy="{y}" r="22"/><text x="{x1 + 50}" y="{y + 5}" text-anchor="middle">★</text>'
                f'<text class="lm-svg-small" x="{x1 + 50}" y="{y + 44}" text-anchor="middle">{T('эксперт')}</text></g>')
-    out.append(f'<g class="lm-legend"><circle cx="70" cy="190" r="7"/><text x="84" y="194">{T('руководство Хаба')}</text>'
-               f'<rect x="224" y="183" width="12" height="12" rx="2" transform="rotate(45 230 189)"/><text x="244" y="194">{T('курс или документация')}</text>'
-               f'<path d="M420,196 L420,182 l12,4 l-12,4" stroke="#5b6bd6" fill="#5b6bd6"/><text x="440" y="194">{T('контрольная точка')}</text></g>')
+    guide, course, point = T('руководство Хаба'), T('курс или документация'), T('контрольная точка')
+    if i18n.lang() == i18n.SOURCE:
+        x2, x3 = 224, 420  # the Russian legend as it was drawn
+    else:  # a translation: each item follows the previous label (about 6.6 px a character at 12 px)
+        x2 = 84 + round(len(guide) * 6.6) + 30
+        x3 = x2 + 20 + round(len(course) * 6.6) + 30
+    out.append(f'<g class="lm-legend"><circle cx="70" cy="190" r="7"/><text x="84" y="194">{guide}</text>'
+               f'<rect x="{x2}" y="183" width="12" height="12" rx="2" transform="rotate(45 {x2 + 6} 189)"/><text x="{x2 + 20}" y="194">{course}</text>'
+               f'<path d="M{x3},196 L{x3},182 l12,4 l-12,4" stroke="#5b6bd6" fill="#5b6bd6"/><text x="{x3 + 20}" y="194">{point}</text></g>')
     out.append('</svg>')
     return ''.join(out)
 

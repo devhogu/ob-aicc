@@ -176,6 +176,11 @@ def wtext(prefix, s, kind):
     return f'{prefix} · {week_range(s, kind)}' + (f' · {TAG[kind]}' if kind else '') + (' · ' + T('вероятны отсутствия') if quiet(s, kind) else '')
 
 
+def tile_month(i):
+    """The month an iteration is named after, as the narrow PI tile shows it: in full in Russian, short in English ("i11 · Nov")."""
+    return i['title'] if lang() == SOURCE else T(SHORT[int(i['label'][1:]) - 1])
+
+
 def week_range(s, kind):
     """A week's dates without the year; the Planning week counts its working days."""
     return short(s, s + timedelta(days=4 if kind == 'ip' else 6))
@@ -209,7 +214,7 @@ def here_html(day):
                          f'data-here-week data-range="{pick(text, s == monday)}" aria-label="{i["label"]} W{w}"></button>')
         segs.append(f'<li{cls("is-current" if it_key(i) == it_key(it) else "", "is-done" if i["end"] < monday else "", "is-picked" if it_key(i) == it_key(it) else "")} data-here-it="{it_key(i)}" style="flex:{i["weeks"]}">'
                     f'<span class="here-cells">{"".join(cells)}</span>'
-                    f'<button type="button" class="here-it" data-here-week data-range="{i["label"]} · {short(i["start"], i["end"])} · {T("{n} нед.", n=i["weeks"])}"><b>{i["label"]} · {i["title"]}</b><span>{short(i["start"], i["end"])}</span></button>'
+                    f'<button type="button" class="here-it" data-here-week data-range="{i["label"]} · {short(i["start"], i["end"])} · {T("{n} нед.", n=i["weeks"])}"><b>{i["label"]} · {tile_month(i)}</b><span>{short(i["start"], i["end"])}</span></button>'
                     '</li>')
     weeks = []
     for w in range(1, it['weeks'] + 1):

@@ -480,7 +480,7 @@
         }
         var cur = itKey(i) === itKey(it);
         return '<li' + cls(cur ? 'is-current' : '', i.end < monday ? 'is-done' : '', cur ? 'is-picked' : '') + ' data-here-it="' + itKey(i) + '" style="flex:' + i.weeks + '"><span class="here-cells">' + cells + '</span>' +
-          '<button type="button" class="here-it" data-here-week data-range="' + i.label + ' · ' + short(i.start, i.end) + ' · ' + T('{n} нед.', {n: i.weeks}) + '"><b>' + i.label + ' · ' + i.title + '</b><span>' + short(i.start, i.end) + '</span></button></li>';
+          '<button type="button" class="here-it" data-here-week data-range="' + i.label + ' · ' + short(i.start, i.end) + ' · ' + T('{n} нед.', {n: i.weeks}) + '"><b>' + i.label + ' · ' + (I ? T(SHORT[+i.label.slice(1) - 1]) : i.title) + '</b><span>' + short(i.start, i.end) + '</span></button></li>';  // as cadence.tile_month
       }).join('');
       var now = weekKind(it, week, ip);
       return '<div class="here-tile" data-week="' + iso(monday) + '" tabindex="0"><small>' + T('Сегодня') + '</small><strong>' + p.d + ' ' + T(LONG[p.m - 1]) + ' ' + p.y + '</strong><span>' + T(DAYS[p.wd]) + '</span></div>' +
