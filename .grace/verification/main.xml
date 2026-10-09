@@ -45,10 +45,18 @@
       <TestFiles>
         <File>portal/tools/check.py</File>
         <File>portal/tests/test_localization.py</File>
+        <File>aicc/v2/tools/check.py</File>
+        <File>aicc/v2/tools/check_browser.py</File>
+        <File>aicc/v2/tests/test_cadence.py</File>
+        <File>aicc/v2/tests/test_hub.py</File>
+        <File>aicc/v2/tests/test_cards.py</File>
       </TestFiles>
       <Command>python3 portal/tools/check.py --idempotent</Command>
       <Command>python3 -m unittest discover -s portal/tests</Command>
+      <Command>python3 aicc/v2/tools/check.py --idempotent</Command>
+      <Command>python3 -m unittest discover -s aicc/v2/tests</Command>
       <Scenario kind="success">Both language route sets, in the router-and-branches layout with no former route, have resolved internal links, anchors, assets and search destinations. The actual renderer selects reviewed Russian text, source identity, search and diagrams, and renders missing translations as marked English.</Scenario>
+      <Scenario kind="success">The Hub (v2) rebuilds identically; every page has its id and the Draft chip; links, anchors, vocabulary markers and forbidden wording pass; the calendar renders the same in Python and JavaScript; the browser sweep (portal/tools/with-browser-env.sh portal/.venv/bin/python aicc/v2/tools/check_browser.py) finds no script error, overflow or broken view.</Scenario>
       <Scenario kind="failure">Static checks and renderer fixtures do not prove screen-reader behavior, visual layout, or complete translation. The older first-slice browser script is not a current whole-site acceptance gate.</Scenario>
       <TraceAssertion>Both commands exit zero. The page count, source-language attributes, counterpart links, and repeated build output are observable evidence.</TraceAssertion>
     </V-M-PORTAL-PROJECTION>

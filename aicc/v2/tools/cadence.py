@@ -2,7 +2,7 @@
 #   PURPOSE: The PI calendar: from any date, the current program increment, its iterations with real dates, the current iteration and week, and the next increments.
 #   SCOPE: Pure date arithmetic on the calendar rules plus the known week notes in aicc/v2/calendar.json. The page script applies the same rules to today's date.
 #   DEPENDS: none
-#   LINKS: C-HUB-V2, M-HUB-V2-BUILD
+#   LINKS: C-HUB-V2, M-PORTAL-SOURCE
 # END_MODULE_CONTRACT
 #
 # START_MODULE_MAP

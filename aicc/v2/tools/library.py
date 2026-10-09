@@ -1,7 +1,7 @@
 # START_MODULE_CONTRACT
 #   PURPOSE: The reference and the knowledge base: regulators and acts, open resources, and the list of guides, each as a searchable, filterable card grid.
 #   SCOPE: Reads aicc/v2/reference/*.yaml and the guide pages under content/ru/kb/guides; adds generated pages and decorates guide pages. No network.
-#   DEPENDS: M-HUB-V2-BUILD
+#   DEPENDS: M-PORTAL-SOURCE
 #   LINKS: C-HUB-V2
 # END_MODULE_CONTRACT
 #

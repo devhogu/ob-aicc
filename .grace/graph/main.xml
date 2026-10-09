@@ -9,8 +9,17 @@
       <M-PORTAL-PROJECTION />
     </M-PORTABLE-EXPORT>
     <M-PORTAL-SOURCE>
-      <Summary>Editable bilingual AICC portal source: language-specific charter and explanatory Markdown, shared UI messages and authored chrome, source selection, and the complete-site build/check tools. The build also composes the independent neighbouring sections without importing their content into the charter corpus.</Summary>
+      <Summary>Editable bilingual AICC portal source: language-specific charter and explanatory Markdown, shared UI messages and authored chrome, source selection, and the complete-site build/check tools. The build also composes the independent neighbouring sections without importing their content into the charter corpus. Beside it, the Hub (version 2) is its own package at aicc/v2: Russian Markdown pages, project cards, vocabulary, the Справочник data, learning maps, the PI calendar and the scenario catalog, with its own build, site check, browser check and offline packer; it does not read the v1 sources.</Summary>
       <Path>portal/tools/build.py</Path>
+      <Path>aicc/v2/tools/build.py</Path>
+      <Path>aicc/v2/tools/check.py</Path>
+      <Path>aicc/v2/tools/library.py</Path>
+      <Path>aicc/v2/tools/cards.py</Path>
+      <Path>aicc/v2/tools/cadence.py</Path>
+      <Path>aicc/v2/tools/diagrams.py</Path>
+      <Path>aicc/v2/tools/package.py</Path>
+      <Path>aicc/v2/tools/check_browser.py</Path>
+      <Path>aicc/v2/tools/import_catalog.py</Path>
       <M-PORTAL-LOCALIZATION />
       <M-PORTAL-NEIGHBOURS />
     </M-PORTAL-SOURCE>
@@ -44,8 +53,9 @@
       <Path>portal/site/discovery.js</Path>
     </M-PORTAL-NEIGHBOURS>
     <M-PORTAL-PROJECTION>
-      <Summary>One generated static site under html/aicc: the gateway index.html that forwards to en/, shared assets, and per language a router at {lang}/index.html and the five branches center/, discovery/, portfolio/, program/ and lab/, nothing else. The Center holds the charter pages, its home at center/. Portfolio initiative summaries live beneath portfolio/ini-*/ with matching language routes and branch-local search. Program exposes the Program Backlog and linked Initiative intake at program/; delivery-item summaries are beneath program/items/ when maintained records exist; project documents live beneath program/service-resolution/ with matching child routes in both languages. Former routes are not published. English is the default route. AICC source translations are selected per language; missing translations are visibly English. Never edited by hand.</Summary>
+      <Summary>One generated static package under html/aicc. The root index.html opens the AI Competence Hub (v2/ru/index.html) and lists both versions. v1/ holds the frozen Competence Center portal: per language a router and the five branches center/, discovery/, portfolio/, program/ and lab/, with its source files; the former {lang}/ addresses at the root forward into v1. v2/ holds the Hub in Russian (ru/, assets/, sources/), built from aicc/v2. Never edited by hand.</Summary>
       <Path>html/aicc/index.html</Path>
+      <Path>html/aicc/v2/index.html</Path>
       <M-PORTAL-SOURCE />
     </M-PORTAL-PROJECTION>
     <M-AICC-DEPLOY>
@@ -54,7 +64,7 @@
       <M-PORTAL-PROJECTION />
     </M-AICC-DEPLOY>
     <M-PORTAL-LOCALIZATION>
-      <Summary>Language source identity and comparison, reviewed translation selection, source freshness, stable structure, record identity checks, and paired table extraction for generated views. English lookup paths do not establish language precedence.</Summary>
+      <Summary>Language source identity and comparison, reviewed translation selection, source freshness, stable structure, record identity checks, and paired table extraction for generated views. English lookup paths do not establish language precedence. In the Hub (v2) Russian is the source language; industry terms carry their English form through the vocabulary markers.</Summary>
       <Path>portal/tools/localization.py</Path>
     </M-PORTAL-LOCALIZATION>
   </GD-MAIN>

@@ -1,4 +1,4 @@
-<GraceChangeSpec graceVersion="4.0" status="approved">
+<GraceChangeSpec graceVersion="4.0" status="applied">
   <C-HUB-V2>
     <Summary>Freeze the current portal as v1 with a cleaned registry and build v2 from scratch as the AI Competence Hub: a shell that holds the full lean agile process and visualises live Project Cards of the Funnel, Portfolio and Program, packaged together with v1 in one deployable package.</Summary>
     <Problem>The portal presents the Competence Center as a legal unit with a Board, an Executive Sponsor, appointed Holders, Decision Records and a control table, and the owner has been told that no decision creating such a unit exists. The records name real officials and record decisions as taken. The process itself is heavier than a lean agile flow, and project data is hand-kept in tables beside Jira.</Problem>

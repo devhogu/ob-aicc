@@ -1,7 +1,7 @@
 # START_MODULE_CONTRACT
 #   PURPOSE: Pack the Hub (version 2, Russian edition) for offline use: the built site, which opens straight from files, and the full source it is built from.
 #   SCOPE: Reads html/aicc/v2 (a fresh build) and aicc/v2; writes one folder and one zip under the chosen output folder. No network, no rebuild.
-#   DEPENDS: M-HUB-V2-BUILD
+#   DEPENDS: M-PORTAL-SOURCE
 #   LINKS: C-HUB-V2
 # END_MODULE_CONTRACT
 #

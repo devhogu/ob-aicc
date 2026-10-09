@@ -3,8 +3,14 @@
 #   PURPOSE: Carry the scenario catalog over as it was: every page's content, styles and scripts, verbatim, into the Hub's own source.
 #   SCOPE: One-time import. Reads a built catalog folder; writes aicc/v2/catalog (fragments and assets). Run again only to refresh from the same source.
 #   DEPENDS: none
-#   LINKS: C-HUB-V2
+#   LINKS: C-HUB-V2, M-PORTAL-SOURCE
 # END_MODULE_CONTRACT
+#
+# START_MODULE_MAP
+#   main - copy a built catalog's pages and assets into aicc/v2/catalog as fragments with their front matter
+#   relocate_regulation - move the regulation page into its place in the catalog
+#   present_regulation - give the regulation page its presentation in the Hub
+# END_MODULE_MAP
 """Import the catalog: python3 aicc/v2/tools/import_catalog.py <built catalog folder, e.g. html/aicc/v1/ru/discovery>"""
 import html
 import json

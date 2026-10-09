@@ -3,7 +3,7 @@
 #   PURPOSE: Open every page of the built Hub site from the folder (file://) in a browser and check it renders, searches and switches theme without errors.
 #   SCOPE: Reads html/aicc/v2; writes only a report under .runtime/hub-v2.
 #   DEPENDS: playwright (the repository virtual environment)
-#   LINKS: C-HUB-V2, V-M-HUB-V2
+#   LINKS: C-HUB-V2, V-M-PORTAL-PROJECTION
 # END_MODULE_CONTRACT
 #
 # START_MODULE_MAP

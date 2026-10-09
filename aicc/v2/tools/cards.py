@@ -1,7 +1,7 @@
 # START_MODULE_CONTRACT
 #   PURPOSE: Read the project cards (YAML checked by a schema) and render the live views from them: the overview, the Portfolio (kanban, backlog, run-rate, register), the Program (kanban with lanes, backlog, intake), the control points and one page per card.
 #   SCOPE: Reads aicc/v2/cards only. Produces Page objects for the builder; writes nothing itself.
-#   DEPENDS: PyYAML, jsonschema, M-HUB-V2-BUILD (passed in as api)
+#   DEPENDS: PyYAML, jsonschema, M-PORTAL-SOURCE (passed in as api)
 #   LINKS: C-HUB-V2
 # END_MODULE_CONTRACT
 #

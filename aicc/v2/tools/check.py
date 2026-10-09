@@ -2,8 +2,8 @@
 # START_MODULE_CONTRACT
 #   PURPOSE: Check the built Hub site (version 2): links, anchors, page identifiers, Draft chip, vocabulary convention, forbidden wording.
 #   SCOPE: Reads html/aicc/v2 and aicc/v2 only; never writes except through the build it runs for --idempotent.
-#   DEPENDS: M-HUB-V2-BUILD
-#   LINKS: C-HUB-V2, V-M-HUB-V2
+#   DEPENDS: M-PORTAL-SOURCE
+#   LINKS: C-HUB-V2, V-M-PORTAL-PROJECTION
 # END_MODULE_CONTRACT
 #
 # START_MODULE_MAP

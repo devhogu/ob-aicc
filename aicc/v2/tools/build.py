@@ -3,7 +3,7 @@
 #   PURPOSE: Build the AI Competence Hub site (version 2) from its Russian Markdown pages, vocabulary and project cards.
 #   SCOPE: Reads aicc/v2 only; writes html/aicc/v2 only. Self-contained: shares no code or file with version 1.
 #   DEPENDS: markdown-it-py, PyYAML
-#   LINKS: C-HUB-V2, M-HUB-V2-CHECK
+#   LINKS: C-HUB-V2, M-PORTAL-PROJECTION
 # END_MODULE_CONTRACT
 #
 # START_MODULE_MAP

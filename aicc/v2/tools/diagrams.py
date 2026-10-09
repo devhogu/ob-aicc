@@ -2,7 +2,7 @@
 #   PURPOSE: Draw the Mermaid flows of the Hub pages to SVG, once per theme, cached, and give each a figure with a zoom button.
 #   SCOPE: Reads ```mermaid blocks handed over by the builder; writes only its cache.
 #   DEPENDS: node, the Mermaid and Puppeteer packages, a Chromium (the same environment as the repository's other diagrams)
-#   LINKS: C-HUB-V2, M-HUB-V2-BUILD
+#   LINKS: C-HUB-V2, M-PORTAL-SOURCE
 # END_MODULE_CONTRACT
 #
 # START_MODULE_MAP

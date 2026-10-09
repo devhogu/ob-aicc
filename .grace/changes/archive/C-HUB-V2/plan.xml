@@ -1,4 +1,4 @@
-<GraceChangePlan graceVersion="4.0" status="approved">
+<GraceChangePlan graceVersion="4.0" status="applied">
   <C-HUB-V2>
     <IntentSummary>Execute the Hub v2 spec approved on 2026-10-08: clean and freeze v1, then build v2 in its own package, then the cards and views, and publish both versions together.</IntentSummary>
     <BaselineAssertions>
