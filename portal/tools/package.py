@@ -16,20 +16,20 @@ from html import escape
 from pathlib import Path
 
 
-def _page(target, title, body=''):
-    return (f'<!doctype html>\n<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">'
+def _page(target, title, body='', lang='en'):
+    return (f'<!doctype html>\n<html lang="{lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">'
             f'<meta http-equiv="refresh" content="0; url={target}"><link rel="canonical" href="{target}">'
             f'<title>{title}</title><script>location.replace("{target}"+location.hash)</script></head>'
             f'<body style="font:16px/1.5 system-ui,sans-serif;margin:3rem"><p><a href="{target}">{title}</a></p>{body}</body></html>\n')
 
 
 # START_CONTRACT: build
-#   PURPOSE: Chooser at the package root that forwards to the default version, plus a redirect page at every former address.
-#   INPUTS: { package: str - package root; version: str - default version folder; langs: list - language folders }
+#   PURPOSE: Chooser at the package root that forwards to the home page (the Hub, version 2, in Russian), plus a redirect page at every former address of version 1.
+#   INPUTS: { package: str - package root; version: str - the version the former addresses belong to; langs: list - language folders; home: str - where the root forwards }
 #   OUTPUTS: { int - files written }
 #   SIDE_EFFECTS: Replaces {lang}/ folders and index.html under the package root.
 # END_CONTRACT: build
-def build(package, version, langs):
+def build(package, version, langs, home='v2/ru/index.html'):
     count = 0
     shutil.rmtree(os.path.join(package, 'assets'), ignore_errors=True)
     for lang in langs:
@@ -48,7 +48,8 @@ def build(package, version, langs):
                 fh.write(_page(target, 'AI Competence Center'))
             count += 1
     with open(os.path.join(package, 'index.html'), 'w', encoding='utf-8') as fh:
-        fh.write(_page(f'{version}/', 'AI Competence Center', f'<ul><li><a href="{version}/">Version 1</a></li></ul>'))
+        fh.write(_page(home, 'Хаб Компетенций по AI', f'<ul><li><a href="{home}">Хаб Компетенций по AI</a> (версия 2)</li>'
+                             f'<li><a href="{version}/">AI Competence Center</a> (version 1)</li></ul>', lang='ru'))
     return count + 1
 
 
