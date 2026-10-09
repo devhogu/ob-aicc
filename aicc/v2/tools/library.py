@@ -163,7 +163,7 @@ def add_pages(pages, site, api):
                   f'<span>{e(m.get("category", ""))}</span><span>{e(level)}</span><span>{e(m.get("minutes", ""))} мин</span></p>\n\n' + p.body)
         if m.get('source_url'):  # a retelling of an outside guide names it and links to the original
             ru = '/ru/' in m['source_url'] or '/docs/ru' in m['source_url']
-            p.body += (f'\n\n<p class="kb-source">По материалам: <a href="{e(m["source_url"])}">{e(m.get("source", m["source_url"]))}</a> — '
+            p.body += ('\n\n<!--course-end-->' if p.layout == 'course' else '') + (f'\n\n<p class="kb-source">По материалам: <a href="{e(m["source_url"])}">{e(m.get("source", m["source_url"]))}</a> — '
                        + ('официальная документация Anthropic на русском. Здесь — короткая выжимка с нашими примерами.</p>\n' if ru else
                           'Anthropic, на английском. Здесь — короткий пересказ на русском с нашими примерами.</p>\n'))
         p.nav = False
@@ -322,6 +322,47 @@ def add_maps(pages, api):
                 f'<span class="lm-bar"><i></i></span><b>0 из {total}</b></div>')
 
     order = data['roadmap']['core'] + [mid for b in data['roadmap']['branches'] for mid in b['maps']]
+    core = data['roadmap']['core']
+
+    def place_of(map_id):
+        """Where a map sits on the roadmap, in words."""
+        if map_id in core:
+            return f'Остановка {core.index(map_id) + 1} из {len(core)}'
+        return 'Специализация · ' + next(b['title'] for b in data['roadmap']['branches'] if map_id in b['maps']).lower()
+
+    def after(map_id, here):
+        """Where the road goes after a map: the next stop, the choice of a specialisation, or back to the roadmap."""
+        to = lambda pid: rel(url_of(here), url_of(pid))
+        if map_id in core[:-1]:
+            nxt = core[core.index(map_id) + 1]
+            return to(f'kb/maps/{nxt}'), 'Следующая карта', maps[nxt]['title'], nxt
+        if map_id == core[-1]:
+            return to('kb/maps'), 'Дальше по дорожной карте', 'Выберите специализацию', ''
+        return to('kb/maps'), 'Маршрут пройден', 'Вернуться к дорожной карте', ''
+
+    def before(map_id, here):
+        to = lambda pid: rel(url_of(here), url_of(pid))
+        if map_id in core[1:]:
+            prv = core[core.index(map_id) - 1]
+            return to(f'kb/maps/{prv}'), 'Предыдущая карта', maps[prv]['title'], prv
+        if map_id == core[0]:
+            return to('kb/maps'), 'Дорожная карта', 'Весь маршрут обучения', ''
+        return to(f'kb/maps/{core[-1]}'), 'Предыдущая карта', maps[core[-1]]['title'], core[-1]
+
+    def move(cls, href, small, title, map_id=''):
+        mark = f' data-map="{e(map_id)}"' if map_id else ''
+        return f'<a class="{cls}" href="{e(href)}"{mark}><small>{e(small)}</small><span>{e(title)}</span></a>'
+
+    def map_moves(map_id, here, top):
+        """The bar on a map page: back along the roadmap, where this map sits, onward; at the top also a button to the first step still to do."""
+        prev, nxt = before(map_id, here), after(map_id, here)
+        go = (f'<a class="lm-walk__go" data-walk-continue href="#step-1">Начать с шага 1 →</a>' if top else '')
+        here_mark = f' data-walk-here="{e(map_id)}"' if top else ''
+        return (f'<nav class="lm-walk lm-walk--map{" lm-walk--top" if top else " lm-walk--bottom"}"{here_mark} aria-label="Карта на дорожной карте">'
+                f'<div class="lm-walk__head"><a class="lm-walk__map" href="{e(rel(url_of(here), url_of("kb/maps")))}">Дорожная карта</a>'
+                f'<span class="lm-walk__pos">{e(place_of(map_id))}</span>{go}</div>'
+                f'<div class="lm-walk__moves">{move("lm-walk__prev", prev[0], "← " + prev[1], prev[2], prev[3])}{move("lm-walk__next", nxt[0], nxt[1] + " →", nxt[2], nxt[3])}</div></nav>')
+
     for n, map_id in enumerate(order):
         m = maps[map_id]
         here = f'kb/maps/{map_id}'
@@ -336,19 +377,20 @@ def add_maps(pages, api):
             for step in lv['steps']:
                 number += 1
                 title, href, label, mins, key, outside = step_info(step, here)
-                link = (f'<a href="{e(href)}" target="_blank" rel="noopener">{e(title)} ↗</a>' if outside else f'<a href="{e(href)}">{e(title)}</a>')
+                link = (f'<a href="{e(href)}" target="_blank" rel="noopener">{e(title)} ↗</a>' if outside else f'<a href="{e(href)}" data-map="{e(map_id)}">{e(title)}</a>')
                 practice = f'<p class="lm-practice"><b>Попробуйте:</b> {e(step["practice"])}</p>' if step.get('practice') else ''
                 items.append(f'<li class="lm-step" id="step-{number}" data-step="{e(map_id)}|{e(key)}"><span class="lm-num">{number}</span><button type="button" class="lm-check" data-step-toggle aria-pressed="false" title="Отметить пройденным"><span class="o-sr-only">Отметить пройденным</span></button>'
                              f'<div class="lm-body"><div class="lm-title">{link}<span class="lm-tag">{e(label)} · {mins} мин</span></div>'
                              f'<p>{e(step["outcome"])}</p>{practice}</div></li>')
             out.append(f'<section class="lm-level lm-level--{i + 1}"><header><span class="lm-badge">Уровень {i + 1}</span><h2 id="level-{i + 1}">{e(levels[i])}</h2></header>'
                        f'<ol class="lm-steps">{"".join(items)}</ol><p class="lm-checkpoint"><b>Контрольная точка.</b> {e(lv["checkpoint"])}</p></section>')
-        nxt = order[n + 1] if n + 1 < len(order) else None
-        out.append(f'<nav class="lm-next"><a href="{e(rel(url_of(here), url_of("kb/maps")))}">← Вся дорожная карта</a>'
-                   + (f'<a href="{e(rel(url_of(here), url_of(f"kb/maps/{nxt}")))}">Следующая карта: {e(maps[nxt]["title"])} →</a>' if nxt else '') + '</nav>')
+        out.insert(1, map_moves(map_id, here, top=True))
+        out.append(map_moves(map_id, here, top=False))
         page = Page(here, f'Карта обучения: {m["title"]}', 'kb', 10 + n, f'{m["title"]} — от новичка до эксперта: {m["goal"]}', ''.join(out))
         page.nav = False
         pages[here] = page
+
+    walk_steps(pages, api, maps, levels, order, step_info, before, after, move)
 
     # the roadmap: the core stops in order, then the branches
     here = 'kb/maps'
@@ -358,15 +400,125 @@ def add_maps(pages, api):
         count, minutes = totals(m, here)
         return (f'<a class="rm-card" href="{e(rel(url_of(here), url_of(f"kb/maps/{map_id}")))}"><small>{f"Остановка {number} · " if number else ""}{e(m["for"])}</small>'
                 f'<h3>{e(m["title"])}</h3><p>{e(m["goal"])}</p><span class="rm-meta">4 уровня · {count} шагов · {hours(minutes)}</span>{progress(map_id, count)}</a>')
-    core = ''.join(f'<li class="rm-stop"><span class="rm-dot">{i + 1}</span>{stop(mid, i + 1)}</li>' for i, mid in enumerate(data['roadmap']['core']))
+    stops = ''.join(f'<li class="rm-stop"><span class="rm-dot">{i + 1}</span>{stop(mid, i + 1)}</li>' for i, mid in enumerate(data['roadmap']['core']))
     branches = ''.join(f'<div class="rm-branch"><h3>{e(b["title"])}</h3>{"".join(stop(mid, None) for mid in b["maps"])}</div>' for b in data['roadmap']['branches'])
-    body = (f'<p class="lede">{e(data["roadmap"]["lede"])}</p>'
+    first = data['roadmap']['core'][0]
+    start = (f'<nav class="lm-walk lm-walk--map lm-walk--top" aria-label="Начало маршрута"><div class="lm-walk__head">'
+             f'<span class="lm-walk__pos">{len(data["roadmap"]["core"])} остановки для всех, затем специализация по роли</span>'
+             f'<a class="lm-walk__go" href="{e(rel(url_of(here), url_of(f"kb/maps/{first}")))}">Начать: остановка 1 — {e(maps[first]["title"])} →</a></div></nav>')
+    body = (f'<p class="lede">{e(data["roadmap"]["lede"])}</p>' + start +
             '<p class="pf-tip">Отмечайте пройденные шаги на картах — прогресс сохраняется в вашем браузере и виден здесь. '
             '<button type="button" class="lm-reset" data-learn-reset>Сбросить прогресс</button></p>'
             f'<figure class="rm-figure">{roadmap_svg(data, maps, lambda mid: rel(url_of(here), url_of(f"kb/maps/{mid}")), lambda mm: totals(mm, here))}'
             '<figcaption>Начните со старта и двигайтесь по станциям. После четвёртой — выберите специализацию. Кольцо вокруг станции заполняется по мере прохождения карты.</figcaption></figure>'
-            f'<h2 class="rm-h">Остановки по порядку</h2><ol class="rm-line">{core}</ol><div class="rm-fork"><span>Специализации — по вашей роли</span></div><div class="rm-branches">{branches}</div>'
+            f'<h2 class="rm-h">Остановки по порядку</h2><ol class="rm-line">{stops}</ol><div class="rm-fork"><span>Специализации — по вашей роли</span></div><div class="rm-branches">{branches}</div>'
             f'<p>Отдельные руководства и поиск по ним — в <a href="{e(rel(url_of(here), url_of("kb")))}">Базе знаний</a>.</p>')
     page = Page(here, data['roadmap']['title'], 'kb', 1, data['roadmap']['lede'], body)
     page.nav_title = 'Карты обучения'
     pages[here] = page
+
+
+def heading_spans(body):
+    """Every Markdown heading outside code fences: (level, anchor, end of the heading line, start of the line)."""
+    out, pos, fence = [], 0, False
+    for line in body.splitlines(keepends=True):
+        stripped = line.strip()
+        if stripped.startswith('```'):
+            fence = not fence
+        elif not fence and stripped.startswith('#'):
+            level = len(stripped) - len(stripped.lstrip('#'))
+            anchor = stripped.rsplit('{#', 1)[1].rstrip('}').strip() if stripped.endswith('}') and '{#' in stripped else ''
+            out.append((level, anchor, pos + len(line), pos))
+        pos += len(line)
+    return out
+
+
+# START_CONTRACT: walk_steps
+#   PURPOSE: Put a step bar at the top and bottom of every map step that lives on our site: the map, the step's place in it, a dot per step, and back/next along the map; the bottom bar also says what the step teaches and lets the reader tick it off.
+#   INPUTS: { pages: dict; api: module; maps: dict; levels: list; order: list - maps in roadmap order; step_info, before, after, move: helpers from add_maps }
+#   OUTPUTS: { None }
+#   SIDE_EFFECTS: Edits the bodies of guide pages and of pages used as steps. A whole page gets bars under its header and at its end; a part of a page (anchor) at the top and bottom of that part. Where several maps share a spot, the first bar shows and site.js picks the reader's map.
+# END_CONTRACT: walk_steps
+def walk_steps(pages, api, maps, levels, order, step_info, before, after, move):
+    rel, url_of = api.rel, api.url_of
+    e = escape
+    inserts = {}  # page id -> [(position, sequence, html)]
+    seq = 0
+
+    for map_id in order:
+        m = maps[map_id]
+        steps = [(i, st) for i, lv in enumerate(m['levels']) for st in lv['steps']]
+        total = len(steps)
+        map_page = f'kb/maps/{map_id}'
+
+        def target(k, host):
+            """Address, title and kind of step k as seen from the host page; an outside course is reached through its card on the map."""
+            info = step_info(steps[k][1], host)
+            if info[5]:
+                return rel(url_of(host), url_of(map_page)) + f'#step-{k + 1}', info[0], 'курс на сайте Anthropic'
+            return info[1], info[0], info[2]
+
+        for k, (lvl, st) in enumerate(steps):
+            if not (st.get('guide') or st.get('page')):
+                continue
+            host = f'kb/guides/{st["guide"]}' if st.get('guide') else st['page']
+            page = pages[host]
+            key = step_info(st, host)[4]
+            title = target(k, host)[1]
+            dots = ''.join(
+                f'<li{" class=\"lm-dot-gap\"" if j and steps[j][0] != steps[j - 1][0] else ""}><a class="lm-dot lm-dot--l{steps[j][0] + 1}{" is-here" if j == k else ""}" href="{e(target(j, host)[0])}" data-map="{e(map_id)}" '
+                f'data-dot-step="{e(map_id)}|{e(step_info(steps[j][1], host)[4])}" title="Шаг {j + 1}. {e(target(j, host)[1])}"'
+                f'{" aria-current=\"step\"" if j == k else ""}>{j + 1}</a></li>' for j in range(total))
+            to_map = rel(url_of(host), url_of(map_page))
+            if k:
+                href, ptitle, kind = target(k - 1, host)
+                prev = move('lm-walk__prev', href, f'← Назад · шаг {k} · {kind}', ptitle, map_id)
+            else:
+                prev = move('lm-walk__prev', to_map, '← К началу карты', m['title'], map_id)
+            if k + 1 < total:
+                href, ntitle, kind = target(k + 1, host)
+                nxt = move('lm-walk__next', href, f'Далее · шаг {k + 2} · {kind} →', ntitle, map_id)
+            else:
+                href, small, ntitle, nid = after(map_id, host)
+                nxt = move('lm-walk__next', href, f'Карта пройдена · {small} →', ntitle, nid)
+            head = (f'<div class="lm-walk__head"><a class="lm-walk__map" href="{e(to_map)}#step-{k + 1}" data-map="{e(map_id)}">Карта обучения: <b>{e(m["title"])}</b></a>'
+                    f'<span class="lm-walk__pos">Шаг <b>{k + 1}</b> из {total} · уровень {lvl + 1}, {e(levels[lvl].lower())}</span></div>'
+                    f'<ol class="lm-walk__dots" aria-label="Шаги карты">{dots}</ol>')
+            practice = f'<p><b>Попробуйте:</b> {e(st["practice"])}</p>' if st.get('practice') else ''
+            done = (f'<div class="lm-walk__done" data-step="{e(map_id)}|{e(key)}"><div><p><b>После этого шага вы сможете:</b> {e(st["outcome"][:1].lower() + st["outcome"][1:])}</p>{practice}</div>'
+                    f'<button type="button" class="lm-walk__check" data-step-toggle aria-pressed="false"><span class="is-off">Отметить шаг пройденным</span><span class="is-on">Шаг пройден ✓</span></button></div>')
+            label = f'aria-label="Шаг {k + 1} из {total} по карте «{e(m["title"])}»"'
+            top = f'<nav class="lm-walk lm-walk--top lm-walk--l{lvl + 1}" data-walk="{e(map_id)}" {label}>{head}<div class="lm-walk__moves">{prev}{nxt}</div></nav>'
+            bottom = f'<nav class="lm-walk lm-walk--bottom lm-walk--l{lvl + 1}" data-walk="{e(map_id)}" {label}>{head}{done}<div class="lm-walk__moves">{prev}{nxt}</div></nav>'
+
+            body = page.body
+            if page.layout == 'course' and '<!--course-end-->' not in body:
+                body = page.body = body + '\n\n<!--course-end-->\n'
+            mark = body.find('<!--course-end-->')
+            source = body.find('<p class="kb-source">')
+            limit = mark if mark >= 0 else (source if source >= 0 else len(body))  # the end of the reading
+            end = mark + len('<!--course-end-->') if mark >= 0 else limit        # a whole-page bar: below the tabs
+            anchor = st.get('anchor')
+            if anchor:
+                spans = heading_spans(body)
+                found = [x for x in spans if x[1] == anchor]
+                if not found:
+                    raise SystemExit(f'map {map_id}: no heading {{#{anchor}}} in {host}')
+                level, _, top_at, _ = found[0]
+                bottom_at = min([x[3] for x in spans if x[3] > top_at and x[0] <= level] + [limit])
+            else:
+                top_at = body.find('\n\n') + 2 if body.startswith('<p class="kb-head">') else 0
+                bottom_at = end
+            for at, html in ((top_at, top), (bottom_at, bottom)):
+                seq += 1
+                inserts.setdefault(host, []).append((at, seq, html))
+
+    for host, items in inserts.items():
+        out, shown = pages[host].body, set()
+        final = []
+        for at, q, html in sorted(items):  # a second bar on the same spot waits for site.js to pick the reader's map
+            final.append((at, html.replace('<nav ', '<nav hidden ', 1) if at in shown else html))
+            shown.add(at)
+        for at, html in reversed(final):
+            out = out[:at] + '\n\n' + html + '\n\n' + out[at:]
+        pages[host].body = out

@@ -213,7 +213,13 @@
       root.dispatchEvent(new Event('kb-refresh', {bubbles: true}));
     }
     // a tab opens from the address (#plan) and keeps it, so a view can be linked to
-    function fromHash() { var k = decodeURIComponent(location.hash.slice(1)); if (keys.indexOf(k) >= 0) { show(k); return true; } return false; }
+    function fromHash() {
+      var k = decodeURIComponent(location.hash.slice(1)); if (keys.indexOf(k) >= 0) { show(k); return true; }
+      // a part inside a view (#cowork-schedule) opens its view and scrolls to it
+      var target = k && document.getElementById(k), panel = target && target.closest('[data-tab-panel]');
+      if (panel && root.contains(panel)) { show(panel.dataset.tabPanel); target.scrollIntoView(); return true; }
+      return false;
+    }
     buttons.forEach(function (b) { b.addEventListener('click', function () { show(b.dataset.tab); try { history.replaceState(null, '', '#' + b.dataset.tab); } catch (e) {} }); });
     window.addEventListener('hashchange', fromHash);
     if (!fromHash()) show(keys[0]);
@@ -248,6 +254,18 @@
         });
         if (next) next.classList.add('is-next');
       });
+      // the step bars: a dot per step, done in green; the bar's tick follows the same state (data-step above)
+      document.querySelectorAll('[data-dot-step]').forEach(function (d) { d.classList.toggle('is-done', !!state[d.dataset.dotStep]); });
+      // on a map page the top button leads to the first step still to do
+      document.querySelectorAll('[data-walk-continue]').forEach(function (a) {
+        var steps = document.querySelectorAll('.lm-step[data-step]'), todo = null, n = 0;
+        for (var i = 0; i < steps.length; i++) if (!state[steps[i].dataset.step]) { todo = steps[i]; n = i + 1; break; }
+        if (!todo) { a.textContent = 'Карта пройдена ✓'; a.href = '#level-1'; a.classList.add('is-complete'); return; }
+        var link = todo.querySelector('.lm-title a');
+        a.href = link && !link.target ? link.getAttribute('href') : '#' + todo.id;
+        a.textContent = (n === 1 ? 'Начать: шаг 1' : 'Продолжить: шаг ' + n) + ' — ' + (link ? link.textContent.replace(' ↗', '') : '') + ' →';
+        if (link && link.dataset.map) a.dataset.map = link.dataset.map;
+      });
       // stations on the roadmap: a ring filled by the share of the map's steps that are done
       document.querySelectorAll('[data-ring]').forEach(function (ring) {
         var id = ring.dataset.ring, total = parseInt(ring.dataset.total, 10) || 0, done = 0;
@@ -263,6 +281,20 @@
       if (ev.target.closest('[data-learn-reset]') && confirm('Сбросить отметки о пройденных шагах во всех картах?')) { state = {}; save(state); paint(); }
     });
     paint();
+  })();
+
+  // walking a map: a page that is a step of several maps shows the bars of the map the reader came from
+  (function () {
+    var KEY = 'hub-walk', here = document.querySelector('[data-walk-here]');
+    function get() { try { return localStorage.getItem(KEY) || ''; } catch (e) { return ''; } }
+    function set(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
+    if (here) set(here.dataset.walkHere);
+    document.addEventListener('click', function (ev) { var a = ev.target.closest('a[data-map]'); if (a && a.dataset.map) set(a.dataset.map); });
+    var bars = document.querySelectorAll('[data-walk]');
+    if (!bars.length) return;
+    var ctx = get();
+    if (!Array.prototype.some.call(bars, function (b) { return b.dataset.walk === ctx; })) ctx = bars[0].dataset.walk;
+    bars.forEach(function (b) { b.hidden = b.dataset.walk !== ctx; });
   })();
 
   // reference and knowledge base lists: a search box and topic chips over cards; empty groups hide

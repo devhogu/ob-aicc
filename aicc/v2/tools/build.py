@@ -370,6 +370,8 @@ def page_end(page, pages, site):
 #   SIDE_EFFECTS: none
 # END_CONTRACT: course
 def course(body):
+    # what follows the course-end mark (the learning-map step bar, the source) sits below the tabs
+    body, _, tail = body.partition('<!--course-end-->')
     parts = re.split(r'<h2 id="([^"]+)">(.*?)</h2>', body)
     intro, sections = parts[0], [(parts[i], parts[i + 1], parts[i + 2]) for i in range(1, len(parts), 3)]
     heads = ''.join(f'<button type="button" role="tab" data-tab="{key}"{" aria-selected=true" if n == 0 else ""}><b>{n + 1}</b><span>{title}</span></button>'
@@ -378,7 +380,7 @@ def course(body):
         f'<section class="tab-panel" id="{key}" data-tab-panel="{key}"><h2 class="tab-title">{n + 1}. {title}</h2>{html}'
         + (f'<p class="course-next"><a href="#{sections[n + 1][0]}">Дальше: {sections[n + 1][1]} →</a></p>' if n + 1 < len(sections) else '')
         + '</section>' for n, (key, title, html) in enumerate(sections))
-    return f'{intro}<div class="course" data-tabs><div class="course-tabs" role="tablist">{heads}</div>{panels}</div>'
+    return f'{intro}<div class="course" data-tabs><div class="course-tabs" role="tablist">{heads}</div>{panels}</div>{tail}'
 
 
 def render_page(page, pages, site):
