@@ -78,6 +78,12 @@ def add_pages(pages, site, api):
         label, cls = WEIGHT[a['weight']]
         label = T(label)
         title, kind, what, for_us, group = (loc(a, f) for f in ('title', 'kind', 'what', 'for_us', 'group'))
+        page = own_page(a)
+        if page:  # a compact card that opens the entry's page: kind, weight, title and one short statement (brief); the rest is searched, not shown
+            return (f'<a class="lib-card lib-card--link lib-card--act" href="{e(rel(url_of("reference/regulation"), url_of(page.id)))}" data-lib-item data-group="{e(group)}" '
+                    f'data-find="{find_text(title, kind, what, for_us, group, page.summary)}">'
+                    f'<div class="lib-card__top"><small title="{e(kind)}">{e(kind)}</small><span class="lib-tag {cls}">{e(label)}</span></div>'
+                    f'<h3>{e(title)}{original(a)}</h3><p>{e(loc(a, "brief") or page.summary)}</p></a>')
         return (f'<article class="lib-card" data-lib-item data-group="{e(group)}" data-find="{find_text(title, kind, what, for_us, group)}">'
                 f'<div class="lib-card__top"><small>{e(kind)}</small><span class="lib-tag {cls}">{e(label)}</span></div>'
                 f'<h3>{titled(a, title)}{original(a)}</h3><p>{e(what)}</p><p class="lib-for"><b>{T('Для нас.')}</b> {e(for_us)}</p>{more(a)}</article>')

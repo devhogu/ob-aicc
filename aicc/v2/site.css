@@ -1198,3 +1198,7 @@ button.here-key{font-size:11px;padding:2px 8px 2px 5px;gap:4px;white-space:nowra
 /* the PI tile on a phone: each iteration's week cells keep a readable width beside its name instead of shrinking to slivers */
 @media (max-width:480px){.here-pi .here-cells{flex:0 0 40%}}
 .page-body .lib-more{margin:10px 0 0;font-size:14px;font-weight:600}
+/* regulation cards: compact and clickable as a whole - the kind on one line, the summary in at most three */
+.lib-card--act .lib-card__top small{display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
+.page-body .lib-card--act p{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.lib-card--act .ru-original{display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden;margin-top:2px;font:400 12px/1.4 var(--font-body);color:var(--text-muted)}
