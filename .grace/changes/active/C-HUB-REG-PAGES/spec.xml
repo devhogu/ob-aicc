@@ -1,0 +1,44 @@
+<GraceChangeSpec graceVersion="4.0" status="approved">
+  <C-HUB-REG-PAGES>
+    <Summary>Turn each of the 26 entries on the Hub's «Регуляторы и нормативные акты» page into its own page, in Russian and English: what the act or body is, its status and scope, key concepts, the main requirements and important details, what it means for us, how it connects to the Hub, and where to read the official text and more.</Summary>
+    <Problem>The regulation page shows each law, regulator, principle or standard as a short card (what it is, what it means for us). Staff who need to understand one of them, such as the Kyrgyz Digital Code, Resolution No. 770 on high-risk AI, the EU AI Act or the NIST AI RMF, have nowhere on the site to learn its key concepts, requirements, dates and sources.</Problem>
+    <Goals>
+      <Goal>One page per entry of reference/acts.yaml (26 pages) under Справочник, at reference/regulation/&lt;id&gt;/, in both editions, reached from its card on the regulation page and from a link list grouped as on the page.</Goal>
+      <Goal>Every page is short, practical and written for learning, not legal analysis, in one structure: a header line (kind, jurisdiction, weight tag, status and effective date, from acts.yaml); «Коротко» (what it is, in plain words); «Что это значит на практике» (for the organization and for an employee using AI at work); «Ключевые идеи» (3–6 key concepts or points in plain words, linked to the vocabulary where they exist); «Что важно знать» (dates, who oversees it, what is still a draft or voluntary); «Где почитать» (the official source and its English version where one exists, plus one or two good plain-language explanations, each with its language); «Связанные» (links to related entries and to Hub pages such as Ответственный AI).</Goal>
+      <Goal>Facts are sourced: every date and number on a page is taken from the official text, the issuing body or a reputable source listed under «Где читать». Where something could not be confirmed it says so plainly instead of guessing.</Goal>
+      <Goal>The English edition stays a page-for-page twin: each new page and its English translation pass the parity and staleness checks, using the existing translation workflow (content/en, source_hash, term list).</Goal>
+    </Goals>
+    <Constraints>
+      <Constraint>Not legal advice: each page keeps the regulation page's note that it is an orientation for conversation, not a legal opinion, and sends readers to the source and to the legal team for exact wording.</Constraint>
+      <Constraint>Every rule of the site holds: no bank name, no statement of the Hub's legal status or authority, only approved tools, the Hub names, plain language for bank staff, no hard-wrapped Markdown, the vocabulary convention in Russian, Russian the source and English its translation.</Constraint>
+      <Constraint>The weight of each entry (действует для нас / касается партнёров / ориентир) and the facts on the existing cards stay as they are unless research shows them wrong; any correction is reported to the owner with its source.</Constraint>
+      <Constraint>Outside links go to official or reputable sources only (government portals, regulators, the issuing body, the standard's publisher); no paywalled text is reproduced; standards that are sold (ISO/IEC) are summarized from their public abstracts and the publisher's pages.</Constraint>
+      <Constraint>The existing regulation page keeps its search and chips; its cards gain a link to the new page. One design, no new styles beyond what the shared stylesheet needs.</Constraint>
+      <Constraint>Every phase is verified (build, check with parity, tests, browser sweep), committed and pushed; the live site changes only through a verified publish on the owner's word.</Constraint>
+    </Constraints>
+    <NonGoals>
+      <NonGoal>Legal opinions, compliance assessments of the organization, or advice on what the organization must do.</NonGoal>
+      <NonGoal>Full texts or translations of the acts themselves.</NonGoal>
+      <NonGoal>New entries beyond the 26 on the page; proposals for additions are reported instead.</NonGoal>
+      <NonGoal>Changes to the resources and Anthropic pages of the Справочник.</NonGoal>
+    </NonGoals>
+    <AcceptanceCriteria>
+      <Criterion>26 Russian pages and their 26 English twins exist at reference/regulation/&lt;id&gt;/, each with all sections of the structure, linked from its card and from the related entries.</Criterion>
+      <Criterion>Each page lists its sources in «Где читать» with working addresses (checked); every date and number on the page appears in one of them.</Criterion>
+      <Criterion>The site check (links, anchors, forbidden wording, vocabulary convention), parity and staleness for English, the tests and the browser sweep of both editions pass.</Criterion>
+      <Criterion>After the owner's word, the pages are live and the offline packages include them.</Criterion>
+    </AcceptanceCriteria>
+    <AffectedAreas><M-PORTAL-SOURCE /><M-PORTAL-PROJECTION /><M-PORTAL-LOCALIZATION /></AffectedAreas>
+    <VerificationIntent>
+      <ExpectedCommand>python3 aicc/v2/tools/build.py</ExpectedCommand>
+      <ExpectedCommand>python3 aicc/v2/tools/check.py --idempotent</ExpectedCommand>
+      <ExpectedCommand>python3 -m unittest discover -s aicc/v2/tests</ExpectedCommand>
+      <ExpectedCommand>portal/tools/with-browser-env.sh portal/.venv/bin/python aicc/v2/tools/check_browser.py</ExpectedCommand>
+      <ExpectedEvidence>The check and parity results for 52 new pages; a link check of every outside source address; a per-page source list showing where each fact comes from; the browser sweep of both editions.</ExpectedEvidence>
+    </VerificationIntent>
+    <Assumptions>
+      <Assumption>Approved by the owner on 2026-10-10 with the instruction "plan, spec and execute; do not overcomplicate or make it legal; assess everything for usability and practicability: to learn about these, understand what they mean and know where to find more outside". The owner asked on 2026-10-10 that each entry of the regulation page become its own page with references, key information, key concepts, important details and where to read more.</Assumption>
+      <Assumption>Both editions get the pages, since the owner requires the English edition to match the Russian one fully.</Assumption>
+    </Assumptions>
+  </C-HUB-REG-PAGES>
+</GraceChangeSpec>

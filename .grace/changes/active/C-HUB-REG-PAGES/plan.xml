@@ -1,0 +1,54 @@
+<GraceChangePlan graceVersion="4.0" status="approved">
+  <C-HUB-REG-PAGES>
+    <IntentSummary>Execute the approved spec C-HUB-REG-PAGES: give every entry of the regulation page its own short, practical page in Russian and English, linked from its card, with key ideas and where to read more outside.</IntentSummary>
+    <BaselineAssertions>
+      <MustExist><Value>M-PORTAL-SOURCE</Value><Value>M-PORTAL-PROJECTION</Value></MustExist>
+      <MustPassCommand><Command>python3 aicc/v2/tools/check.py --idempotent</Command></MustPassCommand>
+      <MustPassCommand><Command>python3 -m unittest discover -s aicc/v2/tests</Command></MustPassCommand>
+    </BaselineAssertions>
+    <TargetAssertions>
+      <MustVerify><Module>M-PORTAL-SOURCE</Module><Module>M-PORTAL-PROJECTION</Module></MustVerify>
+      <MustPassCommand><Command>python3 aicc/v2/tools/build.py</Command></MustPassCommand>
+      <MustPassCommand><Command>python3 aicc/v2/tools/check.py --idempotent</Command></MustPassCommand>
+      <MustPassCommand><Command>python3 -m unittest discover -s aicc/v2/tests</Command></MustPassCommand>
+      <MustPassCommand><Command>portal/tools/with-browser-env.sh portal/.venv/bin/python aicc/v2/tools/check_browser.py</Command></MustPassCommand>
+    </TargetAssertions>
+    <DurableScope>
+      <GraphAnchors><M-PORTAL-SOURCE /><M-PORTAL-PROJECTION /></GraphAnchors>
+      <VerificationAnchors><V-M-PORTAL-PROJECTION /></VerificationAnchors>
+    </DurableScope>
+    <ObservedWriteScope>
+      <Glob>aicc/v2/**</Glob>
+      <Glob>html/aicc/v2/**</Glob>
+      <Glob>.grace/changes/active/C-HUB-REG-PAGES/**</Glob>
+    </ObservedWriteScope>
+    <ImplementationPlan>
+      <T-001>
+        <Title>Page frame and links</Title>
+        <DependsOn></DependsOn>
+        <AcceptanceCriteria>
+          <Criterion>A page content/ru/reference/regulation/&lt;id&gt;.md (and its English twin) is built under the Справочник without its own menu item; the build gives it a header line from acts.yaml (back link, kind, jurisdiction, weight tag) and the not-a-legal-opinion note; its card on the regulation page links to it.</Criterion>
+          <Criterion>A test fails when an entry of acts.yaml has no page or a page has no entry.</Criterion>
+        </AcceptanceCriteria>
+        <Verification><Command>python3 aicc/v2/tools/check.py --idempotent</Command><Command>python3 -m unittest discover -s aicc/v2/tests</Command></Verification>
+      </T-001>
+      <T-002>
+        <Title>The 26 pages, Russian and English</Title>
+        <DependsOn>T-001</DependsOn>
+        <AcceptanceCriteria>
+          <Criterion>Each entry has a Russian page in the spec's structure, researched from official and reputable sources listed under «Где читать», short and practical; and its English twin through the translation workflow (term list, source_hash).</Criterion>
+          <Criterion>Corrections to existing cards found in research are reported with their source.</Criterion>
+        </AcceptanceCriteria>
+        <Verification><Command>python3 aicc/v2/tools/check.py --idempotent</Command></Verification>
+      </T-002>
+      <T-003>
+        <Title>Source links, browser check, packages, publishing</Title>
+        <DependsOn>T-002</DependsOn>
+        <AcceptanceCriteria>
+          <Criterion>Every outside address on the new pages answers; the browser sweep of both editions passes; the offline packages include the pages; on the owner's word they are published and checked on the server.</Criterion>
+        </AcceptanceCriteria>
+        <Verification><Command>portal/tools/with-browser-env.sh portal/.venv/bin/python aicc/v2/tools/check_browser.py</Command><Command>python3 aicc/v2/tools/package.py</Command></Verification>
+      </T-003>
+    </ImplementationPlan>
+  </C-HUB-REG-PAGES>
+</GraceChangePlan>
