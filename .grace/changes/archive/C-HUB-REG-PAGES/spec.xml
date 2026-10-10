@@ -1,4 +1,4 @@
-<GraceChangeSpec graceVersion="4.0" status="approved">
+<GraceChangeSpec graceVersion="4.0" status="applied">
   <C-HUB-REG-PAGES>
     <Summary>Turn each of the 26 entries on the Hub's «Регуляторы и нормативные акты» page into its own page, in Russian and English: what the act or body is, its status and scope, key concepts, the main requirements and important details, what it means for us, how it connects to the Hub, and where to read the official text and more.</Summary>
     <Problem>The regulation page shows each law, regulator, principle or standard as a short card (what it is, what it means for us). Staff who need to understand one of them, such as the Kyrgyz Digital Code, Resolution No. 770 on high-risk AI, the EU AI Act or the NIST AI RMF, have nowhere on the site to learn its key concepts, requirements, dates and sources.</Problem>

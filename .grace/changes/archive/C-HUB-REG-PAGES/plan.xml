@@ -1,4 +1,4 @@
-<GraceChangePlan graceVersion="4.0" status="approved">
+<GraceChangePlan graceVersion="4.0" status="applied">
   <C-HUB-REG-PAGES>
     <IntentSummary>Execute the approved spec C-HUB-REG-PAGES: give every entry of the regulation page its own short, practical page in Russian and English, linked from its card, with key ideas and where to read more outside.</IntentSummary>
     <BaselineAssertions>
