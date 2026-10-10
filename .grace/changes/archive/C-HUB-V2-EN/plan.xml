@@ -1,4 +1,4 @@
-<GraceChangePlan graceVersion="4.0" status="approved">
+<GraceChangePlan graceVersion="4.0" status="applied">
   <C-HUB-V2-EN>
     <IntentSummary>Execute the approved spec C-HUB-V2-EN: make the v2 build bilingual without changing the Russian output, add the English corpus (term list, data, pages, catalog), prove page-for-page parity of content, effects and design, then pack the bilingual, Russian and English editions and publish English at /aicc/v2/en/ on the owner's word.</IntentSummary>
     <BaselineAssertions>

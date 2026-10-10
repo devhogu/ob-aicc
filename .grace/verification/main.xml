@@ -9,6 +9,7 @@
       <Command>python3 portal/tools/export_portable.py --static</Command>
       <Command>portal/tools/with-browser-env.sh portal/.venv/bin/python portal/tools/check_static_export_browser.py</Command>
       <Scenario kind="success">Export preserves source files and visible content, uses explicit file and anchor destinations, is repeatable and refuses to overwrite an unowned folder. The relocated package opens every page under file URLs and supports both-language search, language switches, theme carry-over, embedded fonts, diagram zoom and manual copying without external resource requests. Each section bundles its own search index; the neighbour browser check exercises cross-section navigation and Discovery search in a disposable export. Static mode protects independently portable EN/RU folders, no scripts or dead controls, fixed light rendering under a dark OS preference, complete authored reading text and workflow popup descriptions, native disclosures and stage fragment reveal, visible board sections, all Lab tasks, topic links, standalone diagrams, local fonts and responsive direct-file layouts. All static pages and local destinations are checked after relocation without sibling editions.</Scenario>
+      <Scenario kind="success">The Hub packages (aicc/v2/tools/package.py) unzip into an empty folder, open from files with every page styled and working (portal/tools/with-browser-env.sh portal/.venv/bin/python aicc/v2/tools/check_browser.py with AICC_V2_OUT set to the package site), and rebuild from their own source into an identical site.</Scenario>
       <Scenario kind="failure">A local Chromium pass does not establish corporate Windows SMB access, browser policy or file associations. External references still need their usual access. The export only contains the last generated website state.</Scenario>
       <TraceAssertion>Commands exit zero. Interactive evidence is in .runtime/portable/browser-report.json; static evidence is in .runtime/static-export/browser-report.json. Reports bind to the manifest/source tree and actual direct-file reading paths.</TraceAssertion>
     </V-M-PORTABLE-EXPORT>
@@ -75,10 +76,16 @@
       <M-PORTAL-LOCALIZATION />
       <TestFiles>
         <File>portal/tests/test_localization.py</File>
+        <File>aicc/v2/tests/test_parity.py</File>
+        <File>aicc/v2/tests/test_terms_en.py</File>
+        <File>aicc/v2/tests/test_cadence.py</File>
       </TestFiles>
       <Command>python3 -m unittest discover -s portal/tests</Command>
       <Command>python3 portal/tools/check_sources.py</Command>
+      <Command>python3 aicc/v2/tools/check.py --idempotent</Command>
+      <Command>python3 -m unittest discover -s aicc/v2/tests</Command>
       <Scenario kind="success">Reviewed Russian source renders with its own language and translated identifier while retaining canonical record identity. Draft/missing translations keep English text and identity. Localized tables use stable canonical lookup keys.</Scenario>
+      <Scenario kind="success">The Hub's English edition: every Russian page has its English twin with the same anchors, components, progress keys and tables; no Russian text on English pages; every translation current against its Russian source (site.json editions.en = complete makes these errors); the calendar renders the same in Python and JavaScript in both languages; the Russian edition passes unchanged.</Scenario>
       <Scenario kind="failure">Stale hashes, wrong document identifiers, changed numbered clauses, table-shape drift, changed record dates, and orphan translations are rejected.</Scenario>
       <TraceAssertion>Tests and source checks exit zero. Human review still establishes semantic equivalence and professional terminology.</TraceAssertion>
     </V-M-PORTAL-LOCALIZATION>

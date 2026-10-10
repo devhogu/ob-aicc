@@ -1,8 +1,9 @@
 <GraceGraphDocument graceVersion="4.0">
   <GD-MAIN>
     <M-PORTABLE-EXPORT>
-      <Summary>Explicit on-demand export of generated portal pages into portal/published. Interactive mode retains bundled search, embedded fonts and portable controls. Static mode creates complete independently relocatable en/ru editions with local assets, light-only colors, no JavaScript, native topic/section links, inline workflow-stage descriptions and standalone diagram views. Both use validated file links and owned output replacement; neither builds nor deploys the hosted site.</Summary>
+      <Summary>Explicit on-demand export of generated portal pages into portal/published. Interactive mode retains bundled search, embedded fonts and portable controls. Static mode creates complete independently relocatable en/ru editions with local assets, light-only colors, no JavaScript, native topic/section links, inline workflow-stage descriptions and standalone diagram views. Both use validated file links and owned output replacement; neither builds nor deploys the hosted site. The Hub (v2) has its own packer, aicc/v2/tools/package.py: aicc-v2-hub (both editions), aicc-v2-hub-ru and aicc-v2-hub-en, each the built site that opens from files plus the full source and the drawn diagrams.</Summary>
       <Path>portal/tools/export_portable.py</Path>
+      <Path>aicc/v2/tools/package.py</Path>
       <Path>portal/site/portable.js</Path>
       <Path>portal/tools/static_export.py</Path>
       <Path>portal/site/static-export.css</Path>
@@ -53,7 +54,7 @@
       <Path>portal/site/discovery.js</Path>
     </M-PORTAL-NEIGHBOURS>
     <M-PORTAL-PROJECTION>
-      <Summary>One generated static package under html/aicc. The root index.html opens the AI Competence Hub (v2/ru/index.html) and lists both versions. v1/ holds the frozen Competence Center portal: per language a router and the five branches center/, discovery/, portfolio/, program/ and lab/, with its source files; the former {lang}/ addresses at the root forward into v1. v2/ holds the Hub in Russian (ru/, assets/, sources/), built from aicc/v2. Never edited by hand.</Summary>
+      <Summary>One generated static package under html/aicc. The root index.html opens the AI Competence Hub (v2/ru/index.html) and lists both versions. v1/ holds the frozen Competence Center portal: per language a router and the five branches center/, discovery/, portfolio/, program/ and lab/, with its source files; the former {lang}/ addresses at the root forward into v1. v2/ holds the Hub in Russian (ru/, assets/, sources/), built from aicc/v2. Never edited by hand. The Hub has two editions from one design: v2/ru (the source) and v2/en (its translation, page for page, with a language switch on every page); /aicc/ opens the Russian edition.</Summary>
       <Path>html/aicc/index.html</Path>
       <Path>html/aicc/v2/index.html</Path>
       <M-PORTAL-SOURCE />
@@ -64,8 +65,11 @@
       <M-PORTAL-PROJECTION />
     </M-AICC-DEPLOY>
     <M-PORTAL-LOCALIZATION>
-      <Summary>Language source identity and comparison, reviewed translation selection, source freshness, stable structure, record identity checks, and paired table extraction for generated views. English lookup paths do not establish language precedence. In the Hub (v2) Russian is the source language; industry terms carry their English form through the vocabulary markers.</Summary>
+      <Summary>Language source identity and comparison, reviewed translation selection, source freshness, stable structure, record identity checks, and paired table extraction for generated views. English lookup paths do not establish language precedence. In the Hub (v2) Russian is the source language; industry terms carry their English form through the vocabulary markers. For the Hub (v2): tools/i18n.py gives every interface string, plural, month and data field in the edition language (Russian passes through unchanged); tools/parity.py holds English to Russian page for page (anchors, components, progress keys, tables, links), finds Russian left on English pages, and reports translations older than their Russian source by recorded hashes.</Summary>
       <Path>portal/tools/localization.py</Path>
+      <Path>aicc/v2/tools/i18n.py</Path>
+      <Path>aicc/v2/tools/parity.py</Path>
+      <Path>aicc/v2/tools/translation_hash.py</Path>
     </M-PORTAL-LOCALIZATION>
   </GD-MAIN>
 </GraceGraphDocument>

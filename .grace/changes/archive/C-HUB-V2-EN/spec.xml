@@ -1,4 +1,4 @@
-<GraceChangeSpec graceVersion="4.0" status="approved">
+<GraceChangeSpec graceVersion="4.0" status="applied">
   <C-HUB-V2-EN>
     <Summary>Add a full English edition of the AI Competence Hub (version 2) that matches the Russian edition one to one: every page, part, card, map, step, diagram, interaction, effect and style, built from an English corpus kept beside the Russian one, published at /aicc/v2/en/ and packed for offline use the same way as the Russian edition.</Summary>
     <Problem>The Hub exists only in Russian. Its approved change C-HUB-V2 left English as a later translation and allowed a missing translation to show the Russian text. The owner now wants the English edition in full and identical in design, effects and content. The build, the data files, the scripts and the checks all assume one language: about 300 interface strings are written into the build tools and the page script, the data files (Справочник, learning maps, project cards, vocabulary, calendar) carry Russian text only, and the check enforces Russian-specific rules.</Problem>
