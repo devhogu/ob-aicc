@@ -98,6 +98,7 @@ class TermList(unittest.TestCase):
     def test_forbidden_english_covers_the_site_list(self):
         forbidden = {w.lower() for w in self.data['forbidden_en']}
         self.assertNotIn('steering', forbidden)  # allowed again by the owner on 2026-10-10
+        self.assertNotIn('steering', {w.lower() for w in load(V2 / 'site.json')['forbidden']})  # in Russian pages too
         for latin in ('Executive Sponsor', 'Domain Owner', 'DR-2026', 'v1', 'O!Bank', 'Obank'):
             self.assertIn(latin.lower(), forbidden)
         site = load(V2 / 'site.json')

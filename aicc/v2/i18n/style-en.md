@@ -28,7 +28,7 @@ Industry terms appear in plain English once, without the Russian: "funnel", not 
 
 - No bank name: never O!Bank or Obank. «Банк» (the organization) is "the Bank"; a generic «банк» is "a bank".
 - No statement of the Hub's legal nature or authority: nothing like "has no authority", "does not take decisions", "a unit of the Bank", "consolidating". Describe what the Hub does, not what it is legally.
-- None of the forbidden wording in `forbidden_en` (Executive Sponsor, Domain Owner, Steering, Head of the Competence Center, Competence Center Lead, DR-2026, v1 and the rest), and no internal document identifiers.
+- None of the forbidden wording in `forbidden_en` (Executive Sponsor, Domain Owner, Head of the Competence Center, Competence Center Lead, DR-2026, v1 and the rest), and no internal document identifiers. "Steering" and "steering committee" are ordinary words and allowed (owner, 2026-10-10).
 - Recommend only approved tools; say "use only the tools and accounts approved in your organization".
 - No reference to v1.
 
