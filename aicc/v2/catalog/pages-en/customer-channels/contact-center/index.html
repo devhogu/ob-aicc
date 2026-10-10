@@ -1,4 +1,4 @@
-<!--page {"id": "catalog/customer-channels/contact-center", "title": "Contact center", "styles": ["tokens.css", "components.css", "theme.css", "layouts/concern.css", "layouts/concern-l2.css"], "summary": "The contact center is the highest-volume assisted channel in a bank and carries the most complex regulatory obligations — consumer-protection requirements call for documented complaint handling, regulated disclosure at…", "source_hash": "f24cbe7a58d0"} -->
+<!--page {"id": "catalog/customer-channels/contact-center", "title": "Contact center", "styles": ["tokens.css", "components.css", "theme.css", "layouts/concern.css", "layouts/concern-l2.css"], "summary": "The contact center is the highest-volume assisted channel in a bank and carries the most complex regulatory obligations — consumer-protection requirements call for documented complaint handling, regulated disclosure at…", "source_hash": "494f5efd9ec7"} -->
 <div class="discovery-content">
 
 <div class="page">
@@ -67,7 +67,7 @@
       <h3 class="scenario-card__title">IVR Script Update Automation</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">The AI agent drafts IVR script updates for approved routing changes and new self-service tasks from the change specification, ready for the IVR operations team to review, test, and deploy. The draft covers menu prompt language, routing logic description, and the self-service task confirmation message, consistent with the Bank's IVR style guide and regulatory consumer-protection wording standards. No script change is released without IVR operations team review and test confirmation.</p>
+      <p class="scenario-card__intent">The AI agent drafts IVR script updates for approved routing changes and new self-service tasks from the change specification, ready for the IVR operations team to review, test, and deploy. The draft covers menu prompt language, routing logic description, and the self-service task confirmation message, consistent with the organization's IVR style guide and regulatory consumer-protection wording standards. No script change is released without IVR operations team review and test confirmation.</p>
     </div>
     <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
   </summary>
@@ -78,7 +78,7 @@
     </div>
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>The AI agent reads the approved routing change or self-service task specification and generates menu prompt language, routing logic documentation, and task confirmation messages consistent with the Bank's IVR style guide and regulatory language requirements. The IVR operations team reviews the draft, tests in the staging environment, and confirms before release; the compliance team spot-checks regulatory disclosure language before deployment. Script preparation time and the gap between change approval and deployment are tracked against the pre-deployment manual baseline.</p>
+      <p>The AI agent reads the approved routing change or self-service task specification and generates menu prompt language, routing logic documentation, and task confirmation messages consistent with the organization's IVR style guide and regulatory language requirements. The IVR operations team reviews the draft, tests in the staging environment, and confirms before release; the compliance team spot-checks regulatory disclosure language before deployment. Script preparation time and the gap between change approval and deployment are tracked against the pre-deployment manual baseline.</p>
     </div>
     <div class="scenario-section">
       <div class="scenario-section__label">Acceptance criteria</div>
@@ -245,7 +245,7 @@
       <h3 class="scenario-card__title">Contact Center QA Intelligence</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">The AI agent scores 100% of inbound calls against the Bank's QA rubric — compliance disclosure adherence, resolution accuracy, tone calibration, and escalation procedure — and produces a weekly performance brief decomposed by contact-center agent, team, and call category. The brief identifies the contact-center agents and call types with the lowest QA scores, ranked by coaching priority, and surfaces the specific rubric dimensions driving underperformance. The contact-center QA manager reviews the brief and directs the coaching cycle from an evidence-based priority list rather than from a sampled subset.</p>
+      <p class="scenario-card__intent">The AI agent scores 100% of inbound calls against the organization's QA rubric — compliance disclosure adherence, resolution accuracy, tone calibration, and escalation procedure — and produces a weekly performance brief decomposed by contact-center agent, team, and call category. The brief identifies the contact-center agents and call types with the lowest QA scores, ranked by coaching priority, and surfaces the specific rubric dimensions driving underperformance. The contact-center QA manager reviews the brief and directs the coaching cycle from an evidence-based priority list rather than from a sampled subset.</p>
     </div>
     <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
   </summary>
@@ -256,11 +256,11 @@
     </div>
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>The AI agent processes call recordings against the Bank's QA rubric, scoring each interaction on compliance disclosure adherence, resolution accuracy, tone, and escalation procedure adherence. The weekly brief presents scores by contact-center agent and team, ranked by coaching priority, with the specific rubric dimensions driving underperformance highlighted for each low-scoring agent. The QA manager reviews the brief and directs coaching sessions to the highest-priority agents; QA coverage rate and disclosure adherence rate across 100% of calls are tracked as primary compliance outcomes.</p>
+      <p>The AI agent processes call recordings against the organization's QA rubric, scoring each interaction on compliance disclosure adherence, resolution accuracy, tone, and escalation procedure adherence. The weekly brief presents scores by contact-center agent and team, ranked by coaching priority, with the specific rubric dimensions driving underperformance highlighted for each low-scoring agent. The QA manager reviews the brief and directs coaching sessions to the highest-priority agents; QA coverage rate and disclosure adherence rate across 100% of calls are tracked as primary compliance outcomes.</p>
     </div>
     <div class="scenario-section">
       <div class="scenario-section__label">Acceptance criteria</div>
-      <p class="okr-objective">A weekly QA performance brief — built from scoring 100% of inbound calls against the Bank's QA rubric and ranking contact-center agents, teams, and call categories by coaching priority, with the rubric dimensions driving underperformance — is available to the contact-center QA manager to direct the coaching cycle.</p>
+      <p class="okr-objective">A weekly QA performance brief — built from scoring 100% of inbound calls against the organization's QA rubric and ranking contact-center agents, teams, and call categories by coaching priority, with the rubric dimensions driving underperformance — is available to the contact-center QA manager to direct the coaching cycle.</p>
       <div class="okr-grid">
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
@@ -382,7 +382,7 @@
       <h3 class="scenario-card__title">Post-Call Documentation Automation</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">The AI agent generates a structured call summary and CRM update from the call transcript immediately after each interaction, ready for the handling agent's review and confirmation before submission. The summary covers call reason, resolution status, regulatory disclosures delivered, and any follow-up actions, in the format required by the Bank's CRM and compliance documentation standards. The handling agent's after-call work time is the primary operational metric; compliance disclosure documentation completeness is the primary regulatory metric.</p>
+      <p class="scenario-card__intent">The AI agent generates a structured call summary and CRM update from the call transcript immediately after each interaction, ready for the handling agent's review and confirmation before submission. The summary covers call reason, resolution status, regulatory disclosures delivered, and any follow-up actions, in the format required by the organization's CRM and compliance documentation standards. The handling agent's after-call work time is the primary operational metric; compliance disclosure documentation completeness is the primary regulatory metric.</p>
     </div>
     <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
   </summary>
@@ -393,7 +393,7 @@
     </div>
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>The AI agent reads the call transcript and generates a structured summary covering call reason, outcome, regulatory disclosures confirmed, and follow-up actions, pre-populated in the Bank's CRM format. The handling agent reviews and confirms before the record is committed; any additions or corrections are captured in the audit trail. After-call work time per interaction and disclosure documentation completeness rate are tracked against pre-deployment baselines as primary outcome metrics.</p>
+      <p>The AI agent reads the call transcript and generates a structured summary covering call reason, outcome, regulatory disclosures confirmed, and follow-up actions, pre-populated in the organization's CRM format. The handling agent reviews and confirms before the record is committed; any additions or corrections are captured in the audit trail. After-call work time per interaction and disclosure documentation completeness rate are tracked against pre-deployment baselines as primary outcome metrics.</p>
     </div>
     <div class="scenario-section">
       <div class="scenario-section__label">Acceptance criteria</div>
@@ -626,11 +626,11 @@
     </div>
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>The AI agent reads the investigation record — case classification, root cause finding, resolution outcome, and applicable regulatory disclosure requirements — and generates a formal response draft in the Bank's approved template. The complaint handler reviews, edits, and releases; edits are logged and used to identify template improvement opportunities on a quarterly review cycle. Average response drafting time and first-attempt acceptance rate — the proportion of drafts confirmed without substantive revision — are tracked against the pre-deployment baseline.</p>
+      <p>The AI agent reads the investigation record — case classification, root cause finding, resolution outcome, and applicable regulatory disclosure requirements — and generates a formal response draft in the organization's approved template. The complaint handler reviews, edits, and releases; edits are logged and used to identify template improvement opportunities on a quarterly review cycle. Average response drafting time and first-attempt acceptance rate — the proportion of drafts confirmed without substantive revision — are tracked against the pre-deployment baseline.</p>
     </div>
     <div class="scenario-section">
       <div class="scenario-section__label">Acceptance criteria</div>
-      <p class="okr-objective">A formal complaint response draft in the Bank's approved template — covering the finding, the regulatory obligations met, and the resolution outcome — is available to the complaint handler for review, editing, and release on completion of each investigation.</p>
+      <p class="okr-objective">A formal complaint response draft in the organization's approved template — covering the finding, the regulatory obligations met, and the resolution outcome — is available to the complaint handler for review, editing, and release on completion of each investigation.</p>
       <div class="okr-grid">
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>

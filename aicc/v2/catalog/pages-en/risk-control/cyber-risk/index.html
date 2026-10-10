@@ -1,4 +1,4 @@
-<!--page {"id": "catalog/risk-control/cyber-risk", "title": "Cyber risk", "styles": ["tokens.css", "components.css", "theme.css", "layouts/concern.css", "layouts/concern-l2.css"], "summary": "Cyber risk is the risk of financial loss, operational disruption, or reputational damage arising from the compromise of a bank's technology assets or data.", "source_hash": "a3bd2ffb1cdd"} -->
+<!--page {"id": "catalog/risk-control/cyber-risk", "title": "Cyber risk", "styles": ["tokens.css", "components.css", "theme.css", "layouts/concern.css", "layouts/concern-l2.css"], "summary": "Cyber risk is the risk of financial loss, operational disruption, or reputational damage arising from the compromise of a bank's technology assets or data.", "source_hash": "d5af40a97c15"} -->
 <div class="discovery-content">
 
 <div class="page">
@@ -43,7 +43,7 @@
   </div>
   <hr class="problems-divider">
   <div class="problems-panel" id="problems-panel-threat-exposure-detection" data-tab="threat-exposure-detection" role="tabpanel" aria-labelledby="problems-tab-threat-exposure-detection">
-    <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Insights &amp; analytics</h3><p>The CISO and threat intelligence team consume threat feeds from multiple vendor sources, CERT advisories, FS-ISAC bulletins, SWIFT CSP updates, and regulatory cyber notifications — hundreds of daily items. Relevance filtering against the Bank's specific technology stack and product mix is done manually; internal-exposure correlation — connecting an external CVE exploitation report to the Bank's own vulnerability scanner output — requires analyst judgment that is not systematic.</p></article><article class="discovery-context-card"><h3>Enablement</h3><p>Vulnerability prioritization requires the security operations team to apply CVSS scores to thousands of weekly scanner findings, without systematic cross-referencing of asset criticality, current threat actor exploitation activity, or banking-sector-specific exposure patterns. High-CVSS findings on non-critical assets consume remediation capacity ahead of medium-CVSS findings on core banking infrastructure.</p></article><article class="discovery-context-card"><h3>Automation</h3><p>Cyber risk reporting for the board and Risk Committee — threat landscape summary, vulnerability remediation status, security control effectiveness metrics — is assembled manually from multiple source systems on a quarterly cycle. The narrative format is consistent; the inputs are structured.</p></article><article class="discovery-context-card"><h3>New business opportunities</h3><p>A continuously instrumented cyber risk posture — daily threat briefings relevant to the Bank's specific exposure, risk-adjusted vulnerability queues updated as threat actor activity evolves — enables the CISO to allocate remediation resources based on current risk rather than the periodic vulnerability scan schedule. That posture quality is directly observable to the regulator in operational-resilience supervisory reviews.</p></article></div>
+    <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Insights &amp; analytics</h3><p>The CISO and threat intelligence team consume threat feeds from multiple vendor sources, CERT advisories, FS-ISAC bulletins, SWIFT CSP updates, and regulatory cyber notifications — hundreds of daily items. Relevance filtering against the Bank's specific technology stack and product mix is done manually; internal-exposure correlation — connecting an external CVE exploitation report to the organization's own vulnerability scanner output — requires analyst judgment that is not systematic.</p></article><article class="discovery-context-card"><h3>Enablement</h3><p>Vulnerability prioritization requires the security operations team to apply CVSS scores to thousands of weekly scanner findings, without systematic cross-referencing of asset criticality, current threat actor exploitation activity, or banking-sector-specific exposure patterns. High-CVSS findings on non-critical assets consume remediation capacity ahead of medium-CVSS findings on core banking infrastructure.</p></article><article class="discovery-context-card"><h3>Automation</h3><p>Cyber risk reporting for the board and Risk Committee — threat landscape summary, vulnerability remediation status, security control effectiveness metrics — is assembled manually from multiple source systems on a quarterly cycle. The narrative format is consistent; the inputs are structured.</p></article><article class="discovery-context-card"><h3>New business opportunities</h3><p>A continuously instrumented cyber risk posture — daily threat briefings relevant to the Bank's specific exposure, risk-adjusted vulnerability queues updated as threat actor activity evolves — enables the CISO to allocate remediation resources based on current risk rather than the periodic vulnerability scan schedule. That posture quality is directly observable to the regulator in operational-resilience supervisory reviews.</p></article></div>
   </div>
 </section>
 <div id="main-content" class="l3-sections" aria-label="Subsections">
@@ -78,7 +78,7 @@
     </div>
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>The AI agent ingests all threat intelligence sources, clusters threats by type, cross-references each cluster with the Bank's technology stack and known vulnerabilities, ranks by relevance, and produces a daily prioritized briefing for the CISO. The threat intelligence team confirms the top-ranked threats and responds to prioritized signals rather than raw feed volume.</p>
+      <p>The AI agent ingests all threat intelligence sources, clusters threats by type, cross-references each cluster with the organization's technology stack and known vulnerabilities, ranks by relevance, and produces a daily prioritized briefing for the CISO. The threat intelligence team confirms the top-ranked threats and responds to prioritized signals rather than raw feed volume.</p>
     </div>
     <div class="scenario-section">
       <div class="scenario-section__label">Acceptance criteria</div>
@@ -90,7 +90,7 @@
         </div>
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
-          <p>≥75% of top-ranked daily threats confirmed as material to the Bank's environment by the threat intelligence team; critical threat-to-CISO attention latency reduced by ≥70% versus the prior manual filtering approach.</p>
+          <p>≥75% of top-ranked daily threats confirmed as material to the organization's environment by the threat intelligence team; critical threat-to-CISO attention latency reduced by ≥70% versus the prior manual filtering approach.</p>
         </div>
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
@@ -108,22 +108,22 @@
       <h3 class="scenario-card__title">Threat Actor Exposure Mapping</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">The AI agent maps active banking-sector threat actors to the Bank's technology stack, identifying the specific systems and controls most relevant to each actor's known TTPs for the CISO's quarterly threat exposure review.</p>
+      <p class="scenario-card__intent">The AI agent maps active banking-sector threat actors to the organization's technology stack, identifying the specific systems and controls most relevant to each actor's known TTPs for the CISO's quarterly threat exposure review.</p>
     </div>
     <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
   </summary>
   <div class="scenario-card__body">
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>Threat intelligence briefings describe threat actors and their techniques but do not map them to the Bank's specific technology profile. The CISO and security architecture team perform this mapping manually for high-priority advisories; lower-priority actors and their relevance to specific systems are not systematically assessed.</p>
+      <p>Threat intelligence briefings describe threat actors and their techniques but do not map them to the organization's specific technology profile. The CISO and security architecture team perform this mapping manually for high-priority advisories; lower-priority actors and their relevance to specific systems are not systematically assessed.</p>
     </div>
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>The AI agent reads threat intelligence on active banking-sector actors, extracts their known TTPs using the MITRE ATT&amp;CK framework, and maps each TTP to the Bank's technology asset inventory. It identifies the systems most frequently targeted by each actor's techniques and delivers a quarterly threat-actor exposure map to the CISO; the security architecture team reviews the mappings.</p>
+      <p>The AI agent reads threat intelligence on active banking-sector actors, extracts their known TTPs using the MITRE ATT&amp;CK framework, and maps each TTP to the organization's technology asset inventory. It identifies the systems most frequently targeted by each actor's techniques and delivers a quarterly threat-actor exposure map to the CISO; the security architecture team reviews the mappings.</p>
     </div>
     <div class="scenario-section">
       <div class="scenario-section__label">Acceptance criteria</div>
-      <p class="okr-objective">The CISO receives a quarterly threat-actor exposure map — the known TTPs of active banking-sector threat actors mapped to the Bank's technology asset inventory — identifying the systems most frequently targeted by each actor's techniques.</p>
+      <p class="okr-objective">The CISO receives a quarterly threat-actor exposure map — the known TTPs of active banking-sector threat actors mapped to the organization's technology asset inventory — identifying the systems most frequently targeted by each actor's techniques.</p>
       <div class="okr-grid">
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
@@ -149,22 +149,22 @@
       <h3 class="scenario-card__title">Threat Intelligence Control Gap Analysis</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">The AI agent cross-references the Bank's control framework against current threat actor TTPs, identifies controls that do not address observed attack techniques, and delivers a gap analysis to the CISO for security program prioritization.</p>
+      <p class="scenario-card__intent">The AI agent cross-references the organization's control framework against current threat actor TTPs, identifies controls that do not address observed attack techniques, and delivers a gap analysis to the CISO for security program prioritization.</p>
     </div>
     <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
   </summary>
   <div class="scenario-card__body">
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>The Bank's control framework is assessed in the annual risk and control self-assessment (RCSA) cycle. Emerging attack techniques that have appeared in threat intelligence since the last RCSA cycle may not be covered by current controls; the gap is not visible until the next scheduled assessment.</p>
+      <p>The organization's control framework is assessed in the annual risk and control self-assessment (RCSA) cycle. Emerging attack techniques that have appeared in threat intelligence since the last RCSA cycle may not be covered by current controls; the gap is not visible until the next scheduled assessment.</p>
     </div>
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>The AI agent reads current threat intelligence TTPs, maps each technique to the NIST CSF or CIS control framework, and cross-references against the Bank's documented control inventory. It identifies TTP-to-control gaps and delivers the analysis to the CISO for prioritization in the security program roadmap.</p>
+      <p>The AI agent reads current threat intelligence TTPs, maps each technique to the NIST CSF or CIS control framework, and cross-references against the organization's documented control inventory. It identifies TTP-to-control gaps and delivers the analysis to the CISO for prioritization in the security program roadmap.</p>
     </div>
     <div class="scenario-section">
       <div class="scenario-section__label">Acceptance criteria</div>
-      <p class="okr-objective">The CISO prioritizes the security program roadmap from the AI agent's gap analysis identifying current threat actor TTPs that the Bank's documented control inventory does not address, without waiting for the next annual assessment cycle.</p>
+      <p class="okr-objective">The CISO prioritizes the security program roadmap from the AI agent's gap analysis identifying current threat actor TTPs that the organization's documented control inventory does not address, without waiting for the next annual assessment cycle.</p>
       <div class="okr-grid">
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
@@ -324,7 +324,7 @@
 <section class="l3-section" id="vulnerability-patch-management">
   <header class="l3-section__head">
     <h2 class="l3-section__title">Vulnerability &amp; patch management</h2>
-    <p class="l3-section__intent">Vulnerability management is the program of discovering, assessing, prioritizing, and remediating known security weaknesses in the Bank's technology estate. Scanner tools generate thousands of findings per week; the CVSS scoring system provides a standardized severity measure. Operational-resilience requirements commonly call for documented vulnerability management processes with defined remediation timeframes by severity. Supervisors commonly expect critical vulnerabilities on internet-facing systems to be remediated within 30 days; exploited vulnerabilities require emergency patching. Patch management coordinates the remediation workflow — testing compatibility, scheduling deployment, and tracking completion — across infrastructure, application, and endpoint layers.</p>
+    <p class="l3-section__intent">Vulnerability management is the program of discovering, assessing, prioritizing, and remediating known security weaknesses in the organization's technology estate. Scanner tools generate thousands of findings per week; the CVSS scoring system provides a standardized severity measure. Operational-resilience requirements commonly call for documented vulnerability management processes with defined remediation timeframes by severity. Supervisors commonly expect critical vulnerabilities on internet-facing systems to be remediated within 30 days; exploited vulnerabilities require emergency patching. Patch management coordinates the remediation workflow — testing compatibility, scheduling deployment, and tracking completion — across infrastructure, application, and endpoint layers.</p>
   </header>
   <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
     <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
@@ -489,7 +489,7 @@
     </div>
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>The AI agent reads current threat intelligence on active threat actors targeting the banking sector, the Bank's technology stack profile, and prior incident and near-miss records. It generates tabletop scenarios specific to the Bank's profile — including realistic attack chains, regulatory notification decision points, and lessons-learned integration. The CISO reviews and schedules the exercise.</p>
+      <p>The AI agent reads current threat intelligence on active threat actors targeting the banking sector, the organization's technology stack profile, and prior incident and near-miss records. It generates tabletop scenarios specific to the Bank's profile — including realistic attack chains, regulatory notification decision points, and lessons-learned integration. The CISO reviews and schedules the exercise.</p>
     </div>
     <div class="scenario-section">
       <div class="scenario-section__label">Acceptance criteria</div>
@@ -501,7 +501,7 @@
         </div>
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
-          <p>≥80% of AI-generated scenarios rated by the CISO as more relevant to the Bank's actual threat profile than generic playbook scenarios; exercise participants confirm ≥75% of scenarios as realistic to the Bank's environment in post-exercise surveys.</p>
+          <p>≥80% of AI-generated scenarios rated by the CISO as more relevant to the Bank's actual threat profile than generic playbook scenarios; exercise participants confirm ≥75% of scenarios as realistic to the organization's environment in post-exercise surveys.</p>
         </div>
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
@@ -530,7 +530,7 @@
     </div>
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>The AI agent reads current threat intelligence for the banking sector, the Bank's technology asset inventory, and prior TLPT and penetration test findings. It assembles the TLPT preparation package in the prescribed format — threat actor profile, in-scope system inventory, prior finding history, and testing constraint summary. The CISO reviews the package and transmits it to the testing provider.</p>
+      <p>The AI agent reads current threat intelligence for the banking sector, the organization's technology asset inventory, and prior TLPT and penetration test findings. It assembles the TLPT preparation package in the prescribed format — threat actor profile, in-scope system inventory, prior finding history, and testing constraint summary. The CISO reviews the package and transmits it to the testing provider.</p>
     </div>
     <div class="scenario-section">
       <div class="scenario-section__label">Acceptance criteria</div>
