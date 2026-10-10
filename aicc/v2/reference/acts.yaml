@@ -29,13 +29,13 @@
   group: Кыргызская Республика
   group_en: "Kyrgyz Republic"
   weight: applies
-  title: Требования к оценке опасности систем AI и к системам высокой степени опасности
-  title_en: "Requirements for the hazard assessment of AI systems and for high-hazard AI systems"
-  title_ru_original: "Требования к оценке опасности систем AI и к системам высокой степени опасности"
+  title: Требования к оценке опасности систем AI и к системам повышенной опасности
+  title_en: "Requirements for the hazard assessment of AI systems and for AI systems of increased hazard"
+  title_ru_original: "Требования к оценке опасности систем AI и к системам повышенной опасности"
   kind: Постановление Кабинета Министров № 770 от 2 декабря 2025 года
   kind_en: "Cabinet of Ministers Resolution No. 770 of 2 December 2025"
-  what: "Принято во исполнение Цифрового кодекса: методика оценки опасности систем AI, управление рисками систем высокой степени опасности, их открытость, понятность, контролируемость, точность, надёжность, качество данных и техническая документация."
-  what_en: "Adopted to implement the Digital Code: a method for assessing the hazard of AI systems; risk management for high-hazard systems; and their transparency, understandability, controllability, accuracy, reliability, data quality, and technical documentation."
+  what: "Принято во исполнение Цифрового кодекса: методика оценки опасности систем AI, управление рисками систем повышенной опасности, их открытость, понятность, контролируемость, точность, надёжность, качество данных и техническая документация."
+  what_en: "Adopted to implement the Digital Code: a method for assessing the hazard of AI systems; risk management for systems of increased hazard; and their transparency, understandability, controllability, accuracy, reliability, data quality, and technical documentation."
   for_us: Распространяется на владельцев систем AI независимо от формы собственности. Наши категории риска и проверки нужно сверять с этой методикой.
   for_us_en: "It applies to owners of AI systems, whatever their form of ownership. Our risk tiers and checks need to be compared with this method."
 - id: kg-aml-body
@@ -46,8 +46,8 @@
   title_en: "Anti-money laundering and countering the financing of terrorism"
   kind: Закон и орган финансовой разведки
   kind_en: "Law and financial intelligence unit"
-  what: Изучение клиентов, мониторинг операций и сообщения о подозрительной деятельности.
-  what_en: "Customer due diligence, transaction monitoring, and suspicious activity reports."
+  what: Изучение клиентов, мониторинг операций и сообщения о подозрительной деятельности. Надзор — Государственная служба финансовой разведки при Министерстве финансов.
+  what_en: "Customer due diligence, transaction monitoring, and suspicious activity reports. Supervised by the State Financial Intelligence Service under the Ministry of Finance."
   for_us: AI в изучении клиентов, мониторинге и проверке по спискам сохраняет предусмотренные законом проверки и след решений.
   for_us_en: "Where AI is used in customer due diligence, monitoring, and list screening, the checks the law requires and the decision trail stay in place."
 - id: kg-digital-development
@@ -93,8 +93,7 @@
   group_en: "Kazakhstan"
   weight: benchmark
   title: Национальный Банк и Агентство по регулированию финансового рынка
-  title_en: "National Bank of Kazakhstan and the Agency for Regulation and Development of the Financial Market"
-  title_ru_original: "Национальный Банк и Агентство по регулированию финансового рынка"
+  title_en: "National Bank of the Republic of Kazakhstan and the Agency of the Republic of Kazakhstan for Regulation and Development of the Financial Market"
   kind: Центральный банк и финансовый надзор
   kind_en: "Central bank and financial supervisor"
   what: Регулирование банков и финансовых организаций, в том числе их технологий, данных и поставщиков.
@@ -134,8 +133,8 @@
   title_en: "National AI development strategy and experimental legal regimes"
   kind: Указ Президента и федеральные законы
   kind_en: "Presidential decree and federal laws"
-  what: Цели до 2030 года и режимы, в которых AI испытывают с временными исключениями из правил.
-  what_en: "Goals to 2030, and regimes in which AI is tested under temporary exemptions from the rules."
+  what: Цели до 2030 года и режимы, в которых AI испытывают с временными исключениями из правил; с 1 сентября 2026 года действует первый федеральный закон об AI (243-ФЗ).
+  what_en: "Goals to 2030, and regimes in which AI is tested under temporary exemptions from the rules; since 1 September 2026, the first federal AI law (No. 243-FZ) is in force."
   for_us: Влияет на регион и поставщиков; пример того, как устроить регулируемый эксперимент.
   for_us_en: "It affects the region and suppliers, and shows how to set up a regulated experiment."
 - id: bank-of-russia-on-ai
@@ -156,7 +155,6 @@
   weight: benchmark
   title: Кодекс этики в сфере AI
   title_en: "AI Code of Ethics"
-  title_ru_original: "Кодекс этики в сфере AI"
   kind: Добровольный отраслевой кодекс
   kind_en: "Voluntary industry code"
   what: Этические обязательства разработчиков и пользователей AI.
@@ -207,8 +205,8 @@
   title_en: "Model risk and AI in lending"
   kind: Надзорные рекомендации
   kind_en: "Supervisory guidance"
-  what: Эталонная практика управления модельным риском; кредитное решение объясняют конкретно, какой бы ни была модель.
-  what_en: "Best practice in model risk management; a credit decision must be explained in specific terms, whatever the model."
+  what: Эталонная практика управления модельным риском (с апреля 2026 года — рекомендации SR 26-2 вместо SR 11-7); кредитное решение объясняют конкретно, какой бы ни была модель.
+  what_en: "Best practice in model risk management (since April 2026, guidance SR 26-2 in place of SR 11-7); a credit decision must be explained in specific terms, whatever the model."
   for_us: Независимая проверка моделей и объяснимость кредитных решений — требования, которые встречаются у любого надзора.
   for_us_en: "Independent model review and explainable credit decisions are requirements you will find under any supervisor."
 - id: us-federal-and-state-ai-policy
@@ -245,8 +243,8 @@
   kind_en: "International organization document"
   what: Этика AI с точки зрения прав человека, достоинства, разнообразия и окружающей среды.
   what_en: "AI ethics from the standpoint of human rights, dignity, diversity, and the environment."
-  for_us: Кыргызская Республика к ней присоединилась; на неё скорее всего сошлётся государственный орган.
-  for_us_en: "The Kyrgyz Republic has joined it; a government body is likely to refer to it."
+  for_us: Её приняли все государства — члены ЮНЕСКО, в том числе Кыргызская Республика; на неё скорее всего сошлётся государственный орган.
+  for_us_en: "It was adopted by all UNESCO member states, the Kyrgyz Republic among them; a government body is likely to refer to it."
 - id: council-of-europe-ai-convention
   group: Международные принципы
   group_en: "International principles"

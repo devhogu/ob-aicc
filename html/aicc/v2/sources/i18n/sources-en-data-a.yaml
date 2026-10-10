@@ -1,5 +1,5 @@
 # Russian sources of data-a's English fields (C-HUB-V2-EN): path relative to aicc/v2 and the hash of its Russian part.
-reference/acts.yaml: e2475bb32cdf
+reference/acts.yaml: 5779704bb06d
 reference/resources.yaml: d5f3ffbc6a78
 reference/anthropic.yaml: b28ab9bcd21f
 vocabulary/terms-core.yaml: 6c0c9c8028b3
