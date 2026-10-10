@@ -1197,3 +1197,4 @@ button.here-key{font-size:11px;padding:2px 8px 2px 5px;gap:4px;white-space:nowra
 @media(max-width:430px){.o-header .status-chip{margin-left:0}}
 /* the PI tile on a phone: each iteration's week cells keep a readable width beside its name instead of shrinking to slivers */
 @media (max-width:480px){.here-pi .here-cells{flex:0 0 40%}}
+.page-body .lib-more{margin:10px 0 0;font-size:14px;font-weight:600}

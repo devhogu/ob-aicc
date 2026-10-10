@@ -80,7 +80,18 @@ def add_pages(pages, site, api):
         title, kind, what, for_us, group = (loc(a, f) for f in ('title', 'kind', 'what', 'for_us', 'group'))
         return (f'<article class="lib-card" data-lib-item data-group="{e(group)}" data-find="{find_text(title, kind, what, for_us, group)}">'
                 f'<div class="lib-card__top"><small>{e(kind)}</small><span class="lib-tag {cls}">{e(label)}</span></div>'
-                f'<h3>{e(title)}{original(a)}</h3><p>{e(what)}</p><p class="lib-for"><b>{T('Для нас.')}</b> {e(for_us)}</p></article>')
+                f'<h3>{titled(a, title)}{original(a)}</h3><p>{e(what)}</p><p class="lib-for"><b>{T('Для нас.')}</b> {e(for_us)}</p>{more(a)}</article>')
+
+    def own_page(a):
+        return pages.get(f'reference/regulation/{a["id"]}')
+
+    def titled(a, title):
+        page = own_page(a)
+        return f'<a href="{e(rel(url_of("reference/regulation"), url_of(page.id)))}">{e(title)}</a>' if page else e(title)
+
+    def more(a):
+        page = own_page(a)
+        return f'<p class="lib-more"><a href="{e(rel(url_of("reference/regulation"), url_of(page.id)))}">{T("Подробнее →")}</a></p>' if page else ''
 
     def original(a):
         """A translated law title without an official English one carries its Russian original in brackets, marked as Russian."""
@@ -95,6 +106,7 @@ def add_pages(pages, site, api):
             f'<div class="lib" data-lib>{finder(groups, len(acts), T("Найти: закон, регулятор, тема"))}{grid(acts, groups, act)}</div>')
     pages['reference/regulation'] = Page('reference/regulation', T('Регуляторы и нормативные акты'), 'reference', 10,
                                          T('Кто регулирует AI и данные у нас, в регионе и в мире, и что это значит для нас.'), body)
+    regulation_pages(pages, acts, api)
 
     # open resources
     res = load('resources')
@@ -214,6 +226,27 @@ def source_of(meta):
         url = meta.get('source_url_en') or url.replace('/docs/ru/', '/docs/en/').replace('support.claude.com/ru', 'support.claude.com/en')
         name = meta.get('source_en') or name
     return url, name
+
+
+# START_CONTRACT: regulation_pages
+#   PURPOSE: Frame the page of each regulation entry (content/<lang>/reference/regulation/<id>.md): a header line from acts.yaml (back to the list, kind, jurisdiction, weight) and the note that it is an orientation, not a legal opinion; such a page has no menu item of its own.
+#   INPUTS: { pages: dict; acts: list - reference/acts.yaml; api: module }
+#   OUTPUTS: { None }
+#   SIDE_EFFECTS: Edits the bodies of the entry pages.
+# END_CONTRACT: regulation_pages
+def regulation_pages(pages, acts, api):
+    rel, url_of = api.rel, api.url_of
+    e = escape
+    for a in acts:
+        page = pages.get(f'reference/regulation/{a["id"]}')
+        if page is None:
+            continue
+        label, cls = WEIGHT[a['weight']]
+        back = rel(url_of(page.id), url_of('reference/regulation'))
+        page.body = (f'<p class="kb-head"><a href="{e(back)}">{T("← Все регуляторы и акты")}</a><span>{e(loc(a, "group"))}</span>'
+                     f'<span>{e(loc(a, "kind"))}</span><span class="lib-tag {cls}">{e(T(label))}</span></p>\n\n' + page.body
+                     + f'\n\n<p class="kb-source">{T("Это ориентир для разговора, а не юридическое заключение: точный текст — в первоисточнике, вопросы применения — к юристам.")}</p>\n')
+        page.nav = False
 
 
 LEVEL_COLORS = ['#9aa3b2', '#5b6bd6', '#d6006f', '#7a3db8']
