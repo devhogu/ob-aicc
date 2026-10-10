@@ -24,7 +24,7 @@ def _page(target, title, body='', lang='en'):
 
 
 # START_CONTRACT: build
-#   PURPOSE: Chooser at the package root that forwards to the home page (the Hub, version 2, in Russian), plus a redirect page at every former address of version 1.
+#   PURPOSE: The package root forwards straight to the home page (the Hub, version 2, in Russian) with no choice shown, plus a redirect page at every former address of version 1.
 #   INPUTS: { package: str - package root; version: str - the version the former addresses belong to; langs: list - language folders; home: str - where the root forwards }
 #   OUTPUTS: { int - files written }
 #   SIDE_EFFECTS: Replaces {lang}/ folders and index.html under the package root.
@@ -48,8 +48,7 @@ def build(package, version, langs, home='v2/ru/index.html'):
                 fh.write(_page(target, 'AI Competence Center'))
             count += 1
     with open(os.path.join(package, 'index.html'), 'w', encoding='utf-8') as fh:
-        fh.write(_page(home, 'Хаб Компетенций по AI', f'<ul><li><a href="{home}">Хаб Компетенций по AI</a> (версия 2)</li>'
-                             f'<li><a href="{version}/">AI Competence Center</a> (version 1)</li></ul>', lang='ru'))
+        fh.write(_page(home, 'Хаб Компетенций по AI', lang='ru'))  # no choice to make: the Hub opens in Russian, English is one click away on every page
     return count + 1
 
 

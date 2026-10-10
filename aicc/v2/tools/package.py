@@ -120,6 +120,7 @@ def single_edition(site, keep):
     if keep != 'ru':  # the site's own entry opens the kept edition; its source listing becomes the main one
         (site / 'index.html').write_text(
             f'<!doctype html><html lang="{keep}"><head><meta charset="utf-8"><meta http-equiv="refresh" content="0; url={keep}/index.html">'
+            f'<script>location.replace("{keep}/index.html"+location.hash)</script>'
             f'<title>{TITLE[keep]}</title></head><body><main><h1><a href="{keep}/index.html">{TITLE[keep]}</a></h1></main></body></html>\n', encoding='utf-8')
         listing = site / 'sources' / f'index-{keep}.html'
         if listing.exists():
@@ -146,6 +147,7 @@ def pack(name, out, commit):
     home = spec['home']
     (folder / 'index.html').write_text(
         f'<!doctype html><html lang="{home}"><head><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=site/{home}/index.html">'
+        f'<script>location.replace("site/{home}/index.html")</script>'
         f'<title>{TITLE[home]}</title></head><body><p><a href="site/{home}/index.html">{TITLE[home]}</a></p></body></html>\n', encoding='utf-8')
     key = spec['editions']
     readme = '\n\n'.join(README[lang].format(commit=commit, what=WHAT[lang][key], editions=EDITIONS[lang][key]) for lang in spec['readme'])

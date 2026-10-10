@@ -626,6 +626,7 @@ def build():
         shutil.copy(SRC / 'catalog' / 'discovery.css', OUT / 'assets' / 'discovery.css')
         shutil.copy(SRC / 'catalog' / 'discovery.js', OUT / 'assets' / 'discovery.js')
     write(OUT / 'index.html', '<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=ru/index.html">'
+          '<script>location.replace("ru/index.html"+location.hash)</script>'  # straight to the Russian edition, no flash of an entry page
           f'<title>{escape(site["names"]["ru"]["title"])}</title></head><body><main><h1><a href="ru/index.html">{escape(site["names"]["ru"]["title"])}</a></h1></main></body></html>\n')
     sources = publish_sources(site)
     ids = {p.id: p.ident for p in pages.values()}
