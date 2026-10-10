@@ -72,13 +72,13 @@ class Checker(unittest.TestCase):
         (out / 'ru').mkdir(parents=True)
         (out / 'assets').mkdir()
         (out / 'ru' / 'index.html').write_text(
-            f'<html lang="ru"><head><title>t</title></head><body><span class="status-chip">Черновик</span><h1>Хаб</h1><button class="pagefb"><span>Отзыв</span><span>ID: AAAAA</span></button>{body}</body></html>', encoding='utf-8')
+            f'<html lang="ru"><head><title>t</title></head><body><h1>Хаб</h1><button class="pagefb"><span>Отзыв</span><span>ID: AAAAA</span></button>{body}</body></html>', encoding='utf-8')
         (out / 'index.html').write_text('<meta http-equiv="refresh" content="0; url=ru/index.html">', encoding='utf-8')
         (out / 'assets' / 'page-ids.json').write_text('{"index": "AAAAA"}', encoding='utf-8')
         (out / 'assets' / 'search-ru.js').write_text('window.AICC_SEARCH_INDEX=[];\n', encoding='utf-8')
         (out / 'en').mkdir()  # the English edition's twin of the page
         (out / 'en' / 'index.html').write_text(
-            '<html lang="en"><head><title>t</title></head><body><span class="status-chip">Draft</span><h1>Hub</h1><button class="pagefb"><span>Feedback</span><span>ID: AAAAA</span></button><p>Text</p></body></html>', encoding='utf-8')
+            '<html lang="en"><head><title>t</title></head><body><h1>Hub</h1><button class="pagefb"><span>Feedback</span><span>ID: AAAAA</span></button><p>Text</p></body></html>', encoding='utf-8')
         (out / 'assets' / 'search-en.js').write_text('window.AICC_SEARCH_INDEX=[];\n', encoding='utf-8')
         original = check.OUT
         check.OUT = out
@@ -90,6 +90,7 @@ class Checker(unittest.TestCase):
 
     def test_forbidden_wording_and_stray_english_terms_and_broken_links_are_found(self):
         self.assertTrue(any('forbidden' in e for e in self.built('<p>Executive Sponsor решает</p>')))
+        self.assertTrue(any('Draft chip' in e for e in self.built('<span class="status-chip">Черновик</span>')))  # the site is active
         self.assertTrue(any('English term' in e for e in self.built('<p>Наша funnel большая</p>')))
         self.assertTrue(any('broken reference' in e for e in self.built('<a href="missing/index.html">x</a>')))
         self.assertTrue(any('leaves the site' in e for e in self.built('<a href="../../v1/index.html">x</a>')))

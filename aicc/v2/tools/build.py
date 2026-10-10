@@ -482,7 +482,6 @@ def render_page(page, pages, site):
 <header class="o-header">
   <a class="o-identity" href="{escape(rel(here, url_of("index")))}"><img src="{escape(rel(here, "assets/ui/assets/logos/hub-mark.svg"))}" width="36" height="36" alt=""><span>{escape(names["title"])}</span></a>
   <span class="header-scope">{escape(label_of(section))}</span>
-  <span class="status-chip" title="{escape(m["status_chip_title"])}">{escape(m["status_chip"])}</span>
   <div class="o-search" role="search"><label class="o-sr-only" for="q">{escape(m["search_label"])}</label><input id="q" type="search" autocomplete="off" placeholder="{escape(m["search_label"])}" aria-controls="results"><div id="results" class="o-search-results" hidden></div></div>
   <div class="o-tools">{language_switch(page, site)}<button id="theme-switch" type="button" class="theme-switch" aria-label="{escape(m["theme_to_dark"])}" title="{escape(m["theme_to_dark"])}"><span class="ts-moon">{icon("moon")}</span><span class="ts-sun">{icon("sun")}</span></button></div>
 </header>

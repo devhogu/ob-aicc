@@ -53,8 +53,8 @@ async def sweep(browser, lang, heights, problems):
                 problems.append(f'{width} {theme} {name}: h1 count')
             if not await page.evaluate('document.documentElement.scrollWidth <= innerWidth + 1'):
                 problems.append(f'{width} {theme} {name}: horizontal overflow')
-            if await page.locator('.status-chip').count() != 1 or await page.locator('.pagefb').count() != 1:
-                problems.append(f'{width} {theme} {name}: chip or feedback button missing')
+            if await page.locator('.status-chip').count() or await page.locator('.pagefb').count() != 1:
+                problems.append(f'{width} {theme} {name}: a Draft chip shown or the feedback button missing')
             if await page.locator('html').get_attribute('data-theme') != theme:
                 problems.append(f'{width} {theme} {name}: theme not applied')
             if theme == 'light':

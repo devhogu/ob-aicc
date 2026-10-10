@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # START_MODULE_CONTRACT
-#   PURPOSE: Check the built Hub site (version 2), every edition: links, anchors, page identifiers, Draft chip, forbidden wording, search; the Russian vocabulary convention on Russian pages.
+#   PURPOSE: Check the built Hub site (version 2), every edition: links, anchors, page identifiers, no Draft chip, forbidden wording, search; the Russian vocabulary convention on Russian pages.
 #   SCOPE: Reads html/aicc/v2 and aicc/v2 only; never writes except through the build it runs for --idempotent.
 #   DEPENDS: M-PORTAL-SOURCE
 #   LINKS: C-HUB-V2, C-HUB-V2-EN, V-M-PORTAL-PROJECTION
@@ -112,8 +112,8 @@ def check():
         page_id = name[len(lang) + 1:-len('/index.html')] if name != f'{lang}/index.html' else 'index'
         if p.h1 != 1:
             errors.append(f'{name}: {p.h1} h1')
-        if p.chips != 1:
-            errors.append(f'{name}: the Draft chip is missing')
+        if p.chips:  # the site is active (owner, 2026-10-10): no Draft chip on any page
+            errors.append(f'{name}: a Draft chip is shown')
         if len(p.page_ids) != 1 or p.page_ids[0] != 'ID: ' + ids.get(page_id, '?'):
             errors.append(f'{name}: page identifier missing or wrong ({p.page_ids})')
         for pattern in forbidden + forbidden_by.get(lang, []):
