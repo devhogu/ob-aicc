@@ -201,7 +201,7 @@ Question or comment:
 <section class="l3-section" id="program-design">
   <header class="l3-section__head">
     <h2 class="l3-section__title">Program design</h2>
-    <p class="l3-section__intent">Structural design of the program — defining scope, workstream decomposition, interdependencies with other programs and BAU operations, resource requirements, and the governance model (governing committee, working groups, escalation paths). Program design quality determines the accuracy of the business case and the risk of scope drift. Operational-risk requirements commonly expect material transformation programs to have a documented design prior to board approval.</p>
+    <p class="l3-section__intent">Structural design of the program — defining scope, workstream decomposition, interdependencies with other programs and BAU operations, resource requirements, and the governance model (governing forum, working groups, escalation paths). Program design quality determines the accuracy of the business case and the risk of scope drift. Operational-risk requirements commonly expect material transformation programs to have a documented design prior to board approval.</p>
   </header>
   <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
     <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
@@ -259,7 +259,7 @@ Question or comment:
       <h3 class="scenario-card__title">Program Design Scope Change Control Brief</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">The AI agent reads all scope change requests submitted against the program, cross-references each against the original workstream decomposition and dependency map, and produces a structured impact brief covering schedule impact, cost-to-complete revision, and interdependency ripple effects. The program director and governing committee review the impact brief before approving any scope change; scope drift is tracked cumulatively against the original program design.</p>
+      <p class="scenario-card__intent">The AI agent reads all scope change requests submitted against the program, cross-references each against the original workstream decomposition and dependency map, and produces a structured impact brief covering schedule impact, cost-to-complete revision, and interdependency ripple effects. The program director and governing forum review the impact brief before approving any scope change; scope drift is tracked cumulatively against the original program design.</p>
     </div>
     <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
   </summary>
@@ -270,7 +270,7 @@ Question or comment:
     </div>
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>The AI agent reads each scope change request alongside the accumulated change history and the original program design. It produces an impact brief showing the individual and cumulative effect on schedule, cost-to-complete, and dependency chains. The program director reviews the brief before each governing committee approval; cumulative drift is visible as a running metric.</p>
+      <p>The AI agent reads each scope change request alongside the accumulated change history and the original program design. It produces an impact brief showing the individual and cumulative effect on schedule, cost-to-complete, and dependency chains. The program director reviews the brief before each governing forum approval; cumulative drift is visible as a running metric.</p>
     </div>
     <div class="scenario-section">
       <div class="scenario-section__label">Acceptance criteria</div>
@@ -396,22 +396,22 @@ Question or comment:
       <h3 class="scenario-card__title">Milestone Slippage Early-Warning Alert</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">The AI agent reads milestone completion data across all active programs, models dependency propagation, and generates weekly slippage alerts ranked by cascade severity for PMO review. Intervention is initiated at the point when re-planning options are still open — ahead of the monthly governing committee cycle. Cross-program cascade effects are surfaced proactively rather than reconstructed after the compounding has begun.</p>
+      <p class="scenario-card__intent">The AI agent reads milestone completion data across all active programs, models dependency propagation, and generates weekly slippage alerts ranked by cascade severity for PMO review. Intervention is initiated at the point when re-planning options are still open — ahead of the monthly governing forum cycle. Cross-program cascade effects are surfaced proactively rather than reconstructed after the compounding has begun.</p>
     </div>
     <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
   </summary>
   <div class="scenario-card__body">
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>Milestone slippage is identified at the monthly program status review, by which time cross-program dependency disruption has already begun compounding. Cascade propagation — one program's delay triggering shared-resource conflicts or sequenced milestone failures across other programs — is reconstructed by the PMO after the fact. The low-cost re-planning window has typically already closed by the time the governing committee receives the picture.</p>
+      <p>Milestone slippage is identified at the monthly program status review, by which time cross-program dependency disruption has already begun compounding. Cascade propagation — one program's delay triggering shared-resource conflicts or sequenced milestone failures across other programs — is reconstructed by the PMO after the fact. The low-cost re-planning window has typically already closed by the time the governing forum receives the picture.</p>
     </div>
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>The AI agent reads milestone completion data from the program tracker, models dependency propagation across all active programs, and generates weekly slippage alerts ranked by cascade severity. PMO reviews the alerts and initiates re-planning. The re-planning window opens ahead of the governing committee cycle rather than in response to it; cascade exposure is identified while corrective options remain available.</p>
+      <p>The AI agent reads milestone completion data from the program tracker, models dependency propagation across all active programs, and generates weekly slippage alerts ranked by cascade severity. PMO reviews the alerts and initiates re-planning. The re-planning window opens ahead of the governing forum cycle rather than in response to it; cascade exposure is identified while corrective options remain available.</p>
     </div>
     <div class="scenario-section">
       <div class="scenario-section__label">Acceptance criteria</div>
-      <p class="okr-objective">Weekly milestone slippage alerts — ranked by cascade severity across all active programs — are produced by the AI agent from program-tracker data and dependency propagation modeling, giving the PMO a re-planning window before the monthly governing committee cycle rather than after cascade compounding has begun.</p>
+      <p class="okr-objective">Weekly milestone slippage alerts — ranked by cascade severity across all active programs — are produced by the AI agent from program-tracker data and dependency propagation modeling, giving the PMO a re-planning window before the monthly governing forum cycle rather than after cascade compounding has begun.</p>
       <div class="okr-grid">
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
@@ -423,7 +423,7 @@ Question or comment:
         </div>
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
-          <p>Cascade slippage identification lag reduced from monthly governing committee review (post-compounding) to a weekly signal available ≥3 weeks before the governing committee cycle.</p>
+          <p>Cascade slippage identification lag reduced from monthly governing forum review (post-compounding) to a weekly signal available ≥3 weeks before the governing forum cycle.</p>
         </div>
       </div>
     </div>
@@ -444,7 +444,7 @@ Question or comment:
   <div class="scenario-card__body">
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>Program milestone tracking covers all milestones equally; the PMO and governing committee do not have a dynamically maintained view of which milestones are on the critical path to the program deadline and how much float remains for near-critical tasks. Resources and senior attention are distributed by workstream seniority rather than by criticality, resulting in critical-path slippage going unaddressed while non-critical workstreams receive disproportionate attention.</p>
+      <p>Program milestone tracking covers all milestones equally; the PMO and governing forum do not have a dynamically maintained view of which milestones are on the critical path to the program deadline and how much float remains for near-critical tasks. Resources and senior attention are distributed by workstream seniority rather than by criticality, resulting in critical-path slippage going unaddressed while non-critical workstreams receive disproportionate attention.</p>
     </div>
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
@@ -748,8 +748,8 @@ Question or comment:
 </section>
 <section class="l3-section" id="steering-governance">
   <header class="l3-section__head">
-    <h2 class="l3-section__title">Governing committee oversight</h2>
-    <p class="l3-section__intent">Ongoing oversight of the program through the governing committee — meeting cadence, escalation paths, issue and risk management, and milestone gate reviews. The governing committee's work consumes significant senior leader time each cycle: preparing materials, conducting reviews, and following up on actions. Operational-resilience requirements commonly expect major transformation programs to maintain documented governance oversight with board visibility into material risk escalations.</p>
+    <h2 class="l3-section__title">Governing forum oversight</h2>
+    <p class="l3-section__intent">Ongoing oversight of the program through the governing forum — meeting cadence, escalation paths, issue and risk management, and milestone gate reviews. The governing forum's work consumes significant senior leader time each cycle: preparing materials, conducting reviews, and following up on actions. Operational-resilience requirements commonly expect major transformation programs to maintain documented governance oversight with board visibility into material risk escalations.</p>
   </header>
   <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
     <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
@@ -763,37 +763,37 @@ Question or comment:
     <span class="scenario-lens scenario-lens--insights">Insights</span>
     <div class="scenario-card__title-col">
       <span class="scenario-card__chevron" aria-hidden="true">▸</span>
-      <h3 class="scenario-card__title">Governing Committee Pre-Read Synthesis</h3>
+      <h3 class="scenario-card__title">Governing Forum Pre-Read Synthesis</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">The AI agent reads workstream status reports, risk register updates, and issue logs submitted for each governing committee cycle and produces a synthesized pre-read brief: top three risks requiring a governing committee decision, milestone status across all workstreams in a standard format, and unresolved issues from the previous cycle. Governing committee members receive a pre-read they can consume in 15 minutes rather than assembling across disparate workstream reports; session time concentrates on decisions rather than status review.</p>
+      <p class="scenario-card__intent">The AI agent reads workstream status reports, risk register updates, and issue logs submitted for each governing forum cycle and produces a synthesized pre-read brief: top three risks requiring a governing forum decision, milestone status across all workstreams in a standard format, and unresolved issues from the previous cycle. Governing forum members receive a pre-read they can consume in 15 minutes rather than assembling across disparate workstream reports; session time concentrates on decisions rather than status review.</p>
     </div>
     <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
   </summary>
   <div class="scenario-card__body">
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>Governing committee pre-reads are assembled by the PMO from workstream status reports of inconsistent format and quality. Members receive a thick pack that requires 45 to 60 minutes of reading to extract the decisions required and the program's current risk posture. Session time is consumed by status review, leaving insufficient time for substantive governance discussion on escalations and strategic course corrections.</p>
+      <p>Governing forum pre-reads are assembled by the PMO from workstream status reports of inconsistent format and quality. Members receive a thick pack that requires 45 to 60 minutes of reading to extract the decisions required and the program's current risk posture. Session time is consumed by status review, leaving insufficient time for substantive governance discussion on escalations and strategic course corrections.</p>
     </div>
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>The AI agent reads all submitted workstream materials and produces a structured pre-read brief highlighting the top risks requiring a governing committee decision, milestone status in a consistent format, and outstanding issues. PMO reviews and supplements with forward agenda framing. Committee members consume the brief in 15 minutes; the session opens with decisions rather than status reporting.</p>
+      <p>The AI agent reads all submitted workstream materials and produces a structured pre-read brief highlighting the top risks requiring a governing forum decision, milestone status in a consistent format, and outstanding issues. PMO reviews and supplements with forward agenda framing. Committee members consume the brief in 15 minutes; the session opens with decisions rather than status reporting.</p>
     </div>
     <div class="scenario-section">
       <div class="scenario-section__label">Acceptance criteria</div>
-      <p class="okr-objective">Governing committee session time concentrates on governance decisions rather than status review.</p>
+      <p class="okr-objective">Governing forum session time concentrates on governance decisions rather than status review.</p>
       <div class="okr-grid">
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>The AI agent's pre-read briefs are used for ≥90% of governing committee cycles across ≥3 active programs within 12 months of go-live.</p>
+          <p>The AI agent's pre-read briefs are used for ≥90% of governing forum cycles across ≥3 active programs within 12 months of go-live.</p>
         </div>
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
-          <p>≥80% of pre-reads rated as sufficient by governing committee members; session decision throughput improves by ≥25%.</p>
+          <p>≥80% of pre-reads rated as sufficient by governing forum members; session decision throughput improves by ≥25%.</p>
         </div>
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
-          <p>Average governing committee session time spent on status review vs decision items inverted from 70/30 to ≤40/60 within 18 months.</p>
+          <p>Average governing forum session time spent on status review vs decision items inverted from 70/30 to ≤40/60 within 18 months.</p>
         </div>
       </div>
     </div>
@@ -804,21 +804,21 @@ Question or comment:
     <span class="scenario-lens scenario-lens--automation">Automation</span>
     <div class="scenario-card__title-col">
       <span class="scenario-card__chevron" aria-hidden="true">▸</span>
-      <h3 class="scenario-card__title">Governing Committee Longitudinal Record</h3>
+      <h3 class="scenario-card__title">Governing Forum Longitudinal Record</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">The AI agent reads governing committee meeting records across the program lifecycle and maintains a continuously updated longitudinal record covering every decision made, every risk escalation and its resolution, and the evolution of milestone commitments from baseline. Program directors, auditors, and regulatory examiners can retrieve a complete governance record without manual assembly; regulatory examination responses are produced from a maintained record rather than reconstructed from archived minutes.</p>
+      <p class="scenario-card__intent">The AI agent reads governing forum meeting records across the program lifecycle and maintains a continuously updated longitudinal record covering every decision made, every risk escalation and its resolution, and the evolution of milestone commitments from baseline. Program directors, auditors, and regulatory examiners can retrieve a complete governance record without manual assembly; regulatory examination responses are produced from a maintained record rather than reconstructed from archived minutes.</p>
     </div>
     <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
   </summary>
   <div class="scenario-card__body">
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>Program governance records are held in meeting minutes and action logs across the program lifecycle. When a regulatory examiner or internal auditor requests a history of governing committee decisions on a specific risk or milestone, the PMO assembles the record manually from archived documents. The reconstruction is incomplete where minutes are inconsistent and time-consuming under examination deadline pressure.</p>
+      <p>Program governance records are held in meeting minutes and action logs across the program lifecycle. When a regulatory examiner or internal auditor requests a history of governing forum decisions on a specific risk or milestone, the PMO assembles the record manually from archived documents. The reconstruction is incomplete where minutes are inconsistent and time-consuming under examination deadline pressure.</p>
     </div>
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>The AI agent reads each governing committee meeting record and adds decisions, risk escalations, and milestone revisions to a structured longitudinal record. The record is searchable by topic, date, and decision type. Program directors access it for continuity; auditors and examiners retrieve it directly; no manual reconstruction is required.</p>
+      <p>The AI agent reads each governing forum meeting record and adds decisions, risk escalations, and milestone revisions to a structured longitudinal record. The record is searchable by topic, date, and decision type. Program directors access it for continuity; auditors and examiners retrieve it directly; no manual reconstruction is required.</p>
     </div>
     <div class="scenario-section">
       <div class="scenario-section__label">Acceptance criteria</div>
@@ -845,29 +845,29 @@ Question or comment:
     <span class="scenario-lens scenario-lens--enablement">Enablement</span>
     <div class="scenario-card__title-col">
       <span class="scenario-card__chevron" aria-hidden="true">▸</span>
-      <h3 class="scenario-card__title">Governing Committee Pack Drafting</h3>
+      <h3 class="scenario-card__title">Governing Forum Pack Drafting</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">The AI agent reads current program progress, budget actuals vs plan, risk register, dependency status, and benefit case status, and assembles the governing committee pack with a structured recommendation framing for the gate or periodic review decision. Program manager and finance partner review the assembled pack and apply judgment on recommendation language and escalation. Inconsistencies between the budget, risk, and benefit views are flagged before the pack reaches the committee rather than identified during the review.</p>
+      <p class="scenario-card__intent">The AI agent reads current program progress, budget actuals vs plan, risk register, dependency status, and benefit case status, and assembles the governing forum pack with a structured recommendation framing for the gate or periodic review decision. Program manager and finance partner review the assembled pack and apply judgment on recommendation language and escalation. Inconsistencies between the budget, risk, and benefit views are flagged before the pack reaches the committee rather than identified during the review.</p>
     </div>
     <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
   </summary>
   <div class="scenario-card__body">
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>Governing committee packs require the program manager and finance partner to collate milestone progress, budget actuals, risk updates, and benefit status from multiple systems ahead of each cycle. The collation takes several days per pack. Inconsistencies between the budget, risk, and benefit sections slip through to the governing committee paper and are identified during the review, consuming committee time on reconciliation.</p>
+      <p>Governing forum packs require the program manager and finance partner to collate milestone progress, budget actuals, risk updates, and benefit status from multiple systems ahead of each cycle. The collation takes several days per pack. Inconsistencies between the budget, risk, and benefit sections slip through to the governing forum paper and are identified during the review, consuming committee time on reconciliation.</p>
     </div>
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>The AI agent reads the program tracker, budget actuals, risk log, and benefit tracking source for each program due at the governing committee. It assembles the pack with a structured go/no-go or baseline-reset recommendation framing, with cross-section consistency checks flagged for reviewer attention. Program manager and finance partner edit the recommendation framing and apply forward judgment before submission.</p>
+      <p>The AI agent reads the program tracker, budget actuals, risk log, and benefit tracking source for each program due at the governing forum. It assembles the pack with a structured go/no-go or baseline-reset recommendation framing, with cross-section consistency checks flagged for reviewer attention. Program manager and finance partner edit the recommendation framing and apply forward judgment before submission.</p>
     </div>
     <div class="scenario-section">
       <div class="scenario-section__label">Acceptance criteria</div>
-      <p class="okr-objective">The governing committee pack — program progress, budget actuals vs plan, risk register, dependency status, benefit case status, and go/no-go or baseline-reset recommendation framing — is assembled by the AI agent from program tracker, budget actuals, risk log, and benefit tracking sources, with cross-section consistency checks flagged before the pack reaches the committee.</p>
+      <p class="okr-objective">The governing forum pack — program progress, budget actuals vs plan, risk register, dependency status, benefit case status, and go/no-go or baseline-reset recommendation framing — is assembled by the AI agent from program tracker, budget actuals, risk log, and benefit tracking sources, with cross-section consistency checks flagged before the pack reaches the committee.</p>
       <div class="okr-grid">
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>The AI agent drafts governing committee packs for ≥95% of scheduled governance cycles; cross-section consistency checks completed and go/no-go recommendation framing included in ≥90% of produced packs.</p>
+          <p>The AI agent drafts governing forum packs for ≥95% of scheduled governance cycles; cross-section consistency checks completed and go/no-go recommendation framing included in ≥90% of produced packs.</p>
         </div>
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
@@ -875,7 +875,7 @@ Question or comment:
         </div>
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
-          <p>Governing committee pack collation cycle reduced from several days of multi-system manual assembly to ≤1 business day of AI aggregation and program manager review.</p>
+          <p>Governing forum pack collation cycle reduced from several days of multi-system manual assembly to ≤1 business day of AI aggregation and program manager review.</p>
         </div>
       </div>
     </div>
@@ -903,22 +903,22 @@ Question or comment:
       <h3 class="scenario-card__title">Change Readiness Assessment</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">The AI agent reads stakeholder engagement scores, training completion rates by function, and behavioral adoption signals from pilot deployments, and produces a change readiness assessment ahead of each major go-live — with gap identification by stakeholder group and prioritized intervention recommendations. Governing committee acts on readiness gaps with lead time for corrective action before the go-live schedule is fixed. The Bank is positioned to pursue more ambitious transformation scope because readiness risk is identified and managed, not absorbed post-launch.</p>
+      <p class="scenario-card__intent">The AI agent reads stakeholder engagement scores, training completion rates by function, and behavioral adoption signals from pilot deployments, and produces a change readiness assessment ahead of each major go-live — with gap identification by stakeholder group and prioritized intervention recommendations. Governing forum acts on readiness gaps with lead time for corrective action before the go-live schedule is fixed. The Bank is positioned to pursue more ambitious transformation scope because readiness risk is identified and managed, not absorbed post-launch.</p>
     </div>
     <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
   </summary>
   <div class="scenario-card__body">
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>Change readiness is assessed through stakeholder surveys and training completion reports assembled manually by the change management team. The consolidated view reaches the governing committee two to three weeks after the underlying data is collected — typically after the go-live schedule has been confirmed. Readiness gaps that surface at this stage require expensive schedule delays or post-launch recovery programs to remediate.</p>
+      <p>Change readiness is assessed through stakeholder surveys and training completion reports assembled manually by the change management team. The consolidated view reaches the governing forum two to three weeks after the underlying data is collected — typically after the go-live schedule has been confirmed. Readiness gaps that surface at this stage require expensive schedule delays or post-launch recovery programs to remediate.</p>
     </div>
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>The AI agent reads stakeholder engagement scores, training completion data by function, and behavioral adoption signals from pilot deployments. It generates a change readiness assessment with gap identification by stakeholder group and prioritized intervention recommendations. Governing committee reviews the assessment with sufficient lead time ahead of the go-live milestone and authorizes targeted remediation where gaps are identified.</p>
+      <p>The AI agent reads stakeholder engagement scores, training completion data by function, and behavioral adoption signals from pilot deployments. It generates a change readiness assessment with gap identification by stakeholder group and prioritized intervention recommendations. Governing forum reviews the assessment with sufficient lead time ahead of the go-live milestone and authorizes targeted remediation where gaps are identified.</p>
     </div>
     <div class="scenario-section">
       <div class="scenario-section__label">Acceptance criteria</div>
-      <p class="okr-objective">Change readiness assessments — with gap identification by stakeholder group and prioritized intervention recommendations — are available to the governing committee from AI-produced synthesis of engagement scores, training completion, and behavioral adoption signals in advance of each major go-live milestone.</p>
+      <p class="okr-objective">Change readiness assessments — with gap identification by stakeholder group and prioritized intervention recommendations — are available to the governing forum from AI-produced synthesis of engagement scores, training completion, and behavioral adoption signals in advance of each major go-live milestone.</p>
       <div class="okr-grid">
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>

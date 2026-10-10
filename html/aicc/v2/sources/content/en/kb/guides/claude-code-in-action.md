@@ -1,6 +1,6 @@
 ---
 title: "Claude Code in action: long sessions, automation, and review — the complete guide"
-summary: How to move from single prompts to long Claude Code work with minimal supervision — directing a session, goals, CLAUDE.md, a verification skill, permission modes, hooks, scheduled and CI runs, reviewing the result, and safety for a regulated organization.
+summary: How to move from single prompts to long Claude Code work with minimal supervision — steering a session, goals, CLAUDE.md, a verification skill, permission modes, hooks, scheduled and CI runs, reviewing the result, and safety for a regulated organization.
 category: Claude Code
 level: deep
 minutes: 40
@@ -22,7 +22,7 @@ The course's main idea: **the less you watched, the more you check.** Autonomy w
 
 For the basics it builds on, see [How Claude Code works](page:kb/guides/claude-code-how-it-works) and [Practices that work](page:kb/guides/claude-code-best-practices).
 
-## Directing a long session {#steer}
+## Steering a long session {#steer}
 
 Two habits: **set the boundaries first, then steer**. Actually read the plan from Plan mode rather than skimming it: correcting a plan is faster than untangling the result later.
 

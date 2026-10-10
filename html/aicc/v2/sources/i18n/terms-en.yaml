@@ -647,8 +647,6 @@ formats:
 forbidden_en:
   - "Executive Sponsor"
   - "Domain Owner"
-  - "Steering"
-  - "SteerCo"
   - "DR-2026"
   - "Head of the Competence Center"
   - "Competence Center Lead"
